@@ -1,26 +1,26 @@
-cff-verzió: 1.2.0
-üzenet: „Ha ezt a szoftvert használja, kérjük, hivatkozzon rá az alábbiak szerint.”
-cím: "Idokamra 2.0 - 150 galaxis kibővítve - Idővonzás"
-verzió: 9.0
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Idokamra 2.0 - 150 Galaxies Expanded - Time Attraction"
+version: 9.0
 doi: 10.5281/zenodo.23101489
-megjelenés dátuma: 2026-10-02
-url: " https://github.com/unbekanntedavid-glitch/Time-Attraction "
-repository-code: " https://github.com/unbekanntedavid-glitch/Time-Attraction "
-absztrakt: "Egységes effektív sűrűségű keretrendszer az idővonzáshoz - Idokamra 2.0 - 150 galaxis illeszkedik - rho_eff = rho_baryonic × (1 + phi_t) - phi_t [Hz] időbeli koherencia frekvencia - B[T] kompenzált - Küszöbérték 0,65 - Nincs szükség sötét anyagra - SPARC-szerű 150 minta - 76,7%-ban koherens - falszifikálható, dimenziókonzisztens kg/m³-ben."
-szerzői:
-- családnevek: Szabolcsi
-keresztnevek: Dávid
-orcid: https://orcid.org/0009-0005-6300-074X
-licenc: MIT
-kulcsszavak:
-- idővonzás
-- idokamra
-- effektív sűrűség
-- sötét anyag alternatívája
-- SPARC galaxisok
-- phi_t
-- tudat
-- időbeli koherencia
-- 150 galaxis
-- B-mező kompenzáció
-- phi_t protokoll
+date-released: 2026-10-02
+url: "https://github.com/unbekanntedavid-glitch/Time-Attraction"
+repository-code: "https://github.com/unbekanntedavid-glitch/Time-Attraction"
+abstract: "A Unified Effective Density Framework for Time Attraction - Idokamra 2.0 - 150 galaxies fit - rho_eff = rho_baryonic × (1 + phi_t) - phi_t [Hz] temporal coherence frequency - B[T] compensated - Threshold 0.65 - No dark matter needed - SPARC-like 150 sample - 76.7% coherent - falsifiable, dimensionally consistent in kg/m³."
+authors:
+    - family-names: Szabolcsi
+    given-names: David
+    orcid: https://orcid.org/0009-0005-6300-074X
+license: MIT
+keywords:
+    - time attraction
+    - idokamra
+    - effective density
+    - dark matter alternative
+    - SPARC galaxies
+    - phi_t
+    - consciousness
+    - temporal coherence
+    - 150 galaxies
+    - B-field compensation
+    - phi_t protocol
