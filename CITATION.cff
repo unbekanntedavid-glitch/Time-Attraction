@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Idokamra 1.0 Harmonized v8.1 - Time Attraction"
+version: v8.1
+doi: 10.5281/zenodo.23101489
+date-released: 2026-05-13
+url: "https://github.com/unbekanntedavid-glitch/Time-Attraction"
+repository-code: "https://github.com/unbekanntedavid-glitch/Time-Attraction"
+abstract: "A Unified Effective Density Framework for Time Attraction - Falsifiable, dimensionally consistent in kg/m³. Core: rho_B = B²/(2 mu0 c²) from u_B, Phi_t = 0.6*EEG_coh + 0.4*HRV_coh, 10 SPARC galaxies validation avg rho_tot 2.47e-22 kg/m3."
+authors:
+    - family-names: Szabolcsi
+    given-names: Dávid
+    orcid: https://orcid.org/0009-0005-6300-074X
+license: MIT
+keywords:
+    - time attraction
+    - idokamra
+    - effective density
+    - dark matter alternative
+    - SPARC galaxies
+    - Phi_t
+    - consciousness
+    - falsifiable
+    - kg/m3
+concept-doi: 10.5281/zenodo.22983682
