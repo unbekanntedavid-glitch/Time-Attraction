@@ -1,16 +1,16 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 title: "Idokamra 2.0 - 150 Galaxies Expanded - Time Attraction"
-version: 9.0
-doi: 10.5281/zenodo.23101489
-date-released: 2026-10-02
+version: "9.0"
+doi: "10.5281/zenodo.23101489"
+date-released: "2026-10-02"
 url: "https://github.com/unbekanntedavid-glitch/Time-Attraction"
 repository-code: "https://github.com/unbekanntedavid-glitch/Time-Attraction"
-abstract: "A Unified Effective Density Framework for Time Attraction - Idokamra 2.0 - 150 galaxies fit - rho_eff = rho_baryonic × (1 + phi_t) - phi_t [Hz] temporal coherence frequency - B[T] compensated - Threshold 0.65 - No dark matter needed - SPARC-like 150 sample - 76.7% coherent - falsifiable, dimensionally consistent in kg/m³."
+abstract: "A Unified Effective Density Framework for Time Attraction - Idokamra 2.0 - 150 galaxies fit - rho_eff = rho_baryonic x (1 + phi_t) - phi_t Hz temporal coherence - B-field compensated - Threshold 0.65 - No dark matter needed - SPARC-like 150 sample - 76.7 percent coherent."
 authors:
     - family-names: Szabolcsi
     given-names: David
-    orcid: https://orcid.org/0009-0005-6300-074X
+    orcid: "https://orcid.org/0009-0005-6300-074X"
 license: MIT
 keywords:
     - time attraction
@@ -19,8 +19,6 @@ keywords:
     - dark matter alternative
     - SPARC galaxies
     - phi_t
-    - consciousness
     - temporal coherence
     - 150 galaxies
     - B-field compensation
-    - phi_t protocol
