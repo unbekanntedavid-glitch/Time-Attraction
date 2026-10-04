@@ -1,11 +1,21 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
+type: software
 authors:
-    - family-names: Szabolcsi
+  - family-names: Szabolcsi
     given-names: David
-    orcid: "https://orcid.org/0009-0005-6300-074X"
-title: "Idokamra 2.0 - 150 Galaxies Expanded - Time Attraction"
-version: 9.0.0
-doi: 10.5281/zenodo.23101489
-date-released: 2026-10-02
-url: "https://github.com/unbekanntedavid-glitch/Time-Attraction"
+    orcid: https://orcid.org/0009-0005-6300-074X
+title: "Phi_t Protocol - Time Attraction - v8.2 Corrected - Horndeski R 2/3 - 150 Galaxies"
+version: 8.2.0
+doi: 10.5281/zenodo.23135605
+date-released: 2026-10-04
+url: https://github.com/unbekanntedavid-glitch/Time-Attraction
+repository-code: https://github.com/unbekanntedavid-glitch/Time-Attraction
+abstract: "Corrected Horndeski ratio R=(1+r)/(1+2r) - parameter-free 2/3 at r=1 - R(a) shape from below - 150 SPARC 95pct - Jordi Audet Palau correction 2026-10-04 - old formula retracted"
+keywords:
+  - Horndeski
+  - phi_t-protocol
+  - time-attraction
+  - SPARC
+  - modified-gravity
+license: CC-BY-4.0
