@@ -1,6 +1,14 @@
-
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23135605.svg)](https://doi.org/10.5281/zenodo.23135605)
+Zenodo: 10.5281/zenodo.23138388 (Concept: 10.5281/zenodo.22983682)
+SPARC 150 76-95% framing removed - no per-galaxy lensing in SPARC.
+[![DOI](https://doi.org/10.5281/zenodo.23138388)](https://doi.org/10.5281/zenodo.23138388)
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0005--6300--074X-green)](https://orcid.org/0009-0005-6300-074X)
+
+### A Unified Effective Density Framework for Time Attraction - Falsifiable, dimensionally consistent
+**Phi_t Protocol + 150 SPARC Galaxies Fit + Interactive Lab Simulator**
+
+**Author:** David Szabolcsi (ORCID: 0009-0005-6300-074X)
+**DOI:** https://doi.org/10.5281/zenodo.23138388
+**Concept DOI:** https://doi.org/10.5281/zenodo.22983682
 
 ### A Unified Effective Density Framework for Time Attraction - Falsifiable, dimensionally consistent in kg/m³
 **Phi_t Protocol + 150 SPARC Galaxies Fit + Interactive Lab Simulator**
