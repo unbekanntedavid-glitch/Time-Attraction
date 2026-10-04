@@ -1,14 +1,15 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23101489.svg)](https://doi.org/10.5281/zenodo.23101489)
+It looks like this message is in English
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23135605.svg)](https://doi.org/10.5281/zenodo.23135605)
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0005--6300--074X-green)](https://orcid.org/0009-0005-6300-074X)
 
 ### A Unified Effective Density Framework for Time Attraction - Falsifiable, dimensionally consistent in kg/m³
 **Phi_t Protocol + 10 SPARC Galaxies Fit + Interactive Lab Simulator**
 
 **Author:** David Szabolcsi (ORCID: 0009-0005-6300-074X)  
-**DOI:** https://doi.org/10.5281/zenodo.23101489  
+**DOI:** https://doi.org/10.5281/zenodo.23135605  
 **Concept DOI:** https://doi.org/10.5281/zenodo.22983682  
 **Academia:** https://www.academia.edu/176661929/  
-**Zenodo v8.1 (7 files):** https://zenodo.org/records/23101489
+**Zenodo v8.2 (7 files - CORRECTED):**
 
 ### Core Derivation (SI, documented, no numerology)
 All densities in **kg/m³**, falsifiable:
