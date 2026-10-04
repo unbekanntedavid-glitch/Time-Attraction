@@ -3,7 +3,7 @@
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0005--6300--074X-green)](https://orcid.org/0009-0005-6300-074X)
 
 ### A Unified Effective Density Framework for Time Attraction - Falsifiable, dimensionally consistent in kg/m³
-**Phi_t Protocol + 10 SPARC Galaxies Fit + Interactive Lab Simulator**
+**Phi_t Protocol + 150 SPARC Galaxies Fit + Interactive Lab Simulator**
 
 **Author:** David Szabolcsi (ORCID: 0009-0005-6300-074X)  
 **DOI:** https://doi.org/10.5281/zenodo.23135605  
