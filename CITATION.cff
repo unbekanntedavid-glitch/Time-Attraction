@@ -2,20 +2,21 @@ cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 type: software
 authors:
-  - family-names: Szabolcsi
+    - family-names: Szabolcsi
     given-names: David
     orcid: https://orcid.org/0009-0005-6300-074X
-title: "Phi_t Protocol - Time Attraction - v8.2 Corrected - Horndeski R 2/3 - 150 Galaxies"
-version: 8.2.0
-doi: 10.5281/zenodo.23135605
-date-released: 2026-10-04
-url: https://github.com/unbekanntedavid-glitch/Time-Attraction
-repository-code: https://github.com/unbekanntedavid-glitch/Time-Attraction
-abstract: "Corrected Horndeski ratio R=(1+r)/(1+2r) - parameter-free 2/3 at r=1 - R(a) shape from below - 150 SPARC 95pct - Jordi Audet Palau correction 2026-10-04 - old formula retracted"
+title: "Phi_t Protocol - Time Attraction - v8.3 FINAL - Horndeski R 2/3 - 150 Galaxies - Lab Simulator"
+version: 8.3.0
+doi: 10.5281/zenodo.23138388
+date-released: 2026-10-05
+url: https://github.com/unbekanntdavid-glitch/Time-Attraction
+repository-code: https://github.com/unbekanntdavid-glitch/Time-Attraction
+abstract: "Corrected Horndeski ratio R=(1+r)/(1+2r) - parameter-free 2/3 at r=1 - R(a) shape from Bell-type framing 76-95% - 150 SPARC galaxies - no per-galaxy lensing - Unified Effective Density Framework v8.3 FINAL (v11)"
 keywords:
-  - Horndeski
-  - phi_t-protocol
-  - time-attraction
-  - SPARC
-  - modified-gravity
-license: CC-BY-4.0
+    - Horndeski
+    - phi_t-protocol
+    - time-attraction
+    - SPARC
+    - modified-gravity
+    - Jordi-Audet-Palau
+    - Bell-framing
