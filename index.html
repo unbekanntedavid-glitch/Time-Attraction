@@ -2,451 +2,126 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Time Attraction - Idokamra 2.0 | 150 Galaxies | Szabolcsi David</title>
-<meta name="description" content="Idokamra 2.0 - 150 Galaxies Fit - Unified Effective Density Framework - rho_eff = rho_baryonic x (1+phi_t) - B[T] + phi_t 0.999 Hz - 150 galaxies coherence test">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phi_t Protocol - Interactive Lab - v8.2 Corrected</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap');
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#080808;color:#E8E6E1;font-family:'Inter',sans-serif;line-height:1.6}
-a{color:#C9A86A;text-decoration:none} a:hover{color:#E8C99A}
-.wrap{max-width:1200px;margin:0 auto;padding:24px 20px}
-.hero{padding:60px 0 36px;border-bottom:1px solid #1A1A1A}
-.hero h1{font-family:'Fraunces',serif;font-size:52px;line-height:0.9;letter-spacing:-0.03em;color:#fff;font-weight:600}
-.hero h1 span{color:#C9A86A}
-.sub{margin-top:14px;font-size:18px;color:#9A9894;max-width:72ch;font-weight:300;line-height:1.5}
-.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
-.badge{border:1px solid #2A2A2A;background:#111;padding:6px 10px;font-family:'JetBrains Mono',monospace;font-size:10px;color:#C9A86A;letter-spacing:0.02em}
-.btn{display:inline-block;margin-top:16px;padding:10px 18px;background:#C9A86A;color:#080808;font-weight:600;font-size:13px;cursor:pointer;border:none}
-.btn2{display:inline-block;margin-top:16px;margin-left:8px;padding:10px 18px;background:#111;color:#C9A86A;border:1px solid #2A2A2A;font-weight:500;font-size:13px;cursor:pointer}
-.card{background:#111;border:1px solid #1F1F1F;padding:22px;margin-top:18px}
-.card h2{font-family:'Fraunces',serif;font-size:20px;color:#fff;margin-bottom:10px}
-.card p{color:#9A9894;font-size:13.5px;line-height:1.7}
-.mono{font-family:'JetBrains Mono',monospace;font-size:11px;color:#888}
-.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:18px}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
-.grid4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:14px;margin-top:18px}
-@media(max-width:900px){.grid3{grid-template-columns:1fr}.grid2{grid-template-columns:1fr}.grid4{grid-template-columns:1fr 1fr}.hero h1{font-size:36px}}
-.sim{background:#0E0E0E;border:1px solid #222;padding:18px;margin-top:18px}
-.sim canvas{width:100%;height:420px;display:block;background:radial-gradient(700px 360px at 50% 20%, #1C1A16 0%, #0F0E0C 45%, #080808 100%);border:1px solid #1E1E1E}
-.footer{margin-top:56px;padding:28px 0;border-top:1px solid #1A1A1A;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-family:'JetBrains Mono',monospace;font-size:10px;color:#555}
-.footer a{color:#777}
-table{width:100%;border-collapse:collapse;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:11px}
-th{color:#C9A86A;text-align:left;padding:8px;border-bottom:1px solid #222;font-weight:500;position:sticky;top:0;background:#111;cursor:pointer}
-td{color:#999;padding:8px;border-bottom:1px solid #1A1A1A}
-tr:hover td{background:#161616;color:#E8E6E1}
-tr.coh td{color:#C9D8B0} tr.coh td:first-child{color:#E8C99A;font-weight:600}
-code{background:#1A1A1A;padding:2px 6px;font-size:11px}
-input,select{background:#0E0E0E;border:1px solid #2A2A2A;color:#E8E6E1;padding:8px 10px;font-family:'JetBrains Mono',monospace;font-size:12px;width:100%}
-.stat{font-family:'JetBrains Mono',monospace;font-size:28px;color:#C9A86A;line-height:1} .statLabel{font-size:10px;color:#666;margin-top:6px}
-.tableWrap{max-height:560px;overflow:auto;border:1px solid #1F1F1F;margin-top:12px}
-#galaxyInfo{background:#0A0A0A;border:1px dashed #2A2A2A;padding:12px;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:11px;color:#888}
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; background:#fff; color:#111; max-width:1100px; margin:0 auto; padding:24px; line-height:1.5; }
+h1 { font-size:26px; font-weight:700; margin-bottom:4px; }
+.subtitle { color:#666; font-size:14px; margin-bottom:20px; }
+.badge { display:inline-block; padding:3px 8px; background:#f3f3f3; border:1px solid #ddd; border-radius:12px; font-size:12px; margin-right:6px; }
+.card { border:1px solid #e5e7eb; border-radius:12px; padding:16px; margin:16px 0; background:#fafafa; }
+.card-white { background:#fff; }
+label { font-size:13px; font-weight:600; }
+input[type=range] { width:100%; }
+.grid2 { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+@media(max-width:800px){ .grid2 { grid-template-columns:1fr; } }
+.mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background:#f6f8fa; padding:2px 6px; border-radius:4px; font-size:13px; }
+.big { font-size:28px; font-weight:800; }
+.green { color:#15803d; }
+.red { color:#b91c1c; }
+hr { border:none; border-top:1px solid #eee; margin:24px 0; }
+a { color:#0969da; text-decoration:none; }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <div class="hero">
-    <h1>Time Attraction<br><span>— Idokamra 2.0</span> <span style="font-size:14px;vertical-align:middle;background:#111;border:1px solid #222;padding:4px 8px;margin-left:12px;color:#C9A86A;font-family:monospace">150 fits • v9.0.0 EXPANDED • MIT Open Science</span></h1>
-    <div class="sub">150 galaxies unified effective density run. rho_eff = rho_baryonic × (1 + phi_t) • phi_t [Hz] normalized 0≤phi_hat≤1 • B[T] compensated • Threshold 0.65 • No dark matter needed. v9.0.0 EXPANDED • Full SPARC-like 150-sample coherence validation.</div>
-    <div class="badges">
-      <div class="badge">DOI: 10.5281/zenodo.23101489</div>
-      <div class="badge">Concept DOI: 10.5281/zenodo.22983682</div>
-      <div class="badge">ORCID: 0009-0005-6300-074X</div>
-      <div class="badge">150 GALAXIES</div>
-      <div class="badge">v9.0.0 EXPANDED</div>
-      <div class="badge">CC BY 4.0</div>
-      <div class="badge">Success 76.7%</div>
-    </div>
-    <div>
-      <a class="btn" href="https://doi.org/10.5281/zenodo.23101489" target="_blank">View on Zenodo</a>
-      <a class="btn2" href="data:text/csv;base64,bmFtZSxyaG9fYmFyeW9uaWNfMWUtMjIscmhvX2VmZl8xZS0yMixwaGlfdF9IeixwaGlfaGF0LEJfVCxjb2hlcmVudA0KTkdDMzE5OCwwLjgwNiwxLjMwMSwwLjYxNCwwLjIyOCw5LjM2NWUtMDUsRmFsc2UNCk5HQzI0MDMsMC44MjEsMS41NTgsMC44OTksMC43OTcsMi44NjllLTA1LFRydWUNCk5HQzY1MDMsMC43MTksMS4xNjksMC42MjYsMC4yNTIsMi4yNjVlLTA1LEZhbHNlDQpERE8xNTQsMC42MywxLjEzOSwwLjgxLDAuNjIsNy40NDllLTA1LFRydWUNCk5HQzI4NDEsMC42MzgsMS4xNDEsMC43ODgsMC41NzYsMC4wMDAxMDA1OCxUcnVlDQpOR0MwMDI0LDAuODI5LDEuNDE3LDAuNzA5LDAuNDE4LDMuNTU1ZS0wNSxUcnVlDQpOR0MwMDU1LDAuOTMzLDEuNjA3LDAuNzIyLDAuNDQ1LDAuMDAwMTA0NzUsVHJ1ZQ0KTkdDMDI0NywwLjc5MSwxLjQ3MiwwLjg2LDAuNzE5LDkuMjk3ZS0wNSxUcnVlDQpOR0MwMjg5LDAuNzY0LDEuNDMzLDAuODc0LDAuNzQ5LDAuMDAwMTAyOTQsVHJ1ZQ0KTkdDMDMwMCwwLjc5NywxLjUxMSwwLjg5NSwwLjc5LDcuNzc0ZS0wNSxUcnVlDQpOR0MwNTk4LDAuODMyLDEuMzU0LDAuNjI3LDAuMjU0LDIuNzk4ZS0wNSxGYWxzZQ0KTkdDMDYyOCwwLjY0MywxLjA3MSwwLjY2NSwwLjMzLDQuNzhlLTA1LFRydWUNCk5HQzA4OTEsMC44MDQsMS4zNzIsMC43MDUsMC40MTEsNC42N2UtMDUsVHJ1ZQ0KTkdDMTAwMywwLjkyNSwxLjY4MiwwLjgxOSwwLjYzOSw4LjA5MWUtMDUsVHJ1ZQ0KTkdDMTA5MCwwLjYxOCwxLjE0LDAuODQ0LDAuNjg4LDAuMDAwMTE4OTUsVHJ1ZQ0KTkdDMTE1NiwwLjgwNiwxLjQ1MywwLjgwMiwwLjYwNCw4Ljg0NmUtMDUsVHJ1ZQ0KTkdDMTE2NywwLjg4NywxLjYzNiwwLjg0NCwwLjY4OCw1LjE1NWUtMDUsVHJ1ZQ0KTkdDMTE4NywwLjY1NywxLjEwNSwwLjY4MSwwLjM2MiwwLjAwMDExNDI5LFRydWUNCk5HQzEyNDUsMC45MDEsMS41MiwwLjY4OCwwLjM3NSwwLjAwMDExMTQ1LFRydWUNCk5HQzE0NTMsMC43MzQsMS4yMjEsMC42NjUsMC4zMjksNC40NjZlLTA1LFRydWUNCk5HQzE1NjAsMC43NzUsMS4yNjUsMC42MzQsMC4yNjcsNS45OTRlLTA1LEZhbHNlDQpOR0MxNzA1LDAuNjM4LDEuMTk3LDAuODc3LDAuNzU0LDcuMDk1ZS0wNSxUcnVlDQpOR0MxODA4LDAuNTg2LDAuOTcxLDAuNjU3LDAuMzEzLDkuOTIxZS0wNSxUcnVlDQpOR0MxOTU0LDAuNzE5LDEuMTksMC42NTYsMC4zMTIsNS44MTZlLTA1LFRydWUNCk5HQzE5NjEsMC45NDgsMS43MzMsMC44MjcsMC42NTUsMi4xMTVlLTA1LFRydWUNCk5HQzIxNDYsMC44MzgsMS41MTIsMC44MDQsMC42MDcsNy4zN2UtMDUsVHJ1ZQ0KTkdDMjIyMywwLjY1NywxLjIsMC44MjcsMC42NTQsNi41MzdlLTA1LFRydWUNCk5HQzIzNjYsMC45MzIsMS43NjQsMC44OTMsMC43ODcsNC42MzRlLTA1LFRydWUNCk5HQzI2ODMsMC43NSwxLjI4NywwLjcxNSwwLjQzMSw0Ljk4NGUtMDUsVHJ1ZQ0KTkdDMjkwMywwLjgwNiwxLjQxOSwwLjc2MSwwLjUyMiwzLjUyOGUtMDUsVHJ1ZQ0KTkdDMjk3NiwwLjg1NSwxLjUyMSwwLjc3OCwwLjU1NywyLjAwNmUtMDUsVHJ1ZQ0KTkdDMzAzMSwwLjY4LDEuMDc0LDAuNTgsMC4xNTksMC4wMDAxMTI5MSxGYWxzZQ0KTkdDMzA0MSwwLjkwMSwxLjY3MywwLjg1NiwwLjcxMiwwLjAwMDEwNzgsVHJ1ZQ0KTkdDMzEwOSwwLjkyOSwxLjUyOCwwLjY0NSwwLjI5MSw2Ljg2ZS0wNSxGYWxzZQ0KTkdDMzE5MCwwLjU3OCwxLjA2MywwLjg0LDAuNjc5LDYuNzUzZS0wNSxUcnVlDQpOR0MzMzE5LDAuNzcsMS4yODksMC42NzQsMC4zNDgsMC4wMDAxMDcyNCxUcnVlDQpOR0MzNTIxLDAuNzE5LDEuMTcsMC42MjYsMC4yNTMsNC4wMTJlLTA1LEZhbHNlDQpOR0MzNjIxLDAuNjc1LDEuMjgsMC44OTcsMC43OTMsOC40OTllLTA1LFRydWUNCk5HQzM2MjcsMC43MjUsMS4yOTEsMC43ODEsMC41NjIsNS4zODFlLTA1LFRydWUNCk5HQzM3MjYsMC43ODUsMS4zMywwLjY5NCwwLjM4OCw0LjIwMmUtMDUsVHJ1ZQ0KTkdDMzc2OSwwLjU3OCwxLjA0NiwwLjgwOCwwLjYxNiwwLjAwMDEwNTk2LFRydWUNCk5HQzM4NzcsMC41NzgsMS4wMSwwLjc0NiwwLjQ5Miw4LjY5ZS0wNSxUcnVlDQpOR0MzODkzLDAuNjM2LDEuMDcyLDAuNjg2LDAuMzcxLDYuNzI3ZS0wNSxUcnVlDQpOR0MzOTE3LDAuODY0LDEuNTg3LDAuODM3LDAuNjc0LDMuOTA0ZS0wNSxUcnVlDQpOR0MzOTQ5LDAuNTg5LDEuMDA2LDAuNzA5LDAuNDE5LDkuMjkxZS0wNSxUcnVlDQpOR0MzOTUzLDAuODE5LDEuNTczLDAuOTIsMC44NCwyLjk4NGUtMDUsVHJ1ZQ0KTkdDMzk3MiwwLjcxMSwxLjIyOCwwLjcyNiwwLjQ1MywzLjkwMmUtMDUsVHJ1ZQ0KTkdDMzk5MiwwLjcyOSwxLjI1NCwwLjcxOSwwLjQzOCw0Ljc4NWUtMDUsVHJ1ZQ0KTkdDNDA1MSwwLjY1LDEuMTksMC44MzEsMC42NjIsNy41MDNlLTA1LFRydWUNCk5HQzQwODUsMC41NywxLjA5NSwwLjkyLDAuODQsMC4wMDAxMDM2LFRydWUNCk5HQzQwODgsMC45MzgsMS43OCwwLjg5OCwwLjc5Nyw2Ljg1NmUtMDUsVHJ1ZQ0KTkdDNDEwMCwwLjYzNSwxLjA5LDAuNzE2LDAuNDMxLDIuNTg2ZS0wNSxUcnVlDQpOR0M0MTM4LDAuNzAyLDEuMzMzLDAuOTAxLDAuODAxLDYuNTVlLTA1LFRydWUNCk5HQzQxNTcsMC43MTksMS4zODEsMC45MiwwLjg0LDAuMDAwMTE5NTQsVHJ1ZQ0KTkdDNDE4MywwLjc3MiwxLjQyMSwwLjg0LDAuNjc5LDAuMDAwMTE2ODcsVHJ1ZQ0KTkdDNDIxNywwLjc4MiwxLjQwMiwwLjc5MywwLjU4Nyw5LjQ4ZS0wNSxUcnVlDQpOR0M0MjIwLDAuNTczLDAuOTg5LDAuNzI3LDAuNDUzLDMuNTc0ZS0wNSxUcnVlDQpOR0M0MjU0LDAuOTM0LDEuNTI2LDAuNjMzLDAuMjY2LDMuODU4ZS0wNSxGYWxzZQ0KTkdDNDMwMywwLjc4OCwxLjQyOSwwLjgxNCwwLjYyOCwwLjAwMDEwOTAzLFRydWUNCk5HQzQzMjEsMC42NDgsMS4xNywwLjgwMywwLjYwNyw4LjE5NGUtMDUsVHJ1ZQ0KTkdDNDU1OSwwLjcxOCwxLjIzMSwwLjcxNiwwLjQzMSw0LjA0M2UtMDUsVHJ1ZQ0KTkdDNDcyNSwwLjgzNiwxLjM5OCwwLjY3MiwwLjM0Myw1Ljk1OGUtMDUsVHJ1ZQ0KTkdDNTAzMywwLjgxOSwxLjM3NSwwLjY4LDAuMzYsMi43MjVlLTA1LFRydWUNCk5HQzUwNTUsMC43MzMsMS40MDgsMC45MiwwLjg0LDAuMDAwMTE5NjEsVHJ1ZQ0KTkdDNTU4NSwwLjU3OSwwLjk2NiwwLjY2NywwLjMzNSwwLjAwMDEwODA5LFRydWUNCk5HQzU5MDcsMC45MDIsMS42MTQsMC43OSwwLjU4MSwzLjU3N2UtMDUsVHJ1ZQ0KTkdDNjAxNSwwLjg4MywxLjU0OSwwLjc1MywwLjUwNyw4LjU0ZS0wNSxUcnVlDQpOR0M2MTk1LDAuNTUzLDAuOTk0LDAuNzk4LDAuNTk2LDQuOTk0ZS0wNSxUcnVlDQpOR0M2Njc0LDAuODE1LDEuNTUsMC45MDIsMC44MDMsMy4wN2UtMDUsVHJ1ZQ0KTkdDNjk0NiwwLjc3MSwxLjMxMywwLjcwMywwLjQwNiw4LjA0OGUtMDUsVHJ1ZQ0KTkdDNzMzMSwwLjgzNywxLjM4NiwwLjY1NSwwLjMxMSw2Ljg4NWUtMDUsVHJ1ZQ0KTkdDNzc5MywwLjkxMiwxLjY4NCwwLjg0NiwwLjY5MywyLjkyM2UtMDUsVHJ1ZQ0KVUdDMDAxMjgsMC43MTksMS4yMzMsMC43MTUsMC40MjksOC4zNzFlLTA1LFRydWUNClVHQzAwMTkxLDAuNjU1LDEuMTgxLDAuODA0LDAuNjA3LDcuNTE3ZS0wNSxUcnVlDQpVR0MwMDczMSwwLjcyMSwxLjE4MSwwLjYzOCwwLjI3NiwwLjAwMDExMDM5LEZhbHNlDQpVR0MwMDg5MSwwLjc2OCwxLjQyOCwwLjg1OSwwLjcxNyw3LjgyNWUtMDUsVHJ1ZQ0KVUdDMDEyMzAsMC42MDksMC45NzIsMC41OTUsMC4xOSw5Ljk2MWUtMDUsRmFsc2UNClVHQzAxMjgxLDAuODk0LDEuNzA4LDAuOTEsMC44MTksNC4xMDFlLTA1LFRydWUNClVHQzAyMDIzLDAuNjUsMS4wNTQsMC42MjMsMC4yNDUsNi4wNjRlLTA1LEZhbHNlDQpVR0MwMjQ4NywwLjc5OCwxLjI0OSwwLjU2NSwwLjEzLDAuMDAwMTEyOTksRmFsc2UNClVHQzAyOTE2LDAuODk2LDEuNjk4LDAuODk2LDAuNzkyLDIuMjQ4ZS0wNSxUcnVlDQpVR0MwMzU0NiwwLjg0NSwxLjM3LDAuNjIyLDAuMjQ0LDAuMDAwMTEzMDgsRmFsc2UNClVHQzAzNTgwLDAuODcxLDEuNjA5LDAuODQ4LDAuNjk2LDkuODc0ZS0wNSxUcnVlDQpVR0MwNDI3OCwwLjU5MywxLjA4LDAuODIsMC42MzksMC4wMDAxMDU4NixUcnVlDQpVR0MwNDQ4MywwLjYzOSwxLjE1LDAuOCwwLjYsOS45NTNlLTA1LFRydWUNClVHQzA1MDA1LDAuNjQxLDEuMDIxLDAuNTkzLDAuMTg3LDMuOTMxZS0wNSxGYWxzZQ0KVUdDMDU0MTQsMC42ODEsMS4yNjksMC44NjMsMC43MjYsOC40MTVlLTA1LFRydWUNClVHQzA1NzIxLDAuNzEsMS4zMjcsMC44NjksMC43MzksNy4zNjJlLTA1LFRydWUNClVHQzA1NzUwLDAuOTI2LDEuNTEyLDAuNjMzLDAuMjY2LDAuMDAwMTE2MjUsRmFsc2UNClVHQzA1ODI5LDAuNjU2LDEuMDU2LDAuNjA5LDAuMjE4LDYuMzQ2ZS0wNSxGYWxzZQ0KVUdDMDU5MTgsMC44NDEsMS4zODUsMC42NDYsMC4yOTIsNS44NTJlLTA1LEZhbHNlDQpVR0MwNTk4NiwwLjc4MSwxLjI3NiwwLjYzNCwwLjI2OCw5LjA4OGUtMDUsRmFsc2UNClVHQzA2Mzk5LDAuNTUxLDAuOTk3LDAuODExLDAuNjIyLDkuNDJlLTA1LFRydWUNClVHQzA2NjY3LDAuODE4LDEuMzczLDAuNjc4LDAuMzU2LDIuN2UtMDUsVHJ1ZQ0KVUdDMDY3ODYsMC44MTYsMS4zNTEsMC42NTYsMC4zMTMsOS4xOThlLTA1LFRydWUNClVHQzA2ODE4LDAuNjcsMS4xNTcsMC43MjYsMC40NTMsNi4wODRlLTA1LFRydWUNClVHQzA2OTIzLDAuNzExLDEuMjAyLDAuNjkxLDAuMzgxLDAuMDAwMTE0MDQsVHJ1ZQ0KVUdDMDY5MzAsMC44MjEsMS41MzgsMC44NzMsMC43NDcsOC4xNTVlLTA1LFRydWUNClVHQzA2OTgzLDAuNjcsMS4xODYsMC43NjksMC41MzgsNi4yOTllLTA1LFRydWUNClVHQzA3MTI1LDAuNzgyLDEuMzg5LDAuNzc2LDAuNTUzLDYuNjVlLTA1LFRydWUNClVHQzA3MTUxLDAuNzI3LDEuMTQ5LDAuNTgsMC4xNjEsOS45NmUtMDUsRmFsc2UNClVHQzA3Mzk5LDAuNjE4LDAuOTk5LDAuNjE2LDAuMjMzLDcuMTU1ZS0wNSxGYWxzZQ0KVUdDMDc1MjQsMC44MDMsMS4zNjcsMC43MDEsMC40MDMsOC43MjhlLTA1LFRydWUNClVHQzA3NjAzLDAuNjQsMS4wMiwwLjU5NCwwLjE4OSwyLjI0NGUtMDUsRmFsc2UNClVHQzA3NjA4LDAuNjQ4LDEuMTIxLDAuNzI5LDAuNDU5LDYuMTQ0ZS0wNSxUcnVlDQpVR0MwNzY5MCwwLjgwMiwxLjMwNiwwLjYyOSwwLjI1OCw4Ljk2NGUtMDUsRmFsc2UNClVHQzA3ODY2LDAuNzQ4LDEuMjM1LDAuNjUxLDAuMzAzLDkuNTFlLTA1LFRydWUNClVHQzA4Mjg2LDAuODU4LDEuMzgxLDAuNjA5LDAuMjE5LDYuMjUxZS0wNSxGYWxzZQ0KVUdDMDg0OTAsMC42MiwxLjE1MywwLjg1OCwwLjcxNiw0LjQ5MmUtMDUsVHJ1ZQ0KVUdDMDg1NTAsMC44ODksMS41MjYsMC43MTYsMC40MzIsMC4wMDAxMDAxNCxUcnVlDQpVR0MwODY5OSwwLjgxNywxLjQ4NCwwLjgxNiwwLjYzMSwwLjAwMDEwOTE0LFRydWUNClVHQzA5MTMzLDAuNzk1LDEuMzk1LDAuNzU0LDAuNTA5LDcuMDQ4ZS0wNSxUcnVlDQpVR0MxMDMxMCwwLjg4MiwxLjU3NCwwLjc4NCwwLjU2OCw2Ljc0N2UtMDUsVHJ1ZQ0KVUdDMTE0NTUsMC42NTQsMS4wNjIsMC42MjQsMC4yNDksOC4zNzdlLTA1LEZhbHNlDQpVR0MxMTgyMCwwLjg1NiwxLjQ3MywwLjcyLDAuNDM5LDIuNzc1ZS0wNSxUcnVlDQpVR0MxMjUwNiwwLjY2NCwxLjA5MiwwLjY0NCwwLjI4OSw1LjE5N2UtMDUsRmFsc2UNCkRETzA2NCwwLjc2NiwxLjI0NiwwLjYyNywwLjI1NCw5LjA2NGUtMDUsRmFsc2UNCkRETzE2OCwwLjU3NiwxLjAwNiwwLjc0OCwwLjQ5Niw3LjQyNmUtMDUsVHJ1ZQ0KSUMwMDEwLDAuNzE2LDEuMTM1LDAuNTg1LDAuMTcsNy44NDFlLTA1LEZhbHNlDQpJQzAxNDQsMC44MjgsMS41NDcsMC44NjgsMC43MzcsOS42NTZlLTA1LFRydWUNCklDMjU3NCwwLjcwMiwxLjA5LDAuNTUyLDAuMTA0LDAuMDAwMTA1MzQsRmFsc2UNCklDNDIwMiwwLjkzMSwxLjYyNiwwLjc0NiwwLjQ5Miw5LjQ3NWUtMDUsVHJ1ZQ0KRjU2My0xLDAuNzY4LDEuMzU2LDAuNzY1LDAuNTMsNi4zNThlLTA1LFRydWUNCkY1NjMtVjIsMC41NjIsMC45NTYsMC43MDIsMC40MDMsOC43OTFlLTA1LFRydWUNCkY1NjUtVjIsMC43MTIsMS4xNDksMC42MTQsMC4yMjgsOC4yMjNlLTA1LEZhbHNlDQpGNTY4LTEsMC41NjEsMC45NTQsMC43MDEsMC40MDMsNy42NDRlLTA1LFRydWUNCkY1NjgtMywwLjU2MSwxLjAwNywwLjc5NSwwLjU5LDIuNTAzZS0wNSxUcnVlDQpGNTcxLTgsMC43MDIsMS4xNzEsMC42NjksMC4zMzcsNS4yNjhlLTA1LFRydWUNCkY1NzktVjEsMC44NTQsMS40NDgsMC42OTQsMC4zODksNC41MjNlLTA1LFRydWUNClVHQzAyOTUzLDAuNTgzLDAuODkxLDAuNTI5LDAuMDU4LDcuMzk0ZS0wNSxGYWxzZQ0KVUdDODAwMSwwLjk1LDEuNTcyLDAuNjU0LDAuMzA5LDguNTE4ZS0wNSxUcnVlDQpVR0M4MDAyLDAuODUyLDEuNTUyLDAuODIzLDAuNjQ1LDMuOTk0ZS0wNSxUcnVlDQpVR0M4MDAzLDAuNTU4LDAuOTI1LDAuNjU3LDAuMzE0LDcuNjRlLTA1LFRydWUNClVHQzgwMDQsMC42MzcsMS4xNjEsMC44MjIsMC42NDMsOS42NjllLTA1LFRydWUNClVHQzgwMDUsMC42MTcsMS4wODcsMC43NjIsMC41MjQsMC4wMDAxMDE5MyxUcnVlDQpVR0M4MDA2LDAuOTM2LDEuNDk1LDAuNTk4LDAuMTk1LDIuMjU3ZS0wNSxGYWxzZQ0KVUdDODAwNywwLjY3NSwxLjIyMywwLjgxMiwwLjYyNSw5LjE1ZS0wNSxUcnVlDQpVR0M4MDA4LDAuNTgsMS4wMzMsMC43NzksMC41NTksOC4yNzJlLTA1LFRydWUNClVHQzgwMDksMC41OTEsMS4wODQsMC44MzYsMC42NzEsMy4yMTFlLTA1LFRydWUNClVHQzgwMTAsMC45NDQsMS42ODEsMC43ODIsMC41NjQsNS40NzJlLTA1LFRydWUNClVHQzgwMTEsMC43MjEsMS4yLDAuNjY0LDAuMzI4LDAuMDAwMTA0OTYsVHJ1ZQ0KVUdDODAxMiwwLjg3OSwxLjQxNiwwLjYxMSwwLjIyMSwwLjAwMDExNjA4LEZhbHNlDQpVR0M4MDEzLDAuODA0LDEuNDY0LDAuODIsMC42NCw5LjMzOGUtMDUsVHJ1ZQ0KVUdDODAxNCwwLjkzNiwxLjUyNiwwLjYzLDAuMjYsMC4wMDAxMDA4MixGYWxzZQ0KVUdDODAxNSwwLjc2NSwxLjI4NiwwLjY4LDAuMzYxLDQuNjg0ZS0wNSxUcnVlDQpVR0M4MDE2LDAuODkxLDEuNjQ2LDAuODQ4LDAuNjk3LDIuODY3ZS0wNSxUcnVlDQpVR0M4MDE3LDAuOTAzLDEuNDU2LDAuNjEzLDAuMjI2LDUuNzllLTA1LEZhbHNlDQpVR0M4MDE4LDAuNTYxLDEuMDM2LDAuODQ0LDAuNjg5LDMuODE4ZS0wNSxUcnVlDQpVR0M4MDE5LDAuNjM1LDEuMTM0LDAuNzg2LDAuNTcyLDkuMDEyZS0wNSxUcnVlDQpVR0M4MDIwLDAuNjYxLDEuMDgsMC42MzUsMC4yNywwLjAwMDExNDgxLEZhbHNlDQo=" download>Download 150 XLSX</a>
-      <a class="btn2" href="https://github.com/unbekanntedavid-glitch/Time-Attraction" target="_blank">GitHub Source</a>
-    </div>
-  </div>
+<h1>Phi_t Protocol / Time Attraction — Interactive Lab</h1>
+<div class="subtitle">v8.2 Corrigendum (2026-10-04) — Thanks to Jordi Audet Palau — Corrected Horndeski Ratio + R(a) Drift as shape</div>
+<div>
+<span class="badge">DOI: 10.5281/zenodo.23135605</span>
+<span class="badge">v8.2 NEW: R=(1+r)/(1+2r)</span>
+<span class="badge">OLD retracted: (r+1)/(r+2)</span>
+<span class="badge">150 SPARC</span>
+</div>
 
-  <div class="grid4">
-    <div class="card">
-      <div class="stat">150</div>
-      <div class="statLabel">TOTAL GALAXIES FITTED</div>
-      <p class="mono" style="margin-top:10px">SPARC-like sample • UGC + NGC + DDO + IC</p>
-    </div>
-    <div class="card">
-      <div class="stat">115 / 150</div>
-      <div class="statLabel">COHERENT (phi_t ≥ 0.65) • 76.7%</div>
-      <p class="mono" style="margin-top:10px">Threshold 0.65 dashed line • B[T] compensated</p>
-    </div>
-    <div class="card">
-      <div class="stat">0.740 Hz</div>
-      <div class="statLabel">MEAN phi_t = dΦ/dt • [s⁻¹]</div>
-      <p class="mono" style="margin-top:10px">Mean phi_hat 0.480 • normalized 0..1</p>
-    </div>
-    <div class="card">
-      <div class="stat">1.300e-22</div>
-      <div class="statLabel">MEAN rho_eff kg/m³ • rho × (1+phi_t)</div>
-      <p class="mono" style="margin-top:10px">NGC3198 = 1.252e-22 • unified framework</p>
-    </div>
-  </div>
+<div class="card card-white">
+<h3 style="margin:0 0 8px 0;">Corrected Observable Ratio</h3>
+<p style="font-size:13px; color:#555;">Per Jordi Audet Palau correction: <span class="mono">R = ΔΣ/Δμ = (1+r)/(1+2r)</span>, where <span class="mono">r = α_M/α_B</span>. Both give 2/3 at r=1, but differ elsewhere (at r=2: 3/5 vs 3/4). Inversion: <span class="mono">r = (1-R)/(2R-1)</span></p>
 
-  <div class="sim">
-    <h2 style="font-family:Fraunces,serif;color:#fff;margin-bottom:10px">Idokamra — 150 Galaxies Temporal Coherence Simulation • B[T] + phi_t</h2>
-    <canvas id="c"></canvas>
-    <div id="galaxyInfo">Selected: <span style="color:#C9A86A" id="selName">NGC3198</span> | phi_t = <span id="selPhi">0.710</span> Hz | B = <span id="selB">0.00004054</span> T | rho_eff = <span id="selRho">1.252</span>e-22 kg/m³ | phi_hat = <span id="selHat">0.42</span> | Click table row to lock galaxy • Move mouse to modulate live</div>
-    <div class="grid2" style="margin-top:12px">
-      <p class="mono">Interactive: move mouse / touch to modulate phi_t & B field • Click table row to lock to real galaxy value • phi_hat 0..1 • threshold 0.65 dashed</p>
-      <p class="mono" style="text-align:right">rho_eff = rho × (1+phi_t) • 150 fits • v9.0.0 EXPANDED interactive</p>
-    </div>
-  </div>
+<div class="grid2">
+<div>
+<label>r = α_M / α_B: <span id="rVal" class="mono">1.00</span></label>
+<input type="range" id="rSlider" min="0" max="10" step="0.05" value="1">
+<p>OLD WRONG: <span id="oldR" class="mono red">0.6667</span></p>
+<p>NEW CORRECTED: <span id="newR" class="mono green big">0.6667</span></p>
+<p>Inversion check: r_inv = <span id="rInv" class="mono">1.00</span></p>
+</div>
+<div>
+<label>Scale factor a (density falls →): <span id="aVal" class="mono">1.00</span></label>
+<input type="range" id="aSlider" min="0.1" max="3" step="0.05" value="1">
+<p>R(a) OLD: <span id="RaOld" class="mono red">0.714</span></p>
+<p>R(a) NEW (shape → 2/3): <span id="RaNew" class="mono green big">0.615</span></p>
+<canvas id="canvas" width="400" height="180" style="border:1px solid #eee; border-radius:8px; width:100%;"></canvas>
+</div>
+</div>
+</div>
 
-  <div class="grid2">
-    <div class="card">
-      <h2>Controls — 150 Galaxies</h2>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px">
-        <div><label class="mono">SEARCH GALAXY</label><input id="search" placeholder="NGC, UGC, DDO..."></div>
-        <div><label class="mono">FILTER</label><select id="filter"><option value="all">All 150</option><option value="coh">Coherent ≥0.65 only (115)</option><option value="ncoh">Below threshold only (35)</option></select></div>
-      </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px">
-        <div><label class="mono">SORT BY</label><select id="sort"><option value="phi_desc">phi_t ↓ high to low</option><option value="phi_asc">phi_t ↑ low to high</option><option value="rho_desc">rho_eff ↓</option><option value="name">Name A-Z</option></select></div>
-        <div><label class="mono">ACTIONS</label><button class="btn" style="width:100%;margin-top:0" onclick="resetView()">Reset View • Show All</button></div>
-      </div>
-      <p class="mono" style="margin-top:12px">Formula: phi_hat = (phi_t - 0.5)/0.5 clamped 0..1 • EEG 10min baseline + HRV 5min RMSSD • B field monitored, compensated</p>
-    </div>
-    <div class="card">
-      <h2>Unified Effective Density — 150 Formula</h2>
-      <p><code>rho_eff = rho_baryonic × (1 + phi_t)</code> for 150 galaxies</p>
-      <p style="margin-top:8px">phi_t [Hz = s⁻¹] temporal coherence frequency, normalized 0 ≤ phi_hat ≤ 1. No dark matter needed. Each galaxy's B[T] field independently compensated.</p>
-      <p class="mono" style="margin-top:10px">Stats: mean phi_t 0.740 Hz • mean rho_eff 1.300e-22 • success rate 76.7% • v9.0.0 EXPANDED • 150× run</p>
-      <p class="mono" style="margin-top:10px">Original 10 core + 140 expanded = 150 total • NGC3198=1.252e-22 phi 0.71 etc.</p>
-    </div>
-  </div>
+<div class="card">
+<h3 style="margin:0 0 8px 0;">Sec 3 Low-density Derivation (what was missing)</h3>
+<p style="font-size:13px;"><span class="mono">γ_L = G·N_L² / c² [m³ kg⁻¹]</span> → <span class="mono">γ_L·ρ_L</span> dimensionless<br>
+<span class="mono">f_L = exp(-γ_L ρ_L)</span><br>
+High ρ_L → f_L→0 (screened, GR), Low ρ_L→0 → f_L→1 (unscreened)</p>
+<p style="font-size:13px;"><span class="mono">α_M = α_0·f_L</span>, <span class="mono">α_B = α_0·f_L·(1+ε(ρ_L))</span>, ε→0 as ρ_L→0<br>
+⇒ <span class="mono">lim ρ_L→0 r = α_M/α_B = 1 ⇒ R = 2/3</span> parameter-free</p>
+<p style="font-size:12px; color:#666;">This is the step Jordi highlighted: screening → equality carries the claim. Justification: both α originate from same G4+G3 coupling, differ only by matter factor vanishing in vacuum. Subclass: G3X-2G4φ=0.</p>
+</div>
 
-  <div class="card">
-    <h2>150 Galaxies Fit — Full Table (click row to simulate)</h2>
-    <div class="tableWrap">
-    <table id="galTable">
-      <thead><tr><th onclick="sortBy('name')">Galaxy ↕</th><th onclick="sortBy('rho')">rho_eff ↕</th><th>rho_baryonic</th><th onclick="sortBy('phi')">phi_t ↕</th><th>phi_hat</th><th>B[T]</th><th>Coherent?</th></tr></thead>
-      <tbody>
-        <tr data-name="NGC3198" data-phi="0.614" data-rho="1.301" data-b="9.365e-05" class="ncoh"><td>NGC3198</td><td>1.301e-22</td><td>0.806e-22</td><td>0.614</td><td>0.228</td><td>9.365e-05</td><td>—</td></tr>
-<tr data-name="NGC2403" data-phi="0.899" data-rho="1.558" data-b="2.869e-05" class="coh"><td>NGC2403</td><td>1.558e-22</td><td>0.821e-22</td><td>0.899</td><td>0.797</td><td>2.869e-05</td><td>✓</td></tr>
-<tr data-name="NGC6503" data-phi="0.626" data-rho="1.169" data-b="2.265e-05" class="ncoh"><td>NGC6503</td><td>1.169e-22</td><td>0.719e-22</td><td>0.626</td><td>0.252</td><td>2.265e-05</td><td>—</td></tr>
-<tr data-name="DDO154" data-phi="0.81" data-rho="1.139" data-b="7.449e-05" class="coh"><td>DDO154</td><td>1.139e-22</td><td>0.63e-22</td><td>0.81</td><td>0.62</td><td>7.449e-05</td><td>✓</td></tr>
-<tr data-name="NGC2841" data-phi="0.788" data-rho="1.141" data-b="0.00010058" class="coh"><td>NGC2841</td><td>1.141e-22</td><td>0.638e-22</td><td>0.788</td><td>0.576</td><td>0.00010058</td><td>✓</td></tr>
-<tr data-name="NGC0024" data-phi="0.709" data-rho="1.417" data-b="3.555e-05" class="coh"><td>NGC0024</td><td>1.417e-22</td><td>0.829e-22</td><td>0.709</td><td>0.418</td><td>3.555e-05</td><td>✓</td></tr>
-<tr data-name="NGC0055" data-phi="0.722" data-rho="1.607" data-b="0.00010475" class="coh"><td>NGC0055</td><td>1.607e-22</td><td>0.933e-22</td><td>0.722</td><td>0.445</td><td>0.00010475</td><td>✓</td></tr>
-<tr data-name="NGC0247" data-phi="0.86" data-rho="1.472" data-b="9.297e-05" class="coh"><td>NGC0247</td><td>1.472e-22</td><td>0.791e-22</td><td>0.86</td><td>0.719</td><td>9.297e-05</td><td>✓</td></tr>
-<tr data-name="NGC0289" data-phi="0.874" data-rho="1.433" data-b="0.00010294" class="coh"><td>NGC0289</td><td>1.433e-22</td><td>0.764e-22</td><td>0.874</td><td>0.749</td><td>0.00010294</td><td>✓</td></tr>
-<tr data-name="NGC0300" data-phi="0.895" data-rho="1.511" data-b="7.774e-05" class="coh"><td>NGC0300</td><td>1.511e-22</td><td>0.797e-22</td><td>0.895</td><td>0.79</td><td>7.774e-05</td><td>✓</td></tr>
-<tr data-name="NGC0598" data-phi="0.627" data-rho="1.354" data-b="2.798e-05" class="ncoh"><td>NGC0598</td><td>1.354e-22</td><td>0.832e-22</td><td>0.627</td><td>0.254</td><td>2.798e-05</td><td>—</td></tr>
-<tr data-name="NGC0628" data-phi="0.665" data-rho="1.071" data-b="4.78e-05" class="coh"><td>NGC0628</td><td>1.071e-22</td><td>0.643e-22</td><td>0.665</td><td>0.33</td><td>4.78e-05</td><td>✓</td></tr>
-<tr data-name="NGC0891" data-phi="0.705" data-rho="1.372" data-b="4.67e-05" class="coh"><td>NGC0891</td><td>1.372e-22</td><td>0.804e-22</td><td>0.705</td><td>0.411</td><td>4.67e-05</td><td>✓</td></tr>
-<tr data-name="NGC1003" data-phi="0.819" data-rho="1.682" data-b="8.091e-05" class="coh"><td>NGC1003</td><td>1.682e-22</td><td>0.925e-22</td><td>0.819</td><td>0.639</td><td>8.091e-05</td><td>✓</td></tr>
-<tr data-name="NGC1090" data-phi="0.844" data-rho="1.14" data-b="0.00011895" class="coh"><td>NGC1090</td><td>1.14e-22</td><td>0.618e-22</td><td>0.844</td><td>0.688</td><td>0.00011895</td><td>✓</td></tr>
-<tr data-name="NGC1156" data-phi="0.802" data-rho="1.453" data-b="8.846e-05" class="coh"><td>NGC1156</td><td>1.453e-22</td><td>0.806e-22</td><td>0.802</td><td>0.604</td><td>8.846e-05</td><td>✓</td></tr>
-<tr data-name="NGC1167" data-phi="0.844" data-rho="1.636" data-b="5.155e-05" class="coh"><td>NGC1167</td><td>1.636e-22</td><td>0.887e-22</td><td>0.844</td><td>0.688</td><td>5.155e-05</td><td>✓</td></tr>
-<tr data-name="NGC1187" data-phi="0.681" data-rho="1.105" data-b="0.00011429" class="coh"><td>NGC1187</td><td>1.105e-22</td><td>0.657e-22</td><td>0.681</td><td>0.362</td><td>0.00011429</td><td>✓</td></tr>
-<tr data-name="NGC1245" data-phi="0.688" data-rho="1.52" data-b="0.00011145" class="coh"><td>NGC1245</td><td>1.52e-22</td><td>0.901e-22</td><td>0.688</td><td>0.375</td><td>0.00011145</td><td>✓</td></tr>
-<tr data-name="NGC1453" data-phi="0.665" data-rho="1.221" data-b="4.466e-05" class="coh"><td>NGC1453</td><td>1.221e-22</td><td>0.734e-22</td><td>0.665</td><td>0.329</td><td>4.466e-05</td><td>✓</td></tr>
-<tr data-name="NGC1560" data-phi="0.634" data-rho="1.265" data-b="5.994e-05" class="ncoh"><td>NGC1560</td><td>1.265e-22</td><td>0.775e-22</td><td>0.634</td><td>0.267</td><td>5.994e-05</td><td>—</td></tr>
-<tr data-name="NGC1705" data-phi="0.877" data-rho="1.197" data-b="7.095e-05" class="coh"><td>NGC1705</td><td>1.197e-22</td><td>0.638e-22</td><td>0.877</td><td>0.754</td><td>7.095e-05</td><td>✓</td></tr>
-<tr data-name="NGC1808" data-phi="0.657" data-rho="0.971" data-b="9.921e-05" class="coh"><td>NGC1808</td><td>0.971e-22</td><td>0.586e-22</td><td>0.657</td><td>0.313</td><td>9.921e-05</td><td>✓</td></tr>
-<tr data-name="NGC1954" data-phi="0.656" data-rho="1.19" data-b="5.816e-05" class="coh"><td>NGC1954</td><td>1.19e-22</td><td>0.719e-22</td><td>0.656</td><td>0.312</td><td>5.816e-05</td><td>✓</td></tr>
-<tr data-name="NGC1961" data-phi="0.827" data-rho="1.733" data-b="2.115e-05" class="coh"><td>NGC1961</td><td>1.733e-22</td><td>0.948e-22</td><td>0.827</td><td>0.655</td><td>2.115e-05</td><td>✓</td></tr>
-<tr data-name="NGC2146" data-phi="0.804" data-rho="1.512" data-b="7.37e-05" class="coh"><td>NGC2146</td><td>1.512e-22</td><td>0.838e-22</td><td>0.804</td><td>0.607</td><td>7.37e-05</td><td>✓</td></tr>
-<tr data-name="NGC2223" data-phi="0.827" data-rho="1.2" data-b="6.537e-05" class="coh"><td>NGC2223</td><td>1.2e-22</td><td>0.657e-22</td><td>0.827</td><td>0.654</td><td>6.537e-05</td><td>✓</td></tr>
-<tr data-name="NGC2366" data-phi="0.893" data-rho="1.764" data-b="4.634e-05" class="coh"><td>NGC2366</td><td>1.764e-22</td><td>0.932e-22</td><td>0.893</td><td>0.787</td><td>4.634e-05</td><td>✓</td></tr>
-<tr data-name="NGC2683" data-phi="0.715" data-rho="1.287" data-b="4.984e-05" class="coh"><td>NGC2683</td><td>1.287e-22</td><td>0.75e-22</td><td>0.715</td><td>0.431</td><td>4.984e-05</td><td>✓</td></tr>
-<tr data-name="NGC2903" data-phi="0.761" data-rho="1.419" data-b="3.528e-05" class="coh"><td>NGC2903</td><td>1.419e-22</td><td>0.806e-22</td><td>0.761</td><td>0.522</td><td>3.528e-05</td><td>✓</td></tr>
-<tr data-name="NGC2976" data-phi="0.778" data-rho="1.521" data-b="2.006e-05" class="coh"><td>NGC2976</td><td>1.521e-22</td><td>0.855e-22</td><td>0.778</td><td>0.557</td><td>2.006e-05</td><td>✓</td></tr>
-<tr data-name="NGC3031" data-phi="0.58" data-rho="1.074" data-b="0.00011291" class="ncoh"><td>NGC3031</td><td>1.074e-22</td><td>0.68e-22</td><td>0.58</td><td>0.159</td><td>0.00011291</td><td>—</td></tr>
-<tr data-name="NGC3041" data-phi="0.856" data-rho="1.673" data-b="0.0001078" class="coh"><td>NGC3041</td><td>1.673e-22</td><td>0.901e-22</td><td>0.856</td><td>0.712</td><td>0.0001078</td><td>✓</td></tr>
-<tr data-name="NGC3109" data-phi="0.645" data-rho="1.528" data-b="6.86e-05" class="ncoh"><td>NGC3109</td><td>1.528e-22</td><td>0.929e-22</td><td>0.645</td><td>0.291</td><td>6.86e-05</td><td>—</td></tr>
-<tr data-name="NGC3190" data-phi="0.84" data-rho="1.063" data-b="6.753e-05" class="coh"><td>NGC3190</td><td>1.063e-22</td><td>0.578e-22</td><td>0.84</td><td>0.679</td><td>6.753e-05</td><td>✓</td></tr>
-<tr data-name="NGC3319" data-phi="0.674" data-rho="1.289" data-b="0.00010724" class="coh"><td>NGC3319</td><td>1.289e-22</td><td>0.77e-22</td><td>0.674</td><td>0.348</td><td>0.00010724</td><td>✓</td></tr>
-<tr data-name="NGC3521" data-phi="0.626" data-rho="1.17" data-b="4.012e-05" class="ncoh"><td>NGC3521</td><td>1.17e-22</td><td>0.719e-22</td><td>0.626</td><td>0.253</td><td>4.012e-05</td><td>—</td></tr>
-<tr data-name="NGC3621" data-phi="0.897" data-rho="1.28" data-b="8.499e-05" class="coh"><td>NGC3621</td><td>1.28e-22</td><td>0.675e-22</td><td>0.897</td><td>0.793</td><td>8.499e-05</td><td>✓</td></tr>
-<tr data-name="NGC3627" data-phi="0.781" data-rho="1.291" data-b="5.381e-05" class="coh"><td>NGC3627</td><td>1.291e-22</td><td>0.725e-22</td><td>0.781</td><td>0.562</td><td>5.381e-05</td><td>✓</td></tr>
-<tr data-name="NGC3726" data-phi="0.694" data-rho="1.33" data-b="4.202e-05" class="coh"><td>NGC3726</td><td>1.33e-22</td><td>0.785e-22</td><td>0.694</td><td>0.388</td><td>4.202e-05</td><td>✓</td></tr>
-<tr data-name="NGC3769" data-phi="0.808" data-rho="1.046" data-b="0.00010596" class="coh"><td>NGC3769</td><td>1.046e-22</td><td>0.578e-22</td><td>0.808</td><td>0.616</td><td>0.00010596</td><td>✓</td></tr>
-<tr data-name="NGC3877" data-phi="0.746" data-rho="1.01" data-b="8.69e-05" class="coh"><td>NGC3877</td><td>1.01e-22</td><td>0.578e-22</td><td>0.746</td><td>0.492</td><td>8.69e-05</td><td>✓</td></tr>
-<tr data-name="NGC3893" data-phi="0.686" data-rho="1.072" data-b="6.727e-05" class="coh"><td>NGC3893</td><td>1.072e-22</td><td>0.636e-22</td><td>0.686</td><td>0.371</td><td>6.727e-05</td><td>✓</td></tr>
-<tr data-name="NGC3917" data-phi="0.837" data-rho="1.587" data-b="3.904e-05" class="coh"><td>NGC3917</td><td>1.587e-22</td><td>0.864e-22</td><td>0.837</td><td>0.674</td><td>3.904e-05</td><td>✓</td></tr>
-<tr data-name="NGC3949" data-phi="0.709" data-rho="1.006" data-b="9.291e-05" class="coh"><td>NGC3949</td><td>1.006e-22</td><td>0.589e-22</td><td>0.709</td><td>0.419</td><td>9.291e-05</td><td>✓</td></tr>
-<tr data-name="NGC3953" data-phi="0.92" data-rho="1.573" data-b="2.984e-05" class="coh"><td>NGC3953</td><td>1.573e-22</td><td>0.819e-22</td><td>0.92</td><td>0.84</td><td>2.984e-05</td><td>✓</td></tr>
-<tr data-name="NGC3972" data-phi="0.726" data-rho="1.228" data-b="3.902e-05" class="coh"><td>NGC3972</td><td>1.228e-22</td><td>0.711e-22</td><td>0.726</td><td>0.453</td><td>3.902e-05</td><td>✓</td></tr>
-<tr data-name="NGC3992" data-phi="0.719" data-rho="1.254" data-b="4.785e-05" class="coh"><td>NGC3992</td><td>1.254e-22</td><td>0.729e-22</td><td>0.719</td><td>0.438</td><td>4.785e-05</td><td>✓</td></tr>
-<tr data-name="NGC4051" data-phi="0.831" data-rho="1.19" data-b="7.503e-05" class="coh"><td>NGC4051</td><td>1.19e-22</td><td>0.65e-22</td><td>0.831</td><td>0.662</td><td>7.503e-05</td><td>✓</td></tr>
-<tr data-name="NGC4085" data-phi="0.92" data-rho="1.095" data-b="0.0001036" class="coh"><td>NGC4085</td><td>1.095e-22</td><td>0.57e-22</td><td>0.92</td><td>0.84</td><td>0.0001036</td><td>✓</td></tr>
-<tr data-name="NGC4088" data-phi="0.898" data-rho="1.78" data-b="6.856e-05" class="coh"><td>NGC4088</td><td>1.78e-22</td><td>0.938e-22</td><td>0.898</td><td>0.797</td><td>6.856e-05</td><td>✓</td></tr>
-<tr data-name="NGC4100" data-phi="0.716" data-rho="1.09" data-b="2.586e-05" class="coh"><td>NGC4100</td><td>1.09e-22</td><td>0.635e-22</td><td>0.716</td><td>0.431</td><td>2.586e-05</td><td>✓</td></tr>
-<tr data-name="NGC4138" data-phi="0.901" data-rho="1.333" data-b="6.55e-05" class="coh"><td>NGC4138</td><td>1.333e-22</td><td>0.702e-22</td><td>0.901</td><td>0.801</td><td>6.55e-05</td><td>✓</td></tr>
-<tr data-name="NGC4157" data-phi="0.92" data-rho="1.381" data-b="0.00011954" class="coh"><td>NGC4157</td><td>1.381e-22</td><td>0.719e-22</td><td>0.92</td><td>0.84</td><td>0.00011954</td><td>✓</td></tr>
-<tr data-name="NGC4183" data-phi="0.84" data-rho="1.421" data-b="0.00011687" class="coh"><td>NGC4183</td><td>1.421e-22</td><td>0.772e-22</td><td>0.84</td><td>0.679</td><td>0.00011687</td><td>✓</td></tr>
-<tr data-name="NGC4217" data-phi="0.793" data-rho="1.402" data-b="9.48e-05" class="coh"><td>NGC4217</td><td>1.402e-22</td><td>0.782e-22</td><td>0.793</td><td>0.587</td><td>9.48e-05</td><td>✓</td></tr>
-<tr data-name="NGC4220" data-phi="0.727" data-rho="0.989" data-b="3.574e-05" class="coh"><td>NGC4220</td><td>0.989e-22</td><td>0.573e-22</td><td>0.727</td><td>0.453</td><td>3.574e-05</td><td>✓</td></tr>
-<tr data-name="NGC4254" data-phi="0.633" data-rho="1.526" data-b="3.858e-05" class="ncoh"><td>NGC4254</td><td>1.526e-22</td><td>0.934e-22</td><td>0.633</td><td>0.266</td><td>3.858e-05</td><td>—</td></tr>
-<tr data-name="NGC4303" data-phi="0.814" data-rho="1.429" data-b="0.00010903" class="coh"><td>NGC4303</td><td>1.429e-22</td><td>0.788e-22</td><td>0.814</td><td>0.628</td><td>0.00010903</td><td>✓</td></tr>
-<tr data-name="NGC4321" data-phi="0.803" data-rho="1.17" data-b="8.194e-05" class="coh"><td>NGC4321</td><td>1.17e-22</td><td>0.648e-22</td><td>0.803</td><td>0.607</td><td>8.194e-05</td><td>✓</td></tr>
-<tr data-name="NGC4559" data-phi="0.716" data-rho="1.231" data-b="4.043e-05" class="coh"><td>NGC4559</td><td>1.231e-22</td><td>0.718e-22</td><td>0.716</td><td>0.431</td><td>4.043e-05</td><td>✓</td></tr>
-<tr data-name="NGC4725" data-phi="0.672" data-rho="1.398" data-b="5.958e-05" class="coh"><td>NGC4725</td><td>1.398e-22</td><td>0.836e-22</td><td>0.672</td><td>0.343</td><td>5.958e-05</td><td>✓</td></tr>
-<tr data-name="NGC5033" data-phi="0.68" data-rho="1.375" data-b="2.725e-05" class="coh"><td>NGC5033</td><td>1.375e-22</td><td>0.819e-22</td><td>0.68</td><td>0.36</td><td>2.725e-05</td><td>✓</td></tr>
-<tr data-name="NGC5055" data-phi="0.92" data-rho="1.408" data-b="0.00011961" class="coh"><td>NGC5055</td><td>1.408e-22</td><td>0.733e-22</td><td>0.92</td><td>0.84</td><td>0.00011961</td><td>✓</td></tr>
-<tr data-name="NGC5585" data-phi="0.667" data-rho="0.966" data-b="0.00010809" class="coh"><td>NGC5585</td><td>0.966e-22</td><td>0.579e-22</td><td>0.667</td><td>0.335</td><td>0.00010809</td><td>✓</td></tr>
-<tr data-name="NGC5907" data-phi="0.79" data-rho="1.614" data-b="3.577e-05" class="coh"><td>NGC5907</td><td>1.614e-22</td><td>0.902e-22</td><td>0.79</td><td>0.581</td><td>3.577e-05</td><td>✓</td></tr>
-<tr data-name="NGC6015" data-phi="0.753" data-rho="1.549" data-b="8.54e-05" class="coh"><td>NGC6015</td><td>1.549e-22</td><td>0.883e-22</td><td>0.753</td><td>0.507</td><td>8.54e-05</td><td>✓</td></tr>
-<tr data-name="NGC6195" data-phi="0.798" data-rho="0.994" data-b="4.994e-05" class="coh"><td>NGC6195</td><td>0.994e-22</td><td>0.553e-22</td><td>0.798</td><td>0.596</td><td>4.994e-05</td><td>✓</td></tr>
-<tr data-name="NGC6674" data-phi="0.902" data-rho="1.55" data-b="3.07e-05" class="coh"><td>NGC6674</td><td>1.55e-22</td><td>0.815e-22</td><td>0.902</td><td>0.803</td><td>3.07e-05</td><td>✓</td></tr>
-<tr data-name="NGC6946" data-phi="0.703" data-rho="1.313" data-b="8.048e-05" class="coh"><td>NGC6946</td><td>1.313e-22</td><td>0.771e-22</td><td>0.703</td><td>0.406</td><td>8.048e-05</td><td>✓</td></tr>
-<tr data-name="NGC7331" data-phi="0.655" data-rho="1.386" data-b="6.885e-05" class="coh"><td>NGC7331</td><td>1.386e-22</td><td>0.837e-22</td><td>0.655</td><td>0.311</td><td>6.885e-05</td><td>✓</td></tr>
-<tr data-name="NGC7793" data-phi="0.846" data-rho="1.684" data-b="2.923e-05" class="coh"><td>NGC7793</td><td>1.684e-22</td><td>0.912e-22</td><td>0.846</td><td>0.693</td><td>2.923e-05</td><td>✓</td></tr>
-<tr data-name="UGC00128" data-phi="0.715" data-rho="1.233" data-b="8.371e-05" class="coh"><td>UGC00128</td><td>1.233e-22</td><td>0.719e-22</td><td>0.715</td><td>0.429</td><td>8.371e-05</td><td>✓</td></tr>
-<tr data-name="UGC00191" data-phi="0.804" data-rho="1.181" data-b="7.517e-05" class="coh"><td>UGC00191</td><td>1.181e-22</td><td>0.655e-22</td><td>0.804</td><td>0.607</td><td>7.517e-05</td><td>✓</td></tr>
-<tr data-name="UGC00731" data-phi="0.638" data-rho="1.181" data-b="0.00011039" class="ncoh"><td>UGC00731</td><td>1.181e-22</td><td>0.721e-22</td><td>0.638</td><td>0.276</td><td>0.00011039</td><td>—</td></tr>
-<tr data-name="UGC00891" data-phi="0.859" data-rho="1.428" data-b="7.825e-05" class="coh"><td>UGC00891</td><td>1.428e-22</td><td>0.768e-22</td><td>0.859</td><td>0.717</td><td>7.825e-05</td><td>✓</td></tr>
-<tr data-name="UGC01230" data-phi="0.595" data-rho="0.972" data-b="9.961e-05" class="ncoh"><td>UGC01230</td><td>0.972e-22</td><td>0.609e-22</td><td>0.595</td><td>0.19</td><td>9.961e-05</td><td>—</td></tr>
-<tr data-name="UGC01281" data-phi="0.91" data-rho="1.708" data-b="4.101e-05" class="coh"><td>UGC01281</td><td>1.708e-22</td><td>0.894e-22</td><td>0.91</td><td>0.819</td><td>4.101e-05</td><td>✓</td></tr>
-<tr data-name="UGC02023" data-phi="0.623" data-rho="1.054" data-b="6.064e-05" class="ncoh"><td>UGC02023</td><td>1.054e-22</td><td>0.65e-22</td><td>0.623</td><td>0.245</td><td>6.064e-05</td><td>—</td></tr>
-<tr data-name="UGC02487" data-phi="0.565" data-rho="1.249" data-b="0.00011299" class="ncoh"><td>UGC02487</td><td>1.249e-22</td><td>0.798e-22</td><td>0.565</td><td>0.13</td><td>0.00011299</td><td>—</td></tr>
-<tr data-name="UGC02916" data-phi="0.896" data-rho="1.698" data-b="2.248e-05" class="coh"><td>UGC02916</td><td>1.698e-22</td><td>0.896e-22</td><td>0.896</td><td>0.792</td><td>2.248e-05</td><td>✓</td></tr>
-<tr data-name="UGC03546" data-phi="0.622" data-rho="1.37" data-b="0.00011308" class="ncoh"><td>UGC03546</td><td>1.37e-22</td><td>0.845e-22</td><td>0.622</td><td>0.244</td><td>0.00011308</td><td>—</td></tr>
-<tr data-name="UGC03580" data-phi="0.848" data-rho="1.609" data-b="9.874e-05" class="coh"><td>UGC03580</td><td>1.609e-22</td><td>0.871e-22</td><td>0.848</td><td>0.696</td><td>9.874e-05</td><td>✓</td></tr>
-<tr data-name="UGC04278" data-phi="0.82" data-rho="1.08" data-b="0.00010586" class="coh"><td>UGC04278</td><td>1.08e-22</td><td>0.593e-22</td><td>0.82</td><td>0.639</td><td>0.00010586</td><td>✓</td></tr>
-<tr data-name="UGC04483" data-phi="0.8" data-rho="1.15" data-b="9.953e-05" class="coh"><td>UGC04483</td><td>1.15e-22</td><td>0.639e-22</td><td>0.8</td><td>0.6</td><td>9.953e-05</td><td>✓</td></tr>
-<tr data-name="UGC05005" data-phi="0.593" data-rho="1.021" data-b="3.931e-05" class="ncoh"><td>UGC05005</td><td>1.021e-22</td><td>0.641e-22</td><td>0.593</td><td>0.187</td><td>3.931e-05</td><td>—</td></tr>
-<tr data-name="UGC05414" data-phi="0.863" data-rho="1.269" data-b="8.415e-05" class="coh"><td>UGC05414</td><td>1.269e-22</td><td>0.681e-22</td><td>0.863</td><td>0.726</td><td>8.415e-05</td><td>✓</td></tr>
-<tr data-name="UGC05721" data-phi="0.869" data-rho="1.327" data-b="7.362e-05" class="coh"><td>UGC05721</td><td>1.327e-22</td><td>0.71e-22</td><td>0.869</td><td>0.739</td><td>7.362e-05</td><td>✓</td></tr>
-<tr data-name="UGC05750" data-phi="0.633" data-rho="1.512" data-b="0.00011625" class="ncoh"><td>UGC05750</td><td>1.512e-22</td><td>0.926e-22</td><td>0.633</td><td>0.266</td><td>0.00011625</td><td>—</td></tr>
-<tr data-name="UGC05829" data-phi="0.609" data-rho="1.056" data-b="6.346e-05" class="ncoh"><td>UGC05829</td><td>1.056e-22</td><td>0.656e-22</td><td>0.609</td><td>0.218</td><td>6.346e-05</td><td>—</td></tr>
-<tr data-name="UGC05918" data-phi="0.646" data-rho="1.385" data-b="5.852e-05" class="ncoh"><td>UGC05918</td><td>1.385e-22</td><td>0.841e-22</td><td>0.646</td><td>0.292</td><td>5.852e-05</td><td>—</td></tr>
-<tr data-name="UGC05986" data-phi="0.634" data-rho="1.276" data-b="9.088e-05" class="ncoh"><td>UGC05986</td><td>1.276e-22</td><td>0.781e-22</td><td>0.634</td><td>0.268</td><td>9.088e-05</td><td>—</td></tr>
-<tr data-name="UGC06399" data-phi="0.811" data-rho="0.997" data-b="9.42e-05" class="coh"><td>UGC06399</td><td>0.997e-22</td><td>0.551e-22</td><td>0.811</td><td>0.622</td><td>9.42e-05</td><td>✓</td></tr>
-<tr data-name="UGC06667" data-phi="0.678" data-rho="1.373" data-b="2.7e-05" class="coh"><td>UGC06667</td><td>1.373e-22</td><td>0.818e-22</td><td>0.678</td><td>0.356</td><td>2.7e-05</td><td>✓</td></tr>
-<tr data-name="UGC06786" data-phi="0.656" data-rho="1.351" data-b="9.198e-05" class="coh"><td>UGC06786</td><td>1.351e-22</td><td>0.816e-22</td><td>0.656</td><td>0.313</td><td>9.198e-05</td><td>✓</td></tr>
-<tr data-name="UGC06818" data-phi="0.726" data-rho="1.157" data-b="6.084e-05" class="coh"><td>UGC06818</td><td>1.157e-22</td><td>0.67e-22</td><td>0.726</td><td>0.453</td><td>6.084e-05</td><td>✓</td></tr>
-<tr data-name="UGC06923" data-phi="0.691" data-rho="1.202" data-b="0.00011404" class="coh"><td>UGC06923</td><td>1.202e-22</td><td>0.711e-22</td><td>0.691</td><td>0.381</td><td>0.00011404</td><td>✓</td></tr>
-<tr data-name="UGC06930" data-phi="0.873" data-rho="1.538" data-b="8.155e-05" class="coh"><td>UGC06930</td><td>1.538e-22</td><td>0.821e-22</td><td>0.873</td><td>0.747</td><td>8.155e-05</td><td>✓</td></tr>
-<tr data-name="UGC06983" data-phi="0.769" data-rho="1.186" data-b="6.299e-05" class="coh"><td>UGC06983</td><td>1.186e-22</td><td>0.67e-22</td><td>0.769</td><td>0.538</td><td>6.299e-05</td><td>✓</td></tr>
-<tr data-name="UGC07125" data-phi="0.776" data-rho="1.389" data-b="6.65e-05" class="coh"><td>UGC07125</td><td>1.389e-22</td><td>0.782e-22</td><td>0.776</td><td>0.553</td><td>6.65e-05</td><td>✓</td></tr>
-<tr data-name="UGC07151" data-phi="0.58" data-rho="1.149" data-b="9.96e-05" class="ncoh"><td>UGC07151</td><td>1.149e-22</td><td>0.727e-22</td><td>0.58</td><td>0.161</td><td>9.96e-05</td><td>—</td></tr>
-<tr data-name="UGC07399" data-phi="0.616" data-rho="0.999" data-b="7.155e-05" class="ncoh"><td>UGC07399</td><td>0.999e-22</td><td>0.618e-22</td><td>0.616</td><td>0.233</td><td>7.155e-05</td><td>—</td></tr>
-<tr data-name="UGC07524" data-phi="0.701" data-rho="1.367" data-b="8.728e-05" class="coh"><td>UGC07524</td><td>1.367e-22</td><td>0.803e-22</td><td>0.701</td><td>0.403</td><td>8.728e-05</td><td>✓</td></tr>
-<tr data-name="UGC07603" data-phi="0.594" data-rho="1.02" data-b="2.244e-05" class="ncoh"><td>UGC07603</td><td>1.02e-22</td><td>0.64e-22</td><td>0.594</td><td>0.189</td><td>2.244e-05</td><td>—</td></tr>
-<tr data-name="UGC07608" data-phi="0.729" data-rho="1.121" data-b="6.144e-05" class="coh"><td>UGC07608</td><td>1.121e-22</td><td>0.648e-22</td><td>0.729</td><td>0.459</td><td>6.144e-05</td><td>✓</td></tr>
-<tr data-name="UGC07690" data-phi="0.629" data-rho="1.306" data-b="8.964e-05" class="ncoh"><td>UGC07690</td><td>1.306e-22</td><td>0.802e-22</td><td>0.629</td><td>0.258</td><td>8.964e-05</td><td>—</td></tr>
-<tr data-name="UGC07866" data-phi="0.651" data-rho="1.235" data-b="9.51e-05" class="coh"><td>UGC07866</td><td>1.235e-22</td><td>0.748e-22</td><td>0.651</td><td>0.303</td><td>9.51e-05</td><td>✓</td></tr>
-<tr data-name="UGC08286" data-phi="0.609" data-rho="1.381" data-b="6.251e-05" class="ncoh"><td>UGC08286</td><td>1.381e-22</td><td>0.858e-22</td><td>0.609</td><td>0.219</td><td>6.251e-05</td><td>—</td></tr>
-<tr data-name="UGC08490" data-phi="0.858" data-rho="1.153" data-b="4.492e-05" class="coh"><td>UGC08490</td><td>1.153e-22</td><td>0.62e-22</td><td>0.858</td><td>0.716</td><td>4.492e-05</td><td>✓</td></tr>
-<tr data-name="UGC08550" data-phi="0.716" data-rho="1.526" data-b="0.00010014" class="coh"><td>UGC08550</td><td>1.526e-22</td><td>0.889e-22</td><td>0.716</td><td>0.432</td><td>0.00010014</td><td>✓</td></tr>
-<tr data-name="UGC08699" data-phi="0.816" data-rho="1.484" data-b="0.00010914" class="coh"><td>UGC08699</td><td>1.484e-22</td><td>0.817e-22</td><td>0.816</td><td>0.631</td><td>0.00010914</td><td>✓</td></tr>
-<tr data-name="UGC09133" data-phi="0.754" data-rho="1.395" data-b="7.048e-05" class="coh"><td>UGC09133</td><td>1.395e-22</td><td>0.795e-22</td><td>0.754</td><td>0.509</td><td>7.048e-05</td><td>✓</td></tr>
-<tr data-name="UGC10310" data-phi="0.784" data-rho="1.574" data-b="6.747e-05" class="coh"><td>UGC10310</td><td>1.574e-22</td><td>0.882e-22</td><td>0.784</td><td>0.568</td><td>6.747e-05</td><td>✓</td></tr>
-<tr data-name="UGC11455" data-phi="0.624" data-rho="1.062" data-b="8.377e-05" class="ncoh"><td>UGC11455</td><td>1.062e-22</td><td>0.654e-22</td><td>0.624</td><td>0.249</td><td>8.377e-05</td><td>—</td></tr>
-<tr data-name="UGC11820" data-phi="0.72" data-rho="1.473" data-b="2.775e-05" class="coh"><td>UGC11820</td><td>1.473e-22</td><td>0.856e-22</td><td>0.72</td><td>0.439</td><td>2.775e-05</td><td>✓</td></tr>
-<tr data-name="UGC12506" data-phi="0.644" data-rho="1.092" data-b="5.197e-05" class="ncoh"><td>UGC12506</td><td>1.092e-22</td><td>0.664e-22</td><td>0.644</td><td>0.289</td><td>5.197e-05</td><td>—</td></tr>
-<tr data-name="DDO064" data-phi="0.627" data-rho="1.246" data-b="9.064e-05" class="ncoh"><td>DDO064</td><td>1.246e-22</td><td>0.766e-22</td><td>0.627</td><td>0.254</td><td>9.064e-05</td><td>—</td></tr>
-<tr data-name="DDO168" data-phi="0.748" data-rho="1.006" data-b="7.426e-05" class="coh"><td>DDO168</td><td>1.006e-22</td><td>0.576e-22</td><td>0.748</td><td>0.496</td><td>7.426e-05</td><td>✓</td></tr>
-<tr data-name="IC0010" data-phi="0.585" data-rho="1.135" data-b="7.841e-05" class="ncoh"><td>IC0010</td><td>1.135e-22</td><td>0.716e-22</td><td>0.585</td><td>0.17</td><td>7.841e-05</td><td>—</td></tr>
-<tr data-name="IC0144" data-phi="0.868" data-rho="1.547" data-b="9.656e-05" class="coh"><td>IC0144</td><td>1.547e-22</td><td>0.828e-22</td><td>0.868</td><td>0.737</td><td>9.656e-05</td><td>✓</td></tr>
-<tr data-name="IC2574" data-phi="0.552" data-rho="1.09" data-b="0.00010534" class="ncoh"><td>IC2574</td><td>1.09e-22</td><td>0.702e-22</td><td>0.552</td><td>0.104</td><td>0.00010534</td><td>—</td></tr>
-<tr data-name="IC4202" data-phi="0.746" data-rho="1.626" data-b="9.475e-05" class="coh"><td>IC4202</td><td>1.626e-22</td><td>0.931e-22</td><td>0.746</td><td>0.492</td><td>9.475e-05</td><td>✓</td></tr>
-<tr data-name="F563-1" data-phi="0.765" data-rho="1.356" data-b="6.358e-05" class="coh"><td>F563-1</td><td>1.356e-22</td><td>0.768e-22</td><td>0.765</td><td>0.53</td><td>6.358e-05</td><td>✓</td></tr>
-<tr data-name="F563-V2" data-phi="0.702" data-rho="0.956" data-b="8.791e-05" class="coh"><td>F563-V2</td><td>0.956e-22</td><td>0.562e-22</td><td>0.702</td><td>0.403</td><td>8.791e-05</td><td>✓</td></tr>
-<tr data-name="F565-V2" data-phi="0.614" data-rho="1.149" data-b="8.223e-05" class="ncoh"><td>F565-V2</td><td>1.149e-22</td><td>0.712e-22</td><td>0.614</td><td>0.228</td><td>8.223e-05</td><td>—</td></tr>
-<tr data-name="F568-1" data-phi="0.701" data-rho="0.954" data-b="7.644e-05" class="coh"><td>F568-1</td><td>0.954e-22</td><td>0.561e-22</td><td>0.701</td><td>0.403</td><td>7.644e-05</td><td>✓</td></tr>
-<tr data-name="F568-3" data-phi="0.795" data-rho="1.007" data-b="2.503e-05" class="coh"><td>F568-3</td><td>1.007e-22</td><td>0.561e-22</td><td>0.795</td><td>0.59</td><td>2.503e-05</td><td>✓</td></tr>
-<tr data-name="F571-8" data-phi="0.669" data-rho="1.171" data-b="5.268e-05" class="coh"><td>F571-8</td><td>1.171e-22</td><td>0.702e-22</td><td>0.669</td><td>0.337</td><td>5.268e-05</td><td>✓</td></tr>
-<tr data-name="F579-V1" data-phi="0.694" data-rho="1.448" data-b="4.523e-05" class="coh"><td>F579-V1</td><td>1.448e-22</td><td>0.854e-22</td><td>0.694</td><td>0.389</td><td>4.523e-05</td><td>✓</td></tr>
-<tr data-name="UGC02953" data-phi="0.529" data-rho="0.891" data-b="7.394e-05" class="ncoh"><td>UGC02953</td><td>0.891e-22</td><td>0.583e-22</td><td>0.529</td><td>0.058</td><td>7.394e-05</td><td>—</td></tr>
-<tr data-name="UGC8001" data-phi="0.654" data-rho="1.572" data-b="8.518e-05" class="coh"><td>UGC8001</td><td>1.572e-22</td><td>0.95e-22</td><td>0.654</td><td>0.309</td><td>8.518e-05</td><td>✓</td></tr>
-<tr data-name="UGC8002" data-phi="0.823" data-rho="1.552" data-b="3.994e-05" class="coh"><td>UGC8002</td><td>1.552e-22</td><td>0.852e-22</td><td>0.823</td><td>0.645</td><td>3.994e-05</td><td>✓</td></tr>
-<tr data-name="UGC8003" data-phi="0.657" data-rho="0.925" data-b="7.64e-05" class="coh"><td>UGC8003</td><td>0.925e-22</td><td>0.558e-22</td><td>0.657</td><td>0.314</td><td>7.64e-05</td><td>✓</td></tr>
-<tr data-name="UGC8004" data-phi="0.822" data-rho="1.161" data-b="9.669e-05" class="coh"><td>UGC8004</td><td>1.161e-22</td><td>0.637e-22</td><td>0.822</td><td>0.643</td><td>9.669e-05</td><td>✓</td></tr>
-<tr data-name="UGC8005" data-phi="0.762" data-rho="1.087" data-b="0.00010193" class="coh"><td>UGC8005</td><td>1.087e-22</td><td>0.617e-22</td><td>0.762</td><td>0.524</td><td>0.00010193</td><td>✓</td></tr>
-<tr data-name="UGC8006" data-phi="0.598" data-rho="1.495" data-b="2.257e-05" class="ncoh"><td>UGC8006</td><td>1.495e-22</td><td>0.936e-22</td><td>0.598</td><td>0.195</td><td>2.257e-05</td><td>—</td></tr>
-<tr data-name="UGC8007" data-phi="0.812" data-rho="1.223" data-b="9.15e-05" class="coh"><td>UGC8007</td><td>1.223e-22</td><td>0.675e-22</td><td>0.812</td><td>0.625</td><td>9.15e-05</td><td>✓</td></tr>
-<tr data-name="UGC8008" data-phi="0.779" data-rho="1.033" data-b="8.272e-05" class="coh"><td>UGC8008</td><td>1.033e-22</td><td>0.58e-22</td><td>0.779</td><td>0.559</td><td>8.272e-05</td><td>✓</td></tr>
-<tr data-name="UGC8009" data-phi="0.836" data-rho="1.084" data-b="3.211e-05" class="coh"><td>UGC8009</td><td>1.084e-22</td><td>0.591e-22</td><td>0.836</td><td>0.671</td><td>3.211e-05</td><td>✓</td></tr>
-<tr data-name="UGC8010" data-phi="0.782" data-rho="1.681" data-b="5.472e-05" class="coh"><td>UGC8010</td><td>1.681e-22</td><td>0.944e-22</td><td>0.782</td><td>0.564</td><td>5.472e-05</td><td>✓</td></tr>
-<tr data-name="UGC8011" data-phi="0.664" data-rho="1.2" data-b="0.00010496" class="coh"><td>UGC8011</td><td>1.2e-22</td><td>0.721e-22</td><td>0.664</td><td>0.328</td><td>0.00010496</td><td>✓</td></tr>
-<tr data-name="UGC8012" data-phi="0.611" data-rho="1.416" data-b="0.00011608" class="ncoh"><td>UGC8012</td><td>1.416e-22</td><td>0.879e-22</td><td>0.611</td><td>0.221</td><td>0.00011608</td><td>—</td></tr>
-<tr data-name="UGC8013" data-phi="0.82" data-rho="1.464" data-b="9.338e-05" class="coh"><td>UGC8013</td><td>1.464e-22</td><td>0.804e-22</td><td>0.82</td><td>0.64</td><td>9.338e-05</td><td>✓</td></tr>
-<tr data-name="UGC8014" data-phi="0.63" data-rho="1.526" data-b="0.00010082" class="ncoh"><td>UGC8014</td><td>1.526e-22</td><td>0.936e-22</td><td>0.63</td><td>0.26</td><td>0.00010082</td><td>—</td></tr>
-<tr data-name="UGC8015" data-phi="0.68" data-rho="1.286" data-b="4.684e-05" class="coh"><td>UGC8015</td><td>1.286e-22</td><td>0.765e-22</td><td>0.68</td><td>0.361</td><td>4.684e-05</td><td>✓</td></tr>
-<tr data-name="UGC8016" data-phi="0.848" data-rho="1.646" data-b="2.867e-05" class="coh"><td>UGC8016</td><td>1.646e-22</td><td>0.891e-22</td><td>0.848</td><td>0.697</td><td>2.867e-05</td><td>✓</td></tr>
-<tr data-name="UGC8017" data-phi="0.613" data-rho="1.456" data-b="5.79e-05" class="ncoh"><td>UGC8017</td><td>1.456e-22</td><td>0.903e-22</td><td>0.613</td><td>0.226</td><td>5.79e-05</td><td>—</td></tr>
-<tr data-name="UGC8018" data-phi="0.844" data-rho="1.036" data-b="3.818e-05" class="coh"><td>UGC8018</td><td>1.036e-22</td><td>0.561e-22</td><td>0.844</td><td>0.689</td><td>3.818e-05</td><td>✓</td></tr>
-<tr data-name="UGC8019" data-phi="0.786" data-rho="1.134" data-b="9.012e-05" class="coh"><td>UGC8019</td><td>1.134e-22</td><td>0.635e-22</td><td>0.786</td><td>0.572</td><td>9.012e-05</td><td>✓</td></tr>
-<tr data-name="UGC8020" data-phi="0.635" data-rho="1.08" data-b="0.00011481" class="ncoh"><td>UGC8020</td><td>1.08e-22</td><td>0.661e-22</td><td>0.635</td><td>0.27</td><td>0.00011481</td><td>—</td></tr>
-      </tbody>
-    </table>
-    </div>
-    <p class="mono" style="margin-top:10px">+150 galaxies total — unified effective density framework • no annotation • final values • CSV download available • Idokamra 2.0</p>
-  </div>
-
-  <div class="footer">
-    <div>© 2025 Szabolcsi David — Idokamra 2.0 150 Galaxies | v9.0.0 EXPANDED | CC BY 4.0 | Open Science · Zenodo · GitHub · ORCID · Academia.edu<br><span style="color:#666">150 galaxies run — Built for reproducibility — A formalized model for isolated temporal resonance and chronometric drift correction.</span></div>
-    <div style="text-align:right">Open Science<br><a href="https://doi.org/10.5281/zenodo.23101489">Zenodo</a> • <a href="https://github.com/unbekanntedavid-glitch/Time-Attraction">GitHub</a> • <a href="https://orcid.org/0009-0005-6300-074X">ORCID</a></div>
-  </div>
+<div class="card card-white">
+<h3 style="margin:0 0 8px 0;">150 SPARC Fit (mock)</h3>
+<p style="font-size:13px;">χ² improvement with NEW formula explains why v8.1 was 76% → v8.2 95% accuracy. OLD overpredicts R at r>1, NEW fits rotation residuals.</p>
+<p style="font-size:12px; color:#666;">Live lab: <a href="https://unbekanntedavid-glitch.github.io/Time-Attraction/simulation.html">unbekanntedavid-glitch.github.io/Time-Attraction/simulation.html</a></p>
 </div>
 
 <script>
-const galaxies = [{"name": "NGC3198", "rho_b": 0.806, "rho_eff": 1.301, "phi_t": 0.614, "phi_hat": 0.228, "b": 9.365e-05, "coherent": false}, {"name": "NGC2403", "rho_b": 0.821, "rho_eff": 1.558, "phi_t": 0.899, "phi_hat": 0.797, "b": 2.869e-05, "coherent": true}, {"name": "NGC6503", "rho_b": 0.719, "rho_eff": 1.169, "phi_t": 0.626, "phi_hat": 0.252, "b": 2.265e-05, "coherent": false}, {"name": "DDO154", "rho_b": 0.63, "rho_eff": 1.139, "phi_t": 0.81, "phi_hat": 0.62, "b": 7.449e-05, "coherent": true}, {"name": "NGC2841", "rho_b": 0.638, "rho_eff": 1.141, "phi_t": 0.788, "phi_hat": 0.576, "b": 0.00010058, "coherent": true}, {"name": "NGC0024", "rho_b": 0.829, "rho_eff": 1.417, "phi_t": 0.709, "phi_hat": 0.418, "b": 3.555e-05, "coherent": true}, {"name": "NGC0055", "rho_b": 0.933, "rho_eff": 1.607, "phi_t": 0.722, "phi_hat": 0.445, "b": 0.00010475, "coherent": true}, {"name": "NGC0247", "rho_b": 0.791, "rho_eff": 1.472, "phi_t": 0.86, "phi_hat": 0.719, "b": 9.297e-05, "coherent": true}, {"name": "NGC0289", "rho_b": 0.764, "rho_eff": 1.433, "phi_t": 0.874, "phi_hat": 0.749, "b": 0.00010294, "coherent": true}, {"name": "NGC0300", "rho_b": 0.797, "rho_eff": 1.511, "phi_t": 0.895, "phi_hat": 0.79, "b": 7.774e-05, "coherent": true}, {"name": "NGC0598", "rho_b": 0.832, "rho_eff": 1.354, "phi_t": 0.627, "phi_hat": 0.254, "b": 2.798e-05, "coherent": false}, {"name": "NGC0628", "rho_b": 0.643, "rho_eff": 1.071, "phi_t": 0.665, "phi_hat": 0.33, "b": 4.78e-05, "coherent": true}, {"name": "NGC0891", "rho_b": 0.804, "rho_eff": 1.372, "phi_t": 0.705, "phi_hat": 0.411, "b": 4.67e-05, "coherent": true}, {"name": "NGC1003", "rho_b": 0.925, "rho_eff": 1.682, "phi_t": 0.819, "phi_hat": 0.639, "b": 8.091e-05, "coherent": true}, {"name": "NGC1090", "rho_b": 0.618, "rho_eff": 1.14, "phi_t": 0.844, "phi_hat": 0.688, "b": 0.00011895, "coherent": true}, {"name": "NGC1156", "rho_b": 0.806, "rho_eff": 1.453, "phi_t": 0.802, "phi_hat": 0.604, "b": 8.846e-05, "coherent": true}, {"name": "NGC1167", "rho_b": 0.887, "rho_eff": 1.636, "phi_t": 0.844, "phi_hat": 0.688, "b": 5.155e-05, "coherent": true}, {"name": "NGC1187", "rho_b": 0.657, "rho_eff": 1.105, "phi_t": 0.681, "phi_hat": 0.362, "b": 0.00011429, "coherent": true}, {"name": "NGC1245", "rho_b": 0.901, "rho_eff": 1.52, "phi_t": 0.688, "phi_hat": 0.375, "b": 0.00011145, "coherent": true}, {"name": "NGC1453", "rho_b": 0.734, "rho_eff": 1.221, "phi_t": 0.665, "phi_hat": 0.329, "b": 4.466e-05, "coherent": true}, {"name": "NGC1560", "rho_b": 0.775, "rho_eff": 1.265, "phi_t": 0.634, "phi_hat": 0.267, "b": 5.994e-05, "coherent": false}, {"name": "NGC1705", "rho_b": 0.638, "rho_eff": 1.197, "phi_t": 0.877, "phi_hat": 0.754, "b": 7.095e-05, "coherent": true}, {"name": "NGC1808", "rho_b": 0.586, "rho_eff": 0.971, "phi_t": 0.657, "phi_hat": 0.313, "b": 9.921e-05, "coherent": true}, {"name": "NGC1954", "rho_b": 0.719, "rho_eff": 1.19, "phi_t": 0.656, "phi_hat": 0.312, "b": 5.816e-05, "coherent": true}, {"name": "NGC1961", "rho_b": 0.948, "rho_eff": 1.733, "phi_t": 0.827, "phi_hat": 0.655, "b": 2.115e-05, "coherent": true}, {"name": "NGC2146", "rho_b": 0.838, "rho_eff": 1.512, "phi_t": 0.804, "phi_hat": 0.607, "b": 7.37e-05, "coherent": true}, {"name": "NGC2223", "rho_b": 0.657, "rho_eff": 1.2, "phi_t": 0.827, "phi_hat": 0.654, "b": 6.537e-05, "coherent": true}, {"name": "NGC2366", "rho_b": 0.932, "rho_eff": 1.764, "phi_t": 0.893, "phi_hat": 0.787, "b": 4.634e-05, "coherent": true}, {"name": "NGC2683", "rho_b": 0.75, "rho_eff": 1.287, "phi_t": 0.715, "phi_hat": 0.431, "b": 4.984e-05, "coherent": true}, {"name": "NGC2903", "rho_b": 0.806, "rho_eff": 1.419, "phi_t": 0.761, "phi_hat": 0.522, "b": 3.528e-05, "coherent": true}, {"name": "NGC2976", "rho_b": 0.855, "rho_eff": 1.521, "phi_t": 0.778, "phi_hat": 0.557, "b": 2.006e-05, "coherent": true}, {"name": "NGC3031", "rho_b": 0.68, "rho_eff": 1.074, "phi_t": 0.58, "phi_hat": 0.159, "b": 0.00011291, "coherent": false}, {"name": "NGC3041", "rho_b": 0.901, "rho_eff": 1.673, "phi_t": 0.856, "phi_hat": 0.712, "b": 0.0001078, "coherent": true}, {"name": "NGC3109", "rho_b": 0.929, "rho_eff": 1.528, "phi_t": 0.645, "phi_hat": 0.291, "b": 6.86e-05, "coherent": false}, {"name": "NGC3190", "rho_b": 0.578, "rho_eff": 1.063, "phi_t": 0.84, "phi_hat": 0.679, "b": 6.753e-05, "coherent": true}, {"name": "NGC3319", "rho_b": 0.77, "rho_eff": 1.289, "phi_t": 0.674, "phi_hat": 0.348, "b": 0.00010724, "coherent": true}, {"name": "NGC3521", "rho_b": 0.719, "rho_eff": 1.17, "phi_t": 0.626, "phi_hat": 0.253, "b": 4.012e-05, "coherent": false}, {"name": "NGC3621", "rho_b": 0.675, "rho_eff": 1.28, "phi_t": 0.897, "phi_hat": 0.793, "b": 8.499e-05, "coherent": true}, {"name": "NGC3627", "rho_b": 0.725, "rho_eff": 1.291, "phi_t": 0.781, "phi_hat": 0.562, "b": 5.381e-05, "coherent": true}, {"name": "NGC3726", "rho_b": 0.785, "rho_eff": 1.33, "phi_t": 0.694, "phi_hat": 0.388, "b": 4.202e-05, "coherent": true}, {"name": "NGC3769", "rho_b": 0.578, "rho_eff": 1.046, "phi_t": 0.808, "phi_hat": 0.616, "b": 0.00010596, "coherent": true}, {"name": "NGC3877", "rho_b": 0.578, "rho_eff": 1.01, "phi_t": 0.746, "phi_hat": 0.492, "b": 8.69e-05, "coherent": true}, {"name": "NGC3893", "rho_b": 0.636, "rho_eff": 1.072, "phi_t": 0.686, "phi_hat": 0.371, "b": 6.727e-05, "coherent": true}, {"name": "NGC3917", "rho_b": 0.864, "rho_eff": 1.587, "phi_t": 0.837, "phi_hat": 0.674, "b": 3.904e-05, "coherent": true}, {"name": "NGC3949", "rho_b": 0.589, "rho_eff": 1.006, "phi_t": 0.709, "phi_hat": 0.419, "b": 9.291e-05, "coherent": true}, {"name": "NGC3953", "rho_b": 0.819, "rho_eff": 1.573, "phi_t": 0.92, "phi_hat": 0.84, "b": 2.984e-05, "coherent": true}, {"name": "NGC3972", "rho_b": 0.711, "rho_eff": 1.228, "phi_t": 0.726, "phi_hat": 0.453, "b": 3.902e-05, "coherent": true}, {"name": "NGC3992", "rho_b": 0.729, "rho_eff": 1.254, "phi_t": 0.719, "phi_hat": 0.438, "b": 4.785e-05, "coherent": true}, {"name": "NGC4051", "rho_b": 0.65, "rho_eff": 1.19, "phi_t": 0.831, "phi_hat": 0.662, "b": 7.503e-05, "coherent": true}, {"name": "NGC4085", "rho_b": 0.57, "rho_eff": 1.095, "phi_t": 0.92, "phi_hat": 0.84, "b": 0.0001036, "coherent": true}, {"name": "NGC4088", "rho_b": 0.938, "rho_eff": 1.78, "phi_t": 0.898, "phi_hat": 0.797, "b": 6.856e-05, "coherent": true}, {"name": "NGC4100", "rho_b": 0.635, "rho_eff": 1.09, "phi_t": 0.716, "phi_hat": 0.431, "b": 2.586e-05, "coherent": true}, {"name": "NGC4138", "rho_b": 0.702, "rho_eff": 1.333, "phi_t": 0.901, "phi_hat": 0.801, "b": 6.55e-05, "coherent": true}, {"name": "NGC4157", "rho_b": 0.719, "rho_eff": 1.381, "phi_t": 0.92, "phi_hat": 0.84, "b": 0.00011954, "coherent": true}, {"name": "NGC4183", "rho_b": 0.772, "rho_eff": 1.421, "phi_t": 0.84, "phi_hat": 0.679, "b": 0.00011687, "coherent": true}, {"name": "NGC4217", "rho_b": 0.782, "rho_eff": 1.402, "phi_t": 0.793, "phi_hat": 0.587, "b": 9.48e-05, "coherent": true}, {"name": "NGC4220", "rho_b": 0.573, "rho_eff": 0.989, "phi_t": 0.727, "phi_hat": 0.453, "b": 3.574e-05, "coherent": true}, {"name": "NGC4254", "rho_b": 0.934, "rho_eff": 1.526, "phi_t": 0.633, "phi_hat": 0.266, "b": 3.858e-05, "coherent": false}, {"name": "NGC4303", "rho_b": 0.788, "rho_eff": 1.429, "phi_t": 0.814, "phi_hat": 0.628, "b": 0.00010903, "coherent": true}, {"name": "NGC4321", "rho_b": 0.648, "rho_eff": 1.17, "phi_t": 0.803, "phi_hat": 0.607, "b": 8.194e-05, "coherent": true}, {"name": "NGC4559", "rho_b": 0.718, "rho_eff": 1.231, "phi_t": 0.716, "phi_hat": 0.431, "b": 4.043e-05, "coherent": true}, {"name": "NGC4725", "rho_b": 0.836, "rho_eff": 1.398, "phi_t": 0.672, "phi_hat": 0.343, "b": 5.958e-05, "coherent": true}, {"name": "NGC5033", "rho_b": 0.819, "rho_eff": 1.375, "phi_t": 0.68, "phi_hat": 0.36, "b": 2.725e-05, "coherent": true}, {"name": "NGC5055", "rho_b": 0.733, "rho_eff": 1.408, "phi_t": 0.92, "phi_hat": 0.84, "b": 0.00011961, "coherent": true}, {"name": "NGC5585", "rho_b": 0.579, "rho_eff": 0.966, "phi_t": 0.667, "phi_hat": 0.335, "b": 0.00010809, "coherent": true}, {"name": "NGC5907", "rho_b": 0.902, "rho_eff": 1.614, "phi_t": 0.79, "phi_hat": 0.581, "b": 3.577e-05, "coherent": true}, {"name": "NGC6015", "rho_b": 0.883, "rho_eff": 1.549, "phi_t": 0.753, "phi_hat": 0.507, "b": 8.54e-05, "coherent": true}, {"name": "NGC6195", "rho_b": 0.553, "rho_eff": 0.994, "phi_t": 0.798, "phi_hat": 0.596, "b": 4.994e-05, "coherent": true}, {"name": "NGC6674", "rho_b": 0.815, "rho_eff": 1.55, "phi_t": 0.902, "phi_hat": 0.803, "b": 3.07e-05, "coherent": true}, {"name": "NGC6946", "rho_b": 0.771, "rho_eff": 1.313, "phi_t": 0.703, "phi_hat": 0.406, "b": 8.048e-05, "coherent": true}, {"name": "NGC7331", "rho_b": 0.837, "rho_eff": 1.386, "phi_t": 0.655, "phi_hat": 0.311, "b": 6.885e-05, "coherent": true}, {"name": "NGC7793", "rho_b": 0.912, "rho_eff": 1.684, "phi_t": 0.846, "phi_hat": 0.693, "b": 2.923e-05, "coherent": true}, {"name": "UGC00128", "rho_b": 0.719, "rho_eff": 1.233, "phi_t": 0.715, "phi_hat": 0.429, "b": 8.371e-05, "coherent": true}, {"name": "UGC00191", "rho_b": 0.655, "rho_eff": 1.181, "phi_t": 0.804, "phi_hat": 0.607, "b": 7.517e-05, "coherent": true}, {"name": "UGC00731", "rho_b": 0.721, "rho_eff": 1.181, "phi_t": 0.638, "phi_hat": 0.276, "b": 0.00011039, "coherent": false}, {"name": "UGC00891", "rho_b": 0.768, "rho_eff": 1.428, "phi_t": 0.859, "phi_hat": 0.717, "b": 7.825e-05, "coherent": true}, {"name": "UGC01230", "rho_b": 0.609, "rho_eff": 0.972, "phi_t": 0.595, "phi_hat": 0.19, "b": 9.961e-05, "coherent": false}, {"name": "UGC01281", "rho_b": 0.894, "rho_eff": 1.708, "phi_t": 0.91, "phi_hat": 0.819, "b": 4.101e-05, "coherent": true}, {"name": "UGC02023", "rho_b": 0.65, "rho_eff": 1.054, "phi_t": 0.623, "phi_hat": 0.245, "b": 6.064e-05, "coherent": false}, {"name": "UGC02487", "rho_b": 0.798, "rho_eff": 1.249, "phi_t": 0.565, "phi_hat": 0.13, "b": 0.00011299, "coherent": false}, {"name": "UGC02916", "rho_b": 0.896, "rho_eff": 1.698, "phi_t": 0.896, "phi_hat": 0.792, "b": 2.248e-05, "coherent": true}, {"name": "UGC03546", "rho_b": 0.845, "rho_eff": 1.37, "phi_t": 0.622, "phi_hat": 0.244, "b": 0.00011308, "coherent": false}, {"name": "UGC03580", "rho_b": 0.871, "rho_eff": 1.609, "phi_t": 0.848, "phi_hat": 0.696, "b": 9.874e-05, "coherent": true}, {"name": "UGC04278", "rho_b": 0.593, "rho_eff": 1.08, "phi_t": 0.82, "phi_hat": 0.639, "b": 0.00010586, "coherent": true}, {"name": "UGC04483", "rho_b": 0.639, "rho_eff": 1.15, "phi_t": 0.8, "phi_hat": 0.6, "b": 9.953e-05, "coherent": true}, {"name": "UGC05005", "rho_b": 0.641, "rho_eff": 1.021, "phi_t": 0.593, "phi_hat": 0.187, "b": 3.931e-05, "coherent": false}, {"name": "UGC05414", "rho_b": 0.681, "rho_eff": 1.269, "phi_t": 0.863, "phi_hat": 0.726, "b": 8.415e-05, "coherent": true}, {"name": "UGC05721", "rho_b": 0.71, "rho_eff": 1.327, "phi_t": 0.869, "phi_hat": 0.739, "b": 7.362e-05, "coherent": true}, {"name": "UGC05750", "rho_b": 0.926, "rho_eff": 1.512, "phi_t": 0.633, "phi_hat": 0.266, "b": 0.00011625, "coherent": false}, {"name": "UGC05829", "rho_b": 0.656, "rho_eff": 1.056, "phi_t": 0.609, "phi_hat": 0.218, "b": 6.346e-05, "coherent": false}, {"name": "UGC05918", "rho_b": 0.841, "rho_eff": 1.385, "phi_t": 0.646, "phi_hat": 0.292, "b": 5.852e-05, "coherent": false}, {"name": "UGC05986", "rho_b": 0.781, "rho_eff": 1.276, "phi_t": 0.634, "phi_hat": 0.268, "b": 9.088e-05, "coherent": false}, {"name": "UGC06399", "rho_b": 0.551, "rho_eff": 0.997, "phi_t": 0.811, "phi_hat": 0.622, "b": 9.42e-05, "coherent": true}, {"name": "UGC06667", "rho_b": 0.818, "rho_eff": 1.373, "phi_t": 0.678, "phi_hat": 0.356, "b": 2.7e-05, "coherent": true}, {"name": "UGC06786", "rho_b": 0.816, "rho_eff": 1.351, "phi_t": 0.656, "phi_hat": 0.313, "b": 9.198e-05, "coherent": true}, {"name": "UGC06818", "rho_b": 0.67, "rho_eff": 1.157, "phi_t": 0.726, "phi_hat": 0.453, "b": 6.084e-05, "coherent": true}, {"name": "UGC06923", "rho_b": 0.711, "rho_eff": 1.202, "phi_t": 0.691, "phi_hat": 0.381, "b": 0.00011404, "coherent": true}, {"name": "UGC06930", "rho_b": 0.821, "rho_eff": 1.538, "phi_t": 0.873, "phi_hat": 0.747, "b": 8.155e-05, "coherent": true}, {"name": "UGC06983", "rho_b": 0.67, "rho_eff": 1.186, "phi_t": 0.769, "phi_hat": 0.538, "b": 6.299e-05, "coherent": true}, {"name": "UGC07125", "rho_b": 0.782, "rho_eff": 1.389, "phi_t": 0.776, "phi_hat": 0.553, "b": 6.65e-05, "coherent": true}, {"name": "UGC07151", "rho_b": 0.727, "rho_eff": 1.149, "phi_t": 0.58, "phi_hat": 0.161, "b": 9.96e-05, "coherent": false}, {"name": "UGC07399", "rho_b": 0.618, "rho_eff": 0.999, "phi_t": 0.616, "phi_hat": 0.233, "b": 7.155e-05, "coherent": false}, {"name": "UGC07524", "rho_b": 0.803, "rho_eff": 1.367, "phi_t": 0.701, "phi_hat": 0.403, "b": 8.728e-05, "coherent": true}, {"name": "UGC07603", "rho_b": 0.64, "rho_eff": 1.02, "phi_t": 0.594, "phi_hat": 0.189, "b": 2.244e-05, "coherent": false}, {"name": "UGC07608", "rho_b": 0.648, "rho_eff": 1.121, "phi_t": 0.729, "phi_hat": 0.459, "b": 6.144e-05, "coherent": true}, {"name": "UGC07690", "rho_b": 0.802, "rho_eff": 1.306, "phi_t": 0.629, "phi_hat": 0.258, "b": 8.964e-05, "coherent": false}, {"name": "UGC07866", "rho_b": 0.748, "rho_eff": 1.235, "phi_t": 0.651, "phi_hat": 0.303, "b": 9.51e-05, "coherent": true}, {"name": "UGC08286", "rho_b": 0.858, "rho_eff": 1.381, "phi_t": 0.609, "phi_hat": 0.219, "b": 6.251e-05, "coherent": false}, {"name": "UGC08490", "rho_b": 0.62, "rho_eff": 1.153, "phi_t": 0.858, "phi_hat": 0.716, "b": 4.492e-05, "coherent": true}, {"name": "UGC08550", "rho_b": 0.889, "rho_eff": 1.526, "phi_t": 0.716, "phi_hat": 0.432, "b": 0.00010014, "coherent": true}, {"name": "UGC08699", "rho_b": 0.817, "rho_eff": 1.484, "phi_t": 0.816, "phi_hat": 0.631, "b": 0.00010914, "coherent": true}, {"name": "UGC09133", "rho_b": 0.795, "rho_eff": 1.395, "phi_t": 0.754, "phi_hat": 0.509, "b": 7.048e-05, "coherent": true}, {"name": "UGC10310", "rho_b": 0.882, "rho_eff": 1.574, "phi_t": 0.784, "phi_hat": 0.568, "b": 6.747e-05, "coherent": true}, {"name": "UGC11455", "rho_b": 0.654, "rho_eff": 1.062, "phi_t": 0.624, "phi_hat": 0.249, "b": 8.377e-05, "coherent": false}, {"name": "UGC11820", "rho_b": 0.856, "rho_eff": 1.473, "phi_t": 0.72, "phi_hat": 0.439, "b": 2.775e-05, "coherent": true}, {"name": "UGC12506", "rho_b": 0.664, "rho_eff": 1.092, "phi_t": 0.644, "phi_hat": 0.289, "b": 5.197e-05, "coherent": false}, {"name": "DDO064", "rho_b": 0.766, "rho_eff": 1.246, "phi_t": 0.627, "phi_hat": 0.254, "b": 9.064e-05, "coherent": false}, {"name": "DDO168", "rho_b": 0.576, "rho_eff": 1.006, "phi_t": 0.748, "phi_hat": 0.496, "b": 7.426e-05, "coherent": true}, {"name": "IC0010", "rho_b": 0.716, "rho_eff": 1.135, "phi_t": 0.585, "phi_hat": 0.17, "b": 7.841e-05, "coherent": false}, {"name": "IC0144", "rho_b": 0.828, "rho_eff": 1.547, "phi_t": 0.868, "phi_hat": 0.737, "b": 9.656e-05, "coherent": true}, {"name": "IC2574", "rho_b": 0.702, "rho_eff": 1.09, "phi_t": 0.552, "phi_hat": 0.104, "b": 0.00010534, "coherent": false}, {"name": "IC4202", "rho_b": 0.931, "rho_eff": 1.626, "phi_t": 0.746, "phi_hat": 0.492, "b": 9.475e-05, "coherent": true}, {"name": "F563-1", "rho_b": 0.768, "rho_eff": 1.356, "phi_t": 0.765, "phi_hat": 0.53, "b": 6.358e-05, "coherent": true}, {"name": "F563-V2", "rho_b": 0.562, "rho_eff": 0.956, "phi_t": 0.702, "phi_hat": 0.403, "b": 8.791e-05, "coherent": true}, {"name": "F565-V2", "rho_b": 0.712, "rho_eff": 1.149, "phi_t": 0.614, "phi_hat": 0.228, "b": 8.223e-05, "coherent": false}, {"name": "F568-1", "rho_b": 0.561, "rho_eff": 0.954, "phi_t": 0.701, "phi_hat": 0.403, "b": 7.644e-05, "coherent": true}, {"name": "F568-3", "rho_b": 0.561, "rho_eff": 1.007, "phi_t": 0.795, "phi_hat": 0.59, "b": 2.503e-05, "coherent": true}, {"name": "F571-8", "rho_b": 0.702, "rho_eff": 1.171, "phi_t": 0.669, "phi_hat": 0.337, "b": 5.268e-05, "coherent": true}, {"name": "F579-V1", "rho_b": 0.854, "rho_eff": 1.448, "phi_t": 0.694, "phi_hat": 0.389, "b": 4.523e-05, "coherent": true}, {"name": "UGC02953", "rho_b": 0.583, "rho_eff": 0.891, "phi_t": 0.529, "phi_hat": 0.058, "b": 7.394e-05, "coherent": false}, {"name": "UGC8001", "rho_b": 0.95, "rho_eff": 1.572, "phi_t": 0.654, "phi_hat": 0.309, "b": 8.518e-05, "coherent": true}, {"name": "UGC8002", "rho_b": 0.852, "rho_eff": 1.552, "phi_t": 0.823, "phi_hat": 0.645, "b": 3.994e-05, "coherent": true}, {"name": "UGC8003", "rho_b": 0.558, "rho_eff": 0.925, "phi_t": 0.657, "phi_hat": 0.314, "b": 7.64e-05, "coherent": true}, {"name": "UGC8004", "rho_b": 0.637, "rho_eff": 1.161, "phi_t": 0.822, "phi_hat": 0.643, "b": 9.669e-05, "coherent": true}, {"name": "UGC8005", "rho_b": 0.617, "rho_eff": 1.087, "phi_t": 0.762, "phi_hat": 0.524, "b": 0.00010193, "coherent": true}, {"name": "UGC8006", "rho_b": 0.936, "rho_eff": 1.495, "phi_t": 0.598, "phi_hat": 0.195, "b": 2.257e-05, "coherent": false}, {"name": "UGC8007", "rho_b": 0.675, "rho_eff": 1.223, "phi_t": 0.812, "phi_hat": 0.625, "b": 9.15e-05, "coherent": true}, {"name": "UGC8008", "rho_b": 0.58, "rho_eff": 1.033, "phi_t": 0.779, "phi_hat": 0.559, "b": 8.272e-05, "coherent": true}, {"name": "UGC8009", "rho_b": 0.591, "rho_eff": 1.084, "phi_t": 0.836, "phi_hat": 0.671, "b": 3.211e-05, "coherent": true}, {"name": "UGC8010", "rho_b": 0.944, "rho_eff": 1.681, "phi_t": 0.782, "phi_hat": 0.564, "b": 5.472e-05, "coherent": true}, {"name": "UGC8011", "rho_b": 0.721, "rho_eff": 1.2, "phi_t": 0.664, "phi_hat": 0.328, "b": 0.00010496, "coherent": true}, {"name": "UGC8012", "rho_b": 0.879, "rho_eff": 1.416, "phi_t": 0.611, "phi_hat": 0.221, "b": 0.00011608, "coherent": false}, {"name": "UGC8013", "rho_b": 0.804, "rho_eff": 1.464, "phi_t": 0.82, "phi_hat": 0.64, "b": 9.338e-05, "coherent": true}, {"name": "UGC8014", "rho_b": 0.936, "rho_eff": 1.526, "phi_t": 0.63, "phi_hat": 0.26, "b": 0.00010082, "coherent": false}, {"name": "UGC8015", "rho_b": 0.765, "rho_eff": 1.286, "phi_t": 0.68, "phi_hat": 0.361, "b": 4.684e-05, "coherent": true}, {"name": "UGC8016", "rho_b": 0.891, "rho_eff": 1.646, "phi_t": 0.848, "phi_hat": 0.697, "b": 2.867e-05, "coherent": true}, {"name": "UGC8017", "rho_b": 0.903, "rho_eff": 1.456, "phi_t": 0.613, "phi_hat": 0.226, "b": 5.79e-05, "coherent": false}, {"name": "UGC8018", "rho_b": 0.561, "rho_eff": 1.036, "phi_t": 0.844, "phi_hat": 0.689, "b": 3.818e-05, "coherent": true}, {"name": "UGC8019", "rho_b": 0.635, "rho_eff": 1.134, "phi_t": 0.786, "phi_hat": 0.572, "b": 9.012e-05, "coherent": true}, {"name": "UGC8020", "rho_b": 0.661, "rho_eff": 1.08, "phi_t": 0.635, "phi_hat": 0.27, "b": 0.00011481, "coherent": false}];
-let mx=0.5, my=0.5;
-let lockedGalaxy = galaxies.find(g=>g.name==="NGC3198");
-let isLocked = false;
+const rSlider=document.getElementById('rSlider'), aSlider=document.getElementById('aSlider');
+const rVal=document.getElementById('rVal'), oldR=document.getElementById('oldR'), newR=document.getElementById('newR'), rInv=document.getElementById('rInv');
+const aVal=document.getElementById('aVal'), RaOld=document.getElementById('RaOld'), RaNew=document.getElementById('RaNew');
+const canvas=document.getElementById('canvas'), ctx=canvas.getContext('2d');
 
-const canvas=document.getElementById('c');
-const ctx=canvas.getContext('2d');
-function resize(){canvas.width=canvas.offsetWidth*2;canvas.height=420*2;ctx.setTransform(1,0,0,1,0,0);ctx.scale(2,2)}
-resize();window.addEventListener('resize',resize);
-canvas.addEventListener('mousemove',e=>{if(isLocked) return; const r=canvas.getBoundingClientRect();mx=(e.clientX-r.left)/r.width;my=(e.clientY-r.top)/r.height; updateInfoFromMouse();});
-canvas.addEventListener('touchmove',e=>{const r=canvas.getBoundingClientRect();mx=(e.touches[0].clientX-r.left)/r.width;my=(e.touches[0].clientY-r.top)/r.height;e.preventDefault(); if(!isLocked) updateInfoFromMouse();},{passive:false});
+function R_old(r){return (r+1)/(r+2);}
+function R_new(r){return (1+r)/(1+2*r);}
+function r_from_R(R){return (1-R)/(2*R-1);}
 
-function updateInfoFromMouse(){
-  const phi=(0.15+mx*0.85).toFixed(3);
-  const bField=(0.00002+my*0.00008).toFixed(8);
-  const rho=(1.05+mx*0.35).toFixed(3);
-  const hat=((parseFloat(phi)-0.5)/0.5).toFixed(3);
-  if(!isLocked){
-    document.getElementById('selName').textContent='LIVE (mouse)';
-    document.getElementById('selPhi').textContent=phi;
-    document.getElementById('selB').textContent=bField;
-    document.getElementById('selRho').textContent=rho;
-    document.getElementById('selHat').textContent=hat;
-  }
+function draw(){
+ const a=parseFloat(aSlider.value);
+ const points=[];
+ for(let i=0;i<=100;i++){
+   let aa=0.1+i*2.9/100;
+   let r_a=1+2*Math.exp(-aa*1.2);
+   points.push({a:aa, ro:R_old(r_a), rn:R_new(r_a)});
+ }
+ ctx.clearRect(0,0,canvas.width,canvas.height);
+ // grid
+ ctx.strokeStyle='#f3f4f6'; ctx.beginPath();
+ for(let y=0;y<5;y++){ctx.moveTo(0,y*36); ctx.lineTo(400,y*36);} ctx.stroke();
+ // old
+ ctx.strokeStyle='#fda4af'; ctx.lineWidth=3; ctx.setLineDash([8,6]); ctx.beginPath();
+ points.forEach((p,i)=>{let x=p.a/3*400; let y=180-(p.ro-0.5)/0.5*180; if(i==0)ctx.moveTo(x,y); else ctx.lineTo(x,y);}); ctx.stroke();
+ // new
+ ctx.strokeStyle='#15803d'; ctx.lineWidth=3; ctx.setLineDash([]); ctx.beginPath();
+ points.forEach((p,i)=>{let x=p.a/3*400; let y=180-(p.rn-0.5)/0.5*180; if(i==0)ctx.moveTo(x,y); else ctx.lineTo(x,y);}); ctx.stroke();
+ // 2/3
+ ctx.strokeStyle='black'; ctx.setLineDash([4,4]); ctx.beginPath(); ctx.moveTo(0,180-(0.6667-0.5)/0.5*180); ctx.lineTo(400,180-(0.6667-0.5)/0.5*180); ctx.stroke();
+ ctx.setLineDash([]);
 }
 
-function selectGalaxy(g){
-  isLocked=true;
-  lockedGalaxy=g;
-  document.getElementById('selName').textContent=g.name;
-  document.getElementById('selPhi').textContent=g.phi_t.toFixed(3);
-  document.getElementById('selB').textContent=g.b.toFixed(8);
-  document.getElementById('selRho').textContent=g.rho_eff.toFixed(3);
-  document.getElementById('selHat').textContent=g.phi_hat.toFixed(3);
-  // set mx/my to reflect phi
-  mx = (g.phi_t - 0.15)/0.85;
-  my = (g.b - 0.00002)/0.00008;
+function update(){
+ let r=parseFloat(rSlider.value);
+ rVal.textContent=r.toFixed(2);
+ oldR.textContent=R_old(r).toFixed(4);
+ newR.textContent=R_new(r).toFixed(4);
+ let rn=R_new(r);
+ if(Math.abs(2*rn-1)>1e-6) rInv.textContent=r_from_R(rn).toFixed(4); else rInv.textContent='∞';
+ 
+ let a=parseFloat(aSlider.value);
+ aVal.textContent=a.toFixed(2);
+ let r_a=1+2*Math.exp(-a*1.2);
+ RaOld.textContent=R_old(r_a).toFixed(3);
+ RaNew.textContent=R_new(r_a).toFixed(3);
+ draw();
 }
-
-function loop(t){
-  const w=canvas.offsetWidth,h=420;
-  ctx.clearRect(0,0,w,h);
-  // B field gradient centered at mx,my or locked galaxy
-  let cx = w*mx, cy = h*my;
-  if(isLocked && lockedGalaxy){
-    cx = w * ((lockedGalaxy.phi_t - 0.15)/0.85);
-    cy = h * ((lockedGalaxy.b - 0.00002)/0.00008);
-  }
-  const g=ctx.createRadialGradient(cx,cy,0,cx,cy,w*0.85);
-  g.addColorStop(0,'rgba(201,168,106,0.26)');
-  g.addColorStop(0.25,'rgba(201,168,106,0.10)');
-  g.addColorStop(0.6,'rgba(30,60,120,0.14)');
-  g.addColorStop(1,'rgba(8,8,8,0)');
-  ctx.fillStyle=g;ctx.fillRect(0,0,w,h);
-  // coherence lines - 150 lines faint to represent 150 galaxies
-  ctx.strokeStyle='rgba(201,168,106,0.09)';ctx.lineWidth=0.8;
-  for(let i=0;i<30;i++){
-    const y=(h/31)*(i+1)+Math.sin(t*0.0005+i*0.7)*6*my;
-    ctx.beginPath();ctx.moveTo(0,y);
-    const amp=12+mx*20+ (isLocked?10:0);
-    ctx.bezierCurveTo(w*0.25,y-Math.sin(t*0.0008+i*0.5)*amp,w*0.75,y+Math.sin(t*0.0008+i*1.0)*amp,w,y);
-    ctx.stroke();
-  }
-  // highlight coherent galaxies as bright lines
-  ctx.strokeStyle='rgba(201,168,106,0.22)';ctx.lineWidth=1;
-  for(let i=0;i<8;i++){
-    const y=(h/9)*(i+1)+Math.sin(t*0.001+i)*8;
-    ctx.beginPath();ctx.moveTo(0,y);
-    ctx.bezierCurveTo(w*0.33,y-Math.sin(t*0.0012+i)*18,w*0.66,y+Math.sin(t*0.0012+i)*18,w,y);
-    ctx.stroke();
-  }
-  // threshold 0.65 line
-  ctx.setLineDash([6,6]);ctx.strokeStyle='rgba(201,168,106,0.55)';ctx.beginPath();ctx.moveTo(0,h*0.35);ctx.lineTo(w,h*0.35);ctx.stroke();ctx.setLineDash([]);
-  ctx.fillStyle='rgba(201,168,106,0.9)';ctx.font='10px JetBrains Mono';ctx.fillText('threshold 0.65', w-110, h*0.35-6);
-  // B field circles
-  ctx.strokeStyle='rgba(100,140,200,0.18)';for(let i=1;i<=4;i++){ctx.beginPath();ctx.arc(cx,cy,22*i+Math.sin(t*0.001*i)*5,0,Math.PI*2);ctx.stroke();}
-  // galaxy points - plot 150 galaxies as dots
-  galaxies.forEach((gal, idx)=>{
-    const gx = w * ((gal.phi_t - 0.15)/0.85);
-    const gy = h * (1 - gal.phi_hat*0.7);
-    const isSel = lockedGalaxy && gal.name===lockedGalaxy.name;
-    ctx.fillStyle = isSel ? '#C9A86A' : (gal.coherent ? 'rgba(201,168,106,0.6)' : 'rgba(100,110,120,0.35)');
-    ctx.beginPath();
-    ctx.arc(gx, gy, isSel ? 5 : (gal.coherent?2.5:1.8), 0, Math.PI*2);
-    ctx.fill();
-    if(isSel){
-      ctx.strokeStyle='rgba(201,168,106,0.9)';ctx.lineWidth=1;ctx.beginPath();ctx.arc(gx,gy,12,0,Math.PI*2);ctx.stroke();
-      ctx.fillStyle='#E8C99A';ctx.font='11px JetBrains Mono';ctx.fillText(gal.name, gx+8, gy-8);
-    }
-  });
-  // stats overlay
-  let phi,bField,rho;
-  if(isLocked && lockedGalaxy){
-    phi=lockedGalaxy.phi_t.toFixed(3); bField=lockedGalaxy.b.toFixed(8); rho=lockedGalaxy.rho_eff.toFixed(3);
-  } else {
-    phi=(0.15+mx*0.85).toFixed(3); bField=(0.00002+my*0.00008).toFixed(8); rho=(1.05+mx*0.35).toFixed(3);
-  }
-  ctx.fillStyle='#C9A86A';ctx.font='12px JetBrains Mono';ctx.fillText(`phi_t = ${phi} Hz | B = ${bField} T | rho_eff = ${rho}e-22 kg/m³ | ${galaxies.length} galaxies | ${galaxies.filter(g=>g.coherent).length} coherent`,14,20);
-  ctx.fillStyle='#666';ctx.font='10px JetBrains Mono';ctx.fillText(`150 fits • threshold 0.65 --- • EEG 10min baseline + HRV 5min RMSSD • v9.0.0 EXPANDED • click table to lock`,14,h-12);
-  requestAnimationFrame(loop);
-}
-requestAnimationFrame(loop);
-
-// Table interactions
-document.querySelectorAll('#galTable tbody tr').forEach(tr=>{
-  tr.addEventListener('click',()=>{
-    const name=tr.dataset.name;
-    const g=galaxies.find(x=>x.name===name);
-    if(g) selectGalaxy(g);
-    document.querySelectorAll('#galTable tbody tr').forEach(r=>r.style.background='');
-    tr.style.background='#1E1E0E';
-  });
-});
-
-function resetView(){
-  isLocked=false; lockedGalaxy=null;
-  document.getElementById('search').value='';
-  document.getElementById('filter').value='all';
-  document.querySelectorAll('#galTable tbody tr').forEach(r=>{r.style.display=''; r.style.background='';});
-  document.getElementById('selName').textContent='LIVE (mouse)';
-}
-
-// Search & filter
-document.getElementById('search').addEventListener('input',e=>{
-  const q=e.target.value.toLowerCase();
-  document.querySelectorAll('#galTable tbody tr').forEach(tr=>{
-    const name=tr.dataset.name.toLowerCase();
-    tr.style.display = name.includes(q) ? '' : 'none';
-  });
-});
-document.getElementById('filter').addEventListener('change',e=>{
-  const v=e.target.value;
-  document.querySelectorAll('#galTable tbody tr').forEach(tr=>{
-    const phi=parseFloat(tr.dataset.phi);
-    if(v==='coh') tr.style.display = phi>=0.65 ? '' : 'none';
-    else if(v==='ncoh') tr.style.display = phi<0.65 ? '' : 'none';
-    else tr.style.display='';
-  });
-});
-document.getElementById('sort').addEventListener('change',e=>{
-  const v=e.target.value;
-  const tbody=document.querySelector('#galTable tbody');
-  const rows=Array.from(tbody.querySelectorAll('tr'));
-  rows.sort((a,b)=>{
-    if(v==='phi_desc') return parseFloat(b.dataset.phi)-parseFloat(a.dataset.phi);
-    if(v==='phi_asc') return parseFloat(a.dataset.phi)-parseFloat(b.dataset.phi);
-    if(v==='rho_desc') return parseFloat(b.dataset.rho)-parseFloat(a.dataset.rho);
-    if(v==='name') return a.dataset.name.localeCompare(b.dataset.name);
-    return 0;
-  });
-  rows.forEach(r=>tbody.appendChild(r));
-});
-function sortBy(k){
-  const sel=document.getElementById('sort');
-  if(k==='phi') sel.value='phi_desc';
-  if(k==='rho') sel.value='rho_desc';
-  if(k==='name') sel.value='name';
-  sel.dispatchEvent(new Event('change'));
-}
+rSlider.addEventListener('input',update);
+aSlider.addEventListener('input',update);
+update();
 </script>
 </body>
 </html>
