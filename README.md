@@ -9,7 +9,7 @@ It looks like this message is in English
 **DOI:** https://doi.org/10.5281/zenodo.23135605  
 **Concept DOI:** https://doi.org/10.5281/zenodo.22983682  
 **Academia:** https://www.academia.edu/176661929/  
-**Zenodo v8.2 (7 files - CORRECTED):**
+**Zenodo v8.2 (7 files - CORRECTED):**https://doi.org/10.5281/zenodo.23135605
 
 ### Core Derivation (SI, documented, no numerology)
 All densities in **kg/m³**, falsifiable:
