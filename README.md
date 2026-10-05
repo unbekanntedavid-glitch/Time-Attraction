@@ -1,7 +1,27 @@
-Zenodo: 10.5281/zenodo.23138388 (Concept: 10.5281/zenodo.22983682)
-SPARC 150 76-95% framing removed - no per-galaxy lensing in SPARC.
-[![DOI](https://doi.org/10.5281/zenodo.23138388)](https://doi.org/10.5281/zenodo.23138388)
-[![ORCID](https://img.shields.io/badge/ORCID-0009--0005--6300--074X-green)](https://orcid.org/0009-0005-6300-074X)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+</head>
+<body style="font-family: Arial; max-width: 800px; margin: 40px auto; padding: 20px; line-height: 1.6;">
+<h1>Time-Attraction Law v8.3 FINAL (v11) SOLVES</h1>
+<p>
+<a href="https://doi.org/10.5281/zenodo.23138388"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.23138388.svg"></a>
+<a href="https://orcid.org/0009-0005-6300-074X"><img src="https://img.shields.io/badge/ORCID-0009--0005--6300--074X-green"></a>
+</p>
+<p><b>Main DOI:</b> 10.5281/zenodo.23138388<br>
+<b>Concept DOI:</b> 10.5281/zenodo.22983682</p>
+
+<h3>Correction 2026-10-04</h3>
+<p><b>R=(1+r)/(1+2r)</b> per Bellini & Sawicki Eq.2.18<br>
+r=alpha_M/alpha_B, epsilon=X*G3X/G4phi-2, dR/dr<0</p>
+
+<p><b>Author:</b> David Szabolcsi (ORCID: 0009-0005-6300-074X)<br>
+<b>Thanks to:</b> Jordi Audet Palau</p>
+
+<p><a href="https://github.com/unbekanntedavid-glitch/Time-Attraction">Back to GitHub Repo</a></p>
+</body>
+</html>
 
 ### A Unified Effective Density Framework for Time Attraction - Falsifiable, dimensionally consistent
 **Phi_t Protocol + 150 SPARC Galaxies Fit + Interactive Lab Simulator**
