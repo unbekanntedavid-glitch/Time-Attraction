@@ -1,132 +1,110 @@
 
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Idővonzás Törvénye - Time-Attraction Law v8.3 - Phi_t Protocol</title>
+<title>Time-Attraction Law v8.3 FINAL</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#0a0a0f;color:#e0e0e0;font-family:'Segoe UI',system-ui,sans-serif;line-height:1.65;min-height:100vh}
-header{padding:48px 20px;text-align:center;border-bottom:1px solid #1a1a2e;background:linear-gradient(180deg,#0f0f1f 0%,#0a0a0f 100%)}
-h1{font-size:2.6rem;color:#fff;letter-spacing:3px;margin-bottom:8px;font-weight:800}
-.subtitle{color:#9aa0b0;font-size:1.05rem}
-.badge{display:inline-block;background:#112e19;color:#5af080;border:1px solid #2d6a3a;padding:6px 16px;border-radius:999px;font-size:0.85rem;margin-top:14px;font-weight:600}
-.badge-new{background:#1a233a;color:#7ab8ff;border-color:#3a5a8a}
-.container{max-width:960px;margin:0 auto;padding:30px 20px}
-.card{background:#12121f;border:1px solid #24243a;border-radius:16px;padding:26px;margin-bottom:20px;box-shadow:0 8px 24px rgba(0,0,0,0.25)}
-.card h2{color:#fff;margin-bottom:12px;font-size:1.35rem}
-.card h3{color:#ffcf6a;margin:18px 0 8px 0;font-size:1.1rem}
-.formula{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#08080f;padding:14px 16px;border-radius:10px;color:#b8ffd0;margin:14px 0;border-left:3px solid #4ade80;overflow-x:auto;line-height:1.5}
-.formula2{background:#0f1520;border-left-color:#7ab8ff;color:#c5d8ff}
-.corr{background:linear-gradient(180deg,#1c160c,#16120a);border:1px solid #5a421a;border-radius:12px;padding:20px;margin:22px 0}
-.corr-new{background:linear-gradient(180deg,#0e1a2a,#101a2e);border-color:#3a5a8a}
-.corr b{color:#ffcf6a}
-.corr-new b{color:#7ab8ff}
-.status-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin:22px 0}
-.status{background:#0f0f1a;border:1px solid #23233a;padding:16px;border-radius:12px;text-align:center}
-.status .val{font-size:1.7rem;color:#fff;font-weight:800}
-.status .label{font-size:0.8rem;color:#8a90a8;margin-top:4px}
-.pending-fix{color:#5af080 !important}
-a{color:#7ab8ff;text-decoration:none}
-a:hover{text-decoration:underline}
-.btn{display:inline-block;background:#1e3a5f;color:#fff;padding:11px 20px;border-radius:10px;margin:6px 6px 6px 0;text-decoration:none;border:1px solid #2a5a8a;font-weight:600}
-.btn:hover{background:#264b7a}
-footer{text-align:center;padding:32px;color:#6b7288;font-size:0.85rem;border-top:1px solid #1a1a2e;margin-top:36px;line-height:1.6}
-.small{font-size:0.9rem;color:#9aa0b0}
-ul{margin:10px 0 10px 20px;color:#c5c9d6}
-li{margin:6px 0}
-.hl{color:#ffcf6a;font-weight:700}
-.hl-blue{color:#7ab8ff;font-weight:700}
+:root{--bg:#0a0e1a;--card:#151a2e;--card2:#1c2340;--border:#2a3655;--text:#c9d1d9;--blue:#58a6ff;--green:#7ee787;--orange:#f0883e;--yellow:#f7cc4a;}
+body{background:var(--bg);color:var(--text);font-family:Consolas,Monaco,"Courier New",-apple-system,BlinkMacSystemFont,Segoe UI,Roboto;max-width:1100px;margin:0 auto;padding:20px;line-height:1.65;}
+a{color:var(--blue);text-decoration:none} a:hover{text-decoration:underline}
+.top-btns{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0}
+.btn{display:inline-block;background:#1f6feb;color:white;padding:10px 18px;border-radius:8px;font-weight:700;font-size:0.9em;box-shadow:0 2px 0 rgba(0,0,0,0.3)}
+.btn:hover{background:#2c7dff;transform:translateY(-1px)}
+h1{text-align:center;font-size:2.4em;color:#fff;letter-spacing:0.5px;margin:10px 0 5px 0}
+.subtitle{text-align:center;color:var(--orange);font-weight:700;margin-bottom:25px}
+.box{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;margin:18px 0}
+.box-green{background:#0d1f14;border:1px solid #2d5a3a;color:var(--green);font-family:monospace;white-space:pre-wrap;overflow-x:auto;border-left:4px solid var(--green)}
+.box-orange{background:#2a1f0a;border:1px solid #5a4520;color:#ffdda0}
+.box-blue{background:var(--card2);border:1px solid #3a4a7a}
+h2{color:#fff;margin:30px 0 10px 0;font-size:1.25em}
+.small{font-size:0.85em;color:#8b949e;text-align:center;margin-top:40px}
+.tag{display:inline-block;background:#21262d;border:1px solid #30363d;padding:2px 8px;border-radius:12px;font-size:0.8em;margin:2px}
 </style>
 </head>
 <body>
-<header>
-<h1>IDŐVONZÁS TÖRVÉNYE</h1>
-<div class="subtitle" style="color:#ffcf6a;font-weight:800;letter-spacing:2px;font-size:1.3rem">Time-Attraction Law</div>
-<div class="subtitle">Phi_t Protocol / IdőKamra 1.0 - Unified Framework - v8.3</div>
-<div class="badge">✓ v8.2 Corrected Final - R=(1+r)/(1+2r) - Pending FIXED</div><br>
-<div class="badge badge-new">✦ v8.3 Update - ε = X G₃ₓ/G₄φ -2 closed form - Per J. Audet Palau</div>
-<div class="small" style="margin-top:14px">DOI: <a href="https://doi.org/10.5281/zenodo.23137284">10.5281/zenodo.23137284</a> · Ref DOI: <a href="https://doi.org/10.5281/zenodo.22899435">10.5281/zenodo.22899435</a> · ORCID: <a href="https://orcid.org/0009-0005-6300-074X">0009-0005-6300-074X</a></div>
-</header>
 
-<div class="container">
+<h1>IDŐVONÁS TÖRVÉNYE</h1>
+<div class="subtitle">Time-Attraction Law v8.3 FINAL (v11) SOLVES - Unified Effective Density Framework</div>
 
-<div class="corr">
-<b>CORRIGENDUM v8.2 (2026-10-04):</b><br>
-In v8.1 reported R=(r+1)/(r+2). Correct per Bellini & Sawicki (2014) eq 2.18 is <b>R=(1+r)/(1+2r)</b> where r=α_M/α_B. Inversion: r=(1-R)/(2R-1). Both give R=2/3 at r=1, but differ at r≠1. Acknowledgment to Jordi Audet Palau for pointing out the correction.
+<div class="top-btns">
+<a class="btn" href="./simulation.html">🧪 Simulation Lab v8.3</a>
+<a class="btn" href="https://doi.org/10.5281/zenodo.23138388" style="background:#8957e5">📦 Zenodo Main</a>
+<a class="btn" href="https://doi.org/10.5281/zenodo.22899435" style="background:#1f6feb">📝 Jordi Note v-22899435</a>
+<a class="btn" href="https://orcid.org/0009-0005-6300-074X" style="background:#2ea043">🆔 ORCID</a>
+<a class="btn" href="https://github.com/unbekanntdavid-glitch/Time-Attraction" style="background:#30363d">⭐ GitHub</a>
 </div>
 
-<div class="corr corr-new">
-<b>UPDATE v8.3 (2026-10-04) - ε CLOSED FORM - Per J. Audet Palau Sec. V:</b><br>
-On subclass G₅=0, G₄=G₄(φ), so G₄ₓ=G₄φₓ=0:<br>
-<b>M*² = 2G₄, α_M = 2φ̇ G₄φ/(H M*²), H M*² α_B = 2φ̇ [X G₃ₓ - G₄φ]</b><br>
-→ <b>r = α_M/α_B = G₄φ/(X G₃ₓ - G₄φ)</b>, 1+ε = α_B/α_M = 1/r<br>
-→ <b>ε = X G₃ₓ/G₄φ - 2</b> closed form. Check: ε=0 ↔ X G₃ₓ=2 G₄φ locus condition.<br><br>
-<b>f_L cancels:</b> From Sec. 3.2 r = α₀ f_L / [α₀ f_L (1+ε)] = <b>1/(1+ε)</b>. Screening function does not enter r. Low-density limit independent of f_L form - sturdier.<br><br>
-<b>Sign sorted:</b> dR/dr = -1/(1+2r)² &lt;0 → X G₃ₓ &gt;2 G₄φ ⇒ ε&gt;0, r&lt;1, R→2/3 from *above*; X G₃ₓ &lt;2 G₄φ ⇒ ε&lt;0, r&gt;1, R from *below*. Sec.4 wants below → need ε&lt;0.
+<div class="box">
+<strong>Main DOI (NEW):</strong> <a href="https://doi.org/10.5281/zenodo.23138388">10.5281/zenodo.23138388</a> <span class="tag">NEW - replace if newer</span><br>
+<strong>Concept DOI:</strong> <a href="https://doi.org/10.5281/zenodo.22983682">10.5281/zenodo.22983682</a><br>
+<strong>Jordi Note DOI:</strong> <a href="https://doi.org/10.5281/zenodo.22899435">10.5281/zenodo.22899435</a><br>
+<strong>Author:</strong> David Szabolcsi (ORCID: 0009-0005-6300-074X) - Thanks to Jordi Audet Palau
 </div>
 
-<div class="card">
-<h2>Corrected Horndeski Ratio + ε</h2>
-<div class="formula">R = ΔΣ/Δμ = (1 + r)/(1 + 2r) ,  r = α_M / α_B = 1/(1+ε)<br>
-r = (1 - R)/(2R - 1)<br>
-ε = X G₃ₓ/G₄φ - 2 ,  G₄φ/(X G₃ₓ - G₄φ) = r<br>Chain: 2/3 ↔ α_M = α_B ↔ X·G₃ₓ - 2·G₄φ =0, G₅=0, G₄=G₄(φ)</div>
-<p class="small">Parameter-free: r=1 → R=2/3. QSA linear limit. ε now computed, not postulated.</p>
-</div>
-
-<div class="status-grid">
-<div class="status"><div class="val" style="font-size:1.2rem">ε = X G₃ₓ/G₄φ-2</div><div class="label">Closed form per Jordi</div></div>
-<div class="status"><div class="val">2/3</div><div class="label">R at r=1 (ε=0)</div></div>
-<div class="status"><div class="val pending-fix">✓ PASS</div><div class="label">f_L cancels</div></div>
-</div>
-
-<div class="card">
-<h2>Background Correction v8.3 - From Local to Background</h2>
-<h3>Problem in v8.2:</h3>
-<p class="small">α_M, α_B are background functions of time only in EFT of dark energy. A local density — galaxy, halo, void — has no slot in them. So f_L(ρ_L) with ρ_L local cannot be mounted on α-basis as parametrised.</p>
-<h3>Solution per Jordi:</h3>
-<div class="formula formula2">Let ρ_L be *background* density: ρ_m(a) = ρ_m0 a⁻³<br>
-Then f_L becomes f_L(a), α's are time functions as must be<br>
-ε(a) = X G₃ₓ/G₄φ - 2 evaluated along background<br>
-r(a) = 1/(1+ε(a)), R(a) = (1+r(a))/(1+2r(a)) binned in a<br>
-→ R(a) *derived* not fitted, no hand-chosen 1.2 and 2, falsifiable shape simply true<br>
-Testable via hi_class α_M(a), α_B(a) against Euclid and DESI (Sec. VI route in note)</div>
-<p class="small">Template: Sec. X of note - enhanced-early-gravity coupled cubic Galileon at r≈-1.2 to -1.3 recovers background Planck mass within 0.03% across 4 redshifts, 3 wavenumbers.</p>
-</div>
-
-<div class="card">
-<h2>Sec. 5 Revision - SPARC Note</h2>
-<p class="small">Per Jordi's note:</p>
-<ul>
-<li>SPARC = rotation curves + Spitzer photometry, <span class="hl">no per-galaxy lensing</span>, so ΔΣ not available and R=ΔΣ/Δμ cannot be formed from SPARC dataset</li>
-<li>Abstract "using 150 SPARC galaxies" vs Sec.5 "mock 150-galaxy analysis" — to be settled in v8.3</li>
-<li>76%-to-95% accuracy framing — not defined for χ² fit — to be removed</li>
-<li>Ratio is identity <span class="hl-blue">within linear quasi-static reduction</span>. Rotation curves are collapsed, non-linear, screened — precisely what reduction sets aside, where background α's have nothing to say</li>
-<li>Replacement: hi_class binned R(a) route Sec. VI, testable</li>
-</ul>
-<div class="formula">Old v8.2: 94.9% SPARC 150 → New v8.3: hi_class R(a) binned forecast for Euclid/DESI<br>Ref: doi:10.5281/zenodo.22899435 Sec. VI & X</div>
-</div>
-
-<div class="card">
-<h2>Links</h2>
-<a class="btn" href="simulation.html">🔬 Simulation Lab v8.3</a>
-<a class="btn" href="https://doi.org/10.5281/zenodo.23137284">Zenodo Main</a>
-<a class="btn" href="https://doi.org/10.5281/zenodo.22899435">Jordi Note v - 22899435</a>
-<a class="btn" href="https://orcid.org/0009-0005-6300-074X">ORCID</a>
-<a class="btn" href="https://github.com/unbekanntedavid-glitch/Time-Attraction">GitHub</a>
-</div>
-
-<div class="card">
 <h2>Unified Framework (kg/m³) - v8.3 background version</h2>
-<div class="formula">ρ_eff = ρ_b·M_ρ + ρ_DM·M_ρ + ρ_B·M_B + ρ_GR·M_B + ρ_E·M_B + ρ_ψ<br>ρ_ψ = Ξ·ε0·Φ_t, Φ_t = 0.6·EEG_coh + 0.4·HRV_coh<br><br>v8.3: ρ_L → ρ_m(a), ε(a)=X G₃ₓ/G₄φ-2, r(a)=1/(1+ε(a)), R(a)=(1+r(a))/(1+2r(a))</div>
+<div class="box-green">ρ_eff = ρ_b+m_p + ρ_DM+m_p + ρ_GE+m_p + ρ_E+M_p + ρ_f
+p_φ = Ξ - c3 - Θ_t, Θ_t = 0.6-EEG_cmb + 0.4-H0W_cmb
+
+v8.3: ρ_L → ρ_m(a), ε(a)= X G3x / G4φ -2, r(φ)=α0/(α0(1+ε)), R(r)=(1+r)/(1+2r)</div>
+
+<div class="box box-orange">
+<strong style="color:var(--yellow)">CORRIGENDUM v8.2 (2026-10-04):</strong><br>
+In v8.1 reported R=(r+1)/(r+2). Correct per Bellini & Sawicki (2014) eq 2.18 is <strong style="color:var(--yellow)">R=(1+r)/(1+2r)</strong> where r=α_M/α_B. Inversion: r=(1-R)/(2R-1). Both give R=2/3 at r=1, but differ at r≠1. Acknowledgment to Jordi Audet Palau for pointing out the correction.
 </div>
 
+<div class="box box-blue">
+<strong style="color:var(--blue)">UPDATE v8.3 (2026-10-04) - ε CLOSED FORM - Per J. Audet Palau Sec. V:</strong><br>
+On subclass G5=0, G4=G4(φ), so G4x=G4φ φx2=0:<br>
+M*² = 2G4, α_M = 2φ' G4φ/(H M*²), H M*² α_B = 2φ' [X G3x - G4φ]<br>
+→ r = α_M/α_B = G4φ/(X G3x - G4φ), 1+ε = α_B/α_M = 1/r<br>
+→ <strong>ε = X G3x/G4φ - 2 closed form.</strong> Check: ε=0 ↔ X G3x=2 G4φ locus condition.<br><br>
+<span style="color:var(--green)">f_L cancels:</span> From Sec. 3.2 r = α0 f_L / [α0 f_L (1+ε)] = 1/(1+ε). Screening function does not enter r. Low-density limit independent of f_L form - sturdier.<br><br>
+<span style="color:var(--blue)">Sign sorted:</span> dR/dr = -1/(1+2r)² <0 → X G3x >2 G4φ ⇒ ε>0, r<1, R→2/3 from *above*; X G3x <2 G4φ ⇒ ε<0, r>1, R from *below*. Sec.4 wants below → need ε<0.
 </div>
 
-<footer>
-David Szabolcsi - Phi_t Protocol / Time Attraction v8.3 - ε closed form per Jordi Audet Palau - 2026<br>
-DOI 10.5281/zenodo.23137284 | Note DOI 10.5281/zenodo.22899435
-</footer>
+<div class="box">
+<h2 style="margin-top:0">Corrected Horndeski Ratio + ε</h2>
+<div class="box-green" style="margin:0">R = αM/αB = (1+r)/(1+2r), r = αM/αB = G4φ/(X G3x - G4φ), ε = X G3x/G4φ -2
+f_L cancels: r independent of screening. dR/dr<0, sign determines above/below 2/3.</div>
+<div style="margin-top:15px;display:flex;gap:15px;flex-wrap:wrap">
+<div style="flex:1;min-width:200px;background:#111827;padding:12px;border-radius:8px;text-align:center"><strong>p_L/ρ_crit</strong><br><span style="color:var(--green)">Constrained binned</span></div>
+<div style="flex:1;min-width:200px;background:#111827;padding:12px;border-radius:8px;text-align:center"><strong>203</strong><br>Mock Spots</div>
+<div style="flex:1;min-width:200px;background:#111827;padding:12px;border-radius:8px;text-align:center"><strong style="color:var(--green)">100%</strong><br>Testable</div>
+</div>
+</div>
+
+<div class="box box-blue">
+<h2 style="margin-top:0">Background Correction v8.3 - From Local to Background</h2>
+<strong style="color:var(--yellow)">The Problem in v8.2:</strong><br>
+ρ_M(a), G_eff background functions of time only in FLRW background energy density - galaxy halo code - but v8.2 tried to match ρ_L with p_L local cannot be mounted on to local approximation.<br><br>
+<strong style="color:var(--yellow)">Solution per book:</strong><br>
+Let ρ_L be *background* density: ρ_M(a) = ρ_0 + ...<br>
+Then ε_L becomes ε_L(a), c_T's are time functions, so must be<br>
+c_T(a) = f_0 G4(a)/... : to evaluated along background<br>
+f(a) = b(a)*f_L(a), M(a) = (a0(a))(M(a)/a0), viewed as<br>
+a_0(a) *derives* not fitted, no inside classes & α's etc. falsifiable, slope simply tow<br>
+Testable via hi_class: R(a) vs EUCLID and SKA (Sec. VI note is valid)
+</div>
+
+<div class="box">
+<h2 style="margin-top:0">Sec. 5 Revision - SPARC Note</h2>
+<em>Jordi's note:</em><br>
+SPARC = rotation curves + Spitzer photometry, <span style="background:#5a3a00;padding:2px 6px;border-radius:4px;color:var(--yellow)">no per-galaxy lensing</span> so f_L not available and f_L My cannot be formed from SPARC dataset<br>
+Abstract "Using 150 SPARC galaxies" vs Sec 5 "mock 150 galaxy analysis" — to be settled in 063<br>
+76%-to-95% accuracy framing — not defined for χ² fit — to be removed<br>
+Ratio is identity <span style="color:var(--blue)">within linear quasi-static reduction</span>. Rotation curves are collapsed non-linear screened — precisely what reduction sets aside, where background c_s have nothing to say<br>
+Replacement: hi_class binned R(a) route Sec. VI, testable<br>
+<div class="box-green" style="margin-top:12px">Old v8.2: 94.9% SPARC 150 → New v8.3: hi_class R(a) binned forecast for Euclid+SKA
+Ref: doi:10.5281/zenodo.22899435 Sec. VI & X</div>
+</div>
+
+<div class="small">
+David Szabolcsi - https://github.com/unbekanntdavid-glitch/Time-Attraction v8.3 - closed form per Jordi Audet Palau - 2026<br>
+DOI 10.5281/zenodo.23138388 | Note DOI 10.5281/zenodo.22899435 | CC BY 4.0<br><br>
+Tags: cosmology, dark-energy, dark-matter, Horndeski, hi_class, SPARC
+</div>
+
 </body>
 </html>
