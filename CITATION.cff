@@ -1,5 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
+type: software
 title: "Density-Dependent Coherence Integration - Time Attraction v12.1"
 version: 12.1.0
 doi: 10.5281/zenodo.23148414
@@ -10,4 +11,3 @@ authors:
     orcid: https://orcid.org/0009-0005-6300-074X
 license: CC-BY-NC-4.0
 repository-code: https://github.com/unbekanntdavid-glitch/Time-Attraction
-url: https://github.com/unbekanntdavid-glitch/Time-Attraction
