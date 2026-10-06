@@ -60,7 +60,17 @@ All densities in **kg/m³**, falsifiable:
 - **10 SPARC galaxies:** avg rho_tot = 2.47e-22 kg/m³ — with full log.
 - Blue elliptic core simulator (photo-based) + lab journal template.
 - Falsifiable predictions: DeltaT scaling with Phi_B and rho_eff.
+Time-Attraction - v12.1
+DOI: 10.5281/zenodo.23148414 CC BY-NC 4.0 Corrects coupling error to EFT-consistent additive rho_eff...
 
+Time-Attraction Law v8.3 FINAL (v11) SOLVES - UPDATED LICENSE
+DOI: 10.5281/zenodo.23138388 CC BY-NC 4.0 (unified) - Commercial requires permission
+Main DOI: 10.5281/zenodo.23138388
+Concept DOI: 10.5281/zenodo.22983682
+
+License: CC BY-NC 4.0 - Academic use with attribution, commercial requires permission for ALL versions v8.3 and v12.1
+
+Correction 2026-10-04 R=(1+r)/(1+2r)..
 ### Files in v8.1 (Zenodo)
 1. FINAL_SERIOUS.pdf (main paper)
 2. Derivation & Units
