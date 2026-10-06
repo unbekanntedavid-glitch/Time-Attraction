@@ -1,3 +1,19 @@
+# Time-Attraction Law - Unified Effective Density Framework v13.0 
+
+**DOI v13:** 10.5281/zenodo.23193655  
+**Concept DOI:** 10.5281/zenodo.22983682  
+**ORCID:** 0009-0005-6300-074X  
+**License:** CC BY-NC 4.0
+
+### v13.0 FINAL - Own derivation, corrected
+- `M^2=2*G4`
+- `alpha_M=2*phi_dot*G4_phi/(H*M^2)`
+- `alpha_B=2*phi_dot*[X*G3X-G4_phi]/(H*M^2)` [corrected full denominator]
+- `r(a)=G4_phi/(X*G3X-G4_phi)=1/(1+epsilon(a))`, `R(a)=(1+r)/(1+2r)`, `dR/dr<0`, Locus `R=2/3`
+- Background: `rho_L -> rho_m(a)=rho_m0*a^-3`
+- Additive: `Phi_t=0.6*EEG+0.4*HRV`, `rho_psi=Xi*eps0*Phi_t`, `rho_eff=sum M_i(R)+rho_psi`
+
+Falsifiable: Euclid/DESI R(a) 4x3 bins, hi_class 0.03% Planck, lab Delta f/f >1e-18
 # Time-Attraction - v12.1 
 DOI: 10.5281/zenodo.23148414
 CC BY-NC 4.0
