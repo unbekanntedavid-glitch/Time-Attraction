@@ -1,3 +1,7 @@
+# Time-Attraction - v12.1 
+DOI: 10.5281/zenodo.23148414
+CC BY-NC 4.0
+Corrects coupling error to EFT-consistent additive rho_eff(a)=sum rho_0 M_i(R)+rho_psi, with R=(1+r)/(1+2r), r=1/(1+epsilon)
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -65,7 +69,3 @@ All densities in **kg/m³**, falsifiable:
 5. Lab Simulator .html
 6. Lab Journal Template .csv
 7. README + Citations
-# Time-Attraction - v12.1 
-DOI: 10.5281/zenodo.23148414
-CC BY-NC 4.0
-Corrects coupling error to EFT-consistent additive rho_eff(a)=sum rho_0 M_i(R)+rho_psi, with R=(1+r)/(1+2r), r=1/(1+epsilon)
