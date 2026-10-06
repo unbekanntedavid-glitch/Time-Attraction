@@ -5,18 +5,17 @@ authors:
     - family-names: Szabolcsi
     given-names: David
     orcid: https://orcid.org/0009-0005-6300-074X
-title: "Phi_t Protocol - Time Attraction - v8.3 FINAL - Horndeski R 2/3 - 150 Galaxies - Lab Simulator"
-version: 8.3.0
-doi: 10.5281/zenodo.23138388
-date-released: 2026-10-05
+title: "Density-Dependent Coherence Integration - Time Attraction - v12.1 - EFT-consistent additive coupling"
+version: 12.1.0
+doi: 10.5281/zenodo.23148414
+date-released: 2026-10-06
 url: https://github.com/unbekanntdavid-glitch/Time-Attraction
 repository-code: https://github.com/unbekanntdavid-glitch/Time-Attraction
-abstract: "Corrected Horndeski ratio R=(1+r)/(1+2r) - parameter-free 2/3 at r=1 - R(a) shape from Bell-type framing 76-95% - 150 SPARC galaxies - no per-galaxy lensing - Unified Effective Density Framework v8.3 FINAL (v11)"
+abstract: "Corrected Horndeski ratio R=(1+r)/(1+2r), r=1/(1+epsilon), epsilon=X G3X/G4phi-2. Additive rho_eff=sum rho_0 M_i(R)+rho_psi. Falsifiable via Euclid/DESI hi_class 0.03% Planck + EEG/HRV + atomic clock."
+license: CC-BY-NC-4.0
 keywords:
     - Horndeski
     - phi_t-protocol
     - time-attraction
-    - SPARC
+    - EFT
     - modified-gravity
-    - Jordi-Audet-Palau
-    - Bell-framing
