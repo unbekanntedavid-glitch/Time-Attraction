@@ -1,13 +1,19 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite it as below."
-type: software
-title: "Density-Dependent Coherence Integration - Time Attraction v12.1"
-version: 12.1.0
-doi: 10.5281/zenodo.23148414
+message: "If you use this work, please cite it as below."
+title: "Time-Attraction Law - Unified Effective Density Framework v13.0 FINAL - Own derivation, corrected"
+version: 13.0.0
+doi: 10.5281/zenodo.23193655
 date-released: 2026-10-06
 authors:
-family-names: Szabolcsi
-given-names: David
-orcid: https://orcid.org/0009-0005-6300-074X
+family-names: "Szabolcsi"
+given-names: "David"
+orcid: "https://orcid.org/0009-0005-6300-074X"
 license: CC-BY-NC-4.0
-repository-code: https://github.com/unbekanntdavid-glitch/Time-Attraction
+repository-code: "https://github.com/unbekannntedavid-glitch/Time-Attraction"
+keywords:
+    - Time-Attraction Law
+    - Horndeski
+    - Effective Field Theory
+    - alpha_B corrected
+    - rho_psi additive
+M^2=2*G4, alpha_M=2*phi_dot*G4_phi/(H*M^2), alpha_B=2*phi_dot*[X*G3X-G4_phi]/(H*M^2) [corrected full denominator], r=G4_phi/(X*G3X-G4_phi), R=(1+r)/(1+2r), Locus epsilon=0<=>r=1<=>R=2/3, rho_m(a)=rho_m0*a^-3, rho_psi additive."
