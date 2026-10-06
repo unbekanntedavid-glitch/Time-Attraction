@@ -6,8 +6,8 @@ version: 12.1.0
 doi: 10.5281/zenodo.23148414
 date-released: 2026-10-06
 authors:
-    - family-names: Szabolcsi
-    given-names: David
-    orcid: https://orcid.org/0009-0005-6300-074X
+family-names: Szabolcsi
+given-names: David
+orcid: https://orcid.org/0009-0005-6300-074X
 license: CC-BY-NC-4.0
 repository-code: https://github.com/unbekanntdavid-glitch/Time-Attraction
