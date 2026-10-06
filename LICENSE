@@ -2,9 +2,9 @@ Creative Commons Attribution-NonCommercial 4.0 International License
 CC-BY-NC-4.0
 
 Copyright (c) 2026 David Szabolcsi
-Project: Time-Attraction - v8.3 FINAL (Phi_t Protocol) + v12.1
+Project: Time-Attraction - v13.0 FINAL Own derivation, corrected alpha_B full denominator /(H*M^2)
 Repository: https://github.com/unbekanntdavid-glitch/Time-Attraction
-DOI: https://doi.org/10.5281/zenodo.23148414
+DOI: https://doi.org/10.5281/zenodo.23193655
 Concept DOI: https://doi.org/10.5281/zenodo.22983682
 
 This work is licensed under the Creative Commons Attribution-NonCommercial 4.0
@@ -14,4 +14,4 @@ http://creativecommons.org/licenses/by-nc/4.0/
 Academic use: free with attribution to DOI + ORCID 0009-0005-6300-074X
 Commercial use: requires separate permission - contact author.
 
-Version: v8.3 FINAL - License updated to CC-BY-NC-4.0 unified with v12.1
+Version: v13.0 FINAL - Own derivation, corrected alpha_B, additive rho_psi - License CC-BY-NC-4.0
