@@ -14,15 +14,7 @@
 - Additive: `Phi_t=0.6*EEG+0.4*HRV`, `rho_psi=Xi*eps0*Phi_t`, `rho_eff=sum M_i(R)+rho_psi`
 
 Falsifiable: Euclid/DESI R(a) 4x3 bins, hi_class 0.03% Planck, lab Delta f/f >1e-18
-# Time-Attraction - v12.1 
-DOI: 10.5281/zenodo.23148414
-CC BY-NC 4.0
-Corrects coupling error to EFT-consistent additive rho_eff(a)=sum rho_0 M_i(R)+rho_psi, with R=(1+r)/(1+2r), r=1/(1+epsilon)
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-</head>
+
 <body style="font-family: Arial; max-width: 800px; margin: 40px auto; padding: 20px; line-height: 1.6;">
 <h1>Time-Attraction Law v8.3 FINAL (v11) SOLVES</h1>
 <p>
