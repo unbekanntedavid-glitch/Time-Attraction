@@ -1,3 +1,18 @@
+# Time-Attraction Law v15 (2026-10-07) - Complete Version with Explicit Constants
+
+**DOI v15:** 10.5281/zenodo.23220318 | **Concept DOI:** 10.5281/zenodo.23193571  
+**ORCID:** 0009-0005-6300-074X  
+**License:** CC BY-NC 4.0
+
+## v15.0 FINAL - Audit-ready, falsifiable
+Fixed constants: `C0=5`, `rho_c=1e-23 kg/m3`, `L0=1 kpc`
+`rho_eff = rho_local + rho_integrated` with `∫ rho(r')/|r-r'| dr'`
+Derivation: `Phi_t Protocol Sec V: R=(1+r)/(1+2r)`, `r=rho_eff/rho_c`, `dr/dr<0`, Locus `R=2/3`
+
+Validated: SPARC 175, median chi2_red ~1.2 - see `SPARC_reproduction.py`
+Falsifiable: Euclid/DESI R(a) 4x3 bins, hi_class 0.03% Planck, lab Delta f/f >1e-18
+
+Zenodo v15 is canonical. Previous: v14.0 23217189, v13.0 23193655
 # Time-Attraction Law v14.0 - Law Correcting Laws Edition
 ### Correcting Newton's and Hubble's Laws via Density-Dependent Time Coherence - Eliminating the Need for Dark Matter and Dark Energy
 
