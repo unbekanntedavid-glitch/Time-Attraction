@@ -1,19 +1,14 @@
-cff-version: 1.2.0
-message: "If you use this work, please cite it as below."
-title: "Time-Attraction Law - Unified Effective Density Framework v13.0 FINAL - Own derivation, corrected"
-version: 13.0.0
-doi: 10.5281/zenodo.23193655
-date-released: 2026-10-06
-authors:
-family-names: "Szabolcsi"
-given-names: "David"
-orcid: "https://orcid.org/0009-0005-6300-074X"
-license: CC-BY-NC-4.0
-repository-code: "https://github.com/unbekannntedavid-glitch/Time-Attraction"
-keywords:
-    - Time-Attraction Law
-    - Horndeski
-    - Effective Field Theory
-    - alpha_B corrected
-    - rho_psi additive
-M^2=2*G4, alpha_M=2*phi_dot*G4_phi/(H*M^2), alpha_B=2*phi_dot*[X*G3X-G4_phi]/(H*M^2) [corrected full denominator], r=G4_phi/(X*G3X-G4_phi), R=(1+r)/(1+2r), Locus epsilon=0<=>r=1<=>R=2/3, rho_m(a)=rho_m0*a^-3, rho_psi additive."
+Time-Attraction Law v16.0 FINAL (2026-10-08): Correcting Newton's and Hubble's Laws via Density-Dependent Time Coherence
+
+Fixes v15 audits: pair-symmetric q(x1,x2), conservative Ur(r), photometric proxy for SPARC, unified z(d)
+F = G m1 m2 / r^2 * C(rho), C=1+5*exp(-rho_eff/rho_c), rho_c=1e-23 kg/m3, L0=1 kpc, hz=0.2 kpc
+No dark matter, no dark energy.
+DOI: 10.5281/zenodo.23234825 Concept: 10.5281/zenodo.23234825 (new concept)
+Python: reproduce_NGC3198_v16.py
+
+Author: David Szabolcsi - Independent experimental researcher, Unterterzen, Switzerland
+Date: 2026-10-08
+DOI (v16): https://doi.org/10.5281/zenodo.23234825
+License: CC BY-NC 4.0
+GitHub: https://github.com/unbekanntdavid-glitch/Time-Attraction
+ORCID: https://orcid.org/0009-0005-6300-074X
