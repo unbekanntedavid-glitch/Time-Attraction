@@ -1,3 +1,22 @@
+# Time-Attraction Law v16.0 FINAL (2026-10-08) - Correcting Newton's and Hubble's Laws via Density-Dependent Time Coherence
+
+DOI v16: 10.5281/zenodo.23234825 | Concept DOI: 10.5281/zenodo.23234825
+ORCID: 0009-0005-6300-074X | License: CC BY-NC 4.0
+GitHub: https://github.com/unbekanntdavid-glitch/Time-Attraction
+
+## v16.0 FINAL - Fixes all 3 v15 audits
+
+Fixes v15 audits: 
+1. Mechanics: pair-symmetric functional q(x1,x2) with conservative potential Ur(r) = -A ∫ C(s)/s² ds, restoring F1=-F2
+2. SPARC: photometric density proxy rho=Sigma/(2 hz) instead of v_bar²/(G r hz), fixing 6160x mismatch at NGC3198
+3. DESI BAO: unified redshift z(d)=∫(1-Phi_t)dl/lambda0
+
+F = G m1 m2 / r² * C(rho), C=1+5*exp(-rho_eff/rho_c), rho_c=1e-23 kg/m3, L0=1 kpc, hz=0.2 kpc
+No dark matter, no dark energy.
+
+Python reproduction: reproduce_NGC3198_v16.py
+Full PDF: Time-Attraction_v16.0.pdf
+
 # Time-Attraction Law v15 (2026-10-07) - Complete Version with Explicit Constants
 
 **DOI v15:** 10.5281/zenodo.23220318 | **Concept DOI:** 10.5281/zenodo.23193571  
