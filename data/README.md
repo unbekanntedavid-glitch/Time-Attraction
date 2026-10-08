@@ -12,6 +12,8 @@ DOI (v16): https://doi.org/10.5281/zenodo.23234825
 License: CC BY-NC 4.0
 GitHub: https://github.com/unbekanntdavid-glitch/Time-Attraction
 ORCID: https://orcid.org/0009-0005-6300-074X
+
+
 # Time-Attraction Law v15: Correcting Newton's and Hubble's Laws via Density-Dependent Time Coherence
 
 [[DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23220318.svg)](https://doi.org/10.5281/zenodo.23220318)
