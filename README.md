@@ -1,10 +1,10 @@
-# Time-Attraction Law v16.0 FINAL (2026-10-08) - Correcting Newton's and Hubble's Laws via Density-Dependent Time Coherence
+# Time-Attraction Law v16.0 (2026-10-08) - Correcting Newton's and Hubble's Laws via Density-Dependent Time Coherence
 
 DOI v16: 10.5281/zenodo.23234825 | Concept DOI: 10.5281/zenodo.23234825
 ORCID: 0009-0005-6300-074X | License: CC BY-NC 4.0
 GitHub: https://github.com/unbekanntdavid-glitch/Time-Attraction
 
-## v16.0 FINAL - Fixes all 3 v15 audits
+## v16.0 - Fixes all 3 v15 audits
 
 Fixes v15 audits: 
 1. Mechanics: pair-symmetric functional q(x1,x2) with conservative potential Ur(r) = -A ∫ C(s)/s² ds, restoring F1=-F2
@@ -17,13 +17,13 @@ No dark matter, no dark energy.
 Python reproduction: reproduce_NGC3198_v16.py
 Full PDF: Time-Attraction_v16.0.pdf
 
-# Time-Attraction Law v15 (2026-10-07) - Complete Version with Explicit Constants
+# Time-Attraction Law v15 (2026-10-07) - Version with Explicit Constants
 
 **DOI v15:** 10.5281/zenodo.23220318 | **Concept DOI:** 10.5281/zenodo.23193571  
 **ORCID:** 0009-0005-6300-074X  
 **License:** CC BY-NC 4.0
 
-## v15.0 FINAL - Audit-ready, falsifiable
+## v15.0
 Fixed constants: `C0=5`, `rho_c=1e-23 kg/m3`, `L0=1 kpc`
 `rho_eff = rho_local + rho_integrated` with `∫ rho(r')/|r-r'| dr'`
 Derivation: `Phi_t Protocol Sec V: R=(1+r)/(1+2r)`, `r=rho_eff/rho_c`, `dr/dr<0`, Locus `R=2/3`
@@ -55,7 +55,7 @@ This work proposes a **law-correcting-law approach**. We introduce the **Time-At
 
 `rho_psi = Xi * epsilon0 * Phi_t`  - Time-charge density
 
-### Corrections Proposed - v14.0 FINAL
+### Corrections Proposed - v14.0
 
 This is the **Law Correcting Laws Edition**. No new particles, only a correction of existing laws by a more fundamental time law.
 
