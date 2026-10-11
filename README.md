@@ -2,7 +2,7 @@
 
 DOI v16: 10.5281/zenodo.23234825 | Concept DOI: 10.5281/zenodo.23234825
 ORCID: 0009-0005-6300-074X | License: CC BY-NC 4.0
-GitHub: https://github.com/unbekanntdavid-glitch/Time-Attraction
+GitHub: https://unbekanntedavid-glitch.github.io/Time-Attraction/
 
 ## v16.0 - Fixes all 3 v15 audits
 
