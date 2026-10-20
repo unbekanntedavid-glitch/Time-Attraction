@@ -18,9 +18,75 @@ import csv, math, statistics, sys, json, hashlib
 from pathlib import Path
 import importlib.util
 
-ROOT = Path(__file__).resolve().parent
-spec = importlib.util.spec_from_file_location("runner", ROOT / "sparc_full_runner.py")
+SCRIPT_DIR = Path(__file__).resolve().parent
+
+def _candidate_bases():
+    """Script dir, then <script dir>/v17_package/github, then <cwd>/v17_package/github."""
+    raw = [
+        SCRIPT_DIR,
+        SCRIPT_DIR / "v17_package" / "github",
+        Path.cwd() / "v17_package" / "github",
+    ]
+    bases, seen = [], set()
+    for base in raw:
+        resolved = base.resolve()
+        if resolved in seen:
+            continue
+        seen.add(resolved)
+        bases.append(resolved)
+    return bases
+
+def _resolve_inputs():
+    bases = _candidate_bases()
+    runner = None
+    for base in bases:
+        candidate = base / "sparc_full_runner.py"
+        if candidate.is_file():
+            runner = candidate
+            break
+    if runner is None:
+        searched = "\n  ".join(str(b / "sparc_full_runner.py") for b in bases)
+        sys.exit(f"ERROR: sparc_full_runner.py not found. Searched:\n  {searched}")
+    data_root = None
+    for base in bases:
+        data = base / "data"
+        if (data / "blind_123.txt").is_file() and (data / "Rotmod_LTG.zip").is_file():
+            data_root = base
+            break
+    if data_root is None:
+        searched = "\n  ".join(str(b / "data") for b in bases)
+        sys.exit(
+            "ERROR: data directory not found. sparc_full_runner.py expects "
+            "data/blind_123.txt and data/Rotmod_LTG.zip. Searched:\n  " + searched
+        )
+    return runner, data_root
+
+def _resolve_points_vbar(data_root, runner_path):
+    """Baseline the gamma=0 check reads. The runner writes output/points_vbar.csv;
+    the hash-locked copy in this repo is run_output/points_vbar.csv."""
+    candidates, seen = [], set()
+    for base in (data_root, runner_path.parent):
+        for rel in (("output", "points_vbar.csv"), ("run_output", "points_vbar.csv")):
+            path = base.joinpath(*rel)
+            if path in seen:
+                continue
+            seen.add(path)
+            candidates.append(path)
+    for path in candidates:
+        if path.is_file():
+            return path
+    searched = "\n  ".join(str(p) for p in candidates)
+    sys.exit(f"ERROR: points_vbar.csv not found. Searched:\n  {searched}")
+
+RUNNER_PATH, DATA_ROOT = _resolve_inputs()
+spec = importlib.util.spec_from_file_location("runner", RUNNER_PATH)
 R = importlib.util.module_from_spec(spec); spec.loader.exec_module(R)
+# Runner reads blind_123.txt and Rotmod_LTG.zip from ROOT / "data".
+R.ROOT = DATA_ROOT
+R.DATA = DATA_ROOT / "data"
+R.ROTMOD = R.DATA / "rotmod"
+R.BLIND_FILE = R.DATA / "blind_123.txt"
+R.OUTPUT = DATA_ROOT / "output"
 
 G = 6.67430e-11; C = 299792458.0; C2 = C * C
 MSUN = 1.98847e30; PC = 3.085677581e16; KPC = 1e3 * PC; MPC = 1e6 * PC
@@ -104,13 +170,21 @@ RHO_PRIMARY = lambda Rk, Vbar, Vb, sbd, sbb: rho_diskbulge(Rk, Vb, sbd, sbb)
 RHO_ENC = lambda Rk, Vbar, Vb, sbd, sbb: rho_enclosed(Rk, Vbar)
 
 def main():
+    vbar_csv = _resolve_points_vbar(DATA_ROOT, RUNNER_PATH)
+    out = SCRIPT_DIR / "output_7th"
+    print(f"runner: {RUNNER_PATH}")
+    print(f"data: {R.DATA}")
+    print(f"blind_123.txt: {R.BLIND_FILE}")
+    print(f"Rotmod_LTG.zip: {R.DATA / 'Rotmod_LTG.zip'}")
+    print(f"points_vbar.csv: {vbar_csv}")
+    print(f"output: {out}")
     R.verify_rotmod_archive()            # hash checks + extraction + 2596-point check
     blind = R.load_blind()
-    out = ROOT / "output_7th"; out.mkdir(exist_ok=True)
+    out.mkdir(exist_ok=True)
     res = {}
     # sanity: gamma=0 must reproduce points_vbar.csv Vpred exactly
     pts0, _ = run("check_gamma0", 0.0, "forward", RHO_PRIMARY, blind, out, write=False)
-    ref = list(csv.DictReader(open(ROOT / "output" / "points_vbar.csv")))
+    ref = list(csv.DictReader(open(vbar_csv)))
     assert len(ref) == len(pts0) == 2596 or True
     same = all(str(p["Vpred"]) == r["Vpred"] and p["galaxy"] == r["galaxy"] for p, r in zip(pts0, ref)) and len(ref) == len(pts0)
     print(f"gamma=0 reproduces points_vbar.csv Vpred: {same} (N={len(pts0)})")
