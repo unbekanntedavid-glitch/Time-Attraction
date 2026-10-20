@@ -185,9 +185,10 @@ def main():
     # sanity: gamma=0 must reproduce points_vbar.csv Vpred exactly
     pts0, _ = run("check_gamma0", 0.0, "forward", RHO_PRIMARY, blind, out, write=False)
     ref = list(csv.DictReader(open(vbar_csv)))
-    assert len(ref) == len(pts0) == 2596 or True
+    assert len(ref) == len(pts0) == 2596, f"point count mismatch: ref={len(ref)} pts0={len(pts0)} (expected 2596)"
     same = all(str(p["Vpred"]) == r["Vpred"] and p["galaxy"] == r["galaxy"] for p, r in zip(pts0, ref)) and len(ref) == len(pts0)
     print(f"gamma=0 reproduces points_vbar.csv Vpred: {same} (N={len(pts0)})")
+    if not same: sys.exit("ERROR: gamma=0 run does not reproduce points_vbar.csv")
     res["gamma0_check"] = same
 
     # rho statistics (primary and alternative proxies)
