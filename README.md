@@ -1,7 +1,7 @@
 # Time-Attraction Law v17.0 (2026-10-19) - SPARC Baryonic Baselines Locked Blind Audit
 
 DOI v17: 10.5281/zenodo.23479940 | Parent: 10.5281/zenodo.22983681
-DOI 7th model (independent verification): 10.5281/zenodo.23497128
+DOI V19 – 7th model (independent verification): 10.5281/zenodo.23497128
 ORCID: 0009-0005-6300-074X | License: CC BY-NC 4.0
 GitHub: https://unbekanntedavid-glitch.github.io/Time-Attraction/
 
