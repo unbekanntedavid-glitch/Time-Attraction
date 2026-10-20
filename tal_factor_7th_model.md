@@ -159,7 +159,7 @@ Work folder: `/workspace/artifacts/tal_7th_model_work/`. Logs: `run_log.txt`, `c
 
 | File | SHA256 |
 |---|---|
-| `tal_7th_model.py` | `4a2796b259d759e355feb143d044fdf2bf9de691b1bd07f36cf9e68aea7a85e8` |
+| `tal_7th_model.py` | `73962aed3380230f91c898db2d1876cb7c4984c4fe01523bdcf6ef1727f572ef` |
 | `compare_7th.py` | `af1c9501e775a724b60ad228753d164bacd71d4fdb3fc71eff9df095490882d7` |
 | `arith_checks.py` | `c7de8b01f42a03f3659b4419ead7feb3172adc2a538040773b914f16c0bee7aa` |
 | `sparc_full_runner.py` (unmodified copy) | `eb40036842162dc9a42216bd7a4d35c7f2ce8addcf7e3ed8ffd3626427b22313` |
