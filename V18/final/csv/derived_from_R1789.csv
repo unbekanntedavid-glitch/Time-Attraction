@@ -1,0 +1,8 @@
+mennyiség,érték,egység
+huzalhossz/tekercs a mért menetátmérőből (N·π·D),1833,m
+R20 a mért geometriából (ρ IEC),1788,Ω
+huzalhossz R = 1789 Ω-ból (ρ IEC),1834,m
+menetátmérő R-ből,0.29184,m
+24 V / 1789 Ω,13.42,mA
+14 mA × 1789 Ω,25.05,V
+"Cu tömeg, 8 tekercs (IEC 8890 kg/m³)",2.3035,kg
