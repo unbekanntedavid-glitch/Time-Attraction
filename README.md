@@ -23,6 +23,7 @@ Előző verzió: V19 – 7th model, DOI 10.5281/zenodo.23497128.
   **nem** a bíráló eredeti fájlja, mert a bíráló `check_revision3.py` szkriptje nem áll rendelkezésre).
 - A menetátmérő **mért** érték: 291.7 mm (tolómérő, 0.02 mm felbontás, 5 egymást követő leolvasás, mind 291.7 mm;
   2025-11-13, mérte: Szabolcsi Dávid) — lásd a jelentés 1.2 pontját (mérési jegyzőkönyv). A 300 mm a tekercstest pereme (külső méret).
+- [`V18/manuscript/`](V18/manuscript/) — angol nyelvű V20 kézirat (Foundations of Physics benyújtási változat): `tal_v20_fop.pdf` és a LaTeX-forrást, ábrákat és szkriptet tartalmazó `tal_v20_fop_manuscript.zip`. Feltételes tervezési előrejelzés, nem TAL-kimutatás. Valódi SPARC-eredményként csak a 123 galaxisos vak részminta szerepel benne.
 - NIST SP 1065 PDF nem része a csomagnak (sem a Zenodo V20 ZIP-ben, sem a `V18/final`-ban nem szerepel).
 - Változások a V19 óta: [`CHANGELOG.md`](CHANGELOG.md).
 
@@ -38,6 +39,8 @@ Előző verzió: V19 – 7th model, DOI 10.5281/zenodo.23497128.
 | `V18/final/report_hu.pdf` | `c4225b1917b493db03e8733228dd5337a010fa5bbb3d7894e8bd5a7b5fedae81` |
 | `V18/zenodo_v20/final_report (3).zip` | `160981d3adb435b4fa719ca1a9d9a04d4e889a27f9d4c7bb0381e5c057ad2ea8` |
 | `V18/zenodo_v20/report_hu (3).pdf` | `544567958646b397e77036ade822da75bdf2f79b4dd18235bcff6d5ca14ab20a` |
+| [`V18/manuscript/tal_v20_fop.pdf`](V18/manuscript/tal_v20_fop.pdf) | `f5311f8148ff0a0b587354548face6b28fa9e808fdfafcf2b38d6bdf26b90666` |
+| `V18/manuscript/tal_v20_fop_manuscript.zip` | `de94f87bf2d1b1243d95967b8b99f027dcaef1f306fcc0430bb2947a0807e1b1` |
 
 Ellenőrzés: `cd V18 && sha256sum -c SHA256SUMS_V18.txt`, `cd V18/zenodo_v20 && sha256sum -c ../SHA256SUMS_ZENODO_V20.txt`,
 `cd V18/final && sha256sum -c SHA256SUMS.txt`.

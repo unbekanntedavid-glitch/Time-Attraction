@@ -38,6 +38,12 @@ bájtra azonosak a V20 csomagéval.
   2.17597607 J/A², illesztési hiba 0.00141340 J/A² (a belső érték 0.0649 %-a).
 - **§5 első pontja:** a −1.202·10⁻⁴⁸ az „izolált, polaritásra páros tekercs-B² tag” számított differenciális TAL-jele.
 
+### V20 kézirat (angol, Foundations of Physics)
+
+- Hozzáadva: `V18/manuscript/tal_v20_fop.pdf` és `V18/manuscript/tal_v20_fop_manuscript.zip` (LaTeX-forrás, ábrák, szkript).
+- A kézirat tartalmazza a revision3 review két szövegcseréjét (a távoli nulla mintaszórásról szóló megjegyzést és a hőkontroll-mondatot), és hivatkozik a `revision3_checks.json`-ra.
+- A Zenodo-feltöltést a szerző maga végzi; ez a commit a Zenodóhoz nem nyúl.
+
 ### Ellenőrzések
 - `V18/revision3_checks.json`: a szerző pipeline-ja generálta 2026-10-21-én (`V18/make_revision3_checks.py`), nem a bíráló
   eredeti fájlja (a bíráló `check_revision3.py` szkriptje nem áll rendelkezésre). Tartalma: 18/18 SHA-256 egyezés a
