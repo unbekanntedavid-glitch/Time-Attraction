@@ -1,12 +1,12 @@
 cff-version: 1.2.0
 message: "If you use this work, please cite it using the metadata below."
-title: "Time Attraction Law V20 — audited release with independent third-round review"
-version: "V20 (Zenodo) / V18 (GitHub)"
-date-released: 2026-10-21
-doi: 10.5281/zenodo.23540741
+title: "Time Attraction Law V21 — final academy-verified package"
+version: "V21 (Zenodo) / V19 (GitHub)"
+date-released: 2026-10-23
+doi: 10.5281/zenodo.23602501
 license: CC-BY-NC-4.0
 repository-code: "https://github.com/unbekanntedavid-glitch/Time-Attraction"
-url: "https://doi.org/10.5281/zenodo.23540741"
+url: "https://doi.org/10.5281/zenodo.23602501"
 authors:
   - family-names: Szabolcsi
     given-names: David
@@ -14,8 +14,11 @@ authors:
     orcid: "https://orcid.org/0009-0005-6300-074X"
 identifiers:
   - type: doi
+    value: 10.5281/zenodo.23602501
+    description: "Zenodo V21 (= GitHub V19)"
+  - type: doi
     value: 10.5281/zenodo.23540741
-    description: "Zenodo V20 (= GitHub V18)"
+    description: "Previous version: Zenodo V20 (= GitHub V18)"
   - type: doi
     value: 10.5281/zenodo.23497128
     description: "Previous version: V19 – 7th model"

@@ -1,3 +1,22 @@
+## GitHub V19 csomag (= Zenodo V21, DOI 10.5281/zenodo.23602501)
+
+**Ez a GitHub V19-es csomag.** GitHub V19 = Zenodo V21: „Time Attraction Law V21 — final academy-verified package” (2026-10-23), DOI: https://doi.org/10.5281/zenodo.23602501 ·
+Licenc: CC BY-NC 4.0 · Szerző: David Szabolcsi (ORCID 0009-0005-6300-074X)
+
+Előző verzió: Zenodo V20 = GitHub V18, DOI 10.5281/zenodo.23540741.
+
+### Tartalom ([`V21/`](V21/))
+
+Time Attraction neutroncsillag-csomag: 33 feltételes TOV-egyensúlyi sorozat (SLy, APR4, H4). Nincs detektálási állítás.
+
+- [`V21/`](V21/) — a repóban a csomag 20 kicsomagolt fájlja, köztük `SHA256SUMS.txt` (19 bejegyzés).
+- A csomag ZIP SHA-256: `dc1768aa8148fe989d142256ed8c27518042ed6fecf09b4cbfd0dd68e43de56d`.
+- A Zenodo-fájlok MD5 szerint egyeznek: `ns_tal_V21_2026-10-23 (3).zip` (MD5 `dbc85c7b5f360271e6a34c7d3a093d35`, bájtra azonos a `V21/` csomaggal) és `note_HU_EN (3).md` (MD5 `87c92416916eee6db52f818e9bea548a`, azonos a `V21/note_HU_EN.md` fájllal).
+
+Ellenőrzés: `cd V21 && sha256sum -c SHA256SUMS.txt`.
+
+---
+
 ## GitHub V18 csomag (= Zenodo V20, DOI 10.5281/zenodo.23540741)
 
 **Ez a GitHub V18-as csomag.** GitHub V18 = Zenodo V20: „Time Attraction Law V20 — audited release with independent
