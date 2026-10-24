@@ -47,6 +47,10 @@ Licenc: CC BY-NC 4.0 · Szerző: David Szabolcsi (ORCID 0009-0005-6300-074X)
 
 Előző verzió: V19 – 7th model, DOI 10.5281/zenodo.23497128.
 
+A csomag most közvetlenül elérhető mind [`V20/`](V20/) alatt, mind [`V18/`](V18/) alatt. A `V20/` a Zenodo V20 felső szintű könyvtára (DOI 10.5281/zenodo.23540741), és tartalma azonos a GitHub `V18/` csomagéval.
+
+The package is now directly accessible both under [`V20/`](V20/) and [`V18/`](V18/).
+
 ### Tartalom (`V18/`)
 
 - [`V18/zenodo_v20/`](V18/zenodo_v20/) — a Zenodo V20 rekord négy fájlja, változatlanul (MD5 a Zenodo API alapján ellenőrizve):
