@@ -1,5 +1,13 @@
 # Changelog
 
+## V22 Book Edition (Zenodo V22) — 2026-10-24
+
+Zenodo V22 Book Edition: [10.5281/zenodo.23604423](https://doi.org/10.5281/zenodo.23604423)  
+Previous version: Zenodo V21 (= GitHub V19/V21, [10.5281/zenodo.23602501](https://doi.org/10.5281/zenodo.23602501)).
+
+- Added [`V22_Book/`](V22_Book/): 15-page, 12-chapter (+ 2-page Round-3 technical reproduction audit appendix) research monograph synthesizing Versions 1–21 of the Time Attraction Law in English (`tal_book_EN_2026-10-24.pdf` & `.tex`, primary, byte-identical to Zenodo record `23604423`), Hungarian (`tal_book_HU_2026-10-24.pdf` & `.tex`, byte-identical to Zenodo record `23604423`), and German (`tal_book_DE_2026-10-24.pdf` & `.tex`), together with `generate_figures.py`, 12 figures in `figures/`, and `SHA256SUMS.txt` (21 verified entries).
+- Updated `README.md` and `CITATION.cff` with DOI `10.5281/zenodo.23604423`.
+
 ## V18 (GitHub) — 2026-10-21
 
 GitHub V18 = Zenodo V20 (10.5281/zenodo.23540741)

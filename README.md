@@ -1,3 +1,25 @@
+## V22 Book Edition — Research Monograph (Zenodo V22, DOI 10.5281/zenodo.23604423)
+
+**Time Attraction Law — V22 Book Edition: Monograph (15 pages, 12 chapters + Appendix revision3)** (2026-10-24)  
+**DOI:** [https://doi.org/10.5281/zenodo.23604423](https://doi.org/10.5281/zenodo.23604423) · **License:** CC BY-NC 4.0 · **Author:** David Szabolcsi (ORCID [0009-0005-6300-074X](https://orcid.org/0009-0005-6300-074X))
+
+Previous version: Zenodo V21 (= GitHub V19/V21), DOI [10.5281/zenodo.23602501](https://doi.org/10.5281/zenodo.23602501).
+
+### Contents ([`V22_Book/`](V22_Book/))
+
+A 15-page, 12-chapter (+ 2-page Round-3 AI-assisted technical reproduction audit appendix) research monograph synthesizing the Time Attraction Law across Versions 1 through 21: density-modulated time flow, the $C$ coupling constant ($C = 4\pi G/c^2$), positive-definite 3D spherical top-hat smoothing $f_L(\mathbf{x}) = \exp(-\gamma_L \bar{\rho}_L(\mathbf{x}))$, 175 SPARC rotation curves (155 processed, 123 blind validation), multi-source H.E.S.S. gamma-ray timing, 33 neutron-star TOV sequences (769 equilibrium stars including 33 causal endpoints), radial pulsation operators, conditional Sirius B & NICER tests, the movable granite clock chamber and 8-coil ($\varnothing 300\,\text{mm}$ flange) magnetic energetics laboratory program, and open tasks (a)–(d) (covariant action closure task `50aa2db0`). No detection claim is made.
+
+- [`V22_Book/tal_book_EN_2026-10-24.pdf`](V22_Book/tal_book_EN_2026-10-24.pdf) — **Primary 15-page English Research Monograph** (SHA-256: `7e36bcc669840d9165c2d857b9851885408f370a56e2c310eb41ad175f38873a`, MD5: `8af3aac2ee04538dd40b6907f8bcc8c0`, byte-identical to `tal_book_EN_2026-10-24 (1).pdf` on Zenodo record `23604423`).
+- [`V22_Book/tal_book_EN_2026-10-24.tex`](V22_Book/tal_book_EN_2026-10-24.tex) — English LaTeX source (`0d273486120cf22247183634427f22c9e6c7a4682dfafc946290fc15d1c149e4`).
+- [`V22_Book/tal_book_HU_2026-10-24.pdf`](V22_Book/tal_book_HU_2026-10-24.pdf) & [`.tex`](V22_Book/tal_book_HU_2026-10-24.tex) — 15-page Hungarian Monograph (SHA-256: `cf18bef5718ba995471be8c7e57505524710f5091a9037d5ee1163ce48c371fc`, MD5: `ae47aaa9b2a25f6e252ff01cc9c3a0e8`, byte-identical to `tal_book_HU_2026-10-24.pdf` on Zenodo record `23604423`).
+- [`V22_Book/tal_book_DE_2026-10-24.pdf`](V22_Book/tal_book_DE_2026-10-24.pdf) & [`.tex`](V22_Book/tal_book_DE_2026-10-24.tex) — 15-page German Monograph (SHA-256: `9474f16f08f742cfcc3e9c28db5a92e061198f757271abef3e82e775ad5520b8`).
+- [`V22_Book/figures/`](V22_Book/figures/) & [`V22_Book/generate_figures.py`](V22_Book/generate_figures.py) — Reproducible figure generation script and 12 figures (`EN`, `HU`, `DE`).
+- [`V22_Book/SHA256SUMS.txt`](V22_Book/SHA256SUMS.txt) — SHA-256 manifest for all 21 files in `V22_Book/`.
+
+Verification: `cd V22_Book && sha256sum -c SHA256SUMS.txt`.
+
+---
+
 ## GitHub V19 csomag (= Zenodo V21, DOI 10.5281/zenodo.23602501)
 
 **Ez a GitHub V19-es csomag.** GitHub V19 = Zenodo V21: „Time Attraction Law V21 — final academy-verified package” (2026-10-23), DOI: https://doi.org/10.5281/zenodo.23602501 ·
