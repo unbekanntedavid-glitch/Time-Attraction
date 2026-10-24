@@ -92,6 +92,26 @@ Ellenőrzés: `cd V18 && sha256sum -c SHA256SUMS_V18.txt`, `cd V18/zenodo_v20 &&
 
 ---
 
+## V19 csomag — 7. modell (Zenodo V19, DOI 10.5281/zenodo.23497128)
+
+**Zenodo V19 — Time-Attraction Law Seventh Model Independent Verification** (2026-10-20)  
+**DOI:** [https://doi.org/10.5281/zenodo.23497128](https://doi.org/10.5281/zenodo.23497128) · **License:** CC BY-NC 4.0 · **Author:** David Szabolcsi (ORCID [0009-0005-6300-074X](https://orcid.org/0009-0005-6300-074X))
+
+A csomag közvetlenül elérhető a [`V19/`](V19/) könyvtárban. A korábbi gyökérbeli másolatok változatlanul a helyükön maradnak: [`tal_factor_7th_model.md`](tal_factor_7th_model.md), [`tal_factor_7th_model.py`](tal_factor_7th_model.py), [`hetedik_modell_kimenet/`](hetedik_modell_kimenet/).
+
+The package is directly accessible under [`V19/`](V19/). The original root copies stay in place: [`tal_factor_7th_model.md`](tal_factor_7th_model.md), [`tal_factor_7th_model.py`](tal_factor_7th_model.py), and [`hetedik_modell_kimenet/`](hetedik_modell_kimenet/).
+
+### Tartalom ([`V19/`](V19/))
+
+- [`V19/tal_factor_7th_model.md`](V19/tal_factor_7th_model.md) — a 7. modell leírása / seventh-model description
+- [`V19/tal_factor_7th_model.py`](V19/tal_factor_7th_model.py) — a 7. modell számítása / seventh-model calculation
+- [`V19/hetedik_modell_kimenet/`](V19/hetedik_modell_kimenet/) — 41 CSV/JSON kimeneti fájl / 41 CSV/JSON output files
+- [`V19/SHA256SUMS.txt`](V19/SHA256SUMS.txt) — SHA-256 lista, 44 bejegyzés / 44 entries
+
+Ellenőrzés / verification: `cd V19 && sha256sum -c SHA256SUMS.txt`.
+
+---
+
 # Time-Attraction Law v17.0 (2026-10-19) - SPARC Baryonic Baselines Locked Blind Audit
 
 DOI v17: 10.5281/zenodo.23479940 | Parent: 10.5281/zenodo.22983681
