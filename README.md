@@ -1,7 +1,7 @@
-## V23 — Covariant Action Candidates and Nonlocal Static Consistency Tests (Task 50aa2db0)
+## V23 — Covariant Action Candidates and Nonlocal Static Consistency Tests (Zenodo V23, DOI 10.5281/zenodo.23639084)
 
 **Time Attraction Law — V23: Covariant Action Candidates and Nonlocal Static Consistency Tests (Task 50aa2db0)** (2026-10-25)  
-**License:** CC BY-NC 4.0 · **Author:** David Szabolcsi (ORCID [0009-0005-6300-074X](https://orcid.org/0009-0005-6300-074X))
+**DOI:** [https://doi.org/10.5281/zenodo.23639084](https://doi.org/10.5281/zenodo.23639084) · **License:** CC BY-NC 4.0 · **Author:** David Szabolcsi (ORCID [0009-0005-6300-074X](https://orcid.org/0009-0005-6300-074X))
 
 Previous version: V22 Book Edition (Zenodo V22, DOI [10.5281/zenodo.23604423](https://doi.org/10.5281/zenodo.23604423)).
 

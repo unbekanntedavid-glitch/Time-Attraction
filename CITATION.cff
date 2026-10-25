@@ -1,12 +1,12 @@
 cff-version: 1.2.0
 message: "If you use this work, please cite it using the metadata below."
-title: "Time Attraction Law - V22 Book Edition: Monograph (15 pages, 12 chapters + Appendix revision3) - C = 4πG/c² - line-averaged time attraction"
-version: "V22 Book Edition (Zenodo V22)"
-date-released: 2026-10-24
-doi: 10.5281/zenodo.23604423
+title: "Time Attraction Law V23: Covariant Action Candidates and Nonlocal Static Consistency Tests for Neutron-Star Sensitivity Analysis (Bilingual EN/HU Edition & Code Package)"
+version: "V23 (Zenodo V23)"
+date-released: 2026-10-25
+doi: 10.5281/zenodo.23639084
 license: CC-BY-NC-4.0
 repository-code: "https://github.com/unbekanntedavid-glitch/Time-Attraction"
-url: "https://doi.org/10.5281/zenodo.23604423"
+url: "https://doi.org/10.5281/zenodo.23639084"
 authors:
   - family-names: Szabolcsi
     given-names: David
@@ -14,8 +14,11 @@ authors:
     orcid: "https://orcid.org/0009-0005-6300-074X"
 identifiers:
   - type: doi
+    value: 10.5281/zenodo.23639084
+    description: "Zenodo V23: Covariant Action Candidates and Nonlocal Static Consistency Tests (Task 50aa2db0)"
+  - type: doi
     value: 10.5281/zenodo.23604423
-    description: "Zenodo V22 Book Edition (15-page Research Monograph)"
+    description: "Previous version: Zenodo V22 Book Edition (15-page Research Monograph)"
   - type: doi
     value: 10.5281/zenodo.23602501
     description: "Previous version: Zenodo V21 (= GitHub V19/V21)"

@@ -1,10 +1,12 @@
 # Changelog
 
-## V23 (GitHub) — 2026-10-25
+## V23 (Zenodo V23) — 2026-10-25
 
+Zenodo V23: [10.5281/zenodo.23639084](https://doi.org/10.5281/zenodo.23639084)  
 Previous version: V22 Book Edition (Zenodo V22, [10.5281/zenodo.23604423](https://doi.org/10.5281/zenodo.23604423)).
 
 - Added [`V23/`](V23/): Task `50aa2db0` bilingual (EN/HU) 4-page technical reports (`tal_covariant_closure_50aa2db0_EN_2026-10-24.pdf`, `tal_covariant_closure_50aa2db0_HU_2026-10-24.pdf` and `.tex` sources), standalone archive (`tal_covariant_closure_50aa2db0_2026-10-24.zip`, SHA-256 `807082095cffb35433fbd720f5e04c0e4770723c4111fc3f3ce9289c1f7f4508`), Python solvers (`covariant_closure_50aa2db0.py` and bundled V21 modules), 4 CSV/JSON data tables, 3 figures, and `SHA256SUMS.txt` (17 verified entries).
+- Updated `README.md`, `CITATION.cff`, and `CHANGELOG.md` with DOI `10.5281/zenodo.23639084`.
 
 ## V22 Book Edition (Zenodo V22) — 2026-10-24
 
