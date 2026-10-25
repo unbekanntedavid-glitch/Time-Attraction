@@ -1,3 +1,25 @@
+## V23 — Covariant Action Candidates and Nonlocal Static Consistency Tests (Task 50aa2db0)
+
+**Time Attraction Law — V23: Covariant Action Candidates and Nonlocal Static Consistency Tests (Task 50aa2db0)** (2026-10-25)  
+**License:** CC BY-NC 4.0 · **Author:** David Szabolcsi (ORCID [0009-0005-6300-074X](https://orcid.org/0009-0005-6300-074X))
+
+Previous version: V22 Book Edition (Zenodo V22, DOI [10.5281/zenodo.23604423](https://doi.org/10.5281/zenodo.23604423)).
+
+### Contents ([`V23/`](V23/))
+
+Bilingual (English and Hungarian) 4-page technical reports, standalone Python reproduction code, CSV/JSON data tables, and figures for Task `50aa2db0`: nonlocal multiplier action vs. flat-kernel bilateral reciprocal fixed-point (`bilateral_eom`) and lapse-weighted (`bilateral_lapse_weighted`) equilibria, local Yukawa scalar-tensor action-derived curved-space (`yukawa_action_el`) vs. flat-space phenomenological (`yukawa_flat_phenom_Tphi`) models, three-tier Bianchi/Noether conservation residuals, static nonlocal tangent model and $W\to 4W$ inertia control on the V21 background, and H0 vs. disformal H1 ($	ilde{g}_{\mu\nu} = g_{\mu\nu} + c^{-2}(1 - f_L^2)u_\mu u_\nu$) clock-coupling comparisons (including V20 granite IN$-$OUT differential shifts and Sirius B common effective-mass proxy).
+
+- [`V23/tal_covariant_closure_50aa2db0_EN_2026-10-24.pdf`](V23/tal_covariant_closure_50aa2db0_EN_2026-10-24.pdf) & [`.tex`](V23/tal_covariant_closure_50aa2db0_EN_2026-10-24.tex) — 4-page English technical report (PDF SHA-256: `3dd99b5783e50e7f8f593b23e5f19cbfb78e38bb367a5e0fe174019df90898bf`).
+- [`V23/tal_covariant_closure_50aa2db0_HU_2026-10-24.pdf`](V23/tal_covariant_closure_50aa2db0_HU_2026-10-24.pdf) & [`.tex`](V23/tal_covariant_closure_50aa2db0_HU_2026-10-24.tex) — 4-page Hungarian technical report (PDF SHA-256: `4a415b7cc490f54371690297fad3ab9e0a4328c4da88beb7225da0beed14e7b3`).
+- [`V23/tal_covariant_closure_50aa2db0_2026-10-24.zip`](V23/tal_covariant_closure_50aa2db0_2026-10-24.zip) — Standalone reproducible archive containing all 18 files (ZIP SHA-256: `807082095cffb35433fbd720f5e04c0e4770723c4111fc3f3ce9289c1f7f4508`).
+- [`V23/covariant_closure_50aa2db0.py`](V23/covariant_closure_50aa2db0.py), [`V23/stellar_tal_v21.py`](V23/stellar_tal_v21.py), [`V23/tal_profiles.py`](V23/tal_profiles.py), [`V23/radial_modes.py`](V23/radial_modes.py) — Self-contained symbolic and numerical solvers.
+- [`V23/closure_tov_comparison.csv`](V23/closure_tov_comparison.csv), [`V23/coupled_stability_results.csv`](V23/coupled_stability_results.csv), [`V23/clock_coupling_H0_H1.csv`](V23/clock_coupling_H0_H1.csv), [`V23/conservation_Residuals.json`](V23/conservation_Residuals.json) — Numerical output tables and symbolic/variational checks.
+- [`V23/SHA256SUMS.txt`](V23/SHA256SUMS.txt) — SHA-256 manifest for the 17 unpacked files in `V23/`.
+
+Verification: `cd V23 && sha256sum -c SHA256SUMS.txt`.
+
+---
+
 ## V22 Book Edition — Research Monograph (Zenodo V22, DOI 10.5281/zenodo.23604423)
 
 **Time Attraction Law — V22 Book Edition: Monograph (15 pages, 12 chapters + Appendix revision3)** (2026-10-24)  

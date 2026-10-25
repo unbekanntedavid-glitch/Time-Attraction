@@ -1,0 +1,352 @@
+{
+  "symbolic_identities_residual": 0,
+  "algebraic_X_sector_quadrature_residual": {
+    "SLy_mass_L10km": {
+      "denominator": "|rho_X * nu'|",
+      "max_rel": 4.4393670099968085e-16
+    },
+    "SLy_gradient_L10km": {
+      "denominator": "|P'_{r,X}|",
+      "max_rel": 4.391000847242796e-14
+    }
+  },
+  "full_numerical_spline_divergence_residual": {
+    "SLy_mass_L10km": {
+      "denominator": "|P'|",
+      "max_rel": 2.6947879107963052e-05
+    },
+    "SLy_gradient_L10km": {
+      "denominator": "|P'|",
+      "max_rel": 2.3582137884765545e-05
+    }
+  },
+  "inertia_scaling_control_W_to_4W": {
+    "EOS": "SLy",
+    "mode": "mass",
+    "L_km": 10.0,
+    "N": 500,
+    "log10_rho0c": 15.30426924786,
+    "omega2_W_s2": 4896549.352218564,
+    "omega2_4W_s2": 1224137.4114223346,
+    "ratio_4W_over_W": 0.25000001498355034,
+    "F_shoot_0_W": 0.02325155311456817,
+    "F_shoot_0_4W": 0.02325155311456817,
+    "omega2_tangent_W_s2": 4853254.190321123,
+    "min_M_sym_diag": 5.683231044287442e-09,
+    "min_M_sym_diag_positive": true,
+    "M_sym_asymmetry": 0.0,
+    "raw_W_relative_asymmetry": 1.0000000000001392,
+    "note": "omega^2=0 is fixed by the static tangent operator (F_shoot(0) independent of W); the zero crossing is inertia-invariant."
+  },
+  "symbolic_identities": {
+    "sym_yukawa_el_source_factor_residual": "0",
+    "sym_yukawa_el_matter_pressure_residual": "0",
+    "sym_yukawa_el_hydrostatic_residual": "0",
+    "sym_disformal_g00_residual": "0",
+    "sym_yukawa_center_limit_residual": "0",
+    "sym_yukawa_alphaY_eq_4pi_alphastd_residual": "0",
+    "div_matter_mass_symbolic": "0",
+    "div_X_mass_symbolic": "0",
+    "div_matter_grad_symbolic": "0",
+    "div_X_grad_symbolic": "0",
+    "SL_minus_hydro_factored": "4*pi*r**(5/2)*(f(r) - 1)*(4*pi*r**3*P(r)*xi(r) - r**2*Derivative(xi(r), r) + 2*r*m(r)*Derivative(xi(r), r) - 3*r*xi(r) + 7*m(r)*xi(r))*Gam(r)*P(r)*eps(r)*exp(2*nu(r))/(r - 2*m(r))**(5/2)",
+    "SL_minus_hydro_at_f_eq_1": "0"
+  },
+  "numerical_conservation_residuals_L10km_logrho15": {
+    "SLy_mass_L10km": {
+      "R_km": 11.749684150422867,
+      "M_Msun": 1.592426496292711,
+      "f_center": 0.9504766947968827,
+      "f_surface": 0.9875507209313893,
+      "max_rel_div_matter": 2.6947879107963052e-05,
+      "median_rel_div_matter": 1.725441131892212e-07,
+      "max_rel_div_X": 4.4393670099968085e-16,
+      "algebraic_X_denominator": "|rho_X * nu'|",
+      "full_spline_denominator": "|P'|",
+      "max_rel_div_total": 2.6947879107967616e-05,
+      "rho_X_over_eps_center": -0.04948870609839984,
+      "pr_X_over_P_center": 0.0,
+      "pt_X_over_P_center": -3.84380201880631e-05
+    },
+    "SLy_gradient_L10km": {
+      "R_km": 11.644566148511194,
+      "M_Msun": 1.6103021655403003,
+      "f_center": 0.9506804701004878,
+      "f_surface": 0.9874330444509017,
+      "max_rel_div_matter": 2.3582137884765545e-05,
+      "median_rel_div_matter": 5.5986188571156086e-08,
+      "max_rel_div_X": 4.391000847242796e-14,
+      "algebraic_X_denominator": "|P'_{r,X}|",
+      "full_spline_denominator": "|P'|",
+      "max_rel_div_total": 2.358213788484033e-05,
+      "rho_X_over_eps_center": 0.0,
+      "pr_X_over_P_center": -0.13640702924838238,
+      "pt_X_over_P_center": -0.13626534963189635
+    },
+    "APR4_mass_L10km": {
+      "R_km": 11.441557375808898,
+      "M_Msun": 1.5936987973525178,
+      "f_center": 0.9485460929719016,
+      "f_surface": 0.9865331239105778,
+      "max_rel_div_matter": 2.677758457593799e-05,
+      "median_rel_div_matter": 4.4420482718361666e-08,
+      "max_rel_div_X": 4.0476122818181245e-16,
+      "algebraic_X_denominator": "|rho_X * nu'|",
+      "full_spline_denominator": "|P'|",
+      "max_rel_div_total": 2.677758457593799e-05,
+      "rho_X_over_eps_center": -0.05140822037262904,
+      "pr_X_over_P_center": 0.0,
+      "pt_X_over_P_center": -3.6135756374237805e-05
+    },
+    "APR4_gradient_L10km": {
+      "R_km": 11.3409920100727,
+      "M_Msun": 1.6131181913373864,
+      "f_center": 0.9488034127083285,
+      "f_surface": 0.9864203096578005,
+      "max_rel_div_matter": 2.0462089150899945e-05,
+      "median_rel_div_matter": 3.8209954165222413e-08,
+      "max_rel_div_X": 3.909079851804452e-14,
+      "algebraic_X_denominator": "|P'_{r,X}|",
+      "full_spline_denominator": "|P'|",
+      "max_rel_div_total": 2.0462089150899945e-05,
+      "rho_X_over_eps_center": 0.0,
+      "pr_X_over_P_center": -0.13634827096965174,
+      "pt_X_over_P_center": -0.13618942547440704
+    },
+    "H4_mass_L10km": {
+      "R_km": 13.21897958925296,
+      "M_Msun": 1.9183899561280104,
+      "f_center": 0.951153928015255,
+      "f_surface": 0.9897024327194356,
+      "max_rel_div_matter": 2.7963916023578567e-05,
+      "median_rel_div_matter": 2.3315264951343595e-07,
+      "max_rel_div_X": 4.4186383469750083e-16,
+      "algebraic_X_denominator": "|rho_X * nu'|",
+      "full_spline_denominator": "|P'|",
+      "max_rel_div_total": 2.796391602358087e-05,
+      "rho_X_over_eps_center": -0.048821781526861785,
+      "pr_X_over_P_center": 0.0,
+      "pt_X_over_P_center": -4.7759569013978596e-05
+    },
+    "H4_gradient_L10km": {
+      "R_km": 13.075844700660966,
+      "M_Msun": 1.9325984455092555,
+      "f_center": 0.9512489130985899,
+      "f_surface": 0.9895446109028132,
+      "max_rel_div_matter": 2.8192548893668307e-05,
+      "median_rel_div_matter": 1.7981526900825055e-07,
+      "max_rel_div_X": 4.32499493899769e-14,
+      "algebraic_X_denominator": "|P'_{r,X}|",
+      "full_spline_denominator": "|P'|",
+      "max_rel_div_total": 2.8192548893668307e-05,
+      "rho_X_over_eps_center": 0.0,
+      "pr_X_over_P_center": -0.1272854526209485,
+      "pt_X_over_P_center": -0.1271663245689812
+    }
+  },
+  "bilateral_kernel_reaction_L10km_logrho15": {
+    "SLy": {
+      "R_km": 10.983597162054485,
+      "M_Msun": 1.2235776032416479,
+      "f_center": 0.9578723114651679,
+      "f_surface": 0.9883718447701159,
+      "recip_center": -0.04197522872812396,
+      "recip_surface": -0.011406635794270285,
+      "V_eff_center": 0.9158971204607027,
+      "V_eff_surface": 0.9769652122813242,
+      "fixed_point_iterations": 14,
+      "fixed_point_last_rel_residual": 1.9010140572817136e-07
+    },
+    "APR4": {
+      "R_km": 10.694473783846597,
+      "M_Msun": 1.2242609504073871,
+      "f_center": 0.9569234454160978,
+      "f_surface": 0.9874745209837238,
+      "recip_center": -0.04292197410870837,
+      "recip_surface": -0.012281469307671891,
+      "V_eff_center": 0.9140014891179644,
+      "V_eff_surface": 0.9751930358186989,
+      "fixed_point_iterations": 15,
+      "fixed_point_last_rel_residual": 1.3826281020090647e-07
+    },
+    "H4": {
+      "R_km": 12.495337742268699,
+      "M_Msun": 1.5358155308671337,
+      "f_center": 0.9563809350771757,
+      "f_surface": 0.9901797135574819,
+      "recip_center": -0.043370257722260205,
+      "recip_surface": -0.009631961215602143,
+      "V_eff_center": 0.913010690210013,
+      "V_eff_surface": 0.9805477419467705,
+      "fixed_point_iterations": 16,
+      "fixed_point_last_rel_residual": 1.2954618622273983e-07
+    }
+  },
+  "sym_yukawa_el_source_factor_residual": "0",
+  "sym_yukawa_el_matter_pressure_residual": "0",
+  "sym_yukawa_el_hydrostatic_residual": "0",
+  "two_cell_lapse_weighting_test": {
+    "N": [
+      1.0,
+      0.8
+    ],
+    "eps": [
+      1.0,
+      2.0
+    ],
+    "gamma": 0.1,
+    "V_cells": [
+      1.0,
+      1.0
+    ],
+    "K_ij": "1/V_tot",
+    "V_eff_lapse_weighted": [
+      0.7488159394898003,
+      0.7208429302559859
+    ],
+    "V_eff_unweighted": [
+      0.7316017799612992,
+      0.7316017799612992
+    ],
+    "expected_weighted": [
+      0.74881594,
+      0.72084293
+    ],
+    "expected_unweighted": 0.73160178
+  },
+  "bilateral_logrho15_L10km_reproduction": {
+    "SLy": {
+      "bilateral_eom_flat_unweighted": {
+        "R_km": 10.983597162054485,
+        "M_Msun": 1.2235776032416479,
+        "f_center": 0.9578723114651679,
+        "f_surface": 0.9883718447701159,
+        "recip_center": -0.04197522872812396,
+        "recip_surface": -0.011406635794270285,
+        "V_eff_center": 0.9158971204607027,
+        "V_eff_surface": 0.9769652122813242,
+        "fixed_point_iterations": 14,
+        "fixed_point_last_rel_residual": 1.9010140572817136e-07
+      },
+      "bilateral_lapse_weighted": {
+        "R_km": 10.956848794399175,
+        "M_Msun": 1.1988156229095037,
+        "f_center": 0.9585391227702262,
+        "V_eff_center": 0.9124040187655148,
+        "fixed_point_iterations": 15,
+        "fixed_point_last_rel_residual": 1.210436209042598e-07
+      }
+    },
+    "APR4": {
+      "bilateral_eom_flat_unweighted": {
+        "R_km": 10.694473783846597,
+        "M_Msun": 1.2242609504073871,
+        "f_center": 0.9569234454160978,
+        "f_surface": 0.9874745209837238,
+        "recip_center": -0.04292197410870837,
+        "recip_surface": -0.012281469307671891,
+        "V_eff_center": 0.9140014891179644,
+        "V_eff_surface": 0.9751930358186989,
+        "fixed_point_iterations": 15,
+        "fixed_point_last_rel_residual": 1.3826281020090647e-07
+      },
+      "bilateral_lapse_weighted": {
+        "R_km": 10.66199158367612,
+        "M_Msun": 1.1991528009406316,
+        "f_center": 0.9577317905983824,
+        "V_eff_center": 0.9106039833058583,
+        "fixed_point_iterations": 16,
+        "fixed_point_last_rel_residual": 1.6552602444264153e-07
+      }
+    },
+    "H4": {
+      "bilateral_eom_flat_unweighted": {
+        "R_km": 12.495337742268699,
+        "M_Msun": 1.5358155308671337,
+        "f_center": 0.9563809350771757,
+        "f_surface": 0.9901797135574819,
+        "recip_center": -0.043370257722260205,
+        "recip_surface": -0.009631961215602143,
+        "V_eff_center": 0.913010690210013,
+        "V_eff_surface": 0.9805477419467705,
+        "fixed_point_iterations": 16,
+        "fixed_point_last_rel_residual": 1.2954618622273983e-07
+      },
+      "bilateral_lapse_weighted": {
+        "R_km": 12.491628067101296,
+        "M_Msun": 1.5122317013857458,
+        "f_center": 0.9569414488086043,
+        "V_eff_center": 0.9085535313936124,
+        "fixed_point_iterations": 15,
+        "fixed_point_last_rel_residual": 9.999082317690977e-08
+      }
+    }
+  },
+  "yukawa_action_el_SLy_logrho15": {
+    "L1km": {
+      "R_km": 11.571632780748116,
+      "M_Msun": 1.5617247758513997,
+      "Delta_M_phi_ext_Msun": 9.521733571154629e-07,
+      "M_total_Msun": 1.5617257280247567,
+      "f_center": 0.9991984660310107,
+      "phi_surface": 4.4031647839126026e-05,
+      "fixed_point_iterations": 9,
+      "fixed_point_last_rel_residual": 9.89550752450441e-09
+    },
+    "L10km": {
+      "R_km": 11.47660304634146,
+      "M_Msun": 1.5104021010849606,
+      "Delta_M_phi_ext_Msun": 0.0034157317490640694,
+      "M_total_Msun": 1.5138178328340248,
+      "f_center": 0.9815752513088666,
+      "phi_surface": 0.00646500025723418,
+      "fixed_point_iterations": 18,
+      "fixed_point_last_rel_residual": 6.22764928515096e-09
+    }
+  },
+  "static_tangent_model_note": "The coupled radial BVP linearizes around the V21 tp.dense_profile background, not around bilateral_* or yukawa_* branches. Positive diagonal of M_sym = D^T diag(w dr) D is a Gram-matrix property, not proof of a positive-definite physical kinetic Hessian.",
+  "radial_stability_zero_crossings": {
+    "SLy_GR_L0km": {
+      "log10_rho0c_turning_dM0": 15.302444971559026,
+      "zc_std_matter": 15.302445263011933,
+      "delta_dex_std_matter": 2.9145290625365305e-07,
+      "zc_modB_metric": 15.302445263011933,
+      "delta_dex_modB_metric": 2.9145290625365305e-07,
+      "zc_bvp_frozen_f": 15.302516138982813,
+      "delta_dex_bvp_frozen_f": 7.116742378698859e-05,
+      "zc_coupled_action": 15.302516196834468,
+      "delta_dex_coupled_action": 7.122527544112245e-05,
+      "mismatch_reduction_factor_vs_std": 0.004091987071283132,
+      "mismatch_reduction_factor_vs_modB": 0.004091987071283132,
+      "mismatch_reduction_factor_vs_frozen": 0.9991877651047951
+    },
+    "SLy_mass_L10km": {
+      "log10_rho0c_turning_dM0": 15.308269247860965,
+      "zc_std_matter": 15.306931170032762,
+      "delta_dex_std_matter": -0.0013380778282030548,
+      "zc_modB_metric": 15.324671909010547,
+      "delta_dex_modB_metric": 0.016402661149582443,
+      "zc_bvp_frozen_f": 15.304207846354855,
+      "delta_dex_bvp_frozen_f": -0.004061401506110229,
+      "zc_coupled_action": 15.30833896509628,
+      "delta_dex_coupled_action": 6.97172353145703e-05,
+      "mismatch_reduction_factor_vs_std": 19.192927289292665,
+      "mismatch_reduction_factor_vs_modB": 235.27411945657616,
+      "mismatch_reduction_factor_vs_frozen": 58.25534371500574
+    },
+    "SLy_gradient_L10km": {
+      "log10_rho0c_turning_dM0": 15.298752885446484,
+      "zc_std_matter": 15.295180405182936,
+      "delta_dex_std_matter": -0.0035724802635481723,
+      "zc_modB_metric": 15.298435386423362,
+      "delta_dex_modB_metric": -0.00031749902312228073,
+      "zc_bvp_frozen_f": 15.294366839752424,
+      "delta_dex_bvp_frozen_f": -0.004386045694060314,
+      "zc_coupled_action": 15.298826796715561,
+      "delta_dex_coupled_action": 7.391126907663192e-05,
+      "mismatch_reduction_factor_vs_std": 48.33471685953856,
+      "mismatch_reduction_factor_vs_modB": 4.295678143384261,
+      "mismatch_reduction_factor_vs_frozen": 59.34204281505192
+    }
+  }
+}
