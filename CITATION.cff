@@ -1,12 +1,12 @@
 cff-version: 1.2.0
 message: "If you use this work, please cite it using the metadata below."
-title: "Time Attraction Law V23: Covariant Action Candidates and Nonlocal Static Consistency Tests for Neutron-Star Sensitivity Analysis (Bilingual EN/HU Edition & Code Package)"
-version: "V23 (Zenodo V23)"
-date-released: 2026-10-25
-doi: 10.5281/zenodo.23639084
+title: "Time Attraction Law — Scalar-Tensor Yukawa Fit, V24"
+version: "V24 (Zenodo V24)"
+date-released: 2026-10-27
+doi: 10.5281/zenodo.23680715
 license: CC-BY-NC-4.0
 repository-code: "https://github.com/unbekanntedavid-glitch/Time-Attraction"
-url: "https://doi.org/10.5281/zenodo.23639084"
+url: "https://doi.org/10.5281/zenodo.23680715"
 authors:
   - family-names: Szabolcsi
     given-names: David
@@ -14,8 +14,11 @@ authors:
     orcid: "https://orcid.org/0009-0005-6300-074X"
 identifiers:
   - type: doi
+    value: 10.5281/zenodo.23680715
+    description: "Zenodo V24: Time Attraction Law — Scalar-Tensor Yukawa Fit"
+  - type: doi
     value: 10.5281/zenodo.23639084
-    description: "Zenodo V23: Covariant Action Candidates and Nonlocal Static Consistency Tests (Task 50aa2db0)"
+    description: "Previous version: Zenodo V23: Covariant Action Candidates and Nonlocal Static Consistency Tests (Task 50aa2db0)"
   - type: doi
     value: 10.5281/zenodo.23604423
     description: "Previous version: Zenodo V22 Book Edition (15-page Research Monograph)"
@@ -28,3 +31,9 @@ identifiers:
   - type: doi
     value: 10.5281/zenodo.23497128
     description: "Previous version: V19 – 7th model"
+  - type: doi
+    value: 10.5281/zenodo.19666220
+    description: "Previous version: Zenodo V17 (SPARC 155 / 123 blind sample)"
+  - type: doi
+    value: 10.5281/zenodo.23217189
+    description: "Previous version: Zenodo v14"

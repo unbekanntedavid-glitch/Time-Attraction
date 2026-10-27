@@ -1,3 +1,37 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23680715.svg)](https://doi.org/10.5281/zenodo.23680715)
+
+## V24 — Scalar-Tensor Yukawa Fit (Zenodo V24, DOI 10.5281/zenodo.23680715)
+
+**Time Attraction Law — Scalar-Tensor Yukawa Fit, V24** (2026-10-27)  
+**DOI:** [https://doi.org/10.5281/zenodo.23680715](https://doi.org/10.5281/zenodo.23680715) · **License:** CC BY-NC 4.0 · **Author:** David Szabolcsi (ORCID [0009-0005-6300-074X](https://orcid.org/0009-0005-6300-074X))
+
+**V24 (Zenodo V24):** [Time Attraction Law — Scalar-Tensor Yukawa Fit, V24](https://doi.org/10.5281/zenodo.23680715), DOI [`10.5281/zenodo.23680715`](https://doi.org/10.5281/zenodo.23680715) (`V24/` folder, bilingual HU/EN chapters `step1`–`step20`, Python solvers, SPARC & TOV data, and SHA-256 checksums).
+
+Previous version: V23 (Zenodo V23, DOI [10.5281/zenodo.23639084](https://doi.org/10.5281/zenodo.23639084)).
+
+### Zenodo DOI list
+
+| Version | Record | DOI |
+|---|---|---|
+| V24 (Zenodo V24) | Time Attraction Law — Scalar-Tensor Yukawa Fit, V24 | [`10.5281/zenodo.23680715`](https://doi.org/10.5281/zenodo.23680715) |
+| V23 (Zenodo V23) | Covariant Action Candidates and Nonlocal Static Consistency Tests | [`10.5281/zenodo.23639084`](https://doi.org/10.5281/zenodo.23639084) |
+| V22 Book Edition (Zenodo V22) | Research Monograph | [`10.5281/zenodo.23604423`](https://doi.org/10.5281/zenodo.23604423) |
+| Zenodo V21 (= GitHub V19) | Neutron-star package (`V21/`) | [`10.5281/zenodo.23602501`](https://doi.org/10.5281/zenodo.23602501) |
+| Zenodo V20 (= GitHub V18) | GitHub V18 package (`V20/`, `V18/`) | [`10.5281/zenodo.23540741`](https://doi.org/10.5281/zenodo.23540741) |
+| Zenodo V19 | 7th model (`V19/`) | [`10.5281/zenodo.23497128`](https://doi.org/10.5281/zenodo.23497128) |
+| Zenodo V17 | SPARC 155 / 123 blind sample | [`10.5281/zenodo.19666220`](https://doi.org/10.5281/zenodo.19666220) |
+| v17 | SPARC baryonic baselines | [`10.5281/zenodo.23479940`](https://doi.org/10.5281/zenodo.23479940) |
+| v16 | Previous version | [`10.5281/zenodo.23234825`](https://doi.org/10.5281/zenodo.23234825) |
+| v15 | Previous version | [`10.5281/zenodo.23220318`](https://doi.org/10.5281/zenodo.23220318) |
+| v14 | Previous version | [`10.5281/zenodo.23217189`](https://doi.org/10.5281/zenodo.23217189) |
+| Parent | Parent record of v17 | [`10.5281/zenodo.22983681`](https://doi.org/10.5281/zenodo.22983681) |
+
+### Contents ([`V24/`](V24/))
+
+[`V24/`](V24/) folder: bilingual HU/EN chapters `step1`–`step20`, Python solvers, SPARC & TOV data, and SHA-256 checksums.
+
+---
+
 ## V23 — Covariant Action Candidates and Nonlocal Static Consistency Tests (Zenodo V23, DOI 10.5281/zenodo.23639084)
 
 **Time Attraction Law — V23: Covariant Action Candidates and Nonlocal Static Consistency Tests (Task 50aa2db0)** (2026-10-25)  
