@@ -1,0 +1,700 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{times}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{rotating}
+\usepackage[font=small,labelfont=rm]{caption}
+\usepackage[switch,modulo]{lineno}
+\usepackage{enumitem}
+\usepackage[obeyspaces,spaces]{url}
+\makeatletter\g@addto@macro{\UrlBreaks}{\do\_\do\=\do\-\do\.}\makeatother
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+\usepackage{seqsplit}
+\modulolinenumbers[5]
+\newcommand{\Msun}{M_\odot}
+\DeclareUrlCommand\file{\urlstyle{tt}}
+\newcommand{\ee}[2]{#1\times10^{#2}}
+\hypersetup{pdftitle={The Time Attraction Law (TAL), Release V21},pdfauthor={David Szabolcsi}}
+
+\title{\textbf{The Time Attraction Law (TAL), Release V21:\\
+Conditional Neutron-Star Equilibrium Sequences\\
+with a Locally Centred Top-Hat Density Average}}
+\author{David Szabolcsi\\[2pt]
+\small Independent experimental researcher, Unterterzen, Switzerland\\[2pt]
+\small ORCID: 0009-0005-6300-074X}
+\date{}
+
+\begin{document}
+\maketitle
+\linenumbers
+
+\begin{abstract}
+\noindent The Time Attraction Law (TAL) postulates that the local rate of proper time depends on the
+top-hat averaged density $\bar\rho_L$ through $f_L=\exp(-\gamma_L\bar\rho_L)$ with $\gamma_L=GL^2/c^2$.
+This paper reports a conditional sensitivity study of compact stars in which the top-hat average is
+centred at every stellar radius and recomputed self-consistently on the equilibrium solution. Two
+labelled ans\"atze insert $f_L$ either into the mass equation (``mass-source'') or into the pressure
+and lapse gradients (``gradient'') of the Tolman--Oppenheimer--Volkoff system, for the SLy, APR4 and H4
+piecewise-polytropic fits and $L=1$, 367, 1000, 10\,000 and 100\,000~m: 33 equilibrium sequences in total.
+A finite-source bound shows that only the neutron-star regime can reach a percent-level TAL factor
+(3.52--5.79\,\% for compactness 0.15--0.25); white dwarfs and the Sun cannot. At fixed gravitational
+mass the largest radius shift is 0.164~km at $1.4\,\Msun$, against a three-EOS GR spread of 2.632~km,
+and 0.623~km at $2.0\,\Msun$, against 1.557~km; in this comparison the radius effect is EOS-degenerate.
+All 1.4 and $2.0\,\Msun$ comparison stars lie in the causal range of the fits. APR4 becomes superluminal
+($c_s^2=dP/d\epsilon>c^2$) above $\rho_0=\ee{1.4458}{15}$~g\,cm$^{-3}$ already in GR; maxima beyond this
+density are reported only as labelled, potentially acausal benchmarks, with causal endpoints given
+separately. The turning-point criterion $dM/d\rho_c>0$ is applied as a heuristic only. Under an additional,
+separately assumed additive clock coupling, Sirius~B conditionally excludes a finite stellar-scale band
+$\ee{1.117}{7}\lesssim L\lesssim\ee{3.477}{7}$~m, but imposes no monotonic upper limit on $L$ and does not
+constrain the 1~m--100~km values. NICER results are shown as an illustrative overlay of GR-derived
+measurements, not as a TAL likelihood. No detection is claimed, no unconditional bound on $L$ is derived,
+and the coupling-consistency task 50aa2db0 remains open.
+\end{abstract}
+
+\noindent\textbf{Keywords:} time attraction law; density-dependent proper time; top-hat averaged density;
+neutron stars; equation of state; causality; NICER; Sirius~B
+
+\section{Introduction}
+In general relativity the rate of an ideal clock is set by the metric \cite{will}. The Time Attraction Law
+(TAL) \cite{tal} is a phenomenological proposal in which the local proper-time rate is instead an explicit
+function of the density averaged over a sphere of radius $L$. The previous release (Zenodo V20 \cite{v20})
+studied a laboratory coil configuration, and the release before it (V19 \cite{v19}) the TAL factor as a
+seventh model for SPARC rotation curves. The V20 manuscript (\file{V18/manuscript/tal_v20_fop.pdf} in \cite{gh}) reports a calculated laboratory
+signal of $\approx-\ee{1.20}{-48}$ and a SPARC TAL factor numerically identical to the pure-baryon baseline
+at the published scales.
+A natural question is therefore where, if anywhere, a top-hat TAL factor can become large.
+
+The purpose of this paper is narrow and deliberately conservative. It (i) states a finite-source bound
+showing that among ordinary stars, white dwarfs and neutron stars only the neutron-star regime can reach a
+percent-level factor; (ii) documents exactly which modified equilibrium equations were solved, with a true,
+locally centred top-hat; (iii) reports maximum masses and fixed-mass radii for 33 conditional sequences and
+compares the radius shifts with the spread of three standard equations of state (EOSs); (iv) flags the
+superluminal high-density part of the EOS fits and reports results in their causal range; (v) applies the
+turning-point criterion as a heuristic; and (vi) gives a conditional Sirius~B redshift consistency check.
+All numbers are taken from the archived V21 package (Zenodo V21 \cite{v21}; GitHub V19, directory \file{V21/} \cite{gh});
+file names are given so that each value can be traced.
+
+The central result is a set of conditional sensitivity calculations. The two insertions of $f_L$ are
+ans\"atze, not solutions of a completed TAL field theory, and the backlog consistency task 50aa2db0 may
+change which insertion, if any, is admissible. Nothing in this paper is a detection, an unconditional bound
+on $L$, or a closed demonstration of physical consistency.
+
+\section{Theoretical framework}
+\subsection{Definitions}
+The definitions are those of the TAL formalism document \file{Time_Attraction.pdf} \cite{tal}, as quoted in the
+V20 manuscript (\file{V18/manuscript/tal_v20_fop.pdf} in \cite{gh}; Def.~1--3, Eqs.~(1), (2), (7) of \cite{tal}). The top-hat averaged density at a point $\mathbf x$ is
+\begin{equation}
+\bar\rho_L(\mathbf x)=\frac{3}{4\pi L^3}\int_{|\mathbf x'-\mathbf x|\le L}\rho(\mathbf x')\,d^3x',
+\end{equation}
+the coupling constant is
+\begin{equation}
+\gamma_L=\frac{G L^2}{c^2},\qquad [\gamma_L]=\mathrm{m^3\,kg^{-1}},
+\end{equation}
+and the time factor is
+\begin{equation}
+f_L(\bar\rho_L)=\exp(-\gamma_L\bar\rho_L),\qquad d\tau_L=f_L\,dt,\qquad f_L\in(0,1].
+\end{equation}
+The source gives an upper bound $L<367$~m from a generic clock-stability argument (Eq.~(3), p.~3 of \cite{tal});
+it is the author's own estimate, not a constraint from a dedicated experiment, and it is not imposed here.
+The value $L=367$~m is included in the scan as one of the requested scales. At $L=10$~km the constants of
+the package give $\gamma=\ee{7.4262}{-20}$~m$^3$\,kg$^{-1}$ (\file{note_HU_EN.md} \S1).
+
+\subsection{Finite-source bound}
+Write $x_L=\gamma_L\bar\rho_L$, $f_L=e^{-x_L}$. For positive density and a Euclidean averaging ball,
+$x_L(\mathbf x)=3G M_{\mathrm{ball}(\mathbf x,L)}/(4\pi c^2 L)$. For a spherically symmetric, radially
+decreasing density, a ball of given radius contains most mass when centred at the stellar centre, so
+\begin{equation}
+\sup_{\mathbf x,L}x_L(\mathbf x)\le\frac{3}{4\pi}\max_L\frac{G M_0(<L)}{Lc^2},\qquad
+0\le1-f_L\le1-e^{-x_{\max}}\le x_{\max},
+\end{equation}
+where $M_0(<L)=4\pi\int_0^L\rho(s)s^2\,ds$ is the unweighted coordinate-density integral; in the mass-source
+model it is not the modified gravitational mass $m(L)$ (\file{note_HU_EN.md} \S1). Inserting compactness scales
+gives the orders of magnitude of Table~\ref{tab:bound}. These are scale estimates, not rigorous ceilings:
+central concentration can increase $\max GM_0(<L)/(Lc^2)$ relative to the surface value. For a finite source
+$x_L\propto L^2$ at small $L$ in smooth interior matter, but $x_L\propto1/L$ once the whole source is
+enclosed, so an ever larger $L$ does not create an arbitrarily large stellar correction. The statement
+concerns finite stellar sources, not an extended homogeneous cosmological background.
+
+\begin{table}[t]
+\centering
+\caption[]{Scale estimates of the maximal TAL exponent for finite stellar sources. Source: \file{note_HU_EN.md} \S1.}
+\label{tab:bound}
+\begin{tabular}{lccc}
+\toprule
+Object & Compactness scale $GM/(Rc^2)$ & $x\sim(3/4\pi)C$ & $1-e^{-x}$\\
+\midrule
+Neutron star & 0.15--0.25 & 0.0358--0.0597 & 3.52--5.79\,\%\\
+Typical white dwarf & $10^{-4}$ & $\ee{2.39}{-5}$ & 0.00239\,\%\\
+Sun & $\ee{2}{-6}$ & $\ee{4.77}{-7}$ & 0.0000477\,\%\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Density convention and equilibrium prescriptions}
+Let $\rho_0$ be the EOS rest-mass density, $\epsilon$ the total energy density and $\rho=\epsilon/c^2$. The
+latter is used both in the mass equation and in the TAL averaging integral; this recovers GR at $f=1$.
+Using $\rho_0$ instead would be a different model, not a notational substitution (\file{note_HU_EN.md} \S2).
+With
+\begin{equation}
+A(r)=\frac{G\,[m(r)+4\pi r^3P(r)/c^2]}{c^2r^2\,[1-2Gm(r)/(rc^2)]}
+\end{equation}
+and the lapse notation $g_{tt}=-e^{2\nu}c^2$, the three prescriptions of Table~\ref{tab:presc} were
+evaluated. The gradient alternative multiplies the gradient of $\nu$, not the lapse itself; no model applies
+both modifications.
+
+\begin{table}[t]
+\centering
+\caption[]{Equilibrium prescriptions. Labels as in the package files. Source: \file{note_HU_EN.md} \S2.}
+\label{tab:presc}
+\begin{tabular}{lll}
+\toprule
+Label & Mass equation & Pressure / lapse gradient\\
+\midrule
+\file{GR} & $m'=4\pi r^2\epsilon/c^2$ & $P'=-(\epsilon+P)A$, $\nu'=A$\\
+\file{mass} (published mass-source insertion) & $m'=4\pi r^2(\epsilon/c^2)f_L$ & $P'=-(\epsilon+P)A$, $\nu'=A$\\
+\file{gradient} (labelled alternative) & $m'=4\pi r^2\epsilon/c^2$ & $P'=-(\epsilon+P)f_LA$, $\nu'=f_LA$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+These are conditional ans\"atze. This paper does not derive a covariant action or supply missing effective
+stresses. An extremum of a modified equilibrium sequence is not a demonstrated radial-stability boundary;
+$M_{\max}$ below always means the maximum mass on the computed sequence.
+
+\subsection{True top-hat, centred locally}
+The density is zero outside the stellar surface $R$. At each stellar radius $r$ the averaging sphere is
+centred at that point, not at the stellar centre. For $r>0$, full shells $0<s<L-r$, when present, contribute
+$4\pi\int\rho s^2\,ds$; partial shells contribute
+\begin{equation}
+M_{\mathrm{cap}}(r,L)=\frac{\pi}{r}\int_{|r-L|}^{\min(r+L,R)}s\,\rho(s)\,[L^2-(s-r)^2]\,ds,
+\end{equation}
+with empty intervals omitted. At $r=0$, $M=4\pi\int_0^{\min(L,R)}\rho s^2\,ds$. The enclosed mass is divided
+by the whole ball volume $4\pi L^3/3$, including any vacuum portion. Neither the central density nor
+$m(r)/(4\pi r^3/3)$ is substituted for the local ball average. The convolution uses Euclidean coordinate
+volume in areal coordinates, not a proper-volume or geodesic-ball definition; at neutron-star compactness
+this choice is physically consequential and remains conditional (\file{note_HU_EN.md} \S2).
+
+\section{Methodology}
+\subsection{Equations of state}
+The three EOSs are represented by the piecewise-polytropic fits of Read et al.\ \cite{read}, not by microscopic EOS
+tables (Table~\ref{tab:eos}). Pressure and energy density are matched continuously, including the four-piece
+SLy crust; the core boundaries are $10^{14.7}$ and $10^{15}$~g\,cm$^{-3}$. The low-density coefficients of
+Read's Table~II are interpreted as $K/c^2$ in cgs mass-density units, and the later three crust coefficients
+are fixed by continuity. The maximum relative error of the enthalpy inversion is $\ee{9.771}{-12}$ for each
+EOS (\file{geometry_tests.json}).
+
+\begin{table}[t]
+\centering
+\caption[]{Piecewise-polytropic parameters \cite{read}. Sources: \file{note_HU_EN.md} \S2; \file{geometry_tests.json}.}
+\label{tab:eos}
+\begin{tabular}{lcccc}
+\toprule
+EOS & $\log_{10}P_1$ (dyne\,cm$^{-2}$) & $\Gamma_1$ & $\Gamma_2$ & $\Gamma_3$\\
+\midrule
+SLy & 34.384 & 3.005 & 2.988 & 2.851\\
+APR4 (AP4 in \cite{read}) & 34.269 & 2.830 & 3.445 & 3.348\\
+H4 (stiff-radius comparison) & 34.669 & 2.909 & 2.246 & 2.144\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Integration, self-consistency and scan}
+Integration uses the logarithmic relativistic enthalpy $h=\int dP/(\epsilon+P)$, a central expansion at
+$r=10^{-4}$~km and an outer endpoint $h=10^{-10}$. Each solution is iterated: solve the equilibrium
+equations, rebuild the full density profile, recompute the top-hat, and repeat until the relative mass and
+radius change and the maximum exponent change are all below $\ee{2}{-7}$. Production runs use ODE relative
+tolerance $10^{-10}$, 801 radial profile points and 80-point Gauss shell quadrature
+(\file{note_HU_EN.md} \S2; \file{stellar_tal.py}).
+
+For every EOS, GR and both modifications were run for $L=1$, 367, 1000, 10\,000 and 100\,000~m: 33
+sequences. The initial 53-point grid of central rest-mass density spans
+$\log_{10}\rho_{0c}\,[\mathrm{g\,cm^{-3}}]=14.55$--15.65; a bounded local search refines each maximum.
+Radii at fixed masses are found by root solving on the lower-central-density branch; a blank fixed-mass
+entry means that the sequence cannot reach the target on that branch and is not extrapolated.
+
+\subsection{Sound speed and causal endpoints}
+\file{integrate()} evaluates $c_s^2/c^2=dP/d\epsilon$ ($=\Gamma P/(\epsilon+P)$ on each polytropic piece)
+at every accepted ODE step, at every one of the 2401 output nodes and on both sides of every EOS piece
+boundary (\file{note_HU_EN.md} \S7.2; \file{causality_stability_log.txt}). No causal completion of the EOS
+was imposed. The ``causal endpoint'' of a sequence is the star whose centre sits exactly at the first
+density with $c_s^2=c^2$; its mass is stored as \file{M_max_causal_Msun}. This is the endpoint of the
+published fit's causal range on the followed branch, not the maximum mass of a causally completed EOS. The
+areal radius of the $c_s^2=c^2$ core boundary is obtained from the threshold enthalpy $h_*$ (bracketed root,
+\file{brentq}, xtol $=$ rtol $=10^{-15}$) evaluated on the dense output of the converged ODE solution;
+the residual $|c_s^2/c^2-1|$ at $h_*$ is at most $\ee{2.2}{-16}$ (\file{note_HU_EN.md} \S7.4, H2).
+
+\subsection{Turning-point heuristic}
+The sign of $dM/d\rho_c$ was evaluated on the 53-point scan grid of all 33 sequences and, separately,
+including the optimizer and root-finder points (\file{stellar_summary.csv}, columns
+\file{dMdrho_sign_changes_scan_grid}, \file{dMdrho_sign_changes_all_points}). For the modified equations
+this GR-motivated criterion is a heuristic, not a proven radial-stability result; the radial-mode
+(Sturm--Liouville) analysis with TAL-modified perturbation equations has not been performed.
+
+\subsection{NICER reference values}
+The reference values of Table~\ref{tab:nicer} are read by \file{plots()} from
+\file{observational_inputs.csv}; no NICER number is hard-coded. Uncertainties are marginal
+16th--84th-percentile credible intervals. Each plotted reference is an uncorrelated, symmetrized Gaussian
+approximation whose standard deviations are the arithmetic means of the published lower and upper errors;
+ellipses satisfy $(\Delta R/\sigma_R)^2+(\Delta M/\sigma_M)^2=-2\ln(1-p)$ for joint $p=0.68$ and 0.95.
+They are not the papers' posterior samples: mass--radius correlation, skewness and hot-spot multimodality
+are absent. Before drawing, \file{check_observational_inputs()} verifies that each symmetrized error equals
+the mean of the lower and upper errors (tolerance $10^{-9}$); all 10 source/quantity rows pass, with a largest
+difference of $\ee{1.1}{-16}$ (\file{numerical_diagnostics.json}). RA/Dec (J2000) are metadata from the ATNF
+Pulsar Catalogue v2.6.5 \cite{atnf}, cross-checked against SIMBAD, and are not used in the plot.
+
+\begin{table}[t]
+\centering
+\caption[]{NICER reference values (marginal, approximately 68\,\%). The last two rows are kept for reference
+and are not drawn (\file{used_in_plot=False}). Source: \file{observational_inputs.csv}; \file{note_HU_EN.md} \S4.}
+\label{tab:nicer}
+\begin{tabular}{llcc}
+\toprule
+Pulsar & Analysis & $M$ ($\Msun$) & $R$ (km)\\
+\midrule
+J0740+6620 & Salmi et al.\ 2024 \cite{salmi} & $2.073\pm0.069$ & $12.49^{+1.28}_{-0.88}$\\
+J0437$-$4715 & Choudhury et al.\ 2024 \cite{choudhury} & $1.418\pm0.037$ & $11.36^{+0.95}_{-0.63}$\\
+J0030+0451 & Kini et al.\ 2026, PDT-U (preferred) \cite{kini} & $1.43^{+0.20}_{-0.17}$ & $12.68^{+1.31}_{-1.04}$\\
+\midrule
+J0030+0451 & Kini et al.\ 2026, ST+PDT (alternative) \cite{kini} & $1.29^{+0.13}_{-0.12}$ & $11.63^{+0.95}_{-0.89}$\\
+J0437$-$4715 & Miller et al.\ 2025, sensitivity \cite{miller} & $1.431\pm0.043$ & $13.892^{+1.25}_{-2.069}$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+All NICER posteriors were inferred with GR-based photon propagation, atmosphere models and rotational
+geometry. Their comparison with nonrotating conditional TAL sequences is an illustrative overlay, not a
+self-consistent alternative-gravity likelihood. For J0437$-$4715 the posterior mass error 0.037 is used,
+not the radio-prior error 0.044. The J0030+0451 values are the six-year 2026 analysis \cite{kini}, not the older
+2024 result. The Miller et al.\ reanalysis including modulated nonthermal emission \cite{miller} gives a bimodal radius
+posterior with bounds 11.823 and 15.142~km; it is not combined with the Choudhury result.
+
+\subsection{Sirius B: additive clock coupling}
+Joyce et al.\ \cite{joyce} give the gravitational redshift $v_{\mathrm{gr}}=80.65\pm0.77$~km\,s$^{-1}$, the redshift
+mass $1.017\pm0.025\,\Msun$ and $R=(0.00803\pm0.00011)\,R_\odot$; Bond et al.\ \cite{bond} give the independent
+dynamical mass $M_B=1.018\pm0.011\,\Msun$. The dynamical mass and the independently estimated radius are used
+to predict the GR redshift. The additional, clock-only assumption is
+\begin{equation}
+1+z=(1+z_{\mathrm{GR}})\exp(x_{\mathrm{em}}-x_{\mathrm{obs}}),\qquad
+\delta v_B=c\,(1+z_{\mathrm{GR},B})\,[e^{x_B}-1].
+\end{equation}
+It retains a GR exterior and multiplies the local clock factor by TAL. It is not uniquely implied by either
+equilibrium insertion of Table~\ref{tab:presc}; in particular, the gradient prescription does not itself
+imply this multiplicative lapse law. The differential Sirius A/B strategy cancels the observer factor, and the
+modelled Sirius~A contribution is subtracted. For $L\ge2R_B$ the ball around a surface emitter contains the
+whole white dwarf, so that
+\begin{equation}
+x_B=\frac{3GM_B}{4\pi Lc^2},
+\end{equation}
+independently of the density profile. For $L<2R_B$, normalized Lane--Emden profiles with $n=1.5$ and $n=3$
+at the observed mass and radius, with an $n=3$ Sirius~A profile, are used as bracketing illustrations, not
+as a tabulated finite-temperature Sirius~B EOS (\file{note_HU_EN.md} \S5).
+
+\subsection{Numerical checks}
+Every EOS/coupling/$L$ case was re-solved at its peak central density and near $1.4\,\Msun$ with 1601
+radial points, 160 quadrature points and ODE rtol $=10^{-11}$, giving 66 refinement comparisons
+(\file{convergence.csv}). All 33 causal endpoints (14 of them below the sequence maximum) and the core
+boundary of all 14 acausal maxima were recomputed with the same finer settings
+(\file{causal_endpoint_convergence.csv}). A separate, polynomial-exact integral on the piecewise-linear profile
+was compared with the 80-point production convolution in 15 geometry cases (all five $L$ at centre, half
+radius and surface), and the code was tested against exact uniform-sphere limits, including the surface
+overlap $\bar\rho_L/\rho=5/16$ for $L=R$ (\file{numerical_diagnostics.json}; \file{geometry_tests.json}).
+
+\section{Results}
+\subsection{GR baseline}
+Table~\ref{tab:gr} lists the GR sequence maxima and fixed-mass radii. GR maxima and $R_{1.4}$ agree with the
+fit predictions quoted by Read et al.\ \cite{read} to within 0.051\,\%; the small common offset is retained, not
+renormalized away (\file{numerical_diagnostics.json}, \file{Read_GR_benchmarks}).
+
+\begin{table}[t]
+\centering
+\caption[]{GR baseline. Sources: \file{stellar_summary.csv}; \file{causality_stability_log.txt}; \file{note_HU_EN.md} \S3.}
+\label{tab:gr}
+\begin{tabular}{lccc}
+\toprule
+EOS & Maximum sequence mass ($\Msun$) & $R(1.4\,\Msun)$ (km) & $R(2.0\,\Msun)$ (km)\\
+\midrule
+SLy & 2.048411 & 11.7061 & 10.6266\\
+APR4 & 2.188001 & 11.3197 & 10.8667\\
+H4 & 2.013851 & 13.9522 & 12.1834\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Maximum masses and radii at $1.4\,\Msun$}
+Table~\ref{tab:full} gives the full EOS $\times L$ comparison. All digits are numerical outputs, not
+observational precision; differences at $L=1$~m are below the tested numerical error floor and their signs
+have no physical meaning. All sequences pass the nominal $2\,\Msun$ mass-capability check before EOS causality
+or modified radial stability is imposed; this is not evidence for TAL, since the GR baselines already pass it.
+The mass-source insertion reduces the source at a fixed density profile, but the star readjusts, so its
+maximum equilibrium mass need not decrease.
+
+Only the APR4 GR sequence reaches the central J0740+6620 mass of $2.073\,\Msun$; the SLy 10~km modified
+sequences also reach it, while H4 reaches 2.0599 (mass-source) and $2.0696\,\Msun$ (gradient). Given the
+$0.069\,\Msun$ posterior uncertainty these statements are not EOS exclusions. The APR4 maxima lie above
+the APR4 causal onset (Sect.~\ref{sec:causal}) and are therefore benchmarks of the published fit, not
+physical mass limits.
+
+\begin{table}[t]
+\centering
+\caption[]{Sequence maxima and radii at fixed gravitational mass $1.4\,\Msun$ (masses in $\Msun$, radii in km).
+APR4 and SLy mass-source maxima at $L=1$, 10 and 100~km lie above the causal onset (Table~\ref{tab:causal}).
+Sources: \file{stellar_summary.csv}; \file{note_HU_EN.md} \S3.}
+\label{tab:full}
+\begin{tabular}{lrcccc}
+\toprule
+EOS & $L$ (m) & $M_{\max}$ mass-source & $M_{\max}$ gradient & $R_{1.4}$ mass-source & $R_{1.4}$ gradient\\
+\midrule
+SLy & 1 & 2.048411 & 2.048411 & 11.7061 & 11.7061\\
+SLy & 367 & 2.048591 & 2.048567 & 11.7065 & 11.7063\\
+SLy & 1000 & 2.049739 & 2.049558 & 11.7091 & 11.7074\\
+SLy & 10000 & 2.098219 & 2.108482 & 11.8703 & 11.7920\\
+SLy & 100000 & 2.053290 & 2.058655 & 11.7356 & 11.7297\\
+\midrule
+APR4 & 1 & 2.188001 & 2.188001 & 11.3197 & 11.3197\\
+APR4 & 367 & 2.188182 & 2.188160 & 11.3201 & 11.3199\\
+APR4 & 1000 & 2.189339 & 2.189168 & 11.3227 & 11.3209\\
+APR4 & 10000 & 2.241521 & 2.248766 & 11.4757 & 11.3937\\
+APR4 & 100000 & 2.193438 & 2.198771 & 11.3471 & 11.3393\\
+\midrule
+H4 & 1 & 2.013851 & 2.013851 & 13.9522 & 13.9522\\
+H4 & 367 & 2.013994 & 2.013975 & 13.9525 & 13.9523\\
+H4 & 1000 & 2.014904 & 2.014767 & 13.9545 & 13.9532\\
+H4 & 10000 & 2.059898 & 2.069632 & 14.0952 & 14.0267\\
+H4 & 100000 & 2.018823 & 2.025597 & 13.9875 & 13.9821\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Radius shifts versus EOS spread}
+Table~\ref{tab:shift} compares the largest fixed-mass radius shift with the GR spread of the three EOSs. The
+largest shifts occur at $L=10$~km: at $1.4\,\Msun$ for SLy (mass-source and gradient), at $2.0\,\Msun$ for H4
+(both ans\"atze) (\file{radius_shifts.csv}). At $1.4\,\Msun$, $L=367$~m gives only 0.306--0.412~m of
+mass-source radius increase and 0.139--0.178~m for the gradient ansatz; $L=1$~km gives about 2.26--3.04~m and
+1.03--1.32~m; $L=100$~km is weaker again, approximately 27.4--35.3~m and 19.6--29.9~m. At $2.073\,\Msun$ only
+one GR EOS reaches the mass, so \file{radius_shifts.csv} leaves the spread blank instead of reporting a
+misleading zero; the APR4 10~km mass-source shift there, about 0.325~km, cannot be promoted into a multi-EOS
+comparison.
+
+\begin{table}[t]
+\centering
+\caption[]{Largest fixed-mass radius shift over the 30 modified sequences versus the three-EOS GR radius
+spread. Sources: \file{radius_shifts.csv}; \file{note_HU_EN.md} \S3.}
+\label{tab:shift}
+\small
+\begin{tabular}{cccc}
+\toprule
+Fixed $M$ ($\Msun$) & GR EOS spread (km) & Largest mass-source $\Delta R$ (km) & Largest gradient $\Delta R$ (km)\\
+\midrule
+1.4 & 2.6325 & 0.1642 & 0.0859\\
+2.0 & 1.5569 & 0.6234 & 0.5475\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The chosen three-EOS range is a comparison envelope, not a probability interval or the full set of possible
+EOSs. A shift smaller than this envelope is not a proof of exact degeneracy at every mass; it means that radius
+alone does not identify TAL in this comparison. No EOS parameters or $L$ were fitted to NICER.
+
+\subsection{Exponent profiles}
+At $1.4\,\Msun$ and $L=10$~km the true centre exponents are 0.0321--0.0469, whereas extending the central
+density uniformly across the averaging ball would give 0.0458--0.0738; the surface exponents are only
+0.00616--0.01181 (\file{numerical_diagnostics.json}, entry \file{top_hat_profile_diagnostics}; also
+\file{profiles_L10km.csv}). The factors vary through the star and are recomputed on the modified solution;
+a central-density proxy would overstate them.
+
+\subsection{Causality}\label{sec:causal}
+Each EOS has a single acausal interval (Table~\ref{tab:onset}). For APR4, above
+$\rho_0\approx\ee{1.446}{15}$~g\,cm$^{-3}$ ($\epsilon/c^2\approx\ee{1.801}{15}$~g\,cm$^{-3}$) the GR baseline
+is already superluminal, and the modified branches inherit this. We report causal-range endpoints separately
+while retaining the full equilibrium sequences as explicitly labelled, potentially acausal benchmarks. All 11
+APR4 maximum-mass stars contain an acausal core whose $c_s^2=c^2$ boundary lies at $r=5.244$--5.411~km, with
+$c_s^2/c^2$ up to 1.370--1.402 (Table~\ref{tab:causal}). The causal maximum mass is $2.0781\,\Msun$ in GR
+(full sequence maximum $2.1880\,\Msun$) and 2.0781--$2.1414\,\Msun$ in the modified branches.
+
+The SLy GR maximum is just causal ($c_s^2/c^2=0.99976$). The mass-source maxima at $L=1$, 10 and 100~km are
+slightly acausal (up to 1.0112); the violation begins at 98.69--99.94\,\% of the central density and the
+core boundaries lie at $r=0.237$, 1.067 and 0.230~km, respectively. Their causal maximum mass is at most
+$\ee{1.5}{-4}\,\Msun$ below the sequence maximum. The gradient-ansatz SLy maxima and all H4 maxima are causal
+(H4: $c_s^2/c^2\le0.522$). In all 33 sequences the 1.4 and $2.0\,\Msun$ comparison stars have central
+densities below the onset, so every $R(1.4)$ and $R(2.0)$ in this paper, and the 0.164/2.632~km and
+0.623/1.557~km comparison, lies in the causal range (\file{stellar_summary.csv}, \file{causal_at_1p4},
+\file{causal_at_2p0}).
+
+\begin{table}[t]
+\centering
+\caption[]{First superluminal density of each EOS fit. Sources: \file{causality_stability_log.txt};
+\file{note_HU_EN.md} \S7.2.}
+\label{tab:onset}
+\small
+\begin{tabular}{lccc>{\raggedright\arraybackslash}p{4.2cm}}
+\toprule
+EOS & onset $\rho_0$ (g\,cm$^{-3}$) & $\log_{10}\rho_0$ & onset $\epsilon/c^2$ (g\,cm$^{-3}$) & onset in \% of $\rho_{0c}$ at $M_{\max}$\\
+\midrule
+APR4 & $\ee{1.4458}{15}$ & 15.1601 & $\ee{1.8013}{15}$ & 74.49--76.28 (all 11 sequences)\\
+SLy & $\ee{2.0071}{15}$ & 15.3026 & $\ee{2.8626}{15}$ & 98.69--99.94 (mass-source, $L=1$, 10, 100~km)\\
+H4 & $\ee{1.0461}{16}$ & 16.0196 & $\ee{4.3012}{16}$ & never reached\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\small
+\caption[]{Sequences whose maximum lies above the causal onset (14 of 33). $c_s^2$ is the maximum in the
+$M_{\max}$ star; $r_{\mathrm{core}}$ is the areal radius of the $c_s^2=c^2$ boundary; $M_{\mathrm{caus}}$ and
+$R_{\mathrm{caus}}$ refer to the causal endpoint. Source: \file{causality_stability_log.txt}.}
+\label{tab:causal}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llrcccccc}
+\toprule
+EOS & Mode & $L$ (m) & $M_{\max}$ ($\Msun$) & $c_s^2/c^2$ & onset (\%) & $r_{\mathrm{core}}$ (km) & $M_{\mathrm{caus}}$ ($\Msun$) & $R_{\mathrm{caus}}$ (km)\\
+\midrule
+APR4 & GR & -- & 2.188001 & 1.384439 & 75.463 & 5.246704 & 2.078144 & 10.6827\\
+APR4 & mass & 1 & 2.188001 & 1.384303 & 75.470 & 5.246217 & 2.078144 & 10.6827\\
+APR4 & mass & 367 & 2.188182 & 1.384654 & 75.451 & 5.247810 & 2.078266 & 10.6832\\
+APR4 & mass & 1000 & 2.189339 & 1.385310 & 75.413 & 5.252319 & 2.079053 & 10.6870\\
+APR4 & mass & 10000 & 2.241521 & 1.401687 & 74.491 & 5.411172 & 2.121668 & 10.9119\\
+APR4 & mass & 100000 & 2.193438 & 1.385446 & 75.406 & 5.261463 & 2.082682 & 10.7217\\
+APR4 & gradient & 1 & 2.188001 & 1.384070 & 75.484 & 5.245387 & 2.078144 & 10.6827\\
+APR4 & gradient & 367 & 2.188160 & 1.384238 & 75.474 & 5.246427 & 2.078305 & 10.6827\\
+APR4 & gradient & 1000 & 2.189168 & 1.384032 & 75.486 & 5.248500 & 2.079323 & 10.6832\\
+APR4 & gradient & 10000 & 2.248766 & 1.370089 & 76.277 & 5.327196 & 2.141379 & 10.7297\\
+APR4 & gradient & 100000 & 2.198771 & 1.379310 & 75.753 & 5.243779 & 2.090335 & 10.6985\\
+\midrule
+SLy & mass & 1000 & 2.049739 & 1.000559 & 99.934 & 0.237140 & 2.049739 & 9.9802\\
+SLy & mass & 10000 & 2.098219 & 1.011216 & 98.689 & 1.067392 & 2.098073 & 10.2392\\
+SLy & mass & 100000 & 2.053290 & 1.000523 & 99.939 & 0.229765 & 2.053289 & 10.0132\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Turning-point heuristic}
+On the 53-point scan grid every sequence has exactly one sign change of $dM/d\rho_c$, at its mass maximum. The
+branch with $dM/d\rho_c>0$ runs from the grid floor $\log_{10}\rho_{0c}=14.55$ ($M=0.23\,\Msun$ APR4,
+$0.29\,\Msun$ SLy, $0.70\,\Msun$ H4; lower densities were not computed) to the refined maximum, and the 1.4 and
+$2.0\,\Msun$ points are on that branch in all 33 sequences. When the optimizer and root-finder points are
+included, additional sign flips appear; all lie within $\pm\ee{2}{-4}$~dex of the peak, with reversal steps
+$\le\ee{2.1}{-7}\,\Msun$, below the $\ee{6.4}{-7}\,\Msun$ refinement floor (Sect.~\ref{sec:conv}). They are
+numerical noise on a flat maximum, not additional turning points; the peak location itself is resolved only
+to about $10^{-4}$~dex (\file{stellar_summary.csv}; \file{causality_stability_log.txt}). The lower end of this
+branch is the grid limit, not a physical stability boundary. For the modified equations the result is a
+heuristic, not established radial stability.
+
+\subsection{Illustrative NICER overlay}
+Figure~\ref{fig:mr} shows the 33 sequences with the three plotted NICER references of Table~\ref{tab:nicer}.
+TAL curves are solid and GR curves dashed up to the causal endpoint; the continuation to the sequence maximum is
+dotted and faded and is a potentially acausal benchmark of the published fit. Open circles mark TAL and open
+squares GR causal endpoints; markers appear only on sequences that cross the onset (APR4: 11 of 11; SLy: 3 of
+11; H4: none). The overlay is a visual comparison with approximate ellipses of GR-derived posteriors; it is not a
+TAL pulse-profile likelihood or a Bayes factor, and rotation, which changes equatorial radius and maximum mass,
+is not modelled.
+
+\begin{sidewaysfigure}
+\centering
+\includegraphics[width=\textheight]{figures/mr_nicer.pdf}
+\caption[]{Conditional mass--radius sequences for SLy, APR4 and H4 (Read fits), top row mass-source ansatz,
+bottom row gradient ansatz, one column per $L$. Solid: TAL; dashed: GR, each up to the causal endpoint;
+dotted, faded: potentially acausal continuation to the sequence maximum. Shading: independent, symmetrized
+Gaussian joint 68\,\%/95\,\% approximations of the GR-derived NICER results (not published posterior
+contours, not a TAL likelihood). Horizontal line: nominal $2\,\Msun$ mass-capability check. Modified-branch
+radial stability is not established. Package file \file{mr_nicer.pdf}, reproduced unchanged.}
+\label{fig:mr}
+\end{sidewaysfigure}
+
+\subsection{Sirius B}
+With $R_\odot=\ee{6.957}{8}$~m, $R_B=\ee{5.586471}{6}$~m and the compactness is $\ee{2.69079}{-4}$. The exact
+exterior Schwarzschild expression gives $v_{\mathrm{GR}}=80.70055$~km\,s$^{-1}$ with $\sigma_{\mathrm{GR}}=1.4080$~km\,s$^{-1}$;
+the measured-minus-GR residual is $-0.05055\pm1.60481$~km\,s$^{-1}$ after adding the redshift measurement
+error. The approximate two-sided-95\,\% positive extra-shift allowance is 3.0949~km\,s$^{-1}$; with the
+larger quoted redshift-mass uncertainty it is 4.1645~km\,s$^{-1}$ (\file{wd_summary.json}). Both are approximate
+Gaussian allowances, not a covariance-aware posterior on $L$; mass and radius share astrometric inputs.
+
+At $L=2R_B=\ee{1.1172942}{7}$~m the all-enclosed formula adds approximately 9.63~km\,s$^{-1}$, larger than either
+allowance. Holding the GR exterior and the dynamical interpretation fixed, the profile-independent conditional
+exclusion is $\ee{1.117}{7}\lesssim L\lesssim\ee{3.477}{7}$~m with direct independent-error propagation, and
+$\ee{1.117}{7}\lesssim L\lesssim\ee{2.584}{7}$~m with the more conservative quoted-mass allowance
+(\file{numerical_diagnostics.json}, \file{profile_independent_WD_band}). These are a subset of the possible
+excluded band under this specific additive-clock model, not global bounds on $L$.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/sirius_redshift.png}
+\caption[]{Sirius~B: additional differential redshift under the conditional additive-clock coupling with the GR
+exterior retained, for WD polytropes $n=1.5$ and $n=3$ (Sirius~A $n=3$), versus $L$. Dashed: approximate
+95\,\% extra-shift upper allowance. The curve falls as $1/L$ once the whole white dwarf is enclosed, so no
+monotonic upper limit on $L$ follows. Package file \file{sirius_redshift.png} (data:
+\file{sirius_redshift.csv}), reproduced unchanged.}
+\label{fig:sirius}
+\end{figure}
+
+For the illustrative profiles (Table~\ref{tab:wd}), the sampled peak extra shifts are about 11.56~km\,s$^{-1}$
+at $L\approx\ee{8.25}{6}$~m for $n=1.5$ and 13.57~km\,s$^{-1}$ at $L\approx\ee{7.26}{6}$~m for $n=3$
+(Fig.~\ref{fig:sirius}); these are dimensionless clock corrections of order $\ee{4}{-5}$, not percent-level
+factors. At 100~km even the larger illustrative shift is only 0.0076~m\,s$^{-1}$, compared with the measured
+770~m\,s$^{-1}$ redshift error. The sampled curves therefore do not constrain any of the $L\le100$~km values,
+and once the whole white dwarf is enclosed the extra shift decreases as $1/L$: there is no monotonic upper
+limit on $L$ from this finite-source argument. The very small-$L$ entries are idealized zero-density-surface
+numbers, not atmosphere-resolved predictions.
+
+\begin{table}[t]
+\centering
+\caption[]{Extra surface redshift of Sirius~B for the illustrative polytropes. Sources: \file{sirius_redshift.csv};
+\file{note_HU_EN.md} \S5.}
+\label{tab:wd}
+\begin{tabular}{rcc}
+\toprule
+$L$ (m) & $\delta v_B$ (km\,s$^{-1}$), $n=1.5$ & $\delta v_B$ (km\,s$^{-1}$), $n=3$\\
+\midrule
+1 & $\ee{2.4}{-23}$ & $\ee{3.1}{-34}$\\
+367 & $\ee{2.3}{-14}$ & $\ee{2.0}{-21}$\\
+1000 & $\ee{7.6}{-13}$ & $\ee{3.0}{-19}$\\
+10000 & $\ee{2.4}{-9}$ & $\ee{3.0}{-14}$\\
+100000 & $\ee{7.6}{-6}$ & $\ee{3.1}{-9}$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Convergence}\label{sec:conv}
+Over the 66 refinement comparisons the largest differences were $\ee{6.43}{-7}\,\Msun$ in mass and
+$\ee{3.92}{-6}$~km in radius; the estimated fixed-mass radius difference near $1.4\,\Msun$ was at most
+$\ee{4.10}{-6}$~km, and the refined exponent fixed-point residual at most $\ee{4.41}{-8}$
+(\file{convergence.csv}). For the causal endpoints and core boundaries the maximum absolute differences were
+$\ee{8.5}{-7}\,\Msun$ (endpoint mass), $\ee{3.8}{-6}$~km (endpoint radius) and $\ee{7.0}{-7}$~km (core
+boundary) (\file{causal_endpoint_convergence.csv}). The exact-integral cross-check agrees with the production
+convolution to within $\ee{9.0}{-5}$ relative in all 15 cases (\file{numerical_diagnostics.json}). These are
+tested changes, not rigorous global error bounds; numerical precision is not EOS accuracy, and the Read fits
+themselves differ from the microscopic tabulations.
+
+\subsection{Reproduction of the V21 run}
+The scripts were run as five commands: three independent \file{--eos} runs, then \file{--combine}, then
+\file{diagnostics.py} with Python 3.13.5, NumPy 2.5.4, SciPy 1.18.1, pandas 3.1.0 and matplotlib 3.11.2
+(\file{numerical_diagnostics.json}; \file{README.txt}). Relative to the earlier run (Python 3.12.3, pandas 3.0.6)
+the outputs are numerically, not byte-for-byte, reproduced: relative $M_{\max}$ change $\le\ee{1.7}{-7}$,
+fixed-mass radii $\le\ee{1.2}{-7}$ relative ($\le\ee{1.4}{-6}$~km), radius shifts $\le\ee{1.8}{-6}$~km. The peak
+central density moved by $\le\ee{1.4}{-4}$~dex on the flat maximum, so the radius at $M_{\max}$ moved by
+$\le\ee{9.4}{-4}$~km, and \file{mr_sequences.csv} has 3113 rather than 3103 rows. All headline numbers are
+unchanged at their quoted precision (\file{note_HU_EN.md} \S7.3).
+
+\section{Discussion}
+\paragraph{Status of the results.} Within the stated conditional model, a locally centred top-hat produces
+percent-level clock factors in neutron stars but not in white dwarfs or the Sun. The resulting radius shifts at
+fixed mass are smaller than the spread of three standard EOS fits at 1.4 and $2.0\,\Msun$. These are sensitivity
+calculations, not detections, and they do not establish a closed physical consistency of TAL.
+
+\paragraph{Limitations and open items.}
+\begin{enumerate}[leftmargin=*,itemsep=2pt]
+\item \emph{Coupling consistency (task 50aa2db0).} Open. The two ans\"atze are not derived from a complete TAL
+field equation; task 50aa2db0 may change which insertion, if any, is admissible.
+\item \emph{Radial stability.} The $dM/d\rho_c>0$ test is a heuristic. The perturbation operator, boundary
+conditions and mode frequencies of the modified equations have not been computed; the \file{stable_branch_*}
+fields must be read with this restriction.
+\item \emph{Causal EOS completion.} Not done. APR4 is superluminal above $\rho_0=\ee{1.4458}{15}$~g\,cm$^{-3}$ in
+GR and in all modified branches; SLy marginally in three mass-source maxima. \file{M_max_causal_Msun} is the
+endpoint of the fit's causal range, not the maximum mass of a causally completed EOS.
+\item \emph{NICER inference.} The overlay uses approximate ellipses of GR-derived posteriors; no TAL
+pulse-profile likelihood, Bayes factor or rotating stellar model was computed.
+\item \emph{Low densities.} The branch below $\log_{10}\rho_{0c}=14.55$ is not scanned.
+\item \emph{Sirius~B.} The additive clock coupling and the retained GR exterior are separate assumptions; the V21
+causality extension does not establish them. Correlated astrometric errors, atmospheric systematics or a
+replacement rather than additive law could change the inferred band.
+\item \emph{Model choices.} Which density enters TAL ($\epsilon/c^2$ versus $\rho_0$), Euclidean versus
+proper-volume averaging, and the mass-source versus gradient coupling are modelling choices, not uncertainty
+bars.
+\end{enumerate}
+
+\section{Conclusion}
+For three piecewise-polytropic EOS fits and five averaging radii, the TAL factor $f_L=\exp(-\gamma_L\bar\rho_L)$
+with a locally centred, self-consistently recomputed top-hat was inserted into the stellar equilibrium equations
+in two labelled ways. The largest fixed-mass radius shift is 0.164~km at $1.4\,\Msun$ (three-EOS GR spread
+2.632~km) and 0.623~km at $2.0\,\Msun$ (spread 1.557~km), all in the causal range of the fits; radius alone
+therefore does not identify TAL in this comparison. APR4 maxima lie above its acausal onset already in GR and are
+reported only as labelled benchmarks, with causal endpoints given separately. Under a separately assumed
+additive clock coupling, Sirius~B excludes only a finite stellar-scale band of $L$ and leaves the 1~m--100~km
+values unconstrained. Task 50aa2db0, a full radial-mode stability analysis, a causal EOS completion and a TAL
+NICER inference remain open. No detection claim or unconditional bound on $L$ is made.
+
+\section*{Data availability}
+All inputs, outputs and the note are archived in Zenodo record V21, ``Time Attraction Law V21 --- final
+academy-verified package'', doi:10.5281/zenodo.23602501, published 2026-10-23 \cite{v21} (files
+\file{ns_tal_V21_2026-10-23 (3).zip} and \file{note_HU_EN (3).md}). The identical package is GitHub release V19,
+directory \file{V21/} of \url{https://github.com/unbekanntedavid-glitch/Time-Attraction}, commit
+\texttt{\seqsplit{0478d663a0e4a89afdb69dc57b6f76bdc0c8af94}} \cite{gh}; the package zip \file{ns_tal_V21_2026-10-23.zip} has SHA-256
+\texttt{\seqsplit{dc1768aa8148fe989d142256ed8c27518042ed6fecf09b4cbfd0dd68e43de56d}}, and \file{SHA256SUMS.txt} lists the 19
+package files. The previous releases are Zenodo V20 (GitHub V18), doi:10.5281/zenodo.23540741 \cite{v20}, and V19,
+doi:10.5281/zenodo.23497128 \cite{v19}. All materials are licensed under CC BY-NC 4.0.
+
+\section*{Code availability}
+The calculation is reproduced by \file{stellar_tal.py} and \file{diagnostics.py} in the package, written in
+Python~3 with NumPy \cite{numpy}, SciPy \cite{scipy}, pandas and matplotlib. No network access, external EOS library or fitted
+TAL parameter is needed. The commands are
+\file{python3 stellar_tal.py --eos SLy}, \file{--eos APR4}, \file{--eos H4}, then
+\file{python3 stellar_tal.py --combine} and \file{python3 diagnostics.py} (\file{README.txt}). Figures~\ref{fig:mr}
+and~\ref{fig:sirius} are the package figures, included unchanged.
+
+\section*{Declarations}
+\textbf{Funding.} No funding was received for this work.
+\textbf{Competing interests.} The author has no competing interests to declare.
+\textbf{Author contributions.} D.\,Sz.\ is the sole author.
+\textbf{Ethics approval, consent.} Not applicable.
+\textbf{Licence.} CC BY-NC 4.0; all rights, including commercial rights, remain with the author.
+
+\appendix
+\section{Audit fixes and archive bookkeeping}
+The V21 package was audited before release (\file{note_HU_EN.md} \S7.4). The fixes were:
+H1, figure styles and causal endpoint markers as described for Fig.~\ref{fig:mr};
+H2, the core radius taken as the areal radius of the $c_s^2=c^2$ boundary from the dense ODE solution, with the
+previous sampled value retained in separate columns as a lower estimate (it is exceeded by up to 10.68~m at
+$M_{\max}$ and 17.6~m over all 654 acausal sequence points);
+H3, \file{plot_label} used in the legend and caption and the fail-loud symmetrized-error check;
+H4, five executable commands in \file{README.txt}; and the endpoint/core-boundary refinement tests of
+Sect.~\ref{sec:conv}.
+
+Archive count of acausal points: selecting the \file{acausal_point=True} rows of \file{mr_sequences.csv} whose
+\file{log10_rho0c_cgs} is less than or equal to the peak central density stored in \file{stellar_summary.csv}
+for the same EOS, coupling and $L$, compared as exact decimal values without additional rounding or tolerance,
+gives 182 unique rows (173 APR4, 9 SLy). This is an archive bookkeeping count; repeated appearances across figure
+panels are not counted again. The clarification of this rule changed only \file{note_HU_EN.md},
+\file{README.txt} and \file{SHA256SUMS.txt}; code, numerical tables, figures and conclusions are unchanged.
+
+\begin{thebibliography}{99}\small
+\bibitem{will} C. M. Will, The confrontation between general relativity and experiment, Living Rev. Relativ. 17, 4
+(2014). doi:10.12942/lrr-2014-4
+\bibitem{tal} D. Szabolcsi, Az Id\H{o}vonz\'as T\"orv\'enye: $f_L=\exp(-\gamma_L\bar\rho_L)$ [The law of time
+attraction: density-dependent local time scale], Zenodo (2026), file \file{Time_Attraction.pdf}.
+doi:10.5281/zenodo.23066993
+\bibitem{v20} D. Szabolcsi, Time Attraction Law V20 --- audited release with independent third-round review,
+Zenodo, version v20 (2026). doi:10.5281/zenodo.23540741
+\bibitem{v19} D. Szabolcsi, Time-Attraction Law seventh model independent verification, Zenodo (2026).
+doi:10.5281/zenodo.23497128
+\bibitem{v21} D. Szabolcsi, Time Attraction Law V21 --- final academy-verified package, Zenodo (2026).
+doi:10.5281/zenodo.23602501
+\bibitem{gh} D. Szabolcsi, Time-Attraction, GitHub repository, commit \texttt{\seqsplit{0478d663a0e4a89afdb69dc57b6f76bdc0c8af94}}
+(directories V21/ and V18/, 2026). \url{https://github.com/unbekanntedavid-glitch/Time-Attraction}
+\bibitem{read} J. S. Read, B. D. Lackey, B. J. Owen, J. L. Friedman, Constraints on a phenomenologically
+parametrized neutron-star equation of state, Phys. Rev. D 79, 124032 (2009). doi:10.1103/PhysRevD.79.124032
+\bibitem{salmi} T. Salmi et al., The Radius of the High-mass Pulsar PSR J0740+6620 with 3.6 yr of NICER Data,
+Astrophys. J. 974, 294 (2024). doi:10.3847/1538-4357/ad5f1f
+\bibitem{choudhury} D. Choudhury et al., A NICER View of the Nearest and Brightest Millisecond Pulsar:
+PSR J0437$-$4715, Astrophys. J. Lett. 971, L20 (2024). doi:10.3847/2041-8213/ad5a6f
+\bibitem{kini} Y. Kini et al., A NICER View of PSR J0030+0451: Updated Constraints from Six Years of NICER
+Observations (2026). arXiv:2602.23743
+\bibitem{miller} M. C. Miller et al., The Radius of PSR J0437$-$4715 from NICER Data (2025). arXiv:2512.08790
+\bibitem{joyce} S. R. G. Joyce et al., The gravitational redshift of Sirius B, Mon. Not. R. Astron. Soc. 481,
+2361--2370 (2018). doi:10.1093/mnras/sty2404
+\bibitem{atnf} R. N. Manchester, G. B. Hobbs, A. Teoh, M. Hobbs, The ATNF Pulsar Catalogue, Astron. J. 129, 1993
+(2005); catalogue v2.6.5, \url{https://www.atnf.csiro.au/research/pulsar/psrcat/}
+\bibitem{bond} H. E. Bond et al., The Sirius System and Its Astrophysical Puzzles: Hubble Space Telescope and
+Ground-based Astrometry (2017). doi:10.3847/1538-4357/aa6af8; arXiv:1703.10625
+\bibitem{numpy} C. R. Harris et al., Array programming with NumPy, Nature 585, 357--362 (2020).
+doi:10.1038/s41586-020-2649-2
+\bibitem{scipy} P. Virtanen et al., SciPy 1.0: fundamental algorithms for scientific computing in Python, Nat.
+Methods 17, 261--272 (2020). doi:10.1038/s41592-019-0686-2
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,241 @@
+{
+ "gamma0_check": true,
+ "rho_primary_disk_bulge": {
+  "min": 0.0,
+  "median": 1.4483755372638323e-21,
+  "max": 5.907887281172619e-18,
+  "n_zero": 141,
+  "L_unity_Mpc_median": 27.641074834585233,
+  "L_unity_Mpc_p05": 3.0234722153537836,
+  "L_unity_Mpc_p95": 488.6856265839707
+ },
+ "rho_enclosed_baryonic": {
+  "min": 2.9073529796435097e-24,
+  "median": 7.926199753809567e-22,
+  "max": 8.380012135023259e-18,
+  "n_zero": 0,
+  "L_unity_Mpc_median": 42.24105913315228,
+  "L_unity_Mpc_p05": 3.7749656813157983,
+  "L_unity_Mpc_p95": 204.0514919895504
+ },
+ "models": {
+  "tal_fL": {
+   "label": "PRIMARY: L0=1.2e-11 m (favoured), V^2=f_L Vbar^2",
+   "gamma_m3_per_kg": 1.069367078753088e-49,
+   "L_m": 1.2e-11,
+   "coupling": "forward",
+   "max_abs_fL_minus_1": 0.0,
+   "max_gammaL_rho": 6.317700163470087e-67,
+   "points_with_Vpred_identical_to_vbar": 2596,
+   "n_points": 2596,
+   "n_gal": 123,
+   "median_chi2_red": 3.143274703225578
+  },
+  "tal_fL_L367m": {
+   "label": "upper bound L=367 m",
+   "gamma_m3_per_kg": 1.0002221004873239e-22,
+   "L_m": 367.0,
+   "coupling": "forward",
+   "max_abs_fL_minus_1": 0.0,
+   "max_gammaL_rho": 5.909199425816822e-40,
+   "points_with_Vpred_identical_to_vbar": 2596,
+   "n_points": 2596,
+   "n_gal": 123,
+   "median_chi2_red": 3.143274703225578
+  },
+  "tal_fL_g1e-22": {
+   "label": "upper bound gamma=1e-22",
+   "gamma_m3_per_kg": 1e-22,
+   "L_m": 366.959251348172,
+   "coupling": "forward",
+   "max_abs_fL_minus_1": 0.0,
+   "max_gammaL_rho": 5.907887281172619e-40,
+   "points_with_Vpred_identical_to_vbar": 2596,
+   "n_points": 2596,
+   "n_gal": 123,
+   "median_chi2_red": 3.143274703225578
+  },
+  "tal_fL_L0_2p36kpc": {
+   "label": "v17 L0=2.36 kpc",
+   "gamma_m3_per_kg": 3938124248172.9614,
+   "L_m": 7.282199091159999e+19,
+   "coupling": "forward",
+   "max_abs_fL_minus_1": 2.326572350630496e-05,
+   "max_gammaL_rho": 2.326599415745852e-05,
+   "points_with_Vpred_identical_to_vbar": 141,
+   "n_points": 2596,
+   "n_gal": 123,
+   "median_chi2_red": 3.1432747230918934
+  },
+  "tal_fL_L0_2p36kpc_inv": {
+   "label": "v17 L0=2.36 kpc, inverse",
+   "gamma_m3_per_kg": 3938124248172.9614,
+   "L_m": 7.282199091159999e+19,
+   "coupling": "inverse",
+   "max_abs_fL_minus_1": 2.326572350630496e-05,
+   "max_gammaL_rho": 2.326599415745852e-05,
+   "points_with_Vpred_identical_to_vbar": 141,
+   "n_points": 2596,
+   "n_gal": 123,
+   "median_chi2_red": 3.1432746833592637
+  },
+  "tal_fL_L64Mpc": {
+   "label": "L=64.2 Mpc fwd",
+   "gamma_m3_per_kg": 2.914308105831587e+21,
+   "L_m": 1.9810050070019998e+24,
+   "coupling": "forward",
+   "max_abs_fL_minus_1": 1.0,
+   "max_gammaL_rho": 17217.4037918607,
+   "points_with_Vpred_identical_to_vbar": 141,
+   "n_points": 2596,
+   "n_gal": 123,
+   "median_chi2_red": 12.620305093055713
+  },
+  "tal_fL_L64Mpc_inv": {
+   "label": "L=64.2 Mpc inv",
+   "gamma_m3_per_kg": 2.914308105831587e+21,
+   "L_m": 1.9810050070019998e+24,
+   "coupling": "inverse",
+   "max_abs_fL_minus_1": 1.0,
+   "max_gammaL_rho": 17217.4037918607,
+   "points_with_Vpred_identical_to_vbar": 141,
+   "n_points": 2596,
+   "n_gal": 123,
+   "median_chi2_red": 1.9170094149245297e+19
+  },
+  "tal_fL_L85Mpc": {
+   "label": "L=85.3 Mpc fwd",
+   "gamma_m3_per_kg": 5.144740459079433e+21,
+   "L_m": 2.632082976593e+24,
+   "coupling": "forward",
+   "max_abs_fL_minus_1": 1.0,
+   "max_gammaL_rho": 30394.546723129562,
+   "points_with_Vpred_identical_to_vbar": 141,
+   "n_points": 2596,
+   "n_gal": 123,
+   "median_chi2_red": 14.409074690251042
+  },
+  "tal_fL_L85Mpc_inv": {
+   "label": "L=85.3 Mpc inv",
+   "gamma_m3_per_kg": 5.144740459079433e+21,
+   "L_m": 2.632082976593e+24,
+   "coupling": "inverse",
+   "max_abs_fL_minus_1": 1.0,
+   "max_gammaL_rho": 30394.546723129562,
+   "points_with_Vpred_identical_to_vbar": 141,
+   "n_points": 2596,
+   "n_gal": 123,
+   "median_chi2_red": 1.2101985173624037e+34
+  },
+  "tal_fL_g1e23": {
+   "label": "gamma=1e23 fwd",
+   "gamma_m3_per_kg": 1e+23,
+   "L_m": 1.1604270427304375e+25,
+   "coupling": "forward",
+   "max_abs_fL_minus_1": 1.0,
+   "max_gammaL_rho": 590788.7281172618,
+   "points_with_Vpred_identical_to_vbar": 141,
+   "n_points": 2596,
+   "n_gal": 123,
+   "median_chi2_red": 21.505444010614724
+  },
+  "tal_fL_g1e23_inv": {
+   "label": "gamma=1e23 inv",
+   "gamma_m3_per_kg": 1e+23,
+   "L_m": 1.1604270427304375e+25,
+   "coupling": "inverse",
+   "max_abs_fL_minus_1": 1.0,
+   "max_gammaL_rho": 590788.7281172618,
+   "points_with_Vpred_identical_to_vbar": 141,
+   "n_points": 2596,
+   "n_gal": 123,
+   "median_chi2_red": Infinity
+  },
+  "tal_fL_enc_L85Mpc_inv": {
+   "label": "enclosed rho, L=85.3 Mpc inv",
+   "gamma_m3_per_kg": 5.144740459079433e+21,
+   "L_m": 2.632082976593e+24,
+   "coupling": "inverse",
+   "max_abs_fL_minus_1": 1.0,
+   "max_gammaL_rho": 43112.98747863078,
+   "points_with_Vpred_identical_to_vbar": 0,
+   "n_points": 2596,
+   "n_gal": 123,
+   "median_chi2_red": 53729010242456.42
+  },
+  "tal_fL_enc_L64Mpc_inv": {
+   "label": "enclosed rho, L=64.2 Mpc inv",
+   "gamma_m3_per_kg": 2.914308105831587e+21,
+   "L_m": 1.9810050070019998e+24,
+   "coupling": "inverse",
+   "max_abs_fL_minus_1": 1.0,
+   "max_gammaL_rho": 24421.937292065348,
+   "points_with_Vpred_identical_to_vbar": 0,
+   "n_points": 2596,
+   "n_gal": 123,
+   "median_chi2_red": 113530790.3114947
+  },
+  "tal_fL_Lunity_fwd": {
+   "label": "data-derived median L_unity=27.64 Mpc (primary_disk_bulge), forward",
+   "gamma_m3_per_kg": 5.4022572575004505e+20,
+   "L_m": 8.529144493182293e+23,
+   "coupling": "forward",
+   "max_abs_fL_minus_1": 1.0,
+   "max_gammaL_rho": 3191.592694120938,
+   "points_with_Vpred_identical_to_vbar": 141,
+   "n_points": 2596,
+   "n_gal": 123,
+   "median_chi2_red": 7.257770429484466
+  },
+  "tal_fL_Lunity_inv": {
+   "label": "data-derived median L_unity=27.64 Mpc (primary_disk_bulge), inverse",
+   "gamma_m3_per_kg": 5.4022572575004505e+20,
+   "L_m": 8.529144493182293e+23,
+   "coupling": "inverse",
+   "max_abs_fL_minus_1": 1.0,
+   "max_gammaL_rho": 3191.592694120938,
+   "points_with_Vpred_identical_to_vbar": 141,
+   "n_points": 2596,
+   "n_gal": 123,
+   "median_chi2_red": 1935.207707547107
+  },
+  "tal_fL_enc_Lunity_fwd": {
+   "label": "data-derived median L_unity=42.24 Mpc (enclosed_baryonic), forward",
+   "gamma_m3_per_kg": 1.2616387110207813e+21,
+   "L_m": 1.3034228916486327e+24,
+   "coupling": "forward",
+   "max_abs_fL_minus_1": 1.0,
+   "max_gammaL_rho": 10572.54770836925,
+   "points_with_Vpred_identical_to_vbar": 0,
+   "n_points": 2596,
+   "n_gal": 123,
+   "median_chi2_red": 8.400269986621971
+  },
+  "tal_fL_enc_Lunity_inv": {
+   "label": "data-derived median L_unity=42.24 Mpc (enclosed_baryonic), inverse",
+   "gamma_m3_per_kg": 1.2616387110207813e+21,
+   "L_m": 1.3034228916486327e+24,
+   "coupling": "inverse",
+   "max_abs_fL_minus_1": 1.0,
+   "max_gammaL_rho": 10572.54770836925,
+   "points_with_Vpred_identical_to_vbar": 0,
+   "n_points": 2596,
+   "n_gal": 123,
+   "median_chi2_red": 7230.672169324865
+  }
+ },
+ "fitted": {
+  "inverse": {
+   "coupling": "inverse",
+   "L_Mpc": 0.4731512589614805,
+   "median_chi2_red": 3.1424772840383786,
+   "mean_chi2_red": 4.326538838318905
+  },
+  "forward": {
+   "coupling": "forward",
+   "L_Mpc": 2.371373705661655,
+   "median_chi2_red": 2.70827479215231,
+   "mean_chi2_red": 4.176121920388782
+  }
+ }
+}

@@ -1,5 +1,11 @@
 # Changelog
 
+## Time Attraction Law — Scalar-Tensor Yukawa Fit, V24 — 2026-10-27
+
+This is the V24 version of the Time Attraction Law (TAL) research, an independent theoretical physics program developing a scalar-tensor/dilaton framework for gravity. It documents derivation steps 1–20: dilaton definitions from V19–V23, Einstein↔Jordan/Clock conformal and disformal transformations, the Helmholtz–Yukawa action and the massive dilaton Klein–Gordon equation, covariant conservation and modified hydrostatic equilibrium, the TAL↔scalar-tensor/Brans–Dicke coupling dictionary with PPN parameters, and SPARC galactic consistency analysis (175 galaxies: 0 negative-density points with the 3D top-hat/Yukawa approach vs 239/303 with the derivative formula; NGC 3198 control: V_obs=146 km/s, V_bar=88.53 km/s, C_req=2.720). All Python programs, input and output data files, CSV/JSON tables, and SHA-256 checksums are included for full reproducibility. License: CC BY-NC 4.0.
+
+- Added [`V24/`](V24/): Markdown chapters `step1`–`step22`, Python programs, input and output data files, CSV/JSON tables, `README.md`, `MANIFEST.txt`, `SHA256SUMS.txt` (313 verified entries), and `scalar-tensor-yukawa-fit_audit_package.zip`.
+
 ## V23 (Zenodo V23) — 2026-10-25
 
 Zenodo V23: [10.5281/zenodo.23639084](https://doi.org/10.5281/zenodo.23639084)  

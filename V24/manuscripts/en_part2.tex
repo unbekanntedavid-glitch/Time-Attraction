@@ -1,0 +1,191 @@
+% ==================== PAGE 8: CHAPTER 6 (H.E.S.S. GAMMA-RAY TIMING) ====================
+\chaphead{Chapter 6: Very-High-Energy Gamma-Ray Timing --- H.E.S.S. Data Analysis}{Multi-Source Arrival-Time Dispersion Audits (PKS 2155-304, Mrk 501, Vela, Crab, GRB 190114C) and Predictions}
+
+A foundational pillar of my research is that the \textbf{Time Attraction Law} must not merely fit galactic rotation curves retrospectively; it must generate falsifiable predictions for photon propagation across cosmological and Galactic baselines that differ from standard $\Lambda$CDM. In Version 17 (DOI \texttt{10.5281/zenodo.19666220}), I audited Very-High-Energy (VHE, $E \sim 0.1\text{--}10\,\text{TeV}$) gamma-ray arrival-time datasets from Imaging Atmospheric Cherenkov Telescopes, focusing on H.E.S.S. and MAGIC observations.
+
+\noindent{\bfseries\color{navy}1. Physical Mechanism: Integrated Temporal Carrier Delay Along the Line of Sight}\par
+When a VHE gamma-ray photon traverses cosmic voids, filaments, host-galaxy halos, and Galactic interstellar structures along a line of sight $s \in [0, D]$, the local refractive index of the temporal carrier is $n_t(s) = f_L(s)^{-1} = \exp(+\gamma_L \bar{\rho}_L(s))$. In the pure metric (geometric) limit where all photon energies couple identically to the effective lapse $f_L(s)$, the arrival time experiences an achromatic Shapiro-like excess delay $\Delta t_{\text{geom}} = c^{-1}\int_0^D \bigl[\exp(\gamma_L\bar{\rho}_L(s)) - 1\bigr]\,ds$. However, if high-energy photon wavepackets of energy $E$ experience finite-wavelength dispersion when scattering across spatial gradients $\nabla\bar{\rho}_L$ on scale $L$, the energy-dependent arrival-time lag between energy channels $E_1$ and $E_2$ takes the parameterized form:
+\begin{equation}
+  \Delta t(E_1, E_2) \;=\; \tau_n\,\frac{E_2^n - E_1^n}{E_{\text{ref}}^n}\int_0^D \gamma_L\,\bar{\rho}_L(s)\,(1+z(s))^n\,ds, \qquad n \in \{1, 2\},
+\end{equation}
+where $\tau_n$ is the dispersion coupling coefficient and $D(z)$ is the redshift-weighted comoving path.
+
+\noindent{\bfseries\color{navy}2. Multi-Source H.E.S.S. Audit: Eliminating Single-Flare Confirmation Bias}\par
+In earlier exploratory notes, an apparent spectral-temporal lag in the famous July 28, 2006 H.E.S.S. flare of the blazar \textbf{PKS 2155-304} ($z = 0.116$, observed lag $\Delta t \approx 20\text{--}30\,\text{s}$ between $0.2\text{--}0.8\,\text{TeV}$ and $>0.8\,\text{TeV}$ bands) appeared encouraging. In Version 17, I asked a stricter question: \emph{does a universal line-of-sight coupling survive when tested simultaneously across multiple VHE sources at different redshifts and Galactic columns?} I assembled a five-source benchmark table:
+
+\begin{center}\vspace{-2pt}
+{\footnotesize
+\begin{tabular}{@{}>{\bfseries}p{0.21\linewidth}p{0.15\linewidth}p{0.19\linewidth}p{0.18\linewidth}p{0.21\linewidth}@{}}
+\toprule
+VHE Source & Redshift / Dist. & Energy Band ($\text{TeV}$) & Observed Lag / Bound & Audit Verdict in V17 \\
+\midrule
+PKS 2155-304 (H.E.S.S.) & $z = 0.116$ & $0.2\text{--}4.0\,\text{TeV}$ & $\Delta t \approx +28 \pm 12\,\text{s}$ & Marginal $\sim 2\sigma$ flare lag; dominated by intrinsic SSC emission profile. \\
+Mrk 501 (1997 / H.E.S.S.) & $z = 0.034$ & $0.15\text{--}10\,\text{TeV}$ & $\Delta t \approx +240 \pm 60\,\text{s}$ & Larger lag at $3.4\times$ smaller $z$ violates monotonic distance scaling! \\
+GRB 190114C (MAGIC) & $z = 0.4245$ & $0.2\text{--}1.0\,\text{TeV}$ & $|\Delta t / \Delta E| \le 19\,\text{s/TeV}$ & Stringent cosmological bound ruling out large linear vacuum dispersion. \\
+Crab Pulsar (H.E.S.S./MAGIC) & $d \approx 2.0\,\text{kpc}$ & $0.1\text{--}1.5\,\text{TeV}$ & $|\Delta t| < 0.4\,\text{ms}$ & Tight Galactic disk bound through dense ISM ($\bar{n}_H \sim 1\,\text{cm}^{-3}$). \\
+Vela Pulsar (H.E.S.S. II) & $d \approx 0.287\,\text{kpc}$ & $0.02\text{--}0.1\,\text{TeV}$ & $|\Delta t| < 0.2\,\text{ms}$ & Sub-millisecond phase alignment across dense Vela SNR shell. \\
+\bottomrule
+\end{tabular}}
+\end{center}
+
+\noindent{\bfseries\color{navy}3. What the H.E.S.S. Audit Proves and What the Theory Predicts Forward}\par
+My V17 multi-source audit demonstrated two vital results that strengthened the scientific rigor of the program:
+\begin{itemize}\setlength{\itemsep}{1.5pt}\setlength{\parskip}{0pt}\setlength{\topsep}{1pt}
+  \item \textbf{Rejection of Naive Distance-Proportional Dispersion:} Because Mrk 501 ($z=0.034$) exhibits a larger apparent flare delay than PKS 2155-304 ($z=0.116$) while GRB 190114C ($z=0.4245$) and the Crab/Vela pulsars show tight null bounds, attributing the $28\,\text{s}$ PKS 2155-304 lag to a uniform intergalactic dispersion constant is falsified. Intrinsic blazar synchrotron self-Compton (SSC) acceleration timescales must be modeled first.
+  \item \textbf{Unique Environmental Overdensity Prediction vs.\ $\Lambda$CDM:} Unlike Lorentz-invariance-violation (LIV) models that predict a purely redshift-dependent lag $\Delta t \propto \int_0^z \frac{(1+z')\,dz'}{H(z')}$, the Time Attraction Law predicts that any genuine non-geometric timing residual must correlate with the \emph{baryonic overdensity integral} $\int \bar{\rho}_L(s)\,ds$ along lines of sight passing through rich galaxy clusters (such as Coma or Perseus) relative to cosmic voids at the same redshift.
+\end{itemize}
+\newpage
+
+% ==================== PAGE 9: CHAPTER 7 (NEUTRON-STAR MODELING IN V21) ====================
+\chaphead{Chapter 7: Neutron-Star Modeling in V21 --- TOV Sequences \& NICER}{Conditional Hydrostatic Prescriptions Across SLy, APR4, and H4 for 11 Smoothing Scales $L \in [1\,\text{m}, 100\,\text{km}]$}
+
+In Version 21 (DOI \texttt{10.5281/zenodo.23602501}), I extended the 3D spherical top-hat law to extreme nuclear matter densities ($\rho \sim 10^{14}\text{--}10^{15}\,\text{g/cm}^3$) inside neutron stars. Because the full covariant action closure (Task \texttt{50aa2db0}) remains open, I formulated and audited two explicit \textbf{conditional hydrostatic equilibrium prescriptions} on top of the static, spherically symmetric metric $ds^2 = -e^{2\Phi(r)}c^2 dt^2 + (1 - \frac{2Gm(r)}{c^2 r})^{-1}dr^2 + r^2 d\Omega^2$:
+
+\noindent{\bfseries\color{navy}1. Two Conditional Hydrostatic Modes (\texttt{mass} vs.\ \texttt{gradient}) and Exact Spherical Top-Hat Kernel}\par
+Inside a spherically symmetric star of radius $R_*$, the exact 3D top-hat average $\bar{\rho}_L(r)$ at radial coordinate $r$ is computed analytically over the intersection of the ball $B(\mathbf{x},L)$ with radial shells $r' \in [|r-L|, r+L]$, yielding $f_L(r) = \exp(-\gamma_L\bar{\rho}_L(r))$. In our audited code, the measured maximum relative deviation between the analytical shell kernel and independent 3D quadrature across all profiles is \textbf{$1.214\times 10^{-6}$}. I then integrate two conditional Tolman--Oppenheimer--Volkoff (TOV) closures:
+\begin{equation}
+  \textbf{(A) \texttt{mass} mode:}\quad \frac{dm_{\text{eff}}}{dr} = 4\pi r^2 \rho(r)\,f_L(r), \qquad
+  \textbf{(B) \texttt{gradient} mode:}\quad \frac{d\Phi_{\text{eff}}}{dr} = f_L(r)\,\frac{G\bigl(m(r) + 4\pi r^3 P(r)/c^2\bigr)}{c^2 r\bigl(r - 2Gm(r)/c^2\bigr)},
+\end{equation}
+with hydrostatic balance $\frac{dP}{dr} = -(\rho + P/c^2)c^2 \frac{d\Phi_{\text{eff}}}{dr}$. In both modes, $0 < f_L(r) \le 1$ softens the effective gravitational pull at high nuclear density once $L \gtrsim 100\,\text{m}$, allowing stable stars to support larger maximum masses and radii than in standard GR.
+
+\noindent{\bfseries\color{navy}2. Audited Grid: 3 Equations of State $\times$ 11 Smoothing Scales = 33 Sequences (182 / 769 Models)}\par
+I integrated 33 equilibrium sequences across three nuclear equations of state---\textbf{SLy} (nucleonic), \textbf{APR4} (variational nucleonic; causal sound-speed limit $c_s = c$ reached at rest-mass density \textbf{$\rho_0 \approx 1.4458\times 10^{15}\,\text{g/cm}^3$}), and \textbf{H4} (stiff hyperonic)---over 11 logarithmically spaced smoothing scales $L \in [1\,\text{m}, 100\,\text{km}]$. The baseline V21 archive table contains \textbf{182 equilibrium models}, while the dense diagnostic stability grid comprises \textbf{769 stellar models in total} (including all \textbf{33 exact causal-limit endpoints} where $c_s/c = 1$).
+
+\begin{center}\vspace{-4pt}
+  \includegraphics[height=44mm]{figures/mr_nicer.pdf}\par\vspace{-3pt}
+  {\scriptsize\color{slate}\textbf{Figure 7.1:} Audited neutron-star mass--radius ($M$--$R$) sequences for SLy, APR4, and H4 across $L \in [1\,\text{m}, 100\,\text{km}]$ under conditional TOV closures, compared against NICER + XMM-Newton posteriors for PSR J0030+0451, PSR J0740+6620, and PSR J0437-4715.}
+\end{center}
+
+\noindent{\bfseries\color{navy}3. Strict Methodological Caveat on the Hydrostatic Factor $e^\nu F$}\par
+In reviewing the TOV equations, I state explicitly: \textbf{the appearance of the modified hydrostatic factor $e^\nu F$ (or $\Phi_{\text{eff}}'$) in the conditional pressure-gradient equation is an algebraic equilibrium ansatz and does not by itself derive how atomic clocks, nuclear transitions, or surface photon redshifts couple to $f_L$.} Deriving clock and spectral-line shifts uniquely requires closing the covariant matter-field action (Task \texttt{50aa2db0} and Open Task (c)).
+\newpage
+
+% ==================== PAGE 10: CHAPTER 8 (PERTURBATION CALCULATIONS & RADIAL STABILITY) ====================
+\chaphead{Chapter 8: Perturbation Calculations --- Anisotropic Stress \& Radial Stability}{Algebraic X-Sector Stress Reconstruction ($\max|p_{tX}/P_c|=0.140$) and Chandrasekhar Pulsations ($\omega_0^2$)}
+
+When the Einstein tensor $G_{\mu\nu}$ is computed from a metric whose lapse or mass function has been modified by $f_L(r)$ without a dynamical scalar field in the action, the Bianchi identity $\nabla_\mu G^{\mu\nu} \equiv 0$ combined with the modified hydrostatic equation implies that standard baryon stress-energy is not conserved on its own ($\nabla_\mu T^{\mu\nu}_{\text{matter}} \neq 0$). In Version 21 (DOI \texttt{10.5281/zenodo.23602501}), I resolved the accounting of this missing stress-energy and performed a full radial pulsation audit.
+
+\noindent{\bfseries\color{navy}1. Algebraic X-Sector Anisotropic Stress Reconstruction ($\rho_X = 0,\, p_{rX} = 0,\, p_{tX} \neq 0$)}\par
+To restore covariant conservation $\nabla_\mu\bigl(T^{\mu\nu}_{\text{matter}} + T^{\mu\nu}_X\bigr) = 0$ at the background level in the \texttt{gradient} closure, I defined the effective dark/temporal stress-energy tensor $T^\mu_{\;\nu,X} = \text{diag}(-\rho_X c^2,\, p_{rX},\, p_{tX},\, p_{tX})$. Because the mass profile $m(r)$ and radial metric component $e^{2\Lambda(r)} = (1 - 2Gm/(c^2 r))^{-1}$ match the standard GR form at fixed $\rho(r)$ while $\Phi'(r) = f_L(r)\Phi_{\text{GR}}'(r)$, the radial Einstein equation $G^r_{\;r}$ is satisfied with $\rho_X = 0$ and $p_{rX} = 0$, provided the tangential stress $p_{tX}(r)$ absorbs the radial divergence residual:
+\begin{equation}
+  p_{tX}(r) \;=\; \frac{r}{2}\,\bigl(\rho(r)c^2 + P(r)\bigr)\,\bigl(1 - f_L(r)\bigr)\,\Phi_{\text{GR}}'(r).
+\end{equation}
+Because $\Phi_{\text{GR}}'(r) = \mathcal{O}(r)$ near the stellar center ($r \to 0$), $p_{tX}(r) = \mathcal{O}(r^2)$ is strictly regular at the origin ($p_{tX}(0) = 0$). Across all 769 audited neutron-star models, the fractional tangential stress remains bounded, reaching a maximum of \textbf{$\max |p_{tX}/P_c| = 0.140$} ($14.0\%$ of central pressure). I emphasize that this X-sector reconstruction is an \emph{algebraic bookkeeping closure} of the background Bianchi identity, not yet a dynamical field equation derived from an action.
+
+\noindent{\bfseries\color{navy}2. Chandrasekhar Radial Pulsation Equations in the Frozen-$f$ Approximation}\par
+To test whether high-density neutron stars remain dynamically stable against radial collapse, I solved the Sturm--Liouville eigenvalue problem for linear Lagrangian radial displacements $\xi(r,t) = r^{-2}e^{\nu/2}u(r)e^{i\omega t}$ under the \textbf{frozen-$f$ approximation} ($\delta f_L = 0$ during rapid acoustic oscillations):
+\begin{equation}
+  \frac{d}{dr}\!\left(\mathcal{P}(r)\frac{du}{dr}\right) \;+\; \bigl[\mathcal{Q}(r) + \omega_0^2\,\mathcal{W}(r)\bigr]\,u(r) \;=\; 0, \qquad u(0)=0,\quad \Delta P(R_*)=0.
+\end{equation}
+I implemented and audited two distinct prescriptions for the Sturm--Liouville operators $(\mathcal{P}, \mathcal{Q}, \mathcal{W})$ across \textbf{all 15 APR4 diagnostic sequences} (769 models total), which ran without numerical interruption:
+\begin{itemize}\setlength{\itemsep}{1.5pt}\setlength{\parskip}{0pt}\setlength{\topsep}{1pt}
+  \item \textbf{\texttt{matter} operator (Variational \& Well-Posed):} Uses the physical fluid equilibrium gradients $P'(r)$ directly in the restoring potential $\mathcal{Q}(r)$. It remains self-adjoint, variational, and well-behaved across all 15 sequences, showing that the fundamental radial mode frequency $f_0 = \omega_0/(2\pi)$ vanishes ($\omega_0^2 = 0$) near the turning-point maximum mass $\partial M/\partial\rho_c = 0$.
+  \item \textbf{\texttt{gradient}/\texttt{metric} operator (Flagged as Non-Variational for $L \ge 367\,\text{m}$):} Substitutes the metric lapse derivative $\nu' = 2\Phi_{\text{eff}}'$ into the standard GR curvature terms of $\mathcal{Q}(r)$ without including the perturbation of the X-sector tangential stress $\delta p_{tX}$. My audit openly flags this operator as \textbf{non-positive-definite and non-variational for $L \ge 367\,\text{m}$ across 12 sequences (609 models)}, where uncompensated mismatch terms drive spurious $\omega_0^2 < 0$ eigenvalues even on the rising branch $\partial M/\partial\rho_c > 0$.
+\end{itemize}
+
+\begin{center}\vspace{-4pt}
+  \includegraphics[height=38mm]{figures/item2_f0_vs_rhoc.png}\par\vspace{-3pt}
+  {\scriptsize\color{slate}\textbf{Figure 8.1:} Audited fundamental radial pulsation frequency $f_0 = \text{sign}(\omega_0^2)\sqrt{|\omega_0^2|}/(2\pi)$ vs.\ central density $\rho_c$ across the APR4 sequences, contrasting the well-behaved variational \texttt{matter} operator against the non-variational \texttt{gradient}/\texttt{metric} operator flagged for $L \ge 367\,\text{m}$.}
+\end{center}
+\newpage
+
+% ==================== PAGE 11: CHAPTER 9 (CONDITIONAL CLOCK & REDSHIFT HYPOTHESES) ====================
+\chaphead{Chapter 9: Conditional Clock \& Redshift Hypotheses}{Sirius B Gravitational Redshift ($\Delta\chi^2$) and NICER Posteriors Under Explicit Observational Hypotheses}
+
+Because the covariant matter coupling closure (Task \texttt{50aa2db0}) is not yet derived from an action, any confrontation between the \textbf{Time Attraction Law} and spectroscopic or X-ray pulse-profile data depends on how atomic transition frequencies $\nu_{\text{atom}}$ couple to $f_L$. In Version 21 (DOI \texttt{10.5281/zenodo.23602501}), I replaced implicit assumptions with six explicit, conditional observational hypotheses:
+
+\noindent{\bfseries\color{navy}1. Taxonomy of Conditional Observational Hypotheses (H0 vs.\ H1 Families)}\par
+\begin{center}\vspace{-2pt}
+{\footnotesize
+\begin{tabular}{@{}>{\bfseries}p{0.22\linewidth}p{0.31\linewidth}p{0.42\linewidth}@{}}
+\toprule
+Hypothesis Code & Metric \& Hydrostatic Structure & Atomic Clock / Spectral Redshift Law $1 + z_{\text{surf}}$ \\
+\midrule
+H0-GR & Standard GR TOV ($f_L \equiv 1$) & Standard metric redshift $e^{-\Phi_{\text{GR}}(R_*)}$ (no direct $f_L$ clock factor). \\
+H0-mass & Conditional \texttt{mass} TOV ($m_{\text{eff}}' = 4\pi r^2\rho f_L$) & Pure metric redshift $e^{-\Phi_{\text{mass}}(R_*)}$ without extra surface clock factor. \\
+H0-gradient lapse & Conditional \texttt{gradient} TOV ($\Phi_{\text{eff}}' = f_L\Phi_{\text{GR}}'$) & Integrated modified lapse $e^{-\Phi_{\text{eff}}(R_*)}$ without direct $f_L(R_*)$ multiplier. \\
+H1-GR & Standard GR structure ($m_{\text{GR}}, R_{\text{GR}}$) & Direct surface clock modulation: $\nu_{\text{obs}}/\nu_0 = e^{\Phi_{\text{GR}}(R_*)}\,f_L(R_*)$. \\
+H1-mass & Conditional \texttt{mass} TOV structure & Combined metric + direct surface clock factor $e^{\Phi_{\text{mass}}(R_*)}\,f_L(R_*)$. \\
+H1+gradient lapse & Conditional \texttt{gradient} TOV structure & Combined modified lapse + direct clock factor $e^{\Phi_{\text{eff}}(R_*)}\,f_L(R_*)$. \\
+\bottomrule
+\end{tabular}}
+\end{center}
+
+\noindent{\bfseries\color{navy}2. Sirius B White-Dwarf Gravitational Redshift Audit ($n=1.5$ and $n=3$ Polytropes)}\par
+I tested all six hypotheses against the precision HST/STIS Balmer-line gravitational redshift of the white dwarf \textbf{Sirius B} ($M = 1.018 \pm 0.011\,M_\odot$, $R = 0.008098 \pm 0.000046\,R_\odot$, observed redshift velocity $v_{\text{obs}} = 80.65 \pm 0.77\,\text{km/s}$, GR baseline $v_{\text{GR}} \approx 80.42\,\text{km/s}$) across both non-relativistic ($n=1.5$) and relativistic ($n=3$) polytropic interior profiles:
+\begin{itemize}\setlength{\itemsep}{1.5pt}\setlength{\parskip}{0pt}\setlength{\topsep}{1pt}
+  \item \textbf{Under H0-gradient lapse (Hydrostatic-Only Coupling):} Because the exterior vacuum metric at $r \ge R_*$ is fixed by the total mass $M$ and the interior lapse integral only enters at $\mathcal{O}(GM/c^2 R_*)^2$, the maximum velocity shift across all $L$ is \textbf{$|\Delta v| \le 1.27\,\text{m/s}$} ($0.00127\,\text{km/s}$), which is three orders of magnitude below the $\pm 770\,\text{m/s}$ observational error bar. Thus Sirius B places \emph{no constraint} on $L$ under H0.
+  \item \textbf{Under Conditional H1 (Direct Surface Clock Coupling $\nu \propto f_L(R_*)$):} When atomic transitions at the photosphere are directly multiplied by $f_L(R_*)$, the smoothing sphere of radius $L \sim R_* \approx 5.63\times 10^6\,\text{m}$ encloses a substantial fraction of the white dwarf's mass, producing an additional redshift up to $\Delta v \approx +5.56\,\text{km/s}$ and reaching \textbf{$\max\Delta\chi^2 = 52.3$} (single-factor H1) and \textbf{$\max\Delta\chi^2 = 72.0$} (combined H1+gradient lapse). At the $2\sigma$ ($\Delta\chi^2 = 4$) level, conditional H1 excludes the intermediate smoothing band \textbf{$L \in [4.08\times 10^6,\, 3.37\times 10^7]\,\text{m}$ for $n=1.5$} and \textbf{$L \in [4.95\times 10^6,\, 3.37\times 10^7]\,\text{m}$ for $n=3$}, while leaving both the laboratory scale ($L \sim 1\,\text{m}$) and sub-kilometer neutron-star scales unconstrained!
+\end{itemize}
+
+\noindent{\bfseries\color{navy}3. Audited NICER Likelihoods with Causal-Endpoint Mass Priors}\par
+Evaluating the joint log-likelihood across the three NICER pulsars (PSR J0030+0451, PSR J0740+6620, PSR J0437-4715) with proper causal-endpoint mass normalization ($M_{\text{max}}(\text{causal})$) demonstrates that for $L = 1\,\text{km}$, the log-likelihood shift relative to GR is at most \textbf{$4.8\times 10^{-4}\,\text{dex}$} ($\Delta\ln\mathcal{L} \approx 1.1\times 10^{-3}$). Consequently, \textbf{current NICER mass--radius posteriors cannot statistically distinguish $L$ from GR under any of the six hypotheses}.
+\newpage
+
+% ==================== PAGE 12: CHAPTER 10 (PLANNED LABORATORY MEASUREMENTS) ====================
+\chaphead{Chapter 10: Planned Laboratory Measurements}{The $8558\,\text{kg}$ Granite Atomic-Clock Chamber and the Eight-Coil Magnetic-Field Energetics Experiment (V20)}
+
+If the \textbf{Time Attraction Law} is a genuine physical property of spacetime, it cannot live only in distant galaxies or neutron stars; its mathematical formula must be testable in a controlled terrestrial laboratory. In Version 20 (GitHub V18, DOI \texttt{10.5281/zenodo.23540741}), I designed and numerically audited a dual-arm laboratory program that probes both baryonic rest-mass density ($\rho_{\text{matter}}$) and pure electromagnetic field energy density ($\rho_B = B^2/(2\mu_0 c^2)$) across the meter-scale window $L \in [0.1, 3.0]\,\text{m}$.
+
+\noindent{\bfseries\color{navy}1. Arm A: The Movable $8558\,\text{kg}$ Granite Rock Atomic-Clock Chamber}\par
+To test the baryonic source term in a repeatable ON/OFF modulation protocol without moving the sensitive clock itself, I designed a cylindrical hollow chamber made of high-density natural granite ($\rho_{\text{granite}} = 2750\,\text{kg/m}^3$) mounted on a hydraulic/rail translation stage around an optical lattice or precision quartz/rubidium clock at the origin $\mathbf{x}_0 = (0,0,0)$:
+\begin{itemize}\setlength{\itemsep}{1pt}\setlength{\parskip}{0pt}\setlength{\topsep}{1pt}
+  \item \textbf{Audited Chamber Geometry \& Mass:} Inner bore radius $R_{\text{in}} = 0.25\,\text{m}$, outer radius $R_{\text{out}} = 0.85\,\text{m}$, vertical height $H = 1.20\,\text{m}$ ($z \in [-0.60, +0.60]\,\text{m}$), volume $V = \pi(R_{\text{out}}^2 - R_{\text{in}}^2)H = 3.1102\,\text{m}^3$, and total granite mass \textbf{$M_{\text{granite}} = 8,558\,\text{kg}$}.
+  \item \textbf{Predicted Differential Signal:} Because the hollow cylinder surrounds the clock symmetrically, the Newtonian gravitational potential difference $\Delta\Phi_N/c^2$ at the center is tiny ($\sim 10^{-16}$) and easily calculated, whereas the 3D top-hat average $\bar{\rho}_L(\mathbf{0})$ peaks when $L \approx R_{\text{out}} = 0.85\,\text{m}$, yielding a direct Time Attraction Law fractional clock shift $\Delta y_{\text{granite}} = f_L(\text{IN}) - f_L(\text{OUT}) \approx -\gamma_L\bar{\rho}_L \sim -1.1\times 10^{-24}$ for the base coupling $G/c^2$, and placing direct empirical bounds on any enhanced laboratory coupling $\gamma_{\text{lab}}(L)$.
+\end{itemize}
+
+\noindent{\bfseries\color{navy}2. Arm B: The Eight-Coil Magnetic-Field Energetics Test ($\varnothing 300\,\text{mm}$ Flange Boundary)}\par
+To test whether pure magnetic energy density $u_B(\mathbf{x}) = \frac{|\mathbf{B}(\mathbf{x})|^2}{2\mu_0}$ gravitates and slows time flow via $\rho_B(\mathbf{x}) = u_B(\mathbf{x})/c^2$, I designed a symmetric eight-coil octahedral/cylindrical array surrounding a primary \textbf{Oscilloquartz 8663-XS} ultra-stable OCXO quartz oscillator at $\mathbf{x}_1 = (0,0,0)$, paired with an identical reference 8663-XS oscillator at baseline separation $D = 5.0\,\text{m}$:
+\begin{itemize}\setlength{\itemsep}{1pt}\setlength{\parskip}{0pt}\setlength{\topsep}{1pt}
+  \item \textbf{Audited 8-Coil Hardware Parameters:} 8 identical solenoids, each of length $l_{\text{coil}} = 400\,\text{mm}$, outer structural \textbf{flange boundary diameter $\varnothing 300\,\text{mm}$}, effective copper \textbf{winding diameter $\varnothing 291.7\,\text{mm}$} ($R_{\text{coil}} = 0.14585\,\text{m}$), wound with $N = 2000$ turns of $0.15\,\text{mm}$ enameled copper wire, DC resistance $R_{\text{DC}} = 1789\,\Omega$ per coil, driven at current $I = 14.0\,\text{mA}$ (power $0.351\,\text{W}$ per coil, $2.805\,\text{W}$ total).
+  \item \textbf{Exact 3D Top-Hat Peak at $L = 0.630957\,\text{m}$:} Integrating the Biot--Savart magnetic energy density across the 8 coils on our 25-point logarithmic grid $L \in [0.1, 3.0]\,\text{m}$, the polarity-even differential fractional frequency shift $\Delta y(L) = \frac{1}{2}[\Delta y(+I) + \Delta y(-I)]$ reaches its exact extremum when the smoothing sphere encompasses the $300\,\text{mm}$ coil flanges at \textbf{$L = 0.630957\,\text{m}$}:
+  \begin{equation}
+    \Delta y_{\text{peak}}(L = 0.630957\,\text{m}) \;=\; -1.2017108\times 10^{-48},
+  \end{equation}
+  verified by independent Sobol Monte Carlo quadrature to within $-0.0722\%$ (and to $3.7\times 10^{-16}$ relative precision at $L = 3.0\,\text{m}$ in Revision 3).
+  \item \textbf{Polarity-Reversal Cancellation of the Background Cross-Term:} Because $|\mathbf{B}_{\text{tot}}|^2 = |\mathbf{B}_{\text{bg}}|^2 + 2\mathbf{B}_{\text{bg}}\cdot\mathbf{B}_{\text{coil}} + |\mathbf{B}_{\text{coil}}|^2$, reversing the current ($+I \leftrightarrow -I$) reverses $\mathbf{B}_{\text{coil}}$ and cancels both the linear Zeeman quartz susceptibility and the $2\mathbf{B}_{\text{bg}}\cdot\mathbf{B}_{\text{coil}}$ cross-term in the polarity-even average $\Delta y_{\text{even}}$.
+\end{itemize}
+
+\begin{center}\vspace{-4pt}
+  \includegraphics[height=40mm]{figures/fig1_signal_vs_L.pdf}\par\vspace{-3pt}
+  {\scriptsize\color{slate}\textbf{Figure 10.1:} Audited polarity-even differential clock shift $|\Delta y(L)|$ across $L \in [0.1, 3.0]\,\text{m}$ for the 8-coil array (DOI \texttt{10.5281/zenodo.23540741}), peaking at $\Delta y = -1.2017108\times 10^{-48}$ at $L = 0.630957\,\text{m}$ where the top-hat sphere encloses the $\varnothing 300\,\text{mm}$ coil flange geometry.}
+\end{center}
+\newpage
+
+% ==================== PAGE 13: CHAPTERS 11 & 12 (OPEN QUESTIONS & CLOSING CHAPTER) ====================
+\chaphead{Chapters 11 \& 12: Open Questions \& Next Steps Forward}{Transparent Inventory of What Remains Missing (Tasks a--d) and Why Honest Openness Defines This Work}
+
+\noindent{\bfseries\large\color{navy}Chapter 11: Open Questions Flagged by the Academy (What Is Still Missing)}\par\vspace{1pt}
+Throughout my collaborations with independent reviewers, I have insisted that every unclosed theoretical link or hardware systematic be stated plainly as an open question rather than glossed over. Here I list the exact open items identified in the V20 and V21 academy audits:
+
+\noindent{\bfseries\color{navy}A. Four Open Theoretical \& Compact-Object Tasks from the V21 Audit}
+\begin{enumerate}\setlength{\itemsep}{1.5pt}\setlength{\parskip}{0pt}\setlength{\topsep}{1pt}
+  \item[\textbf{(a)}] \textbf{Covariant Coupling Closure (Task \texttt{50aa2db0}):} While the algebraic 3D top-hat profile $f_L(\mathbf{x}) = \exp(-\gamma_L\bar{\rho}_L(\mathbf{x}))$ is locked and reproducible, we still need a covariant action principle $S[g_{\mu\nu},\phi,\psi]$ from which both the non-local smoothing scale $L$ and the stress-energy balance $\nabla_\mu(T^{\mu\nu}_{\text{matter}} + T^{\mu\nu}_X) = 0$ emerge dynamically without ad hoc tangential stress bookkeeping.
+  \item[\textbf{(b)}] \textbf{Genuine Modified Radial Stability Analysis Derived from the Action:} Once Task (a) provides the dynamical field equations for perturbations $\delta\phi$ and $\delta T^{\mu\nu}_X$, the Chandrasekhar radial pulsation operator must be re-derived variationally from the second variation of the action $\delta^2 S$, eliminating the non-variational metric-operator pathology flagged for $L \ge 367\,\text{m}$ and relaxing the frozen-$f$ ($\delta f_L = 0$) approximation.
+  \item[\textbf{(c)}] \textbf{Derivation of Atomic-Clock and Photon Couplings from First Principles:} Currently, H0 (pure metric lapse) and H1 (direct $f_L$ clock multiplication) are treated as separate conditional hypotheses because the hydrostatic TOV factor $e^\nu F$ does not uniquely fix how electromagnetic/Dirac matter fields couple to $f_L$. The action closure must specify the Jordan-frame vs.\ Einstein-frame conformal/disformal coupling of atomic clocks and photons.
+  \item[\textbf{(d)}] \textbf{Self-Consistent Multi-Messenger Observational Inference:} With the action and matter couplings derived in (a)--(c), galactic rotation curves (including cosmic background embedding $\rho_{\text{bg}}$), VHE gamma-ray timing through cluster overdensities, Sirius B, and NICER posteriors must be fitted jointly with a physical scale-selection mechanism for $L$.
+\end{enumerate}
+
+\noindent{\bfseries\color{navy}B. Three Open Laboratory Hardware \& Systematic Items from the V20 Review}
+\begin{itemize}\setlength{\itemsep}{1pt}\setlength{\parskip}{0pt}\setlength{\topsep}{1pt}
+  \item \textbf{1. Polymer Bobbin Material Assay:} The 8 coil formers are 3D-printed polymer bobbins ($\varnothing 300\,\text{mm}$ flange). Before claiming bounds on trace paramagnetic/diamagnetic force couplings, the magnetic susceptibility $\chi_m$ and outgassing/thermal expansion of the bobbin polymer must be assayed.
+  \item \textbf{2. 3D Thermal Finite-Element Modeling (FEM):} Although total Ohmic dissipation is only $2.805\,\text{W}$ across 8 coils ($0.351\,\text{W}$/coil), asymmetric radiative/convective heating toward the central Oscilloquartz 8663-XS oscillator must be modeled via 3D thermal FEM and calibrated with dummy non-inductive bifilar heater windings.
+  \item \textbf{3. Timestamped Raw $\text{ON}/\text{OFF}/\pm I$ Phase-Time Series:} The V20 package provides the full deterministic simulation and sensitivity pipeline; the physical acquisition of long-integration timestamped dual-mixer time-difference (DMTD) phase logs across $+14\,\text{mA} / 0\,\text{mA} / -14\,\text{mA}$ cycles is the upcoming experimental campaign.
+\end{itemize}
+
+\vspace{1.5mm}
+\noindent{\color{navy}\rule{\linewidth}{0.6pt}}\par\vspace{1.5mm}
+\noindent{\bfseries\large\color{navy}Chapter 12: Closing Chapter --- The Immediate Next Step Forward}\par\vspace{1pt}
+Why do I present a theory alongside a candid list of its own open questions and a verbatim referee report? Because real progress in fundamental physics is built on verifiable milestones, not rhetorical claims of perfection. Across Versions 1 through 21, I have established and hash-verified the mathematical \textbf{``how''} of the \textbf{Time Attraction Law}: the Cauchy exponential derivation of the \textbf{$C$ coupling constant}, the positive-definite 3D spherical top-hat resolution of the negative-density problem ($0 < f_L \le 1$), the audited evaluation across 155/175 SPARC galaxies and five H.E.S.S. gamma-ray sources, the 33 neutron-star TOV and radial pulsation sequences, and the Revision-3-verified 8-coil and $8558\,\text{kg}$ granite laboratory design.
+
+\textbf{The immediate next physical step of my research program is Task \texttt{50aa2db0}: the covariant coupling closure.} By deriving the non-local top-hat kernel and matter coupling from a unified variational action, I aim to connect the audited ``how'' to the dynamical ``why'', unify the H0/H1 clock hypotheses, and guide our upcoming laboratory measurements.
+
+\vspace{1mm}
+\noindent{\scriptsize\color{slate}\textbf{Key Archival References:}
+[1] D.\ Szabolcsi, \emph{Time Attraction Law V14--V16}, Zenodo \texttt{10.5281/zenodo.23217189}.
+[2] D.\ Szabolcsi, \emph{Time Attraction Law V17: SPARC \& H.E.S.S. Audit}, Zenodo \texttt{10.5281/zenodo.19666220}.
+[3] D.\ Szabolcsi, \emph{Time Attraction Law V19 (7th Model: 3D Top-Hat Law)}, Zenodo \texttt{10.5281/zenodo.23497128}.
+[4] D.\ Szabolcsi, \emph{Time Attraction Law V20: 8-Coil \& Granite Clock Chamber}, Zenodo \texttt{10.5281/zenodo.23540741}.
+[5] D.\ Szabolcsi, \emph{Time Attraction Law V21: Neutron-Star TOV, Stability \& Open Items}, Zenodo \texttt{10.5281/zenodo.23602501}.}
+\newpage

@@ -1,0 +1,325 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[a4paper,top=15mm,bottom=16mm,left=16mm,right=16mm,headheight=13pt,headsep=5mm,footskip=8mm]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+\definecolor{navy}{HTML}{12284C}
+\definecolor{slate}{HTML}{334E68}
+\definecolor{accent}{HTML}{1B5E20}
+\definecolor{boxbg}{HTML}{F4F7FA}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=navy,
+  urlcolor=navy,
+  citecolor=navy,
+  pdftitle={The Time Attraction Law: Research Monograph (Versions 1 to 21)},
+  pdfauthor={David Szabolcsi}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\footnotesize\scshape\color{slate}The Time Attraction Law --- Research Monograph (V1--V21)}
+\fancyhead[R]{\footnotesize\color{slate}D\'avid Szabolcsi (ORCID: 0009-0005-6300-074X)}
+\fancyfoot[L]{\footnotesize\color{slate}CC BY-NC 4.0 --- Intermediate Research Working Document (Oct 2026)}
+\fancyfoot[R]{\footnotesize\bfseries\color{navy}Page \thepage\ of 15}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2.8pt}
+
+\newcommand{\chaphead}[2]{%
+  \noindent{\color{navy}\rule{\linewidth}{1.1pt}}\par\vspace{1.5pt}%
+  \noindent{\Large\bfseries\color{navy}#1}\par\vspace{1pt}%
+  \noindent{\footnotesize\itshape\color{slate}#2}\par\vspace{1.5pt}%
+  \noindent{\color{navy}\rule{\linewidth}{0.4pt}}\par\vspace{3pt}%
+}
+
+\begin{document}
+
+% ==================== PAGE 1: TITLE PAGE ====================
+\thispagestyle{empty}
+\vspace*{1mm}
+\noindent{\color{navy}\rule{\linewidth}{2pt}}\par\vspace{1.5mm}
+\begin{center}
+  {\footnotesize\scshape\color{slate}Intermediate Research Monograph $\cdot$ Observational, Compact-Object \& Laboratory Program}\par\vspace{1.5mm}
+  {\LARGE\bfseries\color{navy}THE TIME ATTRACTION LAW}\par\vspace{2mm}
+  {\large\bfseries\color{slate}Density-Modulated Time Flow, the $C$ Coupling Constant, Positive-Definite 3D Top-Hat Smoothing,}\\
+  {\large\bfseries\color{slate}Galactic Rotation Curves, Multi-Source Gamma-Ray Timing, Neutron-Star Equilibrium,}\\
+  {\large\bfseries\color{slate}and Laboratory Atomic-Clock \& Eight-Coil Magnetic-Field Experiments}\par\vspace{2mm}
+  {\normalsize\bfseries D\'avid Szabolcsi}\par\vspace{1mm}
+  {\small Independent Researcher, Unterterzen, Switzerland}\par
+  {\small ORCID: \href{https://orcid.org/0009-0005-6300-074X}{\texttt{0009-0005-6300-074X}} $\cdot$ GitHub: \href{https://github.com/unbekanntedavid-glitch/Time-Attraction}{\texttt{unbekanntedavid-glitch/Time-Attraction}}}\par
+  {\small October 24, 2026}
+\end{center}
+\vspace{1.5mm}
+\noindent{\color{navy}\rule{\linewidth}{0.8pt}}\par\vspace{2mm}
+
+{\small\noindent{\bfseries\color{navy}First-Person Author's Overview}\par
+I wrote this fifteen-page monograph to present a transparent, self-contained, and rigorously audited account of the \textbf{Time Attraction Law}, which I have developed through twenty-one iterative research stages (Versions 1 through 21). My core physical premise is that time does not flow uniformly across space: time is the primary physical medium whose local flow density is attracted, compressed, and slowed by the surrounding distribution of mass and energy. Rather than presenting any version as a closed system, I treat every release as an intermediate, falsifiable research step. In this monograph, I lay out the physical foundation of the theory (including the physical ``why'' and the consciousness-coherence bridge explored in my early series), the derivation of the \textbf{$C$ coupling constant}, the resolution of the negative-density sign problem via my 3D spherical top-hat law, the cross-scale behavior from galactic rotation curves (155 processed SPARC galaxies and 175-galaxy 3D top-hat grids) through the Solar System down to the $300\,\text{mm}$ coil flange boundary and $8558\,\text{kg}$ granite atomic-clock chamber, the multi-source H.E.S.S. timing analysis, the conditional neutron-star models and radial stability spectra, the open physical tasks flagged by independent reviewers, and the verbatim Third-Round Academy Review Protocol attached in the Appendix.
+
+\vspace{1.5mm}
+\noindent{\bfseries\color{navy}Primary Reproducible Archive Records (Zenodo DOIs \& Repository Lineage)}
+\begin{center}\vspace{-2pt}
+{\footnotesize
+\begin{tabular}{@{}>{\bfseries}p{0.15\linewidth}p{0.27\linewidth}p{0.53\linewidth}@{}}
+\toprule
+Stage & Zenodo DOI / Identifier & Core Scientific Scope \& Audited Contents \\
+\midrule
+V1--V13 & GitHub Series Archive & Cauchy exponential ansatz, weak-field/Horndeski mappings, early time-dilation tests. \\
+V14--V16 & \texttt{10.5281/zenodo.23217189} & Density-Dependent Time Coherence, $C$ coupling constant multiplier, bio-coherence $\Phi_t$ layer. \\
+V17 & \texttt{10.5281/zenodo.19666220} & 155-galaxy SPARC rotation-curve processing (123 blind) \& multi-source H.E.S.S. timing audit. \\
+V19 (7th Model) & \texttt{10.5281/zenodo.23497128} & Positive-definite 3D spherical top-hat law $f_L=\exp(-\gamma_L\bar{\rho}_L)$ across all 175 SPARC galaxies. \\
+V20 (GH V18) & \texttt{10.5281/zenodo.23540741} & 8-coil magnetic-field energetics ($\Delta y=-1.2017\times 10^{-48}$) \& $8558\,\text{kg}$ granite clock chamber. \\
+V21 (GH V19/21) & \texttt{10.5281/zenodo.23602501} & 33 neutron-star TOV sequences, Chandrasekhar radial stability, Sirius B / NICER \& open tasks. \\
+\bottomrule
+\end{tabular}}
+\end{center}
+
+\vspace{1mm}
+\noindent{\bfseries\color{navy}How This Book Answers the Three Fundamental Questions of Physics}
+\begin{itemize}\setlength{\itemsep}{1.5pt}\setlength{\parskip}{0pt}\setlength{\topsep}{1pt}
+  \item \textbf{1. Why does clock rate shift? (The Physical ``Why''):} In Chapter 2, I address whether the Time Attraction Law represents a scalar field, an effective temporal fluid, or a refractive spacetime medium, and I explain how the algebraically locked ``how'' ($f_L = \exp(-\gamma_L \bar{\rho}_L)$) connects to the open covariant action closure (Task \texttt{50aa2db0}).
+  \item \textbf{2. How does it fit across scales? (Galaxies, Solar System, and the $300\,\text{mm}$ Lab Boundary):} In Chapters 4, 5, and 10, I show how the 3D spherical top-hat kernel links galactic kiloparsec scales, unperturbed Solar System planetary ephemerides, and laboratory measurements at the $300\,\text{mm}$ coil flange boundary and $8558\,\text{kg}$ granite chamber.
+  \item \textbf{3. What unique predictions distinguish it from $\Lambda$CDM?:} In Chapters 6--10, I quantify forward predictions for VHE gamma-ray arrival bounds, compact-object mass-radius and radial pulsation shifts, and polarity-even laboratory clock shifts that standard $\Lambda$CDM does not produce.
+\end{itemize}
+
+}\vfill
+\noindent{\color{navy}\rule{\linewidth}{0.6pt}}\par
+\noindent{\scriptsize\color{slate}\textbf{License \& Rights Notice:} This work is licensed under Creative Commons Attribution-NonCommercial 4.0 International (\textbf{CC BY-NC 4.0}). All commercial, industrial, and technological implementation rights are expressly retained by the author, D\'avid Szabolcsi.}
+\newpage
+
+% ==================== PAGE 2: TABLE OF CONTENTS & POSTURE ====================
+\chaphead{Table of Contents \& Scientific Posture}{Structure of the Monograph, Uniform Notation, and Methodological Commitment}
+
+\noindent{\bfseries\color{navy}Contents of This Monograph}\par\vspace{1pt}
+{\footnotesize
+\begin{tabular}{@{}>{\bfseries\color{navy}}p{0.12\linewidth}p{0.76\linewidth}>{\raggedleft\arraybackslash\bfseries}p{0.08\linewidth}@{}}
+\toprule
+Section & Chapter Title & Page \\
+\midrule
+Title & Title Page, Executive Overview \& Reproducible Archive Lineage & 1 \\
+TOC & Table of Contents, Uniform Terminology \& Scientific Posture & 2 \\
+Chapter 1 & Version History from V1 to V21: The Evolution of My Research Program & 3 \\
+Chapter 2 & Core Essence of the Theory: The Physical ``Why'' \& Consciousness Coherence & 4 \\
+Chapter 3 & Derivation of the $C$ Coupling Constant and Cauchy Exponential Law & 5 \\
+Chapter 4 & Resolution of the Negative Density Problem \& Cross-Scale Fitting & 6 \\
+Chapter 5 & Galactic Rotation Curves: Processing 155 SPARC Galaxies \& 3D Top-Hat Grids & 7 \\
+Chapter 6 & Very-High-Energy Gamma-Ray Timing: Multi-Source H.E.S.S. Data Analysis & 8 \\
+Chapter 7 & Neutron-Star Modeling in V21: TOV Sequences \& NICER Mass--Radius Bounds & 9 \\
+Chapter 8 & Perturbation Calculations: Anisotropic Stress \& Chandrasekhar Radial Stability & 10 \\
+Chapter 9 & Conditional Clock \& Redshift Hypotheses: Sirius B and NICER Likelihoods & 11 \\
+Chapter 10 & Planned Laboratory Measurements: Eight-Coil Field \& Granite Clock Chamber & 12 \\
+Chapter 11 & Open Questions Flagged by the Academy: Laboratory \& Theoretical Tasks (a)--(d) & 13 \\
+Chapter 12 & Closing Chapter: Why Honest Openness Strengthens the Next Step Forward & 13 \\
+Appendix & Verbatim Third-Round Academy Review Protocol (\texttt{revision3\_review\_EN.md}) & 14--15 \\
+\bottomrule
+\end{tabular}}
+
+\vspace{1.5mm}
+\noindent{\bfseries\color{navy}Uniform Terminology and Core Mathematical Symbols}\par
+Throughout this book, I enforce strict terminological uniformity so that no ambiguity arises between historical versions:
+\begin{center}\vspace{-2pt}
+{\footnotesize
+\begin{tabular}{@{}>{\bfseries}p{0.28\linewidth}p{0.24\linewidth}p{0.43\linewidth}@{}}
+\toprule
+Standard Term & Symbol / Definition & Physical Role in the Time Attraction Law \\
+\midrule
+Time Attraction Law & $f_L(\mathbf{x}) = \exp(-\gamma_L \bar{\rho}_L(\mathbf{x}))$ & Universal law relating local time-flow density to smoothed mass-energy density. \\
+$C$ coupling constant & $C = \frac{4\pi G}{c^2} \approx 9.333\times 10^{-27}\,\text{m/kg}$ & Fundamental gravitational-temporal coupling constant derived from $G$ and $c$. \\
+Directional / scale coupling & $\gamma_L = \frac{G L^2}{c^2} = \frac{C L^2}{4\pi}$ & Scale-dependent damping coefficient ($\text{m}^3\,\text{kg}^{-1}$) for smoothing radius $L$. \\
+3D top-hat density & $\bar{\rho}_L(\mathbf{x}) = \frac{3}{4\pi L^3}\int_{|\mathbf{y}-\mathbf{x}|\le L}\rho(\mathbf{y})\,d^3y$ & Strictly non-negative spherical average solving the $\rho<0$ sign problem. \\
+Consciousness coherence & $\Phi_t,\,\Phi_B,\,\kappa$ & Early-stage theoretical bio-coherence resonance potential, magnetic flux, curvature. \\
+\bottomrule
+\end{tabular}}
+\end{center}
+
+\vspace{2mm}
+\noindent{\bfseries\color{navy}My Scientific Posture: Reproducible Packages and Honest Openness}\par
+In fundamental physics, premature claims of closure undermine credibility. When presenting an alternative gravitational and temporal framework to the academy, I adhere to a strict separation between what I have already locked down in hash-verified, reproducible code and what remains an open theoretical or experimental task:
+\begin{enumerate}\setlength{\itemsep}{2pt}\setlength{\parskip}{0pt}\setlength{\topsep}{2pt}
+  \item \textbf{The Audited ``How'' Is Reproducibly Locked:} Across my Zenodo records and GitHub repository, I have provided deterministic scripts, SHA-256 manifests, and independent quadrature checks that define \emph{how} the Time Attraction Law maps mass-energy density $\rho(\mathbf{x})$ into the bounded attenuation factor $0 < f_L(\mathbf{x}) \le 1$.
+  \item \textbf{Every Version Is an Intermediate Step:} No release in my V1--V21 sequence is described as closed or immutable. Each version tests a specific mathematical hypothesis against observational or laboratory constraints, records any failure modes openly, and refines the formulation accordingly.
+  \item \textbf{Reviewer Criticisms Are Preserved Verbatim:} Rather than smoothing over critical feedback, I treat independent referee audits as essential diagnostic instruments. When the academy flagged the midplane proxy vs.\ 3D top-hat distinction in V19, the background magnetic cross-term $2\mathbf{B}_{\text{bg}}\cdot\mathbf{B}_{\text{coil}}$ in V20, or the non-variational metric pulsation operator and missing covariant action closure in V21, I incorporated those exact diagnostics into my code and documentation. For full transparency, I include the Third-Round Academy Review Protocol word-for-word on Pages 14 and 15.
+\end{enumerate}
+\newpage
+
+% ==================== PAGE 3: CHAPTER 1 (VERSION HISTORY V1-V21) ====================
+\chaphead{Chapter 1: Version History from V1 to V21}{Tracing the Iterative Path of the Time Attraction Law Across Twenty-One Research Stages}
+
+To allow the reader to follow the exact trajectory of my research, I summarize here how the \textbf{Time Attraction Law} evolved from its initial mathematical ansatz in Version 1 to the multi-messenger, compact-object, and laboratory packages in Version 21. Every stage served as a stepping stone that exposed what worked and what needed correction.
+
+\begin{center}\vspace{-2pt}
+{\footnotesize
+\begin{tabular}{@{}>{\bfseries\color{navy}}p{0.14\linewidth}p{0.25\linewidth}p{0.56\linewidth}@{}}
+\toprule
+Version Stage & Primary Focus & Milestones Achieved, Lessons Learned \& Self-Corrections \\
+\midrule
+V1 -- V4 & Cauchy Multiplicative Ansatz & I formulated the postulate that independent local mass densities compound multiplicatively on time flow, $f(\rho_1+\rho_2)=f(\rho_1)f(\rho_2)$, yielding $f(\rho)=\exp(-\gamma\rho)$. \\
+V5 -- V7 & Weak-Field \& Chameleon Explorations & I explored scalar-tensor and chameleon-like screening analogies to connect local density gradients with effective gravitational accelerations in low-density environments. \\
+V8 -- V12 & Horndeski \& Time-Dilation Mappings & I investigated effective metric lapse modifications and Horndeski-inspired scalar couplings, testing whether optical clock comparisons could bound the coupling scale. \\
+V13 -- V16 & Density-Dependent Time Coherence \& Bio-Coherence ($\Phi_t$) & (\texttt{10.5281/zenodo.23217189}) I introduced the \textbf{$C$ coupling constant} ($C=4\pi G/c^2$), the force multiplier $C(\rho)=1+C_0 e^{-\rho/\rho_c}$ ($C_0=5$), and the consciousness-coherence bridge ($\Phi_t$, $\Phi_B$, $\kappa$, EEG/HRV bio-coherence). Subsequent self-audits showed that linear differential forms could trigger $\rho<0$ sign inversions and that $C_0=5$ over-predicted flat rotation curves. \\
+V17 & SPARC 155-Galaxy \& H.E.S.S. Multi-Source Audit & (\texttt{10.5281/zenodo.19666220}) I audited 175 SPARC galaxies (155 quality-filtered rotation curves; 123 blind test galaxies with 2596 points) and multi-source H.E.S.S. VHE gamma-ray flares (PKS 2155-304, Mrk 501, Vela, Crab, GRB 190114C), replacing single-flare claims with rigorous multi-source controls. \\
+V18 (Internal) & Smoothing-Kernel Reformulation & I tested integral smoothing kernels to eliminate numerical derivative noise and prevent unphysical negative effective densities near sharp density boundaries. \\
+V19 (7th Model) & Positive-Definite 3D Spherical Top-Hat Law & (\texttt{10.5281/zenodo.23497128}) I resolved the negative-density problem by defining $\bar{\rho}_L(\mathbf{x})$ as a 3D spherical top-hat integral over radius $L$, guaranteeing $\bar{\rho}_L\ge 0$ and $0<f_L\le 1$, and evaluated it across all 175 SPARC galaxies. \\
+V20 (GH V18) & 8-Coil Magnetic Field \& Granite Clock Chamber & (\texttt{10.5281/zenodo.23540741}) I designed the terrestrial laboratory program: an $8558\,\text{kg}$ movable granite chamber around an atomic clock and an 8-coil magnetic-field energetics test ($\varnothing 300\,\text{mm}$ flange boundary, $\Delta y = -1.2017108\times 10^{-48}$ at $L=0.631\,\text{m}$), audited through three referee rounds. \\
+V21 (GH V19/21) & Neutron-Star TOV, Perturbations \& Open Tasks & (\texttt{10.5281/zenodo.23602501}) I extended the 3D top-hat law to 33 neutron-star TOV sequences (SLy, APR4, H4), X-sector anisotropic stress reconstruction, Chandrasekhar radial stability ($\omega_0^2$), Sirius B / NICER conditional tests, and four explicit open physical tasks (a)--(d). \\
+\bottomrule
+\end{tabular}}
+\end{center}
+
+\noindent{\bfseries\color{navy}Three Turning Points in My Iterative Research Journey}\par
+Looking back across V1--V21, three methodological turning points define the maturity of the work:
+\begin{enumerate}\setlength{\itemsep}{1.5pt}\setlength{\parskip}{0pt}\setlength{\topsep}{1pt}
+  \item \textbf{From Differential Proxies to Positive-Definite Integral Smoothing (V13 $\to$ V19):} In early versions, evaluating Laplacians or local midplane proxies produced sign inversions where effective density dropped below zero. By introducing the 3D spherical top-hat average $\bar{\rho}_L$ in V19, I mathematically guaranteed $0 < f_L(\mathbf{x}) \le 1$ at every point in space.
+  \item \textbf{From Single-Dataset Fits to Blind Multi-Object Controls (V16 $\to$ V17/V19):} Rather than tuning parameters to individual galaxies or a single blazar flare, I locked the stellar mass-to-light ratios ($\Upsilon_{\text{disk}}=0.5$, $\Upsilon_{\text{bulge}}=0.7\,M_\odot/L_\odot$) across the SPARC sample and cross-checked PKS 2155-304 against four additional H.E.S.S. gamma-ray sources.
+  \item \textbf{From Algebraic Prescriptions to Explicit Open Boundary Conditions (V20 $\to$ V21):} In V20 and V21, I paired every numerical calculation with SHA-256 verification manifests and explicitly separated locked algebraic profiles from the open covariant action derivation (Task \texttt{50aa2db0}).
+\end{enumerate}
+\newpage
+
+% ==================== PAGE 4: CHAPTER 2 (CORE ESSENCE, PHYSICAL WHY & CONSCIOUSNESS COHERENCE) ====================
+\chaphead{Chapter 2: Core Essence of the Theory --- The Physical ``Why'' \& Consciousness Coherence}{Why Time Flow Is Modulated by Mass-Energy Density, the Medium Interpretation, and the Bio-Coherence Layer}
+
+A physical theory cannot stop at describing \emph{how} a curve bends; it must address \emph{why} the effect occurs. In the \textbf{Time Attraction Law}, I start from a foundational ontological shift: \textbf{time is not a passive, uniform mathematical coordinate, but the primary physical carrier whose local flow density is attracted and compressed by mass-energy density.}
+
+\noindent{\bfseries\color{navy}1. The Physical ``Why'': Field, Temporal Fluid, or Refractive Spacetime Medium?}\par
+In standard general relativity, mass-energy curves spacetime geometry via $G_{\mu\nu} = \frac{8\pi G}{c^4}T_{\mu\nu}$, and gravitational time dilation emerges purely from the metric component $g_{00}$. In my framework, I ask what physical mechanism underlies the local slowing of clocks when mass-energy accumulates within an interaction neighborhood of radius $L$. I interpret time flow as possessing an effective local carrier density (analogous to an optical medium with refractive index $n_t(\mathbf{x}) = f_L(\mathbf{x})^{-1} = \exp(+\gamma_L \bar{\rho}_L(\mathbf{x}))$ or a compressible temporal fluid). Wherever mass-energy density $\rho(\mathbf{x}) = T_{00}/c^2$ concentrates, it attracts and condenses the temporal medium inside the causal averaging sphere of radius $L$. Consequently, the local rate of proper time progression relative to a vacuum reference clock is attenuated by:
+\begin{equation}
+  f_L(\mathbf{x}) \;=\; \exp\!\bigl(-\gamma_L\,\bar{\rho}_L(\mathbf{x})\bigr), \qquad \gamma_L \;=\; \frac{G L^2}{c^2} \;=\; \frac{C\,L^2}{4\pi},
+\end{equation}
+where $C = 4\pi G/c^2$ is the \textbf{$C$ coupling constant}. In this picture, gravity is not merely geometric curvature in a vacuum; it is the macroscopic manifestation of gradients in the density of time flow.
+
+\noindent{\bfseries\color{navy}2. Separating the Audited ``How'' from the Dynamical ``Why'' (Task \texttt{50aa2db0})}\par
+Scientific integrity requires distinguishing between what is already algebraically verified and what requires a deeper field-theoretical derivation. In V19--V21, I locked the functional \textbf{``how''}---the exact non-local mapping from $\rho(\mathbf{x})$ to $\bar{\rho}_L(\mathbf{x})$ and $f_L(\mathbf{x})$, verified to $10^{-15}$ numerical precision. However, inserting $f_L(\mathbf{x})$ into the Tolman--Oppenheimer--Volkoff equations or clock-rate formulas as an external multiplier leaves $\nabla_\mu T^{\mu\nu}_{\text{matter}} \neq 0$ unless balanced by a dynamical field sector. Therefore, the dynamical \textbf{``why''} is formulated as Task \texttt{50aa2db0}: promoting the non-local kernel to a covariant scalar-tensor or non-local action principle $S = \int d^4x\sqrt{-g}\,\bigl[\frac{c^4}{16\pi G}R + \mathcal{L}_{\text{matter}}(\psi, \tilde{g}_{\mu\nu}) + \mathcal{L}_\phi(\phi,\nabla\phi)\bigr]$ whose Euler--Lagrange equation naturally yields $\phi(\mathbf{x}) \to \gamma_L\bar{\rho}_L(\mathbf{x})$ in the quasi-static regime while guaranteeing $\nabla_\mu(T^{\mu\nu}_{\text{matter}} + T^{\mu\nu}_X) = 0$.
+
+\noindent{\bfseries\color{navy}3. The Theoretical Consciousness-Coherence Bridge ($\Phi_t$, $\Phi_B$, $\kappa$ and Bio-Coherence)}\par
+In Versions 13 through 16 (and preserved in the theoretical lineage of V17), I also explored a broader, speculative unification question: if the local density of time flow is a physical medium modulated by mass and energy, can coherent electromagnetic and biological information structures couple to that same temporal carrier? In that extended theoretical layer, I introduced the \textbf{consciousness-coherence resonance potential} $\Phi_t$ alongside magnetic flux $\Phi_B$ and spatial curvature $\kappa$, writing an generalized effective source density and total stress-energy tensor:
+\begin{equation}
+  \rho_{\text{eff}} \;=\; \rho \;+\; \Xi\,\varepsilon_0\,\Phi_t \;+\; \beta\,\Phi_B \;+\; \gamma\,\kappa, \qquad
+  T_{\mu\nu}^{\text{total}} \;=\; T_{\mu\nu}^{\text{matter}} \;+\; T_{\mu\nu}^{\text{flux}} \;+\; T_{\mu\nu}^{\text{thought}},
+\end{equation}
+where $\Xi$ denotes the temporal-coherence coupling coefficient and $\varepsilon_0$ is the vacuum permittivity. Within this hypothesis, biological neural and cardiac oscillators (quantified via phase-locked EEG gamma/theta synchrony and heart-rate variability, HRV, bio-coherence indices) act as ultra-sensitive phase detectors of local temporal coherence. Specifically, the theoretical model proposes that fluctuations in local mass-energy density $\rho$, geomagnetic/coil flux $\Phi_B$, and shielding geometry could induce measurable shifts in EEG/HRV phase coherence.
+
+\noindent{\bfseries\color{navy}4. Strict Methodological Boundary Between Audited Physics and Perspective Extensions}\par
+In presenting this book to the academy, I maintain an unmistakable boundary between the two layers:
+\begin{itemize}\setlength{\itemsep}{1.5pt}\setlength{\parskip}{0pt}\setlength{\topsep}{1pt}
+  \item \textbf{Audited Physical Core (V19--V21):} All quantitative claims in our SPARC galactic rotation analysis, H.E.S.S. timing bounds, neutron-star TOV and pulsation sequences, and the V20 granite-chamber and 8-coil quartz oscillator laboratory protocol rely \emph{exclusively} on standard baryonic and electromagnetic mass-energy density $\rho = T_{00}/c^2$, with $\Phi_t \equiv 0$.
+  \item \textbf{Perspective Bio-Coherence Layer (V13--V16):} The consciousness-coherence terms ($\Phi_t$, $T_{\mu\nu}^{\text{thought}}$, EEG/HRV bio-coherence) remain an open, un-audited theoretical perspective recorded as part of the historical intellectual trajectory of the Time Attraction Law.
+\end{itemize}
+\newpage
+
+% ==================== PAGE 5: CHAPTER 3 (DERIVATION OF THE C COUPLING CONSTANT) ====================
+\chaphead{Chapter 3: Derivation of the $C$ Coupling Constant}{Cauchy's Multiplicative Functional Equation, Dimensional Analysis, and Audit of the V14--V16 Multiplier}
+
+Here I present my mathematical derivation of the exponential attenuation law and the \textbf{$C$ coupling constant}, followed by my self-audit of the early V14--V16 force multiplier.
+
+\noindent{\bfseries\color{navy}1. Derivation of the Exponential Law from Cauchy's Functional Equation}\par
+Consider a reference clock in vacuum ($\rho = 0$) ticking at proper rate $d\tau_0$, and an identical clock placed inside a region whose smoothed mass-energy density within radius $L$ is $\bar{\rho}_L \ge 0$. Let $f(\bar{\rho}_L) = d\tau / d\tau_0$ denote the dimensionless time-flow attenuation factor. I impose three physical axioms:
+\begin{enumerate}\setlength{\itemsep}{1pt}\setlength{\parskip}{0pt}\setlength{\topsep}{1pt}
+  \item \textbf{Vacuum Normalization:} In the absence of mass-energy ($\bar{\rho}_L = 0$), time flows at the unattenuated reference rate, so $f(0) = 1$.
+  \item \textbf{Multiplicative Superposition:} If two independent, non-overlapping mass distributions contribute smoothed densities $\rho_1$ and $\rho_2$ within the interaction sphere, the sequential attenuation of the temporal carrier is multiplicative:
+  \begin{equation}
+    f(\rho_1 + \rho_2) \;=\; f(\rho_1)\,f(\rho_2) \qquad \forall\,\rho_1,\rho_2 \ge 0.
+  \end{equation}
+  \item \textbf{Monotonic Attraction (Slowing of Time Flow):} Increasing mass-energy density attracts and condenses the temporal medium, slowing the local clock rate: $0 < f(\rho) \le 1$ and $df/d\rho < 0$.
+\end{enumerate}
+By Cauchy's classical theorem on continuous solutions of $f(x+y)=f(x)f(y)$ on $[0,\infty)$, the unique continuous solution satisfying $f(0)=1$ and $df/d\rho < 0$ is the pure real exponential:
+\begin{equation}
+  f_L(\bar{\rho}_L) \;=\; \exp\!\bigl(-\gamma_L\,\bar{\rho}_L\bigr), \qquad \gamma_L > 0, \qquad [\gamma_L] \;=\; \text{m}^3\,\text{kg}^{-1}.
+\end{equation}
+
+\noindent{\bfseries\color{navy}2. Dimensional Construction of the $C$ Coupling Constant and $\gamma_L$}\par
+To express the damping coefficient $\gamma_L$ purely in terms of fundamental gravitational constants and the interaction radius $L$, we note that Newton's gravitational constant $G = 6.67430\times 10^{-11}\,\text{m}^3\,\text{kg}^{-1}\,\text{s}^{-2}$ and the vacuum speed of light $c = 2.99792458\times 10^{8}\,\text{m}\,\text{s}^{-1}$ combine into a unique mass-to-length conversion ratio $[G/c^2] = \text{m}\,\text{kg}^{-1}$. Incorporating the spherical surface factor $4\pi$ from Gauss's law for a 3D isotropic source defines my fundamental \textbf{$C$ coupling constant}:
+\begin{equation}
+  C \;\equiv\; \frac{4\pi G}{c^2} \;=\; 9.33306\times 10^{-27}\;\text{m}\,\text{kg}^{-1}, \qquad
+  \frac{G}{c^2} \;=\; \frac{C}{4\pi} \;=\; 7.425915\times 10^{-28}\;\text{m}\,\text{kg}^{-1}.
+\end{equation}
+Multiplying the directional mass-to-length ratio $G/c^2 = C/(4\pi)$ by the square of the smoothing scale $L^2$ yields the exact scale-dependent coupling coefficient $\gamma_L$ with dimensions $\text{m}^3\,\text{kg}^{-1}$:
+\begin{equation}
+  \gamma_L \;=\; \frac{G\,L^2}{c^2} \;=\; \frac{C\,L^2}{4\pi} \;=\; 7.425915\times 10^{-28}\,L^2\;\text{m}^3\,\text{kg}^{-1}.
+\end{equation}
+When a point mass $M$ is smoothed over a sphere of radius $L$, its mean density is $\bar{\rho}_L = \frac{3M}{4\pi L^3}$, so the exponent becomes $\gamma_L \bar{\rho}_L = \frac{3GM}{4\pi c^2 L} = \frac{3\,C\,M}{(4\pi)^2 L}$, directly recovering the dimensionless compactness scale $GM/(c^2 L)$ up to the geometric factor $3/(4\pi)$.
+
+\noindent{\bfseries\color{navy}3. Honest Audit of the V14--V16 Force Multiplier $C(\rho) = 1 + C_0\exp(-\rho/\rho_c)$}\par
+In Versions 14--16 (DOI \texttt{10.5281/zenodo.23217189}), before I introduced the 3D spherical top-hat integral, I explored a phenomenological weak-field force multiplier of the form:
+\begin{equation}
+  v_{\text{rot}}^2(r) \;=\; v_{\text{baryon}}^2(r)\cdot C(\rho(r)), \qquad C(\rho) \;=\; 1 \;+\; C_0\,\exp\!\left(-\frac{\rho}{\rho_c}\right),
+\end{equation}
+with a fixed amplitude $C_0 = 5$ (so $C(\rho)\to 6$ in ultra-low-density outskirts $\rho \ll \rho_c$) and a critical threshold density $\rho_c$. During the V17 audit (DOI \texttt{10.5281/zenodo.19666220}), I subjected this formula to a blind test across 123 SPARC galaxies and discovered two critical limitations:
+\begin{itemize}\setlength{\itemsep}{1.5pt}\setlength{\parskip}{0pt}\setlength{\topsep}{1pt}
+  \item \textbf{Empirical Over-Prediction:} Fixing $C_0=5$ boosts asymptotic velocities by $\sqrt{6}\approx 2.45$, which systematically overshoots intermediate-surface-brightness galaxies and degrades the median reduced $\chi^2_\nu$ from $2.898$ (baryonic baseline) to $9.39$ across the 123-galaxy blind sample.
+  \item \textbf{Local Pointwise Instability:} Evaluating $\rho(r)$ pointwise or via thin-disk derivatives introduces sensitivity to local gas clumps and sign inversions. This realization directly motivated my transition to the parameter-free 3D spherical top-hat integral in Version 19.
+\end{itemize}
+\newpage
+
+% ==================== PAGE 6: CHAPTER 4 (NEGATIVE DENSITY RESOLUTION & CROSS-SCALE FITTING) ====================
+\chaphead{Chapter 4: Resolution of the Negative Density Problem \& Cross-Scale Fitting}{My 7th Model (V19 3D Spherical Top-Hat Law) and How the Theory Connects Galaxies, the Solar System, and the Lab}
+
+\noindent{\bfseries\color{navy}1. Why Early Formulations Suffered from Negative Densities ($\rho < 0$ or $f < 0$)}\par
+In early iterations of my research (and in standard first-order weak-field expansions where $\exp(-\gamma\rho) \approx 1 - \gamma\rho$ or where effective densities are reconstructed from the Laplacian $\nabla^2\Phi_{\text{eff}}$ near sharp disk edges), two mathematical pathologies arose:
+\begin{enumerate}\setlength{\itemsep}{1pt}\setlength{\parskip}{0pt}\setlength{\topsep}{1pt}
+  \item \textbf{Linearized Sign Inversion ($f_{\text{lin}} < 0$):} In high-density regimes (such as neutron-star cores where $\rho \sim 10^{18}\,\text{kg/m}^3$) or at large smoothing scales $L$, the linear Taylor approximation $1 - \gamma_L\rho$ crosses zero and becomes negative whenever $\gamma_L\rho > 1$, reversing the sign of time flow.
+  \item \textbf{Differential Deconvolution Oscillations ($\rho_{\text{eff}} < 0$):} Computing effective densities from second derivatives of noisy rotation curves or oscillatory Bessel kernels produces unphysical regions of negative mass density ($\rho_{\text{eff}} < 0$) outside truncated stellar disks or coil flanges.
+\end{enumerate}
+
+\noindent{\bfseries\color{navy}2. My Solution in Version 19 (7th Model): The 3D Spherical Top-Hat Integral}\par
+In Version 19 (DOI \texttt{10.5281/zenodo.23497128}), I resolved both pathologies permanently by formulating the \textbf{7th Model} of the Time Attraction Law. Instead of evaluating pointwise derivatives or linear approximations, I define the source of temporal attenuation at any position $\mathbf{x} \in \mathbb{R}^3$ as the unweighted three-dimensional spherical top-hat average of the physical mass-energy density $\rho(\mathbf{y}) = T_{00}(\mathbf{y})/c^2 \ge 0$ inside a ball $B(\mathbf{x},L)$ of radius $L > 0$:
+\begin{equation}
+  \bar{\rho}_L(\mathbf{x}) \;\equiv\; \frac{3}{4\pi L^3}\int_{|\mathbf{y}-\mathbf{x}|\le L} \rho(\mathbf{y})\,d^3y \;=\; \frac{M_{\text{enc}}(\mathbf{x};L)}{\frac{4}{3}\pi L^3}, \qquad
+  f_L(\mathbf{x}) \;=\; \exp\!\bigl(-\gamma_L\,\bar{\rho}_L(\mathbf{x})\bigr).
+\end{equation}
+Because physical mass-energy density satisfies $\rho(\mathbf{y}) \ge 0$ everywhere and the characteristic indicator function $\Theta(L - |\mathbf{y}-\mathbf{x}|)$ is strictly non-negative, the integral $\bar{\rho}_L(\mathbf{x})$ is \textbf{positive semi-definite ($\bar{\rho}_L(\mathbf{x}) \ge 0$)} for every geometry, whether a spiral galaxy, a neutron star, or an 8-coil laboratory array. Consequently, the exponential attenuation factor obeys the exact analytical bounds:
+\begin{equation}
+  0 \;<\; f_L(\mathbf{x}) \;\le\; 1 \qquad \forall\,\mathbf{x}\in\mathbb{R}^3,\;\;\forall\,L > 0.
+\end{equation}
+No negative density, sign inversion, or metric horizon flip from $f_L$ can ever occur.
+
+\noindent{\bfseries\color{navy}3. How Does the Time Attraction Law Fit Across Scales? (Galaxies $\to$ Solar System $\to$ $300\,\text{mm}$ Lab)}\par
+A crucial question for any gravitational framework is \emph{how it fits across vastly different length scales}: if it operates in galaxies, what happens in the Solar System, and why does the laboratory test at the $300\,\text{mm}$ coil flange boundary and $8558\,\text{kg}$ granite chamber matter? The 3D top-hat scaling law $\gamma_L \bar{\rho}_L = \frac{3 G M_{\text{enc}}(\mathbf{x};L)}{4\pi c^2 L}$ provides a unified quantitative answer across four regimes:
+\begin{center}\vspace{-2pt}
+{\footnotesize
+\begin{tabular}{@{}>{\bfseries}p{0.20\linewidth}p{0.20\linewidth}p{0.23\linewidth}p{0.31\linewidth}@{}}
+\toprule
+Physical Regime & Characteristic Scale & Enclosed Mass / Density & Magnitude of $|1 - f_L|$ \& Physical Behavior \\
+\midrule
+Galactic Disks (SPARC 175) & $R \sim 1\text{--}50\,\text{kpc}$, $L \sim 2.37\,\text{Mpc}$ & $M_{\text{bary}} \sim 10^8\text{--}10^{11}\,M_\odot$ & Galaxy-only $\max|1-f_L| = 2.30\times 10^{-7}$; requires cosmic background or $L\sim 22.9\,\text{Gpc}$ for unit exponent. \\
+Solar System Ephemerides & $r \sim 1\text{--}30\,\text{AU}$, $L \gg 1\,\text{AU}$ & $M_\odot = 1.989\times 10^{30}\,\text{kg}$ inside huge $L^3$ sphere & For galactic/sub-galactic $L \gtrsim 1\,\text{pc}$, $\gamma_L\bar{\rho}_L^\odot = \frac{3GM_\odot}{4\pi c^2 L} \lesssim 10^{-14}$; planetary orbits remain unperturbed! \\
+Compact Stars (WD / NS V21) & $R \sim 10\,\text{km}\text{--}5500\,\text{km}$, $L \sim 1\,\text{m}\text{--}100\,\text{km}$ & $\rho \sim 10^9\text{--}10^{18}\,\text{kg/m}^3$ & Strong-field regime: $1-f_L \sim 10^{-4}\text{--}0.85$; shifts NS $M$--$R$ curves and Sirius B conditional redshift. \\
+Lab Chambers \& Coils (V20) & $L \sim 0.1\text{--}3\,\text{m}$, $\varnothing 300\,\text{mm}$ flange & Granite $8558\,\text{kg}$ ($\rho=2750$); 8 coils ($u_B/c^2$) & At $L=0.631\,\text{m}$, sphere encloses the $300\,\text{mm}$ flanges: $|\Delta y|_{\text{coil}}=1.20\times 10^{-48}$, $|\Delta y|_{\text{granite}}\sim 10^{-24}$. \\
+\bottomrule
+\end{tabular}}
+\end{center}
+This table highlights why the Solar System is naturally protected: when $L$ is larger than the planetary orbital scale, the Sun's mass $M_\odot$ is diluted over the volume $\frac{4}{3}\pi L^3$, suppressing spatial gradients of $f_L$ across planetary orbits below Cassini and ephemeris bounds. Conversely, if $L$ lies in the meter-scale laboratory window ($L \sim 0.63\,\text{m}$), the averaging sphere matches the exact geometry of our $8558\,\text{kg}$ granite chamber ($R_{\text{out}}=0.85\,\text{m}$) and the $300\,\text{mm}$ flange boundary ($291.7\,\text{mm}$ winding diameter) of our 8-coil setup, peaking the laboratory differential signal!
+\newpage
+
+% ==================== PAGE 7: CHAPTER 5 (SPARC 155 GALAXIES & 3D TOP-HAT GRIDS) ====================
+\chaphead{Chapter 5: Galactic Rotation Curves --- Processing 155 SPARC Galaxies}{From the V17 Quality-Filtered \& Blind SPARC Audit to the V19/V20 Exact 3D Spherical Top-Hat Evaluation}
+
+To test the \textbf{Time Attraction Law} against galactic dynamics without dark-matter halo tuning, I processed the Spitzer Photometry and Accurate Rotation Curves (SPARC) database across two major stages: the V17 statistical pipeline (DOI \texttt{10.5281/zenodo.19666220}) and the V19/V20 exact 3D spherical top-hat evaluation (DOI \texttt{10.5281/zenodo.23497128}).
+
+\noindent{\bfseries\color{navy}1. The V17 SPARC Pipeline: 175 Total, 155 Processed, and 123 Blind-Test Galaxies}\par
+The master SPARC catalog contains \textbf{175 late-type and dwarf galaxies} with surface photometry at $3.6\,\mu\text{m}$ and resolved $\text{H\,\textsc{i}}/\text{H}\alpha$ rotation curves. In my V17 processing pipeline, removing 20 systems with severe kinematic asymmetries or inclination flags ($i < 30^\circ$ or $Q=3$) yielded the \textbf{155-galaxy processed rotation-curve sample}. Enforcing strict data-hygiene cuts (requiring at least 5 radial points and full baryonic decomposition components $V_{\text{gas}}, V_{\text{disk}}, V_{\text{bulge}}$) defined the \textbf{123-galaxy blind validation sample} comprising \textbf{2,596 radial velocity measurements}. Throughout all fits, I locked the stellar mass-to-light ratios to standard population-synthesis values ($\Upsilon_{\text{disk}} = 0.5\,M_\odot/L_\odot$, $\Upsilon_{\text{bulge}} = 0.7\,M_\odot/L_\odot$) so that no galaxy-by-galaxy halo parameters were adjusted.
+
+\noindent{\bfseries\color{navy}2. Exact 3D Spherical Top-Hat Evaluation Across All 175 SPARC Galaxies (V19)}\par
+In Version 19, I replaced the thin-disk midplane proxy $\rho_{\text{mid}}(r) = \Sigma_{\text{bary}}(r)/(2h_z)$ with the exact 3D axisymmetric mass distribution $\rho_{\text{bary}}(R,z) = \frac{\Sigma_{\text{bary}}(R)}{2h_z}\exp(-|z|/h_z)$ (with scale height $h_z = 0.196\,R_d^{0.633}$) and integrated $\bar{\rho}_L(r)$ inside a 3D sphere of radius $L$ centered at every midplane radial point $(r,0,0)$. Independent referee verification confirmed three decisive numerical facts:
+\begin{enumerate}\setlength{\itemsep}{1pt}\setlength{\parskip}{0pt}\setlength{\topsep}{1pt}
+  \item \textbf{Galaxy-Only 3D Top-Hat Signal Magnitude:} Because a 3D sphere of megaparsec radius $L$ extends far above and below the thingalactic disk ($|z| \gg h_z$), the enclosed galactic mass $M_{\text{gal}}(<\!L)$ is diluted by $L^3$. Across all 175 SPARC galaxies and $L \in [10^{16}, 10^{23}]\,\text{m}$, the maximum galaxy-only attenuation is $\max |1 - f_L| = 2.284\times 10^{-7}$ on the logarithmic grid (and \textbf{$2.300\times 10^{-7}$} under continuous optimization at $L \approx 23.09\,\text{kpc}$ in the massive spiral \textbf{UGC02487}).
+  \item \textbf{Midplane Proxy vs.\ True 3D Top-Hat at $L = 2.3714\,\text{Mpc}$:} Under the historical 1D midplane proxy, $L = 2.3714\,\text{Mpc}$ ($7.317\times 10^{22}\,\text{m}$) reduced the 123-galaxy median $\chi^2_\nu$ from $2.898$ to $2.672$ (mean $\chi^2_\nu$ from $11.551$ to $5.689$). Under the true 3D spherical top-hat integral of an isolated galaxy, $|1-f_L| \le 2.30\times 10^{-7}$, leaving the median $\chi^2_\nu = 2.898$ identical to the pure baryonic baseline!
+  \item \textbf{Cosmological Background Embedding ($L \approx 22.94\,\text{Gpc}$):} For $\bar{\rho}_L$ to reach $\gamma_L\bar{\rho}_L \sim 1$ at megaparsec scales, the sphere $B(\mathbf{x},L)$ must include the ambient intergalactic and cosmological background density $\rho_{\text{bg}} \approx \Omega_b\rho_{\text{crit}}$. At uniform cosmic baryon density, $\gamma_L\bar{\rho}_{\text{bg}} = 1$ occurs at the formal horizon scale $L \approx 22.94\,\text{Gpc}$ ($7.08\times 10^{26}\,\text{m}$).
+\end{enumerate}
+
+\begin{center}\vspace{-4pt}
+  \includegraphics[width=0.92\linewidth]{figures/sparc_tophat_EN.pdf}\par\vspace{-3pt}
+  {\scriptsize\color{slate}\textbf{Figure 5.1:} Audited comparison across the SPARC sample: (Left) Peak galaxy-only 3D top-hat signal $|1-f_L|$ vs.\ smoothing scale $L$, peaking at $2.30\times 10^{-7}$ in UGC02487; (Right) Median reduced $\chi^2_\nu$ across the 123-galaxy blind sample comparing the 3D top-hat isolated-galaxy evaluation ($2.898$) against the historical midplane proxy ($2.672$ at $L=2.3714\,\text{Mpc}$).}
+\end{center}
+\newpage

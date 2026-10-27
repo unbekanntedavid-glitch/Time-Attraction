@@ -1,0 +1,930 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{mathptmx}            % Times text and math
+\usepackage{courier}             % Type 1 typewriter font (avoids bitmap fonts)
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{threeparttable}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage[protrusion=false]{microtype}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[hidelinks]{hyperref}
+\usepackage{url}
+\usepackage[switch,modulo]{lineno}
+\renewcommand\linenumberfont{\normalfont\scriptsize\rmfamily}
+\setlength{\parskip}{3pt}
+\setlength{\emergencystretch}{3em}
+\renewcommand{\arraystretch}{1.12}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\e}[1]{\times10^{#1}}
+\newcommand{\rhob}{\bar\rho_L}
+\DeclareUrlCommand\file{\urlstyle{tt}}
+\makeatletter\g@addto@macro\UrlBreaks{\do\_\do-}\makeatother
+\newcommand{\filec}[1]{\texttt{\detokenize{#1}}}
+\urlstyle{same}
+
+\title{\textbf{The Time Attraction Law (TAL), Release V20:\\
+A Conditional Design Prediction for a\\
+Coil Field-Energy Test with Twin Quartz Oscillators}}
+\author{David Szabolcsi\\[2pt]
+\small Independent experimental researcher, Unterterzen, Switzerland\\
+\small ORCID: \href{https://orcid.org/0009-0005-6300-074X}{0009-0005-6300-074X}}
+\date{}
+
+\begin{document}
+\maketitle
+\linenumbers
+
+\begin{abstract}
+\noindent
+The Time Attraction Law (TAL) postulates that the local rate of proper time depends on the
+top-hat averaged mass(-energy) density $\rhob$ through $f_L=\exp(-\gamma_L\rhob)$ with
+$\gamma_L=G L^2/c^2$, so that two clocks in environments differing by $\Delta\rhob$ acquire a fractional
+frequency difference $\Delta f/f\approx\gamma_L\Delta\rhob$ in magnitude. An extended form of the law
+includes the mass equivalent $B^2/(2\mu_0c^2)$ of magnetic field energy. This paper converts that
+statement into a quantitative, fully documented design prediction for one fixed laboratory
+configuration specified by the author: eight vertical 2000-turn copper coils driven at 14\,mA each,
+a main quartz oscillator (OCXO\,8663 type) inside a granite shell and a twin reference oscillator 1.60\,m away.
+The finite-solenoid field (current-sheet model) is $11.632900\,\mu$T at the main clock and
+$0.430539\,\mu$T at the reference. The differential field energy inside spheres of radius $L$ is
+obtained with Gauss--Legendre radial panels, shared Fibonacci angular points and a direct
+$r=L/t$ substitution for the outer domain ($L\ge2.6$\,m). The largest calculated differential TAL
+signal of the isolated, polarity-even coil-$B^2$ term is $\Delta f/f\approx-1.20\times10^{-48}$
+($-1.2017\times10^{-48}$ at $L=0.630957$\,m on the archived grid); an independent Sobol volume
+integral gives $-1.2008435\times10^{-48}$ ($-0.0722\,\%$). Convergence, continuity and
+outer-integral checks, including an independent third-round review, are reported together with
+their remaining limitations. The result is a calculated order of magnitude within an idealised model,
+\emph{not} a measured instrument sensitivity and \emph{not} a TAL detection: no ON/OFF/$\pm I$ phase
+time series exists yet. A supplementary analysis of SPARC rotation curves contained in the
+repository (123-galaxy locked blind subsample) shows that the TAL factor at the published scales is
+numerically identical to the pure-baryon baseline.
+\end{abstract}
+
+\noindent\textbf{Keywords:} time attraction law; density-dependent proper time; top-hat averaged density;
+magnetic field energy; finite solenoid; quartz oscillator comparison; numerical quadrature;
+SPARC rotation curves
+
+%=====================================================================
+\section{Introduction}\label{sec:intro}
+
+In general relativity the rate of an ideal clock is set by the metric, and in the weak-field limit by
+the Newtonian potential, $\dd\tau\approx\dd t\,(1+\Phi/c^2)$ \cite{Will2014}. Optical clocks now resolve
+this effect over laboratory height differences of tens of centimetres \cite{Chou2010} and even across
+a millimetre-scale atomic sample \cite{Bothwell2022,Zheng2022}, and clock comparisons are routinely
+used to search for physics beyond the standard model \cite{Safronova2018,Hees2016}. A separate line of
+work has investigated scalar fields whose effective behaviour depends on the local matter density,
+such as chameleon models \cite{Khoury2004,Burrage2018}.
+
+The Time Attraction Law (TAL) \cite{TAL_formalism,TAL_publikacio} is a phenomenological proposal of
+this broad type: it postulates that the local proper-time rate is an explicit function of the
+density averaged over a sphere of radius $L$. In its extended form, the effective density includes the
+mass equivalent of magnetic field energy \cite{TAL_publikacio}. The law therefore makes, in principle,
+a laboratory prediction for any configuration in which the magnetic energy around one clock can be
+switched while a second clock serves as reference.
+
+The purpose of this paper is narrow and deliberately conservative. For one fixed apparatus specified by
+the author, it (i)~states the TAL relations used, with exact equation and page references to the source
+documents; (ii)~computes the differential TAL frequency shift produced by the coil field energy; (iii)~documents
+the numerical method and its verification, including an independent third-round review
+\cite{TAL_V20}; and (iv)~summarises, without extension, the SPARC rotation-curve comparison that exists in
+the project repository \cite{TAL_repo,TAL_V19,Lelli2016}. All numbers are taken from the archived
+calculation package (Zenodo V20, \cite{TAL_V20}; GitHub V18, \cite{TAL_repo}); file names are given so that
+each value can be traced.
+
+The central result is a \emph{conditional design prediction}: a calculated order of magnitude within an
+ideal current-sheet model. It is not a measurement, not an instrument sensitivity and not evidence for
+or against TAL. No clock phase data recorded under switched coil states exist at the time of writing.
+
+%=====================================================================
+\section{Theoretical framework}\label{sec:theory}
+
+\subsection{Definitions}
+The following definitions are quoted from the TAL formalism document \file{Time_Attraction.pdf}
+\cite{TAL_formalism} (copy in the repository root \cite{TAL_repo}). The top-hat averaged density at a
+point $\mathbf x$ is (Def.~1, Eq.~(1), p.~3)
+\begin{equation}
+\rhob(\mathbf x)=\frac{3}{4\pi L^3}\int_{|\mathbf x'-\mathbf x|\le L}\rho(\mathbf x')\,\dd^3x' ,
+\label{eq:tophat}
+\end{equation}
+with $\rhob\to\rho$ for $L\to0$. The coupling constant is (Def.~2, Eq.~(2), p.~3)
+\begin{equation}
+\gamma_L=\frac{G_N L^2}{c^2}\qquad[\gamma_L]=\mathrm{m^3\,kg^{-1}},
+\label{eq:gamma}
+\end{equation}
+and the time factor is (Def.~3, Eq.~(7), p.~4)
+\begin{equation}
+f_L(\rhob)=\exp(-\gamma_L\rhob),\qquad \dd\tau_L=f_L\,\dd t,\qquad f_L\in(0,1].
+\label{eq:fL}
+\end{equation}
+The source gives the weak-field clock prediction $\Delta f/f=\gamma_L\Delta\rhob$ (Eq.~(13), p.~5) and
+an upper bound $\gamma<10^{-22}\,\mathrm{m^3\,kg^{-1}}$, equivalently $L<367$\,m, obtained from
+$\Delta f/f<10^{-18}$ with $\Delta\rho=10^4\,\mathrm{kg\,m^{-3}}$ (Eq.~(3), p.~3). The same bound appears as
+$\gamma_{\rm lab}<1.0\times10^{-22}\,\mathrm{m^3\,kg^{-1}}$ in \file{Idovonzas_x5f_publikacio.pdf} (Eq.~(19), p.~3)
+\cite{TAL_publikacio}. This bound is the author's own estimate from a generic clock-stability
+argument; it is not a constraint reported by a dedicated density-modulation experiment.
+
+\subsection{Field-energy term}
+The extended model of \file{Idovonzas_x5f_publikacio.pdf} (Sect.~7, Eqs.~(15)--(16), p.~2)
+\cite{TAL_publikacio} adds the mass equivalent of energy densities to the effective density,
+\begin{equation}
+\rho_{\rm tot}=\rho_b+\rho_{\rm DM}+\frac{B^2}{2\mu_0c^2}+\dots,\qquad
+f(\mathbf r,t)=\exp[-\gamma_L\,\rho_{\rm tot}(\mathbf r,t)],
+\label{eq:rhotot}
+\end{equation}
+where the omitted term is the curvature contribution given in the source. Only the magnetic term
+$\rho_B=B^2/(2\mu_0c^2)$ is varied in the configuration studied here.
+
+\subsection{Differential prediction for two clocks}
+For a static coil current $I$, the field energy enclosed by a sphere of radius $L$ centred on a clock at
+$\mathbf x$ is
+\begin{equation}
+W(<L;\mathbf x)=\int_{|\mathbf x'-\mathbf x|<L}\frac{|\mathbf B(\mathbf x')|^2}{2\mu_0}\,\dd^3x' ,
+\end{equation}
+so that, by Eq.~\eqref{eq:tophat}, $\bar\rho_{B,L}(\mathbf x)=W(<L;\mathbf x)/(c^2V_L)$ with
+$V_L=4\pi L^3/3$. With $\Delta W(L)=W(<L;\mathbf x_{\rm main})-W(<L;\mathbf x_{\rm ref})$ the signed
+differential prediction used throughout is
+\begin{equation}
+\left(\frac{\Delta f}{f}\right)_{\rm diff}=\operatorname{expm1}\!\left[-\gamma\,\Delta\bar\rho_{B,L}\right]
+=\operatorname{expm1}\!\left[-\gamma\,\frac{\Delta W(L)}{c^2V_L}\right]
+\;\approx\;-\frac{3G_N}{4\pi c^4}\,\frac{\Delta W(L)}{L}\quad(\gamma=\gamma_L),
+\label{eq:diff}
+\end{equation}
+where the last form follows algebraically from Eq.~\eqref{eq:gamma}. A negative value means that the
+main clock runs slower than the reference. Because $\mathbf B\propto I$, $\Delta W\propto I^2$; the
+package reports $\Delta W(L)/I^2$ in $\mathrm{J\,A^{-2}}$. Two readings of the coupling are evaluated:
+(a)~$\gamma=\gamma_L=G_NL^2/c^2$, with $L$ scanned over 81 logarithmically spaced values between 0.01
+and 100\,m, and (b)~a fixed $\gamma=10^{-22}\,\mathrm{m^3\,kg^{-1}}$ as a cross-check at the clock bound.
+For each reading the largest $|\Delta f/f|$ over the $L$ grid is quoted. The grid maximum is not
+claimed to be an accurately determined continuous maximum location.
+
+\subsection{Polarity reversal and background field}\label{sec:polarity}
+The pure coil-$B^2$ term is even under polarity reversal. In a constant background field, the change
+in energy density also contains a $2\mathbf B_{\rm bg}\cdot\mathbf B_{\rm coil}$ cross term; ideally,
+averaging equal-magnitude $\pm I$ states relative to OFF cancels this term. The reported
+$-1.20\times10^{-48}$ value refers to this isolated even term, not to the full prediction for every
+possible simple ON/OFF measurement. Explicitly, for an unchanged background field $\mathbf B_{\rm bg}$
+and coil field $\pm\mathbf b$,
+\begin{equation}
+\tfrac12\left\{\left[|\mathbf B_{\rm bg}+\mathbf b|^2-|\mathbf B_{\rm bg}|^2\right]+
+\left[|\mathbf B_{\rm bg}-\mathbf b|^2-|\mathbf B_{\rm bg}|^2\right]\right\}=|\mathbf b|^2 ,
+\label{eq:pm}
+\end{equation}
+within the linear frequency-shift approximation \cite{TAL_V20}. The calculation does not establish an
+actual background-field measurement, $\pm I$ symmetry or a complete prediction for a simple ON/OFF
+experiment; those require experimental data.
+
+%=====================================================================
+\section{Methodology}\label{sec:method}
+
+\subsection{Experimental geometry}\label{sec:geometry}
+All geometry and electrical inputs are author-supplied values recorded in \file{report_hu.md}
+(Sect.~1, 1.1, 1.2) and hard-coded in \file{code/final_fixed.py} of the V20 package \cite{TAL_V20}. They are
+summarised in Table~\ref{tab:inputs}.
+
+\begin{table}[t]
+\centering
+\caption{Fixed configuration (author-supplied inputs unless marked ``derived'').
+Source: \filec{report_hu.md} Sect.~1; \filec{code/final_fixed.py}; \filec{csv/fixed_case_numbers.json}.}
+\label{tab:inputs}
+\small
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{4.3cm}X}
+\toprule
+Item & Value \\
+\midrule
+Coils & 8, vertical axes, parallel connection, identical current direction; axis circle radius 0.45\,m
+(coil-body inner edge at 0.30\,m, outer edge at 0.60\,m) \\
+Single coil & length 400\,mm; 2000 turns; 0.15\,mm bare Cu wire; plastic former; flange (body) outer
+diameter 300\,mm; measured winding diameter 291.7\,mm (Appendix~\ref{app:meas}) \\
+Resistance, current & $R=1789\,\Omega$ per coil (all eight identical); $I=14$\,mA per coil \\
+Supply & 24\,V, 30\,Ah battery; $U$ and $I$ logged continuously for 12\,h (author) \\
+Derived electrical & $14\,\mathrm{mA}\times1789\,\Omega=25.05$\,V; $24\,\mathrm V/1789\,\Omega=13.4$\,mA;
+0.351\,W per coil, 2.81\,W total; source current 0.112\,A \\
+Derived wire data & wire length $N\pi D=1832.8$\,m per coil; $R_{20}$ from geometry 1788.160\,$\Omega$
+($-0.0470\,\%$ vs.\ 1789\,$\Omega$); Cu mass (8 coils) 2.303\,kg \\
+Main clock & OCXO, 10\,MHz, SC-cut 3rd overtone; centred, 300\,mm above the bottom plane of the coils;
+housing 58--62\,$^\circ$C (author) \\
+Granite shell & uniform cylindrical shell, $r=0.09$--$0.22$\,m, $h=0.50$\,m, open, centred on the clock;
+2700\,kg\,m$^{-3}$; derived mass 170.9\,kg; 8\,cm gap to the coil bodies \\
+Faraday capsule & cylindrical; inner $\varnothing$\,10\,cm, outer $\varnothing$\,16\,cm, height 24\,cm;
+layers (outside to inside): 10-layer Al foil, 20\,m of 1.5\,mm bare Cu wire, Al foil, Cu coating,
+expanded-polystyrene (Hungarocell) sleeve, 1.2\,mm cast Al housing; 1\,cm gap to the granite \\
+Reference clock & full twin OCXO in an identical capsule, same height and temperature, no granite;
+1\,m from the outer coil-body surface, i.e.\ 1.60\,m from the main clock along one coil axis direction \\
+Signal logging & PicoScope 2205A and Rigol DS1202ZE oscilloscopes (author) \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The oscillators are specified by the author as OCXO 8663XS (10\,MHz, 12\,V, SC-cut, 3rd overtone).
+A Micro Crystal 8663XS datasheet could not be located; the package therefore compares the author's
+parameters with the Oscilloquartz OCXO\,8662/8663 technical specification (Edition March 2003)
+\cite{OSA8663}: short-term stability $<1\times10^{-11}$ (0.2--10\,s), ageing $2\times10^{-10}$/day,
+temperature stability $<4\times10^{-9}$ p-p, operating range $-20$ to $+70\,^\circ$C. The datasheet
+gives no magnetic sensitivity. Whether the operating range refers to the housing temperature is not
+stated in the datasheet, so the comparison with the measured 58--62\,$^\circ$C is conditional.
+
+\subsection{Finite-solenoid field}\label{sec:field}
+Each coil is modelled as an ideal cylindrical current sheet of radius $a=D/2=0.14585$\,m, length
+$\ell=0.400$\,m and $NI$ ampere-turns. The off-axis field uses the Derby--Olbert closed form in terms of
+Bulirsch's generalised complete elliptic integral \cite{Derby2010} (\file{code/fields.py}, 12 iterations of
+the \texttt{cel} recursion). The coil centres lie on a circle of radius 0.45\,m, 0.1\,m below the clock
+plane, so that the clock is 300\,mm above the bottom plane of the coils. The field is the vector sum of the
+eight coils. As an independent check, \file{V18/make_revision3_checks.py} sums $8\times2000$ discrete circular
+loops (complete elliptic integrals $K$, $E$ from SciPy \cite{SciPy2020}); the reviewer additionally compared the
+package field at five points with a separate circular-loop integral \cite{TAL_V20}.
+
+\subsection{Top-hat finite-source integration}\label{sec:tophat}
+\file{code/tophat_finite_source.py} implements Eqs.~\eqref{eq:tophat}--\eqref{eq:fL} for finite sources
+(constants $G=6.67430\times10^{-11}\,\mathrm{m^3\,kg^{-1}\,s^{-2}}$, $c=299\,792\,458$\,m\,s$^{-1}$ as
+in \cite{TAL_formalism}), including the ball volume $V_L$ and the exact ratio
+$\operatorname{expm1}(-\gamma\Delta\rhob)$. For static masses (copper windings, granite) the enclosed mass
+fraction of a sphere of radius $L$ around each clock is estimated with shared Monte Carlo samples of the
+source volume (400\,000 samples for the thin copper shells, $10^6$ for the granite), and
+$\Delta\rhob=M\,(\phi_{\rm main}-\phi_{\rm ref})/V_L$ is formed for the same 81 $L$ values. The capsules are
+identical for both clocks, so their differential static term is zero by construction.
+
+\subsection{Differential field-energy integrator}\label{sec:integrator}
+\file{code/energy_integrator.py} computes $\Delta W(L)$ for $I=1$\,A without radial interpolation.
+The shell function $S(r)=4\pi r^2\langle|\mathbf B|^2\rangle_{S^2}/(2\mu_0)$ is evaluated at each radius
+by averaging over a Fibonacci spherical point set \cite{Gonzalez2010}. The \emph{same} angular points are
+used for both centres at the same $r$ (shared angular points): $n_{\rm hi}=24\,000$ points on shells with
+$0.25\le r\le2.4$\,m, which intersect the coils, and $n_{\rm lo}=6000$ points elsewhere. Radial integration
+uses 8-point Gauss--Legendre panels with breakpoints at 0, 0.25, 0.75, 2.6 and 3.0\,m (12, 50, 92 and
+8 panels per interval in the base setting). Three regimes are used:
+\begin{enumerate}
+\item $L\le0.95$\,m (inner form; the reference sphere contains no coil):
+$\Delta W=W_{\rm main}(<L)-W_{\rm ref}(<L)$.
+\item $0.95<L<2.6$\,m (route A, outer difference):
+$\Delta W=W_{\rm ref}(>L)-W_{\rm main}(>L)$, with panels from $L$ to 3\,m followed by a tail
+$\int_3^\infty$ evaluated with $r=3/t$.
+\item $L\ge2.6$\,m (route B): direct outer difference with the substitution $r=L/t$, $t\in(0,1]$,
+32-point Gauss--Legendre in $t$ ($n_t=32$), with no truncation and no interpolation.
+\end{enumerate}
+The outer forms use no separately estimated total energy, so the difference of two independently estimated
+total energies no longer enters the outer branch (the earlier $0.01268\,\mathrm{J\,A^{-2}}$ offset near
+$L\approx3$\,m is thereby removed \cite{TAL_V20}).
+
+\subsection{Convergence and independent checks}\label{sec:conv}
+Four variants were run: $n_{\rm hi}=24\,000$ (base), 6000 and 12\,000, and 12\,000 with doubled radial panel
+density; $n_{\rm lo}=6000$ and $n_t=32$ are identical in all four. The spread is reported as the sample
+standard deviation $s=\sqrt{\sum(x_i-\bar x)^2/(n-1)}$ with $n=4$. Continuity of routes A and B was tested
+at $L=2.6$--$3.01$\,m. As an independent cross-check, a shared-sample volumetric Monte Carlo estimate
+($1.5\times10^6$ points per $L$; difference of the two ball indicator functions weighted by the field energy
+density) was computed at $L=0.316$, 0.631, 1.0 and 2.0\,m (\file{csv/convergence_mc_shared_samples.csv}).
+In the third-round review \cite{TAL_V20}, the main peak was additionally recomputed with a Cartesian Sobol
+cubature \cite{Sobol1967} ($4\times2^{19}$ points for the main sphere, $4\times2^{12}$ points for the smooth
+reference-sphere integral), and the far-field energy difference with separate Gauss--Legendre polar and radial
+quadrature and uniformly spaced azimuthal angles.
+
+\subsection{Clock-comparison reference quantities}\label{sec:clockref}
+The author observed that the Lissajous figure of the two OCXOs completes one $360^\circ$ cycle in 1\,h\,5\,min
+(3900\,s). Provided this is a true $2\pi$ electrical phase cycle, the conversion is
+$\Delta f=1/3900\,\mathrm{Hz}=0.256410$\,mHz and $|\Delta f/f|=2.56410\times10^{-11}$ at 10\,MHz. This is a
+\emph{mean beat offset, not a noise floor}. For orientation only, the package also compares the signal with the
+cited systematic uncertainty of a Sr lattice clock, $8.1\times10^{-19}$ \cite{Aeppli2024}, with the Sr
+two-clock stability $4.8\times10^{-17}$ at 1\,s \cite{Oelker2019}, and evaluates the Sr quadratic Zeeman shift
+with the coefficient $-23.0$\,MHz\,T$^{-2}$ \cite{Lu2020}. The Sr value is a cited systematic uncertainty, not a
+universal noise floor. Finally, ``main-clock-equivalent'' coefficients are defined as the linear and quadratic
+magnetic coefficients $k_1=|\Delta f/f|_{\rm offset}/B_{\rm main}$ and $k_2=|\Delta f/f|_{\rm offset}/B_{\rm main}^2$ that
+would ideally produce a frequency change equal in magnitude to the mean beat offset; they are not measured
+coefficients and not upper bounds.
+
+\subsection{SPARC rotation-curve data}\label{sec:sparc_method}
+The repository contains a supplementary analysis (V19, \cite{TAL_V19}; \file{tal_factor_7th_model.md} and
+\file{hetedik_modell_kimenet/} in \cite{TAL_repo}) that applies the TAL factor as a seventh model inside the
+hash-locked SPARC baseline runner of the repository's \file{v17_package/github/} directory. The rotation curves are
+SPARC \file{Rotmod_LTG.zip} (175 disk galaxies) \cite{Lelli2016}, SHA-256
+\texttt{0a80cc90\ldots f588}; the runner (\file{sparc_full_runner.py}) uses a locked blind subsample
+\file{blind_123.txt} of 123 galaxies with 2596 radii. The error model is $\sigma=\max(0.05\,V_{\rm obs},20\,\mathrm{km\,s^{-1}})$,
+$\chi^2=\sum[(V_{\rm pred}-V_{\rm obs})/\sigma]^2$, $\chi^2_{\rm red}=\chi^2/(N-1)$. The primary TAL model is
+$V_{\rm pred}^2=f_L(\bar\rho)\,V_{\rm bar}^2$ with $L_0=1.2\times10^{-11}$\,m, where $\bar\rho$ is a disk-plus-bulge
+midplane density proxy ($h_z=0.2$\,kpc, $\Upsilon_{\rm disk}=0.5$, $\Upsilon_{\rm bulge}=0.7$ inside $\bar\rho$ only).
+How $f_L$ enters $V(R)$ is an implementation choice not specified in the published material; an inverse coupling
+$V^2=V_{\rm bar}^2/f_L$ was run as a sensitivity check. Per-galaxy $\chi^2_{\rm red}$ values were compared with
+two-sided Wilcoxon signed-rank and exact sign tests.
+
+%=====================================================================
+\section{Results}\label{sec:results}
+
+\subsection{Magnetic field}
+Table~\ref{tab:field} lists the field values. The package current-sheet field and the independent
+discrete-loop sum agree to $-4.3\times10^{-8}$ (main) and $-7.6\times10^{-9}$ (reference) relative
+(\file{V18/revision3_checks.json}); in the reviewer's separate circular-loop test the largest relative
+discrepancy over five points was $1.04\times10^{-14}$ \cite{TAL_V20}.
+
+\begin{table}[t]
+\centering
+\caption{Magnetic field of the eight coils at 14\,mA per coil (current-sheet model, $D=291.7$\,mm).
+Sources: \filec{csv/fixed_case_numbers.json} (\texttt{Bpa}, \texttt{Bref\_pa}, \texttt{rows}),
+\filec{csv/fixed_case_and_feasibility.csv}, \filec{revision3_review_EN.md} \S2.}
+\label{tab:field}
+\small
+\begin{tabular}{lr}
+\toprule
+Quantity & Value\\
+\midrule
+$B$ at main clock & $11.632900\,\mu$T \;(0.8309\,mT\,A$^{-1}$, vertical)\\
+$B$ at reference clock (1.60\,m) & $0.430539\,\mu$T \;(30.75\,$\mu$T\,A$^{-1}$)\\
+$B$ inside a coil & 71.1\,$\mu$T\\
+Magnetic pressure in a coil, $B^2/2\mu_0$ & $2.0\times10^{-3}$\,Pa\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Differential TAL signal}
+Figure~\ref{fig:signal} shows the signed differential prediction, Eq.~\eqref{eq:diff}, as a function of $L$.
+$\Delta W(L)$ is positive at all evaluated $L$ (no negative large-$L$ tail occurs). With
+$\gamma=\gamma_L$ the largest magnitude on the grid is
+\begin{equation}
+\left(\frac{\Delta f}{f}\right)_{\rm diff}=-1.2017\times10^{-48}\quad\text{at }L=0.630957\ \text{m},
+\end{equation}
+i.e.\ $\approx-1.20\times10^{-48}$, corresponding to $k=-6.131177672606294\times10^{-45}\,\mathrm{A^{-2}}$ and
+$\Delta W/I^2=1.961\,\mathrm{J\,A^{-2}}$ at that $L$ (\file{csv/fixed_case_numbers.json}, \texttt{TAL\_diff};
+\file{csv/tal_differential_vs_L.csv}). Accumulated over one day this is $-1.04\times10^{-43}$\,s
+($-5.19\times10^{-44}$\,s per 12\,h). With the fixed $\gamma=10^{-22}\,\mathrm{m^3\,kg^{-1}}$ cross-check the
+maximum is $-4.63\times10^{-43}$ at $L=0.5623$\,m ($-4.00\times10^{-38}$\,s/day). Selected values are listed in
+Table~\ref{tab:signal}.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.92\textwidth]{fig1_signal_vs_L.pdf}
+\caption{Magnitude of the signed differential TAL prediction (main minus reference; all values negative) of
+the isolated polarity-even coil-$B^2$ term at 14\,mA per coil, versus averaging radius $L$ (81 grid points).
+Solid: $\gamma=\gamma_L=GL^2/c^2$; dashed: fixed $\gamma=10^{-22}\,\mathrm{m^3\,kg^{-1}}$. Dotted vertical lines
+mark the inner/outer switch (0.95\,m, where a small matching residual remains, Sect.~\ref{sec:L095}) and the
+start of the direct $r=L/t$ outer integral (2.6\,m). Regenerated from \filec{csv/tal_differential_vs_L.csv}.}
+\label{fig:signal}
+\end{figure}
+
+\begin{table}[t]
+\centering
+\caption{Selected rows of \filec{csv/tal_differential_vs_L.csv} (base run; values as archived, 4 significant
+digits). $\Delta\bar\rho_L$ is main minus reference.}
+\label{tab:signal}
+\small
+\begin{tabular}{rrrrr}
+\toprule
+$L$ (m) & $\Delta W/I^2$ (J\,A$^{-2}$) & $\Delta\bar\rho_L/I^2$ (kg\,m$^{-3}$\,A$^{-2}$) &
+$\Delta f/f$, $\gamma_L$, 14\,mA & $\Delta f/f$, $\gamma=10^{-22}$, 14\,mA\\
+\midrule
+0.1    & $1.184\e{-3}$ & $3.145\e{-18}$ & $-4.577\e{-51}$ & $-6.164\e{-44}$\\
+0.3162 & $6.382\e{-2}$ & $5.361\e{-18}$ & $-7.803\e{-50}$ & $-1.051\e{-43}$\\
+0.5623 & 1.582 & $2.363\e{-17}$ & $-1.087\e{-48}$ & $-4.631\e{-43}$\\
+0.631  & 1.961 & $2.074\e{-17}$ & $-1.202\e{-48}$ & $-4.065\e{-43}$\\
+1      & 2.177 & $5.782\e{-18}$ & $-8.416\e{-49}$ & $-1.133\e{-43}$\\
+1.995  & 0.4398 & $1.471\e{-19}$ & $-8.522\e{-50}$ & $-2.883\e{-45}$\\
+3.162  & $1.620\e{-3}$ & $1.361\e{-22}$ & $-1.981\e{-52}$ & $-2.667\e{-48}$\\
+10     & $2.778\e{-6}$ & $7.378\e{-27}$ & $-1.074\e{-55}$ & $-1.446\e{-52}$\\
+100    & $2.636\e{-11}$ & $7.003\e{-35}$ & $-1.019\e{-61}$ & $-1.373\e{-60}$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Independent check of the main peak}
+A targeted rerun of the archived integrator at $L=0.630957$\,m reproduces $-1.2017108\times10^{-48}$, with a
+relative difference of $2.2\times10^{-16}$ from the archived value (review \cite{TAL_V20}; the regenerated
+\file{V18/revision3_checks.json} gives $-1.2017108238308338\times10^{-48}$ against the JSON value
+$-1.2017108238308337\times10^{-48}$). The reviewer's independent volumetric Sobol integral at the same $L$ gives
+$-1.2008435\times10^{-48}$, a $-0.0722\,\%$ difference in signal magnitude, with a standard error of
+$3.04\times10^{-52}$ estimated from Sobol scrambles. This standard error is not the uncertainty of the full
+model: it does not include uncertainties in coil geometry, current, the actual winding or the environment.
+
+\subsection{Convergence}
+Table~\ref{tab:conv} reproduces \file{csv/convergence_dW.csv}; Fig.~\ref{fig:conv} shows the four variants
+together with the shared-sample Monte Carlo values of Table~\ref{tab:mc}. At the peak ($L=0.631$\,m) the
+four-run relative spread is $1.05\times10^{-4}$; the largest relative spread among the tabulated points,
+$6.55\times10^{-3}$, occurs at $L=2$\,m, inside the region where the reference-centred shells intersect the coils.
+
+\begin{table}[t]
+\centering
+\begin{threeparttable}
+\caption{Convergence of $\Delta W(L)/I^2$ over four integrator variants ($n_{\rm hi}=24\,000$ base, 6000,
+12\,000, and 12\,000 with doubled radial panels). $s$ is the sample standard deviation ($n-1$, $n=4$).
+Source: \filec{csv/convergence_dW.csv}.}
+\label{tab:conv}
+\small
+\begin{tabular}{rllll}
+\toprule
+$L$ (m) & Base value (J\,A$^{-2}$) & Range, min--max (J\,A$^{-2}$) & $s$ (J\,A$^{-2}$) & $s/$mean\\
+\midrule
+0.1    & 0.00118391 & 0.00118391--0.00118391 & 0\tnote{a} & 0\\
+0.3162 & 0.0637737 & 0.0637725--0.0637856 & $6.85\e{-6}$ & $1.07\e{-4}$\\
+0.631  & 1.96126 & 1.96091--1.96135 & $2.05\e{-4}$ & $1.05\e{-4}$\\
+1      & 2.17691 & 2.17526--2.18903 & $6.53\e{-3}$ & $3.00\e{-3}$\\
+2      & 0.426287 & 0.426248--0.431987 & $2.80\e{-3}$ & $6.55\e{-3}$\\
+2.6    & 0.00713721 & identical in all 4 runs & 0\tnote{b} & 0\tnote{b}\\
+3.162  & 0.00162106 & identical in all 4 runs & 0\tnote{b} & 0\tnote{b}\\
+10     & $2.77763\e{-6}$ & identical in all 4 runs & 0\tnote{b} & 0\tnote{b}\\
+31.62  & $8.37811\e{-9}$ & identical in all 4 runs & 0\tnote{b} & 0\tnote{b}\\
+100    & $2.6365\e{-11}$ & identical in all 4 runs & 0\tnote{b} & 0\tnote{b}\\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\footnotesize
+\item[a] All four runs agree at $L=0.1$\,m; the varied $n_{\rm hi}$ acts only on shells with $0.25\le r\le2.4$\,m.
+\item[b] The four runs use identical nlo and nt settings in this region. The zero sample standard deviation is
+therefore not a far-field error estimate; far-field convergence must be tested by varying nlo and nt separately.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{Shared-sample volumetric Monte Carlo check ($1.5\times10^6$ points per $L$).
+Source: \filec{csv/convergence_mc_shared_samples.csv}.}
+\label{tab:mc}
+\small
+\begin{tabular}{rrrrrr}
+\toprule
+$L$ (m) & MC $\Delta W/I^2$ (J\,A$^{-2}$) & MC $1\sigma$ (J\,A$^{-2}$) & $\sigma/\Delta W$ & GL integrator (J\,A$^{-2}$) &
+(GL$-$MC)$/\sigma$\\
+\midrule
+0.3162 & 0.06646 & 0.001444 & 2.17\,\% & 0.06377 & $-1.86$\\
+0.631  & 1.949 & 0.0194 & 0.99\,\% & 1.961 & $+0.61$\\
+1      & 2.154 & 0.02455 & 1.14\,\% & 2.177 & $+0.92$\\
+2      & 0.4266 & 0.01722 & 4.04\,\% & 0.4263 & $-0.02$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{fig2_convergence.pdf}
+\caption{Left: $\Delta W(L)/I^2$ from the base run (line), the four integrator variants at the check radii
+(open symbols) and the shared-sample Monte Carlo estimates with $1\sigma$ error bars (crosses). Right: relative
+sample standard deviation over the four variants. Open grey circles are exact zeros obtained with identical
+$n_{\rm lo}$, $n_t$ settings and are not far-field error estimates. Regenerated from \filec{csv/convergence_dW.csv},
+\filec{csv/convergence_mc_shared_samples.csv} and \filec{csv/tal_differential_vs_L.csv}.}
+\label{fig:conv}
+\end{figure}
+
+\subsection{\texorpdfstring{Continuity of the outer routes near 3\,m}{Continuity of the outer routes near 3 m}}
+Routes A (panels plus $r=3/t$ tail) and B ($r=L/t$) were evaluated on the overlap $L=2.6$--$3.01$\,m
+(Table~\ref{tab:cont}). The relative differences at $L=2.99$, 3.00 and 3.01\,m are $0$, $-7.4\times10^{-16}$
+and $-1.5\times10^{-15}$; on 2.6--2.9\,m they are at most $2.9\times10^{-15}$ in magnitude. The reviewer's targeted
+rerun found the two routes consistent to approximately $10^{-15}$ relative across 2.6--3.01\,m \cite{TAL_V20}.
+
+\begin{table}[t]
+\centering
+\caption{Route A versus route B for the outer difference. Source: \filec{csv/continuity_test.csv}.}
+\label{tab:cont}
+\small
+\begin{tabular}{rllr}
+\toprule
+$L$ (m) & Route A (J\,A$^{-2}$) & Route B (J\,A$^{-2}$) & $(A-B)/B$\\
+\midrule
+2.6  & $7.137211082279\e{-3}$ & $7.137211082279\e{-3}$ & $-2.917\e{-15}$\\
+2.7  & $5.182239219640\e{-3}$ & $5.182239219640\e{-3}$ & $-2.008\e{-15}$\\
+2.8  & $3.881360582648\e{-3}$ & $3.881360582648\e{-3}$ & $-1.006\e{-15}$\\
+2.9  & $2.978621592572\e{-3}$ & $2.978621592572\e{-3}$ & $-4.368\e{-16}$\\
+2.99 & $2.387273260006\e{-3}$ & $2.387273260006\e{-3}$ & $0$\\
+3.00 & $2.331314942858\e{-3}$ & $2.331314942858\e{-3}$ & $-7.441\e{-16}$\\
+3.01 & $2.277039189332\e{-3}$ & $2.277039189332\e{-3}$ & $-1.524\e{-15}$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Independent outer-integral comparison}
+Table~\ref{tab:outer} reproduces the reviewer's comparison of the archived integrator with a separate integral
+that uses Gauss--Legendre polar and radial quadrature with uniformly spaced azimuthal angles (not the archived
+Fibonacci average) and maps the infinite domain with $r=L/t$ \cite{TAL_V20}. The field function is shared with the
+archive. The coarse/fine grids of the separate integral differ by at most a few $10^{-6}$ relative at the nearby points;
+this is a convergence test, not a proof of an absolute error bound. At $L=100$\,m the residual decreases with
+angular refinement: 6000/12\,000/24\,000 far-field angular points give 2.6364994, 2.6357023 and
+$2.6355308\times10^{-11}\,\mathrm{J\,A^{-2}}$, with 32 and then 64 radial $t$ points. No certified error bound is
+claimed for every $L$ or for arbitrary distances.
+
+\begin{table}[t]
+\centering
+\caption{Outer-integral comparison from the independent third-round review
+(\filec{revision3_review_EN.md} \S3, \cite{TAL_V20}).}
+\label{tab:outer}
+\small
+\begin{tabular}{rllr}
+\toprule
+$L$ (m) & Archived integrator $\Delta W$ (J\,A$^{-2}$) & Separate integral (J\,A$^{-2}$) & Rel.\ discrepancy\\
+\midrule
+2.6      & 0.00713721108 & 0.00713720352 & $+0.000106\,\%$\\
+2.818383 & 0.00369084579 & 0.00369083957 & $+0.000169\,\%$\\
+3.00     & 0.00233131494 & 0.00233130964 & $+0.000227\,\%$\\
+3.162    & 0.00162105726 & 0.00162105265 & $+0.000284\,\%$\\
+10       & $2.77763231\e{-6}$ & $2.77754429\e{-6}$ & $+0.00317\,\%$\\
+31.62    & $8.37811251\e{-9}$ & $8.37717664\e{-9}$ & $+0.0112\,\%$\\
+100      & $2.63649938\e{-11}$ & $2.63556282\e{-11}$ & $+0.0355\,\%$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{\texorpdfstring{Matching residual at $L=0.95$\,m}{Matching residual at L = 0.95 m}}\label{sec:L095}
+The inner/outer switch at $L=0.95$\,m is not exactly continuous. The archived inner and outer values are
+2.17738947 and 2.17597607\,J\,A$^{-2}$; the matching residual is 0.00141340\,J\,A$^{-2}$, i.e.\ $0.0649\,\%$ of the
+inner value. It equals, to $8.9\times10^{-16}$\,J\,A$^{-2}$, the difference between the two total-energy estimates,
+2.237861 (main) and 2.236448\,J\,A$^{-2}$ (reference) (\file{csv/fixed_case_numbers.json}, \texttt{jump\_LJ},
+\texttt{W\_total}; \file{V18/revision3_checks.json}, \texttt{L095\_residual}), and is attributed to the angular
+quadrature error on reference-centred shells that intersect the coils; it affects only the 0.95--2.4\,m range. This
+remains a numerical limitation: the curve is not continuous to machine precision, and machine-precision agreement
+applies only to the 2.6--3.01\,m A/B overlap.
+
+\subsection{Comparison scales}
+Table~\ref{tab:scales} relates the predicted signal to the reference quantities of Sect.~\ref{sec:clockref}. All
+ratios are arithmetic comparisons; none is a detection threshold of the present apparatus.
+
+\begin{table}[t]
+\centering
+\caption{Comparison quantities for the fixed case (14\,mA per coil).
+Source: \filec{csv/fixed_case_and_feasibility.csv}, \filec{csv/fixed_case_numbers.json}, \filec{report_hu.md} \S2.}
+\label{tab:scales}
+\small
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}Xr}
+\toprule
+Quantity & Value\\
+\midrule
+Mean beat offset (65-min Lissajous cycle; \emph{mean beat offset, not a noise floor}) & $2.56410\times10^{-11}$\\
+$|\Delta f/f|$ / mean beat offset: $\gamma_L$; $\gamma=10^{-22}$ & $4.69\times10^{-38}$; $1.81\times10^{-32}$\\
+$|\Delta f/f|$ / datasheet short-term stability $1\times10^{-11}$ \cite{OSA8663} & $1.2\times10^{-37}$\\
+$|\Delta f/f|$ / cited Sr systematic uncertainty $8.1\times10^{-19}$ \cite{Aeppli2024} & $1.48\times10^{-30}$\\
+Sr white-FM averaging time, $k=2$, $\sigma(1\,\mathrm s)=4.8\times10^{-17}$ \cite{Oelker2019} (algebraic extrapolation only) & $1.6\times10^{57}$\,yr\\
+Sr quadratic Zeeman shift at the main-clock field \cite{Lu2020} & $-7.25\times10^{-18}$\\
+Field below which the Sr Zeeman shift stays under $8.1\times10^{-19}$ & $<3.9\,\mu$T\\
+Main-clock-equivalent coefficient $k_1$ (linear) & $2.20\times10^{-6}\,\mathrm{T^{-1}}$\\
+Main-clock-equivalent coefficient $k_2$ (quadratic) & $0.189\,\mathrm{T^{-2}}$\\
+Coil current per coil giving $|\Delta f/f|$ = mean beat offset: $\gamma_L$; $\gamma=10^{-22}$ & $6.5\times10^{16}$\,A; $1.0\times10^{14}$\,A\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The Sr quadratic Zeeman shift at $11.63\,\mu$T, $-7.25\times10^{-18}$, is quoted as a cited systematic for an
+atomic clock in the same field; it is not a universal noise floor and does not apply to quartz, which has no atomic
+Zeeman shift. The quoted white-FM averaging time is an algebraic extrapolation of the chosen formula, not an
+experimental time prediction. The main-clock-equivalent coefficients only indicate what ideal magnetic frequency
+change would equal the observed mean beat offset; without a measured ON/OFF uncertainty and separation of
+environmental couplings no upper bound follows from them.
+
+\subsection{Static mass terms}
+The granite shell and the copper windings produce static, not modulated, offsets
+(\file{csv/fixed_case_numbers.json}, \texttt{granite}, \texttt{cu\_static};
+\file{csv/granite_static_differential.csv}, \file{csv/copper_coils_static_differential.csv}). For the granite
+(170.9\,kg), the general-relativistic potential term is $\Phi/c^2=-6.28\times10^{-25}$ at the main clock and
+$-7.92\times10^{-26}$ at the reference (difference $-5.49\times10^{-25}$); the TAL extreme is
+$-9.6\times10^{-26}$ ($\gamma_L$, $L=0.28$\,m) and $-2.1\times10^{-19}$ ($\gamma=10^{-22}$, $L=0.22$\,m). For the
+copper (2.303\,kg), the GR terms are $-3.68\times10^{-27}$ and $-1.09\times10^{-27}$ (difference
+$-2.60\times10^{-27}$) and the TAL extremes $-6.2\times10^{-28}$ ($\gamma_L$) and $-2.3\times10^{-22}$
+($\gamma=10^{-22}$). The capsules are identical, so their differential static term is zero. The mass and material of
+the plastic coil formers are unknown; their static differential term could not be calculated.
+
+\subsection{Higher-current cases}
+Table~\ref{tab:highI} reproduces the author's list of higher currents. None is feasible with the available supply,
+and all exceed the continuous-current limit (0.405\,A) while remaining below the free-air Preece fusing current
+(4.65\,A). The Onderdonk estimate is only an idealized adiabatic fusing time; no safe pulse duration follows from
+it, and the calculated high-current cases are not operating recommendations. Even in these cases the signal is
+$\le5.5\times10^{-44}$ in magnitude.
+
+\begin{table}[t]
+\centering
+\caption{Higher-current cases (per coil). Source: \filec{csv/fixed_case_and_feasibility.csv}.
+Not operating recommendations.}
+\label{tab:highI}
+\small
+\begin{tabular}{rrrrrrr}
+\toprule
+$I$ (A) & $U=IR$ (V) & $P_8$ (kW) & Onderdonk $t$ (s) & $I/I_{\rm cont}$ & $B_{\rm main}$ (mT) & $\Delta f/f$ ($\gamma_L$)\\
+\midrule
+1.5 & 2684 & 32.2 & 11.7 & 3.7 & 1.25 & $-1.38\e{-44}$\\
+2   & 3578 & 57.2 & 6.6  & 4.9 & 1.66 & $-2.45\e{-44}$\\
+3   & 5367 & 128.8 & 2.9 & 7.4 & 2.49 & $-5.52\e{-44}$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{SPARC rotation curves (repository analysis)}\label{sec:sparc}
+The repository does \emph{not} contain rotation-curve fit results for all 175 SPARC galaxies. The script
+\texttt{Repoduce SPARK 175 v16 1} in the repository root generates synthetic exponential profiles and mock
+``observed'' velocities with random scatter when the SPARC directory is absent; it is not an analysis of SPARC data, and
+no results from it are used here. The only SPARC analysis with archived results is the seventh-model comparison on the
+123-galaxy locked blind subsample (2596 radii) summarised in Table~\ref{tab:sparc}
+(\file{hetedik_modell_kimenet/comparison.json}, \file{hetedik_modell_kimenet/run_meta.json},
+\file{tal_factor_7th_model.md}; \cite{TAL_repo,TAL_V19}). The six baseline outputs were reported as byte-identical to
+\file{v17_package/github/run_output/}.
+
+\begin{table}[t]
+\centering
+\caption{Median and mean $\chi^2_{\rm red}$ over 123 galaxies (2596 radii) for the six baryonic baselines and the
+TAL factor (seventh model). Sources: \filec{hetedik_modell_kimenet/comparison.json} (\texttt{stats},
+\texttt{variant\_stats}), \filec{hetedik_modell_kimenet/run_meta.json}, \filec{tal_factor_7th_model.md} \S4.}
+\label{tab:sparc}
+\small
+\begin{tabular}{llrr}
+\toprule
+Model & $V_{\rm pred}$ & Median & Mean\\
+\midrule
+vbar & $V_{\rm bar}$ & 3.1433 & 4.2161\\
+vbar\_095 & $0.95\,V_{\rm bar}$ & 3.1995 & 4.3725\\
+vbar\_105 & $1.05\,V_{\rm bar}$ & 2.9555 & 4.3224\\
+no\_bulge & $(V_{\rm gas}^2+V_{\rm disk}^2)^{1/2}$ & 3.3131 & 6.3928\\
+no\_gas & $(V_{\rm disk}^2+V_{\rm bul}^2)^{1/2}$ & 4.0474 & 5.2533\\
+disk\_only & $|V_{\rm disk}|$ & 4.2623 & 7.5707\\
+TAL, $L_0=1.2\times10^{-11}$\,m (primary) & $f_L^{1/2}V_{\rm bar}$ & 3.1433 & 4.2161\\
+TAL, $L=367$\,m / $\gamma=10^{-22}$ & forward & 3.1433 & 4.2161\\
+TAL, $L=2.36$\,kpc & forward & 3.1433 & 4.2161\\
+TAL, fitted $L=2.371$\,Mpc (in-sample, not blind) & forward & 2.7083 & 4.1761\\
+TAL, fitted $L=0.473$\,Mpc (in-sample, not blind) & inverse & 3.1425 & 4.3265\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+For the primary model, $\max\gamma_0\bar\rho=6.3\times10^{-67}$ and $\max|f_L-1|=0$ in double precision at all
+2596 points; all predicted velocities and all 123 per-galaxy $\chi^2_{\rm red}$ values are identical to the
+\texttt{vbar} baseline (123 ties). It therefore ranks exactly where \texttt{vbar} ranks: better than vbar\_095
+(97 vs.\ 26 galaxies; Wilcoxon $p=2.57\times10^{-4}$), no\_gas (110 vs.\ 13) and disk\_only (111 vs.\ 12), and
+worse than vbar\_105 (32 vs.\ 91; Wilcoxon $p=0.0146$). At $L=2.36$\,kpc, $|f_L-1|\le2.33\times10^{-5}$. The
+fitted forward scale lowers the median but is worse than \texttt{vbar} in 81 of 123 galaxies (sign test
+$p=5.6\times10^{-4}$) and was obtained in-sample. Order-one scales (tens of Mpc, or $\gamma=10^{23}$) worsen the
+per-galaxy fits (\file{tal_factor_7th_model.md} \S4.3). These results are consistent with the source's own statement
+that the galactic correction at laboratory-scale $\gamma$ is of order $10^{-34}$ and negligible
+(\file{Time_Attraction.pdf}, Sect.~8, Eq.~(14), p.~5 \cite{TAL_formalism}).
+
+%=====================================================================
+\section{Discussion}\label{sec:discussion}
+
+\paragraph{Status of the prediction.}
+Subject to the numerical limitations and control qualifications listed below, the calculated pure even field-energy
+signal of $\approx-1.20\times10^{-48}$ is numerically supported; it is a usable conditional design prediction, not a
+validated measurement result \cite{TAL_V20}. It is an acceptable calculated order of magnitude within the chosen
+ideal current-sheet model, not a TAL detection and not a measured instrument sensitivity. On the comparison scales
+of Table~\ref{tab:scales}, the signal could not be measured with the OCXO pair, nor with a Sr reference clock.
+
+\paragraph{Limitations.}
+\begin{enumerate}
+\item \emph{No measurement data.} No ON/OFF/$\pm I$ phase or frequency time series, state log, or
+switching-correlated thermal measurement exists yet; the dimensional measurement record (Appendix~\ref{app:meas})
+does not replace these. The actual sensitivity of the apparatus is therefore undetermined. The next required evidence
+is a timestamped phase plus state-label ON/OFF estimate with its uncertainty, not another calculated signal-to-beat
+ratio.
+\item \emph{Mean beat offset.} The 65-min Lissajous cycle gives a mean beat offset of $2.56410\times10^{-11}$ only if it
+is a true $2\pi$ electrical phase cycle. It is a mean beat offset, not a noise floor. Tying the switching schedule to
+the beat period is not intrinsically invalid, but the offset does not make 65 minutes optimal; the interval must be
+justified through noise and thermal-settling tests.
+\item \emph{Far-field convergence.} The four runs use identical nlo and nt settings in this region. The zero sample
+standard deviation is therefore not a far-field error estimate; far-field convergence must be tested by varying nlo
+and nt separately. A joint refinement ($n_{\rm lo}$ 6000$\to$12\,000, $n_t$ 32$\to$64) changes $\Delta W$ by
+$-9.1\times10^{-7}$ to $-3.0\times10^{-4}$ relative at $L=2.6$--100\,m (Appendix~\ref{app:checks}); separate
+variation has not yet been performed.
+\item \emph{Matching residual at 0.95\,m.} The residual of 0.00141340\,J\,A$^{-2}$ ($0.0649\,\%$ of the inner value)
+remains a numerical limitation; the curve is not continuous to machine precision.
+\item \emph{Background cross term.} The pure coil-$B^2$ term is even under polarity reversal. In a constant background
+field, the change in energy density also contains a $2B_{\rm bg}\cdot B_{\rm coil}$ cross term; ideally, averaging
+equal-magnitude $\pm I$ states relative to OFF cancels this term. The reported $-1.20\times10^{-48}$ value refers to this
+isolated even term, not to the full prediction for every possible simple ON/OFF measurement.
+\item \emph{Thermal control.} Joule heating is also even in the current, so polarity reversal does not separate it. The
+proposed control dissipates the same heat load (2.81\,W) in a non-field-generating (bifilar) resistor near the coils
+during the OFF intervals. The purpose of the equal-total-power control with a small residual magnetic field is to
+reduce switching-correlated thermal changes. Temperature matching between the ON and OFF states and the residual field
+of the control must be verified by measurement; any remaining mismatch must be included in the uncertainty of the
+frequency estimate. Equal total power does not guarantee identical spatial heat deposition or identical conductive
+and radiative coupling to the clocks.
+\item \emph{Model idealisation.} The field is that of ideal current sheets with the measured winding diameter; the
+actual multilayer winding, current tolerances, magnetic materials, and the environment are not modelled, and none of
+the quoted numerical standard errors includes these effects. The winding diameter rests on an author-supplied
+measurement record that was not independently certified on site.
+\item \emph{Safety.} The Onderdonk estimate is only an idealized adiabatic fusing time; no safe pulse duration follows
+from it, and the calculated high-current cases of Table~\ref{tab:highI} are not operating recommendations.
+\item \emph{Theory inputs.} The bound $\gamma<10^{-22}\,\mathrm{m^3\,kg^{-1}}$ is the source's own estimate
+(Eq.~(3) of \cite{TAL_formalism}). How $f_L$ enters galactic rotation curves is not specified in the published
+material; the SPARC comparison rests on stated implementation choices and on a 123-galaxy subsample, not on all 175
+galaxies.
+\end{enumerate}
+
+\paragraph{Measurement sequence implied by the design.}
+The design calls for (1)~a 12\,h baseline without coil current, logging the Lissajous phase of the two OCXOs, battery
+voltage and current, and housing temperature; (2)~equal-length ON/OFF segments at 14\,mA for at least 12\,h;
+(3)~the same cycle with reversed polarity, so that effects linear in $B$ change sign while $B^2$ effects do not;
+(4)~evaluation of ON$-$OFF differences and their uncertainties and of polarity sums and differences, with separate
+treatment of temperature and supply couplings; and (5)~the matched-heat-load control above, with only post-settling
+segments entering the evaluation (\file{report_hu.md} \S4). Within this sequence the TAL prediction for the isolated
+even term is $-1.202\times10^{-48}$.
+
+%=====================================================================
+\section{Conclusion}\label{sec:conclusion}
+For a fixed, fully specified laboratory configuration, the TAL relations $f_L=\exp(-\gamma_L\rhob)$,
+$\gamma_L=GL^2/c^2$, with the magnetic term $B^2/(2\mu_0c^2)$, predict a differential fractional frequency shift of the
+isolated, polarity-even coil-$B^2$ term of $\approx-1.20\times10^{-48}$ between a main and a reference oscillator at
+14\,mA per coil. This value is reproduced by an independent Sobol cubature to $-0.0722\,\%$, and the previous outer-integral
+discrepancy near $L\approx3$\,m has been eliminated at the checked points. The remaining numerical limitations (untested
+far-field resolution dependence at fixed nlo/nt, and the 0.0649\,\% matching residual at 0.95\,m) are disclosed. The
+result is a conditional design prediction in an ideal current-sheet model, not a measured sensitivity and not a
+detection; the next required evidence is an ON/OFF estimate with uncertainty from timestamped phase data and state labels.
+In the repository's SPARC analysis, the TAL factor at the published scales is numerically identical to the pure-baryon
+baseline.
+
+%=====================================================================
+\section*{Data availability}
+All inputs, outputs and review texts are archived in Zenodo record V20,
+``Time Attraction Law V20 --- audited release with independent third-round review'',
+\href{https://doi.org/10.5281/zenodo.23540741}{doi:10.5281/zenodo.23540741} \cite{TAL_V20}; the previous version V19
+(seventh-model SPARC analysis) is \href{https://doi.org/10.5281/zenodo.23497128}{doi:10.5281/zenodo.23497128} \cite{TAL_V19}.
+The GitHub V18 package, identical in code and CSV/JSON files to the V20 archive and additionally containing the two
+text corrections of the third-round review, is available at
+\url{https://github.com/unbekanntedavid-glitch/Time-Attraction}, commit
+\texttt{042a616596f1204e78ef137da10c262761bb922e} (directory \file{V18/}) \cite{TAL_repo}. SHA-256 checksums are provided
+in \file{V18/SHA256SUMS_V18.txt}, \file{V18/SHA256SUMS_ZENODO_V20.txt} and \file{V18/final/SHA256SUMS.txt}. SPARC
+rotation curves are available from the SPARC database \cite{Lelli2016}. All materials are licensed under CC BY-NC 4.0.
+No clock phase time series exist yet.
+
+\section*{Code availability}
+The calculation is reproduced by \file{code/final_fixed.py} with the modules \file{code/fields.py},
+\file{code/energy_integrator.py}, and \file{code/tophat_finite_source.py}, written in Python 3 with NumPy \cite{NumPy2020} and
+SciPy \cite{SciPy2020}, all in \file{V18/final/}. The computational checks of Appendix~\ref{app:checks} are regenerated by
+\file{V18/make_revision3_checks.py}. The SPARC seventh-model scripts and outputs are referenced in
+\file{tal_factor_7th_model.md} \cite{TAL_repo,TAL_V19}. Figures~\ref{fig:signal} and \ref{fig:conv} were regenerated from
+the archived CSV files with a plotting script supplied with this manuscript source.
+
+\section*{Declarations}
+\noindent\textbf{Funding.} No funding was received for this work.\\
+\textbf{Competing interests.} The author has no competing interests to declare.\\
+\textbf{Author contributions.} D.\,Sz.\ is the sole author: theory, apparatus specification, measurements of the
+apparatus dimensions, calculations and writing.\\
+\textbf{Ethics approval, consent.} Not applicable.\\
+\textbf{Acknowledgements.} The author thanks the independent reviewer of the third-round review archived in
+\cite{TAL_V20}.
+
+%=====================================================================
+\appendix
+\section{Measurement record: winding diameter}\label{app:meas}
+\begin{table}[h]
+\centering
+\caption{Winding-diameter measurement record (author-supplied; \filec{report_hu.md} \S1.2).}
+\label{tab:meas}
+\small
+\begin{tabular}{ll}
+\toprule
+Item & Value\\
+\midrule
+Date of measurement & 2025-11-13\\
+Measured by & D.\ Szabolcsi\\
+Instrument (winding diameter) & caliper, resolution 0.02\,mm\\
+Signal measurement & PicoScope 2205A and Rigol DS1202ZE oscilloscopes\\
+Readings (5 consecutive) & 291.7; 291.7; 291.7; 291.7; 291.7\,mm\\
+Mean & 291.7\,mm\\
+Sample standard deviation & 0\,mm (all five readings identical)\\
+Location of the 300\,mm dimension & outer diameter of the coil-body flange, not the winding surface\\
+\bottomrule
+\end{tabular}
+\end{table}
+\noindent The zero sample standard deviation of five identical readings does not imply zero total measurement uncertainty
+of the dimension. Consequences for the geometry: the coil-body inner edge stays at 0.30\,m and the axis circle at
+$0.30+0.15=0.45$\,m; the reference is 1\,m from the outer flange surface (0.60\,m), i.e.\ 1.60\,m from the main clock and
+1.004\,m from the winding surface; the gap between granite and flange is 8\,cm (8.42\,cm to the winding surface); the gaps
+between adjacent coil bodies and windings are 4.4\,cm and 5.3\,cm. The resistance computed from the measured diameter,
+1788.160\,$\Omega$, differs from the stated 1789\,$\Omega$ by $-0.0470\,\%$ \cite{TAL_V20}.
+
+\section{Summary of the revision-3 computational checks}\label{app:checks}
+\file{V18/revision3_checks.json} was \emph{regenerated by the author's pipeline} on 2026-10-21 by running
+\file{V18/make_revision3_checks.py} on the \file{V18/final} package. It is not the reviewer's original file; the reviewer's
+script \file{check_revision3.py} is not available. Its contents are computational checks only, with no raw clock data
+(Table~\ref{tab:checks}).
+
+\begin{table}[h]
+\centering
+\caption{Contents of \filec{V18/revision3_checks.json} (author-regenerated).}
+\label{tab:checks}
+\small
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{4.6cm}X}
+\toprule
+Check & Result\\
+\midrule
+SHA-256 integrity & 18/18 entries match \filec{V18/final/SHA256SUMS.txt}\\
+$B$, main clock & discrete loops $1.1632900301\times10^{-5}$\,T vs.\ package $1.1632899803\times10^{-5}$\,T; rel.\ diff.\ $-4.28\times10^{-8}$\\
+$B$, reference clock & $4.3053923117\times10^{-7}$\,T vs.\ $4.3053922792\times10^{-7}$\,T; rel.\ diff.\ $-7.56\times10^{-9}$\\
+Main-peak rerun, $L=0.6309573$\,m ($n_{\rm hi}=24\,000$) & $\Delta W/I^2=1.9611445$\,J\,A$^{-2}$; $k=-6.131177672606294\times10^{-45}$\,A$^{-2}$ (identical to JSON); signal $-1.2017108\times10^{-48}$; runtime 56.9\,s\\
+Outer integral, $n_{\rm lo}$ 6000$\to$12\,000 and $n_t$ 32$\to$64 jointly &
+rel.\ change $-9.08\times10^{-7}$ (2.6\,m), $-1.95\times10^{-6}$ (3.0\,m), $-2.71\times10^{-5}$ (10\,m), $-3.02\times10^{-4}$ (100\,m)\\
+Route A vs.\ B at 3.0\,m & rel.\ diff.\ $-7.44\times10^{-16}$\\
+Residual at $L=0.95$\,m & 0.0014133960\,J\,A$^{-2}$ ($0.06491\,\%$ of inner value); equals $W_{\rm main}-W_{\rm ref}$ total-energy difference to $8.9\times10^{-16}$\\
+\bottomrule
+\end{tabularx}
+\end{table}
+\noindent The joint refinement in the outer-integral row changes nlo and nt together; it does not replace the separate
+variation of nlo and nt requested by the review.
+
+%=====================================================================
+\begin{thebibliography}{99}\small
+
+\bibitem{Will2014}
+C.\,M.\ Will, The confrontation between general relativity and experiment,
+Living Rev.\ Relativ.\ \textbf{17}, 4 (2014).
+\href{https://doi.org/10.12942/lrr-2014-4}{doi:10.12942/lrr-2014-4}
+
+\bibitem{Chou2010}
+C.\,W.\ Chou, D.\,B.\ Hume, T.\ Rosenband, D.\,J.\ Wineland, Optical clocks and relativity,
+Science \textbf{329}, 1630--1633 (2010).
+\href{https://doi.org/10.1126/science.1192720}{doi:10.1126/science.1192720}
+
+\bibitem{Bothwell2022}
+T.\ Bothwell, C.\,J.\ Kennedy, A.\ Aeppli, D.\ Kedar, J.\,M.\ Robinson, E.\ Oelker, A.\ Staron, J.\ Ye,
+Resolving the gravitational redshift across a millimetre-scale atomic sample,
+Nature \textbf{602}, 420--424 (2022).
+\href{https://doi.org/10.1038/s41586-021-04349-7}{doi:10.1038/s41586-021-04349-7}
+
+\bibitem{Zheng2022}
+X.\ Zheng, J.\ Dolde, V.\ Lochab, B.\,N.\ Merriman, H.\ Li, S.\ Kolkowitz,
+Differential clock comparisons with a multiplexed optical lattice clock,
+Nature \textbf{602}, 425--430 (2022).
+\href{https://doi.org/10.1038/s41586-021-04344-y}{doi:10.1038/s41586-021-04344-y}
+
+\bibitem{Safronova2018}
+M.\,S.\ Safronova, D.\ Budker, D.\ DeMille, D.\,F.\ Jackson Kimball, A.\ Derevianko, C.\,W.\ Clark,
+Search for new physics with atoms and molecules, Rev.\ Mod.\ Phys.\ \textbf{90}, 025008 (2018).
+\href{https://doi.org/10.1103/RevModPhys.90.025008}{doi:10.1103/RevModPhys.90.025008}
+
+\bibitem{Hees2016}
+A.\ Hees, J.\ Gu\'ena, M.\ Abgrall, S.\ Bize, P.\ Wolf, Searching for an oscillating massive scalar field as a
+dark matter candidate using atomic hyperfine frequency comparisons,
+Phys.\ Rev.\ Lett.\ \textbf{117}, 061301 (2016).
+\href{https://doi.org/10.1103/PhysRevLett.117.061301}{doi:10.1103/PhysRevLett.117.061301}
+
+\bibitem{Khoury2004}
+J.\ Khoury, A.\ Weltman, Chameleon fields: awaiting surprises for tests of gravity in space,
+Phys.\ Rev.\ Lett.\ \textbf{93}, 171104 (2004).
+\href{https://doi.org/10.1103/PhysRevLett.93.171104}{doi:10.1103/PhysRevLett.93.171104}
+
+\bibitem{Burrage2018}
+C.\ Burrage, J.\ Sakstein, Tests of chameleon gravity, Living Rev.\ Relativ.\ \textbf{21}, 1 (2018).
+\href{https://doi.org/10.1007/s41114-018-0011-x}{doi:10.1007/s41114-018-0011-x}
+
+\bibitem{TAL_formalism}
+D.\ Szabolcsi, Az Id\H{o}vonz\'as T\"orv\'enye: $f_L=\exp(-\gamma_L\bar\rho_L)$ [The law of time attraction:
+density-dependent local time scale], Zenodo (2026), file \file{Time_Attraction.pdf}.
+\href{https://doi.org/10.5281/zenodo.23066993}{doi:10.5281/zenodo.23066993}
+
+\bibitem{TAL_publikacio}
+D.\ Szabolcsi, Az Id\H{o}vonz\'as T\"orv\'enye. A lok\'alis id\H{o}sk\'ala s\H{u}r\H{u}s\'egf\"ugg\'es\'enek
+formalizmusa (dated 2025-08-17), file \file{Idovonzas_x5f_publikacio.pdf} in the Zenodo record
+\href{https://doi.org/10.5281/zenodo.22984786}{doi:10.5281/zenodo.22984786} (2026).
+
+\bibitem{TAL_V20}
+D.\ Szabolcsi, Time Attraction Law V20 --- audited release with independent third-round review, Zenodo, version v20 (2026).
+\href{https://doi.org/10.5281/zenodo.23540741}{doi:10.5281/zenodo.23540741}
+
+\bibitem{TAL_V19}
+D.\ Szabolcsi, Time-Attraction Law seventh model independent verification, Zenodo (2026).
+\href{https://doi.org/10.5281/zenodo.23497128}{doi:10.5281/zenodo.23497128}
+
+\bibitem{TAL_repo}
+D.\ Szabolcsi, Time-Attraction, GitHub repository, commit \texttt{042a616596f1204e78ef137da10c262761bb922e} (V18, 2026).
+\url{https://github.com/unbekanntedavid-glitch/Time-Attraction}
+
+\bibitem{Lelli2016}
+F.\ Lelli, S.\,S.\ McGaugh, J.\,M.\ Schombert, SPARC: mass models for 175 disk galaxies with Spitzer photometry and
+accurate rotation curves, Astron.\ J.\ \textbf{152}, 157 (2016).
+\href{https://doi.org/10.3847/0004-6256/152/6/157}{doi:10.3847/0004-6256/152/6/157}
+
+\bibitem{OSA8663}
+Oscilloquartz S.A., OCXO 8662/8663 Oven Controlled Crystal Oscillator, Technical Specification, Edition March 2003
+(Neuch\^atel). Archived copy: \file{V18/final/refs/oscilloquartz_8663_ed03-2003.pdf} in \cite{TAL_repo},
+\url{https://github.com/unbekanntedavid-glitch/Time-Attraction/blob/042a616596f1204e78ef137da10c262761bb922e/V18/final/refs/oscilloquartz_8663_ed03-2003.pdf}
+
+\bibitem{Derby2010}
+N.\ Derby, S.\ Olbert, Cylindrical magnets and ideal solenoids, Am.\ J.\ Phys.\ \textbf{78}, 229--235 (2010).
+\href{https://doi.org/10.1119/1.3256157}{doi:10.1119/1.3256157}
+
+\bibitem{SciPy2020}
+P.\ Virtanen et al., SciPy 1.0: fundamental algorithms for scientific computing in Python,
+Nat.\ Methods \textbf{17}, 261--272 (2020).
+\href{https://doi.org/10.1038/s41592-019-0686-2}{doi:10.1038/s41592-019-0686-2}
+
+\bibitem{Gonzalez2010}
+\'A.\ Gonz\'alez, Measurement of areas on a sphere using Fibonacci and latitude--longitude lattices,
+Math.\ Geosci.\ \textbf{42}, 49--64 (2010).
+\href{https://doi.org/10.1007/s11004-009-9257-x}{doi:10.1007/s11004-009-9257-x}
+
+\bibitem{Sobol1967}
+I.\,M.\ Sobol', On the distribution of points in a cube and the approximate evaluation of integrals,
+USSR Comput.\ Math.\ Math.\ Phys.\ \textbf{7}, 86--112 (1967).
+\href{https://doi.org/10.1016/0041-5553(67)90144-9}{doi:10.1016/0041-5553(67)90144-9}
+
+\bibitem{Aeppli2024}
+A.\ Aeppli, K.\ Kim, W.\ Warfield, M.\,S.\ Safronova, J.\ Ye, Clock with $8\times10^{-19}$ systematic uncertainty,
+Phys.\ Rev.\ Lett.\ \textbf{133}, 023401 (2024).
+\href{https://doi.org/10.1103/PhysRevLett.133.023401}{doi:10.1103/PhysRevLett.133.023401}
+
+\bibitem{Oelker2019}
+E.\ Oelker et al., Demonstration of $4.8\times10^{-17}$ stability at 1\,s for two independent optical clocks,
+Nat.\ Photonics \textbf{13}, 714--719 (2019).
+\href{https://doi.org/10.1038/s41566-019-0493-4}{doi:10.1038/s41566-019-0493-4}
+
+\bibitem{Lu2020}
+X.\ Lu, M.\ Yin, T.\ Li, Y.\ Wang, H.\ Chang, An evaluation of the Zeeman shift of the $^{87}$Sr optical lattice clock
+at the National Time Service Center, Appl.\ Sci.\ \textbf{10}, 1440 (2020).
+\href{https://doi.org/10.3390/app10041440}{doi:10.3390/app10041440}
+
+\bibitem{NumPy2020}
+C.\,R.\ Harris et al., Array programming with NumPy, Nature \textbf{585}, 357--362 (2020).
+\href{https://doi.org/10.1038/s41586-020-2649-2}{doi:10.1038/s41586-020-2649-2}
+
+\end{thebibliography}
+\end{document}
