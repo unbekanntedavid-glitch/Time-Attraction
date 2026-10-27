@@ -2,7 +2,14 @@
 
 ## Time Attraction Law — Scalar-Tensor Yukawa Fit, V25 — 2026-10-27
 
-Earlier V24 base reference: [10.5281/zenodo.23680715](https://doi.org/10.5281/zenodo.23680715) *(refers exclusively to V24; the V25 sign fixes, diagnostics, and conditional stability closure belong to V25)*.
+DOI: [10.5281/zenodo.23699685](https://doi.org/10.5281/zenodo.23699685)
+
+| Version | DOI |
+|---|---|
+| V25 | [10.5281/zenodo.23699685](https://doi.org/10.5281/zenodo.23699685) |
+| V24 | [10.5281/zenodo.23680715](https://doi.org/10.5281/zenodo.23680715) |
+
+Earlier V24 base reference: [10.5281/zenodo.23680715](https://doi.org/10.5281/zenodo.23680715) *(refers strictly to V24; DOI [10.5281/zenodo.23699685](https://doi.org/10.5281/zenodo.23699685) refers to V25. The V25 sign fixes, diagnostics, and conditional stability closure belong to V25)*.
 
 Scalar-tensor, conformal/disformal, and Helmholtz–Yukawa (`yukawa_action_el`, Branch II-Fluid) analysis across galactic (175 SPARC galaxies, NGC 3198 control), laboratory (8558 kg granite chamber, 8-coil solenoid), white-dwarf (Sirius B conditional H0/H1), and relativistic neutron-star regimes (`step1`–`step22` in Hungarian and English). V25 incorporates the 4-component curved exterior Einstein–scalar vacuum BVP ($y=[\phi_L,\phi_L',m,\nu]$, $\nu_R(15.0)=-0.2463066872$), the exterior metric-coupling sign fix (`a_m = (2*psi0/r^2 + 2*dpsi0/r)/B0`) and the exact left-hand side sign `scalar_m_sign = -1.0` in the coupled GL2 radial pulsation operator ($L_u u = R_h\,\delta h$), multi-EOS central finite-difference Jacobian verification (`full_jacobian_multi_eos_and_points`), $s=r^2$ PCHIP + adaptive Gauss–Kronrod quadrature baryonic rest mass ($M_{B,\max}^{\text{quad}} = 2.42339\,M_\odot$ for SLy $L=10\;\text{km}$, $\alpha_Y=1$) vs. trapezoidal and single-pass ODE baryonic mass turning-point diagnostics (`baryonic_mass_and_first_law_audit`), and eigenfunction vs. static-tangent comparisons (`eigenmode_xi_nodes_and_static_tangent_audit`: dynamical $\omega_0^2=0$ root at $15.316410$ vs. ADM peak $15.316404$, $+5.80\times 10^{-6}\;\text{dex}$; interior relative $L^2$ differences $\delta h=5.04\times 10^{-4}$, $\delta m=1.77\times 10^{-4}$, $\delta\phi_L=2.27\times 10^{-4}$, $\delta\phi_L'=3.09\times 10^{-4}$ and $3.54\%$ free-surface displacement difference, with the stability closing statement formulated conditionally pending independent verification of the coupled variational derivation and boundary-condition matching). License: CC BY-NC 4.0.
 

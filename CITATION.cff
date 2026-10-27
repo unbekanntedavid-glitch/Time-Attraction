@@ -1,11 +1,12 @@
 cff-version: 1.2.0
-message: "If you use this work, please cite it using the metadata below. Note: DOI 10.5281/zenodo.23680715 refers strictly to the earlier V24 release; the V25 sign fixes, 4-component exterior BVP, coupled GL2 stability results, and diagnostics belong to V25."
+message: "If you use this work, please cite it using the metadata below. DOI 10.5281/zenodo.23699685 is Zenodo V25. DOI 10.5281/zenodo.23680715 refers strictly to the earlier V24 release."
 title: "Time Attraction Law — Scalar-Tensor Yukawa Fit, V25"
 version: "V25"
 date-released: 2026-10-27
+doi: "10.5281/zenodo.23699685"
 license: CC-BY-NC-4.0
 repository-code: "https://github.com/unbekanntedavid-glitch/Time-Attraction"
-url: "https://github.com/unbekanntedavid-glitch/Time-Attraction/tree/main/V25"
+url: "https://doi.org/10.5281/zenodo.23699685"
 authors:
   - family-names: Szabolcsi
     given-names: David
@@ -13,8 +14,11 @@ authors:
     orcid: "https://orcid.org/0009-0005-6300-074X"
 identifiers:
   - type: doi
+    value: 10.5281/zenodo.23699685
+    description: "Zenodo V25: Time Attraction Law — Scalar-Tensor Yukawa Fit, V25"
+  - type: doi
     value: 10.5281/zenodo.23680715
-    description: "Previous version: Zenodo V24: Time Attraction Law — Scalar-Tensor Yukawa Fit, V24 (refers strictly to V24; V25 changes are not part of V24)"
+    description: "Previous version: Zenodo V24: Time Attraction Law — Scalar-Tensor Yukawa Fit, V24 (refers strictly to V24)"
   - type: doi
     value: 10.5281/zenodo.23639084
     description: "Previous version: Zenodo V23: Covariant Action Candidates and Nonlocal Static Consistency Tests (Task 50aa2db0)"
