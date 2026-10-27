@@ -1,12 +1,11 @@
 cff-version: 1.2.0
-message: "If you use this work, please cite it using the metadata below."
-title: "Time Attraction Law — Scalar-Tensor Yukawa Fit, V24"
-version: "V24 (Zenodo V24)"
+message: "If you use this work, please cite it using the metadata below. Note: DOI 10.5281/zenodo.23680715 refers strictly to the earlier V24 release; the V25 sign fixes, 4-component exterior BVP, coupled GL2 stability results, and diagnostics belong to V25."
+title: "Time Attraction Law — Scalar-Tensor Yukawa Fit, V25"
+version: "V25"
 date-released: 2026-10-27
-doi: 10.5281/zenodo.23680715
 license: CC-BY-NC-4.0
 repository-code: "https://github.com/unbekanntedavid-glitch/Time-Attraction"
-url: "https://doi.org/10.5281/zenodo.23680715"
+url: "https://github.com/unbekanntedavid-glitch/Time-Attraction/tree/main/V25"
 authors:
   - family-names: Szabolcsi
     given-names: David
@@ -15,7 +14,7 @@ authors:
 identifiers:
   - type: doi
     value: 10.5281/zenodo.23680715
-    description: "Zenodo V24: Time Attraction Law — Scalar-Tensor Yukawa Fit"
+    description: "Previous version: Zenodo V24: Time Attraction Law — Scalar-Tensor Yukawa Fit, V24 (refers strictly to V24; V25 changes are not part of V24)"
   - type: doi
     value: 10.5281/zenodo.23639084
     description: "Previous version: Zenodo V23: Covariant Action Candidates and Nonlocal Static Consistency Tests (Task 50aa2db0)"
@@ -24,10 +23,10 @@ identifiers:
     description: "Previous version: Zenodo V22 Book Edition (15-page Research Monograph)"
   - type: doi
     value: 10.5281/zenodo.23602501
-    description: "Previous version: Zenodo V21 (= GitHub V19/V21)"
+    description: "Previous version: Zenodo V21 = GitHub V19 (neutron-star package)"
   - type: doi
     value: 10.5281/zenodo.23540741
-    description: "Previous version: Zenodo V20 (= GitHub V18)"
+    description: "Previous version: Zenodo V20 = GitHub V18 (audited release with independent third-round review)"
   - type: doi
     value: 10.5281/zenodo.23497128
     description: "Previous version: V19 – 7th model"

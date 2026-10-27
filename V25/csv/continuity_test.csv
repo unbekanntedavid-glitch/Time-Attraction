@@ -1,0 +1,8 @@
+L (m),ΔW A út: GL-panelek + r=R0/t farok (J/A²),"ΔW B út: r=L/t, közvetlen külső különbség (J/A²)",relatív eltérés (A−B)/B,szerep
+2.6,7.137211082279e-03,7.137211082279e-03,-2.917e-15,átfedési ellenőrzés 2.6–3 m
+2.7,5.182239219640e-03,5.182239219640e-03,-2.008e-15,átfedési ellenőrzés 2.6–3 m
+2.8,3.881360582648e-03,3.881360582648e-03,-1.006e-15,átfedési ellenőrzés 2.6–3 m
+2.9,2.978621592572e-03,2.978621592572e-03,-4.368e-16,átfedési ellenőrzés 2.6–3 m
+2.99,2.387273260006e-03,2.387273260006e-03,0.000e+00,folytonossági teszt
+3,2.331314942858e-03,2.331314942858e-03,-7.441e-16,folytonossági teszt
+3.01,2.277039189332e-03,2.277039189332e-03,-1.524e-15,folytonossági teszt

@@ -1,11 +1,18 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23680715.svg)](https://doi.org/10.5281/zenodo.23680715)
 
+## V25 — Scalar-Tensor Yukawa Fit (`V25/`)
+
+**Time Attraction Law — Scalar-Tensor Yukawa Fit, V25** (2026-10-27)  
+**License:** CC BY-NC 4.0 · **Author:** David Szabolcsi (ORCID [0009-0005-6300-074X](https://orcid.org/0009-0005-6300-074X)) · **Earlier V24 DOI:** [https://doi.org/10.5281/zenodo.23680715](https://doi.org/10.5281/zenodo.23680715) *(refers strictly to the earlier V24 release)*
+
+**V25 (`V25/`):** Bilingual HU/EN derivation chapters (`step1`–`step22`), 4-component curved exterior Einstein–scalar vacuum BVP ($y=[\phi_L,\phi_L',m,\nu]$, $\nu_R(15.0)=-0.2463066872$), exact ADM mass and $s=r^2$ PCHIP + adaptive Gauss–Kronrod quadrature baryonic rest mass ($M_{B,\max}^{\text{quad}} = 2.42339\,M_\odot$ for SLy $L=10\;\text{km}$, $\alpha_Y=1$), exterior and interior sign fixes (`a_m = (2*psi0/r^2 + 2*dpsi0/r)/B0` and exact left-hand side sign `scalar_m_sign = -1.0` in `solve_yukawa_coupled_omega2_gl2`), coupled $(\delta h, \delta\phi_L, \delta m)$ radial stability zero crossings ($15.316410$ vs. ADM peak $15.316404$, $+5.80\times 10^{-6}\;\text{dex}$ for SLy $L=10\;\text{km}$, $\alpha_Y=1$; relative $L^2$ differences $\delta h=5.04\times 10^{-4}$, $\delta m=1.77\times 10^{-4}$, $\delta\phi_L=2.27\times 10^{-4}$, $\delta\phi_L'=3.09\times 10^{-4}$ and $3.54\%$ free-surface displacement difference, with the stability closing statement formulated conditionally pending independent verification of the coupled variational derivation and boundary-condition matching), `V25_english_audit_package.pdf` (109 pages), `V25_english_translations.zip`, `scalar-tensor-yukawa-fit_audit_package.zip`, and `SHA256SUMS.txt` (341 verified entries).
+
 ## V24 — Scalar-Tensor Yukawa Fit (Zenodo V24, DOI 10.5281/zenodo.23680715)
 
 **Time Attraction Law — Scalar-Tensor Yukawa Fit, V24** (2026-10-27)  
 **DOI:** [https://doi.org/10.5281/zenodo.23680715](https://doi.org/10.5281/zenodo.23680715) · **License:** CC BY-NC 4.0 · **Author:** David Szabolcsi (ORCID [0009-0005-6300-074X](https://orcid.org/0009-0005-6300-074X))
 
-**V24 (Zenodo V24):** [Time Attraction Law — Scalar-Tensor Yukawa Fit, V24](https://doi.org/10.5281/zenodo.23680715), DOI [`10.5281/zenodo.23680715`](https://doi.org/10.5281/zenodo.23680715) (`V24/` folder, bilingual HU/EN chapters `step1`–`step20`, Python solvers, SPARC & TOV data, and SHA-256 checksums).
+**V24 (Zenodo V24):** [Time Attraction Law — Scalar-Tensor Yukawa Fit, V24](https://doi.org/10.5281/zenodo.23680715), DOI [`10.5281/zenodo.23680715`](https://doi.org/10.5281/zenodo.23680715) (`V24/` folder, bilingual HU/EN chapters `step1`–`step22`, Python solvers, SPARC & TOV data, and SHA-256 checksums).
 
 Previous version: V23 (Zenodo V23, DOI [10.5281/zenodo.23639084](https://doi.org/10.5281/zenodo.23639084)).
 
@@ -13,6 +20,7 @@ Previous version: V23 (Zenodo V23, DOI [10.5281/zenodo.23639084](https://doi.org
 
 | Version | Record | DOI |
 |---|---|---|
+| V25 (`V25/`) | Time Attraction Law — Scalar-Tensor Yukawa Fit, V25 (sign fixes, 4-comp exterior BVP, coupled GL2 stability & diagnostics) | GitHub `V25/` (earlier V24 base: [`10.5281/zenodo.23680715`](https://doi.org/10.5281/zenodo.23680715)) |
 | V24 (Zenodo V24) | Time Attraction Law — Scalar-Tensor Yukawa Fit, V24 | [`10.5281/zenodo.23680715`](https://doi.org/10.5281/zenodo.23680715) |
 | V23 (Zenodo V23) | Covariant Action Candidates and Nonlocal Static Consistency Tests | [`10.5281/zenodo.23639084`](https://doi.org/10.5281/zenodo.23639084) |
 | V22 Book Edition (Zenodo V22) | Research Monograph | [`10.5281/zenodo.23604423`](https://doi.org/10.5281/zenodo.23604423) |
@@ -26,9 +34,10 @@ Previous version: V23 (Zenodo V23, DOI [10.5281/zenodo.23639084](https://doi.org
 | v14 | Previous version | [`10.5281/zenodo.23217189`](https://doi.org/10.5281/zenodo.23217189) |
 | Parent | Parent record of v17 | [`10.5281/zenodo.22983681`](https://doi.org/10.5281/zenodo.22983681) |
 
-### Contents ([`V24/`](V24/))
+### Contents ([`V25/`](V25/) and [`V24/`](V24/))
 
-[`V24/`](V24/) folder: bilingual HU/EN chapters `step1`–`step20`, Python solvers, SPARC & TOV data, and SHA-256 checksums.
+- [`V25/`](V25/) folder: bilingual HU/EN chapters `step1`–`step22`, `V25_english_audit_package.pdf` (109 pages), `V25_english_translations.zip`, `scalar-tensor-yukawa-fit_audit_package.zip` (341 files), Python solvers (`curved_yukawa_adm_and_stability.py` with `scalar_m_sign = -1.0`), SPARC & TOV data, and `SHA256SUMS.txt` (341 verified entries).
+- [`V24/`](V24/) folder: earlier V24 archive (Zenodo DOI [`10.5281/zenodo.23680715`](https://doi.org/10.5281/zenodo.23680715)).
 
 ---
 

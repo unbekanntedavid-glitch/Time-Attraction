@@ -1,0 +1,348 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=1.7cm,top=1.5cm,bottom=1.7cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs,tabularx,array}
+\usepackage{microtype}
+\usepackage{multicol}
+\usepackage[compact]{titlesec}
+\usepackage{xcolor}
+\usepackage[hidelinks,pdfusetitle,bookmarksnumbered]{hyperref}
+\hypersetup{pdftitle={True Top-Hat Density Averaging in SPARC Galaxies: Numerical Evaluation of the Time Attraction Law Factor},
+ pdfauthor={David Szabolcsi},
+ pdfsubject={Record description for a separate SPARC Zenodo deposit (prepared, not published)},
+ pdfkeywords={SPARC; galaxy rotation curves; top-hat density averaging; Time Attraction Law; TAL; numerical integration}}
+\newcommand{\missing}[1]{\textcolor{red!70!black}{\textbf{[MISSING: #1]}}}
+\newcommand{\hash}[1]{{\footnotesize\texttt{#1}}}
+\newcommand{\Msun}{\mathrm{M}_\odot}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\setlength{\parskip}{2pt}\linespread{0.96}\setlength{\emergencystretch}{3em}
+\title{True Top-Hat Density Averaging in SPARC Galaxies:\\ Numerical Evaluation of the Time Attraction Law Factor}
+\author{David Szabolcsi\\ \small Independent experimental researcher, Unterterzen, Switzerland \quad ORCID: 0009-0005-6300-074X}
+\date{Record description, 2026-10-22 v5 --- version 1.0 of a separate SPARC deposit (not yet published; DOI pending)}
+\begin{document}
+\maketitle
+
+\begin{abstract}\noindent
+The Time Attraction Law (TAL) factor, $f_L=\exp(-\gamma_L\bar\rho_L)$, with $\gamma_L=GL^2/c^2$, depends on a spherical top-hat density average. Replacing this average with a local midplane-density proxy at all smoothing scales can produce different predictions. We evaluated the spherical average in prescribed three-dimensional baryonic models for 175 SPARC galaxies at 3391 observed rotation-curve radii. The models combine stellar and gas disks with exponential vertical profiles and spherical Hernquist bulges where applicable. The calculation covers 69 smoothing scales, including previously considered Mpc-scale values, with additional refinement near the strongest galaxy-only peaks. The computational reviewer reports a byte-for-byte rerun of the primary calculation (stated by the reviewer, not independently verified here) and supplied 13 selected mass integrals recomputed with its own integration code; these agree with the archived masses to within $2.96\times10^{-6}$. The largest galaxy-attributable $|1-f_L|$ is approximately $2.30\times10^{-7}$, occurring in UGC03546 at $R=0.63$\,kpc and $L\approx0.825$\,kpc. At the previously fitted $L=2.3714$\,Mpc, the maximum exponent $\gamma_L\bar\rho_L$ is $1.37\times10^{-9}$ for the galaxy alone and $1.21\times10^{-8}$ after adding a uniform matter background. Under the explicitly specified forward velocity rule, $V_\mathrm{pred}^2=f_L V_\mathrm{bar}^2$, the median reduced $\chi^2$ on the fixed 123-galaxy subset returns to approximately 3.1433, rather than the proxy-based value of 2.7083. Thus the earlier fitted-scale improvement does not survive the specified top-hat averaging. These results are conditional on the adopted baryonic profiles and velocity coupling; they are not a general exclusion of every possible TAL dynamics or an experimental detection. The deposit provides the existing code, inputs, numerical outputs, sensitivity summaries, and computational review materials.
+\end{abstract}
+
+\noindent\textbf{Keywords:} SPARC; galaxy rotation curves; baryonic mass models; top-hat density averaging; Time Attraction Law; TAL; numerical integration; smoothing scale; computational reproducibility; gravitational phenomenology
+
+\noindent\textbf{Status of this document.} This is the description of a separate Zenodo record that has been prepared but not created or published. It is a numerical model evaluation, not a measurement and not a detection. All numbers were taken from the files of the corrected archive \texttt{sparc\_tophat.zip} and the supporting files listed in Section~\ref{sec:upload}. Statements that come only from the reviewer are marked \emph{stated by the reviewer, not independently verified here}; author-supplied or unavailable items are marked \missing{\dots} and listed in Section~\ref{sec:open}.
+
+\section{Record information}
+\begin{tabularx}{\textwidth}{@{}lL@{}}
+\toprule
+Resource type & Report, with associated data and software\\
+Creator & Szabolcsi, David (ORCID 0009-0005-6300-074X), independent experimental researcher, Unterterzen, Switzerland (as in the V20 \texttt{CITATION.cff})\\
+Version & 1.0 --- first release of this separate SPARC deposit\\
+Licence & CC BY-NC 4.0 (rights held by the author, David Szabolcsi), as declared in the corrected archive's README; SPARC attribution and third-party notices retained\\
+DOI & New DOI for this record: \missing{DOI pending, assigned by Zenodo on publication}; the V20 DOI is not reused\\
+Related identifier & \texttt{10.5281/zenodo.23540741} (DOI), relationship \textbf{References}: \emph{Time Attraction Law V20 --- audited release with independent third-round review}, \url{https://doi.org/10.5281/zenodo.23540741}. This record is \textbf{not} a new version of V20; V20 remains unchanged. Code: \url{https://github.com/unbekanntedavid-glitch/Time-Attraction}, commit \texttt{bd7f749fc313296791d6a25d0a8e1f6766541c34} (Section~\ref{sec:prereq}).\\
+\bottomrule
+\end{tabularx}
+
+\subsection{Version mapping}
+\begin{tabularx}{\textwidth}{@{}lL@{}}
+\toprule
+Current pair & GitHub V18 = Zenodo V20 (DOI 10.5281/zenodo.23540741)\\
+Next planned pair & GitHub V19 = Zenodo V21 (Zenodo V21 DOI \missing{DOI pending, assigned by Zenodo on publication})\\
+This SPARC record & Independent record, own new DOI; references V20 with relationship References; not a version of V20 or V21\\
+\bottomrule
+\end{tabularx}
+
+\subsection{Archive integrity and provenance}
+Corrected main archive \texttt{sparc\_tophat.zip}, SHA-256:\\
+\hash{78af13a55fe891cd4acfe3924023566fd3229f2ebc8f088bcadc901cd5aed98c}\\
+Original archive referenced in the review (matches the original file on the preparing computer), SHA-256:\\
+\hash{cb91b3f50ec373d5fef175284a44461d5725741cfd49ee2a7a8773e4868aae1b}
+
+\noindent\emph{Provenance note.} According to the reviewer, the supporting review and its JSON document the original SPARC archive before the two documentation corrections. The deposited corrected archive implements those corrections in its README and Hungarian summary and adds a changelog. Its analysis code, input data, and numerical result files are unchanged. Consequently, the original and corrected archive hashes differ; this is not a change in the computed results. All 22 entries in the corrected archive's checksum manifest were verified. The Academia's section~6 table uses the old duplicate-download name of the main archive; this record uses \texttt{sparc\_tophat.zip} (same SHA-256). The same table declares \texttt{sparc\_tophat.py} \hash{a92ec4bf10668f566d9a587445bb62052650ea5bdebdb29e2141ea7f320c4b1f}, which matches the script in the archive.
+
+\noindent\emph{Verification on 2026-10-22 (preparing computer).} Both archive hashes were recomputed and match. A file-by-file comparison of the extracted archives shows that only \texttt{README.md}, \texttt{osszefoglalo\_HU.md} and \texttt{SHA256SUMS.txt} differ and \texttt{CHANGELOG.md} was added. The corrected manifest has 22 entries (the manifest does not list itself); \texttt{sha256sum -c} reports all 22 as OK. The original manifest has 21 entries, all OK.
+
+\section{Definitions}
+Spherical top-hat average around the evaluation point $\mathbf{x}$ (\texttt{Time\_Attraction.pdf}, Def.~1, Eq.~1), scale factor (Def.~2, Eq.~2) and TAL factor (Def.~3, Eq.~7):
+\begin{equation*}
+\bar\rho_L(\mathbf{x})=\frac{3}{4\pi L^3}\int_{|\mathbf{x}'-\mathbf{x}|\le L}\rho(\mathbf{x}')\,\mathrm{d}^3x',\qquad
+\gamma_L=\frac{GL^2}{c^2},\qquad f_L=\exp(-\gamma_L\bar\rho_L).
+\end{equation*}
+The reported deviation is $|1-f_L|=-\mathrm{expm1}(-\gamma_L\bar\rho_L)$. The ratio $\bar\rho_L/\rho_\mathrm{mid}$ is reported only as a diagnostic of the seventh-model proxy; it is not the TAL $f_L$. Constants: $G=6.67430\times10^{-11}$\,m$^3$\,kg$^{-1}$\,s$^{-2}$, $c=299\,792\,458$\,m\,s$^{-1}$, $\Msun=1.98847\times10^{30}$\,kg, 1\,pc $=3.085677581\times10^{16}$\,m.
+
+\section{Data, evaluation points and smoothing scales}
+SPARC \texttt{Rotmod\_LTG.zip} and \texttt{SPARC\_Lelli2016c.mrt} \cite{lelli2016}, downloaded on 2026-10-22 from \url{https://astroweb.cwru.edu/SPARC/} (SHA-256 of \texttt{Rotmod\_LTG.zip}, identical to the hash locked in the v17 runner:\\
+\hash{0a80cc90714828cc28b7dd57923576714d209f2490328c087c4a4ad607faf588}).\\
+ 175 galaxies, 3391 radii (all points with $V_\mathrm{obs}>0$); the hash-locked blind-123 subsample (2596 radii) is flagged. The evaluation point is the disk midplane $z=0$ at each tabulated radius $R_0$ (a first radius below 0.01\,kpc is set to 0.16\,kpc, as in the v17 runner). The $L$ grid has 64 logarithmically spaced values from 0.1\,kpc to 10\,Mpc plus five special values (2.36\,kpc; the fitted 2.3714\,Mpc $=2371.373705661655$\,kpc; 27.64, 64.2 and 85.3\,Mpc): 69 values and $3391\times69=233\,979$ rows.
+
+The midplane proxy is an exact re-implementation of the seventh-model note's \texttt{rho\_diskbulge()}:
+$\rho_\mathrm{mid}=\Upsilon_\mathrm{disk}\,\mathrm{SB}_\mathrm{disk}/(2h_z)+3\Upsilon_\mathrm{bul}V_\mathrm{bul}^2/(4\pi G R^2)$, with $h_z=0.2$\,kpc, $\Upsilon_\mathrm{disk}=0.5$, $\Upsilon_\mathrm{bul}=0.7$ and no gas. It reproduces \texttt{points\_tal\_fL\_FITTED\_forward.csv} at 2596 points with maximum relative difference 0. 204 points have $\rho_\mathrm{mid}=0$.
+
+\section{Three-dimensional baryonic model}
+\begin{tabularx}{\textwidth}{@{}lL@{}}
+\toprule
+Stellar disk & $\Sigma_\star=\Upsilon_\mathrm{disk}\,\mathrm{SB}_\mathrm{disk}$, linear interpolation between tabulated radii, constant $\Sigma(R_1)$ inside the first radius; beyond $R_\mathrm{last}$ exponential with SPARC $R_\mathrm{disk}$ (fallback $\max(R_\mathrm{last}/4,0.1\,\mathrm{kpc})$), truncated at $R_\mathrm{last}+15R_d$.\\
+Gas disk & $M_\mathrm{gas}=1.33\,M_\mathrm{HI}$, $\Sigma_g=M_\mathrm{gas}/(2\pi R_g^2)\,e^{-R/R_g}$, truncated at $25R_g$. $R_g$ from $\Sigma_\mathrm{HI}(R_\mathrm{HI})=1\,\Msun\,\mathrm{pc}^{-2}$ (outer root; 97 galaxies); otherwise $R_g=R_\mathrm{HI}/2$ (74) or, if $R_\mathrm{HI}=0$, $R_g=2R_\mathrm{disk}$ (4).\\
+Vertical profile & $\rho(R,z)=\Sigma(R)/(2h)\,e^{-|z|/h}$, $h=h_z=0.2$\,kpc (baseline), so $\rho(R,0)=\Sigma/(2h)$ as in the note.\\
+Bulge (25 galaxies) & Spherical Hernquist \cite{hernquist1990}: $\rho_b=M_b a/[2\pi r(r+a)^3]$, $M_b(<r)=M_br^2/(r+a)^2$, fitted to $M_\mathrm{enc}(R_i)=\Upsilon_\mathrm{bul}V_\mathrm{bul}^2R_i/G$ ($\Upsilon_\mathrm{bul}=0.7$): $a$ scanned on 4000 log-spaced values in $[10^{-3},50]$\,kpc, log-space least squares with analytic $\ln M_b$. Largest fit rms 0.096\,dex; no fit at the grid edge.\\
+Background & Uniform, added after integration: $\Omega_b\rho_\mathrm{crit}=4.2075\times10^{-28}$ or $\Omega_m\rho_\mathrm{crit}=2.6878\times10^{-27}$\,kg\,m$^{-3}$; $\rho_\mathrm{crit}=8.5329\times10^{-27}$\,kg\,m$^{-3}$ from $H_0=67.4$\,km\,s$^{-1}$\,Mpc$^{-1}$, $\Omega_m=0.315$, $\Omega_bh^2=0.0224$ \cite{planck2018}.\\
+\bottomrule
+\end{tabularx}
+
+\section{Ball-mass integrals as implemented}
+\subsection{Disk components}
+For a ball of radius $L$ centred at $(R_0,0,0)$, each disk component contributes
+\begin{equation*}
+M_\mathrm{disk}(R_0,L)=\int_{R_\mathrm{min}}^{R_\mathrm{max}}R\,\Sigma(R)\,I(R)\,\mathrm{d}R,\qquad R_\mathrm{min}=\max(0,R_0-L),\; R_\mathrm{max}=\min(R_0+L,R_\mathrm{cut}).
+\end{equation*}
+Using $z\to-z$ symmetry and the vertical substitution $u=1-e^{-z/h}$, for which $\tfrac{\Sigma}{2h}e^{-z/h}\mathrm{d}z=\tfrac{\Sigma}{2}\mathrm{d}u$,
+\begin{equation*}
+I(R)=2\pi u_\mathrm{full}+\int_{u_\mathrm{full}}^{u_\mathrm{max}}\Delta\phi\bigl(R,z(u)\bigr)\,\mathrm{d}u,\qquad z(u)=-h\ln(1-u),
+\end{equation*}
+\begin{equation*}
+\Delta\phi=2\arccos\Bigl(\mathrm{clip}\Bigl[\tfrac{R^2+R_0^2+z^2-L^2}{2RR_0},-1,1\Bigr]\Bigr),
+\end{equation*}
+with $u_\mathrm{max}=1-e^{-z_\mathrm{max}/h}$, $z_\mathrm{max}=\sqrt{L^2-(R-R_0)^2}$, and $u_\mathrm{full}=1-e^{-z_\mathrm{full}/h}$, $z_\mathrm{full}=\sqrt{L^2-(R+R_0)^2}$ when positive (otherwise $u_\mathrm{full}=0$). Below $z_\mathrm{full}$ the whole ring lies inside the ball, giving the analytic full-ring part $2\pi u_\mathrm{full}$. The square-root edge behaviour at $u_\mathrm{max}$ is removed by $u=u_\mathrm{max}-(u_\mathrm{max}-u_\mathrm{full})t^2$, $\mathrm{d}u=2(u_\mathrm{max}-u_\mathrm{full})\,t\,\mathrm{d}t$, $t\in[0,1]$.
+
+\textbf{Quadrature.} In $R$, breakpoints are placed at $R_\mathrm{min}$, $R_\mathrm{max}$, $|L-R_0|$, $R_0$, all tabulated radii and $R_\mathrm{last}+kR_d$ ($k=1\dots15$) for stars or $kR_g$ ($k=1\dots25$) for gas. Each sub-interval is split to a width $\le\max(\min(L/4,s/2),10^{-4}\,\mathrm{kpc})$ ($s=R_d$ or $R_g$), with $n_R=16$ Gauss--Legendre nodes per sub-interval. In $t$, $n_T=32$ Gauss--Legendre nodes are used.
+
+\subsection{Bulge}
+With $d=R_0$, the fraction of the shell of radius $r$ inside the ball is $F(r)=\mathrm{clip}\bigl[(L^2-(r-d)^2)/(4rd),0,1\bigr]$, so
+\begin{equation*}
+M_\mathrm{bulge}(d,L)=M_b(<L-d)\,[L>d]+\int_{|L-d|}^{L+d}4\pi r^2\rho_b(r)\,F(r)\,\mathrm{d}r,
+\end{equation*}
+evaluated on geometric sub-intervals (9 log-spaced points from $\max(|L-d|,10^{-6}(L+d))$ to $L+d$, resolving the $1/r$ cusp) with $n_B=64$ Gauss--Legendre nodes each.
+
+\subsection{Whole-galaxy shortcut and total}
+If $L\ge R_0+\max(R_\mathrm{cut,disk},R_\mathrm{cut,gas})+60\max(h_\star,h_\mathrm{gas})$, the total model disk mass and $M_\mathrm{gas}$ are used directly; the bulge is still integrated. Finally $\bar\rho_L=(M_\star+M_\mathrm{gas}+M_\mathrm{bulge})/(4\pi L^3/3)$, with $1\,\Msun\,\mathrm{kpc}^{-3}=6.768\times10^{-29}$\,kg\,m$^{-3}$.
+
+\section{Numerical stability and convergence}
+\begin{tabularx}{\textwidth}{@{}lL>{\raggedright\arraybackslash}p{4.2cm}@{}}
+\toprule
+Check & Setting (from the code) & Result\\
+\midrule
+Uniform sheet vs closed form & $\Sigma_0=10^8\,\Msun\,\mathrm{kpc}^{-2}$, $h=0.2$\,kpc, $R_0=1000$\,kpc, $L=0.01,0.1,0.2,1,5$\,kpc; $M=\pi\Sigma_0[L^2(1-e)-(2h^2-e(L^2+2Lh+2h^2))]$, $e=e^{-L/h}$ & max rel.\ err.\ $1.3427\times10^{-6}$\\
+Node doubling & 400 random (galaxy, $R$, $L$); $n_R$ 16$\to$32, $n_T$ 32$\to$64, $n_B$ 64$\to$128 & max $2.6457\times10^{-6}$, median $2.156\times10^{-9}$\\
+ & worst case: UGC00128, $R=46.28$\,kpc, $L=41.60$\,kpc & \\
+Shortcut vs quadrature & first 40 galaxies, $L$ just above threshold; reference $n_R=20$, $n_T=48$ & max $3.363\times10^{-10}$\\
+$L\to0$ limit & $L=10^{-4}$\,kpc, two radii per galaxy, vs model $\rho(R_0,0)$ & max $2.919\times10^{-4}$ (expected $O(L/h)$ cusp effect)\\
+Fine $L$ scan & 1200 log-spaced $L\in[0.1,300]$\,kpc, top-5 peak radii & max $2.2803\to2.3030\times10^{-7}$\\
+\bottomrule
+\end{tabularx}
+
+\noindent The shortcut difference is of the same order as the gas fraction beyond the $25R_g$ truncation, $(1+25)e^{-25}\approx3.6\times10^{-10}$ (analytic remark, not a new run).
+
+\subsection{Monte Carlo tests}
+$4\times10^6$ points uniformly in the ball (seed 20261022), with direct evaluation of the model density. Mean densities are given in $\Msun\,\mathrm{kpc}^{-3}$. Pull $=$ (quadrature $-$ MC)/s.e.
+
+\begin{center}\small
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+Galaxy & $R_0$ (kpc) & $L$ (kpc) & Quadrature & Monte Carlo & rel.\ s.e. & Pull\\
+\midrule
+NGC3198 & 7.06 & 5.0 & $6.47828\times10^{6}$ & $6.47264\times10^{6}$ & 0.17\,\% & $+0.51$\\
+NGC7814 & 3.91 & 3.0 & $3.69231\times10^{7}$ & $3.69239\times10^{7}$ & 0.11\,\% & $-0.02$\\
+DDO154 & 2.96 & 2.0 & $1.10913\times10^{6}$ & $1.10961\times10^{6}$ & 0.090\,\% & $-0.47$\\
+UGC02953 & 3.00 & 20.0 & $4.39820\times10^{6}$ & $4.37070\times10^{6}$ & 0.84\,\% & $+0.75$\\
+NGC2841 & 4.80 & 1.0 & $1.54668\times10^{8}$ & $1.54675\times10^{8}$ & 0.048\,\% & $-0.10$\\
+\bottomrule
+\end{tabular}
+\end{center}
+All $|\mathrm{pull}|<1$. \textbf{Erratum (package README):} \texttt{README.md} in \texttt{sparc\_tophat.zip} gives the MC error as ``$\approx$0.1--0.5\,\%''; the values in \texttt{summary.json} are 0.048--0.84\,\% (table). The conclusion is unchanged; the ZIP is not modified (SHA-256 unchanged).
+
+\section{Results}
+\subsection{Global maxima}
+\begin{center}\small
+\begin{tabularx}{\textwidth}{@{}llL@{}}
+\toprule
+Quantity & Value & Location\\
+\midrule
+Galaxy-only $|1-f_L|$, grid ($L\le10$\,Mpc) & $2.2803\times10^{-7}$ & UGC03546 (blind-123), $R=0.63$, $L=0.8962$\,kpc\\
+Same after fine $L$ scan & $2.3030\times10^{-7}$ & UGC03546, $R=0.63$, $L=0.8249$\,kpc\\
+Fine-scan peaks 2--5 & $2.0812\times10^{-7}$ & UGC09133, $R=0.32$, $L=2.115$\,kpc\\
+ & $2.0301\times10^{-7}$ & NGC5005, $R=0.49$, $L=2.533$\,kpc\\
+ & $1.9060\times10^{-7}$ & UGC06787, $R=0.12$, $L=0.814$\,kpc\\
+ & $1.8296\times10^{-7}$ & NGC7814, $R=0.63$, $L=1.114$\,kpc\\
+With $\Omega_m$ background, $L\le10$\,Mpc & $2.2803\times10^{-7}$ & same point\\
+Incl.\ special $L$ to 85.3\,Mpc, with $\Omega_m$ bg. & $1.3828\times10^{-5}$ & 85.3\,Mpc; uniform background only\\
+Diagnostic ratio, max $|1-\bar\rho_L/\rho_\mathrm{mid}|$ & 598.77 & NGC3741, $R=1.87$, $L=0.1$\,kpc (proxy artefact)\\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\subsection{\texorpdfstring{Comparison at the fitted $L=2.3714$\,Mpc}{Comparison at the fitted L = 2.3714 Mpc}}
+Here $\gamma_L=3.9762\times10^{18}$\,m$^3$\,kg$^{-1}$.
+\begin{center}\small
+\begin{tabularx}{\textwidth}{@{}lLL@{}}
+\toprule
+Quantity & Midplane proxy (note) & True top-hat\\
+\midrule
+Max exponent & 23.491 (UGC06787, $R=0.12$\,kpc) & $1.3652\times10^{-9}$ (UGC02885, $R=1.7$\,kpc); $3.7814\times10^{-10}$ at the UGC06787 point\\
+Max with $\Omega_m$ background & --- & $1.2053\times10^{-8}$ ($\gamma_L\rho_\mathrm{bg}=1.0687\times10^{-8}$)\\
+Median, 3391 points & $4.9717\times10^{-3}$ & $7.527\times10^{-11}$\\
+Median, blind-123 (2596) & $5.759\times10^{-3}$ (77 points $>1$) & $2.014\times10^{-10}$\\
+$\bar\rho_L/\rho_\mathrm{mid}$ (3187 points with $\rho_\mathrm{mid}>0$) & --- & $8.29\times10^{-12}$ to $3.92\times10^{-4}$, median $7.16\times10^{-9}$\\
+\bottomrule
+\end{tabularx}
+\end{center}
+The seventh-model note reports a median $\chi^2_\mathrm{red}=3.1433$ for the $V_\mathrm{bar}$ baseline and 2.7083 for the fitted proxy implementation. With the true top-hat exponent ($\le1.21\times10^{-8}$ including background), $V_\mathrm{pred}^2=f_LV_\mathrm{bar}^2$ equals $V_\mathrm{bar}$ to about $10^{-8}$. Per-galaxy scores (\texttt{fitted\_L\_scores.csv}, 175 galaxies) were recomputed here; see Table~\ref{tab:fl}. Max $|\mathrm{true}/\mathrm{vbar}-1|=7.5\times10^{-9}$, max $|\mathrm{true\_bg}/\mathrm{vbar}-1|=1.3\times10^{-7}$. The proxy is worse than vbar in 81 of the 123 blind galaxies. Scoring (Academia): $V_\mathrm{pred}=V_\mathrm{bar}e^{-\gamma\rho/2}$, $\sigma=\max(0.05V_\mathrm{obs},20\,\mathrm{km\,s^{-1}})$, $\chi^2_\mathrm{red}=\chi^2/(N-1)$. The $\sigma$ rule matches the v17 runner. For the 123 blind galaxies, \texttt{vbar} equals the runner's \texttt{summary\_vbar.csv} to $3.8\times10^{-15}$, and \texttt{proxy} equals the seventh-model \texttt{summary\_tal\_fL\_FITTED\_forward.csv} to $1.7\times10^{-10}$. \begin{table}[!htbp]\centering\small
+\caption{Median $\chi^2_\mathrm{red}$ from \texttt{fitted\_L\_scores.csv} at $L=2.3714$\,Mpc. The galaxy list equals the 175 SPARC galaxies; in\_blind123 $=1$ for 123 galaxies; $\sum N=2596$ (blind) and 3391 (all).}\label{tab:fl}
+\begin{tabular}{@{}lrrrr@{}}\toprule
+Subset & vbar & true & true\_bg & proxy\\\midrule
+Blind-123 & 3.14327 & 3.14327 & 3.14327 & 2.70827\\
+All 175 & 2.8979 & 2.8979 & 2.8979 & 2.672\\\bottomrule
+\end{tabular}\end{table}
+Formal unit-exponent scale of the uniform $\Omega_m$ background: $L=c/\sqrt{G\Omega_m\rho_\mathrm{crit}}\approx7.08\times10^{26}$\,m $\approx22.94$\,Gpc. This is an algebraic extrapolation of the static formula, not a cosmological prediction.
+
+\subsection{Sensitivity variants}
+\begin{center}\footnotesize
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Variant & Grid max $|1-f_L|$ & Fine-scan max & Max $|1-\text{ratio}|$ & Max exp.\ at 2.3714 Mpc\\
+\midrule
+Baseline ($h_z=0.2$, gas $\times1$) & $2.2803\times10^{-7}$ & $2.3030\times10^{-7}$ & 598.77 & $1.3652\times10^{-9}$\\
+$h_z=0.1$ kpc & $2.2990\times10^{-7}$ & $2.3231\times10^{-7}$ & 1014.94 & $1.3652\times10^{-9}$\\
+$h_z=0.4$ kpc & $2.2333\times10^{-7}$ & $2.2559\times10^{-7}$ & 326.57 & $1.3652\times10^{-9}$\\
+Gas scale $\times0.5$ & $2.2851\times10^{-7}$ & $2.3073\times10^{-7}$ & 983.58 & $1.3652\times10^{-9}$\\
+Gas scale $\times2$ & $2.2790\times10^{-7}$ & $2.3017\times10^{-7}$ & 233.58 & $1.3652\times10^{-9}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The TAL maximum is always at UGC03546, $R=0.63$\,kpc (grid $L=0.8962$\,kpc, fine $L=0.8249$\,kpc), and the ratio maximum is always at NGC3741, $L=0.1$\,kpc. The 2.3714\,Mpc values are identical because the ball then contains the whole truncated model. The exact command lines of the archived variants were not recorded in the logs (they contain input hashes, counts and timings only); the Academia's reconstructed commands are in Section~\ref{sec:env}.
+
+\section{\texorpdfstring{Independent review: 13 integrals and targeted sensitivity checks}{Independent review: 13 integrals and targeted sensitivity checks}}
+The review was produced with Academia Co-scientist; it is a numerical reproducibility check, not journal peer review or institutional certification. \emph{Stated by the reviewer, not independently verified here} (the reviewer code is not on the preparing computer): a full rerun of the primary calculation was completed; the integration uses ball-centred planar coordinates, an analytic vertical chord for the disks and adaptive spherical-bulge integration; the recheck reused \texttt{gl}, \texttt{disk\_mass\_independent}, \texttt{bulge\_mass\_independent}, \texttt{mass\_independent} and \texttt{signal} from \texttt{audit\_sparc\_tophat.py}, with 48 nodes per subinterval (the CSV column is 48 in all rows); C/F is the 32-node result divided by the 48-node result, minus one (not recomputable here). The four sensitivity variants received targeted checks only. Full audit record: \missing{content of audit\_results.json and independent\_review\_HU.md, not on this computer}.
+
+\begin{table}[!htbp]\centering\scriptsize\setlength{\tabcolsep}{2.4pt}
+\caption{The 13 independent integrals (\texttt{independent\_integrals.csv}, SHA-256 \texttt{71e2bf36\dots3d}). SHA-256 matches the declared value. Independent masses are reviewer-supplied. Masses in $\Msun$. Rel.\ diff $=$ independent/archived $-1$ (recomputed, identical to the file). C/F $=$ reviewer coarse/fine relative difference. The archived masses agree with \texttt{sparc\_tophat\_full.csv} at the three grid cases ($\le2.3\times10^{-10}$, CSV precision) and with the five Monte Carlo cases ($\le2\times10^{-15}$); the five refined-peak $|1-f_L|$ values agree with the package fine scan to six digits.}
+\begin{tabular}{@{}lrrrrrrrrr@{}}\toprule
+Galaxy & $R$ & $L$ & Archived mass & Rel.\ diff & C/F & Disk & Gas & Bulge & $|1-f_L|$\\\midrule
+UGC03546 & 0.63 & 0.8249 & $1.66283\times10^{10}$ & $-4.74\times10^{-9}$ & $1.3\times10^{-14}$ & $1.70276\times10^{9}$ & $1.17799\times10^{7}$ & $1.49137\times10^{10}$ & $2.30296\times10^{-7}$\\
+UGC03546 & 0.63 & 0.8962 & $1.78866\times10^{10}$ & $+1.19\times10^{-8}$ & $-4.4\times10^{-13}$ & $2.01830\times10^{9}$ & $1.40825\times10^{7}$ & $1.58542\times10^{10}$ & $2.28029\times10^{-7}$\\
+UGC09133 & 0.32 & 2.1150 & $3.85278\times10^{10}$ & $-4.68\times10^{-8}$ & $4.2\times10^{-14}$ & $7.51470\times10^{9}$ & $1.02332\times10^{8}$ & $3.09108\times10^{10}$ & $2.08118\times10^{-7}$\\
+NGC5005 & 0.49 & 2.5328 & $4.50075\times10^{10}$ & $+2.64\times10^{-7}$ & $-2.0\times10^{-13}$ & $2.19942\times10^{10}$ & $1.14373\times10^{8}$ & $2.28989\times10^{10}$ & $2.03012\times10^{-7}$\\
+UGC06787 & 0.12 & 0.8140 & $1.35797\times10^{10}$ & $+7.01\times10^{-10}$ & $-4.3\times10^{-14}$ & $5.11628\times10^{8}$ & $1.08381\times10^{7}$ & $1.30572\times10^{10}$ & $1.90602\times10^{-7}$\\
+NGC7814 & 0.63 & 1.1141 & $1.78412\times10^{10}$ & $-6.76\times10^{-9}$ & $2.1\times10^{-13}$ & $7.85822\times10^{8}$ & $1.93705\times10^{7}$ & $1.70360\times10^{10}$ & $1.82963\times10^{-7}$\\
+NGC3741 & 1.87 & 0.1 & $3.14040\times10^{4}$ & $-1.31\times10^{-9}$ & $3.1\times10^{-15}$ & $4.71934\times10^{1}$ & $3.13568\times10^{4}$ & 0 & $3.58781\times10^{-12}$\\
+NGC3198 & 7.06 & 5 & $3.39202\times10^{9}$ & $-1.05\times10^{-7}$ & $-4.3\times10^{-12}$ & $3.01675\times10^{9}$ & $3.75265\times10^{8}$ & 0 & $7.75055\times10^{-9}$\\
+NGC7814 & 3.91 & 3 & $4.17591\times10^{9}$ & $-8.89\times10^{-9}$ & $-6.9\times10^{-11}$ & $1.93088\times10^{9}$ & $8.85875\times10^{7}$ & $2.15644\times10^{9}$ & $1.59028\times10^{-8}$\\
+DDO154 & 2.96 & 2 & $3.71674\times10^{7}$ & $-1.50\times10^{-7}$ & $-1.6\times10^{-10}$ & $1.54164\times10^{6}$ & $3.56257\times10^{7}$ & 0 & $2.12313\times10^{-10}$\\
+UGC02953 & 3 & 20 & $1.47385\times10^{11}$ & $-3.03\times10^{-8}$ & $-2.7\times10^{-12}$ & $1.11778\times10^{11}$ & $3.12502\times10^{9}$ & $3.24823\times10^{10}$ & $8.41915\times10^{-8}$\\
+NGC2841 & 4.8 & 1 & $6.47871\times10^{8}$ & $-2.38\times10^{-8}$ & $-1.2\times10^{-13}$ & $6.37404\times10^{8}$ & $9.52344\times10^{6}$ & $9.43328\times10^{5}$ & $7.40172\times10^{-9}$\\
+UGC00128 & 46.28 & 41.5956 & $4.28681\times10^{9}$ & $-2.96\times10^{-6}$ & $-1.6\times10^{-8}$ & $1.41450\times10^{9}$ & $2.87230\times10^{9}$ & 0 & $1.17742\times10^{-9}$\\
+\bottomrule\end{tabular}\end{table}
+
+\begin{table}[!htbp]\centering\scriptsize\setlength{\tabcolsep}{2.4pt}
+\caption{Targeted reviewer rechecks (\texttt{reviewer\_targeted\_sensitivity\_checks.csv}, SHA-256 matches the declared value): UGC03546, $R=0.63$\,kpc, $L=0.8249081639388179$\,kpc, 48 nodes, 2026-10-22T14:26:05 UTC (as recorded by the reviewer). Scope: a single archived refined-peak point per variant, not a full sensitivity run. The archived values equal \texttt{sensitivity/summary\_*.json} to full precision; the relative columns were recomputed and match.}
+\begin{tabular}{@{}lccllrr@{}}\toprule
+Variant & $h_\star,h_\mathrm{gas}$ (kpc) & gas scale & Archived refined peak & Reviewer recheck & recheck/archive$-1$ & vs.\ previous review\\\midrule
+hz0.1 & 0.1, 0.1 & 1.0 & $2.3230919818714086\times10^{-7}$ & $2.3230919432791148\times10^{-7}$ & $-1.661\times10^{-8}$ & 0\\
+hz0.4 & 0.4, 0.4 & 1.0 & $2.255932943308305\times10^{-7}$ & $2.2559329483989504\times10^{-7}$ & $+2.257\times10^{-9}$ & 0\\
+gas0.5 & 0.2, 0.2 & 0.5 & $2.3073388103744584\times10^{-7}$ & $2.307338799120075\times10^{-7}$ & $-4.878\times10^{-9}$ & 0\\
+gas2 & 0.2, 0.2 & 2.0 & $2.3017499732840624\times10^{-7}$ & $2.301749962463043\times10^{-7}$ & $-4.701\times10^{-9}$ & 0\\\bottomrule
+\end{tabular}\end{table}
+
+The largest independent-integral difference is $2.96\times10^{-6}$ (UGC00128, the package's node-doubling worst case). The independent $|1-f_L|$ at the refined UGC03546 peak ($2.30296\times10^{-7}$) agrees with the package's fine scan. Max $|$recheck/archive$-1|=1.66\times10^{-8}$.
+
+\section{\texorpdfstring{Environment and sensitivity reproduction commands}{Environment and sensitivity reproduction commands}}\label{sec:env}
+Source: \texttt{sensitivity\_commands\_and\_environment\_EN.md} (Academia, 2026-10-22), sections 2--3. The commands below are reproduced verbatim. The Academia labels them \emph{explicit reproduction commands reconstructed from the supplied script, documented parameter choices, and output tags, not recovered original shell transcripts}. The original logs do not record the command lines or the Python/NumPy versions: \missing{original run Python/NumPy versions, not recorded in the logs}.
+
+\noindent{\small\begin{tabularx}{\textwidth}{@{}lL@{}}\toprule
+Component & Observed version (fresh reviewer rechecks)\\\midrule
+Python & 3.12.3 \quad build string \texttt{3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]}\\
+NumPy / SciPy / pandas & 2.5.4 / 1.18.1 / 3.0.6\\
+Platform & \texttt{Linux-6.12.105-fly-x86\_64-with-glibc2.39}\\
+Thread controls & \texttt{OPENBLAS\_NUM\_THREADS=1}, \texttt{OMP\_NUM\_THREADS=1}\\\bottomrule
+\end{tabularx}}
+
+\noindent Observed versions only, not a minimum specification. \texttt{sparc\_tophat.py} needs only NumPy; the reviewer integration also uses SciPy, the full audit pandas.
+
+\par\noindent\begin{minipage}{\textwidth}\scriptsize
+\begin{verbatim}
+SCRIPT="sparc_tophat/sparc_tophat.py"
+DATA="sparc_tophat/data"
+REPO="path/to/Time-Attraction"
+OUT="sparc_tophat/reproduced_sensitivity"
+export OPENBLAS_NUM_THREADS=1
+export OMP_NUM_THREADS=1
+
+# Both stellar and gas vertical scale heights set to 0.1 kpc.
+python3 "$SCRIPT" --data "$DATA" --repo "$REPO" --out "$OUT" \
+--procs 8 --hz_star 0.1 --hz_gas 0.1 --gas_scale 1.0 \
+--tag _hz0.1 --skip_checks
+
+# Both stellar and gas vertical scale heights set to 0.4 kpc.
+python3 "$SCRIPT" --data "$DATA" --repo "$REPO" --out "$OUT" \
+--procs 8 --hz_star 0.4 --hz_gas 0.4 --gas_scale 1.0 \
+--tag _hz0.4 --skip_checks
+
+# Gas radial scale length multiplied by 0.5; total gas mass unchanged.
+python3 "$SCRIPT" --data "$DATA" --repo "$REPO" --out "$OUT" \
+--procs 8 --hz_star 0.2 --hz_gas 0.2 --gas_scale 0.5 \
+--tag _gas0.5 --skip_checks
+
+# Gas radial scale length multiplied by 2; total gas mass unchanged.
+python3 "$SCRIPT" --data "$DATA" --repo "$REPO" --out "$OUT" \
+--procs 8 --hz_star 0.2 --hz_gas 0.2 --gas_scale 2.0 \
+--tag _gas2 --skip_checks
+\end{verbatim}
+\end{minipage}
+
+\vspace{-2pt}\noindent\textbf{Flag meanings (Academia):} \texttt{-{}-hz\_star}, \texttt{-{}-hz\_gas}: stellar and gas vertical exponential scale heights (kpc). \texttt{-{}-gas\_scale}: multiplier of the gas disk's radial scale length, not its total mass. \texttt{-{}-tag}: output-filename suffix only. \texttt{-{}-procs 8}: eight worker processes; the original logs do not prove the original process count. \texttt{-{}-skip\_checks}: omits the additional \texttt{numerical\_checks} suite, including its Monte Carlo checks, but not the main integrations, the prior-proxy comparison or the fine-$L$ refinement. No \texttt{-{}-galaxies} filter is given, so all 175 galaxies are used. All flags exist in \texttt{sparc\_tophat.py}; in the code, \texttt{-{}-gas\_scale} rescales $R_g$ only and \texttt{-{}-skip\_checks} skips only \texttt{numerical\_checks()}. The archived sensitivity summaries contain no checks block, which is consistent with this. \textbf{Proxy check:} the Academia writes that the program ``checks its radii and proxy values''. In the code, the script enforces the radii (\texttt{assert} on the point count per galaxy and on each radius, $|\Delta R|<10^{-12}$), but only reports the $\rho_\mathrm{mid}$ differences (\texttt{rho\_mid\_verification.max\_rel\_diff}, 0 in the archived run) and does not fail on them; it does not check that file's hash. The Academia's text is kept unchanged.
+
+\section{Upload list and file verification}\label{sec:upload}
+{\footnotesize\begin{tabularx}{\textwidth}{@{}rlL@{}}\toprule
+\# & File & Role and verification\\\midrule
+1 & \texttt{sparc\_tophat.zip} & Main package; SHA-256 verified (Sec.~1.2)\\
+2 & \texttt{independent\_review\_HU.md} & Original audit (historical): \missing{independent\_review\_HU.md, not on this computer}\\
+3 & \texttt{audit\_results.json} & Audit evidence (historical): \missing{audit\_results.json, not on this computer}. Declared (not verified) {\scriptsize\texttt{89ab01c66a7897e80bbcbcc3f50668968b125fde088af8359f88a8c112187cc1}}\\
+4 & \texttt{independent\_integrals.csv} & {\scriptsize\texttt{71e2bf36e1a31d40a30b7b5dafe4fed1b956b3f500a7a0e7dd5bfd1ef33ee83d}}; matches the declared hash\\
+5 & \texttt{fitted\_L\_scores.csv} & {\scriptsize\texttt{a27cbdaa2a19f9ed501da209bd6f88bcc00b4145c6fa0273b3d4128fbf1f094f}}; matches the declared hash (LF)\\
+6 & \texttt{reviewer\_targeted\_sensitivity\_checks.csv} & {\scriptsize\texttt{08073d2e1075dcfc3452aeb8e2a263aa5c5a68e696afeac093df912633c4d0d6}}; matches the declared hash (CRLF)\\
+7 & \texttt{sensitivity\_commands\_and\_environment\_EN.md} & Commands and environment. Deposited file: the reviewer's (Academia's) original, 9410 bytes, SHA-256 {\scriptsize\texttt{f9ab0f7c7c873f681e3237c28f9fbfb2bb0d7ab5c95ede8ae44456a33b84548f}}; verified against the deposited file (computed on the byte-exact file in the package; UTF-8 without BOM, LF, single trailing LF). An earlier re-formatted copy (10,695 bytes, SHA-256 {\scriptsize\texttt{bbf5370176b80092a7992fe68e2d7c1d2e724c3065fd56a8a3b6e4d57b9824ee}}) differs only in formatting and is not deposited.\\
+8 & \texttt{audit\_sparc\_tophat.py} & Optional: \missing{audit\_sparc\_tophat.py, not on this computer}. Declared (not verified) {\scriptsize\texttt{e23f3d5a3a3a7e00abd84af1de5195df8d2f39a6b2ababb3ed79c78bd02b9f09}}\\\bottomrule
+\end{tabularx}}
+
+\section{Reproduction prerequisite}\label{sec:prereq}
+The main ZIP includes the SPARC observations but is \textbf{not} a fully standalone reproduction environment. \texttt{sparc\_tophat.py} requires \texttt{-{}-repo} and reads two files from the earlier project material:
+\begin{itemize}\itemsep0pt
+\item \texttt{v17\_package/github/data/blind\_123.txt} (hash-checked by the script);
+\item \texttt{hetedik\_modell\_kimenet/points\_tal\_fL\_FITTED\_forward.csv} (radii enforced, $\rho_\mathrm{mid}$ differences reported only; not hash-checked).
+\end{itemize} The SHA-256 values computed locally for the copies in the GitHub V18 tree, identical to the Academia's required-file table, are:\\
+\hash{3637d2f5bda6b2b97e645c5fba5cf39d310a1826bee388286c2c74b9171aa283} (\texttt{blind\_123.txt})\\
+\hash{2b4022fef37a705aa9c6a963ba80528b733667102d43ad0c8c352a0d243ec79d} (\texttt{points\_tal\_fL\_FITTED\_forward.csv})\\
+The run command (package README) is:\\
+\mbox{\hash{python3 sparc\_tophat.py -{}-data data -{}-repo <Time-Attraction clone> -{}-out . -{}-procs 8}}\\
+It requires Python~3 and NumPy $\ge2.0$ \cite{numpy}, because the code uses \texttt{numpy.trapezoid}. Exact versions of the original run: \missing{original run Python/NumPy versions, not recorded in the logs}. The SPARC analysis code is included in the deposited archive and identified by its SHA-256 checksum. The two required earlier-project input files are pinned to Time-Attraction commit \texttt{bd7f749fc313296791d6a25d0a8e1f6766541c34}; both file checksums were verified against the values reported here.
+
+\section{Scope and limitations}
+\textbf{Applies to:} the prescribed baryonic SPARC models above; constant disk scale height $h_z$; a mass-normalised exponential gas disk (not the observed $\Sigma_\mathrm{HI}(R)$); a spherical Hernquist bulge; the forward rule $V_\mathrm{pred}^2=f_LV_\mathrm{bar}^2$; and a static uniform background.
+
+\textbf{Does not apply to:} dark-matter haloes (by the scaling $\gamma_L\bar\rho_L\sim|\Phi|/c^2$, bounded at about $V^2/c^2\approx10^{-6}$); groups, clusters and environments (about $10^{-5}$ for a rich cluster; both order-of-magnitude estimates from the package README); other TAL velocity couplings; cosmological dynamics; and any experimental detection or measured sensitivity.
+
+\section{Declarations}
+\textbf{Author:} David Szabolcsi, independent experimental researcher, Unterterzen, Switzerland; ORCID 0009-0005-6300-074X. \textbf{Funding:} none. \textbf{Competing interests:} none. \textbf{Computational review:} Academia Co-scientist (numerical reproducibility check). \textbf{Data:} SPARC data \cite{lelli2016}; reuse of the redistributed SPARC files is subject to the SPARC team's terms; the website (accessed 2026-10-22) asks users to cite the SPARC master paper \cite{lelli2016} and states no explicit licence. \textbf{Licence of this record:} CC BY-NC 4.0; rights held by the author, David Szabolcsi. \textbf{Contact:} \href{mailto:unbekanntedavid@gmail.com}{\texttt{unbekanntedavid@gmail.com}}.
+
+\section{Remaining author-supplied items}\label{sec:open}
+{\small\begin{itemize}\itemsep0pt
+\item Contact e-mail: \texttt{unbekanntedavid@gmail.com} (supplied by the author on 2026-10-22; no longer open)
+\item \missing{original run Python/NumPy versions, not recorded in the logs}
+\item \missing{content of audit\_results.json and independent\_review\_HU.md, not on this computer}; optional \texttt{audit\_sparc\_tophat.py}
+\item \missing{author decision on redistributing the SPARC files and their terms}
+\item \missing{author-name spelling, `David' (CITATION.cff) or `D\'avid' (other project material)}
+\item \missing{DOI pending, assigned by Zenodo on publication} (this record and Zenodo V21)
+\end{itemize}}
+
+\begin{thebibliography}{9}\scriptsize\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}
+\bibitem{lelli2016} F.~Lelli, S.~S.~McGaugh, J.~M.~Schombert, SPARC: Mass Models for 175 Disk Galaxies with Spitzer Photometry and Accurate Rotation Curves, \emph{Astron.\ J.} \textbf{152}, 157 (2016). \url{https://doi.org/10.3847/0004-6256/152/6/157}
+\bibitem{planck2018} Planck Collaboration, N.~Aghanim et al., Planck 2018 results. VI. Cosmological parameters, \emph{Astron.\ Astrophys.} \textbf{641}, A6 (2020). \url{https://doi.org/10.1051/0004-6361/201833910}
+\bibitem{hernquist1990} L.~Hernquist, An analytical model for spherical galaxies and bulges, \emph{Astrophys.\ J.} \textbf{356}, 359--364 (1990). \url{https://doi.org/10.1086/168845}
+\bibitem{numpy} C.~R.~Harris et al., Array programming with NumPy, \emph{Nature} \textbf{585}, 357--362 (2020). \url{https://doi.org/10.1038/s41586-020-2649-2}
+\bibitem{v20} D.~Szabolcsi, Time Attraction Law V20 --- audited release with independent third-round review, Zenodo. \url{https://doi.org/10.5281/zenodo.23540741}
+\bibitem{v19} D.~Szabolcsi, Time Attraction Law V19 -- 7th model, Zenodo. \url{https://doi.org/10.5281/zenodo.23497128}
+\end{thebibliography}
+
+\par\noindent{\footnotesize\textbf{Document changelog. 2026-10-22:} file name cleaned to \texttt{sparc\_tophat.zip}; scientific expansion; version mapping. \textbf{v3:} 13 integrals, targeted rechecks, fitted-$L$ medians, upload list. \textbf{v4:} Academia commands verbatim (replacing my reconstruction), environment table, flag meanings, declared hashes, scoring cross-checks. \textbf{Re-audit:} against files; reviewer-only statements attributed; all three CSV hashes match the declared values; proxy-check wording; README MC erratum; repository URL; unified placeholders; commands block in one column; Crossref-checked DOIs. Contact e-mail added (author-confirmed). Academia-supplied hash recorded for the commands document. \textbf{v5 (2026-10-22):} renamed with date/version; pinned commit bd7f749; facts on the Academia's original file; rights holder. \textbf{v5, re-formatted copy (author decision):} the re-formatted copy of the commands document is deposited; provenance note with both hashes replaces the earlier upload-verification wording. \textbf{v5, original commands file:} the Academia's original (9410 bytes) received as a file and deposited byte-exact; verified against the deposited file; the re-formatted copy is kept for reference only and not deposited.}
+\end{document}

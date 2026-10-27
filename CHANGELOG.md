@@ -1,13 +1,22 @@
 # Changelog
 
+## Time Attraction Law — Scalar-Tensor Yukawa Fit, V25 — 2026-10-27
+
+Earlier V24 base reference: [10.5281/zenodo.23680715](https://doi.org/10.5281/zenodo.23680715) *(refers exclusively to V24; the V25 sign fixes, diagnostics, and conditional stability closure belong to V25)*.
+
+Scalar-tensor, conformal/disformal, and Helmholtz–Yukawa (`yukawa_action_el`, Branch II-Fluid) analysis across galactic (175 SPARC galaxies, NGC 3198 control), laboratory (8558 kg granite chamber, 8-coil solenoid), white-dwarf (Sirius B conditional H0/H1), and relativistic neutron-star regimes (`step1`–`step22` in Hungarian and English). V25 incorporates the 4-component curved exterior Einstein–scalar vacuum BVP ($y=[\phi_L,\phi_L',m,\nu]$, $\nu_R(15.0)=-0.2463066872$), the exterior metric-coupling sign fix (`a_m = (2*psi0/r^2 + 2*dpsi0/r)/B0`) and the exact left-hand side sign `scalar_m_sign = -1.0` in the coupled GL2 radial pulsation operator ($L_u u = R_h\,\delta h$), multi-EOS central finite-difference Jacobian verification (`full_jacobian_multi_eos_and_points`), $s=r^2$ PCHIP + adaptive Gauss–Kronrod quadrature baryonic rest mass ($M_{B,\max}^{\text{quad}} = 2.42339\,M_\odot$ for SLy $L=10\;\text{km}$, $\alpha_Y=1$) vs. trapezoidal and single-pass ODE baryonic mass turning-point diagnostics (`baryonic_mass_and_first_law_audit`), and eigenfunction vs. static-tangent comparisons (`eigenmode_xi_nodes_and_static_tangent_audit`: dynamical $\omega_0^2=0$ root at $15.316410$ vs. ADM peak $15.316404$, $+5.80\times 10^{-6}\;\text{dex}$; interior relative $L^2$ differences $\delta h=5.04\times 10^{-4}$, $\delta m=1.77\times 10^{-4}$, $\delta\phi_L=2.27\times 10^{-4}$, $\delta\phi_L'=3.09\times 10^{-4}$ and $3.54\%$ free-surface displacement difference, with the stability closing statement formulated conditionally pending independent verification of the coupled variational derivation and boundary-condition matching). License: CC BY-NC 4.0.
+
+- Added [`V25/`](V25/): bilingual HU/EN chapters `step1`–`step22`, `README.md`, `README_en.md`, `MANIFEST.txt`, `MANIFEST_en.txt`, `V25_english_audit_package.pdf` (109 pages), `V25_english_translations.zip`, `scalar-tensor-yukawa-fit_audit_package.zip` (341 files), `SHA256SUMS.txt` (341 verified entries), Python solvers, and CSV/JSON outputs.
+
+
 ## Time Attraction Law — Scalar-Tensor Yukawa Fit, V24 — 2026-10-27
 
 Zenodo V24: [10.5281/zenodo.23680715](https://doi.org/10.5281/zenodo.23680715)
 
-This is the V24 version of the Time Attraction Law (TAL) research, an independent theoretical physics program developing a scalar-tensor/dilaton framework for gravity. It documents derivation steps 1–20: dilaton definitions from V19–V23, Einstein↔Jordan/Clock conformal and disformal transformations, the Helmholtz–Yukawa action and the massive dilaton Klein–Gordon equation, covariant conservation and modified hydrostatic equilibrium, the TAL↔scalar-tensor/Brans–Dicke coupling dictionary with PPN parameters, and SPARC galactic consistency analysis (175 galaxies: 0 negative-density points with the 3D top-hat/Yukawa approach vs 239/303 with the derivative formula; NGC 3198 control: V_obs=146 km/s, V_bar=88.53 km/s, C_req=2.720). All Python programs, input and output data files, CSV/JSON tables, and SHA-256 checksums are included for full reproducibility. License: CC BY-NC 4.0.
+This is the V24 version of the Time Attraction Law (TAL) research, an independent theoretical physics program developing a scalar-tensor/dilaton framework for gravity. It documents derivation steps 1–22: dilaton definitions from V19–V23, Einstein↔Jordan/Clock conformal and disformal transformations, the Helmholtz–Yukawa action and the massive dilaton Klein–Gordon equation, covariant conservation and modified hydrostatic equilibrium, the TAL↔scalar-tensor/Brans–Dicke coupling dictionary with PPN parameters, and SPARC galactic consistency analysis (175 galaxies: 0 negative-density points with the 3D top-hat/Yukawa approach vs 239/303 with the derivative formula; NGC 3198 control: V_obs=146 km/s, V_bar=88.53 km/s, C_req=2.720). All Python programs, input and output data files, CSV/JSON tables, and SHA-256 checksums are included for full reproducibility. License: CC BY-NC 4.0.
 
 - Added [`V24/`](V24/): Markdown chapters `step1`–`step22`, Python programs, input and output data files, CSV/JSON tables, `README.md`, `MANIFEST.txt`, `SHA256SUMS.txt` (313 verified entries), and `scalar-tensor-yukawa-fit_audit_package.zip`.
-- English translation files: `step1_*_en.md`–`step20_*_en.md`, `README_en.md`, `MANIFEST_en.txt`.
+- English translation files: `step1_*_en.md`–`step22_*_en.md`, `README_en.md`, `MANIFEST_en.txt`.
 
 ## V23 (Zenodo V23) — 2026-10-25
 

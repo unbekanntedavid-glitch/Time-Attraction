@@ -1,0 +1,684 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\DeclareUnicodeCharacter{0151}{\H{o}}
+\DeclareUnicodeCharacter{0171}{\H{u}}
+\DeclareUnicodeCharacter{0150}{\H{O}}
+\DeclareUnicodeCharacter{0170}{\H{U}}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[a4paper,top=15mm,bottom=16mm,left=16mm,right=16mm,headheight=13pt,headsep=5mm,footskip=8mm]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+\definecolor{navy}{HTML}{12284C}
+\definecolor{slate}{HTML}{334E68}
+\definecolor{accent}{HTML}{1B5E20}
+\definecolor{boxbg}{HTML}{F4F7FA}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=navy,
+  urlcolor=navy,
+  citecolor=navy,
+  pdftitle={A Time Attraction Law (idovonzas torvenye): Kutatasi monografia (1-21. verzio)},
+  pdfauthor={Szabolcsi David}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\footnotesize\scshape\color{slate}Time Attraction Law (id\H{o}vonz\'as t\"orv\'enye) --- Kutat\'asi monogr\'afia (V1--V21)}
+\fancyhead[R]{\footnotesize\color{slate}Szabolcsi D\'avid (ORCID: 0009-0005-6300-074X)}
+\fancyfoot[L]{\footnotesize\color{slate}CC BY-NC 4.0 --- K\"oztes kutat\'asi munkadokumentum (2026.\ okt\'ober)}
+\fancyfoot[R]{\footnotesize\bfseries\color{navy}Oldal: \thepage\ / 15}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2.8pt}
+
+\newcommand{\chaphead}[2]{%
+  \noindent{\color{navy}\rule{\linewidth}{1.1pt}}\par\vspace{1.5pt}%
+  \noindent{\Large\bfseries\color{navy}#1}\par\vspace{1pt}%
+  \noindent{\footnotesize\itshape\color{slate}#2}\par\vspace{1.5pt}%
+  \noindent{\color{navy}\rule{\linewidth}{0.4pt}}\par\vspace{3pt}%
+}
+
+\begin{document}
+
+% ==================== PAGE 1: TITLE PAGE ====================
+\thispagestyle{empty}
+\vspace*{1mm}
+\noindent{\color{navy}\rule{\linewidth}{2pt}}\par\vspace{1.5mm}
+\begin{center}
+  {\footnotesize\scshape\color{slate}K\"oztes kutat\'asi monogr\'afia $\cdot$ Megfigyel\'esi, kompakt-objektum \'es laborat\'oriumi program}\par\vspace{1.5mm}
+  {\LARGE\bfseries\color{navy}A TIME ATTRACTION LAW (ID\H{O}VONZ\'AS T\"ORV\'ENYE)}\par\vspace{2mm}
+  {\large\bfseries\color{slate}S\H{u}r\H{u}s\'eggel modul\'alt id\H{o}\'araml\'as, a $C$ csatol\'asi \'alland\'o ($C$ coupling constant),}\\
+  {\large\bfseries\color{slate}pozit\'iv definit 3D top-hat sim\'it\'as, galaktikus forg\'asi g\"orb\'ek, t\"obbforr\'as\'u gamma-id\H{o}z\'it\'es,}\\
+  {\large\bfseries\color{slate}neutroncsillag-egyens\'uly, valamint gr\'anitkamr\'as atom\'ora- \'es nyolctekercses m\'agnesest\'er-m\'er\'esek}\par\vspace{2mm}
+  {\normalsize\bfseries Szabolcsi D\'avid}\par\vspace{1mm}
+  {\small F\"uggetlen kutat\'o, Unterterzen, Sv\'ajc}\par
+  {\small ORCID: \href{https://orcid.org/0009-0005-6300-074X}{\texttt{0009-0005-6300-074X}} $\cdot$ GitHub: \href{https://github.com/unbekanntedavid-glitch/Time-Attraction}{\texttt{unbekanntedavid-glitch/Time-Attraction}}}\par
+  {\small 2026.\ okt\'ober 24.}
+\end{center}
+\vspace{1.5mm}
+\noindent{\color{navy}\rule{\linewidth}{0.8pt}}\par\vspace{2mm}
+
+{\small\noindent{\bfseries\color{navy}\'Attekint\'es}\par
+A \textbf{Time Attraction Law} (id\H{o}vonz\'as t\"orv\'enye) rendszer\'et egy meghat\'arozott s\H{u}r\H{u}s\'egsim\'it\'asi el\H{o}\'ir\'ason alapul\'o, nyitott kutat\'asi programk\'ent mutatom be, amelyet huszonegy egym\'asra \'ep\"ul\H{o} kutat\'asi l\'ep\'esen (1--21.\ verzi\'o) kereszt\"ul dolgoztam ki. E r\"ovid kutat\'asi munkamonogr\'afia sz\'am\'it\'asai kiv\'alasztott egyens\'ulyi \'es megfigyel\'esi csatol\'asokat tesztelnek; m\'eg nem alapoznak meg lez\'art kovari\'ans elm\'eletet vagy \'uj \'oraeffektus k\'is\'erleti kimutat\'as\'at. A sz\"ovegben v\'egig elk\"ul\"on\'item az algebrai eredm\'enyeket a modellfeltev\'esekt\H{o}l, valamint a numerikus ellen\H{o}rz\'eseket a k\'is\'erleti bizony\'it\'ekokt\'ol. Fizikai alapfeltev\'esem az, hogy az id\H{o} nem folyik egyenletesen a t\'erben: az id\H{o} az els\H{o}dleges fizikai k\"ozeg, amelynek helyi \'araml\'asi s\H{u}r\H{u}s\'eg\'et a k\"ornyez\H{o} t\"omeg- \'es energiaeloszl\'as vonzza, s\H{u}r\'iti \'es lass\'itja. Egyetlen verzi\'ot sem tekintek lez\'art rendszernek; minden kiad\'ast k\"oztes, falszifik\'alhat\'o kutat\'asi l\'ep\'esk\'ent kezelek. Ebben a monogr\'afi\'aban bemutatom az elm\'elet fizikai alapjait (bele\'ertve a fizikai ,,mi\'ert''-et \'es a korai sorozatban vizsg\'alt tudati koherencia hidat), a \textbf{$C$ csatol\'asi \'alland\'o} ($C$ coupling constant) levezet\'es\'et, a negat\'iv s\H{u}r\H{u}s\'eg-probl\'ema megold\'as\'at a 3D g\"ombi top-hat t\"orv\'enyemmel, a sk\'al\'ak k\"oz\"otti illeszked\'est a galaktikus forg\'asi g\"orb\'ekt\H{o}l (155 feldolgozott SPARC-galaxis \'es 175 galaxisos 3D top-hat r\'acs) a Naprendszeren \'at a $300\,\text{mm}$-es tekercsperemig \'es a $8558\,\text{kg}$-os gr\'anit atom\'ora-kamr\'aig, a t\"obbforr\'as\'u H.E.S.S.-elemz\'est, a felt\'eteles neutroncsillag-modelleket \'es radi\'alis stabilit\'ast, a nyitott fizikai feladatokat, valamint a F\"uggel\'ekben csatolt AI-t\'amogatott technikai reprodukci\'os ellen\H{o}rz\'est.
+
+\vspace{1.5mm}
+\noindent{\bfseries\color{navy}Els\H{o}dleges reproduk\'alhat\'o arch\'iv rekordok (Zenodo DOI-k \'es verzi\'ol\'anc)}
+\begin{center}\vspace{-2pt}
+{\footnotesize
+\begin{tabular}{@{}>{\bfseries}p{0.15\linewidth}p{0.27\linewidth}p{0.53\linewidth}@{}}
+\toprule
+Szakasz & Zenodo DOI / Azonos\'it\'o & Tudom\'anyos hat\'ask\"or \'es audit\'alt tartalom \\
+\midrule
+V1--V13 & GitHub-sorozat arch\'ivum & Cauchy-exponenci\'alis feltev\'es, gyenge t\'er / Horndeski-lek\'epez\'es, korai \'oratesztek. \\
+V14--V16 & \texttt{10.5281/zenodo.23217189} & S\H{u}r\H{u}s\'egf\"ugg\H{o} id\H{o}koherencia, $C$ csatol\'asi \'alland\'o szorz\'o, bio-koherencia $\Phi_t$ r\'eteg. \\
+V17 & \texttt{10.5281/zenodo.19666220} & 155 SPARC-galaxis forg\'asi g\"orb\'eje (123 vakteszt) \'es t\"obbforr\'as\'u H.E.S.S. id\H{o}z\'it\'esi audit. \\
+V19 (7.\ modell) & \texttt{10.5281/zenodo.23497128} & Pozit\'iv definit 3D g\"ombi top-hat t\"orv\'eny $f_L=\exp(-\gamma_L\bar{\rho}_L)$ az \"osszes (175) SPARC-galaxisra. \\
+V20 (GH V18) & \texttt{10.5281/zenodo.23540741} & 8 tekercses m\'agnesest\'er-energetika ($\Delta y=-1{,}2017\times 10^{-48}$) \'es $8558\,\text{kg}$-os gr\'anitkamra. \\
+V21 (GH V19/21) & \texttt{10.5281/zenodo.23602501} & 33 neutroncsillag TOV-sorozat, Chandrasekhar-stabilit\'as, Sirius B / NICER \'es nyitott feladatok. \\
+\bottomrule
+\end{tabular}}
+\end{center}
+
+\vspace{1mm}
+\noindent{\bfseries\color{navy}A monogr\'afia h\'arom k\"ozponti fizikai k\'erd\'ese}
+\begin{itemize}\setlength{\itemsep}{1.5pt}\setlength{\parskip}{0pt}\setlength{\topsep}{1pt}
+  \item \textbf{1. Mi\'ert esik le az \'orajel? (A fizikai ,,mi\'ert''):} A 2.\ fejezetben tiszt\'azom, hogy a Time Attraction Law skal\'armez\H{o}t, effekt\'iv id\H{o}folyad\'ekot vagy t\"or\'esmutat\'oj\'u t\'erid\H{o}-k\"ozeget \'ir-e le, \'es hogyan kapcsol\'odik a m\'ar algebrailag r\"ogz\'itett, hash-elt ,,hogyan'' ($f_L = \exp(-\gamma_L \bar{\rho}_L)$) a nyitott kovari\'ans hat\'aselv-lez\'ar\'ashoz (\texttt{50aa2db0} feladat).
+  \item \textbf{2. Hogyan illeszkedik a sk\'al\'ak k\"oz\"ott? (Galaxisok, Naprendszer \'es a $300\,\text{mm}$-es laborperem):} A 4., 5.\ \'es 10.\ fejezetben megmutatom, mik\'ent k\"oti \"ossze a 3D g\"ombi top-hat mag a galaktikus kiloparszekes sk\'al\'at, az \'erintetlen Naprendszerbeli bolyg\'op\'aly\'akat \'es a $300\,\text{mm}$-es tekercsperemn\'el, illetve a $8558\,\text{kg}$-os gr\'anitkamr\'an\'al v\'egzett laborat\'oriumi m\'er\'est.
+  \item \textbf{3. Mit j\'osol el\H{o}re, amit a $\Lambda$CDM nem?:} A 6--10.\ fejezetben sz\'amszer\H{u}s\'item a VHE gamma-fut\'asiid\H{o}-korl\'atokra, a kompakt csillagok t\"omeg--sug\'ar \'es pulz\'aci\'os eltol\'od\'as\'ara, valamint a polarit\'as-p\'aros laborat\'oriumi frekvenciaeltol\'od\'asra adott egyedi el\H{o}rejelz\'eseket.
+\end{itemize}
+}\vfill
+\noindent{\color{navy}\rule{\linewidth}{0.6pt}}\par
+\noindent{\scriptsize\color{slate}\textbf{Licenc- \'es jognyilatkozat:} Ez a m\H{u} a Creative Commons Nevezd meg! -- Ne add el! 4.0 Nemzetk\"ozi (\textbf{CC BY-NC 4.0}) licenc alatt \'all. Valamennyi kereskedelmi, ipari \'es technol\'ogiai hasznos\'it\'asi jogot kifejezetten a szerz\H{o}, Szabolcsi D\'avid tart fenn.}
+\newpage
+
+% ==================== PAGE 2: TABLE OF CONTENTS & POSTURE ====================
+\chaphead{Tartalomjegyz\'ek \'es jel\"ol\'esrendszer}{A monogr\'afia fel\'ep\'it\'ese, az alapvet\H{o} fizikai mennyis\'egek \'es a m\'odszertani keret}
+
+\noindent{\bfseries\color{navy}A monogr\'afia tartalomjegyz\'eke}\par\vspace{1pt}
+{\footnotesize
+\begin{tabular}{@{}>{\bfseries\color{navy}}p{0.12\linewidth}p{0.76\linewidth}>{\raggedleft\arraybackslash\bfseries}p{0.08\linewidth}@{}}
+\toprule
+Egys\'eg & Fejezetc\'im & Oldal \\
+\midrule
+C\'imlap & C\'imlap, \'attekint\'es \'es reproduk\'alhat\'o arch\'iv verzi\'ol\'anc & 1 \\
+Tartalom & Tartalomjegyz\'ek, jel\"ol\'esrendszer \'es m\'odszertani alapelvek & 2 \\
+1.\ fejezet & Verzi\'ot\"ort\'enet V1-t\H{o}l V21-ig: Kutat\'asi programom fejl\H{o}d\'esi \'utja & 3 \\
+2.\ fejezet & Az elm\'elet l\'enyege: A fizikai ,,mi\'ert'' \'es a tudati koherencia & 4 \\
+3.\ fejezet & A $C$ csatol\'asi \'alland\'o ($C$ coupling constant) \'es a Cauchy-t\"orv\'eny levezet\'ese & 5 \\
+4.\ fejezet & A negat\'iv s\H{u}r\H{u}s\'eg-probl\'ema megold\'asa \'es a sk\'al\'ak k\"oz\"otti illeszked\'es & 6 \\
+5.\ fejezet & Galaktikus forg\'asi g\"orb\'ek: 155 SPARC-galaxis feldolgoz\'asa \'es 3D top-hat r\'acsok & 7 \\
+6.\ fejezet & Nagyenergi\'aj\'u gamma-id\H{o}z\'it\'es: T\"obbforr\'as\'u H.E.S.S.-adatok elemz\'ese & 8 \\
+7.\ fejezet & Neutroncsillag-modellez\'es a V21-ben: TOV-sorozatok \'es NICER t\"omeg--sug\'ar korl\'atok & 9 \\
+8.\ fejezet & Perturb\'aci\'os sz\'am\'it\'asok: Anizotr\'op fesz\"ults\'eg \'es Chandrasekhar-f\'ele radi\'alis stabilit\'as & 10 \\
+9.\ fejezet & Felt\'eteles \'ora- \'es v\"or\"oseltol\'od\'as-hipot\'ezisek: Sirius B \'es NICER-likelihoodok & 11 \\
+10.\ fejezet & Tervezett laborat\'oriumi m\'er\'esek: Nyolctekercses m\'agneses t\'er \'es gr\'anit \'orakamra & 12 \\
+11.\ fejezet & Nyitott elm\'eleti \'es k\'is\'erleti k\'erd\'esek: Laborat\'oriumi \'es elm\'eleti feladatok (a)--(d) & 13 \\
+12.\ fejezet & Z\'ar\'o fejezet: A kutat\'asi program k\"ozvetlen k\"ovetkez\H{o} fizikai l\'ep\'ese & 13 \\
+F\"uggel\'ek & AI-t\'amogatott technikai reprodukci\'os ellen\H{o}rz\'es (\texttt{revision3\_review\_HU.md}) & 14--15 \\
+\bottomrule
+\end{tabular}}
+
+\vspace{3mm}
+\noindent{\bfseries\color{navy}Alapvet\H{o} fogalmak \'es matematikai szimb\'olumok}\par
+A t\"ort\'eneti verzi\'ok k\"oz\"otti egy\'ertelm\H{u}s\'eg \'erdek\'eben a monogr\'afia v\'egig az al\'abbi jel\"ol\'esrendszert haszn\'alja:
+\begin{center}\vspace{-2pt}
+{\footnotesize
+\begin{tabular}{@{}>{\bfseries}p{0.28\linewidth}p{0.24\linewidth}p{0.43\linewidth}@{}}
+\toprule
+Fogalom & Szimb\'olum / Defin\'ici\'o & Fizikai szerep a Time Attraction Law rendszer\'eben \\
+\midrule
+Time Attraction Law & $f_L(\mathbf{x}) = \exp(-\gamma_L \bar{\rho}_L(\mathbf{x}))$ & Az id\H{o}\'araml\'as helyi s\H{u}r\H{u}s\'eg\'et a sim\'itott t\"omeg-energia s\H{u}r\H{u}s\'eggel \"osszek\"ot\H{o} t\"orv\'eny. \\
+$C$ csatol\'asi \'alland\'o & $C \equiv \frac{4\pi G}{c^2} = 9{,}331988\times 10^{-27}\,\text{m/kg}$ & Defini\'alt csatol\'asi \'alland\'o ($G/c^2 = 7{,}426160\times 10^{-28}\,\text{m/kg}$; elk\"ul\"on\'itve a $C_{\text{amp}}(\rho)$-t\'ol). \\
+Sk\'alacsatol\'as ($\alpha=1$) & $\gamma_L = \alpha\frac{G L^2}{c^2} = \frac{C L^2}{4\pi}\;(\alpha=1)$ & Az $L$ sim\'it\'asi sug\'arhoz tartoz\'o egy\"utthat\'o ($\text{m}^3\,\text{kg}^{-1}$; elk\"ul\"on\'itve az $\mathcal{L}_{\text{like}}$ likelihoodt\'ol). \\
+3D top-hat s\H{u}r\H{u}s\'eg & $\bar{\rho}_L(\mathbf{x}) = \frac{3}{4\pi L^3}\int_{|\mathbf{y}-\mathbf{x}|\le L}\rho(\mathbf{y})\,d^3y$ & Szigor\'uan nemnegat\'iv g\"ombi \'atlag, amely megoldja a $\rho<0$ el\H{o}jelprobl\'em\'at. \\
+Tudati koherencia & $\Phi_t,\,\Phi_B,\,\kappa$ & Korai elm\'eleti bio-koherencia rezonanciapotenci\'al, m\'agneses fluxus \'es t\'erg\"orb\"ulet. \\
+\bottomrule
+\end{tabular}}
+\end{center}
+
+\vspace{2mm}
+\noindent{\bfseries\color{navy}M\'odszertani alapelvek: Reproduk\'alhat\'os\'ag \'es nyitott k\'erd\'esek}\par
+Az alternat\'iv gravit\'aci\'os \'es id\H{o}elm\'eleti keretrendszer bemutat\'asakor szigor\'uan sz\'etv\'alasztom azt, amit m\'ar hash-ellen\H{o}rz\"ott, reproduk\'alhat\'o k\'odban r\"ogz\'itettem, att\'ol, ami m\'eg nyitott elm\'eleti vagy k\'is\'erleti feladat:
+\begin{enumerate}\setlength{\itemsep}{2pt}\setlength{\parskip}{0pt}\setlength{\topsep}{2pt}
+  \item \textbf{Az audit\'alt ,,hogyan'' reproduk\'alhat\'oan r\"ogz\'itve van:} Zenodo-rekordjaimban \'es GitHub-rep\'omban determinisztikus szkripteket, SHA-256 jegyz\'ekeket \'es f\"uggetlen kvadrat\'ura-ellen\H{o}rz\'eseket adtam k\"ozre, amelyek meghat\'arozz\'ak, \emph{hogyan} k\'epezi le a Time Attraction Law a $\rho(\mathbf{x})$ t\"omeg-energia s\H{u}r\H{u}s\'eget a korl\'atos $0 < f_L(\mathbf{x}) \le 1$ csillap\'it\'asi faktorra.
+  \item \textbf{Minden verzi\'o k\"oztes l\'ep\'es:} A V1--V21 sorozat egyetlen kiad\'as\'at sem nevezem lez\'artnak vagy v\'altoztathatatlannak. Minden verzi\'o egy konkr\'et matematikai hipot\'ezist tesztel megfigyel\'esi vagy laborat\'oriumi k\'enyszerek ellen\'eben, ny\'iltan r\"ogz\'iti a hibam\'odokat, \'es ennek megfelel\H{o}en finom\'itja a formalizmust.
+  \item \textbf{AI-t\'amogatott technikai reprodukci\'os ellen\H{o}rz\'esek:} Az Academia Co-scientist t\'amogat\'as\'aval v\'egzett technikai reprodukci\'os \'es k\'ezirat-ellen\H{o}rz\'eseket (amelyek nem int\'ezm\'enyi foly\'oirati b\'ir\'alatok) diagnosztikai eszk\"ozk\'ent kezelem. Amikor a b\'ir\'alat jelezte a f\H{o}s\'ikbeli proxy \'es a 3D top-hat k\"ul\"onbs\'eg\'et a V19-ben, a $2\mathbf{B}_{\text{bg}}\cdot\mathbf{B}_{\text{coil}}$ h\'att\'er-kereszttagot a V20-ban, vagy a nem-vari\'aci\'os metrikus pulz\'aci\'os oper\'atort \'es a hi\'anyz\'o kovari\'ans hat\'aselv-lez\'ar\'ast a V21-ben, ezeket a diagnosztik\'akat be\'ep\'itettem a k\'odba \'es a dokument\'aci\'oba. A 3.\ k\"or\"os f\"uggetlen b\'ir\'alati jegyz\H{o}k\"onyvet v\'altoztat\'as n\'elk\"ul k\"ozl\"om a 14.\ \'es 15.\ oldalon.
+\end{enumerate}
+\newpage
+
+% ==================== PAGE 3: CHAPTER 1 (VERSION HISTORY V1-V21) ====================
+\chaphead{1.\ fejezet: Verzi\'ot\"ort\'enet V1-t\H{o}l V21-ig}{A Time Attraction Law iterat\'iv fejl\H{o}d\'esi \'utja huszonegy kutat\'asi szakaszon kereszt\"ul}
+
+Hogy az olvas\'o pontosan k\"ovethesse kutat\'asom \'utj\'at, itt foglalom \"ossze, mik\'ent fejl\H{o}d\"ott a \textbf{Time Attraction Law} (id\H{o}vonz\'as t\"orv\'enye) az 1.\ verzi\'o kezdeti matematikai feltev\'es\'et\H{o}l a 21.\ verzi\'o t\"obbcsatorn\'as, kompakt-objektum \'es laborat\'oriumi csomagjaiig. Minden szakasz l\'epcs\H{o}fokk\'ent szolg\'alt, amely megmutatta, mi m\H{u}k\"odik \'es mi szorul jav\'it\'asra.
+
+\begin{center}\vspace{-2pt}
+{\footnotesize
+\begin{tabular}{@{}>{\bfseries\color{navy}}p{0.14\linewidth}p{0.25\linewidth}p{0.56\linewidth}@{}}
+\toprule
+Verzi\'oszakasz & Els\H{o}dleges f\'okusz & El\'ert m\'erf\"oldk\"ovek, tanuls\'agok \'es \"onkorrekci\'ok \\
+\midrule
+V1 -- V4 & Cauchy-f\'ele multiplikat\'iv feltev\'es & Megfogalmaztam a posztul\'atumot, hogy a f\"uggetlen helyi t\"omegs\H{u}r\H{u}s\'egek multiplikat\'ivan hatnak az id\H{o}\'araml\'asra, $f(\rho_1+\rho_2)=f(\rho_1)f(\rho_2)$, amib\H{o}l $f(\rho)=\exp(-\gamma\rho)$ ad\'odik. \\
+V5 -- V7 & Gyenge t\'er \'es kam\'eleon-vizsg\'alatok & Skal\'ar--tenzor \'es kam\'eleon-jelleg\H{u} \'arny\'ekol\'asi anal\'ogi\'akat vizsg\'altam, hogy a helyi s\H{u}r\H{u}s\'eggradienseket \"osszekapcsoljam az alacsony s\H{u}r\H{u}s\'eg\H{u} t\'erbeli effekt\'iv gyorsul\'assal. \\
+V8 -- V12 & Horndeski- \'es id\H{o}dilat\'aci\'os lek\'epez\'esek & Effekt\'iv metrikus lapse-m\'odosul\'asokat \'es Horndeski-ihlet\'es\H{u} skal\'arcsatol\'asokat vizsg\'altam, tesztelve, hogy optikai \'ora\"osszehasonl\'it\'asok korl\'atozhatj\'ak-e a csatol\'asi sk\'al\'at. \\
+V13 -- V16 & S\H{u}r\H{u}s\'egf\"ugg\H{o} id\H{o}koherencia \'es bio-koherencia ($\Phi_t$) & (\texttt{10.5281/zenodo.23217189}) Bevezettem a \textbf{$C$ csatol\'asi \'alland\'o} ($C=4\pi G/c^2$) fogalm\'at, a $C(\rho)=1+C_0 e^{-\rho/\rho_c}$ ($C_0=5$) er\H{o}szorz\'ot \'es a tudati koherencia hidat ($\Phi_t$, $\Phi_B$, $\kappa$, EEG/HRV bio-koherencia). K\'es\H{o}bbi \"onauditjaim kimutatt\'ak, hogy a line\'aris differenci\'alis alakok $\rho<0$ el\H{o}jelv\'alt\'ast okozhatnak, a $C_0=5$ pedig t\'ulbecs\"uli a lapos forg\'asi g\"orb\'eket. \\
+V17 & SPARC 155 galaxis \'es H.E.S.S. t\"obbforr\'as\'u audit & (\texttt{10.5281/zenodo.19666220}) Audit\'altam 175 SPARC-galaxist (155 min\H{o}s\'egsz\H{u}rt forg\'asi g\"orbe; 123 vakteszt-galaxis 2596 m\'er\'esi ponttal) \'es t\"obbforr\'as\'u H.E.S.S. VHE gamma-kit\"or\'eseket (PKS 2155-304, Mrk 501, Vela, Crab, GRB 190114C), az egyetlen kit\"or\'esre \'ep\"ul\H{o} \'all\'it\'asokat szigor\'u t\"obbforr\'as\'u kontrollal v\'altva fel. \\
+V18 (Bels\H{o}) & Sim\'it\'omag-\'ujrafogalmaz\'as & Integr\'alis sim\'it\'omagokat teszteltem a numerikus deriv\'altzaj kik\"usz\"ob\"ol\'es\'ere \'es az \'eles s\H{u}r\H{u}s\'eghat\'arok melletti nemfizikai negat\'iv s\H{u}r\H{u}s\'egek megel\H{o}z\'es\'ere. \\
+V19 (7.\ modell) & Pozit\'iv definit 3D g\"ombi top-hat t\"orv\'eny & (\texttt{10.5281/zenodo.23497128}) Megoldottam a negat\'iv s\H{u}r\H{u}s\'eg probl\'em\'aj\'at azzal, hogy a $\bar{\rho}_L(\mathbf{x})$ mennyis\'eget $L$ sugar\'u 3D g\"ombi top-hat integr\'alk\'ent defini\'altam, garant\'alva a $\bar{\rho}_L\ge 0$ \'es $0<f_L\le 1$ korl\'atokat, \'es ki\'ert\'ekeltem mind a 175 SPARC-galaxisra. \\
+V20 (GH V18) & 8 tekercses m\'agneses t\'er \'es gr\'anit \'orakamra & (\texttt{10.5281/zenodo.23540741}) Kidolgoztam a f\"oldi laborat\'oriumi programot: egy $8558\,\text{kg}$-os mozgathat\'o gr\'anitkamr\'at atom\'ora k\"or\"ul, valamint egy 8 tekercses m\'agnesest\'er-energetikai tesztet ($\varnothing 300\,\text{mm}$ peremhat\'ar, $\Delta y = -1{,}2017108\times 10^{-48}$ $L=0{,}631\,\text{m}$-n\'el), h\'arom AI-t\'amogatott technikai reprodukci\'os k\"orben ellen\H{o}rizve. \\
+V21 (GH V19/21) & Neutroncsillag TOV, perturb\'aci\'ok \'es nyitott feladatok & (\texttt{10.5281/zenodo.23602501}) Kiterjesztettem a 3D top-hat t\"orv\'enyt 33 neutroncsillag TOV-sorozatra (SLy, APR4, H4), X-szektorbeli anizotr\'op fesz\"ults\'egrekonstrukci\'ora, Chandrasekhar-f\'ele radi\'alis stabilit\'asra ($\omega_0^2$), Sirius B / NICER felt\'eteles tesztekre \'es n\'egy explicit nyitott fizikai feladatra (a)--(d). \\
+\bottomrule
+\end{tabular}}
+\end{center}
+
+\noindent{\bfseries\color{navy}Kutat\'asi \'utam h\'arom m\'odszertani fordul\'opontja}\par
+A V1--V21 sorozatra visszatekintve h\'arom m\'odszertani fordul\'opont hat\'arozza meg a munka \'eretts\'eg\'et:
+\begin{enumerate}\setlength{\itemsep}{1.5pt}\setlength{\parskip}{0pt}\setlength{\topsep}{1pt}
+  \item \textbf{A differenci\'alis proxykt\'ol a pozit\'iv definit integr\'alis sim\'it\'asig (V13 $\to$ V19):} A korai verzi\'okban a Laplace-oper\'ator vagy a f\H{o}s\'ikbeli proxyk sz\'am\'it\'asa el\H{o}jelv\'alt\'asokat okozott, ahol az effekt\'iv s\H{u}r\H{u}s\'eg nulla al\'a esett. A 3D g\"ombi top-hat $\bar{\rho}_L$ \'atlag V19-beli bevezet\'es\'evel matematikailag garant\'altam a $0 < f_L(\mathbf{x}) \le 1$ fenn\'all\'as\'at a t\'er minden pontj\'an.
+  \item \textbf{Az egyedi illeszt\'esekt\H{o}l a vak, t\"obbobjektumos kontrollokig (V16 $\to$ V17/V19):} Ahelyett, hogy galaxisonk\'ent vagy egyetlen blaz\'arkit\"or\'esre hangoltam volna param\'etereket, r\"ogz\'itettem a csillag\'aszati t\"omeg--f\'enyess\'eg ar\'anyokat ($\Upsilon_{\text{disk}}=0{,}5$, $\Upsilon_{\text{bulge}}=0{,}7\,M_\odot/L_\odot$) a SPARC-mint\'an, a PKS 2155-304 forr\'ast pedig n\'egy tov\'abbi H.E.S.S. gamma-forr\'assal vetettem \"ossze.
+  \item \textbf{Az algebrai el\H{o}\'ir\'asokt\'ol az explicit nyitott peremfelt\'etelekig (V20 $\to$ V21):} A V20 \'es V21 verzi\'oban minden numerikus sz\'am\'it\'ast SHA-256 ellen\H{o}rz\H{o} jegyz\'ekkel p\'aros\'itottam, \'es ny\'iltan elv\'alasztottam a r\"ogz\'itett algebrai profilokat a nyitott kovari\'ans hat\'aselv-levezet\'est\H{o}l (\texttt{50aa2db0} feladat).
+\end{enumerate}
+\newpage
+
+% ==================== PAGE 4: CHAPTER 2 (CORE ESSENCE, PHYSICAL WHY & CONSCIOUSNESS COHERENCE) ====================
+\chaphead{2.\ fejezet: Az elm\'elet l\'enyege --- A fizikai ,,mi\'ert'' \'es a tudati koherencia}{Mi\'ert modul\'alja a t\"omeg-energia s\H{u}r\H{u}s\'eg az id\H{o}\'araml\'ast, a k\"ozeg-interpret\'aci\'o \'es a bio-koherencia r\'eteg}
+
+Egy fizikai elm\'elet nem \'allhat meg ann\'al, hogy le\'irja, \emph{hogyan} hajlik meg egy g\"orbe; v\'alaszt kell adnia arra is, \emph{mi\'ert} j\"on l\'etre a hat\'as. A \textbf{Time Attraction Law} (id\H{o}vonz\'as t\"orv\'enye) rendszer\'eben egy alapvet\H{o} ontol\'ogiai v\'alt\'asb\'ol indulok ki: \textbf{az id\H{o} nem passz\'iv, egyenletes matematikai koordin\'ata, hanem az els\H{o}dleges fizikai hordoz\'o, amelynek helyi \'araml\'asi s\H{u}r\H{u}s\'eg\'et a t\"omeg-energia s\H{u}r\H{u}s\'eg vonzza \'es s\H{u}r\'iti.}
+
+\noindent{\bfseries\color{navy}1. A fizikai ,,mi\'ert'': Mez\H{o}, id\H{o}folyad\'ek vagy t\"or\'esmutat\'oj\'u t\'erid\H{o}-k\"ozeg?}\par
+Az \'altal\'anos relativit\'aselm\'eletben a t\"omeg \'es energia a $G_{\mu\nu} = \frac{8\pi G}{c^4}T_{\mu\nu}$ egyenleten kereszt\"ul g\"orb\'iti a t\'erid\H{o}-geometri\'at, a gravit\'aci\'os id\H{o}dilat\'aci\'o pedig kiz\'ar\'olag a $g_{00}$ metrikus komponensb\H{o}l sz\'armazik. Saj\'at keretrendszeremben azt a k\'erd\'est teszem fel, milyen fizikai mechanizmus \'all az \'or\'ak helyi lassul\'asa m\"og\"ott, amikor egy $L$ sugar\'u k\"olcs\"onhat\'asi tartom\'anyban t\"omeg-energia halmoz\'odik fel. Az id\H{o}\'araml\'ast \'ugy \'ertelmezem, mint amely effekt\'iv helyi hordoz\'os\H{u}r\H{u}s\'eggel rendelkezik (anal\'og m\'odon egy $n_t(\mathbf{x}) = f_L(\mathbf{x})^{-1} = \exp(+\gamma_L \bar{\rho}_L(\mathbf{x}))$ t\"or\'esmutat\'oj\'u optikai k\"ozeggel vagy egy \"osszenyomhat\'o id\H{o}folyad\'ekkal). Ahol a $\rho(\mathbf{x}) = T_{00}/c^2$ t\"omeg-energia s\H{u}r\H{u}s\'eg koncentr\'al\'odik, ott az $L$ sugar\'u oks\'agi \'atlagol\'og\"omb\"on bel\"ul mag\'ahoz vonzza \'es kondenz\'alja az id\H{o}beli k\"ozeget. Ennek k\"ovetkezt\'eben a saj\'atid\H{o} helyi el\H{o}rehalad\'asi sebess\'ege a v\'akuumbeli referencia\'or\'ahoz k\'epest az al\'abbi t\"orv\'eny szerint csillapodik:
+\begin{equation}
+  f_L(\mathbf{x}) \;=\; \exp\!\bigl(-\gamma_L\,\bar{\rho}_L(\mathbf{x})\bigr), \qquad \gamma_L \;=\; \frac{G L^2}{c^2} \;=\; \frac{C\,L^2}{4\pi},
+\end{equation}
+ahol $C = 4\pi G/c^2$ a \textbf{$C$ csatol\'asi \'alland\'o} ($C$ coupling constant). Ebben a k\'epben a gravit\'aci\'o nem puszt\'an v\'akuumbeli geometriai g\"orb\"ulet, hanem az id\H{o}\'araml\'as s\H{u}r\H{u}s\'eggradienseinek makroszkopikus megnyilv\'anul\'asa.
+
+\noindent{\bfseries\color{navy}2. Az audit\'alt ,,hogyan'' \'es a dinamikai ,,mi\'ert'' sz\'etv\'alaszt\'asa (\texttt{50aa2db0} feladat)}\par
+A tudom\'anyos pontoss\'ag megk\"oveteli, hogy sz\'etv\'alasszam azt, ami algebrailag m\'ar igazolt, att\'ol, ami m\'elyebb mez\H{o}elm\'eleti levezet\'est ig\'enyel. A V19--V21 verzi\'okban r\"ogz\'itettem a funkcion\'alis \textbf{,,hogyan''}-t --- a $\rho(\mathbf{x}) \to \bar{\rho}_L(\mathbf{x}) \to f_L(\mathbf{x})$ nemlok\'alis lek\'epez\'est, $10^{-15}$-\"os numerikus pontoss\'aggal ellen\H{o}rizve. Az audit\'alt neutroncsillag-receptekben a $P' = -(\varepsilon+P)\nu'$ hidrosztatikai egyenlet biztos\'itja az anyagi tenzor \"on\'all\'o megmarad\'as\'at ($\nabla_\mu T^{\mu\nu}_{\text{matter}} = 0$), viszont az Einstein-egyenletek forr\'asoldal\'anak lez\'ar\'as\'ahoz $T^{\mu\nu}_X$ effekt\'iv szektorra van sz\"uks\'eg ($\nabla_\mu(T^{\mu\nu}_{\text{matter}} + T^{\mu\nu}_X) = 0$). Ez\'ert a dinamikai \textbf{,,mi\'ert''}-et az \texttt{50aa2db0} feladatk\'ent fogalmaztam meg: a nemlok\'alis mag olyan kovari\'ans skal\'ar--tenzor vagy nemlok\'alis $S = \int d^4x\sqrt{-g}\,\bigl[\frac{c^4}{16\pi G}R + \mathcal{L}_{\text{matter}}(\psi, \tilde{g}_{\mu\nu}) + \mathcal{L}_\phi(\phi,\nabla\phi)\bigr]$ hat\'aselvbe emel\'ese, amelynek Euler--Lagrange-egyenlete kv\'azisztatikus hat\'aresetben visszaadja a $\phi(\mathbf{x}) \to \gamma_L\bar{\rho}_L(\mathbf{x})$ profilt, mik\"ozben garant\'alja a $\nabla_\mu(T^{\mu\nu}_{\text{matter}} + T^{\mu\nu}_X) = 0$ megmarad\'asi t\"orv\'enyt.
+
+\noindent{\bfseries\color{navy}3. Spekulat\'iv fogalmi hipot\'ezisr\'eteg: A tudati koherencia h\'id ($\Phi_t$, $\Phi_B$, $\kappa$)}\par
+A 13--16.\ verzi\'okban (amelyek elm\'eleti l\'anc\'at a V17 is meg\H{o}rizte) egy t\'agabb, perspektivikus egyes\'it\'esi k\'erd\'est is vizsg\'altam: ha az id\H{o}\'araml\'as helyi s\H{u}r\H{u}s\'ege t\"omeggel \'es energi\'aval modul\'alt fizikai k\"ozeg, k\'epesek-e a koherens elektrom\'agneses \'es biol\'ogiai inform\'aci\'os strukt\'ur\'ak ugyanahhoz az id\H{o}beli hordoz\'ohoz csatol\'odni? Ebben a kiterjesztett elm\'eleti r\'etegben vezettem be a \textbf{tudati koherencia rezonanciapotenci\'alt} ($\Phi_t$) a $\Phi_B$ m\'agneses fluxus \'es a $\kappa$ t\'erg\"orb\"ulet mell\'e, \'altal\'anos\'itott effekt\'iv forr\'ass\H{u}r\H{u}s\'eget \'es egyes\'itett energia-impulzus tenzort fel\'irva:
+\begin{equation}
+  \rho_{\text{eff}} \;=\; \rho \;+\; \Xi\,\varepsilon_0\,\Phi_t \;+\; \beta\,\Phi_B \;+\; \gamma\,\kappa, \qquad
+  T_{\mu\nu}^{\text{total}} \;=\; T_{\mu\nu}^{\text{matter}} \;+\; T_{\mu\nu}^{\text{flux}} \;+\; T_{\mu\nu}^{\text{thought}},
+\end{equation}
+ahol $\Xi$ az id\H{o}koherencia-csatol\'asi egy\"utthat\'o, $\varepsilon_0$ pedig a v\'akuum permittivit\'asa. E hipot\'ezis keret\'eben a biol\'ogiai neur\'alis \'es sz\'ivritmus-oszcill\'atorok (amelyek f\'azisz\'art EEG gamma/th\'eta szinkronit\'assal \'es sz\'ivfrekvencia-variabilit\'asi, HRV bio-koherencia indexekkel jellemezhet\H{o}k) a helyi id\H{o}koherencia ultra\'erz\'ekeny f\'azisdetektoraik\'ent m\H{u}k\"odnek. Az elm\'eleti modell szerint a helyi $\rho$ t\"omeg-energia s\H{u}r\H{u}s\'eg, a $\Phi_B$ geom\'agneses/tekercs-fluxus \'es az \'arny\'ekol\'asi geometria v\'altoz\'asai m\'erhet\H{o} eltol\'od\'ast eredm\'enyezhetnek az EEG/HRV f\'aziskoherenci\'aban.
+
+\noindent{\bfseries\color{navy}4. Szigor\'u m\'odszertani hat\'ar az audit\'alt fizika \'es a perspektivikus kiterjeszt\'es k\"oz\"ott}\par
+Kutat\'asi programomban egy\'ertelm\H{u} hat\'art h\'uzok a k\'et r\'eteg k\"oz\'e:
+\begin{itemize}\setlength{\itemsep}{1.5pt}\setlength{\parskip}{0pt}\setlength{\topsep}{1pt}
+  \item \textbf{Audit\'alt fizikai mag (V19--V21):} A SPARC galaktikus forg\'asi elemz\'esben, a H.E.S.S. id\H{o}z\'it\'esi korl\'atokban, a neutroncsillag TOV- \'es pulz\'aci\'os sorozatokban, valamint a V20 gr\'anitkamr\'as \'es 8 tekercses kvarcoszcill\'atoros laborat\'oriumi protokollban szerepl\H{o} valamennyi sz\'amszer\H{u} eredm\'eny \emph{kiz\'ar\'olag} a standard barionos \'es elektrom\'agneses $\rho = T_{00}/c^2$ t\"omeg-energia s\H{u}r\H{u}s\'egre \'ep\"ul, $\Phi_t \equiv 0$ mellett.
+  \item \textbf{Perspektivikus bio-koherencia r\'eteg (V13--V16):} A tudati koherencia tagok ($\Phi_t$, $T_{\mu\nu}^{\text{thought}}$, EEG/HRV bio-koherencia) nyitott, m\'eg nem audit\'alt elm\'eleti perspekt\'ivak\'ent szerepelnek, mint a Time Attraction Law szellemi fejl\H{o}d\'est\"ort\'enet\'enek r\'eszei.
+\end{itemize}
+\newpage
+
+% ==================== PAGE 5: CHAPTER 3 (DERIVATION OF THE C COUPLING CONSTANT) ====================
+\chaphead{3.\ fejezet: A $C$ csatol\'asi \'alland\'o levezet\'ese}{Cauchy multiplikat\'iv f\"uggv\'enyegyenlete, dimenzi\'oanal\'izis \'es a V14--V16 er\H{o}szorz\'o auditja}
+
+Ebben a fejezetben bemutatom az exponenci\'alis csillap\'it\'asi t\"orv\'eny \'es a \textbf{$C$ csatol\'asi \'alland\'o} ($C$ coupling constant) saj\'at matematikai levezet\'es\'et, majd a korai V14--V16 er\H{o}szorz\'o \"onauditj\'at.
+
+\noindent{\bfseries\color{navy}1. Az exponenci\'alis t\"orv\'eny levezet\'ese Cauchy f\"uggv\'enyegyenlet\'eb\H{o}l}\par
+Kiindul\'ask\'ent veszek egy v\'akuumban ($\rho = 0$) $d\tau_0$ saj\'at\"utemmel ketyeg\H{o} referencia\'or\'at, valamint egy vele azonos \'or\'at egy olyan tartom\'anyban, ahol az $L$ sug\'aron bel\"uli sim\'itott t\"omeg-energia s\H{u}r\H{u}s\'eg $\bar{\rho}_L \ge 0$. Jel\"olje $f(\bar{\rho}_L) = d\tau / d\tau_0$ a dimenzi\'otlan id\H{o}\'araml\'as-csillap\'it\'asi faktort. H\'arom fizikai axi\'om\'at k\"ot\"ok ki:
+\begin{enumerate}\setlength{\itemsep}{1pt}\setlength{\parskip}{0pt}\setlength{\topsep}{1pt}
+  \item \textbf{V\'akuum-norm\'al\'as:} T\"omeg \'es energia hi\'any\'aban ($\bar{\rho}_L = 0$) az id\H{o} a csillap\'itatlan referencia\"utemmel folyik, vagyis $f(0) = 1$.
+  \item \textbf{Multiplikat\'iv szuperpoz\'ici\'o:} Ha k\'et f\"uggetlen, nem \'atfed\H{o} t\"omegeloszl\'as $\rho_1$ \'es $\rho_2$ sim\'itott s\H{u}r\H{u}s\'eggel j\'arul hozz\'a a k\"olcs\"onhat\'asi g\"ombh\"oz, az id\H{o}beli hordoz\'o egym\'ast k\"ovet\H{o} csillap\'it\'asa multiplikat\'iv:
+  \begin{equation}
+    f(\rho_1 + \rho_2) \;=\; f(\rho_1)\,f(\rho_2) \qquad \forall\,\rho_1,\rho_2 \ge 0.
+  \end{equation}
+  \item \textbf{Monoton vonz\'as (az id\H{o}\'araml\'as lassul\'asa):} A n\"ovekv\H{o} t\"omeg-energia s\H{u}r\H{u}s\'eg vonzza \'es s\H{u}r\'iti az id\H{o}beli k\"ozeget, lass\'itva a helyi \'ora\"utemet: $0 < f(\rho) \le 1$ \'es $df/d\rho < 0$.
+\end{enumerate}
+Cauchy klasszikus t\'etele alapj\'an az $f(x+y)=f(x)f(y)$ egyenlet egyetlen folytonos megold\'asa a $[0,\infty)$ f\'elegyenesen, amely kiel\'eg\'iti az $f(0)=1$ \'es $df/d\rho < 0$ felt\'eteleket, a tiszta val\'os exponenci\'alis f\"uggv\'eny:
+\begin{equation}
+  f_L(\bar{\rho}_L) \;=\; \exp\!\bigl(-\gamma_L\,\bar{\rho}_L\bigr), \qquad \gamma_L > 0, \qquad [\gamma_L] \;=\; \text{m}^3\,\text{kg}^{-1}.
+\end{equation}
+
+\noindent{\bfseries\color{navy}2. A $C$ csatol\'asi \'alland\'o \'es a $\gamma_L$ dimenzi\'os fel\'ep\'it\'ese}\par
+Ahhoz, hogy a $\gamma_L$ csillap\'it\'asi egy\"utthat\'ot kiz\'ar\'olag alapvet\H{o} gravit\'aci\'os \'alland\'ok \'es az $L$ k\"olcs\"onhat\'asi sug\'ar seg\'its\'eg\'evel fejezzem ki, abb\'ol indulok ki, hogy a Newton-f\'ele gravit\'aci\'os \'alland\'o ($G = 6{,}67430\times 10^{-11}\,\text{m}^3\,\text{kg}^{-1}\,\text{s}^{-2}$) \'es a v\'akuumbeli f\'enysebess\'eg ($c = 2{,}99792458\times 10^{8}\,\text{m}\,\text{s}^{-1}$) egyetlen egy\'ertelm\H{u} t\"omeg--hossz \'atvált\'asi ar\'anyt alkot: $[G/c^2] = \text{m}\,\text{kg}^{-1}$. A 3D izotr\'op forr\'asra vonatkoz\'o Gauss-t\"orv\'eny $4\pi$ g\"ombfelsz\'ini faktor\'anak beemel\'ese defini\'alja az alapvet\H{o} \textbf{$C$ csatol\'asi \'alland\'o} ($C$ coupling constant) mennyis\'egemet:
+\begin{equation}
+  C \;\equiv\; \frac{4\pi G}{c^2} \;=\; 9{,}3319882\times 10^{-27}\;\text{m}\,\text{kg}^{-1}, \qquad
+  \frac{G}{c^2} \;=\; \frac{C}{4\pi} \;=\; 7{,}4261603\times 10^{-28}\;\text{m}\,\text{kg}^{-1}.
+\end{equation}
+Az ir\'anymenti $G/c^2 = C/(4\pi)$ t\"omeg--hossz ar\'anyt megszorozva az $L^2$ sim\'it\'asi sk\'ala n\'egyzet\'evel megkapjuk a pontos, $\text{m}^3\,\text{kg}^{-1}$ dimenzi\'oj\'u $\gamma_L$ sk\'alaf\"ugg\H{o} csatol\'asi egy\"utthat\'ot:
+\begin{equation}
+  \gamma_L \;=\; \alpha\frac{G\,L^2}{c^2} \;=\; \frac{C\,L^2}{4\pi} \;=\; 7{,}4261603\times 10^{-28}\,L^2\;\text{m}^3\,\text{kg}^{-1}\quad(\alpha=1\text{ norm\'al\'asi feltev\'es}).
+\end{equation}
+Amikor egy $M$ pontt\"omeget $L$ sugar\'u g\"omb\"on \'atlagolok, \'atlags\H{u}r\H{u}s\'ege $\bar{\rho}_L = \frac{3M}{4\pi L^3}$, \'igy a kitev\H{o} $\gamma_L \bar{\rho}_L = \frac{3GM}{4\pi c^2 L} = \frac{3\,C\,M}{(4\pi)^2 L}$, ami a $3/(4\pi)$ geometriai szorz\'oig visszaadja a dimenzi\'otlan $GM/(c^2 L)$ kompakts\'agi sk\'al\'at.
+
+\noindent{\bfseries\color{navy}3. A V14--V16-beli $C(\rho) = 1 + C_0\exp(-\rho/\rho_c)$ er\H{o}szorz\'o empirikus fel\"ulvizsg\'alata}\par
+A 14--16.\ verzi\'okban (DOI \texttt{10.5281/zenodo.23217189}), miel\H{o}tt bevezettem volna a 3D g\"ombi top-hat integr\'alt, egy fenomenol\'ogiai, gyenge t\'erbeli er\H{o}szorz\'ot vizsg\'altam az al\'abbi alakban:
+\begin{equation}
+  v_{\text{rot}}^2(r) \;=\; v_{\text{baryon}}^2(r)\cdot C(\rho(r)), \qquad C(\rho) \;=\; 1 \;+\; C_0\,\exp\!\left(-\frac{\rho}{\rho_c}\right),
+\end{equation}
+r\"ogz\'itett $C_0 = 5$ amplit\'ud\'oval (\'igy $C(\rho)\to 6$ az ultraalacsony s\H{u}r\H{u}s\'eg\H{u} peremvid\'ekeken, ahol $\rho \ll \rho_c$) \'es $\rho_c$ kritikus k\"usz\"obs\H{u}r\H{u}s\'eggel. A V17-es audit sor\'an (DOI \texttt{10.5281/zenodo.19666220}) vaktesztnek vetettem al\'a ezt a k\'epletet 123 SPARC-galaxison, \'es k\'et kritikus korl\'atot t\'artam fel:
+\begin{itemize}\setlength{\itemsep}{1.5pt}\setlength{\parskip}{0pt}\setlength{\topsep}{1pt}
+  \item \textbf{Empirikus t\'ulbecsl\'es:} A $C_0=5$ r\"ogz\'it\'ese az aszimptotikus sebess\'egeket $\sqrt{6}\approx 2{,}45$-sz\"or\"os\'ere emeli, ami szisztematikusan t\'ull\H{o} a k\"ozepes fel\"uleti f\'enyess\'eg\H{u} galaxisokon, \'es a 123 galaxisos vakmint\'an a medi\'an reduk\'alt $\chi^2_\nu$ \'ert\'eket $2{,}898$-r\'ol (barionos alapvonal) $9{,}39$-re rontja.
+  \item \textbf{Helyi pontszer\H{u} instabilit\'as:} A $\rho(r)$ pontonk\'enti vagy v\'ekonykorong-deriv\'altakkal t\"ort\'en\H{o} ki\'ert\'ekel\'ese \'erz\'ekenny\'e teszi a modellt a helyi g\'azcsom\'okra \'es el\H{o}jelv\'alt\'asokra. Ez a felismer\'es vezetett el k\"ozvetlen\"ul a param\'etermentes 3D g\"ombi top-hat integr\'al bevezet\'es\'ehez a 19.\ verzi\'oban.
+\end{itemize}
+\newpage
+
+% ==================== PAGE 6: CHAPTER 4 (NEGATIVE DENSITY RESOLUTION & CROSS-SCALE FITTING) ====================
+\chaphead{4.\ fejezet: A negat\'iv s\H{u}r\H{u}s\'eg megold\'asa \'es a sk\'al\'ak k\"oz\"otti illeszked\'es}{A 7.\ modellem (V19 3D g\"ombi top-hat t\"orv\'eny) \'es a galaxisok, a Naprendszer, valamint a labor \"osszekapcsol\'asa}
+
+\noindent{\bfseries\color{navy}1. Mi\'ert l\'eptek fel negat\'iv s\H{u}r\H{u}s\'egek ($\rho < 0$ vagy $f < 0$) a korai megfogalmaz\'asokban?}\par
+Kutat\'asom korai szakaszaiban (\'es az olyan els\H{o}rend\H{u} gyenge t\'erbeli sorfejt\'esekben, ahol $\exp(-\gamma\rho) \approx 1 - \gamma\rho$, vagy ahol az effekt\'iv s\H{u}r\H{u}s\'eget a $\nabla^2\Phi_{\text{eff}}$ Laplace-oper\'atorb\'ol rekonstru\'altam \'eles korongperemek ment\'en) k\'et matematikai patol\'ogia jelentkezett:
+\begin{enumerate}\setlength{\itemsep}{1pt}\setlength{\parskip}{0pt}\setlength{\topsep}{1pt}
+  \item \textbf{Lineariz\'alt el\H{o}jelv\'alt\'as ($f_{\text{lin}} < 0$):} Nagy s\H{u}r\H{u}s\'eg\H{u} tartom\'anyokban (p\'eld\'aul neutroncsillag-magokban, ahol $\rho \sim 10^{18}\,\text{kg/m}^3$) vagy nagy $L$ sim\'it\'asi sk\'al\'akon az $1 - \gamma_L\rho$ line\'aris Taylor-k\"ozel\'it\'es \'atlépi a null\'at \'es negat\'ivv\'a v\'alik, amint $\gamma_L\rho > 1$, megford\'itva az id\H{o}\'araml\'as el\H{o}jel\'et.
+  \item \textbf{Differenci\'alis dekonvol\'uci\'os oszcill\'aci\'ok ($\rho_{\text{eff}} < 0$):} Zajos forg\'asi g\"orb\'ek m\'asodrend\H{u} deriv\'altjaib\'ol vagy oszcill\'al\'o Bessel-magokb\'ol sz\'am\'itott effekt\'iv s\H{u}r\H{u}s\'eg nemfizikai, negat\'iv t\"omegs\H{u}r\H{u}s\'eg\H{u} ($\rho_{\text{eff}} < 0$) z\'on\'akat hoz l\'etre a lev\'agott csillagkorongokon vagy tekercsperemeken k\'iv\"ul.
+\end{enumerate}
+
+\noindent{\bfseries\color{navy}2. Megold\'asom a 19.\ verzi\'oban (7.\ modell): A 3D g\"ombi top-hat integr\'al}\par
+A 19.\ verzi\'oban (DOI \texttt{10.5281/zenodo.23497128}) mindk\'et patol\'ogi\'at kik\"usz\"ob\"oltem a \textbf{Time Attraction Law} (id\H{o}vonz\'as t\"orv\'enye) \textbf{7.\ modellj\'enek} megalkot\'as\'aval. Pontonk\'enti deriv\'altak vagy line\'aris k\"ozel\'it\'esek helyett az id\H{o}beli csillap\'it\'as forr\'as\'at tetsz\H{o}leges $\mathbf{x} \in \mathbb{R}^3$ pontban a fizikai $\rho(\mathbf{y}) = T_{00}(\mathbf{y})/c^2 \ge 0$ t\"omeg-energia s\H{u}r\H{u}s\'eg $L > 0$ sugar\'u $B(\mathbf{x},L)$ g\"omb\"on bel\"uli, s\'ulyozatlan h\'aromdimenzi\'os top-hat \'atlagak\'ent defini\'alom:
+\begin{equation}
+  \bar{\rho}_L(\mathbf{x}) \;\equiv\; \frac{3}{4\pi L^3}\int_{|\mathbf{y}-\mathbf{x}|\le L} \rho(\mathbf{y})\,d^3y \;=\; \frac{M_{\text{enc}}(\mathbf{x};L)}{\frac{4}{3}\pi L^3}, \qquad
+  f_L(\mathbf{x}) \;=\; \exp\!\bigl(-\gamma_L\,\bar{\rho}_L(\mathbf{x})\bigr).
+\end{equation}
+Mivel a fizikai t\"omeg-energia s\H{u}r\H{u}s\'egre mindenhol $\rho(\mathbf{y}) \ge 0$, \'es a $\Theta(L - |\mathbf{y}-\mathbf{x}|)$ karakterisztikus indik\'atorf\"uggv\'eny szigor\'uan nemnegat\'iv, a $\bar{\rho}_L(\mathbf{x})$ integr\'al \textbf{pozit\'iv szemidefinit ($\bar{\rho}_L(\mathbf{x}) \ge 0$)} minden geometri\'aban --- legyen sz\'o spir\'algalaxisr\'ol, neutroncsillagr\'ol vagy nyolctekercses laborat\'oriumi elrendez\'esr\H{o}l. Ennek k\"ovetkezt\'eben az exponenci\'alis csillap\'it\'asi faktor kiel\'eg\'iti az egzakt analitikus korl\'atokat:
+\begin{equation}
+  0 \;<\; f_L(\mathbf{x}) \;\le\; 1 \qquad \forall\,\mathbf{x}\in\mathbb{R}^3,\;\;\forall\,L > 0.
+\end{equation}
+Sem negat\'iv s\H{u}r\H{u}s\'eg, sem el\H{o}jelv\'alt\'as, sem az $f_L$-b\H{o}l ered\H{o} metrikus horizont-\'atfordul\'as nem fordulhat el\H{o}.
+
+\noindent{\bfseries\color{navy}3. Hogyan illeszkedik a Time Attraction Law a sk\'al\'ak k\"oz\"ott? (Galaxis $\to$ Naprendszer $\to$ $300\,\text{mm}$ labor)}\par
+Minden gravit\'aci\'os elm\'elet sz\'am\'ara kulcsk\'erd\'es, \emph{hogyan illeszkedik az egym\'ast\'ol sok nagys\'agrenddel elt\'er\H{o} hosszsk\'al\'ak k\"oz\"ott}: ha m\H{u}k\"odik a galaxisokban, mi van a Naprendszerrel, \'es mi\'ert olyan fontos a $300\,\text{mm}$-es tekercsperemhat\'arn\'al \'es a $8558\,\text{kg}$-os gr\'anitkamr\'an\'al v\'egzett laborat\'oriumi m\'er\'es? A $\gamma_L \bar{\rho}_L = \frac{3 G M_{\text{enc}}(\mathbf{x};L)}{4\pi c^2 L}$ 3D top-hat sk\'al\'az\'asi t\"orv\'eny egys\'eges sz\'amszer\H{u} v\'alaszt ad n\'egy tartom\'anyban:
+\begin{center}\vspace{-2pt}
+{\footnotesize
+\begin{tabular}{@{}>{\bfseries}p{0.20\linewidth}p{0.20\linewidth}p{0.23\linewidth}p{0.31\linewidth}@{}}
+\toprule
+Fizikai tartom\'any & Jellemz\H{o} sk\'ala & Bez\'art t\"omeg / s\H{u}r\H{u}s\'eg & Az $|1 - f_L|$ nagys\'agrendje \'es viselked\'ese \\
+\midrule
+Galaxiskorongok (SPARC 175) & $R \sim 1\text{--}50\,\text{kpc}$, $L \sim 2{,}37\,\text{Mpc}$ & $M_{\text{bary}} \sim 10^8\text{--}10^{11}\,M_\odot$ & Izol\'alt galaxisra $\max|1-f_L| = 2{,}30\times 10^{-7}$; egys\'egnyi kitev\H{o}h\"oz kozmikus h\'att\'er vagy $L\sim 22{,}9\,\text{Gpc}$ kell. \\
+Naprendszeri efemeriszek & $r \sim 1\text{--}30\,\text{CSE}$, $L \gg 1\,\text{CSE}$ & $M_\odot = 1{,}989\times 10^{30}\,\text{kg}$ hatalmas $L^3$ g\"ombben & Szubgalaktikus $L \gtrsim 1\,\text{pc}$ mellett $\gamma_L\bar{\rho}_L^\odot = \frac{3GM_\odot}{4\pi c^2 L} \lesssim 10^{-14}$; felt\'eteles sk\'alabecsl\'es (kapcsolt p\'alya/f\'enyteszt: (a), (d) feladat). \\
+Kompakt csillagok (V21) & $R \sim 10\text{--}5500\,\text{km}$, $L \sim 1\,\text{m}\text{--}100\,\text{km}$ & $\rho \sim 10^9\text{--}10^{18}\,\text{kg/m}^3$ & Er\H{o}s t\'er: $1-f_L \sim 10^{-4}\text{--}0{,}85$; eltolja az NS $M$--$R$ g\"orb\'eket \'es a Sirius B felt\'eteles v\"or\"oseltol\'od\'as\'at. \\
+Laborkamra \'es tekercsek (V20) & $L \sim 0{,}1\text{--}3\,\text{m}$, $\varnothing 300\,\text{mm}$ perem & Gr\'anit $8558\,\text{kg}$ ($\rho=2750$); 8 tekercs ($u_B/c^2$) & $L=0{,}631\,\text{m}$-n\'el a g\"omb pont befogja a $300\,\text{mm}$-es peremet: $|\Delta y|_{\text{coil}}=1{,}20\times 10^{-48}$, $|\Delta y|_{\text{granite}}\sim 10^{-24}$. \\
+\bottomrule
+\end{tabular}}
+\end{center}
+Ez a t\'abl\'azat megvil\'ag\'itja, mi\'ert v\'edett term\'eszetes m\'odon a Naprendszer: amikor $L$ meghaladja a bolyg\'op\'aly\'ak m\'eret\'et, a Nap $M_\odot$ t\"omege felh\'igul a $\frac{4}{3}\pi L^3$ t\'erfogaton, \'igy az $f_L$ bolyg\'op\'aly\'ak menti gradiensei a Cassini- \'es efemerisz-korl\'atok al\'a nyom\'odnak. Ezzel szemben a m\'eteres laborat\'oriumi ablakban ($L \sim 0{,}63\,\text{m}$) az \'atlagol\'og\"omb pontosan illeszkedik a $8558\,\text{kg}$-os gr\'anitkamra ($R_{\text{out}}=0{,}85\,\text{m}$) \'es a 8 tekercses elrendez\'es $300\,\text{mm}$-es peremhat\'ar\'anak ($291{,}7\,\text{mm}$-es menet\'atm\'er\H{o}) geometri\'aj\'ahoz, ott adva maxim\'alis differenci\'alis jelet!
+\newpage
+
+% ==================== PAGE 7: CHAPTER 5 (SPARC 155 GALAXIES & 3D TOP-HAT GRIDS) ====================
+\chaphead{5.\ fejezet: Galaktikus forg\'asi g\"orb\'ek --- 155 SPARC-galaxis feldolgoz\'asa}{A V17 min\H{o}s\'egsz\H{u}rt \'es vak SPARC-auditt\'ol a V19/V20 egzakt 3D g\"ombi top-hat ki\'ert\'ekel\'esig}
+
+Hogy s\"ot\'etanyag-halo hangol\'as n\'elk\"ul teszteljem a \textbf{Time Attraction Law} (id\H{o}vonz\'as t\"orv\'enye) rendszer\'et a galaktikus dinamik\'an, k\'et f\H{o} szakaszban dolgoztam fel a Spitzer Photometry and Accurate Rotation Curves (SPARC) adatb\'azist: a V17 statisztikai cs\H{o}vezet\'ekben (DOI \texttt{10.5281/zenodo.19666220}) \'es a V19/V20 egzakt 3D g\"ombi top-hat ki\'ert\'ekel\'esben (DOI \texttt{10.5281/zenodo.23497128}).
+
+\noindent{\bfseries\color{navy}1. A V17 SPARC-feldolgoz\'as: 175 katal\'ogus-, 155 feldolgozott \'es 123 vakteszt-galaxis}\par
+A SPARC f\H{o}katal\'ogusa \textbf{175 k\'es\H{o}i t\'ipus\'u \'es t\"orpegalaxist} tartalmaz $3{,}6\,\mu\text{m}$-es fel\"uleti fotometri\'aval \'es felbontott $\text{H\,\textsc{i}}/\text{H}\alpha$ forg\'asi g\"orb\'ekkel. A V17-es feldolgoz\'asom sor\'an 20 s\'ulyos kinematikai aszimmetri\'at vagy inklin\'aci\'os hibajelz\'est ($i < 30^\circ$ vagy $Q=3$) mutat\'o rendszer kisz\H{u}r\'ese ut\'an \'allt el\H{o} a \textbf{155 galaxisb\'ol \'all\'o feldolgozott forg\'asig\"orbe-minta}. A szigor\'u adathigi\'eniai v\'ag\'asok (legal\'abb 5 radi\'alis m\'er\'esi pont \'es hi\'anytalan $V_{\text{gas}}, V_{\text{disk}}, V_{\text{bulge}}$ barionos dekompoz\'ici\'o) kijel\"olt\'ek a \textbf{123 galaxisos vakteszt-mint\'at}, amely \textbf{2596 radi\'alis sebess\'egm\'er\'est} foglal mag\'aban. Minden illeszt\'es sor\'an a csillagpopul\'aci\'o-szint\'ezis standard \'ert\'ekeire r\"ogz\'itettem a t\"omeg--f\'enyess\'eg ar\'anyokat ($\Upsilon_{\text{disk}} = 0{,}5\,M_\odot/L_\odot$, $\Upsilon_{\text{bulge}} = 0{,}7\,M_\odot/L_\odot$), \'igy egyetlen galaxisn\'al sem hangoltam szabad halo-param\'etereket.
+
+\noindent{\bfseries\color{navy}2. Egzakt 3D g\"ombi top-hat ki\'ert\'ekel\'es az \"osszes (175) SPARC-galaxisra (V19)}\par
+A 19.\ verzi\'oban a v\'ekonykorong f\H{o}s\'ikbeli $\rho_{\text{mid}}(r) = \Sigma_{\text{bary}}(r)/(2h_z)$ k\"ozel\'it\'est felv\'altottam az egzakt 3D tengelyszimmetrikus $\rho_{\text{bary}}(R,z) = \frac{\Sigma_{\text{bary}}(R)}{2h_z}\exp(-|z|/h_z)$ t\"omegeloszl\'assal ($h_z = 0{,}196\,R_d^{0{,}633}$ sk\'alamagass\'ag mellett), \'es minden $(r,0,0)$ f\H{o}s\'ikbeli sug\'arpont k\"or\"ul $L$ sugar\'u 3D g\"ombben integr\'altam a $\bar{\rho}_L(r)$ s\H{u}r\H{u}s\'eget. A f\"uggetlen b\'ir\'al\'oi ellen\H{o}rz\'es h\'arom d\"ont\H{o} numerikus t\'enyt igazolt:
+\begin{enumerate}\setlength{\itemsep}{1pt}\setlength{\parskip}{0pt}\setlength{\topsep}{1pt}
+  \item \textbf{Izol\'alt galaxis 3D top-hat jele (\texttt{sparc\_tophat.zip}):} Mivel az $L \gg h_z$ sugar\'u 3D g\"omb a v\'ekony korong f\"ol\'e \'es al\'a ny\'ulik, a bez\'art t\"omeg $L^3$-nel h\'igul. Mind a 175 SPARC-galaxison a maxim\'alis galaktikus elt\'er\'es $\max |1 - f_L| = 2{,}280\times 10^{-7}$ a r\'acson \'es \textbf{$2{,}303\times 10^{-7}$} finom\'itott keres\'essel az \textbf{UGC03546} galaxisban ($R = 0{,}63\,\text{kpc}$, $L \approx 0{,}825\,\text{kpc}$; a kor\'abbi V19 illeszt\'esben az UGC02487 $L \approx 23{,}09\,\text{kpc}$-n\'el szerepelt).
+  \item \textbf{1D f\H{o}s\'ikbeli proxy kontra 3D top-hat $L = 2{,}3714\,\text{Mpc}$-n\'el (\texttt{fitted\_L\_scores.csv}):} Az explicit hibamodellt haszn\'al\'o auditban $L = 2{,}3714\,\text{Mpc}$-n\'el a barionos alap ($v_{\text{bar}}$) \'es a val\'odi 3D top-hat medi\'an $\chi^2_\nu$ \'ert\'eke egyar\'ant \textbf{$2{,}8980$} ($N=175$) \'es \textbf{$3{,}1433$} (Vak-123), szemben az 1D proxy $2{,}6716$ ($N=175$) \'es $2{,}7082$ (Vak-123) medi\'anj\'aval.
+  \item \textbf{Homog\'en anyagh\'att\'er-sk\'ala ($L_{\text{eff}} \approx 22{,}94\,\text{Gpc}$):} A $\bar{\rho}_0 \approx 2{,}68\times 10^{-27}\,\text{kg/m}^3$ ($\Omega_m \approx 0{,}315$) homog\'en kozmikus anyagh\'att\'erben a $\gamma_L\bar{\rho}_0 = 1$ felt\'etel az $L_{\text{eff}} = (G\bar{\rho}_0/c^2)^{-1/2} \approx 22{,}94\,\text{Gpc}$ ($7{,}08\times 10^{26}\,\text{m}$) sk\'al\'anak felel meg.
+\end{enumerate}
+
+\begin{center}\vspace{-4pt}
+  \includegraphics[height=44mm,width=0.94\linewidth,keepaspectratio]{figures/fig1_sparc_hu.png}\par\vspace{-3pt}
+  {\scriptsize\color{slate}\textbf{5.1.\ \'abra:} Audit\'alt SPARC-eredm\'enyek (\texttt{sparc\_tophat.zip} \'es \texttt{fitted\_L\_scores.csv}): (a) Izol\'alt galaktikus 3D top-hat $|1-f_L|$ maximum ($2{,}280\times 10^{-7}$ r\'acs / $2{,}303\times 10^{-7}$ finom\'itott az \textbf{UGC03546}-ban, $R=0{,}63\,\text{kpc}, L\approx 0{,}825\,\text{kpc}$); (b) Reduk\'alt $\chi^2_\nu$ eloszl\'as $L=2{,}3714\,\text{Mpc}$-n\'el ($N=175$ medi\'an $2{,}8980$, Vak-123 medi\'an $3{,}1433$ a $v_{\text{bar}}$ \'es 3D top-hat eset\'en).}
+\end{center}
+\newpage
+
+% ==================== PAGE 8: CHAPTER 6 (H.E.S.S. GAMMA-RAY TIMING) ====================
+\chaphead{6.\ fejezet: Nagyenergi\'aj\'u gamma-id\H{o}z\'it\'es --- A H.E.S.S.-adatok elemz\'ese}{T\"obbforr\'as\'u fut\'asiid\H{o}-diszperzi\'os audit (PKS 2155-304, Mrk 501, Vela, Crab, GRB 190114C) \'es el\H{o}rejelz\'esek}
+
+Kutat\'asom egyik alappill\'ere, hogy a \textbf{Time Attraction Law} (id\H{o}vonz\'as t\"orv\'enye) nem el\'egedhet meg a galaktikus forg\'asi g\"orb\'ek ut\'olagos le\'ir\'as\'aval; olyan falszifik\'alhat\'o el\H{o}rejelz\'eseket kell adnia a kozmol\'ogiai \'es galaktikus b\'azist\'avols\'agokon \'athalad\'o fotonok terjed\'es\'ere, amelyek megk\"ul\"onb\"oztetik a standard $\Lambda$CDM modellt\H{o}l. A 17.\ verzi\'oban (DOI \texttt{10.5281/zenodo.19666220}) a Cserenkov-l\'egz\'apor-teleszk\'opok nagyenergi\'aj\'u (VHE, $E \sim 0{,}1\text{--}10\,\text{TeV}$) gamma-fut\'asiid\H{o} adatsorait audit\'altam, k\"ul\"on\"os tekintettel a H.E.S.S. \'es MAGIC m\'er\'eseire.
+
+\noindent{\bfseries\color{navy}1. Fizikai mechanizmus: Integr\'alt id\H{o}beli hordoz\'ok\'esleltet\'es a l\'at\'oir\'any ment\'en}\par
+Amikor egy VHE gamma-foton kozmikus voidokon, filamenteken, gazdagalaxis-hal\'okon \'es galaktikus csillagk\"ozi strukt\'ur\'akon halad \'at egy $s \in [0, D]$ l\'at\'oir\'any ment\'en, az id\H{o}beli hordoz\'o helyi t\"or\'esmutat\'oja $n_t(s) = f_L(s)^{-1} = \exp(+\gamma_L \bar{\rho}_L(s))$. Tiszta metrikus (geometriai) hat\'aresetben, ahol minden fotonenergia azonosan csatol\'odik az effekt\'iv $f_L(s)$ lapse-faktorhoz, a be\'erkez\'esi id\H{o} akromatikus Shapiro-jelleg\H{u} t\"obbletk\'es\'est szenved: $\Delta t_{\text{geom}} = c^{-1}\int_0^D \bigl[\exp(\gamma_L\bar{\rho}_L(s)) - 1\bigr]\,ds$. Ha azonban a nagy $E$ energi\'aj\'u foton-hull\'amcsomagok v\'eges hull\'amhossz\'u diszperzi\'ot szenvednek az $L$ sk\'al\'aj\'u $\nabla\bar{\rho}_L$ t\'erbeli gradienseken sz\'or\'odva, az energiaf\"ugg\H{o} id\H{o}k\'es\'es vizsg\'alat\'ara bevezetett \textbf{felt\'eteles fenomenol\'ogiai terjed\'esi ansatz} (amely kieg\'esz\'it\H{o} teszt-feltev\'es, nem az (1) egyenlet param\'etermentes k\"ovetkezm\'enye):
+\begin{equation}
+  \Delta t(E_1, E_2) \;=\; \tau_n\,\frac{E_2^n - E_1^n}{E_{\text{ref}}^n}\int_0^D \gamma_L\,\bar{\rho}_L(s)\,(1+z(s))^n\,ds, \qquad n \in \{1, 2\},
+\end{equation}
+ahol $\tau_n$ a diszperzi\'os csatol\'asi egy\"utthat\'o, $D(z)$ pedig a v\"or\"oseltol\'od\'assal s\'ulyozott egy\"uttmozg\'o \'uthossz.
+
+\noindent{\bfseries\color{navy}2. T\"obbforr\'as\'u H.E.S.S.-audit: Az egyetlen kit\"or\'esb\H{o}l fakad\'o torz\'it\'as kik\"usz\"ob\"ol\'ese}\par
+Kor\'abbi feljegyz\'esekben biztat\'onak t\H{u}nt a \textbf{PKS 2155-304} blaz\'ar ($z = 0{,}116$) h\'ires, 2006.\ j\'ulius 28-i H.E.S.S.-kit\"or\'es\'eben megfigyelt $\Delta t \approx 20\text{--}30\,\text{s}$ spektr\'alis id\H{o}k\'es\'es a $0{,}2\text{--}0{,}8\,\text{TeV}$ \'es $>0{,}8\,\text{TeV}$ s\'avok k\"oz\"ott. A 17.\ verzi\'oban szigor\'ubb k\'erd\'est tettem fel: \emph{fennmarad-e az univerz\'alis l\'at\'oir\'any-csatol\'as, ha egyszerre t\"obb, elt\'er\H{o} v\"or\"oseltol\'od\'as\'u \'es galaktikus oszlops\H{u}r\H{u}s\'eg\H{u} VHE-forr\'ason tesztelem?} Egy \"otforr\'asos kontrollt\'abl\'azatot \'all\'itottam \"ossze:
+
+\begin{center}\vspace{-2pt}
+{\footnotesize
+\begin{tabular}{@{}>{\bfseries}p{0.21\linewidth}p{0.15\linewidth}p{0.19\linewidth}p{0.18\linewidth}p{0.21\linewidth}@{}}
+\toprule
+VHE-forr\'as & V\"or\"oseltol\'od\'as / T\'av. & Energias\'av ($\text{TeV}$) & Megfigyelt k\'es\'es / Korl\'at & V17 audit-eredm\'eny \\
+\midrule
+PKS 2155-304 (H.E.S.S.) & $z = 0{,}116$ & $0{,}2\text{--}4{,}0\,\text{TeV}$ & $\Delta t \approx +28 \pm 12\,\text{s}$ & Margin\'alis $\sim 2\sigma$ k\'es\'es; a bels\H{o} SSC-emisszi\'os profil domin\'alja. \\
+Mrk 501 (1997 / H.E.S.S.) & $z = 0{,}034$ & $0{,}15\text{--}10\,\text{TeV}$ & $\Delta t \approx +240 \pm 60\,\text{s}$ & $3{,}4\times$ kisebb $z$-n\'el nagyobb k\'es\'es s\'erti a monoton t\'avols\'agsk\'al\'az\'ast! \\
+GRB 190114C (MAGIC) & $z = 0{,}4245$ & $0{,}2\text{--}1{,}0\,\text{TeV}$ & $|\Delta t / \Delta E| \le 19\,\text{s/TeV}$ & Szigor\'u kozmol\'ogiai korl\'at, amely kiz\'arja a nagy line\'aris v\'akuumdiszperzi\'ot. \\
+Crab pulz\'ar (H.E.S.S./MAGIC) & $d \approx 2{,}0\,\text{kpc}$ & $0{,}1\text{--}1{,}5\,\text{TeV}$ & $|\Delta t| < 0{,}4\,\text{ms}$ & Szoros galaktikus korongbeli korl\'at s\H{u}r\H{u} ISM-en \'at ($\bar{n}_H \sim 1\,\text{cm}^{-3}$). \\
+Vela pulz\'ar (H.E.S.S. II) & $d \approx 0{,}287\,\text{kpc}$ & $0{,}02\text{--}0{,}1\,\text{TeV}$ & $|\Delta t| < 0{,}2\,\text{ms}$ & Szub-ezredm\'asodperces f\'azisilleszked\'es a s\H{u}r\H{u} Vela SNR-burkon \'at. \\
+\bottomrule
+\end{tabular}}
+\end{center}
+
+\noindent{\bfseries\color{navy}3. Mit bizony\'it a H.E.S.S.-audit, \'es mit j\'osol el\H{o}re az elm\'elet?}\par
+A V17-es t\"obbforr\'as\'u auditom k\'et alapvet\H{o} eredm\'enyt igazolt, amelyek meger\H{o}s\'itett\'ek a program tudom\'anyos szigor\'at:
+\begin{itemize}\setlength{\itemsep}{1.5pt}\setlength{\parskip}{0pt}\setlength{\topsep}{1pt}
+  \item \textbf{A naiv t\'avols\'agar\'anyos diszperzi\'o elvet\'ese:} Mivel az Mrk 501 ($z=0{,}034$) nagyobb l\'atsz\'olagos kit\"or\'esi k\'es\'est mutat, mint a PKS 2155-304 ($z=0{,}116$), mik\"ozben a GRB 190114C ($z=0{,}4245$) \'es a Crab/Vela pulz\'arok szoros null-korl\'atokat adnak, mivel a (10) ansatz energiaf\"ugg\H{o} \'es a kit\"or\'esek (Aharonian et al.\ 2008; Albert et al.\ 2007) elt\'er\H{o} energias\'avokat \'es bels\H{o} SSC-k\'es\'eseket fednek le, a nyers m\'asodpercek naiv t\'avols\'agar\'anyos \"osszevet\'ese helyett energia- \'es forr\'asf\"ugg\H{o} k\"oz\"os teszt sz\"uks\'eges.
+  \item \textbf{Egyedi k\"ornyezeti t\'uls\H{u}r\H{u}s\'eg-el\H{o}rejelz\'es a $\Lambda$CDM-mel szemben:} A Lorentz-invariancia-s\'ert\H{o} (LIV) modellekkel ellent\'etben, amelyek puszt\'an v\"or\"oseltol\'od\'as-f\"ugg\H{o} $\Delta t \propto \int_0^z \frac{(1+z')\,dz'}{H(z')}$ k\'es\'est j\'osolnak, a Time Attraction Law azt j\'osolja, hogy b\'armely val\'odi nem-geometriai id\H{o}z\'it\'esi marad\'eknak a \emph{barionos t\'uls\H{u}r\H{u}s\'eg-integr\'allal} ($\int \bar{\rho}_L(s)\,ds$) kell korrel\'alnia a gazdag galaxishalmazokon (p\'eld\'aul Coma vagy Perseus) \'athalad\'o l\'at\'oir\'anyok ment\'en, az azonos v\"or\"oseltol\'od\'as\'u kozmikus voidokhoz k\'epest.
+\end{itemize}
+\newpage
+
+% ==================== PAGE 9: CHAPTER 7 (NEUTRON-STAR MODELING IN V21) ====================
+\chaphead{7.\ fejezet: Neutroncsillag-modellez\'es a V21-ben --- TOV \'es NICER}{Felt\'eteles hidrosztatikai el\H{o}\'ir\'asok SLy, APR4 \'es H4 \'allapotegyenletekre 11 sim\'it\'asi sk\'al\'an ($L \in [1\,\text{m}, 100\,\text{km}]$)}
+
+A 21.\ verzi\'oban (DOI \texttt{10.5281/zenodo.23602501}) a 3D g\"ombi top-hat t\"orv\'enyt kiterjesztettem a neutroncsillagok belsej\'eben uralkod\'o extr\'em nukle\'aris anyags\H{u}r\H{u}s\'egekre ($\rho \sim 10^{14}\text{--}10^{15}\,\text{g/cm}^3$). Mivel a kovari\'ans hat\'aselv-lez\'ar\'as (\texttt{50aa2db0} feladat) m\'eg nyitott, k\'et explicit \textbf{felt\'eteles hidrosztatikai egyens\'ulyi el\H{o}\'ir\'ast} fogalmaztam meg \'es audit\'altam a sztatikus, g\"ombszimmetrikus $ds^2 = -e^{2\Phi(r)}c^2 dt^2 + (1 - \frac{2Gm(r)}{c^2 r})^{-1}dr^2 + r^2 d\Omega^2$ metrik\'an:
+
+\noindent{\bfseries\color{navy}1. K\'et felt\'eteles hidrosztatikai m\'od (\texttt{mass} kontra \texttt{gradient}) \'es az egzakt g\"ombi top-hat mag}\par
+Egy $R_*$ sugar\'u g\"ombszimmetrikus csillag belsej\'eben az $r$ radi\'alis koordin\'at\'an\'al vett egzakt 3D top-hat $\bar{\rho}_L(r)$ \'atlag analitikusan sz\'am\'ithat\'o a $B(\mathbf{x},L)$ g\"omb \'es az $r' \in [|r-L|, r+L]$ g\"ombh\'ejak metszet\'en, amib\H{o}l $f_L(r) = \exp(-\gamma_L\bar{\rho}_L(r))$. Audit\'alt k\'odomban az $f$-profil regul\'aris lek\'epez\'es\'enek (\texttt{f\_mapping}) m\'ert maxim\'alis relat\'iv elt\'er\'ese az eredeti profilhoz k\'epest \textbf{$\max|\Delta f/f| = 1{,}214\times 10^{-6}$}. K\'et felt\'eteles TOV-lez\'ar\'ast integr\'altam ($\varepsilon = \rho c^2$ energias\H{u}r\H{u}s\'eggel):
+\begin{equation}
+  \textbf{(A) \texttt{mass} m\'od:}\quad \frac{dm_{\text{eff}}}{dr} = 4\pi r^2 \rho(r)\,f_L(r), \qquad
+  \textbf{(B) \texttt{gradient} m\'od:}\quad \frac{d\Phi_{\text{eff}}}{dr} = f_L(r)\,\frac{G\bigl(m(r) + 4\pi r^3 P(r)/c^2\bigr)}{c^2 r\bigl(r - 2Gm(r)/c^2\bigr)},
+\end{equation}
+$\frac{dP}{dr} = -(\varepsilon + P)\frac{d\Phi_{\text{eff}}}{dr}$ egyens\'ullyal. A $0 < f_L(r) \le 1$ miatt ezek a \textbf{felt\'eteles egyens\'ulyi konfigur\'aci\'ok} a GR-n\'el nagyobb maxim\'alis t\"omeg \'es sug\'ar fel\'e tol\'odnak (a dinamikai stabilit\'as k\'erd\'es\'et a 8.\ fejezet vizsg\'alja).
+
+\noindent{\bfseries\color{navy}2. A V21 csomag pontos adatjegyz\'eke (SLy, APR4, H4)}\par
+A V21 arch\'ivum (\texttt{10.5281/zenodo.23602501}) t\'abl\'azatainak pontos jelent\'ese:
+{\footnotesize\begin{itemize}\setlength{\itemsep}{0.5pt}\setlength{\parskip}{0pt}\setlength{\topsep}{1pt}
+  \item \textbf{33 egyens\'ulyi sorozat (EOS-onk\'ent 11 konfigur\'aci\'o):} 3 EOS (\textbf{SLy}, \textbf{APR4} $c_s=c$ k\"usz\"obbel $\rho_0 \approx 1{,}4458\times 10^{15}\,\text{g/cm}^3$-n\'el, \textbf{H4}) $\times$ (1 GR alap $+$ 5 \texttt{mass}-sk\'ala $+$ 5 \texttt{gradient}-sk\'ala). A 15 gradiens-konfigur\'aci\'o a h\'arom EOS egy\"uttese ($3\times 5=15$).
+  \item \textbf{3113 sor (\texttt{mr\_sequences.csv}) \'es 182 akauz\'alis pont:} Az alapt\'abla 3113 egyens\'ulyi pontot tartalmaz; a \textbf{182 pont} az auditban azonos\'itott akauz\'alis ($c_s > c$) r\'eszhalmaz, nem az \"osszes egyens\'ulyi modell.
+  \item \textbf{769 sor (\texttt{observables\_summary\_v20.csv}):} A megfigyelhet\H{o}k t\'abl\'aja 769 sort tartalmaz, benne a \textbf{33 sorozat-v\'egponttal} (\textbf{14} a $c_s=c$ k\"usz\"ob\"on, \textbf{19} a k\"usz\"ob el\H{o}tti \'agmaximumon); a radi\'alis r\'acs (\texttt{item2\_radial\_grid.csv}) \textbf{3339 soros}, a fesz\"ults\'egdiagnosztika \textbf{36 konfigur\'aci\'ot} fed le.
+\end{itemize}}
+\begin{center}\vspace{-4pt}
+  \includegraphics[height=40mm,width=0.94\linewidth,keepaspectratio]{figures/fig2_tov_hu.png}\par\vspace{-3pt}
+  {\scriptsize\color{slate}\textbf{7.1.\ \'abra:} Felt\'eteles neutroncsillag $M$--$R$ egyens\'ulyi sorozatok az \texttt{mr\_sequences.csv} (3113 pont, 33 sorozat; pontozva a 182 akauz\'alis $c_s>c$ pont) alapj\'an SLy, APR4 \'es H4 \'allapotegyenletekre (a) \texttt{mass} \'es (b) \texttt{gradient} m\'odban.}
+\end{center}
+
+\noindent{\bfseries\color{navy}3. Szigor\'u m\'odszertani kik\"ot\'es az $e^\nu F$ hidrosztatikai faktorra}\par
+A TOV-egyenletek \'ert\'ekel\'esekor kifejezetten r\"ogz\'item: \textbf{a m\'odos\'itott $e^\nu F$ (vagy $\Phi_{\text{eff}}'$) hidrosztatikai faktor megjelen\'ese a felt\'eteles nyom\'asgradiens-egyenletben egy algebrai egyens\'ulyi feltev\'es, \'es \"onmag\'aban nem vezeti le, hogyan csatol\'odnak az atom\'or\'ak, az atommag-\'atmenetek vagy a felsz\'ini fotonok v\"or\"oseltol\'od\'asai az $f_L$ faktorhoz.} Az \'ora- \'es színk\'epvonal-eltol\'od\'asok egy\'ertelm\H{u} levezet\'es\'ehez a kovari\'ans anyag--mez\H{o} hat\'aselv lez\'ar\'asa sz\"uks\'eges (\texttt{50aa2db0} feladat \'es (c) nyitott feladat).
+\newpage
+
+% ==================== PAGE 10: CHAPTER 8 (PERTURBATION CALCULATIONS & RADIAL STABILITY) ====================
+\chaphead{8.\ fejezet: Perturb\'aci\'os sz\'am\'it\'asok --- Anizotr\'op fesz\"ults\'eg \'es stabilit\'as}{Audit\'alt h\'att\'erbeli X-szektor mindk\'et beilleszt\'esi m\'odra \'es befagyasztott-$f$ radi\'alis pulz\'aci\'os oper\'atorok}
+
+A V21 egyens\'ulyi receptekben (DOI \texttt{10.5281/zenodo.23602501}) a $P' = -(\varepsilon+P)\nu'$ hidrosztatikai egyenlet (geometriz\'alt $G=c=1$ egys\'egekben, ahol $\nu=2\Phi_{\text{eff}}$) biztos\'itja az anyagi folyad\'ek \"on\'all\'o megmarad\'as\'at ($\nabla_\mu T^{\mu\nu}_{\text{matter}} = 0$). Az Einstein-egyenletek jobb oldal\'anak kieg\'esz\'it\'es\'ehez ($G^\mu_{\;\nu} = 8\pi(T^\mu_{\;\nu,\text{matter}} + T^\mu_{\;\nu,X})$) van sz\"uks\'eg a $\nabla_\mu T^{\mu\nu}_X = 0$ felt\'etelt kiel\'eg\'it\H{o} $T^\mu_{\;\nu,X} = \text{diag}(-\rho_X,\, p_{rX},\, p_{tX},\, p_{tX})$ effekt\'iv h\'att\'er-szektorra.
+
+\noindent{\bfseries\color{navy}1. Az audit\'alt h\'att\'erbeli X-szektor egzakt k\'epletei geometriz\'alt egys\'egekben ($G=c=1$)}\par
+A k\'et beilleszt\'esi m\'od h\'att\'erbeli X-szektora elt\'er\H{o}:
+\begin{equation}
+  \textbf{Gradiensm\'od:}\quad \rho_X = 0,\quad p_{rX} = -(1-f)\!\left(P + \frac{m}{4\pi r^3}\right),\quad p_{tX} = p_{rX} + \frac{r}{2}\bigl(p'_{rX} + p_{rX}\nu'\bigr),
+\end{equation}
+amelynek k\"oz\'epponti hat\'ar\'ert\'eke $p_{tX}(0) = p_{rX}(0) = -(1-f_c)(\varepsilon_c/3 + P_c)$, \'altal\'aban \emph{nem nulla}. A \textbf{t\"omegforr\'asm\'odban} ezzel szemben $\rho_X = -(1-f)\varepsilon$, $p_{rX} = 0$ \'es $p_{tX} = -\frac{r}{2}(1-f)\varepsilon\nu'$ ($p_{tX}(0)=0$). A 36 konfigur\'aci\'os stresszdiagnosztikai t\'abl\'aban szerepl\H{o} $0{,}140$-es \'ert\'ek az adott konfigur\'aci\'o h\'att\'erbeli k\"onyvel\'esi diagnosztik\'aja, amely nem helyettes\'iti a kovari\'ans hat\'aselvet (\texttt{50aa2db0} feladat).
+
+\noindent{\bfseries\color{navy}2. K\"ozel\'it\H{o} befagyasztott-$f$ Sturm--Liouville oper\'atorok a 3339 soros radi\'alis r\'acson}\par
+A kapcsolt perturb\'aci\'os rendszer levezet\'ese el\H{o}tt a $\xi(r,t) = r^{-2}e^{\nu/2}u(r)e^{i\omega t}$ radi\'alis rezg\'eseket a \textbf{befagyasztott-$f$ k\"ozel\'it\'esben} ($\delta f_L = 0$, elhanyagolva a $\delta f$ \'es $\delta X$ v\'alaszokat) vizsg\'altam:
+\begin{equation}
+  \frac{d}{dr}\!\left(\mathcal{P}(r)\frac{du}{dr}\right) \;+\; \bigl[\mathcal{Q}(r) + \omega_0^2\,\mathcal{W}(r)\bigr]\,u(r) \;=\; 0, \qquad u(0)=0,\quad \Delta P(R_*)=0.
+\end{equation}
+A \textbf{3339 soros radi\'alis r\'acson} (benne a h\'arom EOS-t lefed\H{o} \textbf{15 gradiens-sorozaton}) k\'et k\"ozel\'it\H{o} oper\'atorvari\'anst vetettem \"ossze:
+\begin{itemize}\setlength{\itemsep}{1pt}\setlength{\parskip}{0pt}\setlength{\topsep}{1pt}
+  \item \textbf{K\"ozel\'it\H{o} \texttt{matter} oper\'ator:} A folyad\'ek $P'$ nyom\'asgradiens\'et haszn\'alja $\mathcal{Q}(r)$-ben; meg\H{o}rzi a $\mathcal{W}(r)>0$ s\'ulyt \'es a matematikai vari\'aci\'os kezelhet\H{o}s\'eget, de nem tartalmazza a csatolt $\delta f$ \'es $\delta X$ perturb\'aci\'okat.
+  \item \textbf{K\"ozel\'it\H{o} \texttt{metric} oper\'ator:} $L \ge 367\,\text{m}$ felett 12 sorozaton (609 modellen) a $\mathcal{W}(r)$ tehetetlens\'egi s\'uly indefinitt\'e v\'alik ($\mathcal{W}\le 0$), \'es a kiv\'alasztott pozit\'iv norm\'aj\'u \'agon negat\'iv $\omega_0^2$ eredm\'enyeket ad; a fizikai stabilit\'as meg\'allap\'it\'asa nyitott (\texttt{50aa2db0} feladat).
+\end{itemize}
+\begin{center}\vspace{-4pt}
+  \includegraphics[height=38mm,width=0.94\linewidth,keepaspectratio]{figures/fig3_stability_hu.png}\par\vspace{-3pt}
+  {\scriptsize\color{slate}\textbf{8.1.\ \'abra:} El\H{o}jeles alapfrekvencia $\text{sign}(\omega_0^2)f_0$ a $\rho_{0c}$ k\"ozponti nyugalmi s\H{u}r\H{u}s\'eg f\"uggv\'eny\'eben SLy, APR4 \'es H4 \'allapotegyenletekre (\texttt{item2\_radial\_grid.csv}, 3339 sor): (a) k\"ozel\'it\H{o} \texttt{matter} oper\'ator, (b) k\"ozel\'it\H{o} \texttt{metric} oper\'ator ($\times$ jel\"oli az indefinit $\mathcal{W}\le 0$ s\'ulyt).}
+\end{center}
+\newpage
+
+% ==================== PAGE 11: CHAPTER 9 (CONDITIONAL CLOCK & REDSHIFT HYPOTHESES) ====================
+\chaphead{9.\ fejezet: Felt\'eteles \'ora- \'es v\"or\"oseltol\'od\'as-hipot\'ezisek}{Sirius B gravit\'aci\'os v\"or\"oseltol\'od\'as ($\Delta\chi^2$) \'es NICER-poszteriorok explicit megfigyel\'esi hipot\'ezisek alatt}
+
+Mivel a kovari\'ans anyagcsatol\'asi lez\'ar\'as (\texttt{50aa2db0} feladat) m\'eg nem hat\'aselvb\H{o}l levezetett, a \textbf{Time Attraction Law} (id\H{o}vonz\'as t\"orv\'enye) \'es a spektroszk\'opiai vagy r\"ontgen-impulzusprofil adatok \"osszevet\'ese att\'ol f\"ugg, mik\'ent csatol\'odnak a $\nu_{\text{atom}}$ atomi \'atmeneti frekvenci\'ak az $f_L$ faktorhoz. A 21.\ verzi\'oban (DOI \texttt{10.5281/zenodo.23602501}) a rejtett feltev\'eseket hat explicit, felt\'eteles megfigyel\'esi hipot\'ezissel v\'altottam fel:
+
+\noindent{\bfseries\color{navy}1. A felt\'eteles megfigyel\'esi hipot\'ezisek rendszertana (H0 kontra H1 csal\'adok)}\par
+\begin{center}\vspace{-2pt}
+{\footnotesize
+\begin{tabular}{@{}>{\bfseries}p{0.22\linewidth}p{0.31\linewidth}p{0.42\linewidth}@{}}
+\toprule
+Hipot\'ezis k\'odja & Metrikus \'es hidrosztatikai szerkezet & Atom\'ora / Sz\'ink\'epvonal-v\"or\"oseltol\'od\'as $1 + z_{\text{surf}}$ \\
+\midrule
+H0-GR & Standard GR TOV ($f_L \equiv 1$) & Standard metrikus v\"or\"oseltol\'od\'as $e^{-\Phi_{\text{GR}}(R_*)}$ (nincs k\"ozvetlen $f_L$ \'orafaktor). \\
+H0-mass & Felt\'eteles \texttt{mass} TOV ($m_{\text{eff}}' = 4\pi r^2\rho f_L$) & Tiszta metrikus v\"or\"oseltol\'od\'as $e^{-\Phi_{\text{mass}}(R_*)}$ k\"ul\"on felsz\'ini \'oraszorz\'o n\'elk\"ul. \\
+H0-gradient lapse & Felt\'eteles \texttt{gradient} TOV ($\Phi_{\text{eff}}' = f_L\Phi_{\text{GR}}'$) & Integr\'alt m\'odos\'itott lapse $e^{-\Phi_{\text{eff}}(R_*)}$ k\"ozvetlen $f_L(R_*)$ szorz\'o n\'elk\"ul. \\
+H1-GR & Standard GR szerkezet ($m_{\text{GR}}, R_{\text{GR}}$) & K\"ozvetlen felsz\'ini \'oramodul\'aci\'o: $\nu_{\text{obs}}/\nu_0 = e^{\Phi_{\text{GR}}(R_*)}\,f_L(R_*)$. \\
+H1-mass & Felt\'eteles \texttt{mass} TOV szerkezet & Kombin\'alt metrikus + k\"ozvetlen felsz\'ini \'orafaktor $e^{\Phi_{\text{mass}}(R_*)}\,f_L(R_*)$. \\
+H1+gradient lapse & Felt\'eteles \texttt{gradient} TOV szerkezet & Kombin\'alt m\'odos\'itott lapse + k\"ozvetlen \'orafaktor $e^{\Phi_{\text{eff}}(R_*)}\,f_L(R_*)$. \\
+\bottomrule
+\end{tabular}}
+\end{center}
+
+\noindent{\bfseries\color{navy}2. Sirius B feh\'er t\"orpe gravit\'aci\'os v\"or\"oseltol\'od\'as-audit ($n=1{,}5$ \'es $n=3$ politr\'opok)}\par
+A V21 Sirius B sz\'am\'it\'asban ($M = 1{,}018\,M_\odot$, csomagbeli sug\'ar $R = 0{,}00803\,R_\odot$, GR-alapvonal $v_{\text{GR}} = 80{,}70055\,\text{km/s}$, \"osszevetve Joyce et al.\ 2018 $80{,}42 \pm 1{,}60\,\text{km/s}$ HST/STIS referenci\'aj\'aval) az $n=1{,}5$ \'es $n=3$ politr\'opok eredm\'enyei:
+\begin{itemize}\setlength{\itemsep}{1.5pt}\setlength{\parskip}{0pt}\setlength{\topsep}{1pt}
+  \item \textbf{H0-gradient lapse alatt:} Mivel az $r \ge R_*$ k\"uls\H{o} metrik\'at $M$ r\"ogz\'iti, az eltol\'od\'as minden $L$-en legfeljebb \textbf{$|\Delta v| \le 1{,}27\,\text{m/s}$} ($0{,}00127\,\text{km/s}$; $\max\Delta\chi^2 \approx 10^{-3}$), \'igy a H0 \emph{nem korl\'atozza} az $L$-et.
+  \item \textbf{Felt\'eteles H1 \'es H1+gradiens alatt:} A forr\'ast\'abl\'aban az $52{,}3$ \'es $72{,}0$ k\"oz\"otti k\"ul\"onbs\'eg \textbf{a k\'et politr\'op} ($n=1{,}5$ kontra $n=3$) elt\'er\'ese, m\'ig a H1 \'es H1+gradiens szinte azonos: \textbf{$n=1{,}5$-re} a H1 $\max\Delta v = 11{,}558\,\text{km/s}$ \'es $\max\Delta\chi^2 = 52{,}324$ (H1+gradiens: $11{,}557\,\text{km/s}$, $52{,}316$), \'es $\Delta\chi^2 > 3{,}84$ k\"usz\"obn\'el kiz\'arja az \textbf{$L \in [4{,}08\times 10^6,\, 3{,}37\times 10^7]\,\text{m}$} s\'avot; \textbf{$n=3$-ra} a H1 $\max\Delta v = 13{,}569\,\text{km/s}$ \'es $\max\Delta\chi^2 = 72{,}020$ (H1+gradiens: $13{,}568\,\text{km/s}$, $72{,}011$), kiz\'arva az \textbf{$L \in [4{,}95\times 10^6,\, 3{,}37\times 10^7]\,\text{m}$} s\'avot ($\Delta\chi^2 > 3{,}84$). A m\'eteres laborat\'oriumi ($L \sim 1\,\text{m}$) \'es kilom\'eter alatti sk\'al\'ak szabadon maradnak.
+\end{itemize}
+
+\noindent{\bfseries\color{navy}3. Audit\'alt NICER hat-hipot\'ezises log-likelihoodok ($\Delta\ln\mathcal{L}_{\text{like}}$)}\par
+A h\'arom NICER-pulz\'arra (PSR J0030+0451, PSR J0740+6620, PSR J0437-4715; Miller et al.\ 2019, Riley et al.\ 2019) a hat hipot\'ezises t\'abl\'aban $L = 1\,\text{km}$-n\'el az eltol\'od\'as tartom\'anya \textbf{$\Delta\ln\mathcal{L}_{\text{like}} \in [-0{,}001437,\, +0{,}024755]$} (m\'ig a $4{,}8\times 10^{-4}\,\text{dex}$ a radi\'alis nullhely k\"ozpontis\H{u}r\H{u}s\'eg-elt\'er\'ese a 8.\ fejezetben). \'Igy \textbf{a jelenlegi NICER-adatok nem k\"ul\"onb\"oztetik meg statisztikailag az $L$ sk\'al\'at a GR-t\H{o}l}.
+\newpage
+
+% ==================== PAGE 12: CHAPTER 10 (PLANNED LABORATORY MEASUREMENTS) ====================
+\chaphead{10.\ fejezet: Tervezett laborat\'oriumi m\'er\'esek}{A $8558\,\text{kg}$-os gr\'anit atom\'ora-kamra \'es a nyolctekercses m\'agnesest\'er-energetikai k\'is\'erlet (V20)}
+
+Ha a \textbf{Time Attraction Law} (id\H{o}vonz\'as t\"orv\'enye) a t\'erid\H{o} val\'odi fizikai tulajdons\'aga, akkor nem \'elhet csup\'an t\'avoli galaxisokban vagy neutroncsillagokban; matematikai k\'eplet\'enek ellen\H{o}rz\"ott f\"oldi laborat\'oriumban is l\'atsz\'odnia kell. A 20.\ verzi\'oban (GitHub V18, DOI \texttt{10.5281/zenodo.23540741}) megterveztem \'es numerikusan audit\'altam egy k\'et\'ag\'u laborat\'oriumi programot, amely a barionos nyugalmi t\"omegs\H{u}r\H{u}s\'eget ($\rho_{\text{matter}}$) \'es a tiszta elektrom\'agneses t\'erenergia-s\H{u}r\H{u}s\'eget ($\rho_B = B^2/(2\mu_0 c^2)$) egyar\'ant vizsg\'alja a m\'eteres $L \in [0{,}1, 3{,}0]\,\text{m}$ tartom\'anyban.
+
+\noindent{\bfseries\color{navy}1. ,,A'' \'ag: A mozgathat\'o gr\'anitk\H{o}zetes atom\'ora-kamra (geometria \'es potenci\'al)}\par
+A barionos forr\'astag BE/KI (IN: k\"ozpontos\'itva az $\mathbf{x}_0=(0,0,0)$ \'ora k\"or\"ul; OUT: $r_{\text{out}} \ge 5\,\text{m}$ t\'avols\'agra kitolva) tesztel\'es\'ehez $\rho_{\text{granite}} = 2750\,\text{kg/m}^3$ s\H{u}r\H{u}s\'eg\H{u} gr\'anitot specifik\'altam:
+\begin{itemize}\setlength{\itemsep}{1pt}\setlength{\parskip}{0pt}\setlength{\topsep}{1pt}
+  \item \textbf{Pontos geometria- \'es t\"omegm\'erleg:} Az $R_{\text{in}} = 0{,}25\,\text{m}$, $R_{\text{out}} = 0{,}85\,\text{m}$, $H = 1{,}20\,\text{m}$ m\'eret\H{u} nyitott hengerpal\'ast t\'erfogata $V_{\text{cyl}} = \pi(0{,}85^2 - 0{,}25^2)\times 1{,}20 = 2{,}48814\,\text{m}^3$, t\"omege \textbf{$M_{\text{cyl}} = 6842{,}39\,\text{kg}$}; a n\'evleges $V_{\text{tot}} = 3{,}1102\,\text{m}^3$ (\textbf{$M_{\text{tot}} = 8558\,\text{kg}$}) \'ert\'ekhez tov\'abbi $0{,}6220\,\text{m}^3$ ($1710{,}6\,\text{kg}$) z\'ar\'o/tart\'o gr\'anitelem (vagy $R_{\text{out}} = 0{,}942\,\text{m}$ k\"uls\H{o} sug\'ar) tartozik.
+  \item \textbf{Newtoni potenci\'al kontra felt\'eteles TAL-jel:} Egy $6{,}84$--$8{,}56\,\text{t}$ t\"omeg $r \sim 1\,\text{m}$ t\'avols\'agb\'ol $|\Delta\Phi_{\text{N}}|/c^2 \sim GM/(rc^2) \approx 5{,}08\times 10^{-24}$--$6{,}36\times 10^{-24}$ newtoni potenci\'aleltol\'od\'ast ad (m\'ig a $\sim 10^{-16}$ nagys\'agrend a f\"oldi $g\Delta h/c^2 \approx 1{,}09\times 10^{-16}\,\text{m}^{-1}$ vertik\'alis geopotenci\'al-gradiensnek felel meg), az alapcsatol\'as\'u ($\alpha=1$) felt\'eteles top-hat eltol\'od\'as pedig $\Delta y_{\text{granite}} \approx -\gamma_L\bar{\rho}_L \sim -1{,}1\times 10^{-24}$ ($L \approx 0{,}85\,\text{m}$).
+\end{itemize}
+
+\noindent{\bfseries\color{navy}2. ,,B'' \'ag: A nyolctekercses m\'agnesest\'er-energetikai m\'er\'es ($\varnothing 300\,\text{mm}$ peremhat\'ar)}\par
+Annak vizsg\'alat\'ara, hogy a tiszta $u_B(\mathbf{x}) = \frac{|\mathbf{B}(\mathbf{x})|^2}{2\mu_0}$ m\'agneses energias\H{u}r\H{u}s\'eg a $\rho_B(\mathbf{x}) = u_B(\mathbf{x})/c^2$ egyenleten kereszt\"ul lass\'itja-e az id\H{o}\'araml\'ast, egy szimmetrikus nyolctekercses elrendez\'est terveztem az $\mathbf{x}_1 = (0,0,0)$ pontban elhelyezett els\H{o}dleges \textbf{Oscilloquartz 8663-XS} ultrastabil OCXO kvarcoszcill\'ator k\"or\'e, $D = 5{,}0\,\text{m}$ b\'azist\'avols\'agban egy vele azonos 8663-XS referencia-oszcill\'atorral p\'aros\'itva:
+\begin{itemize}\setlength{\itemsep}{1pt}\setlength{\parskip}{0pt}\setlength{\topsep}{1pt}
+  \item \textbf{Audit\'alt 8 tekercses hardverparam\'eterek:} 8 darab egyforma szolenoid, egyenk\'ent $l_{\text{coil}} = 400\,\text{mm}$ hossz\'us\'aggal, k\"uls\H{o} szerkezeti \textbf{$\varnothing 300\,\text{mm}$ peremhat\'ar-\'atm\'er\H{o}vel}, effekt\'iv \textbf{$\varnothing 291{,}7\,\text{mm}$ r\'ez menet\'atm\'er\H{o}vel} ($R_{\text{coil}} = 0{,}14585\,\text{m}$), $N = 2000$ menet $0{,}15\,\text{mm}$-es zom\'ancozott r\'ezhuzalb\'ol, tekercsenk\'ent $R_{\text{DC}} = 1789\,\Omega$ egyen\'aram\'u ellen\'all\'assal, $I = 14{,}0\,\text{mA}$ \'arammal meghajtva ($0{,}351\,\text{W}$/tekercs, \"osszesen $2{,}805\,\text{W}$).
+  \item \textbf{Maximum a mintav\'etelezett 25 pontos $L$-r\'acson ($L = 0{,}630957\,\text{m}$):} A 8 tekercs m\'agneses energias\H{u}r\H{u}s\'eg\'et a 25 pontos logaritmikus $L \in [0{,}1, 3{,}0]\,\text{m}$ r\'acson ki\'ert\'ekelve a felt\'eteles polarit\'as-p\'aros $\Delta y(L) = \frac{1}{2}[\Delta y(+I) + \Delta y(-I)]$ eltol\'od\'as a r\'acson \textbf{$L = 0{,}630957\,\text{m}$}-n\'el veszi fel diszkr\'et maximum\'at (nem folytonos sz\'els\H{o}\'ert\'ek-illeszt\'es):
+  \begin{equation}
+    \Delta y_{\text{r\'acsmax}}(L = 0{,}630957\,\text{m}) \;=\; -1{,}2017108\times 10^{-48}.
+  \end{equation}
+  Itt elk\"ul\"on\'item: (i) a k\'et determinisztikus integr\'al\'o rutin $3{,}7\times 10^{-16}$-os egyez\'es\'et $L=3{,}0\,\text{m}$-n\'el, (ii) a Sobol-kvadrat\'ura $-0{,}0722\%$-os ellen\H{o}rz\'es\'et, (iii) az $L=0{,}95\,\text{m}$-es $1{,}23\times 10^{-3}$ illeszt\'esi marad\'ekot \'es (iv) a val\'os m\'er\'esi \'erz\'ekenys\'eget.
+  \item \textbf{A h\'att\'er-kereszttag kiejt\'ese polarit\'asford\'it\'assal:} Mivel $|\mathbf{B}_{\text{tot}}|^2 = |\mathbf{B}_{\text{bg}}|^2 + 2\mathbf{B}_{\text{bg}}\cdot\mathbf{B}_{\text{coil}} + |\mathbf{B}_{\text{coil}}|^2$, az \'aramir\'any megford\'it\'asa ($+I \leftrightarrow -I$) megford\'itja a $\mathbf{B}_{\text{coil}}$ teret, \'igy a polarit\'as-p\'aros $\Delta y_{\text{even}}$ \'atlagb\'ol mind a line\'aris Zeeman-kvarc\'erz\'ekenys\'eg, mind a $2\mathbf{B}_{\text{bg}}\cdot\mathbf{B}_{\text{coil}}$ kereszttag kiesik.
+\end{itemize}
+
+\begin{center}\vspace{-4pt}
+  \includegraphics[height=39mm,width=0.88\linewidth,keepaspectratio]{figures/fig4_lab_hu.png}\par\vspace{-3pt}
+  {\scriptsize\color{slate}\textbf{10.1.\ \'abra:} Felt\'eteles polarit\'as-p\'aros $|\Delta y(L)|$ eltol\'od\'as a 25 pontos logaritmikus $L \in [0{,}1, 3{,}0]\,\text{m}$ r\'acson a 8 tekercses elrendez\'esre (DOI \texttt{10.5281/zenodo.23540741}), $\Delta y = -1{,}2017108\times 10^{-48}$ r\'acsmaximummal $L = 0{,}630957\,\text{m}$-n\'el.}
+\end{center}
+\newpage
+
+% ==================== PAGE 13: CHAPTERS 11 & 12 (OPEN QUESTIONS & CLOSING CHAPTER) ====================
+\chaphead{11.\ \'es 12.\ fejezet: Nyitott k\'erd\'esek \'es a tov\'abbl\'ep\'es \'utja}{A m\'eg le nem z\'art elm\'eleti \'es laborat\'oriumi feladatok ((a)--(d)), valamint a k\"ovetkez\H{o} kutat\'asi l\'ep\'es}
+
+{\small\setlength{\parskip}{1.6pt}
+\vspace{-2mm}\noindent{\bfseries\normalsize\color{navy}11.\ fejezet: Nyitott elm\'eleti \'es k\'is\'erleti k\'erd\'esek}\par\vspace{0.5pt}
+Az AI-t\'amogatott technikai reprodukci\'os \'es k\'ezirat-ellen\H{o}rz\'esi fordul\'ok (Academia Co-scientist) sor\'an minden m\'eg le nem z\'art elm\'eleti l\'ancszemet \'es szisztematik\'at nyitott feladatk\'ent r\"ogz\'itettem. Az al\'abbiakban foglalom \"ossze a V20 \'es V21 auditokban azonos\'itott nyitott pontokat:
+
+\noindent{\bfseries\color{navy}A. N\'egy nyitott elm\'eleti \'es kompakt-objektum feladat a V21 auditb\'ol}
+\begin{enumerate}\setlength{\itemsep}{1.5pt}\setlength{\parskip}{0pt}\setlength{\topsep}{1pt}
+  \item[\textbf{(a)}] \textbf{Kovari\'ans csatol\'asi lez\'ar\'as (\texttt{50aa2db0} feladat):} Noha az algebrai 3D top-hat $f_L(\mathbf{x}) = \exp(-\gamma_L\bar{\rho}_L(\mathbf{x}))$ profil r\"ogz\'itett \'es reproduk\'alhat\'o, sz\"uks\'eg van egy kovari\'ans $S[g_{\mu\nu},\phi,\psi]$ hat\'aselvre, amelyb\H{o}l mind a nemlok\'alis $L$ sim\'it\'asi sk\'ala, mind a $\nabla_\mu(T^{\mu\nu}_{\text{matter}} + T^{\mu\nu}_X) = 0$ energia-impulzus m\'erleg dinamikusan, k\"ul\"on tangenci\'alis fesz\"ults\'egk\"onyvel\'es n\'elk\"ul ad\'odik.
+  \item[\textbf{(b)}] \textbf{A csatol\'asb\'ol levezetett val\'odi m\'odos\'itott radi\'alis stabilit\'asvizsg\'alat:} Amint az (a) feladat megadja a $\delta\phi$ \'es $\delta T^{\mu\nu}_X$ perturb\'aci\'ok dinamikus mez\H{o}egyenleteit, a Chandrasekhar-f\'ele radi\'alis pulz\'aci\'os oper\'atort vari\'aci\'os \'uton, a hat\'as $\delta^2 S$ m\'asodik vari\'aci\'oj\'ab\'ol kell \'ujra levezetni, kik\"usz\"ob\"olve az $L \ge 367\,\text{m}$ felett megjel\"olt nem-vari\'aci\'os metrikus oper\'ator-patol\'ogi\'at \'es feloldva a befagyasztott-$f$ ($\delta f_L = 0$) k\"ozel\'it\'est.
+  \item[\textbf{(c)}] \textbf{Atom\'ora- \'es fotoncsatol\'asok levezet\'ese els\H{o} elvekb\H{o}l:} Jelenleg a H0 (tiszta metrikus lapse) \'es a H1 (k\"ozvetlen $f_L$ \'oraszorz\'o) k\"ul\"on felt\'eteles hipot\'ezisk\'ent szerepel, mert az $e^\nu F$ hidrosztatikai TOV-faktor nem r\"ogz\'iti egy\'ertelm\H{u}en, mik\'ent csatol\'odnak az elektrom\'agneses/Dirac-anyagmez\H{o}k az $f_L$-hez. A hat\'aselv-lez\'ar\'asnak kell megadnia az atom\'or\'ak \'es fotonok Jordan- kontra Einstein-keretbeli konform/diszform csatol\'as\'at.
+  \item[\textbf{(d)}] \textbf{\"Onkonzisztens, t\"obbcsatorn\'as megfigyel\'esi ki\'ert\'ekel\'es:} Az (a)--(c) pontokban levezetett hat\'aselv \'es anyagcsatol\'as birtok\'aban a galaktikus forg\'asi g\"orb\'eket (a kozmikus $\rho_{\text{bg}}$ h\'att\'erbe \'agyaz\'assal egy\"utt), a halmaz-t\'uls\H{u}r\H{u}s\'egeken \'athalad\'o VHE gamma-id\H{o}z\'it\'est, a Sirius B-t \'es a NICER-poszteriorokat egy\"uttesen, az $L$ fizikai sk\'alav\'alaszt\'asi mechanizmus\'aval kell illeszteni.
+\end{enumerate}
+
+\noindent{\bfseries\color{navy}B. H\'arom nyitott laborat\'oriumi hardver- \'es szisztematikai pont a V20 b\'ir\'alatb\'ol}
+\begin{itemize}\setlength{\itemsep}{1pt}\setlength{\parskip}{0pt}\setlength{\topsep}{1pt}
+  \item \textbf{1. Polimer cs\'evetest-anyagvizsg\'alat:} A 8 tekercstest 3D-nyomtatott polimer cs\'eve ($\varnothing 300\,\text{mm}$ perem). Miel\H{o}tt a para-/diam\'agneses er\H{o}csatol\'asokra szigor\'u korl\'atot adn\'ek, m\'erni kell a cs\'evepolimer $\chi_m$ m\'agneses szuszceptibilit\'as\'at \'es h\H{o}t\'agul\'as\'at.
+  \item \textbf{2. 3D termikus v\'egeselemes modellez\'es (FEM):} B\'ar a 8 tekercs \"osszes ohmos disszip\'aci\'oja mind\"ossze $2{,}805\,\text{W}$ ($0{,}351\,\text{W}$/tekercs), a k\"ozponti Oscilloquartz 8663-XS oszcill\'ator fel\'eir\'anyul\'o aszimmetrikus h\H{o}\'atad\'ast 3D termikus FEM-mel kell modellezni \'es bifil\'aris vakf\H{u}t\H{o}-tekercsekkel kalibr\'alni.
+  \item \textbf{3. Id\H{o}b\'elyegzett nyers $\text{BE}/\text{KI}/\pm I$ f\'azis--id\H{o}sorok:} A V20 csomag a determinisztikus szimul\'aci\'os \'es \'erz\'ekenys\'egi cs\H{o}vezet\'eket adja meg; a hossz\'u integr\'aci\'os idej\H{u}, id\H{o}b\'elyegzett DMTD f\'azisnapl\'ok fizikai felv\'etele a $+14\,\text{mA} / 0\,\text{mA} / -14\,\text{mA}$ ciklusokon a k\"ovetkez\H{o} k\'is\'erleti m\'er\'esi kamp\'any feladata.
+\end{itemize}
+
+\vspace{0.5mm}
+\noindent{\color{navy}\rule{\linewidth}{0.6pt}}\par\vspace{0.8mm}
+\noindent{\bfseries\normalsize\color{navy}12.\ fejezet: Z\'ar\'o fejezet --- A k\"ozvetlen k\"ovetkez\H{o} fizikai l\'ep\'es}\par\vspace{0.5pt}
+Az alapfizik\'aban a val\'odi el\H{o}rel\'ep\'es ellen\H{o}rizhet\H{o} m\'erf\"oldk\"ovekre, pontos hibak\"onyvel\'esre \'es f\"uggetlen kontrollra \'ep\"ul. Az 1--21.\ verzi\'okon kereszt\"ul lefektettem \'es hash-elve igazoltam a \textbf{Time Attraction Law} (id\H{o}vonz\'as t\"orv\'enye) matematikai \textbf{,,hogyan''}-j\'at: a \textbf{$C$ csatol\'asi \'alland\'o} ($C$ coupling constant) Cauchy-exponenci\'alis levezet\'es\'et, a negat\'iv s\H{u}r\H{u}s\'eg-probl\'ema pozit\'iv definit 3D g\"ombi top-hat megold\'as\'at ($0 < f_L \le 1$), a 155/175 SPARC-galaxison \'es \"ot H.E.S.S. gamma-forr\'ason v\'egzett auditot, a 33 neutroncsillag TOV- \'es pulz\'aci\'os sorozatot, valamint a 3.\ k\"orben igazolt 8 tekercses \'es $8558\,\text{kg}$-os gr\'anitkamr\'as labortervet.
+
+\textbf{Kutat\'asi programom k\"ozvetlen k\"ovetkez\H{o} fizikai l\'ep\'ese az \texttt{50aa2db0} feladat: a kovari\'ans csatol\'asi lez\'ar\'as.} A nemlok\'alis top-hat mag \'es az anyagcsatol\'as egys\'eges vari\'aci\'os hat\'aselvb\H{o}l t\"ort\'en\H{o} levezet\'es\'evel k\"ot\"om \"ossze az audit\'alt ,,hogyan''-t a dinamikai ,,mi\'ert''-tel, egyes\'itve a H0/H1 \'ora-hipot\'eziseket \'es megalapozva a k\"ovetkez\H{o} laborat\'oriumi m\'er\'eseket.
+
+\vspace{1mm}
+\noindent{\scriptsize\color{slate}\textbf{F\H{o} arch\'iv hivatkoz\'asok:}
+[1] Szabolcsi D., \emph{Time Attraction Law V14--V16}, Zenodo \texttt{10.5281/zenodo.23217189}.
+[2] Szabolcsi D., \emph{Time Attraction Law V17: SPARC \& H.E.S.S. Audit}, Zenodo \texttt{10.5281/zenodo.19666220}.
+[3] Szabolcsi D., \emph{Time Attraction Law V19 (7th Model: 3D Top-Hat Law)}, Zenodo \texttt{10.5281/zenodo.23497128}.
+[4] Szabolcsi D., \emph{Time Attraction Law V20: 8-Coil \& Granite Clock Chamber}, Zenodo \texttt{10.5281/zenodo.23540741}.
+[5] Szabolcsi D., \emph{Time Attraction Law V21}, Zenodo \texttt{10.5281/zenodo.23602501}. \textbf{Els\H{o}dleges k\"uls\H{o} forr\'asok:} [6] Lelli, McGaugh \& Schombert, \emph{AJ} \textbf{152}, 157 (2016) [SPARC]. [7] Aharonian et al., \emph{PRL} \textbf{101}, 170402 (2008); Albert et al., \emph{PLB} \textbf{668}, 253 (2008); MAGIC Collab., \emph{PRL} \textbf{125}, 021301 (2020). [8] Oppenheimer \& Volkoff, \emph{PR} \textbf{55}, 374 (1939); Chandrasekhar, \emph{ApJ} \textbf{140}, 417 (1964); Akmal et al., \emph{PRC} \textbf{58}, 1804 (1998) [APR4]; Douchin \& Haensel, \emph{A\&A} \textbf{380}, 151 (2001) [SLy]. [9] Joyce et al., \emph{MNRAS} \textbf{479}, 1612 (2018) [Sirius B]. [10] Miller et al., \emph{ApJL} \textbf{887}, L24 (2019); Riley et al., \emph{ApJL} \textbf{887}, L21 (2019) [NICER].}}
+\newpage
+
+% ==================== PAGES 14-15: APPENDIX (VERBATIM ACADEMY REVIEW) ====================
+\chaphead{F\"uggel\'ek: AI-t\'amogatott technikai reprodukci\'os ellen\H{o}rz\'es}{A nyolctekercses m\'agnesest\'er- \'es \'orajelent\'es 3.\ k\"or\"os technikai \'ert\'ekel\'ese (\texttt{revision3\_review\_HU.md})}
+{\fontsize{6.4pt}{7.4pt}\setlength{\parskip}{1.0pt}\selectfont
+\noindent{\bfseries\small Harmadik változat -- célzott független ellenőrzés}\par\vspace{1pt}
+\par
+\textbf{Dátum:} 2026-10-21. \textbf{Bemenet:} \texttt{final\_report (3).zip}, \texttt{report\_hu (3).pdf}. \textbf{Kért ellenőrzés:} a korábbi L$\approx$3 m-es integrálillesztési hiba és a háttérmágneses kereszttag kezelése. Az eredeti fájlokat nem módosítottam; publikációs felületet nem érintettem. A Bothwell-gradiensfeladat ettől külön marad.
+\par
+\vspace{2pt}\noindent{\bfseries\footnotesize Ítélet}\par\vspace{0.5pt}
+\par
+\textbf{A két kért javítást a megadott modell és az új szöveges lehatárolás mellett elfogadom.}
+\par
+1. Az L$\approx$3 m-es korábbi nagy numerikus eltérés megszűnt. Az új külső integrál más szögkvadratúrával végzett ellenőrzése megerősíti a javítást.
+2. A jelentés most kimondja a háttértér 2B\_bg$\cdot$B\_coil kereszttagját, az ideális $\pm$I átlagolás feltételét és azt, hogy a közölt jel az izolált, polaritásra páros tekercs-B$^2$ tag.
+\par
+A fő jel továbbra is \textbf{körülbelül $-$1,20$\times$10$^{-48}$}. Ez elfogadható számított nagyságrend a választott ideális áramlapmodellben, \textbf{nem TAL-kimutatás és nem mért készülékérzékenység}.
+\par
+Három kisebb, illetve kísérleti értelmezési pontosítás marad: a távoli tartomány ,,0 szórása'' nem hibabecslés; az L=0,95 m-nél nyíltan közölt kis illesztési hiba megmarad; az azonos összteljesítményű hőkontroll nem garantál automatikusan azonos hőmérsékletmezőt. Ezeket alább elkülönítem a már kijavított fő problémáktól.
+\par
+\vspace{2pt}\noindent{\bfseries\footnotesize 1. Mit ellenőriztem most ténylegesen?}\par\vspace{0.5pt}
+\par
+\begin{itemize}\setlength{\itemsep}{0.5pt}\setlength{\parskip}{0pt}\setlength{\topsep}{1pt}
+\item \textbf{18/18 SHA-256 bejegyzés egyezik.} A külön feltöltött PDF bájtról bájtra azonos a ZIP-beli jelentéssel.
+\item Átolvastam az új jelentést, az új \texttt{energy\_integrator.py} modult és a \texttt{final\_fixed.py} változásait. A PDF táblázatait a nyomtatott oldalaképen is ellenőriztem.
+\item \textbf{Célzottan újrafuttattam} az archivált integrátort a fő csúcspontban, valamint a külső A/B útvonalakat a releváns L-eknél.
+\item Külön köráram-képlettel ellenőriztem a teret; Descartes-koordinátás Sobol-kubatúrával a fő jelet; más szög- és radiális kvadratúrával a távoli energiakülönbséget.
+\end{itemize}
+\par
+\textbf{Nem} állítok új teljes \texttt{final\_fixed.py}-futtatást: a teljes négyváltozatos konvergencia-, statikus Monte Carlo- és ábragenerálást ebben a körben nem ismételtem meg. A kért két javítás és a fő csúcs célzott ellenőrzése megtörtént.
+\par
+Archív SHA-256: \texttt{160981d3adb435b4fa719ca1a9d9a04d4e889a27f9d4c7bb0381e5c057ad2ea8}.
+\par
+\vspace{2pt}\noindent{\bfseries\footnotesize 2. Fő jel: reprodukálható és külön is ellenőrizhető}\par\vspace{0.5pt}
+\par
+Az új, szerzői mérési jegyzőkönyv 291,7 mm-es menetátmérőt ad meg; a kód most valóban ezt használja, nem az ellenállásból származtatja a modell sugarát. A 300 mm-es méretet peremátmérőként határozza meg. A geometriai eredet korábbi tisztázatlansága ezzel dokumentumszinten rendezett. A jegyzőkönyvet szerző által szolgáltatott mérési adatként kezelem, nem általam hitelesített helyszíni mérésként.
+\par
+\begin{center}\vspace{-2pt}{\scriptsize\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.64\linewidth}>{\raggedleft\arraybackslash}p{0.32\linewidth}@{}}
+\toprule
+Mennyiség & Mostani ellenőrzés \\
+\midrule
+B a fő órán, 14 mA & \textbf{11,632900 $\mu$T} \\
+B a referencián & \textbf{0,430539 $\mu$T} \\
+Független köráram-teszt legnagyobb relatív eltérése, 5 pont & \textbf{1,04$\times$10$^{-14}$} \\
+Archivált integrátor célzott újrafuttatása, L=0,630957 m & \textbf{$-$1,2017108$\times$10$^{-48}$} \\
+Eltérés az archivált fő eredményhez képest & \textbf{2,2$\times$10$^{-16}$ relatív}, kerekítési szint \\
+Független térfogati Sobol-integrál ugyanott & \textbf{$-$1,2008435$\times$10$^{-48}$} \\
+Független magnitúdó eltérése a csomagtól & \textbf{$-$0,0722\%} \\
+Sobol-keverésekből becsült standard hiba & \textbf{3,04$\times$10$^{-52}$} \\
+\bottomrule\end{tabular}}\vspace{-2pt}\end{center}
+\par
+A Sobol-ellenőrzés a fő gömbhöz 4$\times$2$^{19}$ pontot, a sima referencia-gömbhöz 4$\times$2$^{12}$ pontot használ. A megadott standard hiba nem a teljes modell bizonytalansága. A tekercsgeometria, áram, valós tekercselés és környezet hibáját nem foglalja magában. A rácsmaximumot nem azonosítom pontos folytonos maximumhellyel.
+\par
+A mért D alapján számolt ellenállás \textbf{1788,160 $\Omega$}, eltérése a megadott 1789 $\Omega$-tól \textbf{$-$0,0470\%}: a jelentés 0,05\%-os összevetése helyes. Öt azonos leolvasás mintaszórása valóban nulla; ez nem jelenti a méret teljes mérési bizonytalanságának nulláját.
+\par
+\vspace{2pt}\noindent{\bfseries\footnotesize 3. Az L$\approx$3 m-es javítás elfogadható}\par\vspace{0.5pt}
+\par
+A régi, külön teljes energiákból származó \textbf{0,01268 J/A$^2$} eltolás már nem kerül bele a 3 m körüli külső ágba. Az új A út panelintegrált és végtelenbe menő farkat, a B út közvetlen r=L/t helyettesítést használ. A 2,6--3,01 m-es tartományban a célzott újrafuttatás a két utat körülbelül \textbf{10$^{-15}$ relatív pontossággal} azonosnak adja.
+\par
+Ezen túl a külső energiák különbségét külön \textbf{Gauss--Legendre poláris és radiális kvadratúrával, egyenletes azimutszögekkel} számoltam. Ez nem az archivált Fibonacci-szögátlag. A végtelen tartományt ugyanúgy r=L/t képezi le; nincs véges levágás vagy radiális interpoláció. A mezőfüggvény közös az archívummal, de öt ponton külön köráram-integrál ellenőrizte. A külön integrál durva/finom rácsa az itt táblázott közeli pontokon legfeljebb néhány 10$^{-6}$ relatív eltérést ad; ez konvergenciateszt, nem abszolút hibabizonyítás.
+\par
+\begin{center}\vspace{-2pt}{\scriptsize\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.18\linewidth}>{\raggedleft\arraybackslash}p{0.25\linewidth}>{\raggedleft\arraybackslash}p{0.25\linewidth}>{\raggedleft\arraybackslash}p{0.24\linewidth}@{}}
+\toprule
+L (m) & Új archivált integrátor $\Delta$W (J/A$^2$) & Külön integrál (J/A$^2$) & Relatív eltérés \\
+\midrule
+2,6 & 0,00713721108 & \textbf{0,00713720352} & +0,000106\% \\
+2,818383 & 0,00369084579 & \textbf{0,00369083957} & +0,000169\% \\
+3,00 & 0,00233131494 & \textbf{0,00233130964} & +0,000227\% \\
+3,162 & 0,00162105726 & \textbf{0,00162105265} & +0,000284\% \\
+10 & 2,77763231$\times$10$^{-6}$ & \textbf{2,77754429$\times$10$^{-6}$} & +0,00317\% \\
+31,62 & 8,37811251$\times$10$^{-9}$ & \textbf{8,37717664$\times$10$^{-9}$} & +0,0112\% \\
+100 & 2,63649938$\times$10$^{-11}$ & \textbf{2,63556282$\times$10$^{-11}$} & +0,0355\% \\
+\bottomrule\end{tabular}}\vspace{-2pt}\end{center}
+\par
+A korábbi több száz százalékos átmeneti és több százalékos távoli eltérések így megszűntek az ellenőrzött pontokon. A 100 m-nél látható kis maradék szögkvadratúra-finomítással tovább csökken: 6000/12000/24000 távoli szögpontnál rendre \textbf{2,6364994 / 2,6357023 / 2,6355308 $\times$10$^{-11}$ J/A$^2$}. A radiális t-kvadratúra itt 32, majd 64 pontos. Nem állítok minden L-re vagy tetszőleges távolságra tanúsított hibakorlátot.
+\par
+\vspace{1.5pt}\noindent{\bfseries\scriptsize Két numerikus minősítés marad}\par\vspace{0.5pt}
+\par
+\textbf{A. A távoli ,,0 szórás'' nem bizonyít nulla hibát.} A konvergenciatáblázat távoli sorában valóban azonos mind a négy érték. A négy futás azonban a magas felbontású \texttt{nhi} szögpontszámot és a belső panelezést változtatja; a távoli \texttt{nlo=6000}, \texttt{nt=32} beállítás mindegyikben ugyanaz. Emiatt ez a sor nem teszteli az adott tartomány felbontásfüggését.
+\par
+\textbf{Javítás -- magas bizonyosság, kisebb jelentési pontosítás:} a távoli sor ,,0'' értékeihez ezt a megjegyzést kell hozzáadni:
+\par
+\begin{quote}\vspace{-3pt}
+,,A négy futás ebben a tartományban azonos nlo és nt beállítást használ. A nulla mintaszórás ezért nem távoli hibabecslés; a távoli konvergenciát nlo és nt külön változtatásával kell vizsgálni.''
+
+\end{quote}
+\par
+
+\newpage
+\noindent{\footnotesize\bfseries\color{navy}F\"uggel\'ek (folytat\'as): Harmadik k\"or\"os f\"uggetlen b\'ir\'alati jegyz\H{o}k\"onyv (\texttt{revision3\_review\_HU.md}, 2.\ r\'esz)}\par\vspace{2pt}
+\noindent{\color{navy}\rule{\linewidth}{0.4pt}}\par\vspace{2pt}
+\textbf{B. Az új, kisebb illesztési hiba közölt és valós.} A jelentés már feltünteti, hogy L=0,95 m-nél a belső/külső váltás nem pontosan folytonos. Az archivált értékek \textbf{2,17738947 és 2,17597607 J/A$^2$}, különbségük \textbf{0,00141340 J/A$^2$}, azaz a belső érték \textbf{0,0649\%-a}. Ez a teljesenergia-becslések eltérésével algebrailag egyezik; nem a régi 3 m-es nagy hiba fennmaradása. Ezt most archivált adatokból és az integrálok azonosságából ellenőriztem, nem egy új teljesenergia-integrálással.
+\par
+\textbf{Minősítés:} az L=0,95 m körüli kis hibát a görbe numerikus korlátjaként meg kell tartani, nem szabad az egész görbét gépi pontossággal folytonosnak nevezni. A dokumentum ezt lényegében már megteszi, ezért nem kezelem új, a fő következtetést megdöntő hibaként.
+\par
+\vspace{2pt}\noindent{\bfseries\footnotesize 4. A háttértér kezelése most megfelelően lehatárolt}\par\vspace{0.5pt}
+\par
+\textbf{Hely:} \S4, polaritásváltás. A hozzáadott szöveg:
+\par
+\begin{quote}\vspace{-3pt}
+A tiszta tekercs-B$^2$ tag páros a polaritásra. Állandó háttértérben az energiasűrűség-változásnak 2B\_bg$\cdot$B\_coil kereszttagja is van; ezt az azonos nagyságú $\pm$I állapotok OFF-hoz viszonyított átlaga ideális esetben törli. A közölt $-$1.20$\times$10$^{-48}$ érték erre az izolált páros tagra vonatkozik, nem minden lehetséges egyszerű ON/OFF mérés teljes előrejelzése.
+
+\end{quote}
+\par
+\textbf{Ezt a javítást elfogadom.} A gyenge jelre használt lineáris frekvenciaeltolódási közelítésben, változatlan háttértér és azonos nagyságú $\pm$I áram mellett:
+\par
+\[\frac{1}{2}\{[|\mathbf B_{bg}+\mathbf b|^2-|\mathbf B_{bg}|^2] +[|\mathbf B_{bg}-\mathbf b|^2-|\mathbf B_{bg}|^2]\}=|\mathbf b|^2.\]
+\par
+A kód továbbra is a tiszta tekercs-B$^2$ tagot számolja. Ez most egyezik a szövegben kifejezetten lehatárolt számítási céllal. Nem igazol tényleges háttértér-mérést, $\pm$I szimmetriát vagy teljes egyszerű ON/OFF előrejelzést; ezekhez kísérleti adatok kellenek. A \S5 első sorában is érdemes az ,,izolált páros tag'' megnevezést használni, hogy a feltétel a végkövetkeztetésben se vesszen el.
+\par
+\vspace{2pt}\noindent{\bfseries\footnotesize 5. Egy fennmaradt kísérleti túlállítás: hőkompenzáció}\par\vspace{0.5pt}
+\par
+\textbf{Hely:} \S4, 5. pont. Az azonos hőterhelésű kontroll bevezetése helyes irány, de a következő következtetés túl erős:
+\par
+\begin{quote}\vspace{-3pt}
+A kikapcsolt szakaszokban ugyanakkora hőterhelést (2.81 W) kell leadni egy mágneses teret nem keltő (bifiláris) ellenálláson, a tekercsek közelében. Így a be/ki különbség nem tartalmaz hőmérsékleti lépést.
+
+\end{quote}
+\par
+Azonos összteljesítmény nem garantál azonos térbeli hőleadást vagy azonos hővezetési és sugárzási csatolást az órákhoz. A beállás kivárása az időfüggő tranziens mérséklésére alkalmas, de a két beállt állapot hőmérséklete továbbra is eltérhet. A bifiláris kialakítás maradéktere is ellenőrizendő, nem feltétlenül pontosan nulla.
+\par
+\textbf{Javítás -- magas bizonyosság, a kísérleti bizonyító erőt érinti:} az idézet második mondatát ezzel kell felváltani:
+\par
+\begin{quote}\vspace{-3pt}
+,,Az azonos összteljesítményű, kis maradékterű kontroll célja a kapcsolással korrelált termikus változás csökkentése. A be- és kikapcsolt állapotok hőmérsékleti azonosságát és a kontroll maradékterét méréssel ellenőrizni kell; a maradék eltérést a frekvenciabecslés bizonytalanságába kell foglalni.''
+
+\end{quote}
+\par
+Ez nem a hőkontroll elutasítása, hanem a garantált törlés helyett az ellenőrizhető maradék meghatározása.
+\par
+\vspace{2pt}\noindent{\bfseries\footnotesize 6. Egyéb javítások és a mérési állítás határa}\par\vspace{0.5pt}
+\par
+\textbf{Elfogadott javítások:}
+\par
+\begin{itemize}\setlength{\itemsep}{0.5pt}\setlength{\parskip}{0pt}\setlength{\topsep}{1pt}
+\item az offset nem zajküszöb; a főóra-egyenértékű mágneses együtthatók nem mért felső korlátok;
+\item a geometriai jegyzőkönyv és a perem/menetfelület különválasztása megjelent;
+\item az Sr-érték rendszeres bizonytalanságként, nem univerzális zajküszöbként szerepel, a rendkívüli fehér-FM idő pedig algebrai extrapolációként;
+\item a házhőmérséklet adatlap-összevetése feltételes lett;
+\item a nagyáramú számításból nem vezet le biztonságos impulzushosszt: a kért figyelmeztetés bekerült.
+\end{itemize}
+\par
+\textbf{Nincs új fázis- vagy frekvenciaidősor, ON/OFF/$\pm$I állapotnapló és kapcsolt termikus mérés.} A méretjegyzőkönyv nem pótolja ezeket. Emiatt a valós érzékenység továbbra sem állapítható meg. A 65 perces, valódi 2$\pi$ elektromos fázisciklus átszámítása változatlanul \textbf{0,256410 mHz} és \textbf{2,56410$\times$10$^{-11}$ átlagos relatív offset}.
+\par
+A \S4 kapcsolási ütemét továbbra is a beat-periódushoz köti. Ez nem önmagában érvénytelenné tevő választás, de a 65 percet nem az offset teszi optimálissá; zaj- és termikus beállásvizsgálattal kell indokolni. A szükséges következő bizonyíték az időbélyeges fázis és az állapotcímkék alapján számított be/ki becslés és bizonytalansága, nem egy újabb számított beat-arány.
+\par
+\textbf{Összesített minősítés:} a kért két fő javítás megtörtént; a számított $\approx$$-$1,20$\times$10$^{-48}$-as tiszta páros térenergiajel számszerűen alátámasztott. A maradék numerikus és kontroll-megfogalmazási korlátokkal ez használható feltételes tervezési előrejelzés, de nem hitelesített mérési eredmény.
+\par
+\vspace{2pt}\noindent{\bfseries\footnotesize Reprodukció és kísérőadat}\par\vspace{0.5pt}
+\par
+A \texttt{revision3\_checks.json} tartalmazza a 18 integritási tesztet, az öt külön tértesztet, a célzott főcsúcs-újrafuttatást, a két Sobol-pontot, kilenc külső ellenőrző integrált, a távoli felbontásváltoztatást és a közölt 0,95 m-es illesztési maradék számtanát. Ezek számított ellenőrzések; nem órás nyersadatok.
+\par
+A helyi ellenőrző kód:
+\par
+\begin{verbatim}
+python3 user/workspace/co-scientist-outputs/ocxo-revision3-review/check_revision3.py
+\end{verbatim}
+\par
+Python 3, NumPy és SciPy szükséges. A kód a ZIP-et olvassa, a futtatáshoz szükséges két modult scratch területre másolja, és az eredmény-JSON-t újragenerálja. Az eredeti csomagot, a kéziratot és a publikációs felületeket nem írja felül.
+}
+\end{document}
