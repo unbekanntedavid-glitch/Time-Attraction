@@ -2,7 +2,15 @@
 
 ## Time Attraction Law — Scalar-Tensor Yukawa Fit, V26 — 2026-10-28
 
-Earlier V25 reference: [10.5281/zenodo.23699685](https://doi.org/10.5281/zenodo.23699685) *(refers strictly to V25)*. Earlier V24 reference: [10.5281/zenodo.23680715](https://doi.org/10.5281/zenodo.23680715) *(refers strictly to V24)*.
+DOI: [10.5281/zenodo.23727585](https://doi.org/10.5281/zenodo.23727585)
+
+| Version | DOI |
+|---|---|
+| V26 | [10.5281/zenodo.23727585](https://doi.org/10.5281/zenodo.23727585) |
+| V25 | [10.5281/zenodo.23699685](https://doi.org/10.5281/zenodo.23699685) |
+| V24 | [10.5281/zenodo.23680715](https://doi.org/10.5281/zenodo.23680715) |
+
+Zenodo V26: [10.5281/zenodo.23727585](https://doi.org/10.5281/zenodo.23727585). Earlier V25 reference: [10.5281/zenodo.23699685](https://doi.org/10.5281/zenodo.23699685) *(refers strictly to V25)*. Earlier V24 reference: [10.5281/zenodo.23680715](https://doi.org/10.5281/zenodo.23680715) *(refers strictly to V24)*.
 
 Extends the scalar-tensor, conformal/disformal, and Helmholtz–Yukawa analysis (`step1`–`step22`) with three bilingual HU/EN chapters (`step23`–`step25`), standalone Python solvers (`gw170817_and_lensing_audit.py`, `bullet_cluster_lensing_audit.py`, `cmb_and_cosmology_audit.py`), 9 CSV/JSON output tables, and 27-page HU/EN module PDFs (`step23_25_gw170817_lensing_bullet_cmb_hu.pdf`, `step23_25_gw170817_lensing_bullet_cmb_en.pdf`):
 - **`step23` (GW170817 & Gravitational Lensing):** Horndeski tensor speed $G_4 = M_{\text{Pl}}^2/2 = \text{const.},\; G_5 = 0 \implies c_T = 1$ exactly ($m_g = 0$), scalar mode Compton wavelength $L = 10\;\text{km}$ ($m_\phi c^2 = 1.973\times 10^{-11}\;\text{eV}$), conformal photon null geodesics ($\gamma_{\text{PPN}} = 1$, $\Phi_{\text{lens}} = \Phi_N$) vs. disformal H1 clock coupling ($\tilde{g}_{\mu\nu}^{\text{clock}} = g_{\mu\nu} + c^{-2}(1 - e^{-2\phi_L})u_\mu u_\nu$), and 4-component exterior Yukawa BVP comparison between `Branch II-Fluid` ($\mathcal{L}_m = -e^{-\phi_L}\varepsilon(n)$, source $-(\alpha_Y G/c^2)e^{-\phi_L}\varepsilon$, $M_{\text{ADM}} = 1.509998\,M_\odot$) and covariant trace-sourced `Branch II-Conf` ($S_m[e^{-2\alpha_Y\phi_L}g_{\mu\nu},\Psi_m]$, trace source $-(\alpha_Y^2 G/c^2)e^{-4\alpha_Y\phi_L}(\tilde{\varepsilon} - 3\tilde{P})$, $M_{\text{ADM}} = 1.562035\,M_\odot$) on the $L = 10\;\text{km}$, $\alpha_Y = 1$, SLy $\log_{10}\rho_{0c} = 15.0$ reference star (`DOP853` `max_step = 0.02 km`, `tol_iter = 1e-10` mesh refinement $N = 601 \to 2000 \to 4000$: enforced Robin derivative agreement $\lvert\phi'_{L,\text{int,Robin}}(R_*) - \phi'_{L,\text{ext,curved}}(R_*)\rvert = 3.937\times 10^{-15}\;\text{km}^{-1}$, independent one-sided FD2 derivative difference $\lvert\phi'_{L,\text{int,FD2}}(R_*) - \phi'_{L,\text{ext,curved}}(R_*)\rvert = 4.7228\times 10^{-10}\;\text{km}^{-1}$ at $N = 4000$ converging as $\mathcal{O}(h^2)$ with empirical ratio $4.0332$).
