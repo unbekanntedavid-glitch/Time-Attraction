@@ -1,0 +1,25 @@
+# V26 hiánypótlás: célzott számítás- és csomagellenőrzés (2026-10-28)
+
+**Forrás:** `v26_hianypotlas_szamitas.md` (`v26_hianypotlo_szamitas.md`, 21,8 KB), `scalar-tensor-yukawa-fit_V26_package.zip` (394 fájl / 392 ellenőrzött), a külön 23–25. lépéses ZIP és a három új PDF. A tárolt JSON, a képletek és a megvalósító kód egyezését ellenőriztük.
+
+## Megerősített előrelépés
+
+A hiánypótlás tartalmazza a kért numerikus ellenőrzéseket: a belső diszkrét skalár-ODE maradékát, az iterációs konvergenciatörténetet, a konvergált belső és külső felszíni deriváltak különbségét és a három hálósűrűség (`N=601`, `N=2000`, `N=4000`) összevetését. Ezek az új `gw170817_and_lensing_audit.py` kódban és a `gw170817_and_lensing_summary.json` `bvp_convergence_and_mesh_refinement` részében megtalálhatók.
+
+- **Robinhatár, minden-lépéses 4-komponensű futás (`tol_iter = 1e-11`), N=601:** `|k_int−k_ext| = 9,502×10⁻¹³ km⁻¹`, `|φ′_int,Robin−φ′_ext| = 3,937×10⁻¹⁵ km⁻¹`; a relaxált belső diszkrét ODE maradéka `6,958×10⁻¹⁴ km⁻²` (a közvetlen sávos megoldóé `1,480×10⁻¹⁴ km⁻²`). A korábbi, csak négy iterációban (`it in (1, 3, 6, 10)`) frissített határ `1,465×10⁻⁹ km⁻¹` deriváltkülönbséget hagyott: a javítás mérhető.
+- **Kikényszerített Robin-derivált vs. külön egyoldali FD2 felszíni derivált:** a **`3,937×10⁻¹⁵ km⁻¹` egyezés a kikényszerített Robin-deriváltra (`φ′_int,Robin(R*) = −k_int φ_L(R*)`) igaz**, míg a peremfeltételtől elkülönített egyoldali másodrendű véges differenciás (`FD2`) derivált eltérése `2,1213×10⁻⁸ km⁻¹` (`N=601`), `1,9048×10⁻⁹ km⁻¹` (`N=2000`), **`N=4000`-nél pedig `4,7228×10⁻¹⁰ km⁻¹`** (relatíve `4,89×10⁻⁷` a `|φ′_L(R*)| = 9,6507×10⁻⁴ km⁻¹` meredekséghez mérve), és **másodrendben (`O(h²)`) konvergál**: az `N = 2000 → 4000` javulási arány `4,0332`, ami összhangban áll a másodrendű hálóskálázás várt `(h_2000/h_4000)² = 4,0020` értékével.
+- **Hálófinomítási futások kód szerinti beállításai (`run_variant()`, `mesh_601/2000/4000`):** `DOP853` integrátor, `rtol_ivp = 1e-11`, `atol = [1e-13, 1e-13, 1e-13]`, **`max_step = 0.02 km`** és **`tol_iter = 1e-10`** fixpont-küszöb (míg a `tol_iter = 1e-11` a külön minden-lépéses 4-komponensű `N=601` futás küszöbe). `N = 2000` és `N = 4000` között `|ΔR*| = 4,213×10⁻⁸ km`, `|ΔM_ADM| = 1,097×10⁻⁸ M☉`, `|Δφ_L(R*)| = 1,920×10⁻⁹`.
+- **Rögzített közös impaktparaméter:** `b = 15,06491351 km` mellett a JSON-ban az elhajlás a `Branch II-Fluid` ágon `1,22474419 rad` (`r_0 = 11,917144 km`), a `Branch II-Conf` ágon `1,33402365 rad` (`r_0 = 11,736304 km`). Ez kiegészíti a saját súroló sugárutak (`14,749 km` vs. `15,065 km`) melletti összevetést.
+
+A numerikus ellenőrzés az egyetlen vizsgált SLy referencia-csillagra lezárult. A `solve_bvp` által jelentett `max(rms_residuals) ≈ 9,998×10⁻¹³` a külső kollokációs háló dimenziótlan normalizált maradéka; nem azonos a belső `km⁻²` egységű maximális diszkrét egyenletmaradékkal. A közvetlen tridiagonális megoldás `1,480×10⁻¹⁴ km⁻²` maradéka a saját diszkrét lineáris rendszerének pontos megoldását méri, míg a folytonos BVP diszkretizációs hibáját a fenti `N = 601 → 2000 → 4000` hálófinomítás számszerűsíti.
+
+## A hiánypótló Markdownban elvégzett két dokumentációs pontosítás
+
+1. A 2.3. szakaszban a hálóteszt leírása a `gw170817_and_lensing_audit.py` `run_variant()` függvényével összhangban **`DOP853`, `max_step = 0.02 km`, `tol_iter = 1e-10`** fixpont-küszöbre javítva (a 2.2. szakasz külön minden-lépéses 4-komponensű `N=601` futásánál `tol_iter = 1e-11` marad).
+2. Explicit módon szerepel, hogy a **`3,937×10⁻¹⁵ km⁻¹` egyezés a kikényszerített Robin-deriváltra (`φ′_int,Robin(R*)`) igaz**, míg a tőle elkülönített egyoldali **`FD2` derivált eltérése `N=4000`-nél `4,7228×10⁻¹⁰ km⁻¹` (`4.72e-10 km^-1`) és másodrendben konvergál** (`4,0332` empirikus skálázási arány a várt `4,0020`-szal összhangban).
+
+## Integritás és hatókör
+
+A nagy ZIP-ben (`scalar-tensor-yukawa-fit_V26_package.zip`) **394 fájlbejegyzés** van (`392` ellenőrzött + `SHA256SUMS.txt` + a visszaállított beágyazott `scalar-tensor-yukawa-fit_audit_package.zip`, így 3 önálló PDF + 1 beágyazott audit-ZIP szerepel). A hashlisták: fő `SHA256SUMS.txt` **`392/392 OK`** (`fdf6692bc65e1ea89e54b41a476f40ea1621f8a75b0d1233ec10cf3d870cf7d2`), 23–25. lépéses `SHA256SUMS_step23_25.txt` **`20/20 OK`** (`febb1bfe434b22cc54a4f0bdfafb62efa24ad361b96cda05cf9290eafd80ec7c`). A külön kis ZIP (`step23_25_gw170817_lensing_bullet_cmb_V26_review.zip` / `step23_25_gw170817_lensing_bullet_cmb_module.zip`) `scalar-tensor-yukawa-fit/` könyvtárelőtaggal tárolja fájljait; mind a 21 bejegyzése bájtra egyezik a nagy ZIP megfelelő bejegyzéseivel, és a három külön PDF (`step23_25_gw170817_lensing_bullet_cmb_hu.pdf`, `step23_25_gw170817_lensing_bullet_cmb_en.pdf`, `V26_english_audit_package.pdf`) bájtra azonos a nagy ZIP-ben lévő példánnyal. A V24 és V25 referencia-archívumok érintetlenek, a tiltott szavak száma `0`.
+
+**Hatókör:** a teszt egyetlen `L = 10 km`, `α_Y = 1`, SLy `log₁₀ρ₀c = 15,0` konform csillagra és annak statikus, lencsézési diagnosztikájára vonatkozik.

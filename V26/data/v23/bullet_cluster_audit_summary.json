@@ -1,0 +1,193 @@
+{
+  "module": "step24_bullet_cluster",
+  "version": "V26",
+  "cluster_name": "1E 0657-558 (Bullet Cluster) — Synthetic 1D Illustrative Collision-Axis Test",
+  "methodological_scope_and_synthetic_1D_caveats": {
+    "test_classification": "Synthetic 1D illustrative collision-axis model (NOT an observational chi^2 fit to raw 2D lensing maps)",
+    "synthetic_target_definition": "kappa_synth_target_1D is a self-constructed 1D synthetic reference curve built from the sum of the model's own four King profiles plus two unfiltered galaxy weights (w_synth_main = 22.9765, w_synth_sub = 21.3095) tuned to match the illustrative peak heights kappa(-350 kpc) = 0.320 and kappa(+300 kpc) = 0.220.",
+    "normalized_synthetic_mse_definition": "synth_mse_norm_vs_target (M_synth = 32.089 for GR_baryon_only and TAL_local_Yukawa_L10km_alphaY1, 20.723 for Macro_unscreened_bulk_baryon, and 1.637 for Macro_collisionless_compact_clock) is the mean-squared deviation from kappa_synth_target_1D normalized by a uniform reference scale sigma_ref = 0.020 across the 321 grid points. It is NOT an observational reduced chi^2_nu fit to Clowe et al. (2006) or Bradac et al. (2006) data, which would require a published 2D convergence map, full error covariance matrix, pre-registered spatial selection, and degree-of-freedom subtraction (N_dof = N_bins - p).",
+    "model_dependent_thresholds_caveat": "The peak-dominance threshold eta_gal/eta_gas >= 5.1204 and the < 5 kpc centroid-offset threshold eta_gal/eta_gas >= 25.6650 are model-dependent thresholds specific to the chosen 1D King geometry (R_c = 65-150 kpc) and macroscopic Helmholtz scale L_macro = 300 kpc, not a general model-independent physical theorem.",
+    "phenomenological_clock_weights_caveat": "Setting eta_gas = 0 and fitting two separate galactic weights (eta_gal_main = 31.7448, eta_gal_sub = 24.1556) in Case 2B are phenomenological, illustrative assumptions not derived from the covariant scalar-tensor action."
+  },
+  "cosmology_and_lensing": {
+    "z_lens": 0.296,
+    "z_source_typical": 0.85,
+    "D_L_Mpc": 910.0,
+    "Sigma_crit_Msun_kpc2": 3100000000.0,
+    "Sigma_crit_g_cm2": 0.647410362645769,
+    "v_collision_km_s": 4500.0,
+    "v_collision_over_c": 0.015010384283916843,
+    "aperture_radius_kpc": 650.0
+  },
+  "yukawa_parameters_fixed": {
+    "L_m": 10000.0,
+    "L_km": 10.0,
+    "L_kpc": 3.240779289444365e-16,
+    "alpha_Y": 1.0,
+    "alpha_std": 0.07957747154594767,
+    "L_macro_kpc": 300.0
+  },
+  "baryonic_components": [
+    {
+      "name": "gal_main",
+      "label": "Main Cluster Collisionless Galaxies (Stars + Compact Remnants)",
+      "x_c_kpc": -350.0,
+      "M_msun": 5500000000000.0,
+      "R_c_kpc": 120.0,
+      "kind": "gal"
+    },
+    {
+      "name": "gas_main",
+      "label": "Main Cluster Collisional X-ray ICM Gas (Chandra)",
+      "x_c_kpc": -170.0,
+      "M_msun": 26000000000000.0,
+      "R_c_kpc": 150.0,
+      "kind": "gas"
+    },
+    {
+      "name": "gas_sub",
+      "label": "Subcluster (Bullet) Shocked X-ray ICM Gas",
+      "x_c_kpc": 140.0,
+      "M_msun": 6500000000000.0,
+      "R_c_kpc": 75.0,
+      "kind": "gas"
+    },
+    {
+      "name": "gal_sub",
+      "label": "Subcluster (Bullet) Collisionless Galaxies",
+      "x_c_kpc": 300.0,
+      "M_msun": 1800000000000.0,
+      "R_c_kpc": 65.0,
+      "kind": "gal"
+    }
+  ],
+  "mass_budget": {
+    "M_gas_tot_Msun": 32500000000000.0,
+    "M_gal_tot_Msun": 7300000000000.0,
+    "M_baryon_tot_Msun": 39800000000000.0,
+    "M_gas_over_M_gal": 4.4520547945205475
+  },
+  "observed_lensing_peaks_Clowe2006": {
+    "x_peak_main_obs_kpc": -350.0,
+    "kappa_peak_main_obs": 0.32,
+    "x_peak_sub_obs_kpc": 300.0,
+    "kappa_peak_sub_obs": 0.22
+  },
+  "test1_local_yukawa_L10km_alphaY1": {
+    "conformal_branch_delta_kappa_exact": 0.0,
+    "disformal_branch_max_rel_delta_kappa": 2.170748863504984e-36,
+    "max_abs_phi_local_3d_dimensionless": 3.086171523145937e-42,
+    "min_phi_local_3d_dimensionless": -3.086171523145937e-42,
+    "global_4comp_x_peak_main_kpc": -175.44309780739934,
+    "global_4comp_kappa_peak_main": 0.045031037491792957,
+    "global_4comp_x_peak_sub_kpc": 137.0052366943383,
+    "global_4comp_kappa_peak_sub": 0.0369650520644054,
+    "shock_separated_pair_x_peak_main_kpc": -170.7,
+    "shock_separated_pair_x_peak_sub_kpc": 142.3,
+    "shock_separated_pair_kappa_peak_main": 0.045,
+    "scientific_verdict": "At fixed L = 10 km and alpha_Y = 1, the short-range Yukawa fifth force is purely a compact-object/neutron-star effect and produces zero macroscopic modification to Bullet Cluster lensing (delta_kappa_conf = 0 identically; |delta_kappa_disf/kappa_bary| <= 2.17e-36, and < 1e-40 in the outer halo). The convergence peaks remain locked to the X-ray gas centroids (-175.44 kpc in the 4-component global sum or -170.7 kpc in the shock-separated pair, and +137.01 kpc or +142.3 kpc for the subcluster), missing the observed galaxy centroids (-350 kpc and +300 kpc) by 158-179 kpc with 7.1x smaller peak amplitude."
+  },
+  "test2_macroscopic_extensions": {
+    "case2A_bulk_baryon": {
+      "eta_bulk": 8.652261414410646,
+      "x_peak_main_kpc": -176.01863543778217,
+      "kappa_peak_main": 0.3200150536147557,
+      "x_peak_sub_kpc": 138.34503596993443,
+      "kappa_peak_sub": 0.2653060486014748,
+      "offset_main_from_gal_kpc": 173.98136456221783,
+      "offset_sub_from_gal_kpc": -161.65496403006557,
+      "verdict": "Even with a macroscopic screening scale L_macro = 300 kpc and eta_bulk = 8.65 (boosting peak convergence by 7.11x to match kappa = 0.320), any static kernel sourced universally by smoothed bulk baryon density (rho_gas + rho_gal) keeps its convergence peaks locked to the X-ray gas (-176.02 kpc and +138.35 kpc; or -185 kpc and +155 kpc under broader smoothing), failing the Clowe et al. (2006) spatial offset test by 162-174 kpc."
+    },
+    "case2B_collisionless_compact_clock": {
+      "thresholds": {
+        "direct_surface_density_ratio_gas_over_gal_main": 3.459235186982755,
+        "direct_surface_density_ratio_gas_over_gal_sub": 2.8894831205699294,
+        "dominance_ratio_eta_gal_over_eta_gas_main": 5.120374257938583,
+        "dominance_ratio_eta_gal_over_eta_gas_sub": 5.097233399852747,
+        "centroid_5kpc_ratio_eta_gal_over_eta_gas_main": 25.664965282182493,
+        "calibrated_eta_gal_main_for_kappa_0p32": 31.74477817135591,
+        "calibrated_eta_gal_sub_for_kappa_0p22": 24.155637528714117,
+        "calibrated_w_synth_main_unfiltered": 25.198118829859517,
+        "calibrated_w_synth_sub_unfiltered": 20.254637830656435,
+        "calibrated_eta_bulk_for_case2A": 8.652261414410646
+      },
+      "x_peak_main_kpc": -347.86178262508355,
+      "kappa_peak_main": 0.32011375203446024,
+      "x_peak_sub_kpc": 299.45120302078715,
+      "kappa_peak_sub": 0.2200166928445611,
+      "offset_main_from_gal_kpc": 2.138217374916451,
+      "offset_sub_from_gal_kpc": -0.5487969792128524,
+      "verdict": "Reproducing the observed galaxy-centered convergence peaks kappa(-350 kpc) = 0.320 and kappa(+300 kpc) = 0.220 with < 5 kpc centroid offset (actual offsets +2.14 kpc and -0.55 kpc) requires either (1) compactness/potential-well-depth weighting where the macroscopic clock field is sourced by deep stellar/compact-remnant potential wells (eta_gal,main = 31.74, eta_gal,sub = 24.16; peak-dominance threshold eta_gal/eta_gas >= 5.12 and < 5 kpc offset threshold eta_gal/eta_gas >= 25.66), or (2) non-equilibrium collisionless scalar memory with relaxation time tau_relax >= 150 Myr > t_cross ~ 39 Myr during the v_coll = 4500 km/s supersonic merger."
+    }
+  },
+  "models_summary": [
+    {
+      "model_name": "GR_baryon_only",
+      "x_peak_main_kpc": -175.4430978074,
+      "kappa_peak_main": 0.0450310375,
+      "x_peak_sub_kpc": 137.0052366943,
+      "kappa_peak_sub": 0.0369650521,
+      "offset_main_from_gal_kpc": 174.5569021926,
+      "offset_main_from_gas_kpc": -5.4430978074,
+      "offset_sub_from_gal_kpc": -162.9947633057,
+      "offset_sub_from_gas_kpc": -2.9947633057,
+      "kappa_at_gal_main_m350": 0.028506743,
+      "kappa_at_gas_main_m170": 0.0449842427,
+      "kappa_at_gas_sub_p140": 0.0369239027,
+      "kappa_at_gal_sub_p300": 0.0184664868,
+      "rms_kappa_residual_vs_synth_target": 0.1132946076,
+      "synth_mse_norm_vs_target": 32.0891702915
+    },
+    {
+      "model_name": "TAL_local_Yukawa_L10km_alphaY1",
+      "x_peak_main_kpc": -175.4430978074,
+      "kappa_peak_main": 0.0450310375,
+      "x_peak_sub_kpc": 137.0052366943,
+      "kappa_peak_sub": 0.0369650521,
+      "offset_main_from_gal_kpc": 174.5569021926,
+      "offset_main_from_gas_kpc": -5.4430978074,
+      "offset_sub_from_gal_kpc": -162.9947633057,
+      "offset_sub_from_gas_kpc": -2.9947633057,
+      "kappa_at_gal_main_m350": 0.028506743,
+      "kappa_at_gas_main_m170": 0.0449842427,
+      "kappa_at_gas_sub_p140": 0.0369239027,
+      "kappa_at_gal_sub_p300": 0.0184664868,
+      "rms_kappa_residual_vs_synth_target": 0.1132946076,
+      "synth_mse_norm_vs_target": 32.0891702915
+    },
+    {
+      "model_name": "Macro_unscreened_bulk_baryon",
+      "x_peak_main_kpc": -176.0186354378,
+      "kappa_peak_main": 0.3200150536,
+      "x_peak_sub_kpc": 138.3450359699,
+      "kappa_peak_sub": 0.2653060486,
+      "offset_main_from_gal_kpc": 173.9813645622,
+      "offset_main_from_gas_kpc": -6.0186354378,
+      "offset_sub_from_gal_kpc": -161.6549640301,
+      "offset_sub_from_gas_kpc": -1.6549640301,
+      "kappa_at_gal_main_m350": 0.1786650596,
+      "kappa_at_gas_main_m170": 0.3194866585,
+      "kappa_at_gas_sub_p140": 0.265185496,
+      "kappa_at_gal_sub_p300": 0.1108149644,
+      "rms_kappa_residual_vs_synth_target": 0.091044121,
+      "synth_mse_norm_vs_target": 20.7225799111
+    },
+    {
+      "model_name": "Macro_collisionless_compact_clock",
+      "x_peak_main_kpc": -347.8617826251,
+      "kappa_peak_main": 0.320113752,
+      "x_peak_sub_kpc": 299.4512030208,
+      "kappa_peak_sub": 0.2200166928,
+      "offset_main_from_gal_kpc": 2.1382173749,
+      "offset_main_from_gas_kpc": -177.8617826251,
+      "offset_sub_from_gal_kpc": -0.5487969792,
+      "offset_sub_from_gas_kpc": 159.4512030208,
+      "kappa_at_gal_main_m350": 0.32,
+      "kappa_at_gas_main_m170": 0.1004046446,
+      "kappa_at_gas_sub_p140": 0.0492093571,
+      "kappa_at_gal_sub_p300": 0.22,
+      "rms_kappa_residual_vs_synth_target": 0.0255888829,
+      "synth_mse_norm_vs_target": 1.6369773251
+    }
+  ]
+}
