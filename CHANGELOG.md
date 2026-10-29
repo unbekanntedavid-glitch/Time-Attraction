@@ -2,7 +2,16 @@
 
 ## Time Attraction Law — Scalar-Tensor Yukawa Fit, V27 — 2026-10-29
 
-DOI: none yet. V27 has no Zenodo DOI. Earlier DOIs: V26 [10.5281/zenodo.23727585](https://doi.org/10.5281/zenodo.23727585) *(refers strictly to V26, `step1`–`step25`)*, V25 [10.5281/zenodo.23699685](https://doi.org/10.5281/zenodo.23699685) *(refers strictly to V25)*, V24 [10.5281/zenodo.23680715](https://doi.org/10.5281/zenodo.23680715) *(refers strictly to V24)*.
+DOI: [10.5281/zenodo.23761574](https://doi.org/10.5281/zenodo.23761574)
+
+| Version | DOI |
+|---|---|
+| V27 | [10.5281/zenodo.23761574](https://doi.org/10.5281/zenodo.23761574) |
+| V26 | [10.5281/zenodo.23727585](https://doi.org/10.5281/zenodo.23727585) |
+| V25 | [10.5281/zenodo.23699685](https://doi.org/10.5281/zenodo.23699685) |
+| V24 | [10.5281/zenodo.23680715](https://doi.org/10.5281/zenodo.23680715) |
+
+Zenodo V27: [10.5281/zenodo.23761574](https://doi.org/10.5281/zenodo.23761574). Earlier V26 reference: [10.5281/zenodo.23727585](https://doi.org/10.5281/zenodo.23727585) *(refers strictly to V26, `step1`–`step25`)*. Earlier V25 reference: [10.5281/zenodo.23699685](https://doi.org/10.5281/zenodo.23699685) *(refers strictly to V25)*. Earlier V24 reference: [10.5281/zenodo.23680715](https://doi.org/10.5281/zenodo.23680715) *(refers strictly to V24)*.
 
 `step26` cosmology audit: Hubble tension vs. DESI DR1 BAO for the TAL scalar-tensor Yukawa model ($L = 10\;\text{km}$, $\alpha_Y = 1$). It uses the 12×12 DESI covariance with profiled $(\Omega_m, P)$ controls, model-specific re-integrated $r_s$/$r_d$, an illustrative Planck 3D prior, a synthetic SNe shape control, variational RSD, an algebraic BBN proxy, local Yukawa benchmarks, and no-go routes for a $\beta$ multiplier ($H_0$ 67.4 → 72.8). With $H_0 = 72.8$ held rigid, $\chi^2_{\text{BAO}} = 194.342$; the profiled fit gives $12.7405$. The required $r_d$ at $H_0 = 72.8$ is $140.02 \pm 1.74$ Mpc, and the joint $\chi^2$ is $15.6743 + 0.0623 + 3.9766 = 19.7133$. License: CC BY-NC 4.0.
 
