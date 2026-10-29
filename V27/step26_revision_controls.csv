@@ -1,0 +1,57 @@
+item,quantity,value,unit,note
+R1,K_old_over_K_new,0.25,,c^4/(32 pi G beta) vs c^4/(8 pi G beta)
+R1,K_V26_over_K_new_at_alpha_Y_1,1.0,,V26 S_II kinetic term
+R1,alpha_DEF_squared_new,0.07957747154594767,,alpha^2 beta
+R1,alpha_DEF_squared_old_same_alpha,0.3183098861837907,,4 alpha^2 beta
+R1,Omega_phi_attr_0_new,3.140163714423216e-47,,action-consistent
+R1,Omega_phi_attr_0_V26_std_convention,1.582423408775062e-50,,V26 (phi/4pi)^2 convention
+R2,DM_zstar_z_t_2.5,13428.29633259126,Mpc,
+R2,theta_star_100_z_t_2.5,1.0756598794731478,,
+R2,DM_zstar_z_t_10,13156.67043942014,Mpc,
+R2,theta_star_100_z_t_10,1.0978674035466254,,
+R2,DM_zstar_z_t_100,12920.171738192521,Mpc,
+R2,theta_star_100_z_t_100,1.1179634378966485,,
+R2,DM_zstar_z_t_1000,12843.587478182515,Mpc,
+R2,theta_star_100_z_t_1000,1.1246296752508922,,
+R2,theta_star_100_DMoverS_illustration,1.1247496473665601,,inconsistent illustration
+R4,chi2_BAO,15.674315850735521,,
+R4,chi2_rd_prior,0.06234684173455329,,
+R4,chi2_H0_prior,3.976606063419299,,
+R4,chi2_joint,19.713268755889374,,
+R5,M4_best_offset_mag,0.17595029184338376,,
+R5,M4_chi2_without_offset,522.0070364130726,,
+R5,M4_chi2_with_offset,0.9166139640771067,,
+R5,lowOm_0p2448_best_offset_mag,0.041597988247054726,,
+R5,lowOm_0p2448_chi2_without_offset,51.903320017855556,,
+R5,lowOm_0p2448_chi2_with_offset,22.77752667700254,,
+R5,lowest_node_delta_mu_M4_minus_ref,0.16782511463554073,mag,
+R5,identity_5log10_H0ratio,0.16735741388858635,mag,
+5.2,rel_err_massive_nu_z_0,4.4493844014947825e-05,,
+5.2,rel_err_H_total_z_0,3.158871526756212e-08,,
+5.2,rel_err_massive_nu_z_1,0.0001355389293720144,,
+5.2,rel_err_H_total_z_1,2.4023333234600157e-07,,
+5.2,rel_err_massive_nu_z_10,0.0015292886307085585,,
+5.2,rel_err_H_total_z_10,3.454285420909673e-06,,
+5.2,rel_err_massive_nu_z_100,-0.00026701639216697437,,
+5.2,rel_err_H_total_z_100,-8.115072307508786e-07,,
+5.2,rel_err_massive_nu_z_1000,0.0011487553322995225,,
+5.2,rel_err_H_total_z_1000,1.794656887802846e-05,,
+5.2,rel_err_massive_nu_z_3000,0.00033875179670483924,,
+5.2,rel_err_H_total_z_3000,1.0828195750223668e-05,,
+5.2,max_abs_rel_err_massive_nu,0.0034353644310098908,,z=33.5
+5.2,max_abs_rel_err_H_total,1.794656887802846e-05,,z=1e+03
+5.2,z0_normalization_drift_Omega,1.354616701249381e-07,,
+5.3,MatchTheta_Omega_m,0.24418521344074104,,
+5.3,MatchTheta_omega_cb_h2,0.1287692561601777,,
+F02,G_eff_over_G_lab_1_over_1_plus_q,0.9262883177508389,,q = alpha_Y^2 beta_Yuk = 1/(4 pi)
+F03,rs_zstar_m3_own_Mpc,144.3662261789594,,review value 144.36622618
+F03,rd_zdrag_m3_own_Mpc,147.01159289162408,,review value 147.01159289
+F03,theta100_m3,0.4134622666063775,,review value 0.41346227
+F03,chi2_bao_m3_full,2201.2992668905326,,review value 2201.29927
+F07,max_abs_delta_fsigma8_var_canonical,1.6663702008375972e-40,,shown in the RSD figure legend
+F09,chi2_low_Om_profiled_offset,22.77752667700254,,"N=18, nu=17"
+F12,low_Om_theta100_rs_only_shifted_fixed_DM,1.0424858198502744,,
+F12,low_Om_theta100_both_endpoints_shifted,1.0425028691050162,,
+N01,rows_with_null_boundary_value,4.0,,"FLRW, void, Milky Way disk (no boundary geometry) + V21 interior benchmark"
+N02,delta_Geff_over_Gstar_z0,3.796722347956356e-41,,direct Yukawa perturbation (Section 5)
+N02,max_abs_delta_fsigma8_var_canonical,1.6663702008375972e-40,,Section 5

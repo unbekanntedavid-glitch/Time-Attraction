@@ -4,6 +4,39 @@
 [![DOI V23](https://zenodo.org/badge/DOI/10.5281/zenodo.23639084.svg)](https://doi.org/10.5281/zenodo.23639084)
 [![DOI V21](https://zenodo.org/badge/DOI/10.5281/zenodo.23602501.svg)](https://doi.org/10.5281/zenodo.23602501)
 
+## V27 — Scalar-Tensor Yukawa Fit: Step 26 cosmology audit (no Zenodo DOI yet)
+
+**Time Attraction Law — Scalar-Tensor Yukawa Fit, V27** (2026-10-29)  
+**DOI:** none yet. V27 has no Zenodo DOI. · **License:** CC BY-NC 4.0 · **Author:** David Szabolcsi (ORCID [0009-0005-6300-074X](https://orcid.org/0009-0005-6300-074X)) · **Earlier DOIs:** V26 [`10.5281/zenodo.23727585`](https://doi.org/10.5281/zenodo.23727585) *(refers strictly to V26, `step1`–`step25`)*, V25 [`10.5281/zenodo.23699685`](https://doi.org/10.5281/zenodo.23699685) *(refers strictly to V25)*, V24 [`10.5281/zenodo.23680715`](https://doi.org/10.5281/zenodo.23680715) *(refers strictly to V24)*
+
+**Magyar:** A `V27/` a `step26` kozmológiai auditot tartalmazza: a Hubble-feszültség és a TAL skalár–tenzor Yukawa-modell ($L = 10\;\text{km}$, $\alpha_Y = 1$, egyesített attraktorág $\phi_{\text{attr}} = -\alpha_Y \gamma_L \rho_m$, $\Omega_{\phi,\text{attr}}(0) \sim 10^{-47}$) összevetése a DESI DR1 BAO adataival. Tartalma:
+- DESI DR1 BAO 12 pontos vektor és 12×12 kovariancia, profilozott $(\Omega_m, P)$ kontrollokkal;
+- modellenként újraintegrált $r_s$ és $r_d$;
+- illusztratív Planck 3D prior;
+- szintetikus SNe alakkontroll;
+- variációs RSD $\delta f\sigma_8$;
+- algebrai BBN proxy;
+- lokális Yukawa benchmarkok;
+- no-go utak egy $\beta$-szorzóra, amely $H_0$-t 67,4-ről 72,8-ra vinné;
+- Einstein–Jordan $G$-szótár ($G_T = G_* A^2$).
+
+A merev $H_0 = 72{,}8$ esetén $\chi^2_{\text{BAO}} = 194{,}342$, a profilozott $(\Omega_m, P)$ illesztésé $12{,}7405$. $H_0 = 72{,}8$-nál a szükséges $r_d = 140{,}02 \pm 1{,}74\;\text{Mpc}$. A közös $\chi^2$ felbontása $15{,}6743 + 0{,}0623 + 3{,}9766 = 19{,}7133$ (BAO + $r_d$-prior + $H_0$-prior). A 72,8±1,0 feltételezett lokális $H_0$ benchmark-prior. Az összes kimenet a `run_all.py` futtatásával állítható elő újra. Négy Academia Co-scientist bírálati kör zárult le (R1–R6, F01–F12, N01, N02, T01); a 4. kör jelentése a [`V27/academia_review/`](V27/academia_review/) mappában van, a bíráló szövegével változatlanul.
+
+**English:** `V27/` contains the `step26` cosmology audit, which confronts the Hubble tension with the TAL scalar-tensor Yukawa model ($L = 10\;\text{km}$, $\alpha_Y = 1$, unified attractor branch $\phi_{\text{attr}} = -\alpha_Y \gamma_L \rho_m$, $\Omega_{\phi,\text{attr}}(0) \sim 10^{-47}$) using DESI DR1 BAO data. It covers:
+- the DESI DR1 BAO 12-point vector and 12×12 covariance, with profiled $(\Omega_m, P)$ controls;
+- model-specific re-integrated $r_s$ and $r_d$;
+- an illustrative Planck 3D prior;
+- a synthetic SNe shape control;
+- variational RSD $\delta f\sigma_8$;
+- an algebraic BBN proxy;
+- local Yukawa benchmarks;
+- no-go routes for a $\beta$ multiplier that would move $H_0$ from 67.4 to 72.8;
+- the Einstein–Jordan $G$ dictionary ($G_T = G_* A^2$).
+
+With $H_0 = 72.8$ held rigid, $\chi^2_{\text{BAO}} = 194.342$; the profiled $(\Omega_m, P)$ fit gives $12.7405$. At $H_0 = 72.8$ the required $r_d = 140.02 \pm 1.74\;\text{Mpc}$. The joint $\chi^2$ splits into $15.6743 + 0.0623 + 3.9766 = 19.7133$ (BAO + $r_d$ prior + $H_0$ prior). The value 72.8±1.0 is an assumed local $H_0$ benchmark prior. Every output can be regenerated with `run_all.py`. Four Academia Co-scientist review rounds are closed (R1–R6, F01–F12, N01, N02, T01). The round-4 report is in [`V27/academia_review/`](V27/academia_review/), with the reviewer's text unchanged.
+
+**V27 (`V27/`):** HU/EN chapters `step26_desi_bao_planck_sne_rsd_bbn_nogo_hu.md` / `_en.md` and their PDFs (13 pages each), shared background module `tal_cosmology_common.py`, `run_all.py` entry point, the DESI DR1 inputs, CSV/PNG outputs, `tal_hubble_desi_bao_summary.json`, the text regression test `test_step26_text_regression.py`, and `SHA256SUMS.txt` (46 verified entries). Verification: `cd V27 && sha256sum -c SHA256SUMS.txt`.
+
 ## V26 — Scalar-Tensor Yukawa Fit (Zenodo V26, DOI 10.5281/zenodo.23727585)
 
 **Time Attraction Law — Scalar-Tensor Yukawa Fit, V26** (2026-10-28)  
@@ -43,6 +76,7 @@ Previous version: V23 (Zenodo V23, DOI [10.5281/zenodo.23639084](https://doi.org
 
 | Version | Record | DOI |
 |---|---|---|
+| V27 | Time Attraction Law — Scalar-Tensor Yukawa Fit, V27 (`step26` cosmology audit, `V27/`) | no Zenodo DOI yet |
 | V26 (Zenodo V26) | [Time Attraction Law — Scalar-Tensor Yukawa Fit, V26](https://doi.org/10.5281/zenodo.23727585) | [`10.5281/zenodo.23727585`](https://doi.org/10.5281/zenodo.23727585) |
 | V25 (Zenodo V25) | Time Attraction Law — Scalar-Tensor Yukawa Fit, V25 (sign fixes, 4-comp exterior BVP, coupled GL2 stability & diagnostics). [`10.5281/zenodo.23680715`](https://doi.org/10.5281/zenodo.23680715) refers strictly to V24. | [`10.5281/zenodo.23699685`](https://doi.org/10.5281/zenodo.23699685) |
 | V24 (Zenodo V24) | Time Attraction Law — Scalar-Tensor Yukawa Fit, V24 | [`10.5281/zenodo.23680715`](https://doi.org/10.5281/zenodo.23680715) |
@@ -58,8 +92,9 @@ Previous version: V23 (Zenodo V23, DOI [10.5281/zenodo.23639084](https://doi.org
 | v14 | Previous version | [`10.5281/zenodo.23217189`](https://doi.org/10.5281/zenodo.23217189) |
 | Parent | Parent record of v17 | [`10.5281/zenodo.22983681`](https://doi.org/10.5281/zenodo.22983681) |
 
-### Contents ([`V26/`](V26/), [`V25/`](V25/), and [`V24/`](V24/))
+### Contents ([`V27/`](V27/), [`V26/`](V26/), [`V25/`](V25/), and [`V24/`](V24/))
 
+- [`V27/`](V27/) folder: `step26` cosmology audit (DESI DR1 BAO, Planck, SNe, RSD, BBN, local Yukawa, no-go routes), HU/EN Markdown and PDFs (13 pages each), Python sources with `run_all.py`, DESI DR1 inputs, CSV/PNG/JSON outputs, `academia_review/`, and `SHA256SUMS.txt` (46 verified entries). No Zenodo DOI yet.
 - [`V26/`](V26/) folder: bilingual HU/EN chapters `step1`–`step25`, `step23_25_gw170817_lensing_bullet_cmb_hu.pdf` (27 pages), `step23_25_gw170817_lensing_bullet_cmb_en.pdf` (27 pages), `V26_english_audit_package.pdf` / `V25_english_audit_package.pdf` (167 pages), `V26_english_translations.zip` / `V25_english_translations.zip` (27 files), `scalar-tensor-yukawa-fit_audit_package.zip` (393 files), Python solvers (`gw170817_and_lensing_audit.py`, `bullet_cluster_lensing_audit.py`, `cmb_and_cosmology_audit.py`, `curved_yukawa_adm_and_stability.py`), `SHA256SUMS_step23_25.txt` (20 verified entries), and `SHA256SUMS.txt` (392 verified entries).
 - [`V25/`](V25/) folder: bilingual HU/EN chapters `step1`–`step22`, `V25_english_audit_package.pdf` (109 pages), `V25_english_translations.zip`, `scalar-tensor-yukawa-fit_audit_package.zip` (341 files), Python solvers (`curved_yukawa_adm_and_stability.py` with `scalar_m_sign = -1.0`), SPARC & TOV data, and `SHA256SUMS.txt` (341 verified entries). Zenodo V25 DOI [`10.5281/zenodo.23699685`](https://doi.org/10.5281/zenodo.23699685).
 - [`V24/`](V24/) folder: earlier V24 archive (Zenodo DOI [`10.5281/zenodo.23680715`](https://doi.org/10.5281/zenodo.23680715)).

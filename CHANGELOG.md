@@ -1,5 +1,35 @@
 # Changelog
 
+## Time Attraction Law — Scalar-Tensor Yukawa Fit, V27 — 2026-10-29
+
+DOI: none yet. V27 has no Zenodo DOI. Earlier DOIs: V26 [10.5281/zenodo.23727585](https://doi.org/10.5281/zenodo.23727585) *(refers strictly to V26, `step1`–`step25`)*, V25 [10.5281/zenodo.23699685](https://doi.org/10.5281/zenodo.23699685) *(refers strictly to V25)*, V24 [10.5281/zenodo.23680715](https://doi.org/10.5281/zenodo.23680715) *(refers strictly to V24)*.
+
+`step26` cosmology audit: Hubble tension vs. DESI DR1 BAO for the TAL scalar-tensor Yukawa model ($L = 10\;\text{km}$, $\alpha_Y = 1$). It uses the 12×12 DESI covariance with profiled $(\Omega_m, P)$ controls, model-specific re-integrated $r_s$/$r_d$, an illustrative Planck 3D prior, a synthetic SNe shape control, variational RSD, an algebraic BBN proxy, local Yukawa benchmarks, and no-go routes for a $\beta$ multiplier ($H_0$ 67.4 → 72.8). With $H_0 = 72.8$ held rigid, $\chi^2_{\text{BAO}} = 194.342$; the profiled fit gives $12.7405$. The required $r_d$ at $H_0 = 72.8$ is $140.02 \pm 1.74$ Mpc, and the joint $\chi^2$ is $15.6743 + 0.0623 + 3.9766 = 19.7133$. License: CC BY-NC 4.0.
+
+Review fixes (four Academia Co-scientist rounds):
+- **R1–R6:**
+  - V26 normalization cross-check ($K_{V26}/K_{\text{new}} = 1$);
+  - true piecewise late transition ($100\theta_*$ = 1.075660, 1.097867, 1.117963, 1.124630 for $z_t$ = 2.5, 10, 100, 1000);
+  - $\chi^2$ split (R4);
+  - symmetric SNe zero-point (M4 $\chi^2 = 0.9166$);
+  - Fermi–Dirac neutrino check;
+  - strict JSON with no NaN;
+  - a self-contained `run_all.py`.
+- **F01–F12:**
+  - Jordan-frame coupling $G_T = G_* A^2$;
+  - $G$ dictionary $G_{\text{lab}} \approx G_*(1+q)$, ratio 0.9262883;
+  - M3 uses its own horizons ($r_s = 144.36622618$, $r_d = 147.01159289$ Mpc, $\chi^2_{\text{BAO}} = 2201.29927$);
+  - 72.8±1.0 relabelled as an assumed local $H_0$ benchmark prior;
+  - V21 profile values checked;
+  - both $\theta_*$ variants reported (1.04248582, 1.04250287);
+  - `--pdf` exits with code 2 when pdflatex is missing;
+  - label, figure and export fixes.
+- **N01:** the boundary cell is n.a. (JSON/CSV `null`) for the homogeneous FLRW, void and Milky Way disk rows, with a new `boundary_status` field.
+- **N02:** the $\Omega_\phi \sim 10^{-47}$ background energy is separated from the direct RSD Yukawa term $\delta f\sigma_8 \approx 1.67\times10^{-40}$.
+- **T01:** HU/EN text regression test `test_step26_text_regression.py` (77/77 checks, mutation-tested).
+
+- Added [`V27/`](V27/): HU/EN `step26` Markdown chapters and PDFs (13 pages each), Python sources (`tal_cosmology_common.py`, `run_all.py`, `run_step1_*.py`, `run_step2_nogo_and_report.py`, `run_step26_revision_controls.py`), DESI DR1 inputs, CSV/PNG/JSON outputs, `academia_review/` (round-4 report and verification log, verbatim), and `SHA256SUMS.txt` (46 verified entries).
+
 ## Time Attraction Law — Scalar-Tensor Yukawa Fit, V26 — 2026-10-28
 
 DOI: [10.5281/zenodo.23727585](https://doi.org/10.5281/zenodo.23727585)

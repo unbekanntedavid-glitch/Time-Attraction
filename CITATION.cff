@@ -1,12 +1,11 @@
 cff-version: 1.2.0
-message: "If you use this work, please cite it using the metadata below. Note: DOI 10.5281/zenodo.23727585 refers to V26, DOI 10.5281/zenodo.23699685 refers strictly to the earlier V25 release, and DOI 10.5281/zenodo.23680715 refers strictly to the earlier V24 release."
-title: "Time Attraction Law — Scalar-Tensor Yukawa Fit, V26"
-version: "V26"
-doi: 10.5281/zenodo.23727585
-date-released: 2026-10-28
+message: "If you use this work, please cite it using the metadata below. V27 has no Zenodo DOI yet. Note: DOI 10.5281/zenodo.23727585 refers strictly to V26 (step1–25), DOI 10.5281/zenodo.23699685 refers strictly to the earlier V25 release, and DOI 10.5281/zenodo.23680715 refers strictly to the earlier V24 release."
+title: "Time Attraction Law — Scalar-Tensor Yukawa Fit, V27"
+version: "V27"
+date-released: 2026-10-29
 license: CC-BY-NC-4.0
 repository-code: "https://github.com/unbekanntedavid-glitch/Time-Attraction"
-url: "https://doi.org/10.5281/zenodo.23727585"
+url: "https://github.com/unbekanntedavid-glitch/Time-Attraction/tree/main/V27"
 authors:
   - family-names: Szabolcsi
     given-names: David
@@ -15,7 +14,7 @@ authors:
 identifiers:
   - type: doi
     value: 10.5281/zenodo.23727585
-    description: "Zenodo V26: Time Attraction Law — Scalar-Tensor Yukawa Fit, V26"
+    description: "Previous version: Zenodo V26: Time Attraction Law — Scalar-Tensor Yukawa Fit, V26 (refers strictly to V26, step1–25)"
   - type: doi
     value: 10.5281/zenodo.23699685
     description: "Previous version: Zenodo V25: Time Attraction Law — Scalar-Tensor Yukawa Fit, V25 (refers strictly to V25)"
