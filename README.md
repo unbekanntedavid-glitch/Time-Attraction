@@ -197,12 +197,14 @@ The package is now directly accessible both under [`V20/`](V20/) and [`V18/`](V1
 
 ### Tartalom (`V18/`)
 
-- [`V18/zenodo_v20/`](V18/zenodo_v20/) — a Zenodo V20 rekord négy fájlja, változatlanul (MD5 a Zenodo API alapján ellenőrizve):
+- [`V18/zenodo_v20/`](V18/zenodo_v20/) — a Zenodo V20 rekord négy fájlja:
   `final_report (3).zip`, `report_hu (3).pdf`, `revision3_review_HU.md`, `revision3_review_EN.md`.
+  A `report_hu (3).pdf` és a két review fájl változatlan (MD5 a Zenodo API alapján ellenőrizve). A `final_report (3).zip` újra van építve: az Oscilloquartz adatlap kimaradt, mert a terjesztési jog nem igazolt. Ugyanez a csere megvan a [`V20/`](V20/) másolatban is.
 - [`V18/final/`](V18/final/) — **a V18 végleges jelentéscsomagja**: `final_report.zip` és kicsomagolt tartalma
   (`report_hu.pdf`, `report_hu.md`, `code/final_fixed.py`, `code/energy_integrator.py`, `code/fields.py`,
   `code/tophat_finite_source.py`, `code/build_pdf.py`, `csv/*.csv`, `csv/fixed_case_numbers.json`,
-  `plots/fixed_signal_vs_L.png`, `refs/oscilloquartz_8663_ed03-2003.pdf`, `SHA256SUMS.txt`).
+  `plots/fixed_signal_vs_L.png`, `refs/REFERENCES.md`, `SHA256SUMS.txt`).
+  Az Oscilloquartz OCXO 8663 adatlap kikerült a kicsomagolt `refs/` mappából és a jelentés ZIP-jeiből, mert a terjesztési jog nem igazolt. A hivatkozás: `refs/REFERENCES.md`.
   A Zenodo V20 jelentéshez képest a revision3 review két szövegjavítását tartalmazza szó szerint
   (távoli „0 szórás” megjegyzés, hőkontroll átfogalmazása), továbbá a review szerinti pontosításokat
   (L = 0.95 m illesztési hiba pontos értéke, az „izolált, polaritásra páros tekercs-B² tag” megnevezés az 5. fejezetben, Ítélet).
@@ -224,9 +226,9 @@ The package is now directly accessible both under [`V20/`](V20/) and [`V18/`](V1
 | [`V18/zenodo_v20/revision3_review_EN.md`](V18/zenodo_v20/revision3_review_EN.md) | `103e77e72906312f16090822712961494ddf8b502b835d3121bb4277a1598d30` |
 | [`V18/revision3_checks.json`](V18/revision3_checks.json) | `836e75b2baa67c9084891f3bb5dba33ae218f6f75025eaa00add8b366114e01f` |
 | `V18/make_revision3_checks.py` | `7189e747d1424806e1ee233c3f10164e329df7b5c6a066535a91f85bf7ad0a52` |
-| `V18/final/final_report.zip` | `5540ebdb25137fe48c2e0aa05c9e7057d2407c22a9891ca5daa37505b7ad2239` |
+| `V18/final/final_report.zip` | `5f522a93ee06a9e174f8e00f5d82d3032a6f0413b096a2d02aa1a7b8727a0412` |
 | `V18/final/report_hu.pdf` | `c4225b1917b493db03e8733228dd5337a010fa5bbb3d7894e8bd5a7b5fedae81` |
-| `V18/zenodo_v20/final_report (3).zip` | `160981d3adb435b4fa719ca1a9d9a04d4e889a27f9d4c7bb0381e5c057ad2ea8` |
+| `V18/zenodo_v20/final_report (3).zip` | `a517a09cb299bc51543a24cad0aa397db27cfce9da0a950c06f8de7321f21030` |
 | `V18/zenodo_v20/report_hu (3).pdf` | `544567958646b397e77036ade822da75bdf2f79b4dd18235bcff6d5ca14ab20a` |
 | [`V18/manuscript/tal_v20_fop.pdf`](V18/manuscript/tal_v20_fop.pdf) | `f5311f8148ff0a0b587354548face6b28fa9e808fdfafcf2b38d6bdf26b90666` |
 | `V18/manuscript/tal_v20_fop_manuscript.zip` | `de94f87bf2d1b1243d95967b8b99f027dcaef1f306fcc0430bb2947a0807e1b1` |

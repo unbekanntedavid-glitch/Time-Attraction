@@ -16,6 +16,10 @@ Preliminary research package. Step 26 DESI DR1 BAO audit: rigid $\chi^2_{\text{B
 
 - Added [`V28/`](V28/): `step26_cosmology_desi_bao/`, `simulator/` (`index.html`, `verify_node.js`), `step27_local_yukawa_branch/`, `DATA_LICENSES.md`, `README_V28_en.md`, `README_V28_hu.md`, and `SHA256SUMS.txt` (97 verified entries).
 
+## Oscilloquartz datasheet removed — 2026-10-30
+
+The Oscilloquartz OCXO 8662/8663 product description (Oscilloquartz S.A., Neuchâtel, ed. 03, 2003) was removed from `V18/` and `V20/`, including the copies inside the report ZIPs. Redistribution rights were not verified. `refs/REFERENCES.md` records the citation and where to obtain the datasheet. SHA-256 lists that named the datasheet or the rebuilt ZIPs were updated. Other entries in those ZIPs stay byte-identical.
+
 ## Time Attraction Law — Scalar-Tensor Yukawa Fit, V27 — 2026-10-29
 
 DOI: [10.5281/zenodo.23761574](https://doi.org/10.5281/zenodo.23761574)
