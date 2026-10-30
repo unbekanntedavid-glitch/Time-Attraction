@@ -1,12 +1,12 @@
 cff-version: 1.2.0
-message: "If you use this work, please cite it using the metadata below. Note: DOI 10.5281/zenodo.23761574 refers to V27, DOI 10.5281/zenodo.23727585 refers strictly to V26 (step1–25), DOI 10.5281/zenodo.23699685 refers strictly to the earlier V25 release, and DOI 10.5281/zenodo.23680715 refers strictly to the earlier V24 release."
-title: "Time Attraction Law — Scalar-Tensor Yukawa Fit, V27"
-version: "V27"
-doi: 10.5281/zenodo.23761574
-date-released: 2026-10-29
+message: "If you use this work, please cite it using the metadata below. Note: DOI 10.5281/zenodo.23814053 refers to V28 (new version of V27), DOI 10.5281/zenodo.23761574 refers to V27, DOI 10.5281/zenodo.23727585 refers strictly to V26 (step1–25), DOI 10.5281/zenodo.23699685 refers strictly to the earlier V25 release, and DOI 10.5281/zenodo.23680715 refers strictly to the earlier V24 release. Concept DOI 10.5281/zenodo.22983681 is the parent record."
+title: "Time Attraction Law — Scalar-Tensor Yukawa Fit, V28"
+version: "V28"
+doi: 10.5281/zenodo.23814053
+date-released: 2026-10-30
 license: CC-BY-NC-4.0
 repository-code: "https://github.com/unbekanntedavid-glitch/Time-Attraction"
-url: "https://doi.org/10.5281/zenodo.23761574"
+url: "https://doi.org/10.5281/zenodo.23814053"
 authors:
   - family-names: Szabolcsi
     given-names: David
@@ -14,8 +14,11 @@ authors:
     orcid: "https://orcid.org/0009-0005-6300-074X"
 identifiers:
   - type: doi
+    value: 10.5281/zenodo.23814053
+    description: "Zenodo V28: Time Attraction Law — Scalar-Tensor Yukawa Fit, V28 (new version of V27; concept DOI 10.5281/zenodo.22983681)"
+  - type: doi
     value: 10.5281/zenodo.23761574
-    description: "Zenodo V27: Time Attraction Law — Scalar-Tensor Yukawa Fit, V27"
+    description: "Previous version: Zenodo V27: Time Attraction Law — Scalar-Tensor Yukawa Fit, V27"
   - type: doi
     value: 10.5281/zenodo.23727585
     description: "Previous version: Zenodo V26: Time Attraction Law — Scalar-Tensor Yukawa Fit, V26 (refers strictly to V26, step1–25)"

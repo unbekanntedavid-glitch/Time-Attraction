@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Time Attraction Law · Scalar-Tensor Yukawa Fit V27 · Simulator</title>
+<meta name="description" content="Interactive simulator: Time Attraction Law, scalar-tensor Yukawa fit V27. Yukawa force law, SPARC rotation curves, GW170817 and lensing, DESI DR1 BAO cosmology.">
+<style>/*@@CSS@@*/</style>
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <div class="logo">TAL</div>
+    <div>
+      <h1>Time Attraction Law — Scalar-Tensor Yukawa Fit <span class="ver">V27</span></h1>
+      <p class="sub" data-t="subtitle"></p>
+    </div>
+  </div>
+  <div class="lang"><button id="lang-hu" type="button">HU</button><button id="lang-en" type="button">EN</button></div>
+</header>
+<nav class="tabs" id="tabs">
+  <button data-tab="yukawa" data-t="tab_yukawa"></button>
+  <button data-tab="sparc" data-t="tab_sparc"></button>
+  <button data-tab="gw" data-t="tab_gw"></button>
+  <button data-tab="cosmo" data-t="tab_cosmo"></button>
+  <button data-tab="probes" data-t="tab_probes"></button>
+  <button data-tab="info" data-t="tab_info"></button>
+</nav>
+<main>
+<!-- ===================== 1. Yukawa ===================== -->
+<section class="tab" id="tab-yukawa">
+  <div class="grid2">
+    <div class="card">
+      <h2 data-t="yk_title"></h2>
+      <p class="lead" data-t="yk_lead"></p>
+      <div class="ctrl" id="yk-ctrl"></div>
+      <div class="kv" id="yk-out"></div>
+    </div>
+    <div class="card">
+      <canvas id="yk-chart" class="chart"></canvas>
+      <p class="cap" data-t="yk_cap"></p>
+      <canvas id="yk-chart2" class="chart small"></canvas>
+      <p class="cap" data-t="yk_cap2"></p>
+      <p class="ptnote" data-t="yk_point_note"></p>
+    </div>
+  </div>
+  <div class="card formulas">
+    <h3 data-t="formulas"></h3>
+    <div class="fgrid">
+      <div class="f">Ψ(r) = −G<sub>*</sub>M/r · [1 + q e<sup>−r/L</sup>],&nbsp; q = α<sub>Y</sub>² β</div>
+      <div class="f">G<sub>eff</sub>(r)/G<sub>*</sub> = 1 + q (1 + r/L) e<sup>−r/L</sup></div>
+      <div class="f">G<sub>lab</sub> ≈ G<sub>*</sub>(1 + q),&nbsp; G<sub>eff</sub>(r ≫ L)/G<sub>lab</sub> = 1/(1 + q) = 0.9262883</div>
+      <div class="f">G<sub>T</sub> = G<sub>*</sub> A²(φ),&nbsp; A = e<sup>α<sub>Y</sub>φ</sup>,&nbsp; β = 1/(4π)</div>
+      <div class="f">φ(r) = −α<sub>Y</sub> β · GM/(c² r) · e<sup>−r/L</sup></div>
+      <div class="f">m<sub>φ</sub>c² = ħc/L,&nbsp; γ<sub>L</sub> = 4πβ G L²/c²</div>
+    </div>
+    <p class="note" data-t="yk_conv"></p>
+  </div>
+</section>
+<!-- ===================== 2. SPARC ===================== -->
+<section class="tab" id="tab-sparc">
+  <div class="grid2">
+    <div class="card">
+      <h2 data-t="sp_title"></h2>
+      <p class="lead" data-t="sp_lead"></p>
+      <div class="ctrl">
+        <label class="row"><span data-t="sp_galaxy"></span><select id="sp-gal"></select></label>
+      </div>
+      <div class="ctrl" id="sp-ctrl"></div>
+      <label class="chk"><input type="checkbox" id="sp-explore"> <span data-t="sp_explore"></span></label>
+      <div class="ctrl" id="sp-ctrl2"></div>
+      <div class="btns"><button id="sp-best" type="button" data-t="sp_best"></button><button id="sp-reset" type="button" data-t="reset"></button></div>
+      <div class="kv" id="sp-out"></div>
+    </div>
+    <div class="card">
+      <canvas id="sp-chart" class="chart tall"></canvas>
+      <p class="cap" data-t="sp_cap"></p>
+      <canvas id="sp-chart2" class="chart small"></canvas>
+      <p class="cap" data-t="sp_cap2"></p>
+    </div>
+  </div>
+  <div class="card">
+    <h3 data-t="sp_sample"></h3>
+    <div class="kv" id="sp-sample"></div>
+    <p class="note" data-t="sp_note"></p>
+  </div>
+</section>
+<!-- ===================== 3. GW & lensing ===================== -->
+<section class="tab" id="tab-gw">
+  <div class="grid2">
+    <div class="card">
+      <h2 data-t="gw_title"></h2>
+      <p class="lead" data-t="gw_lead"></p>
+      <div class="ctrl" id="gw-ctrl"></div>
+      <div class="kv" id="gw-out"></div>
+    </div>
+    <div class="card">
+      <canvas id="gw-chart" class="chart"></canvas>
+      <p class="cap" data-t="gw_cap"></p>
+      <div class="f">ω² = c²k² + c²/L²,&nbsp; f<sub>cut</sub> = c/(2πL),&nbsp; v<sub>g</sub>/c = √(1 − (f<sub>cut</sub>/f)²),&nbsp; c<sub>T</sub> = c</div>
+    </div>
+  </div>
+  <div class="grid2">
+    <div class="card">
+      <h2 data-t="ln_title"></h2>
+      <p class="lead" data-t="ln_lead"></p>
+      <div class="ctrl"><label class="row"><span data-t="ln_body"></span><select id="ln-body"><option value="sun"></option><option value="ns"></option></select></label></div>
+      <div class="ctrl" id="ln-ctrl"></div>
+      <div class="kv" id="ln-out"></div>
+    </div>
+    <div class="card">
+      <canvas id="ln-chart" class="chart"></canvas>
+      <p class="cap" data-t="ln_cap"></p>
+      <div class="f">γ<sub>PPN</sub>(r) = (e<sup>r/L</sup> − β)/(e<sup>r/L</sup> + β),&nbsp; Φ<sub>lens</sub>/Ψ<sub>dyn</sub> = e<sup>r/L</sup>/(β + e<sup>r/L</sup>),&nbsp; Φ<sub>lens</sub> = −GM/r</div>
+      <div class="f">α̂ = 2∫ [ … ] dθ (Schwarzschild, M<sub>ADM</sub>, 128-pt Gauss–Legendre),&nbsp; Δt<sub>Cassini</sub> = 4 GM/c³ · ln(4 r<sub>E</sub> r<sub>S</sub>/b²)</div>
+    </div>
+  </div>
+</section>
+<!-- ===================== 4. Cosmology ===================== -->
+<section class="tab" id="tab-cosmo">
+  <div class="grid2">
+    <div class="card">
+      <h2 data-t="co_title"></h2>
+      <p class="lead" data-t="co_lead"></p>
+      <div class="ctrl">
+        <label class="row"><span data-t="co_bg"></span><select id="co-bg"><option value="shape"></option><option value="full"></option><option value="flat2p"></option><option value="m3"></option></select></label>
+        <label class="row"><span data-t="co_rdmode"></span><select id="co-rdmode"><option value="own"></option><option value="rd"></option><option value="P"></option></select></label>
+      </div>
+      <div class="ctrl" id="co-ctrl"></div>
+      <div class="btns" id="co-presets"></div>
+      <div class="kv" id="co-out"></div>
+    </div>
+    <div class="card">
+      <canvas id="co-bao" class="chart tall"></canvas>
+      <p class="cap" data-t="co_cap_bao"></p>
+      <canvas id="co-pull" class="chart small"></canvas>
+      <p class="cap" data-t="co_cap_pull"></p>
+    </div>
+  </div>
+  <div class="grid2">
+    <div class="card">
+      <h3 data-t="co_fits"></h3>
+      <div class="ctrl" id="co-prior"></div>
+      <div class="btns"><button id="co-refit" type="button" data-t="co_refit"></button></div>
+      <div class="kv" id="co-fits"></div>
+    </div>
+    <div class="card">
+      <canvas id="co-ladder" class="chart tall"></canvas>
+      <p class="cap" data-t="co_cap_ladder"></p>
+      <canvas id="co-hz" class="chart small"></canvas>
+      <p class="cap" data-t="co_cap_hz"></p>
+    </div>
+  </div>
+  <div class="card nogo">
+    <h3 data-t="co_nogo_t"></h3>
+    <p data-t="co_nogo"></p>
+  </div>
+  <div class="card formulas">
+    <h3 data-t="formulas"></h3>
+    <div class="fgrid">
+      <div class="f">r<sub>s</sub>(z) = (c/H<sub>0</sub>) ∫<sub>z</sub><sup>∞</sup> c<sub>s</sub>(z′)/E(z′) dz′,&nbsp; c<sub>s</sub> = 1/√(3[1 + 3Ω<sub>b</sub>/(4Ω<sub>γ</sub>(1+z))])</div>
+      <div class="f">z<sub>*</sub> = 1089.80,&nbsp; z<sub>drag</sub> = 1059.94,&nbsp; 100θ<sub>*</sub> = 100 r<sub>s</sub>(z<sub>*</sub>)/D<sub>M</sub>(z<sub>*</sub>)</div>
+      <div class="f">D<sub>H</sub> = c/H(z),&nbsp; D<sub>M</sub> = (c/H<sub>0</sub>) S<sub>k</sub>[∫ H<sub>0</sub>/H dz],&nbsp; D<sub>V</sub> = (z D<sub>M</sub>² D<sub>H</sub>)<sup>1/3</sup></div>
+      <div class="f">χ² = Δᵀ C<sup>−1</sup> Δ (DESI DR1, 12 × 12),&nbsp; P = H<sub>0</sub> r<sub>d</sub> profiled analytically</div>
+      <div class="f">E²(z) = Ω<sub>cb</sub>(1+z)³ + Ω<sub>r</sub>(1+z)⁴ + Ω<sub>ν</sub>(z) + Ω<sub>k</sub>(1+z)² + Ω<sub>DE</sub></div>
+      <div class="f">χ²<sub>joint</sub> = χ²<sub>BAO</sub> + ((r<sub>d</sub> − 147.09)/0.26)² + ((H<sub>0</sub> − 72.8)/1.0)²</div>
+    </div>
+  </div>
+</section>
+<!-- ===================== 5. Further probes ===================== -->
+<section class="tab" id="tab-probes">
+  <div class="card">
+    <h2 data-t="pr_title"></h2>
+    <p class="lead" data-t="pr_lead"></p>
+    <div class="ctrl inline" id="pr-ctrl"></div>
+    <div class="btns" id="pr-presets"></div>
+    <div class="kv" id="pr-cmb"></div>
+  </div>
+  <div class="grid2">
+    <div class="card"><h3 data-t="pr_sne"></h3><canvas id="pr-sne" class="chart"></canvas><p class="cap" data-t="pr_sne_cap"></p><div class="kv" id="pr-sne-out"></div></div>
+    <div class="card"><h3 data-t="pr_rsd"></h3><canvas id="pr-rsd" class="chart"></canvas><p class="cap" data-t="pr_rsd_cap"></p>
+      <label class="chk"><input type="checkbox" id="pr-allm"> <span data-t="pr_allm"></span></label><div class="kv" id="pr-rsd-out"></div></div>
+  </div>
+  <div class="card"><h3 data-t="pr_bbn"></h3><div class="scroll" id="pr-bbn"></div><p class="note" data-t="pr_bbn_note"></p></div>
+  <div class="card"><h3 data-t="pr_local"></h3><div class="scroll" id="pr-local"></div><p class="note" data-t="pr_local_note"></p></div>
+</section>
+<!-- ===================== 6. Info ===================== -->
+<section class="tab" id="tab-info">
+  <div class="grid2">
+    <div class="card">
+      <h2 data-t="in_title"></h2>
+      <p class="lead" data-t="in_lead"></p>
+      <table class="tbl links">
+        <tr><th>V27</th><td><a href="https://doi.org/10.5281/zenodo.23761574" target="_blank" rel="noopener">10.5281/zenodo.23761574</a></td><td data-t="in_v27"></td></tr>
+        <tr><th>V26</th><td><a href="https://doi.org/10.5281/zenodo.23727585" target="_blank" rel="noopener">10.5281/zenodo.23727585</a></td><td data-t="in_v26"></td></tr>
+        <tr><th>V25</th><td><a href="https://doi.org/10.5281/zenodo.23699685" target="_blank" rel="noopener">10.5281/zenodo.23699685</a></td><td data-t="in_v25"></td></tr>
+        <tr><th>V24</th><td><a href="https://doi.org/10.5281/zenodo.23680715" target="_blank" rel="noopener">10.5281/zenodo.23680715</a></td><td data-t="in_v24"></td></tr>
+        <tr><th>GitHub</th><td colspan="2"><a href="https://github.com/unbekanntedavid-glitch/Time-Attraction/releases/tag/V27" target="_blank" rel="noopener">github.com/unbekanntedavid-glitch/Time-Attraction/releases/tag/V27</a></td></tr>
+      </table>
+      <div class="kv">
+        <div><span data-t="in_author"></span><b>David Szabolcsi</b></div>
+        <div><span>ORCID</span><b><a href="https://orcid.org/0009-0005-6300-074X" target="_blank" rel="noopener">0009-0005-6300-074X</a></b></div>
+        <div><span data-t="in_license"></span><b><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0 International</a></b></div>
+      </div>
+      <h3 data-t="in_params"></h3>
+      <div class="kv" id="in-params"></div>
+      <h3 data-t="in_limits_t"></h3>
+      <ul class="lim" id="in-limits"></ul>
+    </div>
+    <div class="card">
+      <h3 data-t="in_repro"></h3>
+      <p class="lead" data-t="in_repro_lead"></p>
+      <div class="scroll" id="in-repro"></div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="foot"><span>© David Szabolcsi · ORCID 0009-0005-6300-074X · CC BY-NC 4.0 International · DOI <a href="https://doi.org/10.5281/zenodo.23761574">10.5281/zenodo.23761574</a></span><span data-t="foot_note"></span><span class="fdata" data-t="foot_data"></span><details class="fack"><summary data-t="foot_ack_sum"></summary><p lang="en">This research used data obtained with the Dark Energy Spectroscopic Instrument (DESI). DESI construction and operations is managed by the Lawrence Berkeley National Laboratory. This material is based upon work supported by the U.S. Department of Energy, Office of Science, Office of High-Energy Physics, under Contract No. DE–AC02–05CH11231, and by the National Energy Research Scientific Computing Center, a DOE Office of Science User Facility under the same contract. Additional support for DESI was provided by the U.S. National Science Foundation (NSF), Division of Astronomical Sciences under Contract No. AST-0950945 to the NSF’s National Optical-Infrared Astronomy Research Laboratory; the Science and Technology Facilities Council of the United Kingdom; the Gordon and Betty Moore Foundation; the Heising-Simons Foundation; the French Alternative Energies and Atomic Energy Commission (CEA); the National Council of Humanities, Science and Technology of Mexico (CONAHCYT); the Ministry of Science and Innovation of Spain (MICINN), and by the DESI Member Institutions: www.desi.lbl.gov/collaborating-institutions. The DESI collaboration is honored to be permitted to conduct scientific research on I’oligam Du’ag (Kitt Peak), a mountain with particular significance to the Tohono O’odham Nation. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the U.S. National Science Foundation, the U.S. Department of Energy, or any of the listed funding agencies.</p><p lang="en">Based on observations obtained with Planck (http://www.esa.int/Planck), an ESA science mission with instruments and contributions directly funded by ESA Member States, NASA, and Canada.</p></details></footer>
+<script>/*@@DATA@@*/</script>
+<script>/*@@CORE@@*/</script>
+<script>/*@@CHART@@*/</script>
+<script>/*@@I18N@@*/</script>
+<script>/*@@REPRO@@*/</script>
+<script>/*@@UI@@*/</script>
+</body>
+</html>

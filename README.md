@@ -1,9 +1,25 @@
+[![DOI V28](https://zenodo.org/badge/DOI/10.5281/zenodo.23814053.svg)](https://doi.org/10.5281/zenodo.23814053)
 [![DOI V27](https://zenodo.org/badge/DOI/10.5281/zenodo.23761574.svg)](https://doi.org/10.5281/zenodo.23761574)
 [![DOI V26](https://zenodo.org/badge/DOI/10.5281/zenodo.23727585.svg)](https://doi.org/10.5281/zenodo.23727585)
 [![DOI V25](https://zenodo.org/badge/DOI/10.5281/zenodo.23699685.svg)](https://doi.org/10.5281/zenodo.23699685)
 [![DOI V24](https://zenodo.org/badge/DOI/10.5281/zenodo.23680715.svg)](https://doi.org/10.5281/zenodo.23680715)
 [![DOI V23](https://zenodo.org/badge/DOI/10.5281/zenodo.23639084.svg)](https://doi.org/10.5281/zenodo.23639084)
 [![DOI V21](https://zenodo.org/badge/DOI/10.5281/zenodo.23602501.svg)](https://doi.org/10.5281/zenodo.23602501)
+
+## V28 — Scalar-Tensor Yukawa Fit: Step 26 audit, simulator, and Step 27 local Yukawa branch (Zenodo V28, DOI 10.5281/zenodo.23814053)
+
+**Time Attraction Law — Scalar-Tensor Yukawa Fit, V28** (2026-10-30)  
+**DOI:** [https://doi.org/10.5281/zenodo.23814053](https://doi.org/10.5281/zenodo.23814053) · **Concept DOI:** [https://doi.org/10.5281/zenodo.22983681](https://doi.org/10.5281/zenodo.22983681) · **License:** CC BY-NC 4.0 · **Author:** David Szabolcsi (ORCID [0009-0005-6300-074X](https://orcid.org/0009-0005-6300-074X)) · **New version of V27:** [`10.5281/zenodo.23761574`](https://doi.org/10.5281/zenodo.23761574) · **Earlier DOIs:** V26 [`10.5281/zenodo.23727585`](https://doi.org/10.5281/zenodo.23727585) *(refers strictly to V26, `step1`–`step25`)*, V25 [`10.5281/zenodo.23699685`](https://doi.org/10.5281/zenodo.23699685) *(refers strictly to V25)*, V24 [`10.5281/zenodo.23680715`](https://doi.org/10.5281/zenodo.23680715) *(refers strictly to V24)*
+
+**Magyar:** A `V28/` előzetes kutatási csomag, a V27 új verziója. A V27 26. lépésének DESI DR1 BAO auditja: merev $\chi^2_{\text{BAO}} = 194{,}342$, profilozott $12{,}7405$, szükséges $r_d = 140{,}02 \pm 1{,}74\;\text{Mpc}$. Az interaktív szimulátor 117 JS–JSON összevetést futtat: 113 darab $10^{-6}$ alatt, 4 kissé fölötte, a legnagyobb relatív eltérés $8\times 10^{-5}$. A Nap-, Föld- és neutroncsillag-nézetek pontforrásos, gyenge-téri szemléltetések. A 27. lépés a rögzített, árnyékolatlan lokális Yukawa-ág tesztje ($\alpha = q = 1/(4\pi) \approx 0{,}0796$, $\lambda = 10\;\text{km}$). Idealizált réteg- és féltérmodellekben, feltételezett Gauss-féle $1\sigma$ hibaolvasat mellett a határhoz viszonyított arány $R$ a $10{,}5$–$160$ tartományba esik; az óceáni rekordnál $\alpha_{\text{lim}} \sim 0{,}00226$, $R \sim 35$. $R$ a határhoz viszonyított arány, nem szigma. A tartomány forgatókönyveket gyűjt, nem konfidenciaintervallum.
+
+Ítélet: „A saját újraszármaztatás erős feszültséget jelez a rögzített, árnyékolatlan lokális Yukawa-ággal; a kizárás megerősítéséhez a mérési válasz és a bizonytalanságkezelés ellenőrzése szükséges.” Az érvényességi kör csak ez az ág, nem minden TAL-változat. A harmadik féltől származó adatok feltételei: [`V28/DATA_LICENSES.md`](V28/DATA_LICENSES.md). A harmadik féltől származó cikkek DOI-val és hivatkozással szerepelnek, újraközlés nélkül.
+
+**English:** `V28/` is a preliminary research package and a new version of V27. The V27 Step 26 DESI DR1 BAO audit gives a rigid $\chi^2_{\text{BAO}} = 194.342$, a profiled value $12.7405$, and a required $r_d = 140.02 \pm 1.74\;\text{Mpc}$. The interactive simulator runs 117 JS-vs-JSON checks: 113 within $10^{-6}$, 4 slightly above, maximum $8\times 10^{-5}$. The Sun, Earth and neutron-star views are point-source weak-field illustrations. Step 27 is the test of the fixed, unscreened local Yukawa branch ($\alpha = q = 1/(4\pi) \approx 0.0796$, $\lambda = 10\;\text{km}$). In idealized layer and half-space models, under an assumed Gaussian $1\sigma$ error reading, the ratio to bound $R$ spans $10.5$–$160$; for the ocean record $\alpha_{\text{lim}} \sim 0.00226$ and $R \sim 35$. $R$ is a ratio to bound, not $\sigma$. The range collects scenarios, not a confidence interval.
+
+Verdict: “Our own re-derivation shows strong tension with the fixed, unscreened local Yukawa branch; confirming an exclusion requires checking the measurement response and the uncertainty treatment.” The scope is only this branch, not all TAL variants. Third-party data terms are in [`V28/DATA_LICENSES.md`](V28/DATA_LICENSES.md). Third-party papers are referenced by DOI and link, and are not redistributed.
+
+**V28 (`V28/`):** `step26_cosmology_desi_bao/`, `simulator/` (`index.html`, `verify_node.js`), `step27_local_yukawa_branch/`, `DATA_LICENSES.md`, `README_V28_en.md`, `README_V28_hu.md`, and `SHA256SUMS.txt` (97 verified entries). Verification: `cd V28 && sha256sum -c SHA256SUMS.txt`.
 
 ## V27 — Scalar-Tensor Yukawa Fit: Step 26 cosmology audit (Zenodo V27, DOI 10.5281/zenodo.23761574)
 
@@ -77,6 +93,7 @@ Previous version: V23 (Zenodo V23, DOI [10.5281/zenodo.23639084](https://doi.org
 
 | Version | Record | DOI |
 |---|---|---|
+| V28 (Zenodo V28) | [Time Attraction Law — Scalar-Tensor Yukawa Fit, V28](https://doi.org/10.5281/zenodo.23814053) (preliminary research package: Step 26 DESI DR1 BAO audit, interactive simulator, Step 27 fixed unscreened local Yukawa branch, `V28/`; new version of V27) | [`10.5281/zenodo.23814053`](https://doi.org/10.5281/zenodo.23814053) |
 | V27 (Zenodo V27) | [Time Attraction Law — Scalar-Tensor Yukawa Fit, V27](https://doi.org/10.5281/zenodo.23761574) (`step26` cosmology audit, `V27/`) | [`10.5281/zenodo.23761574`](https://doi.org/10.5281/zenodo.23761574) |
 | V26 (Zenodo V26) | [Time Attraction Law — Scalar-Tensor Yukawa Fit, V26](https://doi.org/10.5281/zenodo.23727585) | [`10.5281/zenodo.23727585`](https://doi.org/10.5281/zenodo.23727585) |
 | V25 (Zenodo V25) | Time Attraction Law — Scalar-Tensor Yukawa Fit, V25 (sign fixes, 4-comp exterior BVP, coupled GL2 stability & diagnostics). [`10.5281/zenodo.23680715`](https://doi.org/10.5281/zenodo.23680715) refers strictly to V24. | [`10.5281/zenodo.23699685`](https://doi.org/10.5281/zenodo.23699685) |
@@ -93,8 +110,9 @@ Previous version: V23 (Zenodo V23, DOI [10.5281/zenodo.23639084](https://doi.org
 | v14 | Previous version | [`10.5281/zenodo.23217189`](https://doi.org/10.5281/zenodo.23217189) |
 | Parent | Parent record of v17 | [`10.5281/zenodo.22983681`](https://doi.org/10.5281/zenodo.22983681) |
 
-### Contents ([`V27/`](V27/), [`V26/`](V26/), [`V25/`](V25/), and [`V24/`](V24/))
+### Contents ([`V28/`](V28/), [`V27/`](V27/), [`V26/`](V26/), [`V25/`](V25/), and [`V24/`](V24/))
 
+- [`V28/`](V28/) folder: preliminary research package with the V27 Step 26 DESI DR1 BAO audit, the interactive simulator (117 JS-vs-JSON checks), and the Step 27 fixed unscreened local Yukawa branch test. `DATA_LICENSES.md` states the third-party data terms. `SHA256SUMS.txt` has 97 verified entries. Zenodo V28 DOI [`10.5281/zenodo.23814053`](https://doi.org/10.5281/zenodo.23814053); concept DOI [`10.5281/zenodo.22983681`](https://doi.org/10.5281/zenodo.22983681); new version of V27 [`10.5281/zenodo.23761574`](https://doi.org/10.5281/zenodo.23761574).
 - [`V27/`](V27/) folder: `step26` cosmology audit (DESI DR1 BAO, Planck, SNe, RSD, BBN, local Yukawa, no-go routes), HU/EN Markdown and PDFs (13 pages each), Python sources with `run_all.py`, DESI DR1 inputs, CSV/PNG/JSON outputs, `academia_review/`, and `SHA256SUMS.txt` (46 verified entries). Zenodo V27 DOI [`10.5281/zenodo.23761574`](https://doi.org/10.5281/zenodo.23761574).
 - [`V26/`](V26/) folder: bilingual HU/EN chapters `step1`–`step25`, `step23_25_gw170817_lensing_bullet_cmb_hu.pdf` (27 pages), `step23_25_gw170817_lensing_bullet_cmb_en.pdf` (27 pages), `V26_english_audit_package.pdf` / `V25_english_audit_package.pdf` (167 pages), `V26_english_translations.zip` / `V25_english_translations.zip` (27 files), `scalar-tensor-yukawa-fit_audit_package.zip` (393 files), Python solvers (`gw170817_and_lensing_audit.py`, `bullet_cluster_lensing_audit.py`, `cmb_and_cosmology_audit.py`, `curved_yukawa_adm_and_stability.py`), `SHA256SUMS_step23_25.txt` (20 verified entries), and `SHA256SUMS.txt` (392 verified entries).
 - [`V25/`](V25/) folder: bilingual HU/EN chapters `step1`–`step22`, `V25_english_audit_package.pdf` (109 pages), `V25_english_translations.zip`, `scalar-tensor-yukawa-fit_audit_package.zip` (341 files), Python solvers (`curved_yukawa_adm_and_stability.py` with `scalar_m_sign = -1.0`), SPARC & TOV data, and `SHA256SUMS.txt` (341 verified entries). Zenodo V25 DOI [`10.5281/zenodo.23699685`](https://doi.org/10.5281/zenodo.23699685).

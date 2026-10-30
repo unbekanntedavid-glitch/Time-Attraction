@@ -1,5 +1,21 @@
 # Changelog
 
+## Time Attraction Law — Scalar-Tensor Yukawa Fit, V28 — 2026-10-30
+
+DOI: [10.5281/zenodo.23814053](https://doi.org/10.5281/zenodo.23814053)
+
+| Version | DOI |
+|---|---|
+| V28 | [10.5281/zenodo.23814053](https://doi.org/10.5281/zenodo.23814053) |
+| V27 | [10.5281/zenodo.23761574](https://doi.org/10.5281/zenodo.23761574) |
+| V26 | [10.5281/zenodo.23727585](https://doi.org/10.5281/zenodo.23727585) |
+
+Zenodo V28: [10.5281/zenodo.23814053](https://doi.org/10.5281/zenodo.23814053). Concept DOI: [10.5281/zenodo.22983681](https://doi.org/10.5281/zenodo.22983681). New version of V27: [10.5281/zenodo.23761574](https://doi.org/10.5281/zenodo.23761574). Earlier V26 reference: [10.5281/zenodo.23727585](https://doi.org/10.5281/zenodo.23727585) *(refers strictly to V26, `step1`–`step25`)*.
+
+Preliminary research package. Step 26 DESI DR1 BAO audit: rigid $\chi^2_{\text{BAO}} = 194.342$, profiled $12.7405$, required $r_d = 140.02 \pm 1.74$ Mpc. Interactive simulator: 117 JS-vs-JSON checks, 113 within $10^{-6}$, 4 slightly above, maximum $8\times 10^{-5}$; the Sun, Earth and neutron-star views are point-source weak-field illustrations. Step 27 tests the fixed, unscreened local Yukawa branch at $\alpha = q = 1/(4\pi) \approx 0.0796$ and $\lambda = 10$ km. In idealized layer and half-space models, under an assumed Gaussian $1\sigma$ error reading, the ratio to bound $R$ spans $10.5$–$160$; ocean $\alpha_{\text{lim}} \sim 0.00226$, $R \sim 35$. $R$ is a ratio to bound, not $\sigma$. The range collects scenarios, not a confidence interval. Verdict: our own re-derivation shows strong tension with the fixed, unscreened local Yukawa branch; confirming an exclusion requires checking the measurement response and the uncertainty treatment. The scope is only this branch, not all TAL variants. Third-party data terms are in [`V28/DATA_LICENSES.md`](V28/DATA_LICENSES.md). Third-party papers are referenced by DOI and link, and are not redistributed. License: CC BY-NC 4.0.
+
+- Added [`V28/`](V28/): `step26_cosmology_desi_bao/`, `simulator/` (`index.html`, `verify_node.js`), `step27_local_yukawa_branch/`, `DATA_LICENSES.md`, `README_V28_en.md`, `README_V28_hu.md`, and `SHA256SUMS.txt` (97 verified entries).
+
 ## Time Attraction Law — Scalar-Tensor Yukawa Fit, V27 — 2026-10-29
 
 DOI: [10.5281/zenodo.23761574](https://doi.org/10.5281/zenodo.23761574)

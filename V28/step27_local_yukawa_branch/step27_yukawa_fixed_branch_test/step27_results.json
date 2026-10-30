@@ -1,0 +1,839 @@
+{
+  "step": "Step 27 (part of V28) - fixed Yukawa branch local gravity test",
+  "series": "Time Attraction Law - Scalar-Tensor Yukawa Fit, V28 (V28 = V27 Step 26 cosmology package + interactive simulator + this Step 27)",
+  "doi_V28": null,
+  "prior_dois": {
+    "V24": "10.5281/zenodo.23680715",
+    "V25": "10.5281/zenodo.23699685",
+    "V26": "10.5281/zenodo.23727585",
+    "V27": "10.5281/zenodo.23761574"
+  },
+  "convention": "V = -G_inf m1 m2/r (1 + alpha exp(-r/lambda)); G_lab = G_inf (1+alpha) for r << lambda",
+  "model": {
+    "alpha_Y": 1.0,
+    "beta_Yuk": 0.07957747154594767,
+    "alpha_eff_q": 0.07957747154594767,
+    "lambda_m": 10000.0,
+    "sign": "positive (attractive)",
+    "universality": "universal: all matter couples to A^2(phi) g",
+    "screening": "none in the fixed branch (package: 'no screening branch is introduced')",
+    "G_eff_over_G_lab": 0.9262883177508389,
+    "sources": [
+      {
+        "file": "hubble_desi_bao_test/tal_cosmology_common.py",
+        "lines": "43-49",
+        "content": "L_KM = 10.0; ALPHA_Y = 1.0; BETA_YUK = 1/(4 pi)"
+      },
+      {
+        "file": "hubble_desi_bao_test/tal_cosmology_common.py",
+        "lines": "50-64",
+        "content": "action with kinetic term c^4/(4 pi G beta_Yuk), matter coupled to A^2(phi) g, A = exp(alpha_Y phi); point source phi = -alpha_Y beta_Yuk G M exp(-r/L)/(c^2 r). Test-mass potential c^2 alpha_Y phi = -alpha_Y^2 beta_Yuk G M exp(-r/L)/r, i.e. alpha = q"
+      },
+      {
+        "file": "hubble_desi_bao_test/step26_md_templates.py",
+        "lines": "103",
+        "content": "G_lab: for r << L and unscreened small bodies Phi = -G_* M (1 + q e^{-r/L})/r, G_lab ~ G_*(1+q), q = alpha_Y^2 beta_Yuk"
+      },
+      {
+        "file": "hubble_desi_bao_test/step26_md_templates.py",
+        "lines": "106",
+        "content": "... no screening branch is introduced."
+      },
+      {
+        "file": "hubble_desi_bao_test/run_step26_revision_controls.py",
+        "lines": "244-253",
+        "content": "G_eff/G_lab = 1/(1+q) = 0.9262883; 'no screening branch is introduced'"
+      },
+      {
+        "file": "scalar-tensor-yukawa-fit/step5_coupling_dictionary_ppn_screening_en.md",
+        "lines": "54, 73, 101",
+        "content": "alpha_std = alpha_Y/(4 pi) = 2 beta^2; G_eff(r) = G[1 + alpha_std (1 + r/L) e^{-r/L}]; r << L: G_eff -> G(1 + alpha_std). ('screened' at line 100 only means exp(-r/L) decay)"
+      },
+      {
+        "file": "scalar-tensor-yukawa-fit/step11_chameleon_screening_multiscale_eft_synthesis_en.md",
+        "lines": "18",
+        "content": "chameleon/symmetron screening is a standalone nonlinear extension hypothesis beyond the quadratic constant-alpha_Y Yukawa action, i.e. not part of the fixed branch"
+      }
+    ]
+  },
+  "ratio_to_bound_definition": "R = alpha_model / alpha_lim(lambda=10 km). Interpretable only in the convention above and under the stated assumptions; R > 1: model point outside the published/re-derived allowed region. R is not a significance and is never quoted in sigma.",
+  "records": [
+    {
+      "id": "zumberge1991_ocean",
+      "citation": "M. A. Zumberge, J. A. Hildebrand, J. M. Stevenson, R. L. Parker, A. D. Chave, M. E. Ander, F. N. Spiess, Phys. Rev. Lett. 67, 3051 (1991), doi:10.1103/PhysRevLett.67.3051; inputs as quoted by R. March et al., Phys. Rev. D 100, 042002 (2019), arXiv:1904.12789, eqs. (46),(65),(73)-(76),(79)",
+      "observable": "slope of gravity residual vs depth in the water column, 500-4800 m (G_ocean vs G_lab)",
+      "G_handling": "residual defined with lab G_N; long-range G = G_N/(1+alpha Phi), Phi ~ 1 for lambda >= 10 m",
+      "geometry": "volume-integrated infinite slabs (water 0-5 km, crust 5-12 km, mantle half-space)",
+      "assumptions": "alpha > 0 universal Yukawa, no screening; 'extra force' of the NMC model of March et al. dropped",
+      "CL_published": "abstract: 2 per mille fractional G uncertainty; slope -0.060 +/- 0.172 mGal/km treated as 1 sigma (assumption)",
+      "published_bound": "alpha < 0.002 for 1 m <= lambda <= 5000 m (Zumberge et al., as quoted by March et al. 2019); no published value at lambda = 10 km",
+      "alpha_lim_10km_published": null,
+      "alpha_lim_10km_rederived_95": 0.0022560597744408655,
+      "alpha_lim_10km_rederived_95_method": "exact inversion alpha_lim = edge/(S - edge), s(alpha) = S alpha/(1+alpha) with G_lab fixed",
+      "alpha_lim_10km_rederived_95_linear_approx": 0.00225098142579312,
+      "ratio_to_bound_R_linear_approx": 35.352344819064434,
+      "alpha_lim_source": "re-derived in this work (idealized slab model above; edge of the quoted error x1.96 under an ASSUMED Gaussian 1-sigma reading of +/-0.172, i.e. one-sided 97.5% under that assumption); not a published number",
+      "input_data_status": "secondary-source data (not directly verified primary data): Zumberge et al. 1991 values as quoted by March et al. 2019; the Zumberge paper itself was not obtained",
+      "provenance": "re-derived in this work from secondary-source data (unverified re-derivation)",
+      "alpha_lim_10km_rederived_march_interval_1x": 0.0009105987713659155,
+      "alpha_lim_variant_note": "k_sigma = 1 reproduces the interval March et al. use in eqs. (75)-(76) (-0.232..+0.112 mGal/km); exact inversion",
+      "open_questions": "original uncertainty, weighting of the measured profiles and the model dependence of pressure-derived depth are NOT reconstructed; the analytic layer check only verifies the idealized response",
+      "cross_check_march_eq81": {
+        "F_diff_ours_kg_m2": 4147387.4414661336,
+        "F_diff_bruteforce_kg_m2": 4147690.8624607883,
+        "F_diff_march_eq81_as_printed_kg_m2": -900627.4597506347,
+        "difference_ours_minus_march_kg_m2": 5048014.901216769,
+        "analytic_difference_formula": "lam (1 - e^{-z_w/lam}) (2 rho_c - rho_w - rho_m)",
+        "analytic_difference_value": 5048014.901216769,
+        "endpoint_sensitivity_bouguer_term_mGal_per_km": 86.97917489126944,
+        "endpoint_sensitivity_yukawa_ours_mGal_per_km": 34.78485488772357,
+        "endpoint_sensitivity_yukawa_march81_mGal_per_km": -7.5537180785430005
+      },
+      "R_status": "CONDITIONAL: denominator alpha_lim ~ 0.0023 is an unverified re-derivation",
+      "reading_uncertainty": "model-dependent: layer densities/thicknesses of March et al. eq.(46); topography ignored",
+      "model_point": {
+        "alpha": 0.07957747154594767,
+        "lambda_m": 10000.0
+      },
+      "model_observable": {
+        "computed": true,
+        "slope_pred_mGal_per_km": 9.074497254343648,
+        "slope_obs_mGal_per_km": -0.06,
+        "slope_sigma_mGal_per_km": 0.172,
+        "difference_in_quoted_sigma_units_info_only": 53.107542176416565,
+        "sensitivity_mGal_per_km_per_unit_alpha": 123.10799288059422,
+        "apparent_G_ocean_over_G_lab_minus_1": -0.10432953940627118
+      },
+      "ratio_to_bound_R": 35.27276734751848,
+      "alpha_lim_scan_rederived": [
+        [
+          1.0,
+          0.0031961616817946055
+        ],
+        [
+          1.333521432163324,
+          0.0031961616817946055
+        ],
+        [
+          1.7782794100389228,
+          0.0031961616817946055
+        ],
+        [
+          2.371373705661655,
+          0.0031961616817946055
+        ],
+        [
+          3.1622776601683795,
+          0.0031961616817946055
+        ],
+        [
+          4.216965034285822,
+          0.0031961616817946055
+        ],
+        [
+          5.62341325190349,
+          0.0031961616817946055
+        ],
+        [
+          7.498942093324558,
+          0.003196161681794605
+        ],
+        [
+          10.0,
+          0.003196161681794311
+        ],
+        [
+          13.33521432163324,
+          0.003196161681724534
+        ],
+        [
+          17.78279410038923,
+          0.0031961616769256686
+        ],
+        [
+          23.71373705661655,
+          0.0031961615469514805
+        ],
+        [
+          31.622776601683793,
+          0.003196159807636411
+        ],
+        [
+          42.169650342858226,
+          0.003196146155782707
+        ],
+        [
+          56.23413251903491,
+          0.0031960746076549274
+        ],
+        [
+          74.98942093324558,
+          0.0031957990118869155
+        ],
+        [
+          100.0,
+          0.003194962708834448
+        ],
+        [
+          133.3521432163324,
+          0.0031928585635613927
+        ],
+        [
+          177.82794100389228,
+          0.003188289944490915
+        ],
+        [
+          237.13737056616552,
+          0.0031794475449236762
+        ],
+        [
+          316.2277660168379,
+          0.003163808360976465
+        ],
+        [
+          421.6965034285822,
+          0.0031381426319328815
+        ],
+        [
+          562.341325190349,
+          0.003098923477992901
+        ],
+        [
+          749.8942093324558,
+          0.0030435535219762856
+        ],
+        [
+          1000.0,
+          0.002972162429522344
+        ],
+        [
+          1333.521432163324,
+          0.0028883176215833257
+        ],
+        [
+          1778.2794100389228,
+          0.0027971753042020653
+        ],
+        [
+          2371.373705661655,
+          0.0027026298343801494
+        ],
+        [
+          3162.2776601683795,
+          0.002606638668510667
+        ],
+        [
+          4216.965034285822,
+          0.0025109177024402666
+        ],
+        [
+          5623.413251903491,
+          0.002418312860671984
+        ],
+        [
+          7498.942093324558,
+          0.0023323718365945074
+        ],
+        [
+          10000.0,
+          0.0022560597744408655
+        ],
+        [
+          13335.21432163324,
+          0.0021909386125939533
+        ],
+        [
+          17782.794100389227,
+          0.002137142704685342
+        ],
+        [
+          23713.737056616552,
+          0.00209380361798451
+        ],
+        [
+          31622.776601683792,
+          0.00205953942094117
+        ],
+        [
+          42169.65034285822,
+          0.0020328237204545446
+        ],
+        [
+          56234.13251903491,
+          0.002012205031273921
+        ],
+        [
+          74989.42093324558,
+          0.001996410588646596
+        ],
+        [
+          100000.0,
+          0.0019843780199409133
+        ]
+      ]
+    },
+    {
+      "id": "jekeli1990_tower",
+      "citation": "C. Jekeli, D. H. Eckhardt, A. J. Romaides, Phys. Rev. Lett. 64, 1204 (1990), doi:10.1103/PhysRevLett.64.1204",
+      "observable": "gravity on a ~600 m tower (WTVD, N. Carolina) vs upward-continued surface gravity",
+      "G_handling": "upward continuation of measured surface gravity (no lab-G calibration of the leading term)",
+      "geometry": "per abstract: refined analysis with detailed topography (not inspected here)",
+      "assumptions": "Yukawa-potential coupling; sign / lambda range / CL not stated in the abstract",
+      "CL_published": "not stated in abstract",
+      "published_bound": "'constrains the Yukawa-potential coupling constant alpha to be less than 0.001' (abstract text)",
+      "alpha_lim_10km_published": null,
+      "abstract_alpha_value": 0.001,
+      "lambda_status": "unknown",
+      "alpha_lim_source": "abstract text value; lambda range of validity unknown (full text paywalled)",
+      "provenance": "primary abstract text, lambda unspecified",
+      "applied": false,
+      "role": "text-only reference, NOT applied: not plotted, not in the 10 km R summary (review r1, S02)",
+      "reading_uncertainty": "text value; applicability at 10 km unknown",
+      "model_point": {
+        "alpha": 0.07957747154594767,
+        "lambda_m": 10000.0
+      },
+      "model_observable": {
+        "computed": false,
+        "note": "tower residual for this tower not computed (no published residual in abstract)"
+      },
+      "ratio_to_bound_R": null,
+      "R_status": "not applied: lambda range, sign and CL of the abstract value unknown"
+    },
+    {
+      "id": "thomas1989",
+      "citation": "Thomas et al. 1989 PRL 63, 1902 (abstract): (-60 +/- 95) 1e-8 m/s^2 at tower top",
+      "observable": "tower-minus-continuation gravity residual at h = 465 m",
+      "G_handling": "harmonic upward continuation of measured surface gravity; leading term G-independent",
+      "geometry": "idealized half-space Yukawa, volume-integrated: Delta g = -2 pi G_inf(alpha) alpha rho lambda (1 - e^{-h/lambda}), G_inf(alpha) = G_lab/(1+alpha); terrain ignored",
+      "open_questions": "actual surface sampling, terrain, depth-dependent density and the joint Yukawa response of the Poisson continuation are NOT computed",
+      "assumptions": "alpha > 0 universal, no screening; near-surface density ASSUMED 2000 or 2670 kg/m^3; published +/- treated as 1 sigma",
+      "CL_published": "abstract quotes value +/- uncertainty only",
+      "published_bound": "abstract gives residual only, no alpha at 10 km",
+      "alpha_lim_10km_published": null,
+      "alpha_lim_source": "re-derived in this work (exact inversion E/(K-E); edge mu - 1.96 sigma under an ASSUMED Gaussian 1-sigma reading); not a published number",
+      "input_data_status": "primary-paper abstract text (full text not obtained)",
+      "provenance": "re-derived in this work from primary abstract values (unverified re-derivation)",
+      "R_status": "conditional: denominator is an unverified re-derivation (assumed density, half-space, sigma read as 1 sigma)",
+      "reading_uncertainty": "dominated by assumed density (factor 1.34) and the half-space idealisation",
+      "model_point": {
+        "alpha": 0.07957747154594767,
+        "lambda_m": 10000.0
+      },
+      "model_observable": {
+        "computed": true,
+        "residual_obs_uGal": -60.0,
+        "residual_sigma_uGal": 95.0,
+        "by_density": {
+          "rho_2000": {
+            "model_residual_uGal": -2808.9670392398566
+          },
+          "rho_2670": {
+            "model_residual_uGal": -3749.9709973852096
+          }
+        }
+      },
+      "by_density": {
+        "rho_2000": {
+          "alpha_lim_10km_rederived_95": 0.006502593280692,
+          "model_residual_uGal": -2808.9670392398566,
+          "ratio_to_bound_R": 12.237805458667578
+        },
+        "rho_2670": {
+          "alpha_lim_10km_rederived_95": 0.004862921381816368,
+          "model_residual_uGal": -3749.9709973852096,
+          "ratio_to_bound_R": 16.364128740289114
+        }
+      }
+    },
+    {
+      "id": "romaides1994_493m",
+      "citation": "Romaides et al. 1994 PRD 50, 3608 (abstract): largest discrepancy -33 +/- 30 uGal at 493 m",
+      "observable": "tower-minus-continuation gravity residual at h = 493 m",
+      "G_handling": "harmonic upward continuation of measured surface gravity; leading term G-independent",
+      "geometry": "idealized half-space Yukawa, volume-integrated: Delta g = -2 pi G_inf(alpha) alpha rho lambda (1 - e^{-h/lambda}), G_inf(alpha) = G_lab/(1+alpha); terrain ignored",
+      "open_questions": "actual surface sampling, terrain, depth-dependent density and the joint Yukawa response of the Poisson continuation are NOT computed",
+      "assumptions": "alpha > 0 universal, no screening; near-surface density ASSUMED 2000 or 2670 kg/m^3; published +/- treated as 1 sigma",
+      "CL_published": "abstract quotes value +/- uncertainty only",
+      "published_bound": "abstract gives residual only, no alpha at 10 km",
+      "alpha_lim_10km_published": null,
+      "alpha_lim_source": "re-derived in this work (exact inversion E/(K-E); edge mu - 1.96 sigma under an ASSUMED Gaussian 1-sigma reading); not a published number",
+      "input_data_status": "primary-paper abstract text (full text not obtained)",
+      "provenance": "re-derived in this work from primary abstract values (unverified re-derivation)",
+      "R_status": "conditional: denominator is an unverified re-derivation (assumed density, half-space, sigma read as 1 sigma)",
+      "reading_uncertainty": "dominated by assumed density (factor 1.34) and the half-space idealisation",
+      "model_point": {
+        "alpha": 0.07957747154594767,
+        "lambda_m": 10000.0
+      },
+      "model_observable": {
+        "computed": true,
+        "residual_obs_uGal": -33.0,
+        "residual_sigma_uGal": 30.0,
+        "by_density": {
+          "rho_2000": {
+            "model_residual_uGal": -2973.9759425960865
+          },
+          "rho_2670": {
+            "model_residual_uGal": -3970.257883365776
+          }
+        }
+      },
+      "by_density": {
+        "rho_2000": {
+          "alpha_lim_10km_rederived_95": 0.002280477083605283,
+          "model_residual_uGal": -2973.9759425960865,
+          "ratio_to_bound_R": 34.89509809944723
+        },
+        "rho_2670": {
+          "alpha_lim_10km_rederived_95": 0.0017072455555002782,
+          "model_residual_uGal": -3970.257883365776,
+          "ratio_to_bound_R": 46.61161441572996
+        }
+      }
+    },
+    {
+      "id": "romaides1997_568m",
+      "citation": "Romaides et al. 1997 PRD 55, 4532 (abstract): 32 +/- 32 uGal at 568 m",
+      "observable": "tower-minus-continuation gravity residual at h = 568 m",
+      "G_handling": "harmonic upward continuation of measured surface gravity; leading term G-independent",
+      "geometry": "idealized half-space Yukawa, volume-integrated: Delta g = -2 pi G_inf(alpha) alpha rho lambda (1 - e^{-h/lambda}), G_inf(alpha) = G_lab/(1+alpha); terrain ignored",
+      "open_questions": "actual surface sampling, terrain, depth-dependent density and the joint Yukawa response of the Poisson continuation are NOT computed",
+      "assumptions": "alpha > 0 universal, no screening; near-surface density ASSUMED 2000 or 2670 kg/m^3; published +/- treated as 1 sigma",
+      "CL_published": "abstract quotes value +/- uncertainty only",
+      "published_bound": "abstract gives residual only, no alpha at 10 km",
+      "alpha_lim_10km_published": null,
+      "alpha_lim_source": "re-derived in this work (exact inversion E/(K-E); edge mu - 1.96 sigma under an ASSUMED Gaussian 1-sigma reading); not a published number",
+      "input_data_status": "primary-paper abstract text (full text not obtained)",
+      "provenance": "re-derived in this work from primary abstract values (unverified re-derivation)",
+      "R_status": "conditional: denominator is an unverified re-derivation (assumed density, half-space, sigma read as 1 sigma)",
+      "reading_uncertainty": "dominated by assumed density (factor 1.34) and the half-space idealisation",
+      "model_point": {
+        "alpha": 0.07957747154594767,
+        "lambda_m": 10000.0
+      },
+      "model_observable": {
+        "computed": true,
+        "residual_obs_uGal": 32.0,
+        "residual_sigma_uGal": 32.0,
+        "by_density": {
+          "rho_2000": {
+            "model_residual_uGal": -3413.694575909858
+          },
+          "rho_2670": {
+            "model_residual_uGal": -4557.282258839661
+          }
+        }
+      },
+      "by_density": {
+        "rho_2000": {
+          "alpha_lim_10km_rederived_95": 0.0006637503241772936,
+          "model_residual_uGal": -3413.694575909858,
+          "ratio_to_bound_R": 119.89067070450399
+        },
+        "rho_2670": {
+          "alpha_lim_10km_rederived_95": 0.0004971084561431883,
+          "model_residual_uGal": -4557.282258839661,
+          "ratio_to_bound_R": 160.08070384348076
+        }
+      }
+    },
+    {
+      "id": "adelberger2003_fig4_context",
+      "citation": "E. G. Adelberger, B. R. Heckel, A. E. Nelson, Annu. Rev. Nucl. Part. Sci. 53, 77 (2003), arXiv:hep-ph/0307284, Fig. 4 (based on Fischbach & Talmadge 1999, Fig. 2.13); compilation, NOT a primary measurement",
+      "observable": "compilation of geophysical / Earth-LAGEOS constraints",
+      "CL_published": "95%",
+      "alpha_lim_10km_published": 0.0004,
+      "alpha_lim_source": "digitized from the figure in this work (pixel trace of the shaded-region edge)",
+      "provenance": "digitized compilation (not primary)",
+      "reading_uncertainty": "about +/-0.1 dex (factor ~1.3); one significant digit",
+      "model_point": {
+        "alpha": 0.07957747154594767,
+        "lambda_m": 10000.0
+      },
+      "model_observable": {
+        "computed": false
+      },
+      "ratio_to_bound_R": 200.0,
+      "R_status": "context only: digitized compilation, not used for the decision"
+    },
+    {
+      "id": "cruz1991_erie_tower",
+      "citation": "J. Y. Cruz, J. C. Harrison, C. C. Speake, T. M. Niebauer, M. P. McHugh, P. T. Keyser, J. E. Faller, J. Makinen, R. B. Beruff, J. Geophys. Res. 96(B12), 20073 (1991), doi:10.1029/91JB01756 (PRL version: Speake et al., PRL 65, 1967 (1990), doi:10.1103/PhysRevLett.65.1967)",
+      "observable": "gravity at 8 heights on a 300 m tower vs Newtonian prediction from surface gravity; rms difference 10 uGal",
+      "G_handling": "prediction from measured surface gravity (no lab-G calibration of the leading term)",
+      "geometry": "per abstract: prediction from surface gravity values (full analysis not inspected)",
+      "assumptions": "bound quoted on |alpha| (sign-independent); universality implied by ISL test; CL not stated in abstract",
+      "CL_published": "not stated in abstract",
+      "published_bound": "'the absolute value of alpha must be less than 0.001 for lambda = 1000 m' (abstract text, Crossref record)",
+      "alpha_lim_published_value": 0.001,
+      "alpha_lim_published_lambda_m": 1000.0,
+      "alpha_lim_10km_published": null,
+      "alpha_lim_10km_conditional_estimate": 0.0008769631478331059,
+      "alpha_lim_10km_status": "CONDITIONAL ESTIMATE, not a bound. A 1 km limit cannot be transferred to 10 km using the Yukawa exponential alone: it needs the full response function of the tower measurement difference, including source geometry and G normalization, which we do not have (full text: HTTP 403).",
+      "conditional_scaling_assumptions": [
+        "the published 1 km limit is set by the top-of-tower residual at h = 300 m",
+        "flat half-space of uniform density around the tower",
+        "the Yukawa part of the surface field is continued as a constant",
+        "the same G normalization at both lambdas",
+        "factor = S(1 km)/S(10 km), S(lam) = lam (1 - e^{-h/lam}) = 0.8770"
+      ],
+      "alpha_lim_source": "primary abstract text at lambda = 1 km; no 10 km value published",
+      "input_data_status": "primary-paper abstract text (Crossref record); full text not obtained",
+      "provenance": "primary numeric at 1 km (abstract text); 10 km only as a conditional estimate",
+      "reading_uncertainty": "text value (1 significant digit); 10 km transfer not verifiable",
+      "model_point": {
+        "alpha": 0.07957747154594767,
+        "lambda_m": 10000.0
+      },
+      "model_observable": {
+        "computed": false,
+        "note": "per-height residuals not available in the abstract"
+      },
+      "ratio_to_bound_R_at_1km_value": 79.57747154594767,
+      "ratio_to_bound_R_conditional_10km": 90.74209303158996,
+      "ratio_to_bound_R": null,
+      "R_status": "conditional estimate only; not used for the decision"
+    },
+    {
+      "id": "bren_tower_osti6190822",
+      "citation": "J. Thomas, P. Kasameyer et al., 'A test of Newton's Law of Gravity using the BREN Tower, Nevada', LLNL conference report, OSTI 6190822 (https://www.osti.gov/biblio/6190822); preliminary version of PRL 63, 1902",
+      "observable": "report text: predictions within 93 uGal of observations at all heights, uncertainties up to 95 uGal (1 sigma, sampling); sign not stated -> conservative mu = -93 uGal, sigma = 95 uGal at h = 454 m",
+      "G_handling": "Laplace upward continuation of surface data",
+      "geometry": "half-space Yukawa (ours), terrain ignored",
+      "assumptions": "as for the other towers; density assumed",
+      "CL_published": "+/- only",
+      "published_bound": "no alpha value in report",
+      "alpha_lim_10km_published": null,
+      "alpha_lim_source": "re-derived in this work (one-sided 97.5% under Gaussian 1 sigma)",
+      "input_data_status": "primary document (LLNL report, preliminary results), obtained from OSTI",
+      "provenance": "re-derived in this work from a primary preliminary report (unverified re-derivation)",
+      "R_status": "conditional: denominator is an unverified re-derivation",
+      "reading_uncertainty": "assumed density, half-space idealisation",
+      "systematic_note": "the report's ~100 uGal spherical-approximation systematic needs a separate nuisance treatment; it cannot be added automatically as an independent Gaussian sigma to the 95 uGal",
+      "illustrative_bounded_nuisance_100uGal": {
+        "alpha_edge": {
+          "rho_2000": 0.010291073326504254,
+          "rho_2670": 0.0076888135343116
+        },
+        "note": "ILLUSTRATIVE ONLY: a bounded +/-100 uGal nuisance taken at its worst-case edge; not a new data fit and not an empirical bound"
+      },
+      "model_point": {
+        "alpha": 0.07957747154594767,
+        "lambda_m": 10000.0
+      },
+      "model_observable": {
+        "computed": true,
+        "by_density": {
+          "rho_2000": {
+            "model_residual_uGal": -2744.0155989293125
+          },
+          "rho_2670": {
+            "model_residual_uGal": -3663.260824570633
+          }
+        }
+      },
+      "by_density": {
+        "rho_2000": {
+          "alpha_lim_10km_rederived_95": 0.00755665008702964,
+          "model_residual_uGal": -2744.0155989293125,
+          "ratio_to_bound_R": 10.530786873741285
+        },
+        "rho_2670": {
+          "alpha_lim_10km_rederived_95": 0.00564969887630364,
+          "model_residual_uGal": -3663.260824570633,
+          "ratio_to_bound_R": 14.085258929412511
+        }
+      }
+    },
+    {
+      "id": "fischbach_talmadge1996_fig1_context",
+      "citation": "E. Fischbach, C. Talmadge, arXiv:hep-ph/9606249 (1996), Fig. 1 (2 sigma); compilation, NOT primary",
+      "observable": "compilation (Tower, Earth-LAGEOS segments around 10 km)",
+      "CL_published": "2 sigma",
+      "sign_note": "Fig. 1 vertical axis is -alpha, i.e. the plotted constraint is for alpha < 0 (repulsive); NOT directly applicable to the model's alpha > 0",
+      "alpha_lim_10km_published": null,
+      "alpha_lim_10km_digitized": 0.0004,
+      "alpha_lim_source": "digitized in this work from the rendered figure (pixel trace); 3e-4 to 5e-4 depending on axis calibration",
+      "provenance": "digitized compilation (not primary), opposite sign",
+      "reading_uncertainty": "about +/-0.15 dex; one significant digit",
+      "model_point": {
+        "alpha": 0.07957747154594767,
+        "lambda_m": 10000.0
+      },
+      "model_observable": {
+        "computed": false
+      },
+      "ratio_to_bound_R": null
+    }
+  ],
+  "primary_search_log": [
+    "Jekeli et al. PRL 64, 1204 (1990): only abstract accessible (APS paywall); 'alpha < 0.001', lambda range and CL not stated",
+    "Speake et al. PRL 65, 1967 (1990) / Cruz et al. JGR 96, 20073 (1991): abstract gives |alpha| < 0.001 at lambda = 1000 m; Wiley PDF 403",
+    "Romaides et al. PRD 50, 3608 (1994) and PRD 55, 4532 (1997): abstracts give residuals only; full text paywalled",
+    "Thomas et al. PRL 63, 1902 (1989): abstract residual only; LLNL OSTI reports 6190822 and 7173840 opened: residuals, no alpha-lambda numbers",
+    "Zumberge et al. PRL 67, 3051 (1991): abstract (G = 6.677 +/- 0.013); per March et al. 2019 the published bound alpha < 0.002 covers 1-5000 m only",
+    "March et al. PRD 100, 042002 (2019), arXiv:1904.12789: bounds for the NMC model (with extra force), not a pure-Yukawa table at 10 km",
+    "Eckhardt et al. PRL 60, 2567 (1988): original WTVD claim, superseded by Jekeli et al. 1990",
+    "Fischbach & Talmadge hep-ph/9606249 Fig. 1: alpha < 0 panel only",
+    "Adelberger et al. 2003 Fig. 4: |alpha| compilation, digitized",
+    "Not reached (paywalled / no open copy found in this pass): Stacey et al. RMP 59, 157 (1987); Moore et al. PRD 38, 1023 (1988); Ander et al. PRL 62, 985 (1989); Achilli et al. 1997; Bartlett & Tew PRL 63, 1531 (1989); Rapp 1987; Fischbach & Talmadge 1999 book tables"
+  ],
+  "decisive_bound": {
+    "record": "zumberge1991_ocean",
+    "alpha_lim_10km": 0.0022560597744408655,
+    "R": 35.27276734751848,
+    "alpha_lim_method": "exact inversion edge/(S - edge)",
+    "alpha_lim_10km_linear_approx": 0.00225098142579312,
+    "R_linear_approx": 35.352344819064434,
+    "R_rounded_denominator_0p0023": 34.59890067215116,
+    "R_name": "ratio to bound (hat\u00e1rhoz viszony\u00edtott ar\u00e1ny); not a significance, never in sigma",
+    "R_status": "CONDITIONAL: denominator alpha_lim ~ 0.0023 is an unverified re-derivation",
+    "provenance": "re-derived in this work from secondary-source data (not directly verified primary data) (Zumberge et al. 1991 values as quoted by March et al. 2019); no primary source found that states a numeric alpha limit at exactly 10 km",
+    "variant_march_interval_1x": {
+      "alpha_lim_10km": 0.0009105987713659155,
+      "R": 87.39026896179527
+    },
+    "scenario_march_eq81_as_printed": {
+      "alpha_lim_10km": 0.003501195284846721,
+      "R": 22.728658378571847,
+      "alpha_lim_linear_approx": 0.003488979685622494,
+      "note": "separate scenario, not a statistical error band; the eq. (81) discrepancy is not resolvable by a sign or G-convention change; the authors' intent/correction was not verified"
+    },
+    "scenarios_note": "R values across error readings, layer formulas and assumed densities are scenarios, not one combined confidence interval",
+    "not_applied": "Cruz et al. 1991 |alpha| < 0.001 is stated at 1 km only (10 km value only a conditional estimate); Jekeli et al. 1990 alpha < 0.001 has an unknown lambda range; neither enters the 10 km decision"
+  },
+  "missing_primary_sources": [
+    {
+      "source": "Zumberge et al., PRL 67, 3051 (1991), doi:10.1103/PhysRevLett.67.3051",
+      "status": "not obtained; ocean inputs taken from March et al. 2019 (secondary source)",
+      "needed_for": "residual definition, meaning of +/-0.172 mGal/km, corrections and their uncertainties"
+    },
+    {
+      "source": "Cruz et al., JGR 96, 20073 (1991), doi:10.1029/91JB01756",
+      "status": "abstract only; full text not obtained (publisher PDF returned HTTP 403)",
+      "needed_for": "response function of the Erie measurement, CL, lambda dependence of the bound"
+    },
+    {
+      "source": "Jekeli, Eckhardt, Romaides, PRL 64, 1204 (1990)",
+      "status": "abstract only (paywalled)",
+      "needed_for": "lambda range, sign and CL of alpha < 0.001 (full text)"
+    },
+    {
+      "source": "Thomas et al., PRL 63, 1902 (1989)",
+      "status": "abstract only; preliminary LLNL report OSTI 6190822 obtained",
+      "needed_for": "published per-height residuals, sign, CL, terrain treatment"
+    },
+    {
+      "source": "Romaides et al., PRD 50, 3608 (1994) and PRD 55, 4532 (1997)",
+      "status": "abstracts only (paywalled)",
+      "needed_for": "residual definitions, densities, any alpha-lambda curve"
+    },
+    {
+      "source": "Stacey et al. RMP 59, 157 (1987); Moore et al. PRD 38, 1023 (1988); Ander et al. PRL 62, 985 (1989); Bartlett & Tew PRL 63, 1531 (1989); Achilli et al. 1997; Rapp 1987; Fischbach & Talmadge 1999 (book)",
+      "status": "not reached (no open copy found)",
+      "needed_for": "possible primary numeric bounds near 10 km"
+    }
+  ],
+  "review_trace": {
+    "ocean": {
+      "slope_obs_mGal_per_km": -0.06,
+      "sigma_quoted_mGal_per_km": 0.172,
+      "sensitivity_mGal_per_km_per_unit_alpha": 123.10799288059422,
+      "of_which_bouguer_G_renormalization_endpoint": 86.97917489126944,
+      "of_which_yukawa_volume_integral_endpoint": 34.78485488772357,
+      "edge_95_two_sided_mGal_per_km": 0.27711380534088925,
+      "alpha_lim": 0.0022560597744408655,
+      "alpha_lim_linear_approx": 0.00225098142579312,
+      "S_chord_0_5000m_ours_mGal_per_km": 121.764029778993,
+      "edge_march_1x_mGal_per_km": 0.11199999999999999,
+      "alpha_lim_march_1x": 0.0009105987713659155,
+      "model_slope_at_q_mGal_per_km": 9.074497254343648,
+      "check_slope_q_vs_S_q_over_1_plus_q": 1.0000000000878613,
+      "variant_march_eq81_as_printed_endpoint_chord": {
+        "sensitivity_mGal_per_km_per_unit_alpha": 79.42545681272644,
+        "alpha_lim": 0.003501195284846721,
+        "alpha_lim_linear_approx": 0.003488979685622494,
+        "R": 22.728658378571847,
+        "note": "separate scenario: if March eq. (81) as printed were the layer integral; our direct and brute-force integrals disagree with it; not resolvable by a sign or G-convention change; author intent not verified"
+      },
+      "endpoint_chord_vs_fitted_slope_note": "endpoint sensitivities are chord values over 0-5000 m; the fitted slope uses 500-4800 m"
+    },
+    "bren": {
+      "h_m": 454.0,
+      "mu_uGal": -93.0,
+      "sigma_uGal": 95.0,
+      "edge_uGal": -279.19657853130514,
+      "K_uGal_alpha_to_0_sensitivity": {
+        "rho_2000": 37226.332586657816,
+        "rho_2670": 49697.154003188196
+      },
+      "residual_at_alpha_1_uGal_G_N_over_2": {
+        "rho_2000": -18613.166293328908,
+        "rho_2670": -24848.577001594098
+      },
+      "K_all_towers_uGal": {
+        "thomas1989": {
+          "rho_2000": 38107.48789784709,
+          "rho_2670": 50873.49634362588
+        },
+        "romaides1994_493m": {
+          "rho_2000": 40346.05983544667,
+          "rho_2670": 53861.98988032132
+        },
+        "romaides1997_568m": {
+          "rho_2000": 46311.445781020804,
+          "rho_2670": 61825.78011766278
+        },
+        "bren_tower_osti6190822": {
+          "rho_2000": 37226.332586657816,
+          "rho_2670": 49697.154003188196
+        }
+      },
+      "alpha_lim": {
+        "rho_2000": 0.00755665008702964,
+        "rho_2670": 0.00564969887630364
+      },
+      "variant_if_sign_were_positive_mu_plus93": {
+        "rho_2000": 0.0025097955236236783,
+        "rho_2670": 0.0018788133723576547
+      },
+      "illustrative_bounded_nuisance_100uGal": {
+        "rho_2000": 0.010291073326504254,
+        "rho_2670": 0.0076888135343116
+      }
+    }
+  },
+  "back_substitution_tests": {
+    "tolerance_rel": 1e-09,
+    "all_pass": true,
+    "tests": [
+      {
+        "bound": "ocean_exact_k1.96",
+        "alpha_lim": 0.0022560597744408655,
+        "edge": 0.27711380534088925,
+        "model_at_alpha_lim": 0.2771138053652211,
+        "unit": "mGal/km",
+        "rel_dev": 8.780461089752712e-11,
+        "pass": true
+      },
+      {
+        "bound": "ocean_exact_k1_march_interval",
+        "alpha_lim": 0.0009105987713659155,
+        "edge": 0.11199999999999999,
+        "model_at_alpha_lim": 0.1120000000098501,
+        "unit": "mGal/km",
+        "rel_dev": 8.794738251153131e-11,
+        "pass": true
+      },
+      {
+        "bound": "ocean_march_eq81_scenario_exact",
+        "alpha_lim": 0.003501195284846721,
+        "edge": 0.27711380534088925,
+        "model_at_alpha_lim": 0.27711380534088925,
+        "unit": "mGal/km (endpoint-chord model)",
+        "rel_dev": 0.0,
+        "pass": true
+      },
+      {
+        "bound": "thomas1989/rho_2000",
+        "alpha_lim": 0.006502593280692,
+        "edge": -246.19657853130514,
+        "model_at_alpha_lim": -246.19657853130522,
+        "unit": "uGal",
+        "rel_dev": 3.4632946079049646e-16,
+        "pass": true
+      },
+      {
+        "bound": "thomas1989/rho_2670",
+        "alpha_lim": 0.004862921381816368,
+        "edge": -246.19657853130514,
+        "model_at_alpha_lim": -246.19657853130508,
+        "unit": "uGal",
+        "rel_dev": 2.308863071936643e-16,
+        "pass": true
+      },
+      {
+        "bound": "romaides1994_493m/rho_2000",
+        "alpha_lim": 0.002280477083605283,
+        "edge": -91.79891953620162,
+        "model_at_alpha_lim": -91.79891953620162,
+        "unit": "uGal",
+        "rel_dev": 0.0,
+        "pass": true
+      },
+      {
+        "bound": "romaides1994_493m/rho_2670",
+        "alpha_lim": 0.0017072455555002782,
+        "edge": -91.79891953620162,
+        "model_at_alpha_lim": -91.79891953620161,
+        "unit": "uGal",
+        "rel_dev": 1.5480416095309098e-16,
+        "pass": true
+      },
+      {
+        "bound": "romaides1997_568m/rho_2000",
+        "alpha_lim": 0.0006637503241772936,
+        "edge": -30.71884750528173,
+        "model_at_alpha_lim": -30.718847505281733,
+        "unit": "uGal",
+        "rel_dev": 1.156525705656651e-16,
+        "pass": true
+      },
+      {
+        "bound": "romaides1997_568m/rho_2670",
+        "alpha_lim": 0.0004971084561431883,
+        "edge": -30.71884750528173,
+        "model_at_alpha_lim": -30.71884750528172,
+        "unit": "uGal",
+        "rel_dev": 3.4695771169699535e-16,
+        "pass": true
+      },
+      {
+        "bound": "bren_tower_osti6190822/rho_2000",
+        "alpha_lim": 0.00755665008702964,
+        "edge": -279.19657853130514,
+        "model_at_alpha_lim": -279.1965785313052,
+        "unit": "uGal",
+        "rel_dev": 2.035964020756594e-16,
+        "pass": true
+      },
+      {
+        "bound": "bren_tower_osti6190822/rho_2670",
+        "alpha_lim": 0.00564969887630364,
+        "edge": -279.19657853130514,
+        "model_at_alpha_lim": -279.1965785313051,
+        "unit": "uGal",
+        "rel_dev": 2.035964020756594e-16,
+        "pass": true
+      }
+    ]
+  },
+  "verdict": {
+    "label": "Step 27 (part of V28)",
+    "scope": "fixed, unscreened, universal local Yukawa branch (alpha = 0.0795775, lambda = 10 km) only; not all TAL variants",
+    "min_R": 10.530786873741285,
+    "max_R": 160.08070384348076,
+    "not_a_reopening_of": "Step 26 (V26/V27 kinetic normalization) is not re-opened; S01 concerns only holding G_lab fixed in a new parameter-limit search",
+    "status": "strong tension only in this sense: in the idealized layer/half-space models, under the assumed error reading, a large numerical discrepancy results. Not an empirical exclusion with a confidence level.",
+    "status_hu": "er\u0151s fesz\u00fclts\u00e9g csak ebben az \u00e9rtelemben: az idealiz\u00e1lt r\u00e9teg-/f\u00e9lt\u00e9rmodellekben, a felt\u00e9telezett hiba\u00e9rtelmez\u00e9s mellett nagy numerikus elt\u00e9r\u00e9s ad\u00f3dik. Nem konfidenciaszinttel rendelkez\u0151 empirikus kiz\u00e1r\u00e1s.",
+    "R_name": "ratio to bound (hat\u00e1rhoz viszony\u00edtott ar\u00e1ny)",
+    "R_status": "CONDITIONAL: denominator alpha_lim ~ 0.0023 is an unverified re-derivation",
+    "R_decisive": 35.27276734751848,
+    "R_decisive_rounded_denominator_0p0023": 34.59890067215116,
+    "statement_en": "Our own re-derivation indicates strong tension with the fixed, unscreened Yukawa branch; confirming an exclusion requires verification of the measurement response and the uncertainty treatment.",
+    "statement_hu": "A saj\u00e1t \u00fajrasz\u00e1rmaztat\u00e1s er\u0151s fesz\u00fclts\u00e9get jelez a r\u00f6gz\u00edtett, \u00e1rny\u00e9kolatlan Yukawa-\u00e1ggal; a kiz\u00e1r\u00e1s meger\u0151s\u00edt\u00e9s\u00e9hez a m\u00e9r\u00e9si v\u00e1lasz \u00e9s a bizonytalans\u00e1gkezel\u00e9s ellen\u0151rz\u00e9se sz\u00fcks\u00e9ges.",
+    "R_range_note": "min_R/max_R span the re-derived ocean and tower records (Jekeli text value not applied; Erie only conditional); all CONDITIONAL. The range collects scenarios (error readings, layer formulas, assumed densities), it is NOT a combined confidence interval, and R is never a sigma significance",
+    "data_status": "Zumberge inputs are secondary-source data via March et al. 2019 (not directly verified primary data)",
+    "missing_primary_sources_short": [
+      "Zumberge et al. 1991 (not obtained)",
+      "Cruz et al. 1991 (full text)",
+      "Jekeli et al. 1990 (full text)"
+    ],
+    "untested_candidates_to_retest": [
+      "screening of the local Yukawa for Earth-scale/laboratory sources (not in the package; a new branch)",
+      "alpha <~ 1e-3 at lambda = 10 km (i.e. alpha_Y^2 beta_Yuk reduced by >~ 80x; a new branch)",
+      "a different lambda (e.g. lambda < 1 cm) with unchanged alpha: an UNTESTED candidate to be re-tested; Step 27 did not examine whether that range is allowed, so it is NOT a verified escape range"
+    ]
+  }
+}
