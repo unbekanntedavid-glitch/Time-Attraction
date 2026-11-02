@@ -93,6 +93,7 @@ Previous version: V23 (Zenodo V23, DOI [10.5281/zenodo.23639084](https://doi.org
 
 | Version | Record | DOI |
 |---|---|---|
+| V29 | [Time Attraction Law (TAL): Derivation Chain Audit and Step 29 Corrections S1–S3](V29/) (audit of the derivation chain v1–v7 to V28, corrections S1–S3, verification material; files in `V29/`) | no Zenodo record yet |
 | V28 (Zenodo V28) | [Time Attraction Law — Scalar-Tensor Yukawa Fit, V28](https://doi.org/10.5281/zenodo.23814053) (preliminary research package: Step 26 DESI DR1 BAO audit, interactive simulator, Step 27 fixed unscreened local Yukawa branch, `V28/`; new version of V27) | [`10.5281/zenodo.23814053`](https://doi.org/10.5281/zenodo.23814053) |
 | V27 (Zenodo V27) | [Time Attraction Law — Scalar-Tensor Yukawa Fit, V27](https://doi.org/10.5281/zenodo.23761574) (`step26` cosmology audit, `V27/`) | [`10.5281/zenodo.23761574`](https://doi.org/10.5281/zenodo.23761574) |
 | V26 (Zenodo V26) | [Time Attraction Law — Scalar-Tensor Yukawa Fit, V26](https://doi.org/10.5281/zenodo.23727585) | [`10.5281/zenodo.23727585`](https://doi.org/10.5281/zenodo.23727585) |
@@ -110,8 +111,9 @@ Previous version: V23 (Zenodo V23, DOI [10.5281/zenodo.23639084](https://doi.org
 | v14 | Previous version | [`10.5281/zenodo.23217189`](https://doi.org/10.5281/zenodo.23217189) |
 | Parent | Parent record of v17 | [`10.5281/zenodo.22983681`](https://doi.org/10.5281/zenodo.22983681) |
 
-### Contents ([`V28/`](V28/), [`V27/`](V27/), [`V26/`](V26/), [`V25/`](V25/), and [`V24/`](V24/))
+### Contents ([`V29/`](V29/), [`V28/`](V28/), [`V27/`](V27/), [`V26/`](V26/), [`V25/`](V25/), and [`V24/`](V24/))
 
+- [`V29/`](V29/) folder: derivation chain audit from Time Attraction v1–v7 to V28, Step 29 corrections S1–S3, and verification material (`README.md`, `TAL_audit_and_corrections_EN.pdf`, `TAL_audit_es_javitasok_HU.pdf`, `academy_review_package.zip`).
 - [`V28/`](V28/) folder: preliminary research package with the V27 Step 26 DESI DR1 BAO audit, the interactive simulator (117 JS-vs-JSON checks), and the Step 27 fixed unscreened local Yukawa branch test. `DATA_LICENSES.md` states the third-party data terms. `SHA256SUMS.txt` has 97 verified entries. Zenodo V28 DOI [`10.5281/zenodo.23814053`](https://doi.org/10.5281/zenodo.23814053); concept DOI [`10.5281/zenodo.22983681`](https://doi.org/10.5281/zenodo.22983681); new version of V27 [`10.5281/zenodo.23761574`](https://doi.org/10.5281/zenodo.23761574).
 - [`V27/`](V27/) folder: `step26` cosmology audit (DESI DR1 BAO, Planck, SNe, RSD, BBN, local Yukawa, no-go routes), HU/EN Markdown and PDFs (13 pages each), Python sources with `run_all.py`, DESI DR1 inputs, CSV/PNG/JSON outputs, `academia_review/`, and `SHA256SUMS.txt` (46 verified entries). Zenodo V27 DOI [`10.5281/zenodo.23761574`](https://doi.org/10.5281/zenodo.23761574).
 - [`V26/`](V26/) folder: bilingual HU/EN chapters `step1`–`step25`, `step23_25_gw170817_lensing_bullet_cmb_hu.pdf` (27 pages), `step23_25_gw170817_lensing_bullet_cmb_en.pdf` (27 pages), `V26_english_audit_package.pdf` / `V25_english_audit_package.pdf` (167 pages), `V26_english_translations.zip` / `V25_english_translations.zip` (27 files), `scalar-tensor-yukawa-fit_audit_package.zip` (393 files), Python solvers (`gw170817_and_lensing_audit.py`, `bullet_cluster_lensing_audit.py`, `cmb_and_cosmology_audit.py`, `curved_yukawa_adm_and_stability.py`), `SHA256SUMS_step23_25.txt` (20 verified entries), and `SHA256SUMS.txt` (392 verified entries).

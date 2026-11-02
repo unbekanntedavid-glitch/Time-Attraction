@@ -1,5 +1,11 @@
 # Changelog
 
+## V29 — Time Attraction Law (TAL): Derivation Chain Audit and Step 29 Corrections S1–S3 — 2026-11-02
+
+Audit of the derivation chain v1–v7 to V28, corrections S1–S3, verification material; files in [`V29/`](V29/).
+
+- Added [`V29/`](V29/): `academy_review_package.zip`, `TAL_audit_and_corrections_EN.pdf`, `TAL_audit_es_javitasok_HU.pdf`, and `README.md`.
+
 ## Time Attraction Law — Scalar-Tensor Yukawa Fit, V28 — 2026-10-30
 
 DOI: [10.5281/zenodo.23814053](https://doi.org/10.5281/zenodo.23814053)
