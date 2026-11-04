@@ -32,9 +32,6 @@ identifiers:
     value: 10.5281/zenodo.23639084
     description: "Previous version: Zenodo V23: Covariant Action Candidates and Nonlocal Static Consistency Tests (Task 50aa2db0)"
   - type: doi
-    value: 10.5281/zenodo.23604423
-    description: "Previous version: Zenodo V22 Book Edition (15-page Research Monograph)"
-  - type: doi
     value: 10.5281/zenodo.23602501
     description: "Previous version: Zenodo V21 = GitHub V19 (neutron-star package)"
   - type: doi

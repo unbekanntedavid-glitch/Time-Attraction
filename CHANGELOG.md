@@ -1,8 +1,8 @@
 # Changelog
 
-## V22_Book — Book Edition r2 (EN/HU) — 2026-11-04
+## TAL book (2026-11-04), English and Hungarian — Book/
 
-V22_Book: replaced by Book Edition r2 (EN/HU): corrected text and numbers; max|Δχ²| = 4.93×10⁻⁵ (previously ≈10⁻³); appendix labelled as AI-assisted numerical cross-checks (Academia Co-scientist output), not a human referee report; Hungarian edition aligned with English. The German edition and the old files remain available in the git history. Previous Zenodo record: 10.5281/zenodo.23604423. License notice (CC BY-NC 4.0, ©, ORCID, commercial-use permission) added to every PDF page footer; LICENSE.txt added.
+TAL book (2026-11-04), English and Hungarian — [`Book/`](Book/). © 2026 Szabolcsi Dávid (ORCID 0009-0005-6300-074X) · CC BY-NC 4.0 International · https://creativecommons.org/licenses/by-nc/4.0/ · commercial use only with the author's written permission
 
 ## V29 — Time Attraction Law (TAL): Derivation Chain Audit and Step 29 Corrections S1–S3 — 2026-11-02
 
@@ -115,19 +115,10 @@ This is the V24 version of the Time Attraction Law (TAL) research, an independen
 
 ## V23 (Zenodo V23) — 2026-10-25
 
-Zenodo V23: [10.5281/zenodo.23639084](https://doi.org/10.5281/zenodo.23639084)  
-Previous version: V22 Book Edition (Zenodo V22, [10.5281/zenodo.23604423](https://doi.org/10.5281/zenodo.23604423)).
+Zenodo V23: [10.5281/zenodo.23639084](https://doi.org/10.5281/zenodo.23639084)
 
 - Added [`V23/`](V23/): Task `50aa2db0` bilingual (EN/HU) 4-page technical reports (`tal_covariant_closure_50aa2db0_EN_2026-10-24.pdf`, `tal_covariant_closure_50aa2db0_HU_2026-10-24.pdf` and `.tex` sources), standalone archive (`tal_covariant_closure_50aa2db0_2026-10-24.zip`, SHA-256 `807082095cffb35433fbd720f5e04c0e4770723c4111fc3f3ce9289c1f7f4508`), Python solvers (`covariant_closure_50aa2db0.py` and bundled V21 modules), 4 CSV/JSON data tables, 3 figures, and `SHA256SUMS.txt` (17 verified entries).
 - Updated `README.md`, `CITATION.cff`, and `CHANGELOG.md` with DOI `10.5281/zenodo.23639084`.
-
-## V22 Book Edition (Zenodo V22) — 2026-10-24
-
-Zenodo V22 Book Edition: [10.5281/zenodo.23604423](https://doi.org/10.5281/zenodo.23604423)  
-Previous version: Zenodo V21 (= GitHub V19/V21, [10.5281/zenodo.23602501](https://doi.org/10.5281/zenodo.23602501)).
-
-- Added [`V22_Book/`](V22_Book/): 15-page, 12-chapter (+ 2-page Round-3 technical reproduction audit appendix) research monograph synthesizing Versions 1–21 of the Time Attraction Law in English (`tal_book_EN_2026-10-24.pdf` & `.tex`, primary, byte-identical to Zenodo record `23604423`), Hungarian (`tal_book_HU_2026-10-24.pdf` & `.tex`, byte-identical to Zenodo record `23604423`), and German (`tal_book_DE_2026-10-24.pdf` & `.tex`), together with `generate_figures.py`, 12 figures in `figures/`, and `SHA256SUMS.txt` (21 verified entries).
-- Updated `README.md` and `CITATION.cff` with DOI `10.5281/zenodo.23604423`.
 
 ## V18 (GitHub) — 2026-10-21
 

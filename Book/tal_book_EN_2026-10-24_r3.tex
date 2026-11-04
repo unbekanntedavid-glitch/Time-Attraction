@@ -31,7 +31,7 @@
 \fancyhf{}
 \fancyhead[L]{\footnotesize\scshape\color{slate}The Time Attraction Law --- Research Monograph (V1--V21)}
 \fancyhead[R]{\footnotesize\color{slate}D\'avid Szabolcsi (ORCID: 0009-0005-6300-074X)}
-\fancyfoot[C]{\parbox{\textwidth}{\centering\scriptsize\color{black}\textcopyright\ 2026 D\'avid Szabolcsi (ORCID 0009-0005-6300-074X) \textperiodcentered\ License: CC BY-NC 4.0 International (\url{https://creativecommons.org/licenses/by-nc/4.0/}) \textperiodcentered\ Commercial use only with the author's written permission.\\[1pt]{\color{slate}CC BY-NC 4.0 --- Intermediate Research Working Document (Oct 2026)}\hfill{\bfseries\color{navy}Page \thepage\ of \pageref*{LastPage}}}}
+\fancyfoot[C]{\parbox{\textwidth}{\centering\scriptsize\color{black}\textcopyright\ 2026 D\'avid Szabolcsi (ORCID 0009-0005-6300-074X) \textperiodcentered\ License: CC BY-NC 4.0 International (\url{https://creativecommons.org/licenses/by-nc/4.0/}) \textperiodcentered\ Commercial use only with the author's written permission.\\[1pt]{\color{slate}CC BY-NC 4.0 --- Intermediate Research Working Document (Nov 2026)}\hfill{\bfseries\color{navy}Page \thepage\ of \pageref*{LastPage}}}}
 \renewcommand{\footrulewidth}{0.3pt}
 \fancypagestyle{plain}{}
 \fancypagestyle{titlefoot}{\fancyhead{}\renewcommand{\headrulewidth}{0pt}}
@@ -63,7 +63,7 @@
   {\normalsize\bfseries D\'avid Szabolcsi}\par\vspace{1mm}
   {\small Independent Researcher, Unterterzen, Switzerland}\par
   {\small ORCID: \href{https://orcid.org/0009-0005-6300-074X}{\texttt{0009-0005-6300-074X}} $\cdot$ GitHub: \href{https://github.com/unbekanntedavid-glitch/Time-Attraction}{\texttt{unbekanntedavid-glitch/Time-Attraction}}}\par
-  {\small October 24, 2026}
+  {\small November 4, 2026}
 \end{center}
 \vspace{1.5mm}
 \noindent{\color{navy}\rule{\linewidth}{0.8pt}}\par\vspace{2mm}
@@ -115,7 +115,7 @@ Title & Title Page, Overview \& Reproducible Archive Lineage & 1 \\
 TOC & Table of Contents, Notation \& Methodological Principles & 2 \\
 Chapter 1 & Version History from V1 to V21: The Evolution of My Research Program & 3 \\
 Chapter 2 & Core Essence of the Theory: The Physical ``Why'' \& Consciousness Coherence & 4 \\
-Chapter 3 & Derivation of the $C$ Coupling Constant and Cauchy Exponential Law & 5 \\
+Chapter 3 & Exponential Form, Definition of $C$, and Normalization & 5 \\
 Chapter 4 & Resolution of the Negative Density Problem \& Cross-Scale Fitting & 6 \\
 Chapter 5 & Galactic Rotation Curves: Processing 155 SPARC Galaxies \& 3D Top-Hat Grids & 7 \\
 Chapter 6 & Very-High-Energy Gamma-Ray Timing: Multi-Source H.E.S.S. Data Analysis & 8 \\
@@ -125,7 +125,7 @@ Chapter 9 & Conditional Clock \& Redshift Hypotheses: Sirius B and NICER Likelih
 Chapter 10 & Planned Laboratory Measurements: Eight-Coil Field \& Granite Clock Chamber & 12 \\
 Chapter 11 & Open Theoretical and Experimental Questions: Laboratory \& Theoretical Tasks (a)--(d) & 13 \\
 Chapter 12 & Closing Chapter: The Immediate Next Physical Step of the Research Program & 13 \\
-Appendix & AI-Assisted Technical Reproduction Audit (English Translation, \texttt{revision3\_review\_EN.md}) & 14--15 \\
+Appendix & AI-Assisted Technical Reproduction Audit (English Translation) & 14--15 \\
 \bottomrule
 \end{tabular}}
 
@@ -253,6 +253,8 @@ Dimensional analysis allows $\gamma_L = \alpha\,(G/c^2)\,L^2$ with any dimension
 \end{equation}
 Here $f_L$ denotes the local TAL attenuation factor; in curved spacetime (Chapter 9), the standard GR redshift $1+z = e^{-\Phi(R_*)}$ (lapse $e^{\Phi}$) is either modified solely via the hydrostatic metric (H0) or, as an explicit conditional clock hypothesis (H1), divided by $f_L(R_*)$: $1+z = e^{-\Phi(R_*)}/f_L(R_*)$.
 
+When a point mass $M$ is averaged over a sphere of radius $L$, its mean density is $\bar{\rho}_L = \frac{3M}{4\pi L^3}$, so the exponent is $\gamma_L \bar{\rho}_L = \frac{3GM}{4\pi c^2 L} = \frac{3\,C\,M}{(4\pi)^2 L}$, which reproduces the dimensionless compactness scale $GM/(c^2 L)$ up to the geometric factor $3/(4\pi)$.
+
 \noindent{\bfseries\color{navy}3. Empirical Re-Evaluation of the V14--V16 Historical Amplifier $C_{\text{amp}}(\rho) = 1 + C_0\exp(-\rho/\rho_c)$}\par
 In Versions 14--16 (DOI \texttt{10.5281/zenodo.23217189}), before I introduced the 3D spherical top-hat integral, I explored a phenomenological weak-field force multiplier of the form:
 \begin{equation}
@@ -314,16 +316,16 @@ To test the \textbf{Time Attraction Law} against galactic dynamics without dark-
 The master SPARC catalog contains \textbf{175 late-type and dwarf galaxies} with surface photometry at $3.6\,\mu\text{m}$ and resolved $\text{H\,\textsc{i}}/\text{H}\alpha$ rotation curves. In my V17 processing pipeline, removing 20 systems with severe kinematic asymmetries or inclination flags ($i < 30^\circ$ or $Q=3$) yielded the \textbf{155-galaxy processed rotation-curve sample}. Enforcing strict data-hygiene cuts (requiring at least 5 radial points and full baryonic decomposition components $V_{\text{gas}}, V_{\text{disk}}, V_{\text{bulge}}$) defined the \textbf{123-galaxy blind validation sample} comprising \textbf{2,596 radial velocity measurements}. Throughout all fits, I locked the stellar mass-to-light ratios to standard population-synthesis values ($\Upsilon_{\text{disk}} = 0.5\,M_\odot/L_\odot$, $\Upsilon_{\text{bulge}} = 0.7\,M_\odot/L_\odot$) so that no galaxy-by-galaxy halo parameters were adjusted.
 
 \noindent{\bfseries\color{navy}2. Exact 3D Spherical Top-Hat Evaluation Across All 175 SPARC Galaxies (V19)}\par
-In Version 19, I replaced the thin-disk midplane proxy $\rho_{\text{mid}}(r) = \Sigma_{\text{bary}}(r)/(2h_z)$ with the exact 3D axisymmetric mass distribution $\rho_{\text{bary}}(R,z) = \frac{\Sigma_{\text{bary}}(R)}{2h_z}\exp(-|z|/h_z)$ (with scale height $h_z = 0.196\,R_d^{0.633}$) and integrated $\bar{\rho}_L(r)$ inside a 3D sphere of radius $L$ centered at every midplane radial point $(r,0,0)$. AI-assisted numerical cross-checks (Academia Co-scientist; not a human referee) reproduced three decisive numerical facts:
+In Version 19, I replaced the thin-disk midplane proxy $\rho_{\text{mid}}(r) = \Sigma_{\text{bary}}(r)/(2h_z)$ with the exact 3D axisymmetric mass distribution $\rho_{\text{bary}}(R,z) = \frac{\Sigma_{\text{bary}}(R)}{2h_z}\exp(-|z|/h_z)$ (with a constant scale height $h_z = 0.2\,\text{kpc}$ for the stellar and gas layers; separate sensitivity runs use $h_z = 0.1$ and $0.4\,\text{kpc}$) and integrated $\bar{\rho}_L(r)$ inside a 3D sphere of radius $L$ centered at every midplane radial point $(r,0,0)$. AI-assisted numerical cross-checks (Academia Co-scientist; not a human referee) reproduced three decisive numerical facts:
 \begin{enumerate}\setlength{\itemsep}{1pt}\setlength{\parskip}{0pt}\setlength{\topsep}{1pt}
-  \item \textbf{Galaxy-Only 3D Top-Hat Signal (\texttt{sparc\_tophat.zip}):} Because a 3D sphere of radius $L \gg h_z$ extends far into the vacuum above and below the thin galactic disk, the enclosed galactic mass is diluted by $L^3$. Across all 175 SPARC galaxies, the maximum galaxy-attributable deviation is $\max |1 - f_L| = 2.280\times 10^{-7}$ on the 69-value $L$-grid (64 logarithmic grid points plus 5 named values) and \textbf{$2.303\times 10^{-7}$} under continuous optimization, attained in \textbf{UGC03546} at radius $R = 0.63\,\text{kpc}$ and smoothing scale $L \approx 0.825\,\text{kpc}$ (whereas in the earlier V19 fit, UGC02487 peaked near $L \approx 23.09\,\text{kpc}$).
-  \item \textbf{1D Midplane Proxy vs.\ True 3D Top-Hat at $L = 2.3714\,\text{Mpc}$ (\texttt{fitted\_L\_scores.csv}):} In the audited explicit-error pipeline at $L = 2.3714\,\text{Mpc}$, the pure baryonic baseline ($v_{\text{bar}}$) and the isolated-galaxy 3D spherical top-hat integral yield identical reduced-$\chi^2_\nu$ medians of \textbf{$2.8979$} across all $N=175$ galaxies and \textbf{$3.1433$} across the Blind-123 subsample, whereas the historical 1D midplane proxy yielded $2.6720$ ($N=175$) and $2.7083$ (Blind-123).
-  \item \textbf{Homogeneous Matter Background Scale ($L_{\text{eff}} \approx 22.94\,\text{Gpc}$):} In the homogeneous cosmic matter background $\bar{\rho}_0 \approx 2.68\times 10^{-27}\,\text{kg/m}^3$ ($\Omega_m \approx 0.315, H_0 = 67.4\,\text{km/s/Mpc}$), the condition $\gamma_L\bar{\rho}_0 = 1$ corresponds to the cosmological length scale $L_{\text{eff}} = (G\bar{\rho}_0/c^2)^{-1/2} \approx 22.94\,\text{Gpc}$ ($7.08\times 10^{26}\,\text{m}$).
+  \item \textbf{Galaxy-Only 3D Top-Hat Signal:} Because a 3D sphere of radius $L \gg h_z$ extends far into the vacuum above and below the thin galactic disk, the enclosed galactic mass is diluted by $L^3$. Across all 175 SPARC galaxies, the maximum galaxy-attributable deviation is $\max |1 - f_L| = 2.280\times 10^{-7}$ on the 69-value $L$-grid (64 logarithmic grid points plus 5 named values) and \textbf{$2.303\times 10^{-7}$} after a fine 1200-point $L$ scan, attained in \textbf{UGC03546} at radius $R = 0.63\,\text{kpc}$ and smoothing scale $L \approx 0.825\,\text{kpc}$ (whereas in the earlier V19 fit, UGC02487 peaked near $L \approx 23.09\,\text{kpc}$).
+  \item \textbf{1D Midplane Proxy vs.\ True 3D Top-Hat at $L = 2.3714\,\text{Mpc}$:} In the audited explicit-error pipeline at $L = 2.3714\,\text{Mpc}$, the pure baryonic baseline ($v_{\text{bar}}$) and the isolated-galaxy 3D spherical top-hat integral yield identical reduced-$\chi^2_\nu$ medians of \textbf{$2.8979$} across all $N=175$ galaxies and \textbf{$3.1433$} across the Blind-123 subsample, whereas the historical 1D midplane proxy yielded $2.6720$ ($N=175$) and $2.7083$ (Blind-123).
+  \item \textbf{Homogeneous Matter Background Scale ($L_{\text{eff}} \approx 22.94\,\text{Gpc}$):} In the homogeneous cosmic matter background $\bar{\rho}_0 \approx 2.69\times 10^{-27}\,\text{kg/m}^3$ ($\Omega_m \approx 0.315, H_0 = 67.4\,\text{km/s/Mpc}$), the condition $\gamma_L\bar{\rho}_0 = 1$ corresponds to the cosmological length scale $L_{\text{eff}} = (G\bar{\rho}_0/c^2)^{-1/2} \approx 22.94\,\text{Gpc}$ ($7.08\times 10^{26}\,\text{m}$).
 \end{enumerate}
 
 \begin{center}\vspace{-4pt}
   \includegraphics[height=44mm,width=0.94\linewidth,keepaspectratio]{figures/fig1_sparc_en.png}\par\vspace{-3pt}
-  {\scriptsize\color{slate}\textbf{Figure 5.1:} Audited SPARC results (\texttt{sparc\_tophat.zip} \& \texttt{fitted\_L\_scores.csv}): (a) Peak galaxy-only 3D top-hat $|1-f_L|$ vs.\ $L$ ($N=175$), reaching $2.280\times 10^{-7}$ on the grid ($2.303\times 10^{-7}$ refined) in \textbf{UGC03546} at $R=0.63\,\text{kpc}, L\approx 0.825\,\text{kpc}$; (b) Reduced $\chi^2_\nu$ distributions at $L=2.3714\,\text{Mpc}$ ($N=175$ median $2.8979$ and Blind-123 median $3.1433$ for both $v_{\text{bar}}$ and 3D top-hat, vs.\ $2.6720$ / $2.7083$ for the 1D proxy).}
+  {\scriptsize\color{slate}\textbf{Figure 5.1:} Audited SPARC results: (a) Peak galaxy-only 3D top-hat $|1-f_L|$ vs.\ $L$ ($N=175$), reaching $2.280\times 10^{-7}$ on the grid ($2.303\times 10^{-7}$ refined) in \textbf{UGC03546} at $R=0.63\,\text{kpc}, L\approx 0.825\,\text{kpc}$; (b) Reduced $\chi^2_\nu$ distributions at $L=2.3714\,\text{Mpc}$ ($N=175$ median $2.8979$ and Blind-123 median $3.1433$ for both $v_{\text{bar}}$ and 3D top-hat, vs.\ $2.6720$ / $2.7083$ for the 1D proxy).}
 \end{center}
 \newpage
 
@@ -382,12 +384,12 @@ with hydrostatic balance $\frac{dP}{dr} = -(\varepsilon + P)\frac{d\Phi_{\text{e
 To avoid conflating distinct tables in the V21 archive (\texttt{10.5281/zenodo.23602501}), the exact dataset structure is:
 {\footnotesize\begin{itemize}\setlength{\itemsep}{0.5pt}\setlength{\parskip}{0pt}\setlength{\topsep}{1pt}
   \item \textbf{33 equilibrium sequences (11 configurations per EOS):} 3 EOS (\textbf{SLy}, \textbf{APR4} with $c_s=c$ at $\rho_0 \approx 1.4458\times 10^{15}\,\text{g/cm}^3$, and \textbf{H4}) $\times$ (1 GR baseline $+$ 5 \texttt{mass}-mode scales $+$ 5 \texttt{gradient}-mode scales). Thus the 15 gradient sequences span all 3 EOSs ($3\times 5=15$).
-  \item \textbf{3,113 rows (\texttt{mr\_sequences.csv}) \& 182 acausal points:} The baseline equilibrium table contains 3,113 stellar models, of which \textbf{182 points} belong to the acausal ($c_s > c$) subset identified in the audit (not the total equilibrium count).
-  \item \textbf{769 rows (\texttt{outputs/item3\_B\_star\_observables.csv} in \texttt{ns\_tal\_open\_items\_2026-10-23.zip}):} The observables summary table contains 769 models in total, including the \textbf{33 sequence endpoints} (\textbf{14} at the $c_s = c$ causal threshold and \textbf{19} at branch maxima reached before $c_s = c$), while \texttt{item2\_radial\_grid.csv} has \textbf{3,339 rows} and the stress diagnostic table covers \textbf{36 configurations}.
+  \item \textbf{3,113 rows (equilibrium table) \& 182 acausal points:} The baseline equilibrium table contains 3,113 stellar models, of which \textbf{182 points} belong to the acausal ($c_s > c$) subset identified in the audit (not the total equilibrium count).
+  \item \textbf{769 rows (observables summary table):} The observables summary table contains 769 models in total, including the \textbf{33 sequence endpoints} (\textbf{14} at the $c_s = c$ causal threshold and \textbf{19} at branch maxima reached before $c_s = c$), while the radial-stability grid has \textbf{3,339 rows} and the stress diagnostic table covers \textbf{36 configurations}.
 \end{itemize}}
 \begin{center}\vspace{-4pt}
   \includegraphics[height=40mm,width=0.94\linewidth,keepaspectratio]{figures/fig2_tov_en.png}\par\vspace{-3pt}
-  {\scriptsize\color{slate}\textbf{Figure 7.1:} Conditional neutron-star mass--radius ($M$--$R$) equilibrium sequences from \texttt{mr\_sequences.csv} (3,113 points across 33 sequences; dotted segments mark the 182 acausal $c_s>c$ points) for SLy, APR4, and H4 in (a) \texttt{mass} mode and (b) \texttt{gradient} mode.}
+  {\scriptsize\color{slate}\textbf{Figure 7.1:} Conditional neutron-star mass--radius ($M$--$R$) equilibrium sequences from the V21 equilibrium table (3,113 points across 33 sequences; dotted segments mark the 182 acausal $c_s>c$ points) for SLy, APR4, and H4 in (a) \texttt{mass} mode and (b) \texttt{gradient} mode.}
 \end{center}
 
 \noindent{\bfseries\color{navy}3. Strict Methodological Caveat on the Hydrostatic Factor $f_L$ in $\Phi_{\text{eff}}'$}\par
@@ -418,7 +420,7 @@ Across the \textbf{3,339-row radial grid} (including the \textbf{15 gradient-mod
 \end{itemize}
 \begin{center}\vspace{-4pt}
   \includegraphics[height=38mm,width=0.94\linewidth,keepaspectratio]{figures/fig3_stability_en.png}\par\vspace{-3pt}
-  {\scriptsize\color{slate}\textbf{Figure 8.1:} Signed fundamental radial frequency $\text{sign}(\omega_0^2)f_0$ vs.\ central rest-mass density $\rho_{0c}$ across SLy, APR4, and H4 from \texttt{item2\_radial\_grid.csv} (3,339 rows) for (a) the approximate frozen-$f$ \texttt{matter} operator and (b) the approximate frozen-$f$ \texttt{metric} operator ($\times$ marks indefinite weight $\mathcal{W}\le 0$).}
+  {\scriptsize\color{slate}\textbf{Figure 8.1:} Signed fundamental radial frequency $\text{sign}(\omega_0^2)f_0$ vs.\ central rest-mass density $\rho_{0c}$ across SLy, APR4, and H4 from the V21 radial-stability grid (3,339 rows) for (a) the approximate frozen-$f$ \texttt{matter} operator and (b) the approximate frozen-$f$ \texttt{metric} operator ($\times$ marks indefinite weight $\mathcal{W}\le 0$).}
 \end{center}
 \newpage
 
@@ -524,13 +526,13 @@ In fundamental physics, genuine progress is built on verifiable milestones, expl
 \newpage
 
 % ==================== PAGES 14-15: APPENDIX (VERBATIM AI-ASSISTED NUMERICAL CROSS-CHECK REPORT, ACADEMIA CO-SCIENTIST) ====================
-\chaphead{Appendix: AI-Assisted Technical Reproduction Audit}{English Translation of the Round-3 Technical Evaluation of the Eight-Coil \& Clock Report (\texttt{revision3\_review\_EN.md})}
+\chaphead{Appendix: AI-Assisted Technical Reproduction Audit}{English Translation of the Round-3 Technical Evaluation of the Eight-Coil \& Clock Report}
 {\fontsize{6.4pt}{7.4pt}\setlength{\parskip}{1.0pt}\selectfont
 \noindent{\bfseries\small Third revision --- targeted AI-assisted numerical cross-check (Academia Co-scientist output, not a human referee report)}\par\vspace{1pt}
 \par
-\textbf{Date:} 2026-10-21. \textbf{Inputs:} \texttt{final\_report (3).zip}, \texttt{report\_hu (3).pdf}. \textbf{Requested checks:} the previous integral-matching error near L$\approx$3 m and the treatment of the background magnetic-field cross term. The original files were not modified; no publication platform was modified. The Bothwell-gradient task remains separate.
+\textbf{Date:} 2026-10-21. \textbf{Inputs:} the revised report package and its Hungarian PDF. \textbf{Requested checks:} the previous integral-matching error near L$\approx$3 m and the treatment of the background magnetic-field cross term. The original files were not modified; no publication platform was modified. The Bothwell-gradient task remains separate.
 \par
-*English translation of \texttt{revision3\_review\_HU.md}. Numerical results, qualifications, and conclusions are unchanged. Quoted passages from the Hungarian report and proposed replacement wording are translated into English below. No additional calculations were performed for this translation.*
+*English translation of the Hungarian evaluation. Numerical results, qualifications, and conclusions are unchanged. Quoted passages from the Hungarian report and proposed replacement wording are translated into English below. No additional calculations were performed for this translation.*
 \par
 \vspace{2pt}\noindent{\bfseries\footnotesize Verdict}\par\vspace{0.5pt}
 \par
@@ -547,14 +549,13 @@ Three minor or experimental-interpretation qualifications remain: ``zero standar
 \par
 \begin{itemize}\setlength{\itemsep}{0.5pt}\setlength{\parskip}{0pt}\setlength{\topsep}{1pt}
 \item \textbf{All 18/18 SHA-256 entries match.} The separately uploaded PDF is byte-for-byte identical to the report inside the ZIP.
-\item I read the revised report, the new \texttt{energy\_integrator.py} module, and the changes to \texttt{final\_fixed.py}. The PDF tables were also checked against the rendered page images.
+\item I read the revised report, the new energy-integrator module, and the changes to the main calculation script. The PDF tables were also checked against the rendered page images.
 \item I performed \textbf{targeted reruns} of the archived integrator at the main peak and of the outer A/B integration routes at the relevant L values.
 \item I checked the field using a separate circular-loop formula, the main signal using Cartesian Sobol cubature, and the far-field energy difference using a different angular and radial quadrature.
 \end{itemize}
 \par
-I do \textbf{not} claim a new complete execution of \texttt{final\_fixed.py}: the full four-variant convergence analysis, static Monte Carlo calculations, and figure generation were not repeated in this round. The two requested corrections and the main peak were checked through targeted tests.
+I do \textbf{not} claim a new complete execution of the main calculation script: the full four-variant convergence analysis, static Monte Carlo calculations, and figure generation were not repeated in this round. The two requested corrections and the main peak were checked through targeted tests.
 \par
-Archive SHA-256: \texttt{160981d3adb435b4fa719ca1a9d9a04d4e889a27f9d4c7bb0381e5c057ad2ea8}.
 \par
 \vspace{2pt}\noindent{\bfseries\footnotesize 2. Main signal: reproducible and independently checkable}\par\vspace{0.5pt}
 \par
@@ -612,7 +613,7 @@ The previous discrepancies of several hundred percent in the transition region a
 \par
 
 \newpage
-\noindent{\footnotesize\bfseries\color{navy}Appendix (Continued): AI-Assisted Technical Reproduction Audit (\texttt{revision3\_review\_EN.md}, Part 2)}\par\vspace{2pt}
+\noindent{\footnotesize\bfseries\color{navy}Appendix (Continued): AI-Assisted Technical Reproduction Audit, Part 2)}\par\vspace{2pt}
 \noindent{\color{navy}\rule{\linewidth}{0.4pt}}\par\vspace{2pt}
 \textbf{B. The new, smaller matching error is disclosed and real.} The report now states that the inner/outer switch at L=0.95 m is not exactly continuous. The archived values are \textbf{2.17738947 and 2.17597607 J/A$^2$}, differing by \textbf{0.00141340 J/A$^2$} (absolute residual $\Delta W = W_{\text{in}} - W_{\text{out}}$), or \textbf{0.0649\%} of the inner value (relative residual $\Delta W/W_{\text{in}} = 6.49\times 10^{-4}$). This agrees algebraically with the discrepancy between the total-energy estimates; it is not a persistence of the old large error near 3 m. This was checked here using the archived values and the integral identity, not through a new total-energy integration.
 \par
@@ -673,14 +674,8 @@ Section 4 still ties the switching schedule to the beat period. This choice is n
 \par
 \vspace{2pt}\noindent{\bfseries\footnotesize Reproduction and accompanying data}\par\vspace{0.5pt}
 \par
-\texttt{revision3\_checks.json} contains the 18 integrity tests, the five separate field tests, the targeted main-peak rerun, the two Sobol evaluation points, nine outer-integral checks, the far-field resolution variation, and the arithmetic for the disclosed matching residual at 0.95 m. These are computational checks, not raw clock data.
+The accompanying results file contains the 18 integrity tests, the five separate field tests, the targeted main-peak rerun, the two Sobol evaluation points, nine outer-integral checks, the far-field resolution variation, and the arithmetic for the disclosed matching residual at 0.95 m. These are computational checks, not raw clock data.
 \par
-Local verification code:
-\par
-\begin{verbatim}
-python3 user/workspace/co-scientist-outputs/ocxo-revision3-review/check_revision3.py
-\end{verbatim}
-\par
-Python 3, NumPy, and SciPy are required. The code reads the ZIP, copies the two modules needed for execution into scratch space, and regenerates the results JSON. It does not overwrite the original package or manuscript and does not modify publication platforms.
+The local verification code requires Python 3, NumPy, and SciPy. The code reads the ZIP, copies the two modules needed for execution into scratch space, and regenerates the results JSON. It does not overwrite the original package or manuscript and does not modify publication platforms.
 }
 \end{document}

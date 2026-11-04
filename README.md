@@ -100,7 +100,7 @@ Previous version: V23 (Zenodo V23, DOI [10.5281/zenodo.23639084](https://doi.org
 | V25 (Zenodo V25) | Time Attraction Law — Scalar-Tensor Yukawa Fit, V25 (sign fixes, 4-comp exterior BVP, coupled GL2 stability & diagnostics). [`10.5281/zenodo.23680715`](https://doi.org/10.5281/zenodo.23680715) refers strictly to V24. | [`10.5281/zenodo.23699685`](https://doi.org/10.5281/zenodo.23699685) |
 | V24 (Zenodo V24) | Time Attraction Law — Scalar-Tensor Yukawa Fit, V24 | [`10.5281/zenodo.23680715`](https://doi.org/10.5281/zenodo.23680715) |
 | V23 (Zenodo V23) | Covariant Action Candidates and Nonlocal Static Consistency Tests | [`10.5281/zenodo.23639084`](https://doi.org/10.5281/zenodo.23639084) |
-| V22 Book Edition (Zenodo V22) | Research Monograph | [`10.5281/zenodo.23604423`](https://doi.org/10.5281/zenodo.23604423) |
+| TAL book (2026-11-04), English and Hungarian — Book/ | [`Book/`](Book/) | — |
 | Zenodo V21 (= GitHub V19) | Neutron-star package (`V21/`) | [`10.5281/zenodo.23602501`](https://doi.org/10.5281/zenodo.23602501) |
 | Zenodo V20 (= GitHub V18) | GitHub V18 package (`V20/`, `V18/`) | [`10.5281/zenodo.23540741`](https://doi.org/10.5281/zenodo.23540741) |
 | Zenodo V19 | 7th model (`V19/`) | [`10.5281/zenodo.23497128`](https://doi.org/10.5281/zenodo.23497128) |
@@ -127,8 +127,6 @@ Previous version: V23 (Zenodo V23, DOI [10.5281/zenodo.23639084](https://doi.org
 **Time Attraction Law — V23: Covariant Action Candidates and Nonlocal Static Consistency Tests (Task 50aa2db0)** (2026-10-25)  
 **DOI:** [https://doi.org/10.5281/zenodo.23639084](https://doi.org/10.5281/zenodo.23639084) · **License:** CC BY-NC 4.0 · **Author:** David Szabolcsi (ORCID [0009-0005-6300-074X](https://orcid.org/0009-0005-6300-074X))
 
-Previous version: V22 Book Edition (Zenodo V22, DOI [10.5281/zenodo.23604423](https://doi.org/10.5281/zenodo.23604423)).
-
 ### Contents ([`V23/`](V23/))
 
 Bilingual (English and Hungarian) 4-page technical reports, standalone Python reproduction code, CSV/JSON data tables, and figures for Task `50aa2db0`: nonlocal multiplier action vs. flat-kernel bilateral reciprocal fixed-point (`bilateral_eom`) and lapse-weighted (`bilateral_lapse_weighted`) equilibria, local Yukawa scalar-tensor action-derived curved-space (`yukawa_action_el`) vs. flat-space phenomenological (`yukawa_flat_phenom_Tphi`) models, three-tier Bianchi/Noether conservation residuals, static nonlocal tangent model and $W\to 4W$ inertia control on the V21 background, and H0 vs. disformal H1 ($	ilde{g}_{\mu\nu} = g_{\mu\nu} + c^{-2}(1 - f_L^2)u_\mu u_\nu$) clock-coupling comparisons (including V20 granite IN$-$OUT differential shifts and Sirius B common effective-mass proxy).
@@ -144,28 +142,22 @@ Verification: `cd V23 && sha256sum -c SHA256SUMS.txt`.
 
 ---
 
-## V22 Book Edition — Research Monograph (Zenodo V22, DOI 10.5281/zenodo.23604423)
+## TAL book (2026-11-04), English and Hungarian — Book/
 
-**Time Attraction Law — Book Edition r2 (EN/HU)** (2026-11-04)  
-**Previous Zenodo record:** [https://doi.org/10.5281/zenodo.23604423](https://doi.org/10.5281/zenodo.23604423) · **License:** CC BY-NC 4.0 · **Author:** David Szabolcsi (ORCID [0009-0005-6300-074X](https://orcid.org/0009-0005-6300-074X))
+TAL book (2026-11-04), English and Hungarian — [`Book/`](Book/).  
+© 2026 Szabolcsi Dávid (ORCID 0009-0005-6300-074X) · CC BY-NC 4.0 International · https://creativecommons.org/licenses/by-nc/4.0/ · commercial use only with the author's written permission
 
-Previous version: Zenodo V21 (= GitHub V19/V21), DOI [10.5281/zenodo.23602501](https://doi.org/10.5281/zenodo.23602501).
+### Contents ([`Book/`](Book/))
 
-### Contents ([`V22_Book/`](V22_Book/))
+- [`Book/tal_book_EN_2026-10-24_r3.pdf`](Book/tal_book_EN_2026-10-24_r3.pdf) — English monograph (SHA-256: `a18d27bb5f5b03b5fdf4e246780ee0aafd8fe98208b5d4bd551b17019e107e25`).
+- [`Book/tal_book_EN_2026-10-24_r3.tex`](Book/tal_book_EN_2026-10-24_r3.tex) — English LaTeX source (`9bc514fd7ceca9662f57efb224bde10114eb947303f5725a36664183402f0c67`).
+- [`Book/tal_book_HU_2026-10-24_r3.pdf`](Book/tal_book_HU_2026-10-24_r3.pdf) & [`.tex`](Book/tal_book_HU_2026-10-24_r3.tex) — Hungarian monograph (SHA-256: `a757a53908340b0301841e7a984149719bfcb24fbd9960adb91b3c73f2d76a90`; LaTeX `3ec10a1dcb2a273abb9251dd7bbba161484f357eeffa166a912a9f6340d679b5`).
+- [`Book/figures/`](Book/figures/) — eight figures (`EN`, `HU`).
+- [`Book/README.md`](Book/README.md) — package note.
+- [`Book/LICENSE.txt`](Book/LICENSE.txt) — license notice.
+- [`Book/SHA256SUMS.txt`](Book/SHA256SUMS.txt) — SHA-256 manifest (14 entries).
 
-V22_Book: replaced by Book Edition r2 (EN/HU): corrected text and numbers; max|Δχ²| = 4.93×10⁻⁵ (previously ≈10⁻³); appendix labelled as AI-assisted numerical cross-checks (Academia Co-scientist output), not a human referee report; Hungarian edition aligned with English. The German edition and the old files remain available in the git history. Previous Zenodo record: 10.5281/zenodo.23604423.
-
-A 15-page, 12-chapter research monograph synthesizing the Time Attraction Law across Versions 1 through 21: density-modulated time flow, the $C$ coupling constant ($C = 4\pi G/c^2$), positive-definite 3D spherical top-hat smoothing $f_L(\mathbf{x}) = \exp(-\gamma_L \bar{\rho}_L(\mathbf{x}))$, 175 SPARC rotation curves (155 processed, 123 blind validation), multi-source H.E.S.S. gamma-ray timing, 33 neutron-star TOV sequences (769 equilibrium stars including 33 causal endpoints), radial pulsation operators, conditional Sirius B & NICER tests, the movable granite clock chamber and 8-coil ($\varnothing 300\,\text{mm}$ flange) magnetic energetics laboratory program, and open tasks (a)–(d) (covariant action closure task `50aa2db0`). No detection claim is made.
-
-- [`V22_Book/tal_book_EN_2026-10-24_r2.pdf`](V22_Book/tal_book_EN_2026-10-24_r2.pdf) — **Primary 15-page English Research Monograph** (SHA-256: `74326464e89b137ed1fa9b5683073e88262f64479c1c499f42c5868b667c89ed`).
-- [`V22_Book/tal_book_EN_2026-10-24_r2.tex`](V22_Book/tal_book_EN_2026-10-24_r2.tex) — English LaTeX source (`367d53d32f636d1d507389806fbe3221fb9e1d0d8a4ef81bde77d03462d49e8b`).
-- [`V22_Book/tal_book_HU_2026-10-24_r2.pdf`](V22_Book/tal_book_HU_2026-10-24_r2.pdf) & [`.tex`](V22_Book/tal_book_HU_2026-10-24_r2.tex) — 15-page Hungarian Monograph (SHA-256: `44be281aea311321947cfd2b8c90f14a9f9b620bc3d23ea825e1fc5f2e76122d`; LaTeX `ca11159de7d95fe7079d5285ea233497b51731280b0d43600b8f91f80ac1ff5b`).
-- [`V22_Book/figures/`](V22_Book/figures/) — eight figures (`EN`, `HU`).
-- [`V22_Book/README.md`](V22_Book/README.md) — package note for Book Edition r2.
-- [`V22_Book/LICENSE.txt`](V22_Book/LICENSE.txt) — CC BY-NC 4.0 license notice.
-- [`V22_Book/SHA256SUMS.txt`](V22_Book/SHA256SUMS.txt) — SHA-256 manifest (14 entries).
-
-Verification: `cd V22_Book && sha256sum -c SHA256SUMS.txt`.
+Verification: `cd Book && sha256sum -c SHA256SUMS.txt`.
 
 ---
 
