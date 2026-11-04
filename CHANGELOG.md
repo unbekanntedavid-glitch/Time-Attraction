@@ -1,5 +1,9 @@
 # Changelog
 
+## V22_Book — Book Edition r2 (EN/HU) — 2026-11-04
+
+V22_Book: replaced by Book Edition r2 (EN/HU): corrected text and numbers; max|Δχ²| = 4.93×10⁻⁵ (previously ≈10⁻³); appendix labelled as AI-assisted numerical cross-checks (Academia Co-scientist output), not a human referee report; Hungarian edition aligned with English. The German edition and the old files remain available in the git history. Previous Zenodo record: 10.5281/zenodo.23604423.
+
 ## V29 — Time Attraction Law (TAL): Derivation Chain Audit and Step 29 Corrections S1–S3 — 2026-11-02
 
 Audit of the derivation chain v1–v7 to V28, corrections S1–S3, verification material; files in [`V29/`](V29/).
