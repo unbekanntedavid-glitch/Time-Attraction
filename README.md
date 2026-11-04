@@ -157,12 +157,13 @@ V22_Book: replaced by Book Edition r2 (EN/HU): corrected text and numbers; max|�
 
 A 15-page, 12-chapter research monograph synthesizing the Time Attraction Law across Versions 1 through 21: density-modulated time flow, the $C$ coupling constant ($C = 4\pi G/c^2$), positive-definite 3D spherical top-hat smoothing $f_L(\mathbf{x}) = \exp(-\gamma_L \bar{\rho}_L(\mathbf{x}))$, 175 SPARC rotation curves (155 processed, 123 blind validation), multi-source H.E.S.S. gamma-ray timing, 33 neutron-star TOV sequences (769 equilibrium stars including 33 causal endpoints), radial pulsation operators, conditional Sirius B & NICER tests, the movable granite clock chamber and 8-coil ($\varnothing 300\,\text{mm}$ flange) magnetic energetics laboratory program, and open tasks (a)–(d) (covariant action closure task `50aa2db0`). No detection claim is made.
 
-- [`V22_Book/tal_book_EN_2026-10-24_r2.pdf`](V22_Book/tal_book_EN_2026-10-24_r2.pdf) — **Primary 15-page English Research Monograph** (SHA-256: `24d54e57979e1f1c4b9a64a1b5ede865a97e5e5b2ece7b67d55b1f42d7d9b5d1`).
-- [`V22_Book/tal_book_EN_2026-10-24_r2.tex`](V22_Book/tal_book_EN_2026-10-24_r2.tex) — English LaTeX source (`5738b2f949f5ff75b00c3d50d27869b0f9d24c5eb3aed085175e3ce89d00923c`).
-- [`V22_Book/tal_book_HU_2026-10-24_r2.pdf`](V22_Book/tal_book_HU_2026-10-24_r2.pdf) & [`.tex`](V22_Book/tal_book_HU_2026-10-24_r2.tex) — 15-page Hungarian Monograph (SHA-256: `67ac46e1dc1ae0a0025de8414ddb344e352e0578e7655ec45f3843fafec774f5`; LaTeX `9519137b9c15140f31bedc486f641159040ab1b21b31250e79c953709647d4fb`).
+- [`V22_Book/tal_book_EN_2026-10-24_r2.pdf`](V22_Book/tal_book_EN_2026-10-24_r2.pdf) — **Primary 15-page English Research Monograph** (SHA-256: `74326464e89b137ed1fa9b5683073e88262f64479c1c499f42c5868b667c89ed`).
+- [`V22_Book/tal_book_EN_2026-10-24_r2.tex`](V22_Book/tal_book_EN_2026-10-24_r2.tex) — English LaTeX source (`367d53d32f636d1d507389806fbe3221fb9e1d0d8a4ef81bde77d03462d49e8b`).
+- [`V22_Book/tal_book_HU_2026-10-24_r2.pdf`](V22_Book/tal_book_HU_2026-10-24_r2.pdf) & [`.tex`](V22_Book/tal_book_HU_2026-10-24_r2.tex) — 15-page Hungarian Monograph (SHA-256: `44be281aea311321947cfd2b8c90f14a9f9b620bc3d23ea825e1fc5f2e76122d`; LaTeX `ca11159de7d95fe7079d5285ea233497b51731280b0d43600b8f91f80ac1ff5b`).
 - [`V22_Book/figures/`](V22_Book/figures/) — eight figures (`EN`, `HU`).
 - [`V22_Book/README.md`](V22_Book/README.md) — package note for Book Edition r2.
-- [`V22_Book/SHA256SUMS.txt`](V22_Book/SHA256SUMS.txt) — SHA-256 manifest (13 entries).
+- [`V22_Book/LICENSE.txt`](V22_Book/LICENSE.txt) — CC BY-NC 4.0 license notice.
+- [`V22_Book/SHA256SUMS.txt`](V22_Book/SHA256SUMS.txt) — SHA-256 manifest (14 entries).
 
 Verification: `cd V22_Book && sha256sum -c SHA256SUMS.txt`.
 
