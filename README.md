@@ -1,3 +1,4 @@
+[![DOI TimeFieldMass](https://zenodo.org/badge/DOI/10.5281/zenodo.23964973.svg)](https://doi.org/10.5281/zenodo.23964973)
 [![DOI Clock_Yukawa](https://zenodo.org/badge/DOI/10.5281/zenodo.23960821.svg)](https://doi.org/10.5281/zenodo.23960821)
 [![DOI V28](https://zenodo.org/badge/DOI/10.5281/zenodo.23814053.svg)](https://doi.org/10.5281/zenodo.23814053)
 [![DOI V27](https://zenodo.org/badge/DOI/10.5281/zenodo.23761574.svg)](https://doi.org/10.5281/zenodo.23761574)
@@ -6,6 +7,15 @@
 [![DOI V24](https://zenodo.org/badge/DOI/10.5281/zenodo.23680715.svg)](https://doi.org/10.5281/zenodo.23680715)
 [![DOI V23](https://zenodo.org/badge/DOI/10.5281/zenodo.23639084.svg)](https://doi.org/10.5281/zenodo.23639084)
 [![DOI V21](https://zenodo.org/badge/DOI/10.5281/zenodo.23602501.svg)](https://doi.org/10.5281/zenodo.23602501)
+
+## Mass of the TAL time scalar field: (λ, α_Y) exclusion map and the micron window
+
+**Mass of the TAL time scalar field: (λ, α_Y) exclusion map and the micron window** (r2, 2026-11-04)  
+Folder: [`TimeFieldMass_2026-11-04/`](TimeFieldMass_2026-11-04/) · License: CC BY-NC 4.0 · Zenodo DOI: [10.5281/zenodo.23964973](https://doi.org/10.5281/zenodo.23964973).
+
+The inputs are the r4 modules of [10.5281/zenodo.23960821](https://doi.org/10.5281/zenodo.23960821) ([`Clock_Yukawa_2026-11-04/`](Clock_Yukawa_2026-11-04/)).
+
+Numerical cross-checks with Academia Co-scientist (AI-assisted); not peer review.
 
 ## Clock and acceleration predictions of a fixed scalar–tensor branch: calibration and Yukawa constraints
 
