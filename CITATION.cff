@@ -14,6 +14,9 @@ authors:
     orcid: "https://orcid.org/0009-0005-6300-074X"
 identifiers:
   - type: doi
+    value: 10.5281/zenodo.23960821
+    description: "Zenodo: Clock and acceleration predictions of a fixed scalar–tensor branch: calibration and Yukawa constraints (Clock_Yukawa_2026-11-04)"
+  - type: doi
     value: 10.5281/zenodo.23814053
     description: "Zenodo V28: Time Attraction Law — Scalar-Tensor Yukawa Fit, V28 (new version of V27; concept DOI 10.5281/zenodo.22983681)"
   - type: doi

@@ -1,3 +1,4 @@
+[![DOI Clock_Yukawa](https://zenodo.org/badge/DOI/10.5281/zenodo.23960821.svg)](https://doi.org/10.5281/zenodo.23960821)
 [![DOI V28](https://zenodo.org/badge/DOI/10.5281/zenodo.23814053.svg)](https://doi.org/10.5281/zenodo.23814053)
 [![DOI V27](https://zenodo.org/badge/DOI/10.5281/zenodo.23761574.svg)](https://doi.org/10.5281/zenodo.23761574)
 [![DOI V26](https://zenodo.org/badge/DOI/10.5281/zenodo.23727585.svg)](https://doi.org/10.5281/zenodo.23727585)
@@ -9,7 +10,7 @@
 ## Clock and acceleration predictions of a fixed scalar–tensor branch: calibration and Yukawa constraints
 
 **Clock and acceleration predictions of a fixed scalar–tensor branch: calibration and Yukawa constraints** (2026-11-04)  
-Folder: [`Clock_Yukawa_2026-11-04/`](Clock_Yukawa_2026-11-04/) · Set SHA-256: `a6032a3b3dbc579a49b51598afe953a855ebafa7906c3b343c72cbdfb3f32674` · License: CC BY-NC 4.0 · No Zenodo DOI yet (pending).
+Folder: [`Clock_Yukawa_2026-11-04/`](Clock_Yukawa_2026-11-04/) · Set SHA-256: `a6032a3b3dbc579a49b51598afe953a855ebafa7906c3b343c72cbdfb3f32674` · License: CC BY-NC 4.0 · Zenodo DOI: [10.5281/zenodo.23960821](https://doi.org/10.5281/zenodo.23960821).
 
 Numerical cross-checks with Academia Co-scientist (AI-assisted); not peer review.
 
