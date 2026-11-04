@@ -1,0 +1,66 @@
+2026-11-04 19:07:25 CET (UTC+0100)
+python 3.13.5
+platform Linux-6.12.94+-x86_64-with-glibc2.41
+numpy 2.5.4
+scipy 1.18.1
+matplotlib 3.11.2
+Pillow 13.0.0
+cpus 8
+$ python3 run_check.py
+|alpha| reading: lambda_c = 75.89 um  [74.67, 77.14]
++alpha (thesis): lambda_c = 101.03 um  spread [100.99 101.12]
+  [consistent] Lee2020 Fig5 Eot-Wash 2020 curve: lambda at |alpha|=1 [um]: 38.57 vs 38.6 (-0.1%)
+  [consistent] Lee2020 Fig5 Eot-Wash 2007 curve: lambda at |alpha|=1 [um]: 55.54 vs 56 (-0.8%)
+  [consistent] Lee2020 Fig5 Eot-Wash 2004 curve: lambda at |alpha|=1 [um]: 196.1 vs 197 (-0.5%)
+  [consistent] Lee2020 Fig5 HUST 2020 curve: lambda at |alpha|=1 [um]: 47.91 vs 48 (-0.2%)
+  [consistent] Lee2020 Fig5 HUST 2016 curve: lambda at |alpha|=1 [um]: 59.28 vs 59 (+0.5%)
+  [consistent] Lee2020 Fig5 Eot-Wash 2020 curve: lambda at |alpha|=8/3 [um]: 30.2 vs 30 (+0.7%)
+  [consistent] Lee2020 Fig5 Eot-Wash 2007 curve: lambda at |alpha|=8/3 [um]: 44.24 vs 44 (+0.6%)
+  [consistent] Lee2020 Fig5 Eot-Wash 2004 curve: lambda at |alpha|=8/3 [um]: 153.1 vs 160 (-4.3%)
+  [consistent] AHN2003 Fig5 Eot-Wash curve: lambda at alpha=16/3 [um]: 131.3 vs 130 (+1.0%)
+  [consistent] AHN2003 Fig5 Eot-Wash curve: lambda at alpha=8/3 [um]: 154.4 vs 155 (-0.4%)
+  [consistent] AHN2003 Fig5 Eot-Wash curve: lambda at alpha=1 [um]: 197.5 vs 200 (-1.2%)
+  [consistent] Lee2020 Fig5 Eot-Wash 2020 curve vs thesis Table 11.4 |alpha95| (all 45 rows in range): median / max |log10 ratio| [dex]: -0.0001505 vs 0.002287 (+0.5%)
+  [consistent] thesis |alpha95| crossing of alpha0 vs drawn Eot-Wash 2020 curve crossing [um]: 98.07 vs 98.14 (-0.1%)
+  [consistent] raster (600 dpi) vs vector first excluded lambda, Lee2020 Fig5 [um]: 75.52 vs 75.89 (-0.5%)
+  [consistent] raster (600 dpi) vs vector first excluded lambda, AHN2003 Fig5 [um]: 414.3 vs 417.3 (-0.7%)
+  [consistent] vector fill vs curve-centre first excluded lambda, AHN2003 Fig5 [um]: 418.2 vs 417.3 (+0.2%)
+  [consistent] raster vs vector-fill first excluded lambda, AHN2003 Fig4 [mm]: 1.981 vs 1.998 (-0.8%)
+AHN2003_fig5_all [('0.0004173', '0.01')]
+Lee2020_fig5_all [('7.589e-05', '0.00101')]
+combined_abs [('7.589e-05', '0.01')]
+AHN2003_fig5_fill [('0.0004182', '0.01005')]
+AHN2003_fig4_fill [('0.001998', '1.009e+15')]
+wrote en
+wrote hu
+check_hust_free_gap: Eot-Wash 2020 |a| 98.074 um, thesis |a95| 98.136 um, thesis +a95 101.029 um, gap 2.893 um; PASS
+verify_outputs: 10621 values compared, rtol=0.0001: OK
+OK   inputs/frozen_digitization/AHN2003_fig4__fill_polygons.csv
+OK   inputs/frozen_digitization/AHN2003_fig5__Colorado.csv
+OK   inputs/frozen_digitization/AHN2003_fig5__Eot-Wash.csv
+OK   inputs/frozen_digitization/AHN2003_fig5__Irvine.csv
+OK   inputs/frozen_digitization/AHN2003_fig5__Lamoreaux.csv
+OK   inputs/frozen_digitization/AHN2003_fig5__Moscow_thin.csv
+OK   inputs/frozen_digitization/AHN2003_fig5__Stanford.csv
+OK   inputs/frozen_digitization/AHN2003_fig5__fill_polygons.csv
+OK   inputs/frozen_digitization/Lee2020_fig5__Colorado_2003.csv
+OK   inputs/frozen_digitization/Lee2020_fig5__Eot-Wash_2004.csv
+OK   inputs/frozen_digitization/Lee2020_fig5__Eot-Wash_2007.csv
+OK   inputs/frozen_digitization/Lee2020_fig5__Eot-Wash_2020.csv
+OK   inputs/frozen_digitization/Lee2020_fig5__HUST_2012.csv
+OK   inputs/frozen_digitization/Lee2020_fig5__HUST_2016.csv
+OK   inputs/frozen_digitization/Lee2020_fig5__HUST_2020.csv
+OK   inputs/frozen_digitization/Lee2020_fig5__Stanford_a.csv
+OK   inputs/frozen_digitization/Lee2020_fig5__Stanford_b.csv
+OK   inputs/frozen_digitization/Lee2020_fig5__Stanford_c.csv
+OK   inputs/frozen_digitization/Lee2020_fig5__unattributed_2to20um.csv
+OK   inputs/frozen_digitization/Lee2020_thesis_table11_4.csv
+OK   inputs/frozen_digitization/calibration.json
+OK   inputs/frozen_digitization/raster_crosscheck.json
+frozen digitization copied to outputs/ (digitization not rerun)
+== analyze_window.py
+== make_figures.py
+== check_hust_free_gap.py
+== verify_outputs.py
+all steps passed (frozen-digitization mode)
+exit 0

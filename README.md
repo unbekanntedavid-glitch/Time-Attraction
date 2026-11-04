@@ -6,6 +6,15 @@
 [![DOI V23](https://zenodo.org/badge/DOI/10.5281/zenodo.23639084.svg)](https://doi.org/10.5281/zenodo.23639084)
 [![DOI V21](https://zenodo.org/badge/DOI/10.5281/zenodo.23602501.svg)](https://doi.org/10.5281/zenodo.23602501)
 
+## Clock and acceleration predictions of a fixed scalar–tensor branch: calibration and Yukawa constraints
+
+**Clock and acceleration predictions of a fixed scalar–tensor branch: calibration and Yukawa constraints** (2026-11-04)  
+Folder: [`Clock_Yukawa_2026-11-04/`](Clock_Yukawa_2026-11-04/) · Set SHA-256: `a6032a3b3dbc579a49b51598afe953a855ebafa7906c3b343c72cbdfb3f32674` · License: CC BY-NC 4.0 · No Zenodo DOI yet (pending).
+
+Numerical cross-checks with Academia Co-scientist (AI-assisted); not peer review.
+
+Verification: `cd Clock_Yukawa_2026-11-04 && sha256sum -c SHA256SUMS.txt`.
+
 ## V28 — Scalar-Tensor Yukawa Fit: Step 26 audit, simulator, and Step 27 local Yukawa branch (Zenodo V28, DOI 10.5281/zenodo.23814053)
 
 **Time Attraction Law — Scalar-Tensor Yukawa Fit, V28** (2026-10-30)  

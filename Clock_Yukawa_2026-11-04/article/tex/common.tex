@@ -1,0 +1,33 @@
+% shared definitions (EN and HU); values come from generated/values_<lang>.tex
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{textcomp}
+\usepackage[margin=2.3cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\setlength{\footskip}{28pt}
+\emergencystretch=3em
+\makeatletter
+\newcommand{\V}[1]{\ifcsname val@#1\endcsname\csname val@#1\endcsname\else\errmessage{missing value #1}\fi}
+\let\tabinput\@@input
+\makeatother
+\newcommand{\um}{\ensuremath{\,\mu\mathrm{m}}}
+\newcommand{\mmu}{\ensuremath{\,\mathrm{mm}}}
+\newcommand{\cmu}{\ensuremath{\,\mathrm{cm}}}
+\newcommand{\kmu}{\ensuremath{\,\mathrm{km}}}
+\newcommand{\mU}{\ensuremath{\,\mathrm{m}}}
+\newcommand{\kgu}{\ensuremath{\,\mathrm{kg}}}
+\newcommand{\mss}{\ensuremath{\,\mathrm{m\,s^{-2}}}}
+\newcommand{\uGal}{\ensuremath{\,\mu\mathrm{Gal}}}
+\newcommand{\kgm}{\ensuremath{\,\mathrm{kg\,m^{-3}}}}
+\newcommand{\Gu}{\ensuremath{\,\mathrm{m^{3}\,kg^{-1}\,s^{-2}}}}
+\newcommand{\pct}{\,\%}
+\newcommand{\degu}{\ensuremath{^\circ}}
+\newcommand{\doi}[1]{\href{https://doi.org/#1}{\mbox{\nolinkurl{#1}}}}
+\newcommand{\file}[1]{\nolinkurl{#1}}

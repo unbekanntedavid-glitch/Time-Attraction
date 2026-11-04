@@ -1,0 +1,171 @@
+2026-11-04 19:09:16 CET (UTC+0100)
+python 3.13.5
+platform Linux-6.12.94+-x86_64-with-glibc2.41
+numpy 2.5.4
+scipy 1.18.1
+matplotlib 3.11.2
+Pillow 13.0.0
+cpus 8
+$ python3 run_check.py
+[PASS] base: 1838 stations, 0 mismatches, 0 on shared edges, 159 in no prism
+[PASS] grid_151: 1838 stations, 0 mismatches, 0 on shared edges, 268 in no prism
+[PASS] grid_451: 1838 stations, 0 mismatches, 0 on shared edges, 105 in no prism
+[PASS] rings_x0.5: 904 stations, 0 mismatches, 0 on shared edges, 81 in no prism
+[PASS] rings_x2: 3672 stations, 0 mismatches, 0 on shared edges, 317 in no prism
+[PASS] Rtrunc_60km: 1389 stations, 0 mismatches, 0 on shared edges, 159 in no prism
+[PASS] Rtrunc_120km: 1574 stations, 0 mismatches, 0 on shared edges, 159 in no prism
+[PASS] Rtrunc_480km: 2054 stations, 0 mismatches, 0 on shared edges, 159 in no prism
+[PASS] sector_3x3_within_4km: 8174 stations, 0 mismatches, 0 on shared edges, 1444 in no prism
+[PASS] quad_nz16_near12_mid48: 1838 stations, 0 mismatches, 0 on shared edges, 159 in no prism
+[PASS] outside_flat_at_base: 1838 stations, 0 mismatches, 0 on shared edges, 795 in no prism
+station surface check passed (6 s)
+[PASS] diagonal       single-point edge 75.486549 uGal, alpha_lim 0.0022961 | joint GLS sigma 0.0004174
+[PASS] uniform_+0.3   single-point edge 75.486549 uGal, alpha_lim 0.0022961 | joint GLS sigma 0.0007194
+[PASS] uniform_+0.6   single-point edge 75.486549 uGal, alpha_lim 0.0022961 | joint GLS sigma 0.0007423
+[PASS] uniform_+0.9   single-point edge 75.486549 uGal, alpha_lim 0.0022961 | joint GLS sigma 0.0004587
+[PASS] ar1_-0.9       single-point edge 75.486549 uGal, alpha_lim 0.0022961 | joint GLS sigma 9.894e-05
+[PASS] ar1_+0.5       single-point edge 75.486549 uGal, alpha_lim 0.0022961 | joint GLS sigma 0.0006722
+[PASS] ar1_+0.9       single-point edge 75.486549 uGal, alpha_lim 0.0022961 | joint GLS sigma 0.0009643
+single-point marginal check passed (joint GLS sigma range 9.894e-05 .. 0.0009643)
+{
+ "test": "T_projection_metric: equirectangular east-west metric change over the full DEM grids",
+ "lat0_deg": 36.78059,
+ "R_m": 6371000.0,
+ "at_y_m": {
+  "-27000": 0.0031591658839087433,
+  "27000": -0.003177126104569994
+ },
+ "grids": {
+  "151": {
+   "cell_m": 360.0,
+   "y_extent_m": [
+    -27180.0,
+    27180.0
+   ],
+   "rel_change_min": -0.0031983670838897638,
+   "rel_change_max": 0.003180166595752043,
+   "max_abs_rel_change": 0.0031983670838897638,
+   "max_abs_rel_change_at_subsamples": 0.0031930567644640195
+  },
+  "301": {
+   "cell_m": 180.0,
+   "y_extent_m": [
+    -27090.0,
+    27090.0
+   ],
+   "rel_change_min": -0.0031877464947687173,
+   "rel_change_max": 0.0031696663399258806,
+   "max_abs_rel_change": 0.0031877464947687173,
+   "max_abs_rel_change_at_subsamples": 0.0031850913785700374
+  },
+  "451": {
+   "cell_m": 120.0,
+   "y_extent_m": [
+    -27060.0,
+    27060.0
+   ],
+   "rel_change_min": -0.003184206342599971,
+   "rel_change_max": 0.0031661662101634125,
+   "max_abs_rel_change": 0.003184206342599971,
+   "max_abs_rel_change_at_subsamples": 0.003182436274804079
+  }
+ },
+ "max_abs_rel_change_all_grids": 0.0031983670838897638,
+ "claim_lt_1e-4_holds": false,
+ "note": "about 0.32 % local east-west metric change at the north/south edges; not automatically a residual error of the same size"
+}
+projection metric check passed: documented +0.003159 / -0.003177 at -/+27 km, max |change| 0.003198 on the full grids
+{
+ "rho_2000": {
+  "residual_uGal": -2744.0155989293125,
+  "alpha_lim": 0.00755665008702964,
+  "R": 10.530786873741285,
+  "ref_residual_uGal": -2744.0155989293125,
+  "ref_alpha_lim": 0.00755665008702964,
+  "ref_R": 10.530786873741285,
+  "max_rel_diff": 0.0
+ },
+ "rho_2670": {
+  "residual_uGal": -3663.260824570633,
+  "alpha_lim": 0.00564969887630364,
+  "R": 14.085258929412511,
+  "ref_residual_uGal": -3663.260824570633,
+  "ref_alpha_lim": 0.00564969887630364,
+  "ref_R": 14.085258929412511,
+  "max_rel_diff": 0.0
+ }
+}
+{
+ "prism_vs_brute_rel": 8.665048756073546e-06,
+ "yukawa_near_vs_brute_rel_lam1km": 5.2118784946930674e-05,
+ "mid_2x2_vs_analytic_rel_at_6cells": 5.2425688701673856e-05,
+ "column_far_vs_analytic_rel_at_24cells": 0.0006439673120989253,
+ "zoned_vs_all_analytic_tower_diff_newton_uGal_rho2200": -0.23120237953564274,
+ "zoned_vs_all_analytic_tower_diff_yukawa_uGal_rho2200": -0.2253577719308265,
+ "bouguer_slab_rel": 1.5008267704619271e-05,
+ "planar_weight_sum_minus_analytic": 0.0,
+ "harmonic_point_mass_rel": 1.7559740751460495e-06,
+ "yukawa_point_mass_rel_residual_lam10km": -0.004738837384226646
+}
+[base] 1838 stations, 104 tower pts, 103728 prisms, 16.2 s
+[grid_151] 1838 stations, 104 tower pts, 35928 prisms, 1.6 s
+[grid_451] 1838 stations, 104 tower pts, 216528 prisms, 16.5 s
+[rings_x0.5] 904 stations, 104 tower pts, 103728 prisms, 3.1 s
+[rings_x2] 3672 stations, 104 tower pts, 103728 prisms, 11.4 s
+[Rtrunc_60km] 1389 stations, 104 tower pts, 103728 prisms, 4.7 s
+[Rtrunc_120km] 1574 stations, 104 tower pts, 103728 prisms, 5.8 s
+[Rtrunc_480km] 2054 stations, 104 tower pts, 103728 prisms, 7.1 s
+[sector_3x3_within_4km] 8174 stations, 104 tower pts, 103728 prisms, 23.7 s
+[quad_nz16_near12_mid48] 1838 stations, 104 tower pts, 103728 prisms, 15.1 s
+[outside_flat_at_base] 1838 stations, 104 tower pts, 90600 prisms, 4.7 s
+done 110.49298286437988
+figures and tables written
+numeric leaves compared: 4019, tolerance |d| <= 1e-06 + 1e-06*|ref|
+[PASS] V28 Step 27 reproduction rho_2000 (max rel diff 0.0e+00)
+[PASS] V28 Step 27 reproduction rho_2670 (max rel diff 0.0e+00)
+[PASS] prism analytic vs brute force 
+[PASS] Yukawa near-field vs brute force 
+[PASS] mid-zone 2x2 quadrature vs analytic 
+[PASS] far-zone column vs analytic at 24 cells 
+[PASS] zoned vs all-analytic tower difference (Newton, Yukawa) < 1 uGal 
+[PASS] Bouguer slab 
+[PASS] harmonic point mass reproduced by operator 
+[PASS] Newtonian terrain bias within report 140 +- 20 uGal (rho = 2200) (137.6 uGal)
+[PASS] convergence base: |cont B - base| < 5 uGal at top (+0.00)
+[PASS] convergence grid_151: |cont B - base| < 5 uGal at top (-1.69)
+[PASS] convergence grid_451: |cont B - base| < 5 uGal at top (-1.37)
+[PASS] convergence rings_x0.5: |cont B - base| < 5 uGal at top (+2.44)
+[PASS] convergence rings_x2: |cont B - base| < 5 uGal at top (-1.87)
+[PASS] convergence sector_3x3_within_4km: |cont B - base| < 5 uGal at top (-0.10)
+[PASS] convergence quad_nz16_near12_mid48: |cont B - base| < 5 uGal at top (-0.00)
+[PASS] convergence outside_flat_at_base: |cont B - base| < 5 uGal at top (-0.30)
+[PASS] convergence Rtrunc_60km: |cont B - base| < 5 uGal at top (-0.94; variant A +378.9, expected to move)
+[PASS] convergence Rtrunc_120km: |cont B - base| < 5 uGal at top (-0.37; variant A +126.2, expected to move)
+[PASS] convergence Rtrunc_480km: |cont B - base| < 5 uGal at top (+0.31; variant A -63.0, expected to move)
+[PASS] T_station_surfaces: every station at its containing prism surface + EPS_Z (base + all convergence configurations) (0 mismatches, 11 configurations)
+[PASS] T_single_point_marginal: single-point marginal edge unchanged by unused off-diagonal covariance (7 covariance structures)
+[PASS] T_projection_metric: projection metric change computed on the full grids (max |change| 0.003198)
+[PASS] CSV table consistent with JSON (208 rows)
+[PASS] figure present fig_residual_curve.png 
+[PASS] figure present fig_residual_curve.pdf 
+[PASS] figure present fig_weights.png 
+[PASS] figure present fig_weights.pdf 
+[PASS] figure present fig_lambda_scan.png 
+[PASS] figure present fig_lambda_scan.pdf 
+
+all checks passed
+OK   inputs/bren_terrain_151.npz
+OK   inputs/bren_terrain_301.npz
+OK   inputs/bren_terrain_451.npz
+OK   inputs/kammeraad1990_fig1_method1_digitized.json
+OK   inputs/report_values.json
+OK   inputs/terrain_meta.json
+OK   inputs/v28_step27_reference.json
+== check_station_surfaces.py
+== check_single_point_marginal.py
+== check_projection_metric.py
+== bren_continuation.py
+== make_figures.py
+== verify_outputs.py
+all steps passed
+exit 0

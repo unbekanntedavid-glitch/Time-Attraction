@@ -1,0 +1,25 @@
+TAL publikációs csomag, 2026-11-04, r2 / TAL publication set, 2026-11-04, r2
+
+EN
+© 2026 Dávid Szabolcsi (ORCID 0009-0005-6300-074X)
+License: Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
+https://creativecommons.org/licenses/by-nc/4.0/
+Legal code: https://creativecommons.org/licenses/by-nc/4.0/legalcode
+All commercial, industrial and technological implementation rights are expressly retained by the author.
+Commercial use only with the author's written permission.
+Third-party material: the licence covers the author's own work only. It does not extend to third-party publications,
+figures, tables or data (e.g. the cited articles, reports and theses, the Copernicus DEM), which remain under their own
+terms. No third-party PDF is redistributed in this set; values digitized or quoted from such sources are cited with
+their origin in the module SOURCES files.
+
+HU
+© 2026 Szabolcsi Dávid (ORCID: 0009-0005-6300-074X)
+Licenc: Creative Commons Nevezd meg! – Ne add el! 4.0 Nemzetközi (CC BY-NC 4.0)
+https://creativecommons.org/licenses/by-nc/4.0/deed.hu
+Jogi szöveg: https://creativecommons.org/licenses/by-nc/4.0/legalcode.hu
+Valamennyi kereskedelmi, ipari és technológiai hasznosítási jogot kifejezetten a szerző tart fenn.
+Kereskedelmi hasznosítás kizárólag a szerző írásos engedélyével.
+Harmadik fél anyagai: a licenc csak a szerző saját munkájára vonatkozik. Nem terjed ki harmadik fél publikációira, ábráira,
+táblázataira vagy adataira (pl. a hivatkozott cikkek, jelentések és disszertációk, a Copernicus DEM), ezekre a saját
+feltételeik vonatkoznak. A készlet nem terjeszt harmadik féltől származó PDF-et; az ilyen forrásokból digitalizált vagy
+idézett értékek eredetét a modulok SOURCES fájljai adják meg.

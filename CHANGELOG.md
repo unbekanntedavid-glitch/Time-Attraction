@@ -1,5 +1,9 @@
 # Changelog
 
+## Clock and acceleration predictions of a fixed scalar–tensor branch: calibration and Yukawa constraints — 2026-11-04
+
+Clock and acceleration predictions of a fixed scalar–tensor branch: calibration and Yukawa constraints. Folder: [`Clock_Yukawa_2026-11-04/`](Clock_Yukawa_2026-11-04/). Set SHA-256: `a6032a3b3dbc579a49b51598afe953a855ebafa7906c3b343c72cbdfb3f32674`. Numerical cross-checks with Academia Co-scientist (AI-assisted); not peer review. License: CC BY-NC 4.0. No Zenodo DOI yet (pending).
+
 ## TAL book (2026-11-04), English and Hungarian — Book/
 
 TAL book (2026-11-04), English and Hungarian — [`Book/`](Book/). © 2026 Szabolcsi Dávid (ORCID 0009-0005-6300-074X) · CC BY-NC 4.0 International · https://creativecommons.org/licenses/by-nc/4.0/ · commercial use only with the author's written permission
