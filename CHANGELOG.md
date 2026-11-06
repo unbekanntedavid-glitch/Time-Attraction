@@ -1,5 +1,9 @@
 # Changelog
 
+## V36 — TAL time-field mass and (λ, α_Y) exclusion: published Eöt-Wash bounds and the combined window — 2026-11-06
+
+TAL time-field mass and (λ, α_Y) exclusion: published Eöt-Wash bounds and the combined window, version r3. Folder: [`TimeFieldMass_2026-11-06/`](TimeFieldMass_2026-11-06/). This record applies published Eöt-Wash Yukawa limits as an external constraint, without a source-model fit of our own. The reduced source model did not pass genuine validation; no TAL prediction is derived from that fit. R is a conditional bound ratio, never a sigma. "Not excluded" is not confirmation. Distinct from V35 / r2 ([`TimeFieldMass_2026-11-04/`](TimeFieldMass_2026-11-04/), DOI [10.5281/zenodo.23964973](https://doi.org/10.5281/zenodo.23964973)). Numerical cross-checks with Academia Co-scientist (AI-assisted); not peer review. License: CC BY-NC 4.0. Zenodo DOI: [10.5281/zenodo.24022021](https://doi.org/10.5281/zenodo.24022021). GitHub tag V36 corresponds to Zenodo version v36. From V34 on, GitHub version tags follow the Zenodo version number of the record; tags V24–V29 follow the version in the record title.
+
 ## GitHub tags V34 and V35 — 2026-11-04
 
 From V34 on, GitHub version tags follow the Zenodo version number of the record; tags V24–V29 follow the version in the record title.

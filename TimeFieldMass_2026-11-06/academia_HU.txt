@@ -1,0 +1,18 @@
+Cím: A TAL időmező tömege és a (λ, α_Y) kizárás: publikált Eöt-Wash korlátok és a kombinált ablak (r3)
+Szerző: Szabolcsi Dávid
+ORCID: 0009-0005-6300-074X
+Dátum: 2026-11-06
+Típus: Tudományos preprint; adatok és kód
+
+Az r3 tanulmány publikált kísérleti Yukawa-korlátokat alkalmaz külső megszorításként, saját forrásmodell-illesztés nélkül. Az α = α_Y/(4π), λ = L és mc² = ħc/λ szótárral Lee disszertációjának 11.4. táblázata, a |α95| oszlop α_Y = 1 mellett 98.1355027393 µm-nél ad metszést (2.0107603721 meV). Az 5 µm–8.9 mm tartományon belül 2.217e-5 eV ≤ mc² < 2.0108 meV kizárt, míg 2.0108 meV ≤ mc² ≤ 39.47 meV nincs kizárva; ez nem megerősítés. 50 µm-nél F = 5.26531. A +α95 széle 101.02865 µm, az 5. ábra digitalizált görbéjéé 98.07372 µm. A kombinált publikált burkoló ablaka változatlanul 2 µm ≤ λ < 75.877 µm (2.6006 meV < mc² ≤ 98.66 meV); nagy-λ szélét a HUST 2020 szabja meg. A redukált forrásmodell nem ment át valódi validáción; abból TAL-jóslat nem származik. A külső alkalmazás kevésbé független, mint a kísérleti elemzés rekonstrukciója. R feltételes korlátarány, sohasem szigma.
+
+A csomag EN/HU cikkeket, SHA-ellenőrzött visszanyert bemeneti táblázatokat és görbéket, burkolót, szkripteket, JSON/CSV kimeneteket, ábrát és előellenőrzési bizonylatot tartalmaz. Az eredeti r4 archívum hiányzott; három megnevezett tagfájlját egyező hash-sel nyertük vissza. A 23 ablak-F ellenőrzés relatív eltérése legfeljebb 6.44e-15. A PRL Supplemental Material futásonkénti pozíciói továbbra sem állnak rendelkezésre. A csomag nem állít validált forrásmodellt.
+
+Numerikus keresztellenőrzés az Academia Co-scientist segítségével (MI-alapú); nem szakmai lektorálás.
+
+LICENC
+© 2026 Szabolcsi Dávid (ORCID 0009-0005-6300-074X)
+Creative Commons Nevezd meg! – Ne add el! 4.0 Nemzetközi (CC BY-NC 4.0)
+https://creativecommons.org/licenses/by-nc/4.0/
+Kereskedelmi felhasználás csak a szerző írásos engedélyével.
+A licenc a szerző saját munkájára vonatkozik; harmadik fél publikációira és adataira saját feltételeik érvényesek. Lásd: LICENSE.txt.

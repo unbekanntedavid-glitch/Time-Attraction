@@ -1,0 +1,25 @@
+TAL időmező tömege: publikált Eöt-Wash korlátok és kombinált ablak, publikációs készlet (cikk EN/HU, adat- és kódcsomag, cikkforrás), 2026-11-06, r3 / TAL time-field mass: published Eöt-Wash bounds and combined window, publication set (article EN/HU, data and code package, article source), 2026-11-06, r3
+
+EN
+© 2026 Szabolcsi Dávid (ORCID 0009-0005-6300-074X)
+License: Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
+https://creativecommons.org/licenses/by-nc/4.0/
+Legal code: https://creativecommons.org/licenses/by-nc/4.0/legalcode
+All commercial, industrial and technological implementation rights are expressly retained by the author.
+Commercial use only with the author's written permission.
+Third-party material: the licence covers the author's own work only. It does not extend to third-party publications,
+figures, tables or data (e.g. the cited articles and theses), which remain under their own terms. No third-party PDF
+is redistributed here; the origin of values digitized or quoted from such sources is given in the README.md
+(section "Sources") of TAL_time_field_mass_data_r3.zip and in the reference lists of the two PDFs.
+
+HU
+© 2026 Szabolcsi Dávid (ORCID: 0009-0005-6300-074X)
+Licenc: Creative Commons Nevezd meg! – Ne add el! 4.0 Nemzetközi (CC BY-NC 4.0)
+https://creativecommons.org/licenses/by-nc/4.0/deed.hu
+Jogi szöveg: https://creativecommons.org/licenses/by-nc/4.0/legalcode.hu
+Valamennyi kereskedelmi, ipari és technológiai hasznosítási jogot kifejezetten a szerző tart fenn.
+Kereskedelmi hasznosítás kizárólag a szerző írásos engedélyével.
+Harmadik fél anyagai: a licenc csak a szerző saját munkájára vonatkozik. Nem terjed ki harmadik fél publikációira, ábráira,
+táblázataira vagy adataira (pl. a hivatkozott cikkek és disszertációk), ezekre a saját feltételeik vonatkoznak. Itt nincs
+harmadik féltől származó PDF; az ilyen forrásokból digitalizált vagy idézett értékek eredetét a TAL_time_field_mass_data_r3.zip
+README.md fájlja ("Sources" szakasz) és a két PDF irodalomjegyzéke adja meg.

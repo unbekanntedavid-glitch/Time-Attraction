@@ -1,3 +1,4 @@
+[![DOI TimeFieldMass r3](https://zenodo.org/badge/DOI/10.5281/zenodo.24022021.svg)](https://doi.org/10.5281/zenodo.24022021)
 [![DOI TimeFieldMass](https://zenodo.org/badge/DOI/10.5281/zenodo.23964973.svg)](https://doi.org/10.5281/zenodo.23964973)
 [![DOI Clock_Yukawa](https://zenodo.org/badge/DOI/10.5281/zenodo.23960821.svg)](https://doi.org/10.5281/zenodo.23960821)
 [![DOI V28](https://zenodo.org/badge/DOI/10.5281/zenodo.23814053.svg)](https://doi.org/10.5281/zenodo.23814053)
@@ -7,6 +8,17 @@
 [![DOI V24](https://zenodo.org/badge/DOI/10.5281/zenodo.23680715.svg)](https://doi.org/10.5281/zenodo.23680715)
 [![DOI V23](https://zenodo.org/badge/DOI/10.5281/zenodo.23639084.svg)](https://doi.org/10.5281/zenodo.23639084)
 [![DOI V21](https://zenodo.org/badge/DOI/10.5281/zenodo.23602501.svg)](https://doi.org/10.5281/zenodo.23602501)
+
+## V36 — TAL time-field mass and (λ, α_Y) exclusion: published Eöt-Wash bounds and the combined window
+
+**TAL time-field mass and (λ, α_Y) exclusion: published Eöt-Wash bounds and the combined window** (r3, 2026-11-06)  
+Folder: [`TimeFieldMass_2026-11-06/`](TimeFieldMass_2026-11-06/) · License: CC BY-NC 4.0 · Zenodo DOI: [10.5281/zenodo.24022021](https://doi.org/10.5281/zenodo.24022021).
+
+This record applies published Eöt-Wash Yukawa limits as an external constraint, without a source-model fit of our own. The reduced source model did not pass genuine validation; no TAL prediction is derived from that fit. R is a conditional bound ratio, never a sigma. "Not excluded" is not confirmation. This folder is a separate record from V35 / r2 in [`TimeFieldMass_2026-11-04/`](TimeFieldMass_2026-11-04/).
+
+Numerical cross-checks with Academia Co-scientist (AI-assisted); not peer review.
+
+Verification: `cd TimeFieldMass_2026-11-06 && sha256sum -c SHA256SUMS`.
 
 ## V35 — Mass of the TAL time scalar field: (λ, α_Y) exclusion map and the micron window
 
@@ -32,6 +44,7 @@ From V34 on, GitHub version tags follow the Zenodo version number of the record;
 |---|---|---|---|
 | V34 | [`Clock_Yukawa_2026-11-04/`](Clock_Yukawa_2026-11-04/) | v34 | [10.5281/zenodo.23960821](https://doi.org/10.5281/zenodo.23960821) |
 | V35 | [`TimeFieldMass_2026-11-04/`](TimeFieldMass_2026-11-04/) | v35 | [10.5281/zenodo.23964973](https://doi.org/10.5281/zenodo.23964973) |
+| V36 | [`TimeFieldMass_2026-11-06/`](TimeFieldMass_2026-11-06/) | v36 | [10.5281/zenodo.24022021](https://doi.org/10.5281/zenodo.24022021) |
 
 ## V28 — Scalar-Tensor Yukawa Fit: Step 26 audit, simulator, and Step 27 local Yukawa branch (Zenodo V28, DOI 10.5281/zenodo.23814053)
 

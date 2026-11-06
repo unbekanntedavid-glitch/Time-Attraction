@@ -1,0 +1,18 @@
+Title: TAL time-field mass and (λ, α_Y) exclusion: published Eöt-Wash bounds and the combined window (r3)
+Author: Szabolcsi Dávid
+ORCID: 0009-0005-6300-074X
+Date: 2026-11-06
+Type: Scientific preprint; data and code
+
+This r3 study applies published experimental Yukawa limits as an external constraint, without a source-model fit of our own. With α = α_Y/(4π), λ = L and mc² = ħc/λ, Lee thesis Table 11.4 |α95| gives an α_Y = 1 crossing at 98.1355027393 µm (2.0107603721 meV). Within its 5 µm–8.9 mm domain, 2.217e-5 eV ≤ mc² < 2.0108 meV is excluded, while 2.0108 meV ≤ mc² ≤ 39.47 meV is not excluded, not confirmed. At 50 µm, F = 5.26531. The +α95 edge is 101.02865 µm; the digitized Fig. 5 edge is 98.07372 µm. The combined published envelope retains the window 2 µm ≤ λ < 75.877 µm (2.6006 meV < mc² ≤ 98.66 meV), whose large-λ edge is set by HUST 2020. The reduced source model did not pass genuine validation; no TAL prediction is derived from that fit. This external application is less independent than reconstructing the experimental analysis. R is a conditional bound ratio, never a sigma.
+
+The package contains EN/HU articles, recovered SHA-verified input tables and curves, the envelope, scripts, JSON/CSV outputs, a figure, and the preflight record. The original r4 archive was absent; its three named member files were recovered with matching hashes. The 23 window F checks agree within 6.44e-15 relative. The PRL Supplemental Material per-run positions remain unavailable. Nothing here claims a validated source model.
+
+Numerical cross-checks with Academia Co-scientist (AI-assisted); not peer review.
+
+LICENSE
+© 2026 Szabolcsi Dávid (ORCID 0009-0005-6300-074X)
+Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
+https://creativecommons.org/licenses/by-nc/4.0/
+Commercial use only with the author's written permission.
+The license covers the author's own work; third-party publications and data retain their own terms. See LICENSE.txt.
