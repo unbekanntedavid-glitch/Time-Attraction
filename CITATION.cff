@@ -61,3 +61,6 @@ identifiers:
   - type: doi
     value: 10.5281/zenodo.23217189
     description: "Previous version: Zenodo v14"
+  - type: doi
+    value: 10.5281/zenodo.24057132
+    description: "Zenodo version index 38: Static tensor tidal response in a local massive-scalar neutron-star model, fixed-laboratory-G SLy/APR4 pilot r4 (YukawaTidalPilot_2026-11-08_r4). Proposed GitHub tag V39. Not the binding-energy records 10.5281/zenodo.24053942 (index 36, tag V37) or 10.5281/zenodo.24054760 (index 37, proposed tag V38)."
