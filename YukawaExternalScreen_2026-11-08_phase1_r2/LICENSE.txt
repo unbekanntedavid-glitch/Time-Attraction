@@ -1,0 +1,14 @@
+©2026 Szabolcsi Dávid
+ORCID 0009-0005-6300-074X
+
+This project's original text, derivations, code, generated tables and figures are
+licensed under Creative Commons Attribution-NonCommercial 4.0 International
+(CC BY-NC 4.0 International):
+https://creativecommons.org/licenses/by-nc/4.0/
+
+Commercial use is permitted only with the author's written permission.
+Kereskedelmi felhasználás kizárólag a szerző írásos engedélyével.
+
+Third-party works remain subject to their own rights. Citations, bibliographic
+facts and brief source excerpts do not relicense the referenced papers.
+Full third-party papers are not distributed in this research archive.

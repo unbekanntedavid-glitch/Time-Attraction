@@ -61,3 +61,6 @@ identifiers:
   - type: doi
     value: 10.5281/zenodo.23217189
     description: "Previous version: Zenodo v14"
+  - type: doi
+    value: 10.5281/zenodo.24060636
+    description: "Zenodo version index 39: Weak-field forces and external constraints, finite-source geometry and laboratory-G calibration, phase 1 r2 (YukawaExternalScreen_2026-11-08_phase1_r2). Proposed GitHub tag V40. Not 10.5281/zenodo.24053942 (index 36, tag V37), 10.5281/zenodo.24054760 (index 37, proposed tag V38), or 10.5281/zenodo.24057132 (index 38, proposed tag V39)."
