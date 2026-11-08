@@ -1,18 +1,21 @@
 cff-version: 1.2.0
-message: "If you use this work, please cite it using the metadata below. DOI 10.5281/zenodo.24022021 is V36. Concept DOI 10.5281/zenodo.22983681 covers the whole series."
-title: "TAL time-field mass and (λ, α_Y) exclusion: published Eöt-Wash bounds and the combined window"
-version: "V36"
-doi: 10.5281/zenodo.24022021
-date-released: 2026-11-06
+message: "If you use this work, please cite it using the metadata below. DOI 10.5281/zenodo.24053942 is the equilibrium binding-energy record (YBE-2026-11-08-a, Zenodo version index 36). Proposed GitHub tag V37 is not created with this commit. Concept DOI 10.5281/zenodo.22983681 covers the whole series."
+title: "Equilibrium binding energy at fixed baryon and ADM mass in a local massive-scalar neutron-star model"
+version: "YBE-2026-11-08-a"
+doi: 10.5281/zenodo.24053942
+date-released: 2026-11-08
 license: CC-BY-NC-4.0
 repository-code: "https://github.com/unbekanntedavid-glitch/Time-Attraction"
-url: "https://doi.org/10.5281/zenodo.24022021"
+url: "https://doi.org/10.5281/zenodo.24053942"
 authors:
   - family-names: Szabolcsi
     given-names: David
     affiliation: "Independent experimental researcher, Unterterzen, Switzerland"
     orcid: "https://orcid.org/0009-0005-6300-074X"
 identifiers:
+  - type: doi
+    value: 10.5281/zenodo.24053942
+    description: "Zenodo version index 36: Equilibrium binding energy at fixed baryon and ADM mass in a local massive-scalar neutron-star model (YukawaBindingEnergy_2026-11-08, YBE-2026-11-08-a). Proposed GitHub tag V37."
   - type: doi
     value: 10.5281/zenodo.24022021
     description: "Zenodo V36: TAL time-field mass and (λ, α_Y) exclusion: published Eöt-Wash bounds and the combined window (TimeFieldMass_2026-11-06, r3)"
