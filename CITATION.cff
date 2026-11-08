@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this work, please cite it using the metadata below. DOI 10.5281/zenodo.24053942 is the equilibrium binding-energy record (YBE-2026-11-08-a, Zenodo version index 36). Proposed GitHub tag V37 is not created with this commit. Concept DOI 10.5281/zenodo.22983681 covers the whole series."
+message: "If you use this work, please cite it using the metadata below. DOI 10.5281/zenodo.24053942 is the equilibrium binding-energy record (YBE-2026-11-08-a, Zenodo version index 36). GitHub tag V37 is commit 6686902e6796489844341962b0addab7c14c67c6. Concept DOI 10.5281/zenodo.22983681 covers the whole series."
 title: "Equilibrium binding energy at fixed baryon and ADM mass in a local massive-scalar neutron-star model"
 version: "YBE-2026-11-08-a"
 doi: 10.5281/zenodo.24053942
@@ -15,7 +15,7 @@ authors:
 identifiers:
   - type: doi
     value: 10.5281/zenodo.24053942
-    description: "Zenodo version index 36: Equilibrium binding energy at fixed baryon and ADM mass in a local massive-scalar neutron-star model (YukawaBindingEnergy_2026-11-08, YBE-2026-11-08-a). Proposed GitHub tag V37."
+    description: "Zenodo version index 36: Equilibrium binding energy at fixed baryon and ADM mass in a local massive-scalar neutron-star model (YukawaBindingEnergy_2026-11-08, YBE-2026-11-08-a). GitHub tag V37."
   - type: doi
     value: 10.5281/zenodo.24022021
     description: "Zenodo V36: TAL time-field mass and (λ, α_Y) exclusion: published Eöt-Wash bounds and the combined window (TimeFieldMass_2026-11-06, r3)"
