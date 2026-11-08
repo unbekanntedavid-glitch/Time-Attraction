@@ -1,3 +1,4 @@
+[![DOI Yukawa binding energy](https://zenodo.org/badge/DOI/10.5281/zenodo.24053942.svg)](https://doi.org/10.5281/zenodo.24053942)
 [![DOI TimeFieldMass r3](https://zenodo.org/badge/DOI/10.5281/zenodo.24022021.svg)](https://doi.org/10.5281/zenodo.24022021)
 [![DOI TimeFieldMass](https://zenodo.org/badge/DOI/10.5281/zenodo.23964973.svg)](https://doi.org/10.5281/zenodo.23964973)
 [![DOI Clock_Yukawa](https://zenodo.org/badge/DOI/10.5281/zenodo.23960821.svg)](https://doi.org/10.5281/zenodo.23960821)
@@ -8,6 +9,23 @@
 [![DOI V24](https://zenodo.org/badge/DOI/10.5281/zenodo.23680715.svg)](https://doi.org/10.5281/zenodo.23680715)
 [![DOI V23](https://zenodo.org/badge/DOI/10.5281/zenodo.23639084.svg)](https://doi.org/10.5281/zenodo.23639084)
 [![DOI V21](https://zenodo.org/badge/DOI/10.5281/zenodo.23602501.svg)](https://doi.org/10.5281/zenodo.23602501)
+
+## V37 — Equilibrium binding energy at fixed baryon and ADM mass in a local massive-scalar neutron-star model
+
+**Equilibrium binding energy at fixed baryon and ADM mass in a local massive-scalar neutron-star model** (YBE-2026-11-08-a, 2026-11-08)  
+Folder: [`YukawaBindingEnergy_2026-11-08/`](YukawaBindingEnergy_2026-11-08/) · License: CC BY-NC 4.0 · Zenodo DOI: [10.5281/zenodo.24053942](https://doi.org/10.5281/zenodo.24053942) · Concept DOI: [10.5281/zenodo.22983681](https://doi.org/10.5281/zenodo.22983681) · Zenodo version index 36.
+
+SLy, APR4 and H4, α_Y = 1, L = 1 km and 10 km. Binding energy is set against baryon mass. Fixed-baryon energetics and fixed-ADM baryon capacity are distinct views of one equilibrium-energy result, on causal first-rising selections. The result is a model-dependent equilibrium diagnostic: not a stability proof, an observation, or emitted conversion energy. This record is distinct from [10.5281/zenodo.24022021](https://doi.org/10.5281/zenodo.24022021). The deposited ADM bibliographic page range is unchanged. Author: Szabolcsi Dávid (ORCID [0009-0005-6300-074X](https://orcid.org/0009-0005-6300-074X)).
+
+Numerical cross-checks with Academia Co-scientist (AI-assisted); not peer review.
+
+Verification: `cd YukawaBindingEnergy_2026-11-08 && sha256sum -c SHA256SUMS`.
+
+Proposed annotated tag, for creation after merge; not created in this commit:
+
+`V37 = Zenodo version index 36, DOI 10.5281/zenodo.24053942 (YukawaBindingEnergy_2026-11-08/)`
+
+GitHub tag V36 already names [`TimeFieldMass_2026-11-06/`](TimeFieldMass_2026-11-06/) (DOI [10.5281/zenodo.24022021](https://doi.org/10.5281/zenodo.24022021), Zenodo version index 35).
 
 ## V36 — TAL time-field mass and (λ, α_Y) exclusion: published Eöt-Wash bounds and the combined window
 
@@ -42,6 +60,7 @@ From V34 on, GitHub version tags follow the Zenodo version number of the record;
 
 | GitHub tag | folder | Zenodo version | DOI |
 |---|---|---|---|
+| V37 (proposed; not created in this commit) | [`YukawaBindingEnergy_2026-11-08/`](YukawaBindingEnergy_2026-11-08/) | index 36 | [10.5281/zenodo.24053942](https://doi.org/10.5281/zenodo.24053942) |
 | V34 | [`Clock_Yukawa_2026-11-04/`](Clock_Yukawa_2026-11-04/) | v34 | [10.5281/zenodo.23960821](https://doi.org/10.5281/zenodo.23960821) |
 | V35 | [`TimeFieldMass_2026-11-04/`](TimeFieldMass_2026-11-04/) | v35 | [10.5281/zenodo.23964973](https://doi.org/10.5281/zenodo.23964973) |
 | V36 | [`TimeFieldMass_2026-11-06/`](TimeFieldMass_2026-11-06/) | v36 | [10.5281/zenodo.24022021](https://doi.org/10.5281/zenodo.24022021) |
@@ -133,6 +152,7 @@ Previous version: V23 (Zenodo V23, DOI [10.5281/zenodo.23639084](https://doi.org
 
 | Version | Record | DOI |
 |---|---|---|
+| YBE-2026-11-08-a (proposed GitHub tag V37; Zenodo version index 36) | [Equilibrium binding energy at fixed baryon and ADM mass in a local massive-scalar neutron-star model](YukawaBindingEnergy_2026-11-08/) | [`10.5281/zenodo.24053942`](https://doi.org/10.5281/zenodo.24053942) |
 | V29 | [Time Attraction Law (TAL): Derivation Chain Audit and Step 29 Corrections S1–S3](V29/) (audit of the derivation chain v1–v7 to V28, corrections S1–S3, verification material; files in `V29/`) | no Zenodo record yet |
 | V28 (Zenodo V28) | [Time Attraction Law — Scalar-Tensor Yukawa Fit, V28](https://doi.org/10.5281/zenodo.23814053) (preliminary research package: Step 26 DESI DR1 BAO audit, interactive simulator, Step 27 fixed unscreened local Yukawa branch, `V28/`; new version of V27) | [`10.5281/zenodo.23814053`](https://doi.org/10.5281/zenodo.23814053) |
 | V27 (Zenodo V27) | [Time Attraction Law — Scalar-Tensor Yukawa Fit, V27](https://doi.org/10.5281/zenodo.23761574) (`step26` cosmology audit, `V27/`) | [`10.5281/zenodo.23761574`](https://doi.org/10.5281/zenodo.23761574) |
