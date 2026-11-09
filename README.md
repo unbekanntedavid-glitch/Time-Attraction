@@ -50,7 +50,7 @@ GitHub tag V36 already names [`TimeFieldMass_2026-11-06/`](TimeFieldMass_2026-11
 **Static tensor tidal response in a local massive-scalar neutron-star model: a fixed-laboratory-G SLy/APR4 pilot (revision r4)** (2026-11-08)  
 Folder: [`YukawaTidalPilot_2026-11-08_r4/`](YukawaTidalPilot_2026-11-08_r4/) · License: CC BY-NC 4.0 · Zenodo DOI: [10.5281/zenodo.24057132](https://doi.org/10.5281/zenodo.24057132) · Concept DOI: [10.5281/zenodo.22983681](https://doi.org/10.5281/zenodo.22983681) · Zenodo version index 38.
 
-This is a different study from the binding-energy records. DOI [10.5281/zenodo.24053942](https://doi.org/10.5281/zenodo.24053942) remains YBE-2026-11-08-a and GitHub tag V37. DOI [10.5281/zenodo.24054760](https://doi.org/10.5281/zenodo.24054760) is binding-energy revision b, Zenodo version index 37, GitHub tag V38, commit `92caae4a761d9afa821c2452bd5dbe7fba820944`. This tidal record is index 38, so its proposed tag is V39.
+This is a different study from the binding-energy records. DOI [10.5281/zenodo.24053942](https://doi.org/10.5281/zenodo.24053942) remains YBE-2026-11-08-a and GitHub tag V37. DOI [10.5281/zenodo.24054760](https://doi.org/10.5281/zenodo.24054760) is binding-energy revision b, Zenodo version index 37, GitHub tag V38, commit `92caae4a761d9afa821c2452bd5dbe7fba820944`. This tidal record is index 38. Annotated tag V39 is commit `96601e03d1add49c21c191d4d4fa430cc858e8e8`.
 
 The calculation is an action-derived static metric–scalar–fluid quadrupole with exponential bare-energy coupling. The GR Love formula is not applied on a modified background. SLy and APR4 share the distant Kepler mass 1.4 solar masses. For a = 1, G_*/G_lab = 0.9262883177508389 under the conditional unscreened-dust calibration, and the modified ADM energy mass stays distinct. Λ_metric is not automatically a GR wave-inference Λ. Two equations of state do not separate the model from EOS uncertainty. No observation, stability, priority, or model-validation claim is made. Author: Szabolcsi Dávid (ORCID [0009-0005-6300-074X](https://orcid.org/0009-0005-6300-074X)).
 
@@ -58,7 +58,7 @@ Numerical cross-checks with Academia Co-scientist (AI-assisted); not peer review
 
 Verification: `cd YukawaTidalPilot_2026-11-08_r4 && sha256sum -c SHA256SUMS`.
 
-Proposed annotated tag, for creation after approval; not created in this commit:
+Annotated tag V39 is commit `96601e03d1add49c21c191d4d4fa430cc858e8e8`. Tag object `f6b0c7b3d6b53b2fe7e2ad9acfde6aeea486dfad`.
 
 `V39 = Zenodo version index 38, DOI 10.5281/zenodo.24057132, tidal pilot r4 (YukawaTidalPilot_2026-11-08_r4/)`
 
@@ -72,6 +72,23 @@ This record applies published Eöt-Wash Yukawa limits as an external constraint,
 Numerical cross-checks with Academia Co-scientist (AI-assisted); not peer review.
 
 Verification: `cd TimeFieldMass_2026-11-06 && sha256sum -c SHA256SUMS`.
+
+## Weak-field external screen, phase 1 r2
+
+**Weak-field forces and external constraints in a local massive-scalar model: finite-source geometry and laboratory-G calibration (phase 1, revision r2)** (2026-11-08)  
+Folder: [`YukawaExternalScreen_2026-11-08_phase1_r2/`](YukawaExternalScreen_2026-11-08_phase1_r2/) · License: CC BY-NC 4.0 · Zenodo DOI: [10.5281/zenodo.24060636](https://doi.org/10.5281/zenodo.24060636) · Concept DOI: [10.5281/zenodo.22983681](https://doi.org/10.5281/zenodo.22983681) · Zenodo version index 39.
+
+DOI [10.5281/zenodo.24053942](https://doi.org/10.5281/zenodo.24053942) remains YBE-2026-11-08-a, GitHub tag V37, index 36. Index 37 is [10.5281/zenodo.24054760](https://doi.org/10.5281/zenodo.24054760), GitHub tag V38, commit `92caae4a761d9afa821c2452bd5dbe7fba820944`. Index 38 is [10.5281/zenodo.24057132](https://doi.org/10.5281/zenodo.24057132), GitHub tag V39, commit `96601e03d1add49c21c191d4d4fa430cc858e8e8`. This external-screen record is index 39, so its proposed tag is V40.
+
+The package is the ε-source unscreened dust branch, with q = a/(4π), λ = L, and geometry-dependent G_*/G_fit = 1/(1 + q κ_cal). For a = 1 and L = 1 km, the comparison with the Cruz (1991) abstract bound |α| < 0.001 gives an archived ratio of about 79.58. That ratio is not a sigma and not a confidence-level exclusion. The L = 10 km experimental mapping is unresolved and is not classified as allowed. No experimental detection, GR–EOS mimic, or radial-stability calculation is included. The H1 clock branch is separate. Author: Szabolcsi Dávid (ORCID [0009-0005-6300-074X](https://orcid.org/0009-0005-6300-074X)).
+
+Numerical cross-checks with Academia Co-scientist (AI-assisted); not peer review.
+
+Verification: `cd YukawaExternalScreen_2026-11-08_phase1_r2 && sha256sum -c SHA256SUMS`.
+
+Proposed annotated tag, for creation after approval; not created in this commit:
+
+`V40 = Zenodo version index 39, DOI 10.5281/zenodo.24060636, external screen phase1 r2 (YukawaExternalScreen_2026-11-08_phase1_r2/)`
 
 ## V35 — Mass of the TAL time scalar field: (λ, α_Y) exclusion map and the micron window
 
@@ -97,10 +114,11 @@ From V34 on, GitHub version tags follow the Zenodo version number of the record;
 |---|---|---|---|
 | V38 | [`YukawaBindingEnergy_2026-11-08_b/`](YukawaBindingEnergy_2026-11-08_b/) | index 37 | [10.5281/zenodo.24054760](https://doi.org/10.5281/zenodo.24054760) |
 | V37 | [`YukawaBindingEnergy_2026-11-08/`](YukawaBindingEnergy_2026-11-08/) | index 36 | [10.5281/zenodo.24053942](https://doi.org/10.5281/zenodo.24053942) |
-| V39 (proposed; not created in this commit) | [`YukawaTidalPilot_2026-11-08_r4/`](YukawaTidalPilot_2026-11-08_r4/) | index 38 | [10.5281/zenodo.24057132](https://doi.org/10.5281/zenodo.24057132) |
+| V39 | [`YukawaTidalPilot_2026-11-08_r4/`](YukawaTidalPilot_2026-11-08_r4/) | index 38 | [10.5281/zenodo.24057132](https://doi.org/10.5281/zenodo.24057132) |
 | V34 | [`Clock_Yukawa_2026-11-04/`](Clock_Yukawa_2026-11-04/) | v34 | [10.5281/zenodo.23960821](https://doi.org/10.5281/zenodo.23960821) |
 | V35 | [`TimeFieldMass_2026-11-04/`](TimeFieldMass_2026-11-04/) | v35 | [10.5281/zenodo.23964973](https://doi.org/10.5281/zenodo.23964973) |
 | V36 | [`TimeFieldMass_2026-11-06/`](TimeFieldMass_2026-11-06/) | v36 | [10.5281/zenodo.24022021](https://doi.org/10.5281/zenodo.24022021) |
+| V40 (proposed; not created in this commit) | [`YukawaExternalScreen_2026-11-08_phase1_r2/`](YukawaExternalScreen_2026-11-08_phase1_r2/) | index 39 | [10.5281/zenodo.24060636](https://doi.org/10.5281/zenodo.24060636) |
 
 ## V28 — Scalar-Tensor Yukawa Fit: Step 26 audit, simulator, and Step 27 local Yukawa branch (Zenodo V28, DOI 10.5281/zenodo.23814053)
 
@@ -191,7 +209,7 @@ Previous version: V23 (Zenodo V23, DOI [10.5281/zenodo.23639084](https://doi.org
 |---|---|---|
 | V38 (YBE-2026-11-08-b; Zenodo version index 37) | [Equilibrium binding energy, revision b](YukawaBindingEnergy_2026-11-08_b/) | [`10.5281/zenodo.24054760`](https://doi.org/10.5281/zenodo.24054760) |
 | V37 (YBE-2026-11-08-a; Zenodo version index 36) | [Equilibrium binding energy at fixed baryon and ADM mass in a local massive-scalar neutron-star model](YukawaBindingEnergy_2026-11-08/) | [`10.5281/zenodo.24053942`](https://doi.org/10.5281/zenodo.24053942) |
-| V39 (proposed; tidal pilot r4; Zenodo version index 38) | [Static tensor tidal response, fixed-laboratory-G SLy/APR4 pilot](YukawaTidalPilot_2026-11-08_r4/) | [`10.5281/zenodo.24057132`](https://doi.org/10.5281/zenodo.24057132) |
+| V39 (tidal pilot r4; Zenodo version index 38) | [Static tensor tidal response, fixed-laboratory-G SLy/APR4 pilot](YukawaTidalPilot_2026-11-08_r4/) | [`10.5281/zenodo.24057132`](https://doi.org/10.5281/zenodo.24057132) |
 | V29 | [Time Attraction Law (TAL): Derivation Chain Audit and Step 29 Corrections S1–S3](V29/) (audit of the derivation chain v1–v7 to V28, corrections S1–S3, verification material; files in `V29/`) | no Zenodo record yet |
 | V28 (Zenodo V28) | [Time Attraction Law — Scalar-Tensor Yukawa Fit, V28](https://doi.org/10.5281/zenodo.23814053) (preliminary research package: Step 26 DESI DR1 BAO audit, interactive simulator, Step 27 fixed unscreened local Yukawa branch, `V28/`; new version of V27) | [`10.5281/zenodo.23814053`](https://doi.org/10.5281/zenodo.23814053) |
 | V27 (Zenodo V27) | [Time Attraction Law — Scalar-Tensor Yukawa Fit, V27](https://doi.org/10.5281/zenodo.23761574) (`step26` cosmology audit, `V27/`) | [`10.5281/zenodo.23761574`](https://doi.org/10.5281/zenodo.23761574) |
@@ -209,6 +227,7 @@ Previous version: V23 (Zenodo V23, DOI [10.5281/zenodo.23639084](https://doi.org
 | v15 | Previous version | [`10.5281/zenodo.23220318`](https://doi.org/10.5281/zenodo.23220318) |
 | v14 | Previous version | [`10.5281/zenodo.23217189`](https://doi.org/10.5281/zenodo.23217189) |
 | Parent | Parent record of v17 | [`10.5281/zenodo.22983681`](https://doi.org/10.5281/zenodo.22983681) |
+| V40 (proposed; external screen phase1 r2; Zenodo version index 39) | [Weak-field forces and external constraints, phase 1 r2](YukawaExternalScreen_2026-11-08_phase1_r2/) | [`10.5281/zenodo.24060636`](https://doi.org/10.5281/zenodo.24060636) |
 
 ### Contents ([`V29/`](V29/), [`V28/`](V28/), [`V27/`](V27/), [`V26/`](V26/), [`V25/`](V25/), and [`V24/`](V24/))
 

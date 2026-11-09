@@ -1,0 +1,453 @@
+{
+  "revision": "phase1_r2",
+  "research_archive": {
+    "filename": "Yukawa_external_screen_20261108_phase1_r2.zip",
+    "bytes": 257885,
+    "sha256": "d6dadb52c60390eb26ffca5445cd158d12a406f14913df82b47f3c13338090e4"
+  },
+  "archive_manifest": {
+    "coverage": "member_inside_research_archive",
+    "member": "MANIFEST.json",
+    "bytes": 5803,
+    "sha256": "2b165fe4d75dd34a89704f7e330a60a733787e3980c4c74b5ba36815e3ce436e",
+    "payload_files": 35,
+    "archive_members": 36
+  },
+  "original_archive_provenance": {
+    "filename": "Yukawa_external_screen_20261108_phase1.zip",
+    "bytes": 247922,
+    "sha256": "8f769dcebca41048728e2286347b530b6447f2f53b51db0c10cf78e70911bb9f"
+  },
+  "original_archive_unchanged": true,
+  "evidence_coverage": "Cold-archive evidence and itemized response are embedded here. Internal test reports and scientific byte hashes are manifest-covered archive members. No separate archive_smoke file is required.",
+  "executed_cold_archive_evidence": {
+    "passed": true,
+    "archive_path": "/workspace/yukawa_external_screen_20261108_phase1_r2/delivery/Yukawa_external_screen_20261108_phase1_r2.zip",
+    "archive_bytes": 257885,
+    "archive_sha256": "d6dadb52c60390eb26ffca5445cd158d12a406f14913df82b47f3c13338090e4",
+    "safe_manifest_verified_members": 36,
+    "cold_scenarios": [
+      {
+        "mode": "normal",
+        "scenario": "archived_pack_without_reproduce",
+        "delivery_initially_absent": true,
+        "verify_before": {
+          "verified": true,
+          "count": 35,
+          "manifest_self_hash_in_external_handoff": true
+        },
+        "archived_data_gate": {
+          "passed": true,
+          "CSV_tables": 6,
+          "geometry_rows": 484,
+          "scope": "finite_grid_units_calibration_normalization_source_qualification_only"
+        },
+        "pack": {
+          "bytes": 257885,
+          "sha256": "d6dadb52c60390eb26ffca5445cd158d12a406f14913df82b47f3c13338090e4",
+          "files": 36
+        },
+        "selfpacked_archive_members": 36,
+        "verify_after_pack": {
+          "verified": true,
+          "count": 35,
+          "manifest_self_hash_in_external_handoff": true
+        },
+        "delivery_created_automatically": true,
+        "CSV_byte_identical_count": 6,
+        "plot_byte_identical_count": 2,
+        "science_hash_comparison": {
+          "data/compact_calibration_bound.csv": true,
+          "data/calibration_geometry.csv": true,
+          "data/geometry_diagnostics.csv": true,
+          "data/synthetic_tower_operator.csv": true,
+          "data/parameter_screen.csv": true,
+          "data/necessary_not_sufficient_window.csv": true,
+          "figures/calibration_scale.png": true,
+          "figures/geometry_contrast.png": true
+        },
+        "passed": true
+      },
+      {
+        "mode": "normal",
+        "scenario": "archived_regress_without_reproduce",
+        "delivery_initially_absent": true,
+        "verify_before": {
+          "verified": true,
+          "count": 35,
+          "manifest_self_hash_in_external_handoff": true
+        },
+        "archived_data_gate": {
+          "passed": true,
+          "CSV_tables": 6,
+          "geometry_rows": 484,
+          "scope": "finite_grid_units_calibration_normalization_source_qualification_only"
+        },
+        "regression": {
+          "passed": true,
+          "count": 34,
+          "positive": 2,
+          "negative": 32,
+          "scope": "actual_CSV_publication_guard_only_not_new_physical_validation"
+        },
+        "delivery_created_automatically": true,
+        "CSV_byte_identical_count": 6,
+        "plot_byte_identical_count": 2,
+        "science_hash_comparison": {
+          "data/compact_calibration_bound.csv": true,
+          "data/calibration_geometry.csv": true,
+          "data/geometry_diagnostics.csv": true,
+          "data/synthetic_tower_operator.csv": true,
+          "data/parameter_screen.csv": true,
+          "data/necessary_not_sufficient_window.csv": true,
+          "figures/calibration_scale.png": true,
+          "figures/geometry_contrast.png": true
+        },
+        "passed": true
+      },
+      {
+        "mode": "normal",
+        "scenario": "documented_chain",
+        "delivery_initially_absent": true,
+        "verify_before": {
+          "verified": true,
+          "count": 35,
+          "manifest_self_hash_in_external_handoff": true
+        },
+        "archived_data_gate": {
+          "passed": true,
+          "CSV_tables": 6,
+          "geometry_rows": 484,
+          "scope": "finite_grid_units_calibration_normalization_source_qualification_only"
+        },
+        "reproduce": {
+          "passed": true,
+          "count": 85,
+          "alpha": 0.07957747154594767,
+          "g": 0.9262883177508389,
+          "eta": 3.79363917492107e-16
+        },
+        "fresh_validation_sha256": "591f3f317ac75c6d4d6546fec9b2802b880c46c2225a3de17650023eeafa944e",
+        "fresh_validation_byte_identical_to_archived": true,
+        "data_gate_after_reproduce": {
+          "passed": true,
+          "CSV_tables": 6,
+          "geometry_rows": 484,
+          "scope": "finite_grid_units_calibration_normalization_source_qualification_only"
+        },
+        "CSV_byte_identical_count": 6,
+        "plot_byte_identical_count": 2,
+        "science_hash_comparison": {
+          "data/compact_calibration_bound.csv": true,
+          "data/calibration_geometry.csv": true,
+          "data/geometry_diagnostics.csv": true,
+          "data/synthetic_tower_operator.csv": true,
+          "data/parameter_screen.csv": true,
+          "data/necessary_not_sufficient_window.csv": true,
+          "figures/calibration_scale.png": true,
+          "figures/geometry_contrast.png": true
+        },
+        "passed": true
+      },
+      {
+        "mode": "optimized",
+        "scenario": "archived_pack_without_reproduce",
+        "delivery_initially_absent": true,
+        "verify_before": {
+          "verified": true,
+          "count": 35,
+          "manifest_self_hash_in_external_handoff": true
+        },
+        "archived_data_gate": {
+          "passed": true,
+          "CSV_tables": 6,
+          "geometry_rows": 484,
+          "scope": "finite_grid_units_calibration_normalization_source_qualification_only"
+        },
+        "pack": {
+          "bytes": 257885,
+          "sha256": "d6dadb52c60390eb26ffca5445cd158d12a406f14913df82b47f3c13338090e4",
+          "files": 36
+        },
+        "selfpacked_archive_members": 36,
+        "verify_after_pack": {
+          "verified": true,
+          "count": 35,
+          "manifest_self_hash_in_external_handoff": true
+        },
+        "delivery_created_automatically": true,
+        "CSV_byte_identical_count": 6,
+        "plot_byte_identical_count": 2,
+        "science_hash_comparison": {
+          "data/compact_calibration_bound.csv": true,
+          "data/calibration_geometry.csv": true,
+          "data/geometry_diagnostics.csv": true,
+          "data/synthetic_tower_operator.csv": true,
+          "data/parameter_screen.csv": true,
+          "data/necessary_not_sufficient_window.csv": true,
+          "figures/calibration_scale.png": true,
+          "figures/geometry_contrast.png": true
+        },
+        "passed": true
+      },
+      {
+        "mode": "optimized",
+        "scenario": "archived_regress_without_reproduce",
+        "delivery_initially_absent": true,
+        "verify_before": {
+          "verified": true,
+          "count": 35,
+          "manifest_self_hash_in_external_handoff": true
+        },
+        "archived_data_gate": {
+          "passed": true,
+          "CSV_tables": 6,
+          "geometry_rows": 484,
+          "scope": "finite_grid_units_calibration_normalization_source_qualification_only"
+        },
+        "regression": {
+          "passed": true,
+          "count": 34,
+          "positive": 2,
+          "negative": 32,
+          "scope": "actual_CSV_publication_guard_only_not_new_physical_validation"
+        },
+        "delivery_created_automatically": true,
+        "CSV_byte_identical_count": 6,
+        "plot_byte_identical_count": 2,
+        "science_hash_comparison": {
+          "data/compact_calibration_bound.csv": true,
+          "data/calibration_geometry.csv": true,
+          "data/geometry_diagnostics.csv": true,
+          "data/synthetic_tower_operator.csv": true,
+          "data/parameter_screen.csv": true,
+          "data/necessary_not_sufficient_window.csv": true,
+          "figures/calibration_scale.png": true,
+          "figures/geometry_contrast.png": true
+        },
+        "passed": true
+      },
+      {
+        "mode": "optimized",
+        "scenario": "documented_chain",
+        "delivery_initially_absent": true,
+        "verify_before": {
+          "verified": true,
+          "count": 35,
+          "manifest_self_hash_in_external_handoff": true
+        },
+        "archived_data_gate": {
+          "passed": true,
+          "CSV_tables": 6,
+          "geometry_rows": 484,
+          "scope": "finite_grid_units_calibration_normalization_source_qualification_only"
+        },
+        "reproduce": {
+          "passed": true,
+          "count": 85,
+          "alpha": 0.07957747154594767,
+          "g": 0.9262883177508389,
+          "eta": 3.79363917492107e-16
+        },
+        "fresh_validation_sha256": "591f3f317ac75c6d4d6546fec9b2802b880c46c2225a3de17650023eeafa944e",
+        "fresh_validation_byte_identical_to_archived": true,
+        "data_gate_after_reproduce": {
+          "passed": true,
+          "CSV_tables": 6,
+          "geometry_rows": 484,
+          "scope": "finite_grid_units_calibration_normalization_source_qualification_only"
+        },
+        "CSV_byte_identical_count": 6,
+        "plot_byte_identical_count": 2,
+        "science_hash_comparison": {
+          "data/compact_calibration_bound.csv": true,
+          "data/calibration_geometry.csv": true,
+          "data/geometry_diagnostics.csv": true,
+          "data/synthetic_tower_operator.csv": true,
+          "data/parameter_screen.csv": true,
+          "data/necessary_not_sufficient_window.csv": true,
+          "figures/calibration_scale.png": true,
+          "figures/geometry_contrast.png": true
+        },
+        "passed": true
+      }
+    ],
+    "science_inputs_not_regenerated_in_archived_helper_tests": true,
+    "scope": "technical_portability_and_publication_helpers_no_new_physical_evidence"
+  },
+  "core_existing_code_changed": [
+    "code/data_gate.py",
+    "code/pack.py",
+    "code/regress_guard.py"
+  ],
+  "all_existing_payload_changed": [
+    "README_HU.md",
+    "code/data_gate.py",
+    "code/pack.py",
+    "code/regress_guard.py",
+    "checks/data_gate_regression.json"
+  ],
+  "new_payload_files": [
+    "checks/grid_roundoff.json",
+    "checks/science_preservation.json",
+    "code/test_archive_workflow.py",
+    "code/test_grid_roundoff.py",
+    "notes/technikai_hordozhatosag_HU.md",
+    "sources/r2_technical_report_provenance.json"
+  ],
+  "science_preservation": {
+    "passed": true,
+    "source_archive_bytes": 247922,
+    "source_archive_sha256": "8f769dcebca41048728e2286347b530b6447f2f53b51db0c10cf78e70911bb9f",
+    "checked_files": [
+      {
+        "path": "data/calibration_geometry.csv",
+        "bytes": 1085,
+        "source_sha256": "571e12836ace88639df9b2693a064777bc452bf0eb94860b2bf85ab5c0219e4a",
+        "r2_sha256": "571e12836ace88639df9b2693a064777bc452bf0eb94860b2bf85ab5c0219e4a",
+        "byte_identical": true
+      },
+      {
+        "path": "data/compact_calibration_bound.csv",
+        "bytes": 987,
+        "source_sha256": "aa2204bdebc91b96f6c093b7709a57ba1f62b8635951a31ba0660580258c24c2",
+        "r2_sha256": "aa2204bdebc91b96f6c093b7709a57ba1f62b8635951a31ba0660580258c24c2",
+        "byte_identical": true
+      },
+      {
+        "path": "data/geometry_diagnostics.csv",
+        "bytes": 142843,
+        "source_sha256": "5fd7c094a1c81c1f2e1ed361e6514aee3d0de5871802b4dc2cba196c36699570",
+        "r2_sha256": "5fd7c094a1c81c1f2e1ed361e6514aee3d0de5871802b4dc2cba196c36699570",
+        "byte_identical": true
+      },
+      {
+        "path": "data/necessary_not_sufficient_window.csv",
+        "bytes": 186,
+        "source_sha256": "0bafa2b47aff75dc614068fa640e185b5df4ac2fcd55e0964d5d5e1e2177c077",
+        "r2_sha256": "0bafa2b47aff75dc614068fa640e185b5df4ac2fcd55e0964d5d5e1e2177c077",
+        "byte_identical": true
+      },
+      {
+        "path": "data/parameter_screen.csv",
+        "bytes": 842,
+        "source_sha256": "1b9f7777aa0834926f00a70af996b46b868a6a0de02bd68f971eb6ebde5fc803",
+        "r2_sha256": "1b9f7777aa0834926f00a70af996b46b868a6a0de02bd68f971eb6ebde5fc803",
+        "byte_identical": true
+      },
+      {
+        "path": "data/synthetic_tower_operator.csv",
+        "bytes": 965,
+        "source_sha256": "5d1d523d5fa886782db51c3788a62f1b4351f86a26a27fcc12e5146189cf49f9",
+        "r2_sha256": "5d1d523d5fa886782db51c3788a62f1b4351f86a26a27fcc12e5146189cf49f9",
+        "byte_identical": true
+      },
+      {
+        "path": "figures/calibration_scale.png",
+        "bytes": 73680,
+        "source_sha256": "e4fcc56b5fd79fd79704b43d8c2765ee105f8d5abf470dec67624e10372ea72d",
+        "r2_sha256": "e4fcc56b5fd79fd79704b43d8c2765ee105f8d5abf470dec67624e10372ea72d",
+        "byte_identical": true
+      },
+      {
+        "path": "figures/geometry_contrast.png",
+        "bytes": 101606,
+        "source_sha256": "bcd59e40496bf88fecbe05a267d284529fa02b3e04fddef0765cd1f93fcb3bf2",
+        "r2_sha256": "bcd59e40496bf88fecbe05a267d284529fa02b3e04fddef0765cd1f93fcb3bf2",
+        "byte_identical": true
+      },
+      {
+        "path": "code/weak_field.py",
+        "bytes": 4244,
+        "source_sha256": "05eaa1681c73631c62dc468f9a154e1d1e3305f9ccf68964a8ddd0d3589dbddc",
+        "r2_sha256": "05eaa1681c73631c62dc468f9a154e1d1e3305f9ccf68964a8ddd0d3589dbddc",
+        "byte_identical": true
+      },
+      {
+        "path": "code/reproduce.py",
+        "bytes": 11843,
+        "source_sha256": "7edee22b050e8b0a5a6008f32739c581ef4f9c0b57673b7f4c1614e2c24aa75f",
+        "r2_sha256": "7edee22b050e8b0a5a6008f32739c581ef4f9c0b57673b7f4c1614e2c24aa75f",
+        "byte_identical": true
+      },
+      {
+        "path": "notes/levezetes_HU.md",
+        "bytes": 11761,
+        "source_sha256": "21c7ea8683a2b5fddff10fab51bde151d112aaaa880d6527edc77a59a5e33ab4",
+        "r2_sha256": "21c7ea8683a2b5fddff10fab51bde151d112aaaa880d6527edc77a59a5e33ab4",
+        "byte_identical": true
+      },
+      {
+        "path": "LICENSE.txt",
+        "bytes": 656,
+        "source_sha256": "39aafc83ae9e28a429221e4d8086ad227532232d8869a1bbc8751d5ad6801bf8",
+        "r2_sha256": "39aafc83ae9e28a429221e4d8086ad227532232d8869a1bbc8751d5ad6801bf8",
+        "byte_identical": true
+      }
+    ],
+    "geometry_rows": 484,
+    "CSV_files": 6,
+    "figures": 2,
+    "physics_reproduce_and_derivation_unchanged": true
+  },
+  "publication_regressions": {
+    "passed": true,
+    "count": 34,
+    "positive": 2,
+    "negative": 32,
+    "modes": [
+      "normal",
+      "optimized"
+    ]
+  },
+  "new_grid_regressions": {
+    "passed": true,
+    "count": 46,
+    "normal": 23,
+    "optimized": 23,
+    "max_coordinate_ULPs": 4,
+    "physics_tolerances_changed": false
+  },
+  "fresh_numerical_reproduction": {
+    "passed": true,
+    "normal": 85,
+    "optimized": 85,
+    "CSV_byte_matches": 6,
+    "PNG_byte_matches": 2,
+    "fresh_validation_byte_identical_to_archived": true
+  },
+  "supplied_AI_report": {
+    "sha256": "163099c8a906f1dec003a40c6346f6555eb16967c99c29c058b53458a364ebb1",
+    "reported_comparisons": 1497,
+    "executed_by_us": false,
+    "peer_review": false,
+    "underlying_patch_not_supplied": true
+  },
+  "external_itemized_response": {
+    "filename": "audit_response_HU.md",
+    "bytes": 3468,
+    "sha256": "3cbe52bc3d849ed2d743e8178ec82267a630b2c0d7ed79e081e1972e1d90ce82",
+    "embedded_utf8": "# Technikai javítási válasz — külső szűrés, phase1_r2\n\nA kapott AI technikai beszámoló SHA256 azonosítója: 163099c8a906f1dec003a40c6346f6555eb16967c99c29c058b53458a364ebb1. A hivatkozott patch és javítási melléklet nem volt átadva; a módosításokat önállóan implementáltuk. A beszámoló 1497 összehasonlítása attribuált külső AI eredmény, nem saját végrehajtott ellenőrzés és nem szakmai lektorálás.\n\n## E01\n\nA pontos float-halmazegyezés helyett explicit, kölcsönösen egyértelmű rácsillesztés működik. A véges koordináták, sorszám és pontos duplikáció ellenőrzése mellett minden sor egyetlen előírt cellához illeszkedhet, és egy cella egyszer használható. A korlát 4·spacing(abs(x_előírt)), normális binary64 értékekre relatívan legfeljebb 8.882×10⁻¹⁶; nincs nagy abszolút padló. Egy ULP és a 4 ULP határ elfogadott, 5 ULP és valódi rácseltolás elutasított. A fizikai oszlopok korábbi tűrései változatlanok. A közel-duplikált cellafoglalás, hiány, NaN/Inf és kétértelmű illesztés elutasított. Az 1 km-es diszkrét státuszág az illesztett kanonikus cellát választja, nem kerekítési zaj alapján ágazik el.\n\n## E02\n\nA regressziós helper és a csomagoló automatikusan létrehozza a delivery szülőkönyvtárat. Külön, frissen kibontott, delivery nélküli munkapéldányokon az archivált, nem újragenerált CSV-k kapuja, a regresszió és az öncsomagolás normál és -O módban is megfelelt. A csomagoló mindkét módban bájtra ugyanazt az r2 ZIP-et állította elő.\n\n## Tényleges saját futások és hatókör\n\nAz eredeti 34 regresszió (2 tiszta pozitív, 32 elutasítás) megfelelt. Új rács-/kerekítési eset: 23 normál + 23 optimalizált, összesen 46. A dokumentált verify → reproduce → data_gate főút 85–85 numerikus ellenőrzéssel megfelelt. Hat hideg-archívum forgatókönyv futott, a dokumentált főút friss 85-ös részletes jelentése az archivált jelentéssel bájtazonos.\n\nA hat CSV, 484 geometriai sor, két PNG, weak_field.py, reproduce.py, a levezetés és a licenc forrásarchívumhoz viszonyított bájtazonossága ellenőrzött. A regenerált hat CSV és két ábra itt mindkét módban szintén bájtazonos. A kapott külső beszámoló más környezetben jelzett apró rácseltéréseit nem nevezzük fizikai változásnak. Nem készült PDF.\n\nMeglévő fájlok módosítása: README_HU.md; code/data_gate.py; code/pack.py; code/regress_guard.py; checks/data_gate_regression.json. Ezen felül új technikai tesztek, eredet-/bájtazonossági rekordok és hordozhatósági jegyzet került a csomagba. A manifest újragenerált. A korábbi forrás ZIP változatlan.\n\nA tudományos státusz nem változott: feltételes univerzális, árnyékolatlan dust-ág; q=a/(4π), λ=L, g_fit=1/(1+qκ_cal). Az 1 km-es benchmark a közölt Cruz-egyenlőtlenséggel feltételesen összeférhetetlen, CL- vagy σ-állítás nélkül; a kisebb a-korlát szükséges, nem igazolt megengedettség. A 10 km-es elsődleges geometria/normalizálás/CL hiány továbbra is nyitott. Nem futott új csillagszámítás, GR-utánzó keresés, stabilitás vagy likelihood; nincs H1-azonosítás vagy új árnyékolási feltevés.\n\nA hideg-archívum eredmény a handoff.json fájlba beágyazott; nincs be nem csatolt archive_smoke.json erőforrásra épülő bizonyítás. A kutatási ZIP nem tartalmazza ezt a tételes javítási választ.\n"
+  },
+  "scientific_status": {
+    "q": "a/(4*pi)",
+    "lambda_definition": "L",
+    "Gstar_over_Gfit": "1/(1+q*kappa_cal)",
+    "branch": "conditional_universal_unscreened_weak_dust_epsilon_source",
+    "benchmark_1km": "incompatible_with_Cruz_abstract_inequality_under_conditional_convention; CL_unspecified; no_sigma_claim",
+    "a_bound_1km": "a<0.012566370614359173 necessary_only_not_verified_allowed",
+    "benchmark_10km": "unresolved_primary_geometry_convention_confidence_gap_not_empirically_allowed",
+    "no_new_simulation_likelihood_or_primary_evidence": true,
+    "no_H1_identification": true,
+    "no_screening_model_added": true
+  },
+  "omitted": [
+    "new_NS_sequences",
+    "GR_mimic_search",
+    "radial_stability",
+    "experimental_likelihood",
+    "new_10km_primary_response_reconstruction"
+  ],
+  "license": "©2026 Szabolcsi Dávid, ORCID0009-0005-6300-074X, CC BY-NC4.0 International https://creativecommons.org/licenses/by-nc/4.0/; commercial use only with author written permission",
+  "noncircularity": "Manifest omits its own hash. The external handoff hashes the research ZIP and its manifest; handoff has no self-hash."
+}
