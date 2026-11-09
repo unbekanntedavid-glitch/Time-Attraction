@@ -22,7 +22,7 @@ Numerical cross-checks with Academia Co-scientist (AI-assisted); not peer review
 
 Verification: `cd YukawaBindingEnergy_2026-11-08_b && sha256sum -c SHA256SUMS`.
 
-Proposed annotated tag, for creation after approval; not created in this commit:
+Annotated tag V38 is commit `92caae4a761d9afa821c2452bd5dbe7fba820944`. Tag object `40988d4e3de59a2538b2d215a89a6370067daef7`.
 
 `V38 = Zenodo version index 37, DOI 10.5281/zenodo.24054760, YBE-2026-11-08-b (YukawaBindingEnergy_2026-11-08_b/)`
 
@@ -44,6 +44,23 @@ Annotated tag V37 is commit `6686902e6796489844341962b0addab7c14c67c6`. Tag obje
 `V37 = Zenodo version index 36, DOI 10.5281/zenodo.24053942, YBE-2026-11-08-a (YukawaBindingEnergy_2026-11-08/)`
 
 GitHub tag V36 already names [`TimeFieldMass_2026-11-06/`](TimeFieldMass_2026-11-06/) (DOI [10.5281/zenodo.24022021](https://doi.org/10.5281/zenodo.24022021), Zenodo version index 35).
+
+## Static tidal pilot r4 — fixed-laboratory-G SLy/APR4 quadrupole
+
+**Static tensor tidal response in a local massive-scalar neutron-star model: a fixed-laboratory-G SLy/APR4 pilot (revision r4)** (2026-11-08)  
+Folder: [`YukawaTidalPilot_2026-11-08_r4/`](YukawaTidalPilot_2026-11-08_r4/) · License: CC BY-NC 4.0 · Zenodo DOI: [10.5281/zenodo.24057132](https://doi.org/10.5281/zenodo.24057132) · Concept DOI: [10.5281/zenodo.22983681](https://doi.org/10.5281/zenodo.22983681) · Zenodo version index 38.
+
+This is a different study from the binding-energy records. DOI [10.5281/zenodo.24053942](https://doi.org/10.5281/zenodo.24053942) remains YBE-2026-11-08-a and GitHub tag V37. DOI [10.5281/zenodo.24054760](https://doi.org/10.5281/zenodo.24054760) is binding-energy revision b, Zenodo version index 37, GitHub tag V38, commit `92caae4a761d9afa821c2452bd5dbe7fba820944`. This tidal record is index 38, so its proposed tag is V39.
+
+The calculation is an action-derived static metric–scalar–fluid quadrupole with exponential bare-energy coupling. The GR Love formula is not applied on a modified background. SLy and APR4 share the distant Kepler mass 1.4 solar masses. For a = 1, G_*/G_lab = 0.9262883177508389 under the conditional unscreened-dust calibration, and the modified ADM energy mass stays distinct. Λ_metric is not automatically a GR wave-inference Λ. Two equations of state do not separate the model from EOS uncertainty. No observation, stability, priority, or model-validation claim is made. Author: Szabolcsi Dávid (ORCID [0009-0005-6300-074X](https://orcid.org/0009-0005-6300-074X)).
+
+Numerical cross-checks with Academia Co-scientist (AI-assisted); not peer review.
+
+Verification: `cd YukawaTidalPilot_2026-11-08_r4 && sha256sum -c SHA256SUMS`.
+
+Proposed annotated tag, for creation after approval; not created in this commit:
+
+`V39 = Zenodo version index 38, DOI 10.5281/zenodo.24057132, tidal pilot r4 (YukawaTidalPilot_2026-11-08_r4/)`
 
 ## V36 — TAL time-field mass and (λ, α_Y) exclusion: published Eöt-Wash bounds and the combined window
 
@@ -78,8 +95,9 @@ From V34 on, GitHub version tags follow the Zenodo version number of the record;
 
 | GitHub tag | folder | Zenodo version | DOI |
 |---|---|---|---|
-| V38 (proposed; not created in this commit) | [`YukawaBindingEnergy_2026-11-08_b/`](YukawaBindingEnergy_2026-11-08_b/) | index 37 | [10.5281/zenodo.24054760](https://doi.org/10.5281/zenodo.24054760) |
+| V38 | [`YukawaBindingEnergy_2026-11-08_b/`](YukawaBindingEnergy_2026-11-08_b/) | index 37 | [10.5281/zenodo.24054760](https://doi.org/10.5281/zenodo.24054760) |
 | V37 | [`YukawaBindingEnergy_2026-11-08/`](YukawaBindingEnergy_2026-11-08/) | index 36 | [10.5281/zenodo.24053942](https://doi.org/10.5281/zenodo.24053942) |
+| V39 (proposed; not created in this commit) | [`YukawaTidalPilot_2026-11-08_r4/`](YukawaTidalPilot_2026-11-08_r4/) | index 38 | [10.5281/zenodo.24057132](https://doi.org/10.5281/zenodo.24057132) |
 | V34 | [`Clock_Yukawa_2026-11-04/`](Clock_Yukawa_2026-11-04/) | v34 | [10.5281/zenodo.23960821](https://doi.org/10.5281/zenodo.23960821) |
 | V35 | [`TimeFieldMass_2026-11-04/`](TimeFieldMass_2026-11-04/) | v35 | [10.5281/zenodo.23964973](https://doi.org/10.5281/zenodo.23964973) |
 | V36 | [`TimeFieldMass_2026-11-06/`](TimeFieldMass_2026-11-06/) | v36 | [10.5281/zenodo.24022021](https://doi.org/10.5281/zenodo.24022021) |
@@ -171,8 +189,9 @@ Previous version: V23 (Zenodo V23, DOI [10.5281/zenodo.23639084](https://doi.org
 
 | Version | Record | DOI |
 |---|---|---|
-| V38 (proposed; YBE-2026-11-08-b; Zenodo version index 37) | [Equilibrium binding energy, revision b](YukawaBindingEnergy_2026-11-08_b/) | [`10.5281/zenodo.24054760`](https://doi.org/10.5281/zenodo.24054760) |
+| V38 (YBE-2026-11-08-b; Zenodo version index 37) | [Equilibrium binding energy, revision b](YukawaBindingEnergy_2026-11-08_b/) | [`10.5281/zenodo.24054760`](https://doi.org/10.5281/zenodo.24054760) |
 | V37 (YBE-2026-11-08-a; Zenodo version index 36) | [Equilibrium binding energy at fixed baryon and ADM mass in a local massive-scalar neutron-star model](YukawaBindingEnergy_2026-11-08/) | [`10.5281/zenodo.24053942`](https://doi.org/10.5281/zenodo.24053942) |
+| V39 (proposed; tidal pilot r4; Zenodo version index 38) | [Static tensor tidal response, fixed-laboratory-G SLy/APR4 pilot](YukawaTidalPilot_2026-11-08_r4/) | [`10.5281/zenodo.24057132`](https://doi.org/10.5281/zenodo.24057132) |
 | V29 | [Time Attraction Law (TAL): Derivation Chain Audit and Step 29 Corrections S1–S3](V29/) (audit of the derivation chain v1–v7 to V28, corrections S1–S3, verification material; files in `V29/`) | no Zenodo record yet |
 | V28 (Zenodo V28) | [Time Attraction Law — Scalar-Tensor Yukawa Fit, V28](https://doi.org/10.5281/zenodo.23814053) (preliminary research package: Step 26 DESI DR1 BAO audit, interactive simulator, Step 27 fixed unscreened local Yukawa branch, `V28/`; new version of V27) | [`10.5281/zenodo.23814053`](https://doi.org/10.5281/zenodo.23814053) |
 | V27 (Zenodo V27) | [Time Attraction Law — Scalar-Tensor Yukawa Fit, V27](https://doi.org/10.5281/zenodo.23761574) (`step26` cosmology audit, `V27/`) | [`10.5281/zenodo.23761574`](https://doi.org/10.5281/zenodo.23761574) |
