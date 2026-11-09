@@ -1,0 +1,4 @@
+© 2026 Szabolcsi Dávid (ORCID 0009-0005-6300-074X) · CC BY-NC 4.0 International + https://creativecommons.org/licenses/by-nc/4.0/ · commercial use only with the author's written permission.
+
+Applies to the author's manuscript, data, code and figures in this package.
+Existing source notices are retained. Cited third-party works retain their own rights; no publisher PDFs are redistributed.
