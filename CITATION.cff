@@ -1,18 +1,21 @@
 cff-version: 1.2.0
-message: "If you use this work, please cite it using the metadata below. DOI 10.5281/zenodo.24053942 is the equilibrium binding-energy record (YBE-2026-11-08-a, Zenodo version index 36). GitHub tag V37 is commit 6686902e6796489844341962b0addab7c14c67c6. Concept DOI 10.5281/zenodo.22983681 covers the whole series."
-title: "Equilibrium binding energy at fixed baryon and ADM mass in a local massive-scalar neutron-star model"
-version: "YBE-2026-11-08-a"
-doi: 10.5281/zenodo.24053942
+message: "If you use this work, please cite it using the metadata below. DOI 10.5281/zenodo.24054760 is revision b (YBE-2026-11-08-b, Zenodo version index 37). GitHub tag V38 is commit 92caae4a761d9afa821c2452bd5dbe7fba820944. DOI 10.5281/zenodo.24053942 remains revision a (GitHub tag V37, Zenodo version index 36). DOI 10.5281/zenodo.24057132 is the tidal pilot (index 38, tag V39, commit 96601e03d1add49c21c191d4d4fa430cc858e8e8). DOI 10.5281/zenodo.24060636 is the external-screen phase 1 r2 record (index 39, proposed tag V40). Concept DOI 10.5281/zenodo.22983681 covers the whole series."
+title: "Equilibrium binding energy at fixed baryon and ADM mass in a local massive-scalar neutron-star model — revised contribution statement and literature context (revision b)"
+version: "YBE-2026-11-08-b"
+doi: 10.5281/zenodo.24054760
 date-released: 2026-11-08
 license: CC-BY-NC-4.0
 repository-code: "https://github.com/unbekanntedavid-glitch/Time-Attraction"
-url: "https://doi.org/10.5281/zenodo.24053942"
+url: "https://doi.org/10.5281/zenodo.24054760"
 authors:
   - family-names: Szabolcsi
     given-names: David
     affiliation: "Independent experimental researcher, Unterterzen, Switzerland"
     orcid: "https://orcid.org/0009-0005-6300-074X"
 identifiers:
+  - type: doi
+    value: 10.5281/zenodo.24054760
+    description: "Zenodo version index 37: Equilibrium binding energy revision b, revised contribution statement and literature context (YukawaBindingEnergy_2026-11-08_b, YBE-2026-11-08-b). GitHub tag V38. DOI 10.5281/zenodo.24053942 is revision a, not this record."
   - type: doi
     value: 10.5281/zenodo.24053942
     description: "Zenodo version index 36: Equilibrium binding energy at fixed baryon and ADM mass in a local massive-scalar neutron-star model (YukawaBindingEnergy_2026-11-08, YBE-2026-11-08-a). GitHub tag V37."
@@ -62,5 +65,8 @@ identifiers:
     value: 10.5281/zenodo.23217189
     description: "Previous version: Zenodo v14"
   - type: doi
+    value: 10.5281/zenodo.24057132
+    description: "Zenodo version index 38: Static tensor tidal response in a local massive-scalar neutron-star model, fixed-laboratory-G SLy/APR4 pilot r4 (YukawaTidalPilot_2026-11-08_r4). GitHub tag V39 is commit 96601e03d1add49c21c191d4d4fa430cc858e8e8. Not the binding-energy records 10.5281/zenodo.24053942 (index 36, tag V37) or 10.5281/zenodo.24054760 (index 37, tag V38)."
+  - type: doi
     value: 10.5281/zenodo.24060636
-    description: "Zenodo version index 39: Weak-field forces and external constraints, finite-source geometry and laboratory-G calibration, phase 1 r2 (YukawaExternalScreen_2026-11-08_phase1_r2). Proposed GitHub tag V40. Not 10.5281/zenodo.24053942 (index 36, tag V37), 10.5281/zenodo.24054760 (index 37, proposed tag V38), or 10.5281/zenodo.24057132 (index 38, proposed tag V39)."
+    description: "Zenodo version index 39: Weak-field forces and external constraints, finite-source geometry and laboratory-G calibration, phase 1 r2 (YukawaExternalScreen_2026-11-08_phase1_r2). Proposed GitHub tag V40. Not 10.5281/zenodo.24053942 (index 36, tag V37), 10.5281/zenodo.24054760 (index 37, tag V38), or 10.5281/zenodo.24057132 (index 38, tag V39)."

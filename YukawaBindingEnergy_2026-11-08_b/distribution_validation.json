@@ -1,0 +1,238 @@
+{
+  "status": "passed",
+  "tests": [
+    {
+      "distribution": "YBE-2026-11-08-b_data_code.zip",
+      "archive_sha256": "60d5311d10b3c975f72f8e9c81ec3df571ca0d2d6785b4a9add748fc0091e5f1",
+      "safe_extraction": true,
+      "manifest_members_verified": 54,
+      "numerical_entry_point_passed": true,
+      "science_files_unchanged_after_run": true,
+      "commands_passed": [
+        [
+          "/workspace/.venv_ns/bin/python3",
+          "reproduce.py",
+          "--check",
+          "--out",
+          "run/check"
+        ]
+      ],
+      "table_check": {
+        "status": "checks_passed",
+        "n_configurations": 1391,
+        "n_pairs": 24,
+        "n_archived_controls": 114,
+        "mass_budget_identity_max_Msun": 0.0,
+        "energy_identity_max_1e51erg": 0.0,
+        "EOS_firstlaw": [
+          {
+            "EOS": "APR4",
+            "analytic_firstlaw_relative": 3.560857547886169e-16,
+            "native_enthalpy_derivative_relative": 3.515959203146676e-10
+          },
+          {
+            "EOS": "H4",
+            "analytic_firstlaw_relative": 3.582795507372196e-16,
+            "native_enthalpy_derivative_relative": 1.4937065199603076e-10
+          },
+          {
+            "EOS": "SLy",
+            "analytic_firstlaw_relative": 3.560857547886169e-16,
+            "native_enthalpy_derivative_relative": 2.322752156050129e-10
+          }
+        ],
+        "all_1391_causality_flags_recomputed": true,
+        "max_cs2_table_difference": 3.9550046571079633e-10,
+        "max_pair_cs2": 0.9769325674507141,
+        "max_mass_target_residual_Msun": 1.1234879693233779e-10,
+        "negative_controls_rejected": [
+          "missing",
+          "NaN",
+          "infinity"
+        ],
+        "peak_fits": "Archived peak-fit outputs are included; they are not re-fitted by --check or --controls.",
+        "interpretation": "Numerical consistency and reproduction, not independent physical validation or dynamical stability."
+      }
+    },
+    {
+      "distribution": "YBE-2026-11-08-b_editable_sources.zip",
+      "archive_sha256": "6d98fa9cdcb925b4d19c9da70405d21287026b713824a533676bfd60c1bc88e8",
+      "safe_extraction": true,
+      "manifest_members_verified": 61,
+      "numerical_entry_point_passed": true,
+      "science_files_unchanged_after_run": true,
+      "commands_passed": [
+        [
+          "/workspace/.venv_ns/bin/python3",
+          "reproduce.py",
+          "--check",
+          "--out",
+          "run/check"
+        ],
+        [
+          "/workspace/.venv_ns/bin/python3",
+          "reproduce.py",
+          "--figures",
+          "--out",
+          "run/figures"
+        ],
+        [
+          "/workspace/.venv_ns/bin/python3",
+          "code/build_manuscripts.py"
+        ],
+        [
+          "sh",
+          "build_articles.sh"
+        ],
+        [
+          "/workspace/.venv_ns/bin/python3",
+          "code/check_documents.py",
+          "--out",
+          "run/document_check.json"
+        ]
+      ],
+      "table_check": {
+        "status": "checks_passed",
+        "n_configurations": 1391,
+        "n_pairs": 24,
+        "n_archived_controls": 114,
+        "mass_budget_identity_max_Msun": 0.0,
+        "energy_identity_max_1e51erg": 0.0,
+        "EOS_firstlaw": [
+          {
+            "EOS": "APR4",
+            "analytic_firstlaw_relative": 3.560857547886169e-16,
+            "native_enthalpy_derivative_relative": 3.515959203146676e-10
+          },
+          {
+            "EOS": "H4",
+            "analytic_firstlaw_relative": 3.582795507372196e-16,
+            "native_enthalpy_derivative_relative": 1.4937065199603076e-10
+          },
+          {
+            "EOS": "SLy",
+            "analytic_firstlaw_relative": 3.560857547886169e-16,
+            "native_enthalpy_derivative_relative": 2.322752156050129e-10
+          }
+        ],
+        "all_1391_causality_flags_recomputed": true,
+        "max_cs2_table_difference": 3.9550046571079633e-10,
+        "max_pair_cs2": 0.9769325674507141,
+        "max_mass_target_residual_Msun": 1.1234879693233779e-10,
+        "negative_controls_rejected": [
+          "missing",
+          "NaN",
+          "infinity"
+        ],
+        "peak_fits": "Archived peak-fit outputs are included; they are not re-fitted by --check or --controls.",
+        "interpretation": "Numerical consistency and reproduction, not independent physical validation or dynamical stability."
+      },
+      "document_check": {
+        "status": "document_checks_passed",
+        "pdfs": [
+          {
+            "path": "figures/energy_vs_MB_EN.pdf",
+            "pages": 1,
+            "bytes": 37283,
+            "sha256": "386cf2f2e545e876403584fc2941d7f366dedc49e7bdd538368aab8bb44c41e0",
+            "all_pages_exact_footer": true
+          },
+          {
+            "path": "figures/energy_vs_MB_HU.pdf",
+            "pages": 1,
+            "bytes": 38408,
+            "sha256": "a2abb16968bae72dc516f29a24ff7b9abe5c284cf6378f2a15f4c949400a56c8",
+            "all_pages_exact_footer": true
+          },
+          {
+            "path": "figures/mass_matching_contrasts_EN.pdf",
+            "pages": 1,
+            "bytes": 32988,
+            "sha256": "5d01239facd05060b4ac80a0d3e254ee3d0e1a9325f2dc486a644b0b5504c52b",
+            "all_pages_exact_footer": true
+          },
+          {
+            "path": "figures/mass_matching_contrasts_HU.pdf",
+            "pages": 1,
+            "bytes": 33810,
+            "sha256": "f28b8d3676d5d2a4a047729b3f8013fe448504ce515863f1d9951e964eab8e9f",
+            "all_pages_exact_footer": true
+          },
+          {
+            "path": "manuscript/binding_energy_EN.pdf",
+            "pages": 7,
+            "bytes": 411189,
+            "sha256": "b84c9217d4f368a0003d80d0cb4bf4295fba8fa6346ee1acbffcd021cb801ccd",
+            "all_pages_exact_footer": true
+          },
+          {
+            "path": "manuscript/binding_energy_HU.pdf",
+            "pages": 7,
+            "bytes": 429140,
+            "sha256": "db6ee684d662bc0feca55ffe4ed2aef0ac371f70552524f8641d47bbf1800125",
+            "all_pages_exact_footer": true
+          }
+        ],
+        "all_24_printed_contrast_values_checked": true,
+        "disclosure": "Exact author-supplied disclosure; subsequent numerical report attributed, not peer review."
+      },
+      "regenerated_tex_identical": true
+    },
+    {
+      "distribution": "YBE-2026-11-08-b_publication_set.zip",
+      "archive_sha256": "8601e972e5c19efac801bb9f49c5ebe99bbd89cfb56e9fc44b2ccd3ad6b3469a",
+      "safe_extraction": true,
+      "manifest_members_verified": 67,
+      "numerical_entry_point_passed": true,
+      "science_files_unchanged_after_run": true,
+      "commands_passed": [
+        [
+          "/workspace/.venv_ns/bin/python3",
+          "reproduce.py",
+          "--check",
+          "--out",
+          "run/check"
+        ]
+      ],
+      "table_check": {
+        "status": "checks_passed",
+        "n_configurations": 1391,
+        "n_pairs": 24,
+        "n_archived_controls": 114,
+        "mass_budget_identity_max_Msun": 0.0,
+        "energy_identity_max_1e51erg": 0.0,
+        "EOS_firstlaw": [
+          {
+            "EOS": "APR4",
+            "analytic_firstlaw_relative": 3.560857547886169e-16,
+            "native_enthalpy_derivative_relative": 3.515959203146676e-10
+          },
+          {
+            "EOS": "H4",
+            "analytic_firstlaw_relative": 3.582795507372196e-16,
+            "native_enthalpy_derivative_relative": 1.4937065199603076e-10
+          },
+          {
+            "EOS": "SLy",
+            "analytic_firstlaw_relative": 3.560857547886169e-16,
+            "native_enthalpy_derivative_relative": 2.322752156050129e-10
+          }
+        ],
+        "all_1391_causality_flags_recomputed": true,
+        "max_cs2_table_difference": 3.9550046571079633e-10,
+        "max_pair_cs2": 0.9769325674507141,
+        "max_mass_target_residual_Msun": 1.1234879693233779e-10,
+        "negative_controls_rejected": [
+          "missing",
+          "NaN",
+          "infinity"
+        ],
+        "peak_fits": "Archived peak-fit outputs are included; they are not re-fitted by --check or --controls.",
+        "interpretation": "Numerical consistency and reproduction, not independent physical validation or dynamical stability."
+      }
+    }
+  ],
+  "new_full_simulation_run": false,
+  "new_114_control_run": false,
+  "prior_unchanged_science_controls_reused_with_hash_checks": true
+}

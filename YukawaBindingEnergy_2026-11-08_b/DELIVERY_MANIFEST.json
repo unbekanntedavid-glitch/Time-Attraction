@@ -1,0 +1,125 @@
+{
+  "internal_revision": "YBE-2026-11-08-b",
+  "doi_assigned": false,
+  "remote_actions": false,
+  "prior_a_unchanged": true,
+  "scientific_input_files_unchanged": 16,
+  "displayed_equations_and_eight_numerical_table_bodies_unchanged": true,
+  "numerical_entry_points_tested_in_three_clean_extractions": true,
+  "editable_sources_rebuilt_in_clean_extraction": true,
+  "article_pages_each": 7,
+  "pdf_pages_with_exact_license_footer": 18,
+  "literature_supplement_separate_and_unchanged": true,
+  "actual_current_test_scope": "Strict integrity/EOS/mass-budget/causality checks; 1391 archived rows and 24 matched pairs; no new equilibrium/control/peak simulations in b. Original 114 local reruns retained by science input fingerprints; later 1391/114/18/six rejection report attributed to author-supplied scope.",
+  "old_new_byte_summary": [
+    {
+      "old": "YBE-2026-11-08-a_data_code.zip",
+      "new": "YBE-2026-11-08-b_data_code.zip",
+      "old_bytes": 980087,
+      "new_bytes": 1005941,
+      "byte_difference": 25854
+    },
+    {
+      "old": "YBE-2026-11-08-a_editable_sources.zip",
+      "new": "YBE-2026-11-08-b_editable_sources.zip",
+      "old_bytes": 915866,
+      "new_bytes": 949273,
+      "byte_difference": 33407
+    },
+    {
+      "old": "YBE-2026-11-08-a_publication_set.zip",
+      "new": "YBE-2026-11-08-b_publication_set.zip",
+      "old_bytes": 1755699,
+      "new_bytes": 1823508,
+      "byte_difference": 67809
+    },
+    {
+      "old": "binding_energy_EN.pdf",
+      "new": "YBE-2026-11-08-b_EN.pdf",
+      "old_bytes": 395192,
+      "new_bytes": 411191,
+      "byte_difference": 15999
+    },
+    {
+      "old": "binding_energy_HU.pdf",
+      "new": "YBE-2026-11-08-b_HU.pdf",
+      "old_bytes": 411162,
+      "new_bytes": 429140,
+      "byte_difference": 17978
+    }
+  ],
+  "files": [
+    {
+      "file": "LICENSE.txt",
+      "path": "/workspace/yukawa_binding_publication_20261108_b/delivery/LICENSE.txt",
+      "bytes": 395,
+      "sha256": "6f98263ee3a99791152f5bb0f2839c025675dd90e9e6bef9fe876fb123c3bae1"
+    },
+    {
+      "file": "YBE-2026-11-08-b_EN.pdf",
+      "path": "/workspace/yukawa_binding_publication_20261108_b/delivery/YBE-2026-11-08-b_EN.pdf",
+      "bytes": 411191,
+      "sha256": "575d96827e21d4e33005ebd6bc4533227b80ca5bb243f0a120416258972962ee"
+    },
+    {
+      "file": "YBE-2026-11-08-b_HU.pdf",
+      "path": "/workspace/yukawa_binding_publication_20261108_b/delivery/YBE-2026-11-08-b_HU.pdf",
+      "bytes": 429140,
+      "sha256": "d115191cc4ee971b4d6ec60871535643a1649117d643f15292f929f62eda8dc8"
+    },
+    {
+      "file": "YBE-2026-11-08-b_data_code.zip",
+      "path": "/workspace/yukawa_binding_publication_20261108_b/delivery/YBE-2026-11-08-b_data_code.zip",
+      "bytes": 1005941,
+      "sha256": "60d5311d10b3c975f72f8e9c81ec3df571ca0d2d6785b4a9add748fc0091e5f1"
+    },
+    {
+      "file": "YBE-2026-11-08-b_editable_sources.zip",
+      "path": "/workspace/yukawa_binding_publication_20261108_b/delivery/YBE-2026-11-08-b_editable_sources.zip",
+      "bytes": 949273,
+      "sha256": "6d98fa9cdcb925b4d19c9da70405d21287026b713824a533676bfd60c1bc88e8"
+    },
+    {
+      "file": "YBE-2026-11-08-b_publication_set.zip",
+      "path": "/workspace/yukawa_binding_publication_20261108_b/delivery/YBE-2026-11-08-b_publication_set.zip",
+      "bytes": 1823508,
+      "sha256": "8601e972e5c19efac801bb9f49c5ebe99bbd89cfb56e9fc44b2ccd3ad6b3469a"
+    },
+    {
+      "file": "YBE_literature_comparison_20261108_r1.zip",
+      "path": "/workspace/yukawa_binding_publication_20261108_b/delivery/YBE_literature_comparison_20261108_r1.zip",
+      "bytes": 39575,
+      "sha256": "72a329a24c3aa66bdb86d896ea6dbfbdd3d8ea51419e0ba3318ebcabc9924819"
+    },
+    {
+      "file": "description_EN.txt",
+      "path": "/workspace/yukawa_binding_publication_20261108_b/delivery/description_EN.txt",
+      "bytes": 3543,
+      "sha256": "c8a2cad5d32354f748b79f6078debc312601b618ccb501216fdf6099da71503a"
+    },
+    {
+      "file": "description_HU.txt",
+      "path": "/workspace/yukawa_binding_publication_20261108_b/delivery/description_HU.txt",
+      "bytes": 3870,
+      "sha256": "7c5a58853acc1126ab3953c5bd05db816d4d8c0eef29b47f61cc2b0c23bba923"
+    },
+    {
+      "file": "distribution_validation.json",
+      "path": "/workspace/yukawa_binding_publication_20261108_b/delivery/distribution_validation.json",
+      "bytes": 8414,
+      "sha256": "ba7e8981d556b47f570948b4b0dfe07ecf414f73e46f4d7dabe6ada51a69bcd6"
+    },
+    {
+      "file": "legkozelebbi_modellek_rovid_tabla_HU.md",
+      "path": "/workspace/yukawa_binding_publication_20261108_b/delivery/legkozelebbi_modellek_rovid_tabla_HU.md",
+      "bytes": 10919,
+      "sha256": "ccab2304b1a88513258277510c83dc097ad9960f8211c567b1359376f8a0cb9b"
+    },
+    {
+      "file": "upload_guidance_HU.md",
+      "path": "/workspace/yukawa_binding_publication_20261108_b/delivery/upload_guidance_HU.md",
+      "bytes": 4165,
+      "sha256": "757405a0595b8f7cf612cca900f89cdff80bdc0795b6c71d18000e7325ce2757"
+    }
+  ]
+}

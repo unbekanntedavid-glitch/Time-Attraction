@@ -1,0 +1,49 @@
+{
+  "scope": "r4 publication/data guards and notation patch; inherited r3 physics evidence; six-state uncached replay and isolated builder; optional small-a rejection retained; historical bridge supplied Academia AI report only",
+  "artifacts": [
+    {
+      "path": "/workspace/yukawa_tidal_pilot_20261108_r4/delivery/Yukawa_tidal_pilot_20261108_r4.zip",
+      "bytes": 2440905,
+      "sha256": "8001ccbfbb304db1b8506001b2b3b835b57543496f5b1699f42511a0cce720d4"
+    },
+    {
+      "path": "/workspace/yukawa_tidal_pilot_20261108_r4/MANIFEST.json",
+      "bytes": 26676,
+      "sha256": "63020aa16ef67e7efa96a4b1a97fe4a1e2fbd389acd6ccd9c974fb57506e3caa"
+    },
+    {
+      "path": "/workspace/yukawa_tidal_pilot_20261108_r4/delivery/archive_verification.json",
+      "bytes": 2401,
+      "sha256": "24fae049ce2ab284e8a2a81181660df937fcbe76deca55aab62863b5bd683676"
+    },
+    {
+      "path": "/workspace/yukawa_tidal_pilot_20261108_r4/notes/dontesi_jegyzet_HU.md",
+      "bytes": 2865,
+      "sha256": "f8d3284e2bb1f18e9f385f63433ff1335a3d87b31f178cb3c4b1b38dafd3b516"
+    },
+    {
+      "path": "/workspace/yukawa_tidal_pilot_20261108_r4/data/r3_r4_baseline_comparison.csv",
+      "bytes": 672,
+      "sha256": "09bf80a514f23f9d508bc2f156347fa96c7f3e108c0a9ea4acb8251b07cb106c"
+    },
+    {
+      "path": "/workspace/yukawa_tidal_pilot_20261108_r4/checks/r4_change_inventory.json",
+      "bytes": 11847,
+      "sha256": "d5622390f577f62d2ff3d3f70894c33d4466a49d6291eb6c3beaef6a2af47e7d"
+    },
+    {
+      "path": "/workspace/yukawa_tidal_pilot_20261108_r4/checks/r4_publication_regressions.json",
+      "bytes": 110409,
+      "sha256": "f919eac57e894c3632c696cd55871a637a7ff6cb1cc8891dd46902fb46433e8b"
+    },
+    {
+      "path": "/workspace/yukawa_tidal_pilot_20261108_r4/internal/r4_audit_response_HU.md",
+      "bytes": 2032,
+      "sha256": "335d14d117566bc03bab3de28ad7bee9b71741d122aec32ae6983132ded03b6d"
+    }
+  ],
+  "payload_files": 160,
+  "uncached_rebuilt_states_from_ZIP": 6,
+  "internal_review_is_outside_ZIP": true,
+  "verification_time_zone": "Europe/Zurich"
+}
