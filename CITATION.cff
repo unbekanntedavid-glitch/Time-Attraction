@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this work, please cite it using the metadata below. DOI 10.5281/zenodo.24054760 is revision b (YBE-2026-11-08-b, Zenodo version index 37). Proposed GitHub tag V38 is not created in this commit. DOI 10.5281/zenodo.24053942 remains revision a (GitHub tag V37, Zenodo version index 36). Concept DOI 10.5281/zenodo.22983681 covers the whole series."
+message: "If you use this work, please cite it using the metadata below. DOI 10.5281/zenodo.24054760 is revision b (YBE-2026-11-08-b, Zenodo version index 37). GitHub tag V38 is commit 92caae4a761d9afa821c2452bd5dbe7fba820944. DOI 10.5281/zenodo.24053942 remains revision a (GitHub tag V37, Zenodo version index 36). Concept DOI 10.5281/zenodo.22983681 covers the whole series."
 title: "Equilibrium binding energy at fixed baryon and ADM mass in a local massive-scalar neutron-star model — revised contribution statement and literature context (revision b)"
 version: "YBE-2026-11-08-b"
 doi: 10.5281/zenodo.24054760
@@ -15,7 +15,7 @@ authors:
 identifiers:
   - type: doi
     value: 10.5281/zenodo.24054760
-    description: "Zenodo version index 37: Equilibrium binding energy revision b, revised contribution statement and literature context (YukawaBindingEnergy_2026-11-08_b, YBE-2026-11-08-b). Proposed GitHub tag V38. DOI 10.5281/zenodo.24053942 is revision a, not this record."
+    description: "Zenodo version index 37: Equilibrium binding energy revision b, revised contribution statement and literature context (YukawaBindingEnergy_2026-11-08_b, YBE-2026-11-08-b). GitHub tag V38. DOI 10.5281/zenodo.24053942 is revision a, not this record."
   - type: doi
     value: 10.5281/zenodo.24053942
     description: "Zenodo version index 36: Equilibrium binding energy at fixed baryon and ADM mass in a local massive-scalar neutron-star model (YukawaBindingEnergy_2026-11-08, YBE-2026-11-08-a). GitHub tag V37."
@@ -66,4 +66,4 @@ identifiers:
     description: "Previous version: Zenodo v14"
   - type: doi
     value: 10.5281/zenodo.24057132
-    description: "Zenodo version index 38: Static tensor tidal response in a local massive-scalar neutron-star model, fixed-laboratory-G SLy/APR4 pilot r4 (YukawaTidalPilot_2026-11-08_r4). Proposed GitHub tag V39. Not the binding-energy records 10.5281/zenodo.24053942 (index 36, tag V37) or 10.5281/zenodo.24054760 (index 37, proposed tag V38)."
+    description: "Zenodo version index 38: Static tensor tidal response in a local massive-scalar neutron-star model, fixed-laboratory-G SLy/APR4 pilot r4 (YukawaTidalPilot_2026-11-08_r4). Proposed GitHub tag V39. Not the binding-energy records 10.5281/zenodo.24053942 (index 36, tag V37) or 10.5281/zenodo.24054760 (index 37, tag V38)."
